@@ -1,0 +1,122 @@
+\subsection{圆锥曲线的统一定义}
+    圆锥曲线的统一定义：到一个定焦点和到一个定准线的距离之比为常数$e$的点的轨迹。
+    其中我们将比值$e$称为离心率，而圆锥曲线的类型正是和离心率的取值有关：\\
+    \begin{center}
+        \begin{tabular}{l|l}
+            \hline
+            \textbf{离心率}\qquad\qquad\qquad\qquad&\textbf{类型}\qquad\qquad\qquad\qquad\\ \hline
+            $e\in\{ 0 \}$&圆\\ \hline
+            $e\in(0,1)$&椭圆\\ \hline
+            $e\in\{ 1 \}$&抛物线\\ \hline
+            $e\in(1,\infty)$&双曲线\\ \hline
+        \end{tabular}
+    \end{center}\vspace{10pt}
+    设焦点为$F(0,0)$，设准线为$x=p$，我们可以得出圆锥曲线的统一方程：
+    \begin{large}
+        \begin{equation*}
+            \sqrt{x^2+y^2}=e\cdot|x-p|
+        \end{equation*}
+    \end{large}\\
+    接下来我们将会通过推导，证明该定义符合圆锥曲线的原始定义：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\sqrt{x^2+y^2}=e\cdot|x-p|\\[3mm]
+        &x^2+y^2=e^2\cdot(x-p)^2\\[3mm]
+        &x^2+y^2=e^2\cdot(x^2-2px+p^2)\\[3mm]
+        &x^2+y^2=e^2\cdot x^2-2\cdot e^2p\cdot x+e^2\cdot p^2
+    \end{align}\\
+    对未知量$x$配平，为之后将其化为椭圆和双曲线的标准方程做准备：\vspace{8pt}
+    \begin{align}
+        &\left[\left(1-e^2\right)\cdot x^2+2\cdot e^2p\cdot x+\frac{e^4\cdot p^2}{1-e^2}\right]+y^2-e^2\cdot p^2-\frac{e^4\cdot p^2}{1-e^2}=0\\[6mm]
+        &\left[\sqrt{1-e^2}\cdot x^2+\frac{e^2\cdot p}{\sqrt{1-e^2}}\right]^2+y^2-\frac{e^2\cdot p^2-e^4\cdot p^2}{1-e^2}-\frac{e^4\cdot p^2}{1-e^2}=0\\[6mm]
+        &\left[\sqrt{1-e^2}\cdot x^2+\frac{e^2\cdot p}{\sqrt{1-e^2}}\right]^2+y^2-\frac{e^2\cdot p^2}{1-e^2}=0
+    \end{align}
+
+\newpage
+
+    两边同除$1-e^2$可得：
+    \begin{align}
+        &\left(x+\frac{e^2\cdot p}{\left(1-e^2\right)}\right)^2+\frac{y^2}{1-e^2}-\frac{e^2\cdot p^2}{\left(1-e^2\right)^2}=0\\[6mm]
+        &\left(x+\frac{e^2\cdot p}{\left(1-e^2\right)}\right)^2+\frac{y^2}{1-e^2}=\frac{e^2\cdot p^2}{\left(1-e^2\right)^2}\\[6mm]
+        &\left(1-e^2\right)^2\cdot\left(x+\frac{e^2\cdot p}{\left(1-e^2\right)}\right)^2+(1-e^2)\cdot y^2=e^2\cdot p^2\\[6mm]
+        &\frac{\left(1-e^2\right)^2}{e^2\cdot p^2}\cdot\left(x+\frac{e^2\cdot p}{\left(1-e^2\right)}\right)^2+\frac{(1-e^2)}{e^2\cdot p^2}\cdot y^2=1
+    \end{align}\\[4mm]
+    我们将$x$轴上的偏移量记作$\varphi$，即$\varphi=-\dfrac{e^2\cdot p}{\left(1-e^2\right)}$：\vspace{5pt}
+    \begin{align}
+        &\frac{\left(1-e^2\right)^2}{e^2\cdot p^2}\cdot\left(x-\varphi\right)^2+\frac{(1-e^2)}{e^2\cdot p^2}\cdot y^2=1\\[4mm]
+        &\frac{\left(x-\varphi\right)^2}{~\left[\frac{e^2\cdot p^2}{\left(1-e^2\right)^2}\right]~}+\frac{y^2}{~\left[\frac{e^2\cdot p^2}{(1-e^2)}\right]~}=1
+    \end{align}\\[4mm]
+    由此我们得出了关于离心率$e$和焦准距$p$的椭圆和双曲线的标准方程：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            \qquad\frac{\left(x-\varphi\right)^2}{m}+\frac{\;y^2\;}{n}=1 \qquad\quad \left[~~m=\frac{e^2\cdot p^2}{\left(1-e^2\right)^2} \qquad n=\frac{e^2\cdot p^2}{\left(1-e^2\right)}~~\right]
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+    当满足$e\in(0,1)$时：
+    \begin{equation}
+        m=\frac{e^2\cdot p^2}{\left(1-e^2\right)^2}>0
+        \qquad
+        n=\frac{e^2\cdot p^2}{\left(1-e^2\right)}>0
+    \end{equation}\\
+    所以当离心率满足$e\in(0,1)$时，方程的轨迹为椭圆。\\[6mm]
+    进一步推导可以得到椭圆的各个参数关于离心率$e$和焦准距$p$的关系：\vspace{5pt}
+    \begin{align}
+        &l^2=\frac{e^2\cdot p^2}{\left(1-e^2\right)^2}
+        \qquad
+        s^2=\frac{e^2\cdot p^2}{\left(1-e^2\right)}\\[7mm]
+        &f^2=l^2-s^2\\[4mm]
+        &~~~=\frac{\left[1-\left(1-e^2\right)\right]\cdot e^2\cdot p^2}{\left(1-e^2\right)^2}\\[4mm]
+        &~~~=\frac{e^2\cdot e^2\cdot p^2}{\left(1-e^2\right)^2}\\[4mm]
+        &~~~=\frac{e^4\cdot p^2}{\left(1-e^2\right)^2}
+    \end{align}\\
+    再进一步我们可以通过椭圆的参数表示出离心率$e$：\vspace{5pt}
+    \begin{align}
+        &\frac{f^2}{r^2}=\frac{e^4\cdot p^2}{e^2\cdot p^2}=e^2
+    \end{align}\\[2mm]
+    由此可以得出椭圆的离心率$e$和参数的关系：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            e=\frac{f}{\;r\;}
+        \end{equation*}
+    \end{large}\\[2mm]
+    当满足$p<0$时，我们会发现$\varphi=-\dfrac{e^2\cdot p}{\left(1-e^2\right)}>0$：\\[4mm]
+    所以此时椭圆的中心点位于$Q\left(+\left|\dfrac{e^2\cdot p}{\left(e^2-1\right)}\right|~,~0\right)$，焦点为椭圆的左焦点。\\[8mm]
+    当满足$p>0$时，我们会发现$\varphi=-\dfrac{e^2\cdot p}{\left(1-e^2\right)}<0$：\\[4mm]
+    所以此时椭圆的中心点位于$Q\left(-\left|\dfrac{e^2\cdot p}{\left(e^2-1\right)}\right|~,~0\right)$，焦点为椭圆的右焦点。
+
+\newpage
+
+    当满足$e\in(1,+\infty)$时：
+    \begin{equation}
+        m=\frac{e^2\cdot p^2}{\left(1-e^2\right)^2}>0
+        \qquad
+        n=\frac{e^2\cdot p^2}{\left(1-e^2\right)}<0
+    \end{equation}\\
+    所以当离心率满足$e\in(1,+\infty)$时，方程的轨迹为双曲线。\\[6mm]
+    进一步推导可以得到双曲线的各个参数关于离心率$e$和焦准距$p$的关系：\vspace{5pt}
+    \begin{align}
+        &l^2=\frac{e^2\cdot p^2}{\left(1-e^2\right)^2}
+        \qquad
+        s^2=-\frac{e^2\cdot p^2}{\left(1-e^2\right)}\\[7mm]
+        &f^2=l^2+s^2\\[4mm]
+        &~~~=\frac{\left[1-\left(1-e^2\right)\right]\cdot e^2\cdot p^2}{\left(1-e^2\right)^2}\\[4mm]
+        &~~~=\frac{e^2\cdot e^2\cdot p^2}{\left(1-e^2\right)^2}\\[4mm]
+        &~~~=\frac{e^4\cdot p^2}{\left(1-e^2\right)^2}
+    \end{align}\\
+    再进一步我们可以通过双曲线的参数表示出离心率$e$：\vspace{5pt}
+    \begin{align}
+        &\frac{f^2}{r^2}=\frac{e^4\cdot p^2}{e^2\cdot p^2}=e^2
+    \end{align}\\[2mm]
+    由此可以得出双曲线的离心率$e$和参数的关系：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            e=\frac{f}{\;r\;}
+        \end{equation*}
+    \end{large}\\[2mm]
+    当满足$p<0$时，我们会发现$\varphi=-\dfrac{e^2\cdot p}{\left(1-e^2\right)}<0$：\\[4mm]
+    所以此时双曲线的中心点位于$Q\left(-\left|\dfrac{e^2\cdot p}{\left(e^2-1\right)}\right|~,~0\right)$，焦点为双曲线的右焦点。\\[8mm]
+    当满足$p>0$时，我们会发现$\varphi=-\dfrac{e^2\cdot p}{\left(1-e^2\right)}>0$：\\[4mm]
+    所以此时双曲线的中心点位于$Q\left(+\left|\dfrac{e^2\cdot p}{\left(e^2-1\right)}\right|~,~0\right)$，焦点为双曲线的左焦点。

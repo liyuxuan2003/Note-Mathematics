@@ -1,0 +1,72 @@
+\section{微积分}
+
+\subsection{微分}
+    对于函数$f(x)$，自变量$x$在点$x_0$产生一个增量记为$dx$，
+    因变量$y$产生的增量记为$dy$，
+    若两者的比值在$dx$趋向于$0$时极限存在，
+    那么这个极限就是函数$f(x)$在点$x_0$处的导数。
+
+\subsubsection{常用导数表}
+    以下是初等函数的导数：
+    \begin{large}
+        \begin{align*}
+            &\frac{d}{dx}(c)=0\\[4mm]
+            &\frac{d}{dx}\left(x^a\right)=a\cdot x^{a-1}\\[4mm]
+            &\frac{d}{dx}\left(a^x\right)=\ln{(a)}\cdot a^x\\[4mm]
+            &\frac{d}{dx}\left(\log_ax\right)=\frac{1}{\ln{(a)}\cdot x}\\[4mm]
+            &\frac{d}{dx}(\sin{x})=\cos{x}\\[4mm]
+            &\frac{d}{dx}(\cos{x})=-\sin{x}\\[4mm]
+            &\frac{d}{dx}(\tan{x})=\sec^2{x}\\[4mm]
+            &\frac{d}{dx}(\cot{x})=-\csc^2{x}\\[4mm]
+            &\frac{d}{dx}(\sec{x})=\tan{x}\cdot\sec{x}\\[4mm]
+            &\frac{d}{dx}(\csc{x})=-\cot{x}\cdot\csc{x}
+        \end{align*}
+    \end{large}    
+
+\newpage
+
+\subsubsection{导数的运算法则}
+    定义$u=f(x)$，$v=g(x)$。\\[3mm]
+    导数的加法：
+    \begin{large}
+        \begin{equation*}
+            \frac{d}{dx}(u+v)=\frac{d}{dx}(u)+\frac{d}{dx}(v)
+        \end{equation*}
+    \end{large}\\
+    导数的减法：
+    \begin{large}
+        \begin{equation*}
+            \frac{d}{dx}(u-v)=\frac{d}{dx}(u)-\frac{d}{dx}(v)
+        \end{equation*}
+    \end{large}\\
+    导数的乘法：
+    \begin{large}
+        \begin{equation*}
+            \frac{d}{dx}(u\cdot v)=v\cdot\frac{d}{dx}(u)+u\cdot\frac{d}{dx}(v)
+        \end{equation*}
+    \end{large}\\
+    导数的除法：
+    \begin{large}
+        \begin{equation*}
+            \frac{d}{dx}(\frac{u}{v})=\frac{v\cdot\dfrac{d}{dx}(u)-u\cdot\dfrac{d}{dx}(v)}{v^2}
+        \end{equation*}
+    \end{large}\\
+    导数中的常数可以直接提出导数外：
+    \begin{large}
+        \begin{equation*}
+            \frac{d}{dx}(c\cdot u)=c\cdot\frac{d}{dx}(u)
+        \end{equation*}
+    \end{large}
+
+\subsubsection{复合函数的求导}
+    对于$y=f(u)$，$u=g(x)$，我们可以这样计算$y$对$x$求导：\\
+    \begin{large}
+        \begin{equation*}
+            f\left(g(x)\right)=\frac{d}{du}\ f(u)\cdot\frac{d}{dx}\ g(x)
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{积分}
+    积分是导数的逆运算

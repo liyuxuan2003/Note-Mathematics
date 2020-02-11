@@ -1,0 +1,75 @@
+    已知一个圆圆心为$P(a,b)$，
+    求解过该圆上一点$M(x_0,y_0)$的切线$l$的直线方程：\\
+    \newline
+    直线$l$过点$M(x_0,y_0)$,
+    直线$l$的法向量$\overrightarrow{OM}=(x_0-a,y_0-b)$，\\
+    \newline
+    可以求得直线$l$的点法向式方程：
+    \begin{equation*}
+        (x_0-a)(x-x_0)+(y_0-b)(y-y_0)=0
+    \end{equation*}
+    变形可得：
+    \begin{align*}
+        &x \cdot x_0-x_0^2-ax+ax_0+y \cdot y_0-y_0^2-by+by_0=0\\
+        &x \cdot x_0-ax-ax_0+a^2+y \cdot y_0-by-by_0+b^2=x_0^2-2ax_0+a^2+y_0^2-2by_0+b^2\\
+        &x \cdot x_0-ax-ax_0+a^2+y \cdot y_0-by-by_0+b^2=(x_0-a)^2+(y_0-b)^2\\
+        &x \cdot x_0-ax-ax_0+a^2+y \cdot y_0-by-by_0+b^2=r^2\\
+        &x \cdot (x_0-a)-a \cdot (x_0-a)+y \cdot (y_0-b)-b \cdot (y_0-b)=r^2\\
+        &(x-a)(x_0-a)+(y-b)(y_0-b)=r^2
+    \end{align*}
+    \newline
+    圆的切线方程：
+    \begin{equation*}
+        (x-a)(x_0-a)+(y-b)(y_0-b)=r^2
+    \end{equation*}
+
+\subsection{过圆外一点求圆的切线方程}
+    已知一个圆，圆心为$O(0,0)$，
+    求解过该圆外一点$M(x_0,y_0)$的切线$l$的直线方程。\\[3mm]
+    设切点为$H$，显然$HO\perp HM$，即$HO^2+HM^2=OM^2$，所以我们有：
+    \begin{equation}
+        HO=r\qquad HM=d\qquad OM=\sqrt{x_0~^2+y_0~^2}
+    \end{equation}\\
+    其中$d$为简化运算而设，具体等于：
+    \begin{equation}
+        d=HM=\sqrt{x_0~^2+y_0~^2-r^2}
+    \end{equation}
+    设切线偏离直线$OM$的角度为$\theta$，那么我们可以求得以下三角比：
+    \begin{align}
+        &\sin{(+\theta)}=\frac{r}{\sqrt{x_0~^2+y_0~^2}}\\[3mm]
+        &\cos{(+\theta)}=\frac{d}{\sqrt{x_0~^2+y_0~^2}}\\[3mm]
+        &\sin{(-\theta)}=\frac{-r}{\sqrt{x_0~^2+y_0~^2}}\\[3mm]
+        &\cos{(-\theta)}=\frac{d}{\sqrt{x_0~^2+y_0~^2}}
+    \end{align}\\
+    将直线$OM$的方向向量$\vec{d}=(x_0,y_0)$分别以顺时针和逆时针旋转$\theta$，
+    得到切线的方向向量：
+    \begin{align}
+        &\vec{d_1}=
+        \begin{pmatrix}
+            \cos{(+\theta)}&-\sin{(+\theta)}\\
+            \sin{(+\theta)}&~~~\cos{(+\theta)}\\
+        \end{pmatrix}\cdot
+        \begin{pmatrix}
+            x_0\\
+            y_0\\
+        \end{pmatrix}\Rightarrow
+        \left(x_0d-y_0r~~,~~x_0r+y_0d\right)\\[3mm]
+        &\vec{d_2}=
+        \begin{pmatrix}
+            \cos{(-\theta)}&-\sin{(-\theta)}\\
+            \sin{(-\theta)}&~~~\cos{(-\theta)}\\
+        \end{pmatrix}\cdot
+        \begin{pmatrix}
+            x_0\\
+            y_0\\
+        \end{pmatrix}\Rightarrow
+        \left(y_0r+x_0d~~,~~y_0d-x_0r\right)
+    \end{align}\\
+    最终分别将方向向量代入过点M的点方向式方程，得到切线方程。\\[3mm]
+    当圆心为$O(0,0)$，过圆外一点的切线方程：
+    \begin{large}
+        \begin{align*}
+            (x_0r+y_0d)\cdot(x-x_0)-(x_0d-y_0r)\cdot(y-y_0)=0\\[3mm]
+            (y_0d-x_0r)\cdot(x-x_0)-(y_0r+x_0d)\cdot(y-y_0)=0\\[3mm]
+        \end{align*}
+    \end{large}

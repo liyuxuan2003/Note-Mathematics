@@ -1,0 +1,108 @@
+\subsubsection{关于{\large$a_{n+1}=q\cdot a_n+f(x)$}运算法则的猜想}
+    观察以下三组结论：
+    \begin{align*}
+        &a_{n+1}=q\cdot a_n+c \qquad a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot (q^{n-1}-1)\\[3mm]
+        &a_{n+1}=q\cdot a_n+cn \qquad a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot\left(q^{n-1}-n\right)+\frac{c}{(q-1)^2}\cdot\left(q^{n-1}-1\right)\\[3mm]
+        &a_{n+1}=q\cdot a_n+cn+d \qquad a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot\left(q^{n-1}-n\right)+\frac{c}{(q-1)^2}\cdot\left(q^{n-1}-1\right)+\frac{d}{d-1}\cdot\left(q^{n-1}-1\right)
+    \end{align*}\\
+    我们会发现，递推式为$a_{n+1}=q\cdot a_n+cn+d$得出的通项式，
+    实际就是将递推式$a_{n+1}=q\cdot a_n+c$和$a_{n+1}=q\cdot a_n+cn$对应的通项式结合在一起，
+    由此，我们给出以下\textbf{猜想}：\\[3mm]
+    对于一组递推式：\\[1mm]
+    $a_{n+1}=q\cdot a_n+f_1(x)$\qquad
+    $a_{n+1}=q\cdot a_n+f_2(x)$\\[3mm]
+    显然，它们所对应的通项式可以表达为：\\[1mm]
+    $a_{n}=q\cdot a_{n-1}+g_1(x)$\qquad
+    $a_{n}=q\cdot a_{n-1}+g_2(x)$\\[5mm]
+    那么对于递推式：\\[2mm]
+    {\large$a_{n+1}=q\cdot a_n+f_1(x)+f_2(x)$}\\[3mm]
+    猜想其通项式为：\\[2mm]
+    {\large$a_{n}=q\cdot a_{n-1}+g_1(x)+g_2(x)$}\\[5mm]
+    当$f(x)=cn$，$g(x)=c^n$时，通过代入\textbf{特定数值}，
+    并根据猜想验证了\textbf{一定范围}内的结果，
+    发现猜想在这种条件下也成立。\\[5mm]
+    通过上面的推导，我们还有以下结论：
+    \begin{large}
+    \begin{align*}
+        &f(x)=c \quad g(x)=\frac{c}{q-1}\cdot (q^{n-1}-1)\\[2mm]
+        &f(x)=cn \quad g(x)=\frac{c}{q-1}\cdot\left(q^{n-1}-n\right)+\frac{c}{(q-1)^2}\cdot\left(q^{n-1}-1\right)\\[2mm]
+        &f(x)=cn^2 \quad g(x)=\frac{c}{q-1}\cdot \left(q^{n-1}-n^2\right)+\frac{c}{(q-1)^2}\cdot\left(2\cdot q^{n-1}-n-1\right)+\frac{c}{(q-1)^3}\cdot\left(q^{n-1}-1\right)\\[2mm]
+        &f(x)=c^n \quad g(x)=\frac{c}{q-c}\cdot\left(q^{n-1}-c^{n-1}\right)
+    \end{align*}
+    \end{large}
+
+\subsubsection{形如{\large$a_{n+1}=q\cdot a_n+c\cdot n+d$}}
+    运用待定系数法，我们可以进行如下推导：
+    \setcounter{equation}{0}
+    \begin{align}
+        &a_{n+1}=q\cdot a_n+c\cdot n+d\\[3mm]
+        &a_{n+1}+x\cdot(n+1)+y=(a_n+xn+y)\cdot q\\[3mm]
+        &a_{n+1}+xn+x+y=q\cdot a_n+qx\cdot n+qy\\[3mm]
+        &a_{n+1}=q\cdot a_n+(qx-x)\cdot n+qy-y-x\\[3mm]
+        &a_{n+1}=q\cdot a_n+(q-1)\cdot x\cdot n+(q-1)\cdot y-x\\[5mm]
+        &c=(q-1)\cdot x\\[3mm]
+        &d=(q-1)\cdot y-x\\[3mm]
+        &x=\frac{c}{q-1}\\[3mm]
+        &y=\frac{x+d}{q-1}=\frac{c}{(q-1)^2}+\frac{d}{q-1}\\[5mm]
+        &a_{n+1}+\frac{c}{q-1}\cdot(n+1)+\frac{c}{(q-1)^2}+\frac{d}{q-1}=\left(a_n+\frac{c}{q-1}\cdot n+\frac{c}{(q-1)^2}+\frac{d}{q-1}\right)\cdot q\\[3mm]
+        &a_{n+1}+\frac{c}{q-1}\cdot(n+1)+\frac{c}{(q-1)^2}+\frac{d}{q-1}=\left(a_1+\frac{c}{q-1}+\frac{c}{(q-1)^2}+\frac{d}{q-1}\right)\cdot q^n\\[3mm]
+        &a_{n+1}=q^n\cdot a_1+\frac{c}{q-1}\cdot\left(q^n-(n+1)\right)+\frac{c}{(q-1)^2}\cdot\left(q^n-1\right)+\frac{d}{d-1}\cdot\left(q^n-1\right)
+    \end{align}\\
+    用$n$替代$n+1$后，我们就可以得到通项公式：
+    \begin{large}
+    \begin{equation*}
+        a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot\left(q^{n-1}-n\right)+\frac{c}{(q-1)^2}\cdot\left(q^{n-1}-1\right)+\frac{d}{d-1}\cdot\left(q^{n-1}-1\right)
+    \end{equation*}      
+    \end{large}\\
+    特别的，当$d=0$时，即$a_{n+1}=q\cdot a_n+c\cdot n$时：
+    \begin{large}
+    \begin{equation*}
+        a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot\left(q^{n-1}-n\right)+\frac{c}{(q-1)^2}\cdot\left(q^{n-1}-1\right)
+    \end{equation*}      
+    \end{large}
+
+{\Large 通过递推式推导通项式[形如$a_{n+1}=q\cdot a_n+c\cdot n^2+dn+e$]}
+
+\newpage
+
+运用待定系数法，我们可以进行如下推导：
+\setcounter{equation}{0}
+\begin{small}
+\begin{align}
+    &a_{n+1}=q\cdot a_n+c\cdot n^2+dn+e\\[2mm]
+    &a_{n+1}+x\cdot(n+1)^2+yn+z=(an+xn^2+yn+z)\cdot q\\[2mm]
+    &a_{n+1}+xn^2+xn+x=yn+z=(an+xn^2+yn+z)\cdot q\\[2mm]
+    &a_{n+1}+xn^2+(x+y)\cdot n+(x+y+z)=q\cdot a_n+qx\cdot n^2+qy\cdot n+qz\\[2mm]
+    &a_{n+1}=q\cdot a_n+\left[(q-1)\cdot x\right]\cdot n^2+\left[(q-1)\cdot y-x\right]\cdot n+\left[(q-1)\cdot z-y-x\right]\\[4mm]
+    &c=(q-1)\cdot x\\[2mm]
+    &d=(q-1)\cdot y-x\\[2mm]
+    &e=(q-1)\cdot z-y-x\\[2mm]
+    &x=\frac{c}{q-1}\\[2mm]
+    &y=\frac{x+d}{q-1}=\frac{c}{(q-1)^2}+\frac{d}{q-1}\\[2mm]
+    &z=\frac{x+y+e}{q-1}=\frac{c}{(q-1)^2}+\frac{c}{(q-1)^3}+\frac{d}{(q-1)^2}+\frac{e}{q-1}\\[5mm]
+    &a_{n+1}+\left[\frac{c}{q-1}\right]\cdot(n+1)^2+\left[\frac{c}{(q-1)^2}+\frac{d}{q-1}\right]\cdot(n+1)+\left[\frac{c}{(q-1)^2}+\frac{c}{(q-1)^3}+\frac{d}{(q-1)^2}+\frac{e}{q-1}\right]\\[2mm]
+    &=\left[a_n+\left[\frac{c}{q-1}\right]\cdot n^2+\left[\frac{c}{(q-1)^2}+\frac{d}{q-1}\right]\cdot n+\left[\frac{c}{(q-1)^2}+\frac{c}{(q-1)^3}+\frac{d}{(q-1)^2}+\frac{e}{q-1}\right]\right]\cdot q\\[4mm]
+    &a_{n+1}+\left[\frac{c}{q-1}\right]\cdot(n+1)^2+\left[\frac{c}{(q-1)^2}+\frac{d}{q-1}\right]\cdot(n+1)+\left[\frac{c}{(q-1)^2}+\frac{c}{(q-1)^3}+\frac{d}{(q-1)^2}+\frac{e}{q-1}\right]\\[2mm]
+    &=\left[a_1+\left[\frac{c}{q-1}\right]+\left[\frac{c}{(q-1)^2}+\frac{d}{q-1}\right]+\left[\frac{c}{(q-1)^2}+\frac{c}{(q-1)^3}+\frac{d}{(q-1)^2}+\frac{e}{q-1}\right]\right]\cdot q^n\\[4mm]
+    &a_{n+1}=q^n\cdot a_1+\left[\frac{c}{q-1}\right]\cdot\left(q^n-(n+1)^2\right)+\left[\frac{c}{(q-1)^2}+\frac{d}{q-1}\right]\cdot\left(q^n-(n+1)\right)\\[2mm]
+    &+\left[\frac{c}{(q-1)^2}+\frac{c}{(q-1)^3}+\frac{d}{(q-1)^2}+\frac{e}{q-1}\right]\cdot\left(q^n-1\right)\\[4mm]
+    &a_{n+1}=q^n\cdot a_1+\frac{c}{q-1}\cdot \left(q^n-(n+1)^2\right)+\frac{c}{(q-1)^2}\cdot\left(q^n-(n+1)\right)+\frac{d}{q-1}\cdot\left(q^n-(n+1)\right)\\[2mm]
+    &+\frac{c}{(q-1)^2}\cdot\left(q^n-1\right)+\frac{c}{(q-1)^3}\cdot\left((q^n-1)\right)+\frac{d}{(q-1)^2}\cdot\left(q^n-1\right)+\frac{e}{q-1}\cdot\left(q^n-1\right)
+\end{align}
+\end{small}
+
+\newpage
+
+用$n$替代$n+1$，整理，我们可以得到通项公式：
+\begin{large}
+\begin{align*}
+    &a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot \left(q^{n-1}-n^2\right)+\frac{c}{(q-1)^2}\cdot\left(2\cdot q^{n-1}-n-1\right)+\frac{c}{(q-1)^3}\cdot\left(q^{n-1}-1\right)\\[2mm]
+    &+\frac{d}{q-1}\cdot\left(q^{n-1}-n\right)+\frac{d}{(q-1)^2}\cdot\left(q^{n-1}-1\right)+\frac{e}{q-1}\cdot\left(q^{n-1}-1\right)
+\end{align*}      
+\end{large}\\
+特别的，当$d=0$且$e=0$时，即$a_{n+1}=q\cdot a_n+c\cdot n^2$时：
+\begin{large}
+\begin{equation*}
+    a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot \left(q^{n-1}-n^2\right)+\frac{c}{(q-1)^2}\cdot\left(2\cdot q^{n-1}-n-1\right)+\frac{c}{(q-1)^3}\cdot\left(q^{n-1}-1\right)
+\end{equation*}      
+\end{large}
