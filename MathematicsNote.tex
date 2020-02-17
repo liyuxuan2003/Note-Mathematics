@@ -6,6 +6,7 @@
 \RequirePackage{xeCJK}
 
 \RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{mathpazo}
 \RequirePackage{pgfplots}
 \RequirePackage{tikz}
@@ -56,6 +57,88 @@
 \newpage
 
 \setlength{\parindent}{0pt}
+
+\section{集合与命题}
+
+\subsection{集合}
+    我们将能够确切指定的不同对象组成的整体，称为集合。\\[3mm]
+    集合的元素指的是集合中的各个对象。\\[3mm]
+    集合的元素是各不相同的，且地位相等，与顺序无关。\\[6mm]
+    含有有限个元素的集合称为有限集。\\[3mm]
+    含有无限个元素的集合称为无限集。\\[3mm]
+    不含有任何元素的集合称为空集，通常用符号$\emptyset$表示。\\[6mm]
+    集合通常使用大写英文字母表示，例如$A$，例如$B$，例如$C$。\\[3mm]
+    集合通常使用小写英文字母表示，例如$a$~，例如$b$~，例如$c$~。\\
+
+\subsubsection{集合的表示方法}
+    集合的表示方法通常有两种：列举法，描述法。\\[3mm]
+    以下列出了使用列举法描述集合的例子：
+    \begin{large}
+        \begin{align*}
+            &A=\big\{ a,b,c,d\big\}\\[3mm]
+            &B=\big\{ (x_1,y_1),(x_2,y_2),(x_3,y_3) \big\}
+        \end{align*}
+    \end{large}\\
+    以下列出了使用描述法描述集合的例子：
+    \begin{large}
+        \begin{align*}
+            A&=\big\{ y~|~y=f(x)\big\}\\[3mm]
+            B&=\big\{ y~|~y>f(x)\big\}\\[3mm]
+            C&=\big\{ (x,y)~|~F(x,y)\big\}
+        \end{align*}
+    \end{large}
+
+\newpage
+
+\subsubsection{集合和元素的关系}
+    如果集合$A$中有元素$a$，称为元素$a$属于集合$A$。\\[3mm]
+    如果集合$A$中无元素$a$，称为元素$a$不属于集合$A$。\\[5mm]
+    元素$a$属于集合$A$：
+    \begin{large}
+        \begin{equation*}
+            a\in A
+        \end{equation*}
+    \end{large}\\
+    元素$a$不属于集合$A$：
+    \begin{large}
+        \begin{equation*}
+            a\notin A
+        \end{equation*}
+    \end{large}
+
+\subsubsection{集合和集合的关系}
+    如果集合$A$中任何一个元素都是集合$B$中的元素，同时集合$B$中可能有集合$A$中没有的元素：\\[3mm]
+    那么集合$A$是集合$B$的子集，前者对后者的关系称为包含于。\\[3mm]
+    那么集合$B$是集合$A$的超集，前者对后者的关系称为包含。\\[4mm]
+    集合$A$是集合$B$的子集：
+    \begin{large}
+        \begin{equation*}
+            A\subseteq B
+        \end{equation*}
+    \end{large}\\
+    集合$B$是集合$A$的超集：
+    \begin{large}
+        \begin{equation*}
+            B\supseteq A
+        \end{equation*}
+    \end{large}\\
+    如果集合$A$中任何一个元素都是集合$B$中的元素，同时集合$B$中一定有集合$A$中没有的元素：\\[3mm]
+    那么集合$A$是集合$B$的真子集，前者对后者的关系称为真包含于。\\[3mm]
+    那么集合$B$是集合$A$的真超集，前者对后者的关系称为真包含。\\[4mm]
+    集合$A$是集合$B$的真子集：
+    \begin{large}
+        \begin{equation*}
+            A\subsetneqq B
+        \end{equation*}
+    \end{large}\\
+    集合$B$是集合$A$的真超集：
+    \begin{large}
+        \begin{equation*}
+            B\supsetneqq A
+        \end{equation*}
+    \end{large}
+
+\newpage
 
 \section{函数}
 
