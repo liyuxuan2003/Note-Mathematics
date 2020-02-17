@@ -27,6 +27,8 @@
 \let\nvec\vec
 \def\vec#1{\nvec{\vphantom b\smash{#1}}}
 
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
 \renewcommand{\Re}{\operatorname{Re}}
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\arccot}{\operatorname{arccot}}
@@ -6654,7 +6656,7 @@
 \newpage
 
 \subsection{圆柱}
-    \textbf{圆柱：}将一个矩形绕一条边旋转一周所形成的几何体。\\[3mm]
+    \textbf{圆柱：}一个矩形绕一条边旋转一周所形成的几何体。\\[3mm]
     圆柱也可以看作一个底面多边形边数趋向于无穷大的正棱柱。\\[3mm]
     下表列出了圆柱的相关概念：\vspace{5pt}
     \begin{table}[h]
@@ -6712,7 +6714,7 @@
 \newpage
 
 \subsection{圆锥}
-    \textbf{圆锥：}将一个直角三角形绕一条直角边旋转一周所形成的几何体。\\[3mm]
+    \textbf{圆锥：}一个直角三角形绕一条直角边旋转一周所形成的几何体。\\[3mm]
     圆锥也可以看作一个底面多边形边数趋向于无穷大的正棱锥。\\[3mm]
     下表列出了圆柱的相关概念：\vspace{5pt}
     \begin{table}[h]
@@ -6766,6 +6768,127 @@
         \end{align*}
     \end{large}\\
     很显然，圆锥的表面积由一个侧面积和一个底面积组成。    
+
+\newpage
+
+\subsection{球}
+    \textbf{球：}一个半圆绕直径旋转一周所形成的几何体。\\[3mm]
+    下表列出了球的相关概念：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                球的半径~~~~~~~~&球中原半圆的半径~~~~~~~~\\ \hline
+                球的直径~~~~~~~~&球中原半圆的直径~~~~~~~~\\ \hline
+                球的球心~~~~~~~~&球中原半圆的圆心~~~~~~~~\\ \hline
+                球的球面~~~~~~~~&球中原半圆的圆弧所形成的曲面~~~~~~~~\\ \hline
+            \end{tabular}
+            \caption{球的相关概念}
+        \end{center}
+    \end{table}\\
+    对于通过球心的平面，其截取球面的圆称为球的大圆。\\[3mm]
+    对于不过球心的平面，其截取球面的圆称为球的小圆。\\
+
+\subsubsection{球的性质}
+    以下是球的性质：\\[3mm]
+    1.同一个球的半径都相等。\\[3mm]
+    2.同一个球的大圆互相平方。\\[3mm]
+    3.球被任意平面所截的截面都是圆。\\[3mm]
+    4.球心与球截面圆心的连线与球截面垂直。\\[6mm]
+    我们用$R$表示球的半径，我们用$r$表示截面圆的半径，我们用$d$表示球心到截面圆的距离。\\[3mm]
+    我们可以使用数学形式表达三者的关系：
+    \begin{large}
+        \begin{equation*}
+            d=\sqrt{R^2-r^2}
+        \end{equation*}
+    \end{large}\\
+    在球面上，联结两点的最短路径称为两点的球面距离。\\[3mm]
+    在球面上，过两点的球面距离等于过两点的球的大圆劣弧的长度。
+
+\newpage
+
+\subsection{柱体的体积}
+    柱体的体积可以通过对柱体截面的积分得到。\\[3mm]
+    柱体截面面积$f(x)$关于截面至底面距离$x$的函数关系如下：
+    \setcounter{equation}{0}
+    \begin{align}
+        &f(x)=S
+    \end{align}\\
+    在上方的函数中，符号$S$表示柱体的底面积。\\[8mm]
+    对函数$f(x)$求解定积分可得：
+    \begin{align}
+        V
+        &=\int_0^h f(x)\cdot\dif x\\[4mm]
+        &=\int_0^h S\cdot\dif x\\[4mm]
+        &=[S\cdot x]_0^h\\[4mm]
+        &=S\cdot h
+    \end{align}\\
+    柱体的体积公式：
+    \begin{large}
+        \begin{equation*}
+            V=S\cdot h
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{锥体的体积}
+    锥体的体积可以通过对锥体截面的积分得到。\\[3mm]
+    锥体截面面积$f(x)$关于截面至底面距离$x$的函数关系如下：
+    \setcounter{equation}{0}
+    \begin{align}
+        f(x)=S\cdot\frac{(h-x)^2}{h^2}
+    \end{align}\\
+    在上方的函数中，符号$S$代表锥体的底面积，符号$h$代表锥体的高。\\[8mm]
+    对函数$f(x)$求解定积分可得：\vspace{3pt}
+    \begin{align}
+        V
+        &=\int_0^h f(x)\cdot\dif x\\[4mm]
+        &=\int_0^h S\cdot\frac{(h-x)^2}{h^2}\cdot\dif x\\[4mm]
+        &=\frac{S}{h^2}\cdot\int_0^h (h-x)^2\cdot\dif x\\[4mm]
+        &=\frac{S}{h^2}\cdot\int_0^h \left(h^2-2hx+x^2\right)\cdot\dif x\\[4mm]
+        &=\frac{S}{h^2}\cdot\left(\int_0^h h^2\cdot\dif x+\int_0^h -2hx\cdot\dif x+\int_0^h x^2\cdot\dif x\right)\\[4mm]
+        &=\frac{S}{h^2}\cdot\left([h^2\cdot x]_0^h+[-hx^2]_0^h+\left[\frac{1}{3}\cdot x^3\right]_0^h\right)\\[4mm]
+        &=\frac{S}{h^2}\cdot\left(h^3-h^3+\frac{1}{3}\cdot h^3\right)\\[4mm]
+        &=\frac{S}{h^2}\cdot\frac{1}{3}\cdot h^3\\[4mm]
+        &=\frac{1}{3}\cdot S\cdot h
+    \end{align}\\
+    锥体的体积公式：
+    \begin{large}
+        \begin{equation*}
+            V=\frac{1}{3}\cdot S\cdot h
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{球的体积}
+    球的体积可以通过对球截面的积分得到。\\[3mm]
+    球截面面积$f(x)$关于截面至球心距离$x$的函数关系如下：
+    \setcounter{equation}{0}
+    \begin{align}
+        f(x)=\pi r^2-\pi x^2
+    \end{align}\\
+    在上方的函数中，符号$r$代表球的半径。\\[8mm]
+    对函数$f(x)$求解定积分可得：\vspace{3pt}
+    \begin{align}
+        V
+        &=\int_{-r}^{+r}f(x)\cdot\dif x\\[4mm]
+        &=\int_{-r}^{+r}\left(\pi r^2-\pi x^2\right)\cdot\dif x\\[4mm]
+        &=\pi\cdot\int_{-r}^{+r}\left(r^2-x^2\right)\cdot\dif x\\[4mm]
+        &=\pi\cdot\left(\int_{-r}^{+r}r^2\cdot\dif x-\int_{-r}^{+r}x^2\cdot\dif x\right)\\[4mm]
+        &=\pi\cdot\left(\left[r^2\cdot x\right]_{-r}^{+r}-\left[\frac{1}{3}\cdot x^3\right]_{-r}^{+r}\right)\\[4mm]
+        &=\pi\cdot\left(\left[r^3+r^3\right]-\left[\frac{1}{3}\cdot r^3+\frac{1}{3}\cdot r^3\right]\right)\\[4mm]
+        &=\pi\cdot\left(2\cdot r^3-\frac{2}{3}\cdot r^3\right)\\[4mm]
+        &=\pi\cdot\frac{4}{3}\cdot r^3\\[4mm]
+        &=\frac{4}{3}\cdot\pi\cdot r^3
+    \end{align}\\
+    球的体积公式：
+    \begin{large}
+        \begin{equation*}
+            V=\frac{4}{3}\cdot\pi\cdot r^3
+        \end{equation*}
+    \end{large}
 
 \newpage
 
@@ -7046,7 +7169,7 @@
         \end{equation*}
     \end{large}\\
     此处的$\mu_A$和$\mu_{\Omega}$分别代表区域$A$和区域$\Omega$的几何度量大小。\\[3mm]
-    在几何概型中，我们可以将一个事件理解为一块区域，而事件的概率只与区域的几何度量有关，与区域的位置和形状无关。\vspace{3pt}
+    在几何概型中，我们可以将一个事件理解为一块区域，而事件的概率只与区域的几何度量有关。\vspace{3pt}
 
 \subsection{频数和频率}
     如果进行了$n$次重复试验，事件$A$出现了$m$次：\\[3mm]
