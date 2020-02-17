@@ -4159,7 +4159,7 @@
         \end{equation*}
     \end{large}\\
 
-\subsubsection{椭圆的焦点三角形的面积}
+\subsubsection{椭圆的焦点三角形}
     椭圆的焦点三角形指的是椭圆上任意一点与椭圆两焦点组成的三角形。\\[3mm]
     设椭圆上一点为$P$，对于焦点三角形$\triangle PF_1F_2$：
     \setcounter{equation}{0}
@@ -6470,6 +6470,302 @@
     因为交线$b$经过点$O$，且交线$b$在平面$\beta$上，所以点$O$在平面$\beta$上\\[3mm]
     因此点$O$同时在平面$\alpha$和平面$\beta$上，违背定理中平面$\alpha$平行于平面$\beta$\\[3mm]
     矛盾，故假设不成立，因此交线$a$与交线$b$平行
+
+\newpage
+
+\section{简单几何体}
+
+\subsection{多面体}
+    多面体：由若干个多边形围成的封闭立体图形。\\[3mm]
+    多面体的面：构成多面体的多边形，其数量用字母$F$表示。\\[3mm]
+    多面体的棱：相邻多边形的公共边，其数量用字母$E$表示。\\[3mm]
+    多面体的顶点：棱与棱之间的交点，其数量用字母$V$表示。\\[3mm]
+    多面体的命名遵循以下规则：若一个多面体有$F$面，那么称其为$F$面体。\\[3mm]
+    另外我们将联结不在同一面上的两个顶点的线段，称为多面体的对角线。\\[3mm]
+    若多面体满足对于任意面，其他各面都在该面的一侧，那么称为凸多面体，反之称为凹多面体。
+
+\subsubsection{正多面体}
+    正多面体需要满足以下两个特征：\\[3mm]
+    1.每个面都是有相同边数的正多边形。\\[3mm]
+    2.每个顶点都有相同数量的棱数。\\[5mm]
+    正多面体只有五种：正四面体，正六面体，正八面体，正十二面体，正二十面体。\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l|l|l|l}
+                \hline
+                正多面体~~~~~~~~&顶点数V-Vertex~~~~&棱数E-Edge~~~~&面数F-Face~~~~&组成多边形~~~~~~~~\\ \hline
+                正四面体&4&6&4&正三边形\\ \hline
+                正六面体&8&12&6&正四边形\\ \hline
+                正八面体&6&12&8&正三边形\\ \hline
+                正十二面体&20&30&12&正五边形\\ \hline
+                正二十面体&12&30&20&正三角形\\ \hline
+            \end{tabular}
+            \caption{正多面体的性质}
+        \end{center}
+    \end{table}\vspace{-20pt}
+
+\subsubsection{欧拉定理}
+    简单多面体：满足表面经过拓扑变换可以变为球面的多面体。\\[3mm]
+    简单多面体满足以下关系：
+    \begin{large}
+        \begin{equation*}
+            V-E+F=2
+        \end{equation*}
+    \end{large}\\
+    简单多面体的该数量关系称为多面体的欧拉定理。
+
+\newpage
+
+\subsection{棱柱}
+    \textbf{棱柱：}有两个平行面是多边形，其余各面都是四边形，且相邻四边形的公共边都平行的多面体。\\[3mm]
+    下表列出了棱柱的相关概念：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                棱柱的底面~~~~~~~~&棱柱中互相平行的两个面~~~~~~~~\\ \hline
+                棱柱的侧面~~~~~~~~&棱柱中其余的各四边形面~~~~~~~~\\ \hline
+                棱柱的侧棱~~~~~~~~&棱柱中相邻两个侧面的公共边~~~~~~~~\\ \hline
+                棱柱的高~~~~~~~~&两个底面间的距离~~~~~~~~\\ \hline
+            \end{tabular}
+            \caption{棱柱的相关概念}
+        \end{center}
+    \end{table}\\
+    棱柱的命名遵循以下规则：若一个棱柱的底面多边形有$n$边，那么称其为$n$棱柱。\\[3mm]
+    \textbf{侧棱柱：}侧棱和底面斜交的棱柱。\\[3mm]
+    \textbf{直棱柱：}侧棱和底面垂直的棱柱。\\[3mm]
+    \textbf{正棱柱：}底面是正多边形，且侧棱和底面垂直的棱柱。\\
+
+\subsubsection{棱柱的性质}
+    以下是棱柱的性质：\\[3mm]
+    1.棱柱的侧面都是平行四边形。\\[3mm]
+    2.棱柱中平行于底面的截面互为全等的多边形。\\[3mm]
+    其中性质二也可以通过数学形式表达：
+    \begin{large}
+        \begin{equation*}
+            \frac{S_A}{S_B}=1
+        \end{equation*}
+    \end{large}\\
+    即任意两个平行于底面的截面，其面积$S_A~S_B$的比等于一。\\[8mm]
+    以下是正棱柱的性质：\\[3mm]
+    1.正棱柱的侧面都是全等的矩形。\\[3mm]
+    2.正棱柱的高等于其侧棱的长度。
+
+\newpage
+
+\subsubsection{正棱柱的表面积}
+    我们定义以下字母：\\[3mm]
+    $n$代表正棱柱底面的边数。\\[3mm]
+    $a$代表正棱柱底面的边长。\\[3mm]
+    $c$代表正棱柱底面的周长。\\[3mm]
+    $s$代表正棱柱底面的面积。\\[3mm]
+    $h$代表正棱柱的高，即正棱柱侧面矩形的高。\\[6mm]
+    正棱柱的底面积：
+    \begin{large}
+        \begin{equation*}
+            S_B=s
+        \end{equation*}
+    \end{large}\\
+    正棱柱的侧面积：
+    \begin{large}
+        \begin{align*}
+            &S_A=c\cdot h\\[3mm]
+            &S_A=n\cdot a\cdot h
+        \end{align*}
+    \end{large}\\
+    正棱柱侧面的展开图形是$n$个全等的矩形，故可以进行上述计算。\\[8mm]
+    正棱柱的表面积：
+    \begin{large}
+        \begin{align*}
+            &S=S_A+2\cdot S_B\\[3mm]
+            &S=n\cdot a\cdot h+2\cdot s
+        \end{align*}
+    \end{large}\\
+    很显然，正棱柱的表面积由一个侧面积和两个底面积组成。
+    
+\newpage
+
+\subsection{棱锥}
+    棱锥：有一个面是多边形，其余各面都是三角形，且其余的三角形都有一个公共顶点的多面体。\\[3mm]
+    下表列出了棱锥的相关概念：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                棱锥的底面~~~~~~~~&棱锥中为多边形的一个面~~~~~~~~\\ \hline
+                棱锥的侧面~~~~~~~~&棱锥中其余的各三角形面~~~~~~~~\\ \hline
+                棱锥的侧棱~~~~~~~~&棱锥中相邻两个侧面的公共边~~~~~~~~\\ \hline
+                棱锥的顶点~~~~~~~~&棱锥中所有的侧面的公共顶点~~~~~~~~\\ \hline
+                棱锥的高~~~~~~~~&顶点到底面的距离~~~~~~~~\\ \hline
+            \end{tabular}
+            \caption{棱锥的相关概念}
+        \end{center}
+    \end{table}\\
+    棱锥的命名遵循以下规则：若一个棱锥的底面多边形有$n$边，那么称其为$n$棱锥。\\[3mm]
+    \textbf{正棱锥：}底面是正多边形，且顶点的射影在底面中心的棱锥。\\
+
+\subsubsection{棱锥的性质}
+    以下是棱锥的性质：\\[3mm]
+    1.棱锥的侧面都是三角形。\\[3mm]
+    2.棱锥中平行于底面的界面互为相似的多边形。\\[3mm]
+    其中性质二也可以通过数学形式表达：
+    \begin{large}
+        \begin{equation*}
+            \frac{S_A}{S_B}=\frac{h_A^{~2}}{h_B^{~2}}
+        \end{equation*}
+    \end{large}\\
+    即任意两个平行于底面的截面，其面积$S_A~S_b$的比等于顶点到截面的距离$h_A~h_B$的平行之比。\\[6mm]
+    以下是正棱锥的性质：\\[3mm]
+    1.正棱锥的侧面都是全等的等腰三角形。\\[3mm]
+    2.正棱锥的高等于顶点到底面中心点的距离。
+    
+\newpage
+
+\subsubsection{正棱锥的表面积}
+    我们定义以下字母：\\[3mm]
+    $n$代表正棱锥底面的边数。\\[3mm]
+    $a$代表正棱锥底面的边长。\\[3mm]
+    $c$代表正棱锥底面的周长。\\[3mm]
+    $s$代表正棱锥底面的面积。\\[3mm]
+    $h$代表正棱锥的斜高，即正棱锥侧面等腰三角形的高。\\[6mm]
+    正棱锥的底面积：
+    \begin{large}
+        \begin{equation*}
+            S_B=s
+        \end{equation*}
+    \end{large}\\
+    正棱锥的侧面积：
+    \begin{large}
+        \begin{align*}
+            &S_A=\frac{1}{2}\cdot c\cdot h\\[3mm]
+            &S_A=\frac{1}{2}\cdot n\cdot a\cdot h
+        \end{align*}
+    \end{large}\\
+    正棱锥侧面的展开图形是$n$个全等的等腰三角形，故可以进行上述计算。\\[8mm]
+    正棱锥的表面积：
+    \begin{large}
+        \begin{align*}
+            &S=S_A+S_B\\[3mm]
+            &S=\frac{1}{2}\cdot n\cdot a\cdot h+s
+        \end{align*}
+    \end{large}\\
+    很显然，正棱锥的表面积由一个侧面积和一个底面积组成。
+
+\newpage
+
+\subsection{圆柱}
+    \textbf{圆柱：}将一个矩形绕一条边旋转一周所形成的几何体。\\[3mm]
+    圆柱也可以看作一个底面多边形边数趋向于无穷大的正棱柱。\\[3mm]
+    下表列出了圆柱的相关概念：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                圆柱的轴~~~~~~~~&圆柱中矩形所绕的边~~~~~~~~\\ \hline
+                圆柱的底面~~~~~~~~&圆柱中与轴相邻的两条边旋转所形成的面~~~~~~~~\\ \hline
+                圆柱的侧面~~~~~~~~&圆柱中与轴相对的一条边旋转所形成的面~~~~~~~~\\ \hline
+                圆柱的母线~~~~~~~~&圆柱在矩形旋转形成侧面时留下的每一条线~~~~~~~~\\ \hline
+                圆柱的高~~~~~~~~&两个底面间的距离~~~~~~~~\\ \hline
+            \end{tabular}
+            \caption{圆柱的相关概念}
+        \end{center}
+    \end{table}\\
+    圆柱中通过轴的截面，称为圆柱的轴截面，显然圆柱的轴截面是一个矩形。\\[3mm]
+    \textbf{等边圆柱：}轴截面是一个正方形的圆柱。\\
+
+\subsubsection{圆柱的性质}
+    以下是圆柱的性质：\\[3mm]
+    1.圆柱的底面是两个全等平行的圆。\\[3mm]
+    2.圆柱的轴经过两个底面的圆心，且垂直于两个底面。\\[3mm]
+    3.圆柱的母线两两均相等，且均平行于圆柱的轴。
+
+\newpage
+
+\subsubsection{圆柱的表面积}
+    我们定义以下字母：\\[3mm]
+    $r$代表圆柱底面的半径。\\[3mm]
+    $c$代表圆柱底面的周长。\\[3mm]
+    $h$代表圆柱的高，即圆柱母线的长度。\\[6mm]
+    圆柱的底面积：
+    \begin{large}
+        \begin{equation*}
+            S_B=\pi\cdot r^2
+        \end{equation*}
+    \end{large}\\
+    圆柱的侧面积：
+    \begin{large}
+        \begin{align*}
+            &S_A=c\cdot h\\[3mm]
+            &S_A=2\cdot\pi\cdot r\cdot h
+        \end{align*}
+    \end{large}\\
+    圆柱侧面的展开图形是一个矩形，矩形的长是周长$c$，矩形的高是母线$h$。\\[8mm]
+    圆柱的表面积：
+    \begin{large}
+        \begin{align*}
+            &S=S_A+2\cdot S_B\\[3mm]
+            &S=2\cdot\pi\cdot r\cdot h+2\cdot\pi\cdot r^2
+        \end{align*}
+    \end{large}\\
+    很显然，圆柱的表面积由一个侧面积和两个底面积组成。    
+
+\newpage
+
+\subsection{圆锥}
+    \textbf{圆锥：}将一个直角三角形绕一条直角边旋转一周所形成的几何体。\\[3mm]
+    圆锥也可以看作一个底面多边形边数趋向于无穷大的正棱锥。\\[3mm]
+    下表列出了圆柱的相关概念：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                圆锥的轴~~~~~~~~&圆锥中直角三角形所绕的直角边~~~~~~~~\\ \hline
+                圆锥的底面~~~~~~~~&圆锥中不同于轴的直角边旋转所形成的面~~~~~~~~\\ \hline
+                圆锥的侧面~~~~~~~~&圆锥中不同于轴的斜边旋转所形成的面~~~~~~~~\\ \hline
+                圆锥的母线~~~~~~~~&圆锥在直角三角形旋转形成侧面时留下的每一条线~~~~~~~~\\ \hline
+                圆锥的高~~~~~~~~&顶点到底面的距离~~~~~~~~\\ \hline
+            \end{tabular}
+            \caption{圆锥的相关概念}
+        \end{center}
+    \end{table}\\
+    圆锥中通过轴的截面，称为圆锥的轴截面，显然圆柱的轴截面是一个等腰三角形。\\[3mm]
+    \textbf{等边圆锥：}轴截面是一个等边三角形的圆柱。\\
+
+\subsubsection{圆锥的性质}
+    以下是圆锥的性质：\\[3mm]
+    1.圆锥的底面是一个垂直于轴的圆。\\[3mm]
+    2.圆锥的轴经过顶点和底面的圆心，且垂直于底面。\\[3mm]
+    3.圆锥的母线两两均相等，且与圆锥轴的夹角均相等。
+
+\newpage
+
+\subsubsection{圆锥的表面积}
+    我们定义以下字母：\\[3mm]
+    $r$代表圆锥底面的半径。\\[3mm]
+    $c$代表圆锥底面的周长。\\[3mm]
+    $h$代表圆锥的斜高，即圆锥母线的长度。\\[6mm]
+    圆锥的底面积：
+    \begin{large}
+        \begin{equation*}
+            S_B=\pi\cdot r^2
+        \end{equation*}
+    \end{large}\\
+    圆锥的侧面积：
+    \begin{large}
+        \begin{align*}
+            &S_A=\frac{1}{2}\cdot c\cdot h\\[3mm]
+            &S_A=\pi\cdot r\cdot h
+        \end{align*}
+    \end{large}\\
+    圆锥侧面的展开图形是一个扇形，扇形的弧长是周长$c$，扇形的半径是母线$h$。\\[8mm]
+    圆锥的表面积：
+    \begin{large}
+        \begin{align*}
+            &S=S_A+S_B\\[3mm]
+            &S=\pi\cdot r\cdot h+\pi\cdot r^2
+        \end{align*}
+    \end{large}\\
+    很显然，圆锥的表面积由一个侧面积和一个底面积组成。    
 
 \newpage
 
