@@ -140,6 +140,125 @@
 
 \newpage
 
+\subsubsection{交集运算}
+    由属于集合$A$且属于集合$B$的元素组成的集合，称为集合$A$与集合$B$的交集。\\[3mm]
+    集合$A$和集合$B$的交集：
+    \begin{large}
+        \begin{equation*}
+            A\cap B=\big\{ x\mid x\in A~\text{且}~x\in B\big\}
+        \end{equation*}
+    \end{large}\\
+    集合的交集运算有以下重要性质：
+    \begin{large}
+        \begin{align*}
+            &A\cap B=B\cap A\\[3mm]
+            &A\cap A=A\\[3mm]
+            &A\cap \emptyset=\emptyset\\[3mm]
+            &A\cap B\subseteq A\\[3mm]
+            &A\cap B\subseteq B
+        \end{align*}
+    \end{large}\\
+
+\subsubsection{并集运算}
+    由属于集合$A$或属于集合$B$的元素组成的集合，称为集合$A$与集合$B$的并集。\\[3mm]
+    集合$A$和集合$B$的并集：
+    \begin{large}
+        \begin{equation*}
+            A\cup B=\big\{ x\mid x\in A~\text{或}~x\in B\big\}
+        \end{equation*}
+    \end{large}\\
+    集合的并集运算有以下重要性质：
+    \begin{large}
+        \begin{align*}
+            &A\cup B=B\cup A\\[3mm]
+            &A\cup A=A\\[3mm]
+            &A\cup \emptyset=A\\[3mm]
+            &A\cup B\supseteq A\\[3mm]
+            &A\cup B\supseteq B
+        \end{align*}
+    \end{large}\\
+
+\newpage
+
+\subsubsection{补集运算}
+    由属于集合$U$且不属于集合$A$的元素组成的集合，称为集合$A$在集合$U$中的补集。\\[3mm]
+    需要指出的是，集合$U$应当满足为集合$A$的超集，集合$A$应当满足为集合$U$的子集。\\[3mm]
+    需要说明的是，集合$U$在补集运算中，通常被称为全集。\\[4mm]
+    集合$A$在集合$U$中的补集：
+    \begin{large}
+        \begin{equation*}
+            \complement_UA=\big\{ x\mid x\in U~\text{且}~x\notin A\big\}
+        \end{equation*}
+    \end{large}\\
+    集合的补集运算有以下重要性质：
+    \begin{large}
+        \begin{align*}
+            &\complement_UA\cap A=\emptyset\\[3mm]
+            &\complement_UA\cup A=A\\[3mm]
+            &\complement_U\big[\complement_UA\big]=A
+        \end{align*}
+    \end{large}
+
+\subsubsection{集合的运算性质}
+    集合$A$与集合$B~C$并集的交集，等于集合$A$分别与集合$B~C$得到的两个交集的并集：
+    \begin{large}
+        \begin{equation*}
+            A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
+        \end{equation*}
+    \end{large}\\
+    集合$A$与集合$B~C$并集的交集，等于集合$A$分别与集合$B~C$得到的两个并集的交集：
+    \begin{large}
+        \begin{equation*}
+            A\cup(B\cap C)=(A\cup B)\cap(A\cup C)
+        \end{equation*}
+    \end{large}\\
+    集合$A$和集合$B$补集的并集，等于集合$A$和集合$B$交集的补集：
+    \begin{large}
+        \begin{equation*}
+            \complement_UA\cup\complement_UB=\complement\left(A\cap B\right)
+        \end{equation*}
+    \end{large}\\
+    集合$A$和集合$B$补集的交集，等于集合$A$和集合$B$并集的补集：
+    \begin{large}
+        \begin{equation*}
+            \complement_UA\cap\complement_UB=\complement\left(A\cup B\right)
+        \end{equation*}
+    \end{large}\\
+
+\newpage
+
+\subsection{命题}
+    命题的通常形式：如果$\alpha$，那么$\beta$。\\[3mm]
+    其中$\alpha$和$\beta$是两个事件，事件$\alpha$称为条件，事件$\beta$称为结论。\\[3mm]
+    若事件$\alpha$可以推出事件$\beta$，即$\alpha\Rightarrow\beta$，那么这个命题是真命题。\\[3mm]
+    若事件$\alpha$不能推出事件$\beta$，即$\alpha\not\Rightarrow\beta$，那么这个命题是假命题。\\[6mm]
+    以下列出了命题的四种形式：
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                原命题~~~~~~~~&$\alpha\Rightarrow\beta$~~~~~~~~\\ \hline
+                否命题~~~~~~~~&$\bar{\alpha}\Rightarrow\bar{\beta}$~~~~~~~~\\ \hline
+                逆命题~~~~~~~~&$\beta\Rightarrow\alpha$~~~~~~~~\\ \hline
+                逆否命题~~~~~~~~&$\bar{\beta}\Rightarrow\bar{\alpha}$~~~~~~~~\\ \hline
+            \end{tabular}
+            \caption{命题的四种形式}
+        \end{center}
+    \end{table}\\
+    需要说明的是，事件$\bar{\alpha}$指的是事件$\alpha$的否定，事件$\bar{\beta}$指的是事件$\beta$的否定。\\[3mm]
+    需要指出的是，互为逆否命题的两个命题同时为真或同时为假。\\
+
+\subsubsection{充分条件和必要条件}
+    对于命题$\alpha\Rightarrow\beta$：\\[3mm]
+    我们称$\alpha$是$\beta$的充分条件。\\[3mm]
+    我们称$\beta$是$\alpha$的必要条件。\\[6mm]
+    充分条件的含义：因为$\alpha\Rightarrow\beta$，若有条件$\alpha$，那么事件$\beta$成立。\\[3mm]
+    必要条件的含义：因为$\bar{\beta}\Rightarrow\bar{\alpha}$，若无条件$\beta$，那么事件$\alpha$不成立。\\[6mm]
+    若同时满足$\alpha\Rightarrow\beta$和$\beta\Rightarrow\alpha$，即$\alpha\Leftrightarrow\beta$，我们称$\alpha$和$\beta$互为充要条件。
+
+
+\newpage
+
 \section{函数}
 
 \subsection{一次函数}
