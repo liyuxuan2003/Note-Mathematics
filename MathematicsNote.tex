@@ -227,6 +227,37 @@
 
 \newpage
 
+\subsubsection{数集的符号}
+    数集指的是以数为元素的集合，常用的数集通常用特定的字母符号表示。\\[3mm]
+    数集的符号表示：
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                自然数集~~~~~~~~~~~~~~~~&$\mathbb{N}$~~~~~~~~~~~~~~~~\\ \hline
+                非零自然数集&$\mathbb{N^*}$\\ \hline
+                ~&~\\ \hline
+                整数集&$\mathbb{Z}$\\ \hline
+                正整数集&$\mathbb{Z^+}$\\ \hline
+                负整数集&$\mathbb{Z^-}$\\ \hline
+                ~&~\\ \hline
+                有理数集&$\mathbb{Q}$\\ \hline
+                正有理数集&$\mathbb{Q^+}$\\ \hline
+                负有理数集&$\mathbb{Q^-}$\\ \hline
+                ~&~\\ \hline
+                实数集&$\mathbb{R}$\\ \hline
+                正实数集&$\mathbb{R^+}$\\ \hline
+                负实数集&$\mathbb{R^-}$\\ \hline
+                ~&~\\ \hline
+                虚数集&$\mathbb{I}$\\ \hline
+                复数集&$\mathbb{C}$\\ \hline
+            \end{tabular}
+        \end{center}
+        \caption{数集的符号}
+    \end{table}
+
+\newpage
+
 \subsection{命题}
     命题的通常形式：如果$\alpha$，那么$\beta$。\\[3mm]
     其中$\alpha$和$\beta$是两个事件，事件$\alpha$称为条件，事件$\beta$称为结论。\\[3mm]
@@ -3984,7 +4015,7 @@
         \end{equation*}
     \end{large}
     \begin{figure}[h]
-        \begin{center}j
+        \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.1]
                 \draw[->] (-5.6,0) -- (5.6,0) node[above] {$x$};
                 \draw[->] (0,-5.6) -- (0,5.6) node[right] {$y$};
@@ -7103,7 +7134,7 @@
 \subsubsection{球的性质}
     以下是球的性质：\\[3mm]
     1.同一个球的半径都相等。\\[3mm]
-    2.同一个球的大圆互相平方。\\[3mm]
+    2.同一个球的大圆互相平分。\\[3mm]
     3.球被任意平面所截的截面都是圆。\\[3mm]
     4.球心与球截面圆心的连线与球截面垂直。\\[6mm]
     我们用$R$表示球的半径，我们用$r$表示截面圆的半径，我们用$d$表示球心到截面圆的距离。\\[3mm]
@@ -7115,6 +7146,81 @@
     \end{large}\\
     在球面上，联结两点的最短路径称为两点的球面距离。\\[3mm]
     在球面上，过两点的球面距离等于过两点的球的大圆劣弧的长度。
+
+\newpage
+
+\subsubsection{球的表面积}
+    球的表面积无法通过展开图形来计算。\\[3mm]
+    球的表面积可以通过圆的周长对弧长的积分得到。\\[3mm]
+    如图所示，外部的圆代表球，粗线代表被积圆：\vspace{3pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth,scale=0.9]
+                \draw (0,0) circle(3);
+                \draw (0,0)--(2.12,2.12);
+                \draw (0,0)--(2.12,0);
+                \draw[ultra thick] (2.12,2.14)--(2.12,-2.14);
+                \fill (0,0) circle(1pt);
+                \node at(1.9,0.9) {$x$};
+                \node at(0.6,0.9) {$r$};
+                \draw (0.3,0.3) arc(45:0:0.424);
+                \node at(0.6,0.25) {$\theta$};
+            \end{tikzpicture}
+            \caption{球的表面积示意图}
+        \end{center}
+    \end{figure}\\
+    首先求解圆的周长：
+    \setcounter{equation}{0}
+    \begin{align}
+        L
+        &=2\cdot\pi\cdot x\\[3mm]
+        &=2\cdot\pi\cdot r\cdot\sin{\theta}
+    \end{align}\\
+    然后将求解圆的周长对弧长的积分：\vspace{5pt}
+    \begin{align}
+        S
+        &=\int_0^{\pi r}L\cdot \dif l\\[3mm]
+        &=\int_0^{\pi}L\cdot \dif\theta\cdot r\\[3mm]
+        &=\int_0^{\pi}2\cdot\pi\cdot r\cdot\sin{\theta}\cdot \dif\theta\cdot r\\[3mm]
+        &=2\cdot\pi\cdot r^2\cdot\left[-\cos{\theta}\right]_0^\pi\\[3mm]
+        &=4\cdot\pi\cdot r^2
+    \end{align}\\
+    球的表面积公式：
+    \begin{large}
+        \begin{equation*}
+            S=4\cdot\pi\cdot r^2
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsubsection{球的体积}
+    球的体积可以通过对球截面的积分得到。\\[3mm]
+    球截面面积$f(x)$关于截面至球心距离$x$的函数关系如下：
+    \setcounter{equation}{0}
+    \begin{align}
+        f(x)=\pi r^2-\pi x^2
+    \end{align}\\
+    在上方的函数中，符号$r$代表球的半径。\\[8mm]
+    对函数$f(x)$求解定积分可得：\vspace{3pt}
+    \begin{align}
+        V
+        &=\int_{-r}^{+r}f(x)\cdot\dif x\\[4mm]
+        &=\int_{-r}^{+r}\left(\pi r^2-\pi x^2\right)\cdot\dif x\\[4mm]
+        &=\pi\cdot\int_{-r}^{+r}\left(r^2-x^2\right)\cdot\dif x\\[4mm]
+        &=\pi\cdot\left(\int_{-r}^{+r}r^2\cdot\dif x-\int_{-r}^{+r}x^2\cdot\dif x\right)\\[4mm]
+        &=\pi\cdot\left(\left[r^2\cdot x\right]_{-r}^{+r}-\left[\frac{1}{3}\cdot x^3\right]_{-r}^{+r}\right)\\[4mm]
+        &=\pi\cdot\left(\left[r^3+r^3\right]-\left[\frac{1}{3}\cdot r^3+\frac{1}{3}\cdot r^3\right]\right)\\[4mm]
+        &=\pi\cdot\left(2\cdot r^3-\frac{2}{3}\cdot r^3\right)\\[4mm]
+        &=\pi\cdot\frac{4}{3}\cdot r^3\\[4mm]
+        &=\frac{4}{3}\cdot\pi\cdot r^3
+    \end{align}\\
+    球的体积公式：
+    \begin{large}
+        \begin{equation*}
+            V=\frac{4}{3}\cdot\pi\cdot r^3
+        \end{equation*}
+    \end{large}
 
 \newpage
 
@@ -7168,36 +7274,6 @@
     \begin{large}
         \begin{equation*}
             V=\frac{1}{3}\cdot S\cdot h
-        \end{equation*}
-    \end{large}
-
-\newpage
-
-\subsection{球的体积}
-    球的体积可以通过对球截面的积分得到。\\[3mm]
-    球截面面积$f(x)$关于截面至球心距离$x$的函数关系如下：
-    \setcounter{equation}{0}
-    \begin{align}
-        f(x)=\pi r^2-\pi x^2
-    \end{align}\\
-    在上方的函数中，符号$r$代表球的半径。\\[8mm]
-    对函数$f(x)$求解定积分可得：\vspace{3pt}
-    \begin{align}
-        V
-        &=\int_{-r}^{+r}f(x)\cdot\dif x\\[4mm]
-        &=\int_{-r}^{+r}\left(\pi r^2-\pi x^2\right)\cdot\dif x\\[4mm]
-        &=\pi\cdot\int_{-r}^{+r}\left(r^2-x^2\right)\cdot\dif x\\[4mm]
-        &=\pi\cdot\left(\int_{-r}^{+r}r^2\cdot\dif x-\int_{-r}^{+r}x^2\cdot\dif x\right)\\[4mm]
-        &=\pi\cdot\left(\left[r^2\cdot x\right]_{-r}^{+r}-\left[\frac{1}{3}\cdot x^3\right]_{-r}^{+r}\right)\\[4mm]
-        &=\pi\cdot\left(\left[r^3+r^3\right]-\left[\frac{1}{3}\cdot r^3+\frac{1}{3}\cdot r^3\right]\right)\\[4mm]
-        &=\pi\cdot\left(2\cdot r^3-\frac{2}{3}\cdot r^3\right)\\[4mm]
-        &=\pi\cdot\frac{4}{3}\cdot r^3\\[4mm]
-        &=\frac{4}{3}\cdot\pi\cdot r^3
-    \end{align}\\
-    球的体积公式：
-    \begin{large}
-        \begin{equation*}
-            V=\frac{4}{3}\cdot\pi\cdot r^3
         \end{equation*}
     \end{large}
 
