@@ -258,6 +258,156 @@
 
 \newpage
 
+\section{不等式}
+
+\subsection{不等式的性质}
+
+\text{不等式的对称性：}
+    \begin{large}
+        \begin{equation*}
+            a>b~~\Leftrightarrow~~b<a
+        \end{equation*}
+    \end{large}
+
+\text{不等式的可加性：}
+    \begin{large}
+        \begin{equation*}
+            a>b~~\Leftrightarrow~~a+c>b+c
+        \end{equation*}
+    \end{large}
+
+\text{不等式的可乘性：}
+    \begin{large}
+        \begin{equation*}
+            a>b~~\Leftrightarrow~~a\cdot c>b\cdot c~~~~(c>0)
+        \end{equation*}
+        \begin{equation*}
+            a>b~~\Leftrightarrow~~a\cdot c<b\cdot c~~~~(c<0)
+        \end{equation*}
+    \end{large}
+
+\text{不等式的乘方法则：}
+    \begin{large}
+        \begin{equation*}
+            a>b>0~~\Leftrightarrow~~a^n>b^n>0
+        \end{equation*}
+    \end{large}
+
+\text{不等式的对数法则：}
+    \begin{large}
+        \begin{align*}
+            &a>b>0~~\Leftrightarrow~~\log_{c}a<\log_{c}b~~~~~~~~(c<1)\\[1mm]
+            &a>b>0~~\Leftrightarrow~~\log_{c}a>\log_{c}b~~~~~~~~(c>1)
+        \end{align*}
+    \end{large}
+
+\text{不等式的倒数法则：}
+    \begin{large}
+        \begin{equation*}
+            a>b~~~~ab>0~~\Leftrightarrow~~\frac{1}{a}<\frac{1}{b}
+        \end{equation*}
+        \vspace{5pt}
+        \begin{equation*}
+            a>b~~~~ab<0~~\Leftrightarrow~~\frac{1}{a}>\frac{1}{b}
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{一元二次不等式的求解}
+    我们将形如$ax^2+by+c>0$或$ax^2+by+c<0$的不等式称为一元二次不等式。\\[5mm]
+    当$a>0$时，函数开口向上：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l|l|l}
+                \hline
+                &$\Delta>0$\qquad\qquad\qquad\qquad&$\Delta=0$\qquad\qquad\qquad\qquad&$\Delta<0$\qquad\qquad\qquad\qquad \\ \hline
+                $ax^2+by+c>0$\qquad&$x<x_1$或$x>x_2$&$x\neq x_1$&$\mathbb{R}$\\ \hline
+                $ax^2+by+c<0$\qquad&$x>x_1$且$x<x_2$&$\emptyset$&$\emptyset$\\ \hline
+            \end{tabular}
+            \caption{当$a>0$时一元二次不等式的情况}
+        \end{center}
+    \end{table}\\
+    当$a<0$时，函数开口向下：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l|l|l}
+                \hline
+                &$\Delta>0$\qquad\qquad\qquad\qquad&$\Delta=0$\qquad\qquad\qquad\qquad&$\Delta<0$\qquad\qquad\qquad\qquad \\ \hline
+                $ax^2+by+c>0$\qquad&$x>x_1$且$x<x_2$&$\emptyset$&$\emptyset$\\ \hline
+                $ax^2+by+c<0$\qquad&$x<x_1$或$x>x_2$&$x\neq x_1$&$\mathbb{R}$\\ \hline
+            \end{tabular}
+            \caption{当$a<0$时一元二次不等式的情况}
+        \end{center}
+    \end{table}
+
+\subsection{分式不等式的求解}
+    对于表达式$f(x)$，表达式$g(x)$，有以下同解原理：\\[1mm]
+    \begin{large}
+        \begin{equation*}
+            \frac{f(x)}{g(x)}>0~~\Rightarrow~~f(x)\cdot g(x)>0~~~~\left[~g(x)\neq 0~\right]
+        \end{equation*}\vspace{5pt}
+        \begin{equation*}
+            \frac{f(x)}{g(x)}<0~~\Rightarrow~~f(x)\cdot g(x)<0~~~~\left[~g(x)\neq 0~\right]
+        \end{equation*}
+    \end{large}\vspace{10pt}
+
+\subsection{无理不等式的求解}
+    对于表达式$f(x)$，表达式$g(x)$，有以下同解原理：\\[1mm]
+    \begin{large}
+        \begin{equation*}
+            \sqrt{f(x)}~>\sqrt{g(x)}~~\Rightarrow~~f(x)>g(x)~~~~\left[~f(x)\ge 0~,~g(x)\ge 0~\right]
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{绝对值不等式的求解}
+    对于表达式$f(x)$，有以下性质：
+    \begin{large}
+        \begin{equation*}
+            \left|f(x)\right|<c~~~~\Leftrightarrow~~~~f(x)>-c~~\text{且}~~f(x)<c
+        \end{equation*}
+        \begin{equation*}
+            \left|f(x)\right|>c~~~~\Leftrightarrow~~~~f(x)<-c~~\text{或}~~f(x)>c
+        \end{equation*}
+    \end{large}\\
+    对于表达式$f(x)$，表达式$g(x)$，有以下性质：
+    \begin{large}
+        \begin{equation*}
+            \left|f(x)\right|>\left|g(x)\right|~~~~\Rightarrow~~~~f(x)^2>g(x)^2
+        \end{equation*}
+        \begin{equation*}
+            \left|f(x)\right|<\left|g(x)\right|~~~~\Rightarrow~~~~f(x)^2<g(x)^2
+        \end{equation*}
+    \end{large}
+
+\subsection{基本不等式}
+
+\subsubsection{基本不等式1}
+    对于任意实数a和b：
+    \begin{large}
+        \begin{equation*}
+            a^2+b^2\ge 2ab~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
+        \end{equation*}
+    \end{large}
+
+\subsubsection{基本不等式2}
+    对于任意正数a和b：
+    \begin{large}
+        \begin{equation*}
+            a+b\ge 2\sqrt{ab}~~~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
+        \end{equation*}
+    \end{large}\\
+    对于任意负数a和b：
+    \begin{large}
+        \begin{equation*}
+            a+b\le -2\sqrt{ab}~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
+        \end{equation*}
+    \end{large}
+
+\newpage
+
 \subsection{命题}
     命题的通常形式：如果$\alpha$，那么$\beta$。\\[3mm]
     其中$\alpha$和$\beta$是两个事件，事件$\alpha$称为条件，事件$\beta$称为结论。\\[3mm]
@@ -292,159 +442,212 @@
 
 \section{函数}
 
-\subsection{一次函数}
-    我们将符合以下形式的函数称为一次函数：
+\subsection{函数的定义}
+    对于非空数集$A$和非空数集$B$，如果依照某一个确定的对应关系$f$，使集合$A$中任意一个数$x$，
+    在集合$B$中有唯一一个数$y$，可以与之对应。\\[3mm]
+    那么就称对应关系$f$是集合$A$到集合$B$的一个函数：
     \begin{large}
         \begin{equation*}
-            y=kx+b
+            y=f(x)~~~~~~~~(x\in A)
         \end{equation*}
     \end{large}\\
-    一次函数的函数图像是直线：\vspace{15pt}
-    \begin{figure}[h!]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[red,smooth,thick,samples=100,domain=-5:4] 
-                            plot(\x,{\x+1}) node at (4,-3){$y=x+1$};
-                    \end{tikzpicture}
-                    \caption{函数$y=x+1$的图像}
-                \end{minipage}
-            }\qquad\qquad\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[blue,smooth,thick,samples=100,domain=-4:5] 
-                            plot(\x,{\x-1}) node at (4,-3){$y=x-1$};
-                    \end{tikzpicture}
-                    \caption{函数$y=x-1$的图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}
-    \begin{figure}[h!]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[red,smooth,thick,samples=100,domain=-3:2] 
-                            plot(\x,{2*\x+1}) node at (4,-3){$y=2x+1$};
-                    \end{tikzpicture}
-                    \caption{函数$y=2x+1$的图像}
-                \end{minipage}
-            }\qquad\qquad\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[blue,smooth,thick,samples=100,domain=-2:3] 
-                            plot(\x,{2*\x-1}) node at (4,-3){$y=2x-1$};
-                    \end{tikzpicture}
-                    \caption{函数$y=2x-1$的图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}\\[1mm]
-    一次函数的斜率：$k$\\[3mm]
-    一次函数的截距：$b$\\[3mm]
+    集合$A$中的元素$x$，称为函数的自变量。\\[3mm]
+    集合$B$中的元素$y$，称为函数的因变量。\\[3mm]
+    集合$A$称为函数的定义域。\\[3mm]
+    集合$B$称为函数的值域。\\
+
+\subsection{函数的运算}
+    对于函数$f(x)~~(x\in D_1)$和函数$g(x)~~(x\in D_2)$，
+    设集合$D=D_1\cap D_2$，且满足$D\neq\emptyset$。\\[3mm]
+    我们将以下运算称为函数的和：
+    \begin{large}
+        \begin{equation*}
+            f(x)+g(x)~~~~~~~~(x\in D)
+        \end{equation*}
+    \end{large}\\
+    我们将以下运算称为函数的差：
+    \begin{large}
+        \begin{equation*}
+            f(x)-g(x)~~~~~~~~(x\in D)
+        \end{equation*}
+    \end{large}\\
+    我们将以下运算称为函数的积：
+    \begin{large}
+        \begin{equation*}
+            f(x)\cdot g(x)~~~~~~~~~~(x\in D)
+        \end{equation*}
+    \end{large}\\
+    我们将以下运算称为函数的商：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \frac{f(x)}{g(x)}~~~~~~~~(x\in D)
+        \end{equation*}
+    \end{large}\\
 
 \newpage
 
-\subsection{二次函数}
-    我们将符合以下形式的函数称为二次函数：
+\subsection{函数的图像变换}
+    我国著名的数学家华罗庚曾说：数缺形时少直观，形缺数时难入微。
+
+\subsubsection{平移变换}
+    函数$f(x)$的图像沿$x$轴方向向左平移$a$个单位：
     \begin{large}
         \begin{equation*}
-            y=ax^2+bx+c
+            y=f(x+a)
         \end{equation*}
     \end{large}\\
-    二次函数的图像是抛物线：\vspace{15pt}
-    \begin{figure}[h!]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[red,smooth,thick,samples=100,domain=-3:3] 
-                            plot(\x,{\x*\x-4}) node at (4,-3.5){$y=x^2-4$};
-                    \end{tikzpicture}
-                    \caption{函数$y=x^2-4$的图像}
-                \end{minipage}
-            }\qquad\qquad\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[blue,smooth,thick,samples=100,domain=-2.121:2.121] 
-                            plot(\x,{2*\x*\x-4}) node at (4,-3.5){$y=2x^2-4$};
-                    \end{tikzpicture}
-                    \caption{函数$y=2x^2-4$的图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}
-    \begin{figure}[h!]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[red,smooth,thick,samples=100,domain=-3:3] 
-                            plot(\x,{-\x*\x+4}) node at (4.5,3.5){$y=-x^2+4$};
-                    \end{tikzpicture}
-                    \caption{函数$y=-x^2+4$的图像}
-                \end{minipage}
-            }\qquad\qquad\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.33\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[blue,smooth,thick,samples=100,domain=-2.121:2.121] 
-                            plot(\x,{-2*\x*\x+4}) node at (4.5,3.5){$y=-2x^2+4$};
-                    \end{tikzpicture}
-                    \caption{函数$y=-2x^2+4$的图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}\\[2mm]
-    二次函数的交点：$X_1\left(\dfrac{-b+\sqrt{b^2-4ac}}{2a}~,~0\right)\quad X_2\left(\dfrac{-b-\sqrt{b^2-4ac}}{2a}~,~0\right)$\\[5mm]
-    二次函数的顶点：$P\left(-\dfrac{b}{2a}~~,~\dfrac{4ac-b^2}{4a}\right)$
+    函数$f(x)$的图像沿$y$轴方向向上平移$a$个单位：
+    \begin{large}
+        \begin{equation*}
+            y=f(x)+a
+        \end{equation*}
+    \end{large}
+
+\subsubsection{伸缩变换}
+    函数$f(x)$的图像沿$x$轴方向压缩$a$倍：
+    \begin{large}
+        \begin{equation*}
+            y=f(a\cdot x)
+        \end{equation*}
+    \end{large}\\
+    函数$f(x)$的图像沿$y$轴方向伸长$a$倍：
+    \begin{large}
+        \begin{equation*}
+            y=a\cdot f(x)
+        \end{equation*}
+    \end{large}
+
+\subsubsection{翻折变换}
+    函数$f(x)$的图像除去左半部分，将右半部分翻折至左半部分：
+    \begin{large}
+        \begin{equation*}
+            y=f(\big|x\big|)
+        \end{equation*}
+    \end{large}\\
+    函数$f(x)$的图像除去下半部分，将下半部分翻折至上半部分：
+    \begin{large}
+        \begin{equation*}
+            y=\big|f(x)\big|
+        \end{equation*}
+    \end{large}\\
 
 \newpage
+
+\subsubsection{关于$x$轴的对称变换}
+    函数$f(x)$的图像关于$x$轴对称变换：
+    \begin{large}
+        \begin{equation*}
+            y=-f(x)
+        \end{equation*}
+    \end{large}\\
+    函数$f(x)$的图像关于平行$x$轴的直线$y=n$对称变换：
+    \begin{large}
+        \begin{equation*}
+                y=2n-f(x)
+        \end{equation*}
+    \end{large}
+
+\subsubsection{关于$y$轴的对称变换}
+    函数$f(x)$的图像关于$y$轴对称变换：
+    \begin{large}
+        \begin{equation*}
+            y=f(-x)
+        \end{equation*}
+    \end{large}\\
+    函数$f(x)$的图像关于平行$y$轴的直线$x=m$对称变换：
+    \begin{large}
+        \begin{equation*}
+                y=f(2m-x)
+        \end{equation*}
+    \end{large}
+
+\subsubsection{关于原点的对称变换}
+    函数$f(x)$的图像关于原点对称变换：
+    \begin{large}
+        \begin{equation*}
+                y=-f(-x)
+        \end{equation*}
+    \end{large}\\
+    函数$f(x)$的图像关于点$(m,n)$对称变换：
+    \begin{large}
+        \begin{equation*}
+                y=2n-f(2m-x)
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{函数的奇偶性}
+    函数的奇偶性是函数整体的性质。\\[3mm]
+    若函数$f(x)$满足以下条件，我们将其称为奇函数（关于原点对称）：
+    \begin{large}
+        \begin{equation*}
+            f(x)+f(-x)=0
+        \end{equation*}
+    \end{large}\\
+    若函数$f(x)$满足以下条件，我们将其称为偶函数（关于$y$轴对称）：
+    \begin{large}
+        \begin{equation*}
+            f(x)-f(-x)=0
+        \end{equation*}
+    \end{large}\\
+    两个奇函数的和仍然是奇函数。\\[3mm]
+    两个偶函数的和仍然是偶函数。\\[6mm]
+    \setcounter{equation}{0}
+    若函数$f(x)$的定义域$D\in(-\infty,+\infty)$，那么其可以表示为一个偶函数和一个奇函数的和。\\[4mm]
+    构造函数$H(x)$：
+    \begin{align}
+        &H(x)=\frac{f(x)-f(-x)}{2}
+    \end{align}\\
+    构造函数$G(x)$：
+    \begin{align}
+        &G(x)=\frac{f(x)+f(-x)}{2}
+    \end{align}\\
+    显然函数$H(x)$是一个奇函数：
+    \begin{align}
+        &H(x)+H(-x)=\frac{f(x)-f(-x)}{2}+\frac{f(-x)-f(x)}{2}=0
+    \end{align}\\
+    显然函数$G(x)$是一个偶函数：
+    \begin{align}
+        &G(x)-G(-x)=\frac{f(x)+f(-x)}{2}-\frac{f(-x)+f(x)}{2}=0
+    \end{align}\\
+    同时函数$H(x)$和函数$G(x)$的和恰为$f(x)$：
+    \begin{align}
+        &H(x)+G(x)=f(x)
+    \end{align}\\
+    这就是所要证明的。
+
+\newpage
+
+\subsection{函数的单调性}
+    函数单调性是函数局部的性质。\\[3mm]
+    若函数$f(x)$在区间$D$中满足以下条件，我们将其称为是在单调增区间$D$上的增函数：
+    \begin{large}
+        \begin{equation*}
+            \forall x_1\in D~~~~\forall x_2\in D~~~~~~~~x_1<x_2\Rightarrow f(x_1)<f(x_2)
+        \end{equation*}
+    \end{large}\\
+    若函数$f(x)$在区间$D$中满足以下条件，我们将其称为是在单调减区间$D$上的减函数：
+    \begin{large}
+        \begin{equation*}
+            \forall x_1\in D~~~~\forall x_2\in D~~~~~~~~x_1<x_2\Rightarrow f(x_1)<f(x_2)
+        \end{equation*}
+    \end{large}\\
+    两个增函数的和仍然是增函数。\\[3mm]
+    两个减函数的和仍然是减函数。\\[6mm]
+    奇函数在对称的两个区间上的单调性相同。\\[3mm]
+    偶函数在对称的两个区间上的单调性相反。\\[6mm]
+    若函数$y=f(u)$和函数$u=g(x)$单调性相同，复合函数$f\big[g(x)\big]$是增函数。\\[3mm]
+    若$f(u)$为增函数，而$g(x)$为增函数，后者为前者提供的参数方向为正，故复合函数是增函数。\\[3mm]
+    若$f(u)$为减函数，而$g(x)$为减函数，后者为前者提供的参数方向为负，故复合函数是增函数。\\[6mm]
+    若函数$y=f(u)$和函数$u=g(x)$单调性相反，复合函数$f\big[g(x)\big]$是减函数。
+    若$f(u)$为增函数，而$g(x)$为减函数，后者为前者提供的参数方向为负，故复合函数是减函数。\\[3mm]
+    若$f(u)$为减函数，而$g(x)$为增函数，后者为前者提供的参数方向为正，故复合函数是减函数。\\[6mm]
+
+
+\newpage
+
+\section{指数和对数}
 
 \subsection{指数和对数}
     我们将形如这样的称为指数运算：
@@ -1042,156 +1245,6 @@
             }
         \end{center}
     \end{figure}
-
-\newpage
-
-\section{不等式}
-
-\subsection{不等式的性质}
-
-\text{不等式的对称性：}
-    \begin{large}
-        \begin{equation*}
-            a>b~~\Leftrightarrow~~b<a
-        \end{equation*}
-    \end{large}
-
-\text{不等式的可加性：}
-    \begin{large}
-        \begin{equation*}
-            a>b~~\Leftrightarrow~~a+c>b+c
-        \end{equation*}
-    \end{large}
-
-\text{不等式的可乘性：}
-    \begin{large}
-        \begin{equation*}
-            a>b~~\Leftrightarrow~~a\cdot c>b\cdot c~~~~(c>0)
-        \end{equation*}
-        \begin{equation*}
-            a>b~~\Leftrightarrow~~a\cdot c<b\cdot c~~~~(c<0)
-        \end{equation*}
-    \end{large}
-
-\text{不等式的乘方法则：}
-    \begin{large}
-        \begin{equation*}
-            a>b>0~~\Leftrightarrow~~a^n>b^n>0
-        \end{equation*}
-    \end{large}
-
-\text{不等式的对数法则：}
-    \begin{large}
-        \begin{align*}
-            &a>b>0~~\Leftrightarrow~~\log_{c}a<\log_{c}b~~~~~~~~(c<1)\\[1mm]
-            &a>b>0~~\Leftrightarrow~~\log_{c}a>\log_{c}b~~~~~~~~(c>1)
-        \end{align*}
-    \end{large}
-
-\text{不等式的倒数法则：}
-    \begin{large}
-        \begin{equation*}
-            a>b~~~~ab>0~~\Leftrightarrow~~\frac{1}{a}<\frac{1}{b}
-        \end{equation*}
-        \vspace{5pt}
-        \begin{equation*}
-            a>b~~~~ab<0~~\Leftrightarrow~~\frac{1}{a}>\frac{1}{b}
-        \end{equation*}
-    \end{large}
-
-\newpage
-
-\subsection{一元二次不等式的求解}
-    我们将形如$ax^2+by+c>0$或$ax^2+by+c<0$的不等式称为一元二次不等式。\\[5mm]
-    当$a>0$时，函数开口向上：\vspace{5pt}
-    \begin{table}[h]
-        \begin{center}
-            \begin{tabular}{l|l|l|l}
-                \hline
-                &$\Delta>0$\qquad\qquad\qquad\qquad&$\Delta=0$\qquad\qquad\qquad\qquad&$\Delta<0$\qquad\qquad\qquad\qquad \\ \hline
-                $ax^2+by+c>0$\qquad&$x<x_1$或$x>x_2$&$x\neq x_1$&$\mathbb{R}$\\ \hline
-                $ax^2+by+c<0$\qquad&$x>x_1$且$x<x_2$&$\emptyset$&$\emptyset$\\ \hline
-            \end{tabular}
-            \caption{当$a>0$时一元二次不等式的情况}
-        \end{center}
-    \end{table}\\
-    当$a<0$时，函数开口向下：\vspace{5pt}
-    \begin{table}[h]
-        \begin{center}
-            \begin{tabular}{l|l|l|l}
-                \hline
-                &$\Delta>0$\qquad\qquad\qquad\qquad&$\Delta=0$\qquad\qquad\qquad\qquad&$\Delta<0$\qquad\qquad\qquad\qquad \\ \hline
-                $ax^2+by+c>0$\qquad&$x>x_1$且$x<x_2$&$\emptyset$&$\emptyset$\\ \hline
-                $ax^2+by+c<0$\qquad&$x<x_1$或$x>x_2$&$x\neq x_1$&$\mathbb{R}$\\ \hline
-            \end{tabular}
-            \caption{当$a<0$时一元二次不等式的情况}
-        \end{center}
-    \end{table}
-
-\subsection{分式不等式的求解}
-    对于表达式$f(x)$，表达式$g(x)$，有以下同解原理：\\[1mm]
-    \begin{large}
-        \begin{equation*}
-            \frac{f(x)}{g(x)}>0~~\Rightarrow~~f(x)\cdot g(x)>0~~~~\left[~g(x)\neq 0~\right]
-        \end{equation*}\vspace{5pt}
-        \begin{equation*}
-            \frac{f(x)}{g(x)}<0~~\Rightarrow~~f(x)\cdot g(x)<0~~~~\left[~g(x)\neq 0~\right]
-        \end{equation*}
-    \end{large}\vspace{10pt}
-
-\subsection{无理不等式的求解}
-    对于表达式$f(x)$，表达式$g(x)$，有以下同解原理：\\[1mm]
-    \begin{large}
-        \begin{equation*}
-            \sqrt{f(x)}~>\sqrt{g(x)}~~\Rightarrow~~f(x)>g(x)~~~~\left[~f(x)\ge 0~,~g(x)\ge 0~\right]
-        \end{equation*}
-    \end{large}
-
-\newpage
-
-\subsection{绝对值不等式的求解}
-    对于表达式$f(x)$，有以下性质：
-    \begin{large}
-        \begin{equation*}
-            \left|f(x)\right|<c~~~~\Leftrightarrow~~~~f(x)>-c~~\text{且}~~f(x)<c
-        \end{equation*}
-        \begin{equation*}
-            \left|f(x)\right|>c~~~~\Leftrightarrow~~~~f(x)<-c~~\text{或}~~f(x)>c
-        \end{equation*}
-    \end{large}\\
-    对于表达式$f(x)$，表达式$g(x)$，有以下性质：
-    \begin{large}
-        \begin{equation*}
-            \left|f(x)\right|>\left|g(x)\right|~~~~\Rightarrow~~~~f(x)^2>g(x)^2
-        \end{equation*}
-        \begin{equation*}
-            \left|f(x)\right|<\left|g(x)\right|~~~~\Rightarrow~~~~f(x)^2<g(x)^2
-        \end{equation*}
-    \end{large}
-
-\subsection{基本不等式}
-
-\subsubsection{基本不等式1}
-    对于任意实数a和b：
-    \begin{large}
-        \begin{equation*}
-            a^2+b^2\ge 2ab~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
-        \end{equation*}
-    \end{large}
-
-\subsubsection{基本不等式2}
-    对于任意正数a和b：
-    \begin{large}
-        \begin{equation*}
-            a+b\ge 2\sqrt{ab}~~~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
-        \end{equation*}
-    \end{large}\\
-    对于任意负数a和b：
-    \begin{large}
-        \begin{equation*}
-            a+b\le -2\sqrt{ab}~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
-        \end{equation*}
-    \end{large}
 
 \newpage
 

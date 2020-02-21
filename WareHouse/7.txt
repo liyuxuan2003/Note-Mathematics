@@ -1,0 +1,151 @@
+\subsection{一次函数}
+    我们将符合以下形式的函数称为一次函数：
+    \begin{large}
+        \begin{equation*}
+            y=kx+b
+        \end{equation*}
+    \end{large}\\
+    一次函数的函数图像是直线：\vspace{15pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[red,smooth,thick,samples=100,domain=-5:4] 
+                            plot(\x,{\x+1}) node at (4,-3){$y=x+1$};
+                    \end{tikzpicture}
+                    \caption{函数$y=x+1$的图像}
+                \end{minipage}
+            }\qquad\qquad\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[blue,smooth,thick,samples=100,domain=-4:5] 
+                            plot(\x,{\x-1}) node at (4,-3){$y=x-1$};
+                    \end{tikzpicture}
+                    \caption{函数$y=x-1$的图像}
+                \end{minipage}
+            }
+        \end{center}
+    \end{figure}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[red,smooth,thick,samples=100,domain=-3:2] 
+                            plot(\x,{2*\x+1}) node at (4,-3){$y=2x+1$};
+                    \end{tikzpicture}
+                    \caption{函数$y=2x+1$的图像}
+                \end{minipage}
+            }\qquad\qquad\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[blue,smooth,thick,samples=100,domain=-2:3] 
+                            plot(\x,{2*\x-1}) node at (4,-3){$y=2x-1$};
+                    \end{tikzpicture}
+                    \caption{函数$y=2x-1$的图像}
+                \end{minipage}
+            }
+        \end{center}
+    \end{figure}\\[1mm]
+    一次函数的斜率：$k$\\[3mm]
+    一次函数的截距：$b$\\[3mm]
+
+\newpage
+
+\subsection{二次函数}
+    我们将符合以下形式的函数称为二次函数：
+    \begin{large}
+        \begin{equation*}
+            y=ax^2+bx+c
+        \end{equation*}
+    \end{large}\\
+    二次函数的图像是抛物线：\vspace{15pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[red,smooth,thick,samples=100,domain=-3:3] 
+                            plot(\x,{\x*\x-4}) node at (4,-3.5){$y=x^2-4$};
+                    \end{tikzpicture}
+                    \caption{函数$y=x^2-4$的图像}
+                \end{minipage}
+            }\qquad\qquad\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[blue,smooth,thick,samples=100,domain=-2.121:2.121] 
+                            plot(\x,{2*\x*\x-4}) node at (4,-3.5){$y=2x^2-4$};
+                    \end{tikzpicture}
+                    \caption{函数$y=2x^2-4$的图像}
+                \end{minipage}
+            }
+        \end{center}
+    \end{figure}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[red,smooth,thick,samples=100,domain=-3:3] 
+                            plot(\x,{-\x*\x+4}) node at (4.5,3.5){$y=-x^2+4$};
+                    \end{tikzpicture}
+                    \caption{函数$y=-x^2+4$的图像}
+                \end{minipage}
+            }\qquad\qquad\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.33\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[blue,smooth,thick,samples=100,domain=-2.121:2.121] 
+                            plot(\x,{-2*\x*\x+4}) node at (4.5,3.5){$y=-2x^2+4$};
+                    \end{tikzpicture}
+                    \caption{函数$y=-2x^2+4$的图像}
+                \end{minipage}
+            }
+        \end{center}
+    \end{figure}\\[2mm]
+    二次函数的交点：$X_1\left(\dfrac{-b+\sqrt{b^2-4ac}}{2a}~,~0\right)\quad X_2\left(\dfrac{-b-\sqrt{b^2-4ac}}{2a}~,~0\right)$\\[5mm]
+    二次函数的顶点：$P\left(-\dfrac{b}{2a}~~,~\dfrac{4ac-b^2}{4a}\right)$
