@@ -258,6 +258,37 @@
 
 \newpage
 
+\subsection{命题}
+    命题的通常形式：如果$\alpha$，那么$\beta$。\\[3mm]
+    其中$\alpha$和$\beta$是两个事件，事件$\alpha$称为条件，事件$\beta$称为结论。\\[3mm]
+    若事件$\alpha$可以推出事件$\beta$，即$\alpha\Rightarrow\beta$，那么这个命题是真命题。\\[3mm]
+    若事件$\alpha$不能推出事件$\beta$，即$\alpha\not\Rightarrow\beta$，那么这个命题是假命题。\\[6mm]
+    以下列出了命题的四种形式：
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                原命题~~~~~~~~&$\alpha\Rightarrow\beta$~~~~~~~~\\ \hline
+                否命题~~~~~~~~&$\bar{\alpha}\Rightarrow\bar{\beta}$~~~~~~~~\\ \hline
+                逆命题~~~~~~~~&$\beta\Rightarrow\alpha$~~~~~~~~\\ \hline
+                逆否命题~~~~~~~~&$\bar{\beta}\Rightarrow\bar{\alpha}$~~~~~~~~\\ \hline
+            \end{tabular}
+            \caption{命题的四种形式}
+        \end{center}
+    \end{table}\\
+    需要说明的是，事件$\bar{\alpha}$指的是事件$\alpha$的否定，事件$\bar{\beta}$指的是事件$\beta$的否定。\\[3mm]
+    需要指出的是，互为逆否命题的两个命题同时为真或同时为假。\\
+
+\subsubsection{充分条件和必要条件}
+    对于命题$\alpha\Rightarrow\beta$：\\[3mm]
+    我们称$\alpha$是$\beta$的充分条件。\\[3mm]
+    我们称$\beta$是$\alpha$的必要条件。\\[6mm]
+    充分条件的含义：因为$\alpha\Rightarrow\beta$，若有条件$\alpha$，那么事件$\beta$成立。\\[3mm]
+    必要条件的含义：因为$\bar{\beta}\Rightarrow\bar{\alpha}$，若无条件$\beta$，那么事件$\alpha$不成立。\\[6mm]
+    若同时满足$\alpha\Rightarrow\beta$和$\beta\Rightarrow\alpha$，即$\alpha\Leftrightarrow\beta$，我们称$\alpha$和$\beta$互为充要条件。
+
+\newpage
+
 \section{不等式}
 
 \subsection{不等式的性质}
@@ -396,7 +427,7 @@
     对于任意正数a和b：
     \begin{large}
         \begin{equation*}
-            a+b\ge 2\sqrt{ab}~~~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
+            a+b\ge +2\sqrt{ab}~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
         \end{equation*}
     \end{large}\\
     对于任意负数a和b：
@@ -408,35 +439,38 @@
 
 \newpage
 
-\subsection{命题}
-    命题的通常形式：如果$\alpha$，那么$\beta$。\\[3mm]
-    其中$\alpha$和$\beta$是两个事件，事件$\alpha$称为条件，事件$\beta$称为结论。\\[3mm]
-    若事件$\alpha$可以推出事件$\beta$，即$\alpha\Rightarrow\beta$，那么这个命题是真命题。\\[3mm]
-    若事件$\alpha$不能推出事件$\beta$，即$\alpha\not\Rightarrow\beta$，那么这个命题是假命题。\\[6mm]
-    以下列出了命题的四种形式：
-    \begin{table}[h]
-        \begin{center}
-            \begin{tabular}{l|l}
-                \hline
-                原命题~~~~~~~~&$\alpha\Rightarrow\beta$~~~~~~~~\\ \hline
-                否命题~~~~~~~~&$\bar{\alpha}\Rightarrow\bar{\beta}$~~~~~~~~\\ \hline
-                逆命题~~~~~~~~&$\beta\Rightarrow\alpha$~~~~~~~~\\ \hline
-                逆否命题~~~~~~~~&$\bar{\beta}\Rightarrow\bar{\alpha}$~~~~~~~~\\ \hline
-            \end{tabular}
-            \caption{命题的四种形式}
-        \end{center}
-    \end{table}\\
-    需要说明的是，事件$\bar{\alpha}$指的是事件$\alpha$的否定，事件$\bar{\beta}$指的是事件$\beta$的否定。\\[3mm]
-    需要指出的是，互为逆否命题的两个命题同时为真或同时为假。\\
-
-\subsubsection{充分条件和必要条件}
-    对于命题$\alpha\Rightarrow\beta$：\\[3mm]
-    我们称$\alpha$是$\beta$的充分条件。\\[3mm]
-    我们称$\beta$是$\alpha$的必要条件。\\[6mm]
-    充分条件的含义：因为$\alpha\Rightarrow\beta$，若有条件$\alpha$，那么事件$\beta$成立。\\[3mm]
-    必要条件的含义：因为$\bar{\beta}\Rightarrow\bar{\alpha}$，若无条件$\beta$，那么事件$\alpha$不成立。\\[6mm]
-    若同时满足$\alpha\Rightarrow\beta$和$\beta\Rightarrow\alpha$，即$\alpha\Leftrightarrow\beta$，我们称$\alpha$和$\beta$互为充要条件。
-
+\subsection{均值不等式}
+    我们定义以下平均数的概念：\\[3mm]
+    调和平均数：
+    \begin{large}
+        \begin{equation*}
+            H_n=\frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\cdots+\frac{1}{x_n}}
+        \end{equation*}
+    \end{large}\\
+    几何平均数：
+    \begin{large}
+        \begin{equation*}
+            G_n=\sqrt[n]{x_1\times x_2\times \cdots \times x_n}
+        \end{equation*}
+    \end{large}\\
+    算数平均数：
+    \begin{large}
+        \begin{equation*}
+            A_n=\frac{x_1+x_2+\cdots+x_n}{n}
+        \end{equation*}
+    \end{large}\\
+    平方平均数：
+    \begin{large}
+        \begin{equation*}
+            Q_n=\sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}
+        \end{equation*}
+    \end{large}\\[2mm]
+    对于这四类平均数，我们有以下均值不等式：
+    \begin{large}
+        \begin{equation*}
+            H_n\le G_n\le A_n\le Q_n~~~~~~~~\text{(当且仅当~~}x_1=x_2=\cdots=x_n\text{~~时等号成立)}
+        \end{equation*}
+    \end{large}
 
 \newpage
 
@@ -640,10 +674,199 @@
     若函数$y=f(u)$和函数$u=g(x)$单调性相同，复合函数$f\big[g(x)\big]$是增函数。\\[3mm]
     若$f(u)$为增函数，而$g(x)$为增函数，后者为前者提供的参数方向为正，故复合函数是增函数。\\[3mm]
     若$f(u)$为减函数，而$g(x)$为减函数，后者为前者提供的参数方向为负，故复合函数是增函数。\\[6mm]
-    若函数$y=f(u)$和函数$u=g(x)$单调性相反，复合函数$f\big[g(x)\big]$是减函数。
+    若函数$y=f(u)$和函数$u=g(x)$单调性相反，复合函数$f\big[g(x)\big]$是减函数。\\[3mm]
     若$f(u)$为增函数，而$g(x)$为减函数，后者为前者提供的参数方向为负，故复合函数是减函数。\\[3mm]
-    若$f(u)$为减函数，而$g(x)$为增函数，后者为前者提供的参数方向为正，故复合函数是减函数。\\[6mm]
+    若$f(u)$为减函数，而$g(x)$为增函数，后者为前者提供的参数方向为正，故复合函数是减函数。
 
+\newpage
+
+\subsection{函数的最值}
+    若函数$f(x)$在$x_0$的取值满足以下条件，我们将$f(x_0)$称为其最大值：
+    \begin{large}
+        \begin{equation*}
+            \forall x\in D~~~~f(x)\geq f(x_0)
+        \end{equation*}
+    \end{large}\\
+    若函数$f(x)$在$x_0$的取值满足以下条件，我们将$f(x_0)$称为其最小值：
+    \begin{large}
+        \begin{equation*}
+            \forall x\in D~~~~f(x)\leq f(x_0)
+        \end{equation*}
+    \end{large}\\
+    函数的最大值和最小值统称为函数的最值。\\[6mm]
+    形如$ax^2+bx+c$的函数，我们可以运用二次函数的性质求解其最值。\\[3mm]
+    形如$ax^2+bx+c$的函数的图像：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.4\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
+                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[cyan,smooth,thick,samples=100,domain=-3.1:3.1] 
+                            plot(\x,{\x*\x-5}) node at (4,-6){$y=x^2-5$};
+                    \end{tikzpicture}
+                    \caption{函数$y=x^2-5$的图像}
+                \end{minipage}
+            }\qquad\qquad\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.4\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
+                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[cyan,smooth,thick,samples=100,domain=-3.1:3.1] 
+                            plot(\x,{-\x*\x+5}) node at (4,-6){$y=-x^2+5$};
+                    \end{tikzpicture}
+                    \caption{函数$y=-x^2+5$的图像}
+                \end{minipage}
+            }
+        \end{center}
+    \end{figure}\\
+    形如$ax^2+bx+c$的函数的顶点：
+    \begin{large}
+        \begin{equation*}
+                P\left(-\frac{b}{2a}~~,~\frac{4ac-b^2}{4a}\right)    
+        \end{equation*}
+    \end{large}\\
+    当$a>0$时，函数在顶点处取最小值。\\[3mm]
+    当$a<0$时，函数在顶点处取最大值。\\[3mm]
+
+\newpage
+
+    形如$ax+\dfrac{b}{x}$的函数，我们可以运用基本不等式的性质求解其最值。\\[4mm]
+    形如$ax+\dfrac{b}{x}$的函数的图像：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.4\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
+                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[cyan,smooth,thick,samples=100,domain=-6.7:-0.15] 
+                            plot(\x,{\x+1/\x}) node at (4,-6){$y=x+\dfrac{1}{x}$};
+                        \draw[cyan,smooth,thick,samples=100,domain=0.15:6.7] 
+                            plot(\x,{\x+1/\x});
+                    \end{tikzpicture}
+                    \caption{函数$y=x+\dfrac{1}{x}$的图像}
+                \end{minipage}
+            }\qquad\qquad\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.4\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
+                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[cyan,smooth,thick,samples=100,domain=-6.7:-0.15] 
+                            plot(\x,{-\x-1/\x}) node at (-4,-6){$y=-x-\dfrac{1}{x}$};
+                        \draw[cyan,smooth,thick,samples=100,domain=0.15:6.7] 
+                            plot(\x,{-\x-1/\x});
+                    \end{tikzpicture}
+                    \caption{函数$y=-x-\dfrac{1}{x}$的图像}
+                \end{minipage}
+            }
+        \end{center}
+    \end{figure}\\
+    形如$ax+\dfrac{b}{x}$的函数的顶点（$a>0~~b>0$）：
+    \begin{large}
+        \begin{equation*}
+                P_A\left(+\sqrt{\frac{b}{a}}~~,~~+2\sqrt{ab}\right)~~~~~~~~P_B\left(-\sqrt{\frac{b}{a}}~~,~~-2\sqrt{ab}\right)
+        \end{equation*}
+    \end{large}\\
+    形如$ax+\dfrac{b}{x}$的函数的顶点（$a<0~~b<0$）：
+    \begin{large}
+        \begin{equation*}
+                P_A\left(-\sqrt{\frac{b}{a}}~~,~~+2\sqrt{ab}\right)~~~~~~~~P_B\left(+\sqrt{\frac{b}{a}}~~,~~-2\sqrt{ab}\right)
+        \end{equation*}
+    \end{large}\\
+    当$x>0$时，函数在上顶点$P_A$处取最小值。\\[3mm]
+    当$x<0$时，函数在下顶点$P_B$处取最大值。·
+
+\newpage
+
+\subsubsection{求解函数$f(x)=\dfrac{a_1x^2+b_1x+c_1}{b_2x+c_2}$的最值}
+    对于符合以下形式的函数：
+    \setcounter{equation}{0}
+    \begin{align}
+        f(x)=\frac{a_1x^2+b_1x+c_1}{b_2x+c_2}
+    \end{align}\\
+    通过多项式的除法可以得到以下结论：\vspace{3pt}
+    \begin{align}
+        a_1x^2+b_1x+c_1
+        &=\left(b_2x+c_2\right)\cdot\left(\frac{a_1}{b_2}\cdot x+\frac{b_1b_2-a_1c_2}{b_2\,^2}\right)+\left(c_1-c_2\cdot\frac{b_1b_2-a_1c_2}{b_2\,^2}\right)\\[4mm]
+        &=\left(b_2x+c_2\right)\cdot\left(\frac{a_1}{b_2}\cdot x+k\right)+\left(c_1-c_2\cdot k\right)
+    \end{align}\\
+    其中多项式的除法结果中的代换变量$k$等于：
+    \begin{equation}
+        k=\frac{b_1b_2-a_1c_2}{b_2\,^2}
+    \end{equation}\\
+    将结论代入函数可以得到：
+    \begin{align}
+        f(x)
+        &=\frac{a_1x^2+b_1x+c_1}{b_2x+c_2}\\[4mm]
+        &=\frac{\left(b_2x+c_2\right)\cdot\left(\dfrac{a_1}{b_2}\cdot x+k\right)+\left(c_1-c_2k\right)}{b_2x+c_2}\\[4mm]
+        &=\frac{\left(b_2x+c_2\right)\cdot\left(\dfrac{a_1}{b_2}\cdot x+k\right)}{b_2x+c_2}+\frac{c_1-c_2k}{b_2x+c_2}
+    \end{align}\\
+    上下同除分子上的多项式可以得到：
+    \begin{align}
+        f(x)&=\frac{a_1}{b_2}\cdot x+k+\frac{c_1-c_2k}{b_2x+c_2}
+    \end{align}\\
+    在函数左侧构建多项式：
+    \begin{align}
+        f(x)
+        &=\frac{a_1}{b_2}\cdot x+k+\frac{c_1-c_2k}{b_2x+c_2}\\[5mm]
+        &=\frac{a_1}{b_2\,^2}\cdot(b_2x+c_2)+\frac{c_1-c_2k}{b_2x+c_2}+k-\frac{a_1c_2}{b_2\,^2}\\[5mm]
+        &=\left[\frac{a_1}{b_2\,^2}\right]\cdot(b_2x+c_2)+\big[c_1-c_2\cdot k\big]\cdot\frac{1}{(b_2x+c_2)}+k-\frac{a_1c_2}{b_2\,^2}
+    \end{align}
+
+\newpage
+
+    显然两个参数需要同号时，原式才可以求极值：
+    \begin{large}
+        \begin{equation*}
+            \frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)>0
+        \end{equation*}
+    \end{large}\\
+    以下结论中的代换变量$k$等于：
+    \begin{large}
+        \begin{equation*}
+            k=\frac{b_1\cdot b_2-a_1\cdot c_2}{b_2\,^2}
+        \end{equation*}
+    \end{large}\\
+    当$a_1>0$，且$b_2\cdot x+c_2>0$，原式有最小值：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            f(x)\ge k-\frac{a_1\cdot c_2}{b_2\,^2}+2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=+\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+        \end{equation*}
+    \end{large}\\ \vspace{5pt}
+    当$a_1<0$，且$b_2\cdot x+c_2<0$，原式有最小值：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            f(x)\ge k-\frac{a_1\cdot c_2}{b_2\,^2}+2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=-\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+        \end{equation*}
+    \end{large}\\ \vspace{5pt}
+    当$a_1>0$，且$b_2\cdot x+c_2<0$，原式有最大值：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            f(x)\le k-\frac{a_1\cdot c_2}{b_2\,^2}-2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=+\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+        \end{equation*}
+    \end{large}\\ \vspace{5pt}
+    当$a_1<0$，且$b_2\cdot x+c_2>0$，原式有最大值：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            f(x)\le k-\frac{a_1\cdot c_2}{b_2\,^2}-2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=-\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+        \end{equation*}
+    \end{large}
 
 \newpage
 
@@ -1245,41 +1468,6 @@
             }
         \end{center}
     \end{figure}
-
-\newpage
-
-\subsection{均值不等式}
-    我们定义以下平均数的概念：\\[3mm]
-    调和平均数：
-    \begin{large}
-        \begin{equation*}
-            H_n=\frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\cdots+\frac{1}{x_n}}
-        \end{equation*}
-    \end{large}\\
-    几何平均数：
-    \begin{large}
-        \begin{equation*}
-            G_n=\sqrt[n]{x_1\times x_2\times \cdots \times x_n}
-        \end{equation*}
-    \end{large}\\
-    算数平均数：
-    \begin{large}
-        \begin{equation*}
-            A_n=\frac{x_1+x_2+\cdots+x_n}{n}
-        \end{equation*}
-    \end{large}\\
-    平方平均数：
-    \begin{large}
-        \begin{equation*}
-            Q_n=\sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}
-        \end{equation*}
-    \end{large}\\[2mm]
-    对于这四类平均数，我们有以下均值不等式：
-    \begin{large}
-        \begin{equation*}
-            H_n\le G_n\le A_n\le Q_n~~~~~~~~\text{(当且仅当~~}x_1=x_2=\cdots=x_n\text{~~时等号成立)}
-        \end{equation*}
-    \end{large}
 
 \newpage
 
