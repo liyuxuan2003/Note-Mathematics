@@ -2810,6 +2810,158 @@
 \newpage
 
 \section{向量}
+    标量指的是只有大小没有方向的量。\\[3mm]
+    向量指的是既有大小又有方向的量。\\[3mm]
+    在数学上，通常用有向线段形象的表示向量，其长度代表向量的长度，其角度代表向量的角度，
+    由于向量并不关心位置，因此长度和角度相同但位置不同的有向线段代表的是同一个向量。
+
+\subsection{向量的表示}
+    特别的，我们将长度为$1$的向量称为单位向量。\\[6mm]
+    在二维平面中，我们定义以下两个特殊的单位向量指向两个坐标轴的正方向：
+    \begin{large}
+        \begin{equation*}
+            \vec{i}=(1,0)~~~~~~~~\vec{j}=(0,1)
+        \end{equation*}
+    \end{large}\\
+    在二维平面中，任何一个向量都可以表示为上述两个单位向量的线性组合：
+    \begin{large}
+        \begin{align*}
+            &\vec{a}=(x,y)\\[3mm]
+            &\vec{a}=x\cdot\vec{i}+y\cdot\vec{j}
+        \end{align*}
+    \end{large}\\
+    二维平面中的向量，我们通常称为平面向量。\\[12mm]
+    在三维空间中，我们定义以下三个特殊的单位向量指向三个坐标轴的正方向：
+    \begin{large}
+        \begin{equation*}
+            \vec{i}=(1,0,0)~~~~~~~~\vec{j}=(0,1,0)~~~~~~~~\vec{k}=(0,0,1)
+        \end{equation*}
+    \end{large}\\
+    在三维空间中，任何一个向量都可以表示为上述两个单位向量的线性组合：
+    \begin{large}
+        \begin{align*}
+            &\vec{b}=(x,y,z)\\[3mm]
+            &\vec{b}=x\cdot\vec{i}+y\cdot\vec{j}+z\cdot\vec{k}
+        \end{align*}
+    \end{large}\\
+    三维空间中的向量，我们通常称为空间向量。
+
+\newpage
+
+\subsection{向量的长度}
+    向量的长度可以用向量的模表示。\\[3mm]
+    平面向量的模：
+    \begin{large}
+        \begin{equation*}
+            \left|\vec{a}\right|=\sqrt{x^2+y^2}    
+        \end{equation*}
+    \end{large}\\
+    空间向量的模：
+    \begin{large}
+        \begin{equation*}
+            \left|\vec{b}\right|=\sqrt{x^2+y^2+z^2}
+        \end{equation*}
+    \end{large}\vspace{-10pt}
+
+\subsection{向量的角度}
+    向量的角度可以用向量的单位向量表示。\\[3mm]
+    平面向量的单位向量：
+    \begin{large}
+        \begin{equation*}
+            \vec{a_0}=\left(\frac{x}{|\vec{a}|}~,~\frac{y}{|\vec{a}|}\right)
+        \end{equation*}
+    \end{large}\\
+    空间向量的单位向量：
+    \begin{large}
+        \begin{equation*}
+            \vec{b_0}=\left(\frac{x}{|\vec{b}|}~,~\frac{y}{|\vec{b}|}~,~\frac{z}{|\vec{b}|}\right)
+        \end{equation*}
+    \end{large}\vspace{-4pt}
+
+\subsection{向量的加法}
+    平面向量的加法：
+    \begin{large}
+        \begin{equation*}
+            \vec{a_1}+\vec{a_2}=(x_1+x_2~,~y_1+y_2)
+        \end{equation*}
+    \end{large}\\
+    空间向量的加法：
+    \begin{large}
+        \begin{equation*}
+            \vec{b_1}+\vec{b_2}=(x_1+x_2~,~y_1+y_2~,~z_1+z_2)
+        \end{equation*}
+    \end{large}\vspace{-5pt}
+
+\subsection{向量的减法}
+    平面向量的减法：
+    \begin{large}
+        \begin{equation*}
+            \vec{a_1}-\vec{a_2}=(x_1-x_2~,~y_1-y_2)
+        \end{equation*}
+    \end{large}\\
+    空间向量的减法：
+    \begin{large}
+        \begin{equation*}
+            \vec{b_1}-\vec{b_2}=(x_1-x_2~,~y_1-y_2~,~z_1-z_2)
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{向量的数乘}
+    平面向量的数乘：
+    \begin{large}
+        \begin{equation*}
+            \lambda\cdot\vec{a}=\left(\lambda\cdot x~,~\lambda\cdot y\right)
+        \end{equation*}
+    \end{large}\\
+    空间向量的数乘：
+    \begin{large}
+        \begin{equation*}
+            \lambda\cdot\vec{b}=\left(\lambda\cdot x~,~\lambda\cdot y~,~\lambda\cdot z\right)
+        \end{equation*}
+    \end{large}\\
+    向量数乘的结合律：
+    \begin{large}
+        \begin{equation*}
+            m\cdot n\cdot \vec{a}=m\cdot (n\cdot\vec{a})
+        \end{equation*}
+    \end{large}\\
+    向量数乘的第一分配律：
+    \begin{large}
+        \begin{equation*}
+            (m+n)\cdot\vec{a}=m\cdot\vec{a}+n\cdot\vec{a}
+        \end{equation*}
+    \end{large}\\
+    向量数乘的第二分配律：
+    \begin{large}
+        \begin{equation*}
+            m\cdot (\vec{a}+\vec{b})=m\cdot\vec{a}+m\cdot\vec{b}
+        \end{equation*}
+    \end{large}
+
+\subsubsection{平面向量共线定理}
+    如果两个平面向量满足以下条件：
+    \begin{large}
+        \begin{equation*}
+            \vec{b}=\lambda\cdot \vec{a}
+        \end{equation*}
+    \end{large}\\
+    那么这两个向量共线，且实数$\lambda$是唯一的。\\
+
+\subsubsection{空间向量共面定理}
+    如果两个平面向量满足以下条件：
+    \begin{large}
+        \begin{equation*}
+            \vec{c}=\lambda\cdot \vec{a}+\mu\cdot \vec{b}
+        \end{equation*}
+    \end{large}\\
+    那么这两个向量共线，且实数对$\lambda,\mu$是唯一的。
+
+
+\newpage
+
+\section{向量}
     对于平面上任意两点，点$M(x_1,y_1)$，点$N(x_2,y_2)$，
     如果我们希望通过向量$\vec a$来描述点$N$相对于点$M$的关系，
     那么向量$\vec a$可以表示为：
@@ -6540,7 +6692,7 @@
 
 \section{空间直线与平面}
     \textbf{公理1：}如果一条直线上有两个点在平面上，那么这条直线上所有点都在这个平面上。\\[3mm]
-    \textbf{公理2：}如果两个平面存在一个公共点，那么它们所有公共点的集合是一条直线。\\[3mm]
+    \textbf{公理2：}如果两个平面存在一个公共点，那么它们所有公共点组成了一条直线。\\[3mm]
     \textbf{公理3：}经过不在同一直线上的三点的平面有且只有一个。\\[3mm]
     \textbf{公理4：}平行于同一条直线的两条直线平行。
 
@@ -6570,10 +6722,10 @@
 
     \textbf{条件4：}两条平行的直线确定一个平面。\\[3mm]
     条件4的证明：\\[3mm]
-    1.设直线$l_a$上两点$A_1A_2$\\[2mm]
-    2.设直线$l_b$上两点$B_1B_2$\\[2mm]
-    3.线段$A_1A_2$和线段$B_1B_2$满足$A_1A_2=B_1B_2$\\[2mm]
-    4.设直线$A_1B_2$和直线$A_2B_1$的交点为点O\\[3mm]
+    1.设直线$l_a$上两点$A_1A_2$，设直线$l_b$上两点$B_1B_2$\\[2mm]
+    2.线段$A_1A_2$和线段$B_1B_2$满足$A_1A_2=B_1B_2$\\[3mm]
+    由于$A_1A_2=B_1B_2$且$A_1A_2\parallel B_1B_2$，因此四边形$A_1A_2B_2B_1$是平行四边形\\[2mm]
+    设平行四边形$A_1A_2B_2B_1$中，对角线$A_1B_2$和对角线$A_2B_1$的交点为$O$\\[2mm]
     由公理3可知，点$A_1B_1O$可以共同确定一个平面$\alpha$，故点$A_1B_1O$均在平面$\alpha$上。\\[2mm]
     由公理1可知，点$A_1O$在平面$\alpha$上，故直线$A_1O$上的点$B_2$也在平面$\alpha$上\\[2mm]
     由公理1可知，点$B_1O$在平面$\alpha$上，故直线$B_1O$上的点$A_2$也在平面$\alpha$上\\[2mm]
@@ -6603,10 +6755,10 @@
     两条直线所成的角的定义：在空间中任取一点$O$，过点$O$分别作两条直线$a$~$b$的平行线$a_{0}$~$b_{0}$，
     其中将直线$a_{0}$和直线$b_{0}$的夹角定义为两条空间直线所成的角。\\[3mm]
     两条直线间的距离的定义：对于两条平行直线或者两条异面直线$l_1$~$l_2$，作直线$l_1$~$l_2$的公垂线$l_0$，
-    其中将公垂线$l_0$截两直线$l_1$~$l_2$的线段长度为两条直线间的距离。\\[6mm]
+    其中将公垂线$l_0$截两直线$l_1$~$l_2$的线段长度为两条直线间的距离。\\[5mm]
     对于两条不重合的直线，若其所成角满足$\theta=\dfrac{\pi}{2}$，那么这两条直线垂直。\\[4mm]
     对于两条垂直的直线$l_1$~$l_2$，我们可以记作：$l_1\perp l_2$\\[3mm]
-    对于两条平行的直线$l_1$~$l_2$，我们可以记作：$l_1\parallel l_2$
+    对于两条平行的直线$l_1$~$l_2$���我们可以记作：$l_1\parallel l_2$
 
 \newpage
     \textbf{等角定理：}若两条相交直线$a_1$$b_1$与另外两条相交直线$a_{2}$$b_{2}$分别平行，那么两组直线的夹角相等。\\[4mm]
