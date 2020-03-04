@@ -948,24 +948,26 @@
     \end{large}\\
     在幂函数中，自变量$x$是底数，参数$n$是指数。\\[3mm]
     幂函数的函数图像性质和参数$n$有关，具体可以分为三种（$n=\dfrac{p}{q}$）：
-    \begin{center}
-        \begin{tabular}{l|l|l}
-            \hline
-            参数取值&示例&图像特征\\ \hline
-            $q$为偶数&$y=x^\frac{1}{2}$\quad$y=x^\frac{1}{4}$&非奇非偶函数\qquad\\ \hline
-            $q$为奇数~~$p$为偶数\qquad\qquad&$y=x^2$\quad$y=x^4$\quad$y=x^{\frac{2}{3}}\qquad$&偶函数\\ \hline
-            $q$为奇数~~$p$为奇数\qquad\qquad&$y=x^1$\quad$y=x^3$\quad$y=x^{\frac{1}{3}}\qquad$&奇函数\\ \hline
-        \end{tabular}
-    \end{center}
-    \vspace{10pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l|l}
+                \hline
+                参数取值&示例&图像特征\\ \hline
+                $q$为偶数&$y=x^\frac{1}{2}$\quad$y=x^\frac{1}{4}$&非奇非偶函数\qquad\\ \hline
+                $q$为奇数~~$p$为偶数\qquad\qquad&$y=x^2$\quad$y=x^4$\quad$y=x^{\frac{2}{3}}\qquad$&偶函数\\ \hline
+                $q$为奇数~~$p$为奇数\qquad\qquad&$y=x^1$\quad$y=x^3$\quad$y=x^{\frac{1}{3}}\qquad$&奇函数\\ \hline
+            \end{tabular}
+            \caption{幂函数的图像性质}
+        \end{center}
+    \end{table}\\[3mm]
     幂函数无论参数如何变化，其图像必然过点$(1,1)$。\\[3mm]
     函数图像（$q$为偶数）：
     \begin{figure}[h]
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -976,13 +978,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{\frac{1}{2}}$的图像}
+                    \caption{函数$y=x^{\frac{1}{2}}$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -993,13 +995,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-\frac{1}{2}}$的图像}
+                    \caption{函数$y=x^{-\frac{1}{2}}$}
                 \end{minipage}
-            }\vspace{20pt}
+            }\\[6mm]
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1010,13 +1012,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{\frac{1}{4}}$的图像}
+                    \caption{函数$y=x^{\frac{1}{4}}$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1027,7 +1029,7 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-\frac{1}{4}}$的图像}
+                    \caption{函数$y=x^{-\frac{1}{4}}$}
                 \end{minipage}
             }
         \end{center}
@@ -1040,8 +1042,8 @@
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1054,13 +1056,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{\frac{2}{3}}$的图像}
+                    \caption{函数$y=x^{\frac{2}{3}}$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1073,7 +1075,7 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-\frac{2}{3}}$的图像}
+                    \caption{函数$y=x^{-\frac{2}{3}}$}
                 \end{minipage}
             }
         \end{center}
@@ -1082,8 +1084,8 @@
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1094,13 +1096,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^2$的图像}
+                    \caption{函数$y=x^2$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1113,7 +1115,7 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-2}$的图像}
+                    \caption{函数$y=x^{-2}$}
                 \end{minipage}
             }
         \end{center}
@@ -1122,8 +1124,8 @@
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1134,13 +1136,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^4$的图像}
+                    \caption{函数$y=x^4$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1153,7 +1155,7 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-4}$的图像}
+                    \caption{函数$y=x^{-4}$}
                 \end{minipage}
             }
         \end{center}
@@ -1166,8 +1168,8 @@
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1178,13 +1180,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{\frac{1}{3}}$的图像}
+                    \caption{函数$y=x^{\frac{1}{3}}$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1197,7 +1199,7 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-\frac{2}{3}}$的图像}
+                    \caption{函数$y=x^{-\frac{2}{3}}$}
                 \end{minipage}
             }
         \end{center}
@@ -1206,8 +1208,8 @@
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1218,13 +1220,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^1$的图像}
+                    \caption{函数$y=x^1$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1237,7 +1239,7 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-1}$的图像}
+                    \caption{函数$y=x^{-1}$}
                 \end{minipage}
             }
         \end{center}
@@ -1246,8 +1248,8 @@
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1258,13 +1260,13 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^3$的图像}
+                    \caption{函数$y=x^3$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1277,7 +1279,7 @@
                         \draw[dashed] (1,1) -- (1,0);
                         \draw[dashed] (1,1) -- (0,1);
                     \end{tikzpicture}
-                    \caption{函数$y=x^{-3}$的图像}
+                    \caption{函数$y=x^{-3}$}
                 \end{minipage}
             }
         \end{center}
@@ -1294,23 +1296,25 @@
     \end{large}\\
     在指数函数中，自变量$x$是指数，参数$n$是底数。\\[3mm]
     指数函数的函数图像性质和参数$n$有关，具体可以分为两种：\vspace{5pt}
-    \begin{center}
-        \begin{tabular}{l|l|l}
-            \hline
-            参数取值&示例&图像特征\\ \hline
-            $n<1$\qquad\qquad&$y=\frac{1}{2}^x$\quad~~~$y=\frac{1}{3}^x$&单调递减函数\qquad\qquad\\ \hline
-            $n>1$\qquad\qquad&$y=2^x$\qquad$y=3^x\qquad$&单调递减函数\\ \hline
-        \end{tabular}
-    \end{center}
-    \vspace{10pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l|l}
+                \hline
+                参数取值&示例&图像特征\\ \hline
+                $n<1$\qquad\qquad&$y=\frac{1}{2}^x$\quad~~~$y=\frac{1}{3}^x$&单调递减函数\qquad\qquad\\ \hline
+                $n>1$\qquad\qquad&$y=2^x$\qquad$y=3^x\qquad$&单调递减函数\\ \hline
+            \end{tabular}
+            \caption{指数函数的图像性质}
+        \end{center}
+    \end{table}\\
     指数函数无论参数如何变化，其图像必然过点$(0,1)$。\\[3mm]
-    函数图像（$n<1$）：
+    函数图像（$n<1$）：\vspace{-5pt}
     \begin{figure}[h!]
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1319,13 +1323,13 @@
                             plot(\x,{0.5^\x}) node at (5,4){$y=\dfrac{1}{2}^x$};
                         \fill (0,1) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=\dfrac{1}{2}^x$的图像}
+                    \caption{函数$y=\dfrac{1}{2}^x$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1334,19 +1338,18 @@
                             plot(\x,{0.3333^\x}) node at (5,4){$y=\dfrac{1}{3}^x$};
                         \fill (0,1) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=\dfrac{1}{3}^x$的图像}
+                    \caption{函数$y=\dfrac{1}{3}^x$}
                 \end{minipage}
             }
         \end{center}
     \end{figure}\\
-    \vspace{-20pt}
-    函数图像（$n>1$）：
+    函数图像（$n>1$）：\vspace{-5pt}
     \begin{figure}[h!]
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1355,13 +1358,13 @@
                             plot(\x,{2^\x}) node at (5,4){$y=2^x$};
                         \fill (0,1) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=2^x$的图像}
+                    \caption{函数$y=2^x$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.3\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1370,7 +1373,7 @@
                             plot(\x,{3^\x}) node at (5,4){$y=3^x$};
                         \fill (0,1) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=3^x$的图像}
+                    \caption{函数$y=3^x$}
                 \end{minipage}
             }
         \end{center}
@@ -1386,24 +1389,26 @@
         \end{equation*}
     \end{large}\\
     在对数函数中，自变量$x$是真数，参数$n$是底数。\\[3mm]
-    指数函数的函数图像性质和参数$n$有关，具体可以分为两种：\vspace{5pt}
-    \begin{center}
-        \begin{tabular}{l|l|l}
-            \hline
-            参数取值&示例&图像特征\\ \hline
-            $n<1$\qquad\qquad&$y=\log_{\frac{1}{2}}x$\qquad$y=\log_{\frac{1}{3}}x$&单调递减函数\qquad\qquad\\ \hline
-            $n>1$\qquad\qquad&$y=\log_{2}x$\qquad\,$y=\log_{3}x$\qquad\qquad&单调递增函数\\ \hline
-        \end{tabular}
-    \end{center}
-    \vspace{10pt}
+    对数函数的函数图像性质和参数$n$有关，具体可以分为两种：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l|l}
+                \hline
+                参数取值&示例&图像特征\\ \hline
+                $n<1$\qquad\qquad&$y=\log_{\frac{1}{2}}x$\qquad$y=\log_{\frac{1}{3}}x$&单调递减函数\qquad\qquad\\ \hline
+                $n>1$\qquad\qquad&$y=\log_{2}x$\qquad\,$y=\log_{3}x$\qquad\qquad&单调递增函数\\ \hline
+            \end{tabular}
+            \caption{对数函数的图形性质}
+        \end{center}
+    \end{table}\\
     对数函数无论参数如何变化，其图像必然过点$(1,0)$。\\[3mm]
-    函数图像（$n<1$）：
+    函数图像（$n<1$）：\vspace{-5pt}
     \begin{figure}[h!]
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.31\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1412,13 +1417,13 @@
                             plot(\x,{-log10(\x)/0.301}) node at (5,4){$y=\log_{\frac{1}{2}}x$};
                         \fill (1,0) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=\log_{\frac{1}{2}}x$的图像}
+                    \caption{函数$y=\log_{\frac{1}{2}}x$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.31\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1427,19 +1432,18 @@
                             plot(\x,{-log10(\x)/0.477}) node at (5,4){$y=\log_{\frac{1}{3}}x$};
                         \fill (1,0) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=\log_{\frac{1}{3}}x$的图像}
+                    \caption{函数$y=\log_{\frac{1}{3}}x$}
                 \end{minipage}
             }
         \end{center}
     \end{figure}\\
-    \vspace{-20pt}
-    函数图像（$n>1$）：
+    函数图像（$n>1$）：\vspace{-5pt}
     \begin{figure}[h!]
         \begin{center}
             \subfigure
             {
-                \begin{minipage}[t]{0.31\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1448,13 +1452,13 @@
                             plot(\x,{log10(\x)/0.301}) node at (5,4){$y=\log_{2}x$};
                         \fill (1,0) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=\log_{2}x$的图像}
+                    \caption{函数$y=\log_{2}x$}
                 \end{minipage}
-            }\qquad\qquad
+            }\qquad\qquad\qquad
             \subfigure
             {
-                \begin{minipage}[t]{0.31\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
+                \begin{minipage}[t]{0.25\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
                         \draw[->] (-6,0) -- (6,0) node[above] {$x$};
                         \draw[->] (0,-6) -- (0,6) node[right] {$y$};
                         \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
@@ -1463,7 +1467,7 @@
                             plot(\x,{log10(\x)/0.477}) node at (5,4){$y=\log_{3}x$};
                         \fill (1,0) circle (3pt);
                     \end{tikzpicture}
-                    \caption{函数$y=\log_{3}x$的图像}
+                    \caption{函数$y=\log_{3}x$}
                 \end{minipage}
             }
         \end{center}
@@ -2840,8 +2844,8 @@
     在三维空间中，任何一个向量都可以表示为上述两个单位向量的线性组合：
     \begin{large}
         \begin{align*}
-            &\vec{b}=(x,y,z)\\[3mm]
-            &\vec{b}=x\cdot\vec{i}+y\cdot\vec{j}+z\cdot\vec{k}
+            &\vec{a}=(x,y,z)\\[3mm]
+            &\vec{a}=x\cdot\vec{i}+y\cdot\vec{j}+z\cdot\vec{k}
         \end{align*}
     \end{large}\\
     三维空间中的向量，我们通常称为空间向量。
@@ -2859,7 +2863,7 @@
     空间向量的模：
     \begin{large}
         \begin{equation*}
-            \left|\vec{b}\right|=\sqrt{x^2+y^2+z^2}
+            \left|\vec{a}\right|=\sqrt{x^2+y^2+z^2}
         \end{equation*}
     \end{large}\vspace{-10pt}
 
@@ -2874,7 +2878,7 @@
     空间向量的单位向量：
     \begin{large}
         \begin{equation*}
-            \vec{b_0}=\left(\frac{x}{|\vec{b}|}~,~\frac{y}{|\vec{b}|}~,~\frac{z}{|\vec{b}|}\right)
+            \vec{a_0}=\left(\frac{x}{|\vec{b}|}~,~\frac{y}{|\vec{b}|}~,~\frac{z}{|\vec{b}|}\right)
         \end{equation*}
     \end{large}\vspace{-4pt}
 
@@ -2882,13 +2886,13 @@
     平面向量的加法：
     \begin{large}
         \begin{equation*}
-            \vec{a_1}+\vec{a_2}=(x_1+x_2~,~y_1+y_2)
+            \vec{a}+\vec{b}=(x_1+x_2~,~y_1+y_2)
         \end{equation*}
     \end{large}\\
     空间向量的加法：
     \begin{large}
         \begin{equation*}
-            \vec{b_1}+\vec{b_2}=(x_1+x_2~,~y_1+y_2~,~z_1+z_2)
+            \vec{a}+\vec{b}=(x_1+x_2~,~y_1+y_2~,~z_1+z_2)
         \end{equation*}
     \end{large}\vspace{-5pt}
 
@@ -2896,13 +2900,13 @@
     平面向量的减法：
     \begin{large}
         \begin{equation*}
-            \vec{a_1}-\vec{a_2}=(x_1-x_2~,~y_1-y_2)
+            \vec{a}-\vec{b}=(x_1-x_2~,~y_1-y_2)
         \end{equation*}
     \end{large}\\
     空间向量的减法：
     \begin{large}
         \begin{equation*}
-            \vec{b_1}-\vec{b_2}=(x_1-x_2~,~y_1-y_2~,~z_1-z_2)
+            \vec{a}-\vec{b}=(x_1-x_2~,~y_1-y_2~,~z_1-z_2)
         \end{equation*}
     \end{large}
 
@@ -2918,7 +2922,7 @@
     空间向量的数乘：
     \begin{large}
         \begin{equation*}
-            \lambda\cdot\vec{b}=\left(\lambda\cdot x~,~\lambda\cdot y~,~\lambda\cdot z\right)
+            \lambda\cdot\vec{a}=\left(\lambda\cdot x~,~\lambda\cdot y~,~\lambda\cdot z\right)
         \end{equation*}
     \end{large}\\
     向量数乘的结合律：
@@ -2958,205 +2962,137 @@
     \end{large}\\
     那么这两个向量共线，且实数对$\lambda,\mu$是唯一的。
 
-
 \newpage
 
-\section{向量}
-    对于平面上任意两点，点$M(x_1,y_1)$，点$N(x_2,y_2)$，
-    如果我们希望通过向量$\vec a$来描述点$N$相对于点$M$的关系，
-    那么向量$\vec a$可以表示为：
+\subsection{向量的点乘}
+    向量的点乘：
     \begin{large}
-    \begin{equation*}
-        \vec a=(x_2-x_1,y_2-y_1)
-    \end{equation*}
+        \begin{equation*}
+            \vec{a}\cdot\vec{b}=|\vec{a}|\cdot|\vec{b}|\cdot\cos{\theta}
+        \end{equation*}
     \end{large}\\
-    如果我们绘制一条有向线段$MN$，
-    通过向量，我们可以同时表示有向线段的长度和角度，
-    但我们并不能表示有向线段的位置。\\[3mm]
-    向量描述的是点和点之间的相对位置关系，
-    却并不关心点的位置，
-    但为了便于理解，在平面直角坐标系中研究向量时，通常情况下，
-    我们会将向量所对应的有向线段的起点置于原点。\\
-
-\subsection{向量的表示}
-    在平面直角坐标系中，我们将方向为$x$轴正半轴且长度为$1$的向量记作$\vec i$，
-    将方向为$y$轴正半轴且长度为$1$的向量记作$\vec j$，显然：
+    需要指出的是，该公式对平面向量和空间向量，乃至更高维向量均是适用的。\\[6mm]
+    向量点乘的交换律：
     \begin{large}
-    \begin{equation*}
-        \vec i=(1,0)\qquad\vec j=(0,1)
-    \end{equation*}
+        \begin{equation*}
+            \vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}
+        \end{equation*}
     \end{large}\\
-    所以对于向量$\vec a$，我们不仅可以用有序实数对的形式来表达：
+    向量点乘的分配律：
     \begin{large}
-    \begin{equation*}
-        \vec a=(x,y)
-    \end{equation*}
+        \begin{equation*}
+            \vec{a}\cdot(\vec{b}+\vec{c})=\vec{a}\cdot\vec{b}+\vec{a}\cdot\vec{c}
+        \end{equation*}
     \end{large}\\
-    同时，我们也可也用向量$i$和向量$j$来表达：
+    向量点乘\textbf{不符合}结合律，但有以下性质：
     \begin{large}
-    \begin{equation*}
-        \vec a=x\vec i+y\vec j
-    \end{equation*}
-    \end{large}
-
-\subsection{向量的加法}
-    我们这样定义向量的加法：
-    \begin{large}
-    \begin{equation*}
-        \vec{a}+\vec{b}=\left(x_1+x_2,y_1+y_2\right)
-    \end{equation*}
+        \begin{equation*}
+            \lambda\cdot\vec{a}\cdot\vec{b}=(\lambda\cdot\vec{a})\cdot\vec{b}=(\lambda\cdot\vec{b})\cdot\vec{a}
+        \end{equation*}
     \end{large}\\
-    两个向量的和等于它们对应坐标的和。\\[3mm]
-    在物理中，如果两个向量分别代表两个力，
-    那么两个力的合力就可以用向量的和来表达。
-
-\newpage
-
-\subsection{向量的长度}
-    向量的长度可以通过向量的模来表示：\vspace{5pt}
-    \begin{large}
-    \begin{equation*}
-        \left|\vec a\right|=\sqrt{x_1^2+y_1^2}
-    \end{equation*}
-    \end{large}
-
-\subsection{向量的角度}
-    首先我们需要求出向量的单位向量：\vspace{5pt}
-    \begin{large}
-    \begin{equation*}
-        \vec{a_0}=\left(\frac{x}{|\vec a|},\frac{y}{|\vec a|}\right)
-    \end{equation*}
-    \end{large}\\
-    向量的角度可以通过向量和$x$轴的夹角表示，
-    由于单位向量的长度为$1$，且方向与原向量相同，
-    所以我们可以应用单位圆的性质：
-    \begin{large}
-    \begin{equation*}
-        \cos{\alpha}=\frac{x}{|\vec a|}
-    \end{equation*}
-    \begin{equation*}
-        \sin{\alpha}=\frac{y}{|\vec a|}
-    \end{equation*}
-    \end{large}
-
-\subsection{向量的夹角}
-    对于向量$\vec a=(x_1,y_1)$，向量$\vec b=(x_2,y_2)$，
-    分别使用$\alpha$，$\beta$表示两个向量的角度：\vspace{5pt}
+    推导平面向量点乘的坐标形式：
     \setcounter{equation}{0}
     \begin{align}
-        &\cos{\alpha}=\frac{x}{|\vec a|}\qquad
-        \sin{\alpha}=\frac{y}{|\vec a|}\\[3mm]
-        &\cos{\beta}=\frac{x}{|\vec b|}\qquad
-        \sin{\beta}=\frac{y}{|\vec b|}
+        \vec{a}\cdot\vec{b}
+        &=(x_1\cdot\vec{i}+y_1\cdot\vec{j})\cdot(x_2\cdot\vec{i}+y_2\cdot\vec{j})\\[3mm]
+        &=(x_1\cdot x_2)\cdot\vec{i}~^2+(y_1\cdot y_2)\cdot\vec{j}~^2+(x_1\cdot y_2+x_2\cdot y_1)\cdot\vec{i}\cdot\vec{j}\\[3mm]
+        &=x_1\cdot x_2+y_1\cdot y_2
     \end{align}\\
-    如果我们用$\theta$表示两个向量间的夹角，显然：\vspace{5pt}
-    \begin{equation}
-        \cos{\theta}
-        =\cos{(\beta-\alpha)}
-        =\cos{\alpha}\cdot\cos{\beta}+\sin{\alpha}\cdot\sin{\beta}
-        =\frac{x_1}{|\vec a|}\cdot\frac{x_2}{|\vec b|}+\frac{y_1}{|\vec a|}\cdot\frac{y_2}{|\vec b|}
-    \end{equation}\\
-    化简可得：
-    \begin{large}
-    \begin{equation*}
-        \cos{\theta}=\frac{x_1\cdot x_2+y_1\cdot y_2}{\sqrt{x_1^2+y_1^2}~\cdot\sqrt{x_2^2+y_2^2}~~}
-    \end{equation*}
-    \end{large}
+    推导空间向量点乘的坐标形式：
+    \setcounter{equation}{0}
+    \begin{align}
+        \vec{a}\cdot\vec{b}
+        &=(x_1\cdot\vec{i}+y_1\cdot\vec{j}+z_1\cdot\vec{k})\cdot(x_2\cdot\vec{i}+y_2\cdot\vec{j}+z_1\cdot\vec{k})\\[3mm]
+        &=(x_1\cdot x_2)\cdot\vec{i}~^2+(y_1\cdot y_2)\cdot\vec{j}~^2+(z_1\cdot z_2)\cdot\vec{k}~^2+\\[1mm]
+        &~~~~~\,(x_1\cdot y_2+x_2\cdot y_1)\cdot\vec{i}\cdot\vec{j}+(y_1\cdot z_2+y_2\cdot z_1)\cdot\vec{j}\cdot\vec{k}+(x_1\cdot z_2+x_2\cdot z_1)\cdot\vec{i}\cdot\vec{k}\\[3mm]
+        &=x_1\cdot x_2+y_1\cdot y_2+z_1\cdot z_2
+    \end{align}
 
 \newpage
 
-\subsection{向量的内积}
-    我们这样定义向量的内积：
+    平面向量的点乘：
     \begin{large}
-    \begin{equation*}
-        \vec{a}\cdot\vec{b}=|\vec{a}|\cdot|\vec{b}|\cdot\cos{\theta}
-    \end{equation*}
+        \begin{equation*}
+            \vec{a}\cdot\vec{b}=x_1\cdot x_2+y_1\cdot y_2
+        \end{equation*}
     \end{large}\\
-    将向量的夹角公式代入向量的内积公式，可以得到：
+    立体向量的点乘：
     \begin{large}
-    \begin{equation*}
-        \vec{a}\cdot\vec{b}=x_1x_2+y_1y_2
-    \end{equation*}
-    \end{large}\\
-    两个向量的内积等于向量的长度之积乘以两个向量间的夹角。\\[2mm]
-    两个向量的内积等于它们对应坐标的乘积之和。\\[2mm]
-    请注意！两个向量的内积的运算结果是数而非向量！\\[6mm]
-    特别的，当两个向量垂直时，由于$\cos{\dfrac{\pi}{2}}=0$，
-    所以可以得到两个向量垂直的条件：
-    \begin{large}
-    \begin{equation*}
-        \vec{a}\cdot\vec{b}=0
-    \end{equation*}
-    \end{large}\\
-    在物理中，如果用一个向量表达物体所受到的力，
-    用另一个向量表达物体所发生的位移，
-    那么此时两个向量的内积就是力对物体做的功。\\[3mm]
-    我们可以这样理解，
-    如果我们用$\vec{f}$表达物体所受到的力，
-    用$\vec{s}$表达物体的位移，
-    那么物体在位移方向上所受到的力的大小可以表达为$\vec{f}\cdot\cos{\theta}$，
-    我们知道功等于物体的位移乘以物体在位移方向上所受到的力，
-    所以力对物体做的功可以表达为$W=|\vec{f}|\cdot|\vec{s}|\cdot\cos{\theta}$，
-    符合向量的内积公式。\\[3mm]
-    向量的内积也可也被称为：向量的数量积，向量的点积，这种运算也被称为点乘。\\[6mm]
-    向量的内积运算符合乘法的交换律：
-    \begin{large}
-    \begin{equation*}
-        \vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}
-    \end{equation*}
-    \end{large}\\
-    向量的内积运算符合乘法的分配率：
-    \begin{large}
-    \begin{equation*}
-        \vec{a}\cdot(\vec{b}+\vec{c})=\vec{a}\cdot\vec{b}+\vec{a}\cdot\vec{c}
-    \end{equation*}
-    \end{large}\\
-    向量的内积运算\textbf{不符合}乘法的结合律，但有以下性质：
-    \begin{large}
-    \begin{equation*}
-        c\cdot\vec{a}\cdot\vec{b}=c\cdot(\vec{a}\cdot\vec{b})=(c\cdot\vec{a})\cdot\vec{b}=(c\cdot\vec{b})\cdot\vec{a}
-    \end{equation*}
-    \end{large}\\
+        \begin{equation*}
+            \vec{a}\cdot\vec{b}=x_1\cdot x_2+y_1\cdot y_2+z_1\cdot z_2
+        \end{equation*}
+    \end{large}\vspace{-10pt}
 
-\newpage
-
-\subsubsection{高维向量的内积}
+\subsubsection{高维向量的点乘}
     对于$n$维向量$\vec{a}$和$\vec{b}$：
     \begin{large}
-    \begin{align*}
-        &\vec{a}=\left(a_1,a_2,a_3,\cdots,a_n\right)\\[3mm]
-        &\vec{b}=\left(b_1,b_2,b_3,\cdots,b_n\right)
-    \end{align*}
-    \end{large}
-    我们定义：
+        \begin{align*}
+            &\vec{a}=\left(a_1,a_2,a_3,\cdots,a_n\right)\\[3mm]
+            &\vec{b}=\left(b_1,b_2,b_3,\cdots,b_n\right)
+        \end{align*}
+    \end{large}\\
+    高维向量的点乘：
     \begin{large}
-    \begin{equation*}
-        \vec{a}\cdot\vec{b}=\sum^n_{i=1}a_i\cdot b_i
-    \end{equation*}
+        \begin{equation*}
+            \vec{a}\cdot\vec{b}=\sum^n_{i=1}a_i\cdot b_i
+        \end{equation*}
+    \end{large}\vspace{10pt}
+
+\subsection{向量的夹角}
+    向量的夹角：
+    \begin{large}
+        \begin{equation*}
+            \cos{\theta}=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}|\cdot|\vec{b}|}
+        \end{equation*}
+    \end{large}\\
+    需要指出的是，该公式对平面向量和空间向量，乃至更高维向量均是适用的。\\[6mm]
+    平面向量的夹角：
+    \begin{large}
+        \begin{equation*}
+            \cos{\theta}=\frac{x_1\cdot x_2+y_1\cdot y_2}{\sqrt{x_1~^2+y_1~^2}\cdot\sqrt{x_2~^2+y_2~^2}}
+        \end{equation*}
+    \end{large}\\
+    空间向量的夹角：
+    \begin{large}
+        \begin{equation*}
+            \cos{\theta}=\frac{x_1\cdot x_2+y_1\cdot y_2+z_1\cdot z_2}{\sqrt{x_1~^2+y_1~^2+z_1~^2}\cdot\sqrt{x_2~^2+y_2~^2+z_2~^2}}
+        \end{equation*}
     \end{large}
+
+\newpage
 
 \subsection{向量的旋转}
     对于向量$\vec{a}=(x,y)$，如果我们将其旋转$\theta$，
-    我们可以通过如下过程求解旋转得到的向量$\vec{b}$：\\
+    我们可以通过如下过程求解旋转得到的向量$\vec{b}$。\\[3mm]
+    首先计算向量$\vec{a}$的角度：
     \setcounter{equation}{0}
     \begin{align}
         &~\vec{a}=(x,y)\\[3mm]
         &~\vec{a_0}=\left(\frac{x}{|\vec{a}|},\frac{y}{|\vec{a}|}\right)\\[3mm]
         &\cos{\alpha}=\frac{x}{|\vec{a}|}\\[3mm]
-        &\sin{\alpha}=\frac{y}{|\vec{a}|}\\[3mm]
-        &\cos{(\alpha+\theta)}=\cos{\alpha}\cdot\cos{\theta}-\sin{\alpha}\cdot\sin{\theta}
-        =\frac{x}{|\vec{a}|}\cdot\cos{\theta}+\frac{y}{|\vec{a}|}\cdot\sin{\theta}\\[3mm]
-        &\sin{(\alpha+\theta)}=\sin{\alpha}\cdot\cos{\theta}-\cos{\alpha}\cdot\sin{\theta}
-        =\frac{y}{|\vec{a}|}\cdot\cos{\theta}+\frac{x}{|\vec{a}|}\cdot\sin{\theta}\\[3mm]
-        &~\vec{b_0}=\left(\cos{(\alpha+\theta)},\sin{(\alpha+\theta)}\right)
-        =\left(\frac{x}{|\vec{a}|}\cdot\cos{\theta}+\frac{y}{|\vec{a}|}\cdot\sin{\theta}\ ,\ \frac{y}{|\vec{a}|}\cdot\cos{\theta}+\frac{x}{|\vec{a}|}\cdot\sin{\theta}\right)\qquad\\[3mm]
-        &~\vec{b}=\vec{b_0}\cdot|\vec{a}|=\left(x\cdot\cos{\theta}-y\cdot\sin{\theta}\ ,\  y\cdot\cos{\theta}+x\cdot\sin{\theta}\right)
+        &\sin{\alpha}=\frac{y}{|\vec{a}|}
     \end{align}\\
-    稍加整理可以得到：
+    然后推导向量$\vec{b}$的角度：
+    \begin{align}
+        \cos{(\alpha+\theta)}
+        &=\cos{\alpha}\cdot\cos{\theta}-\sin{\alpha}\cdot\sin{\theta}\\[3mm]
+        &=\frac{x}{|\vec{a}|}\cdot\cos{\theta}+\frac{y}{|\vec{a}|}\cdot\sin{\theta}\\[3mm]
+        \sin{(\alpha+\theta)}
+        &=\sin{\alpha}\cdot\cos{\theta}-\cos{\alpha}\cdot\sin{\theta}\\[3mm]
+        &=\frac{y}{|\vec{a}|}\cdot\cos{\theta}+\frac{x}{|\vec{a}|}\cdot\sin{\theta}
+    \end{align}\\
+    最后计算向量$\vec{b}$的坐标：
+    \begin{align}
+        \vec{b_0}
+        &=\left(\cos{(\alpha+\theta)},\sin{(\alpha+\theta)}\right)\\[3mm]
+        &=\left(\frac{x}{|\vec{a}|}\cdot\cos{\theta}+\frac{y}{|\vec{a}|}\cdot\sin{\theta}\ ,\ \frac{y}{|\vec{a}|}\cdot\cos{\theta}+\frac{x}{|\vec{a}|}\cdot\sin{\theta}\right)\\[8mm]
+        \vec{b}&=\vec{b_0}\cdot|\vec{a}|=\left(x\cdot\cos{\theta}-y\cdot\sin{\theta}\ ,\  y\cdot\cos{\theta}+x\cdot\sin{\theta}\right)
+    \end{align}\\
+    向量的旋转：
     \begin{large}
-    \begin{equation*}
-        \vec{b}=\left(x\cdot\cos{\theta}-y\cdot\sin{\theta}\ ,\  x\cdot\sin{\theta}+y\cdot\cos{\theta}\right)
-    \end{equation*}
+        \begin{equation*}
+            \vec{b}=\left(x\cdot\cos{\theta}-y\cdot\sin{\theta}\ ,\  x\cdot\sin{\theta}+y\cdot\cos{\theta}\right)
+        \end{equation*}
     \end{large}
 
 \newpage
