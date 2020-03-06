@@ -1478,160 +1478,149 @@
 \section{三角比的运算}
 
 \subsection{角度}
-    角度是衡量角的大小的一种方式，
-    我们定义$1$度为周角的$\dfrac{1}{360}$。\\[3mm]
-    按逆时针方向旋转所形成的角称为正角，
-    其度量值为正。\\
-    按顺时针方向旋转所形成的角称为负角，
-    其度量值为负。\\[3mm]
+    角度制是衡量角的大小的一种方式，单位是度。\\[3mm]
+    我们定义$1$度为周角的$360$等分。\\[3mm]
+    按逆时针方向旋转所形成的角称为正角，其度量值为正。\\[3mm]
+    按顺时针方向旋转所形成的角称为负角，其度量值为负。\\[3mm]
     根据角度定义，在角度制中，周角的大小是$360$度。\\[3mm]
     在研究三角函数时，我们通常会默认角的顶点位于坐标原点，
-    角的始边与x轴正半轴重合。
+    角的始边与$x$轴正半轴重合。
 
 \subsection{弧度}
-    弧度也是一种衡量角的大小的一种方式，
-    我们定义$1$弧度为单位圆上弧长等于$1$的弧所对应的圆心角的大小。\\[3mm]
-    由于周角对应的弧的弧长恰好是圆的周长，而单位圆的周长是$2\pi$，
-    所以在弧度制中，周角的大小是$2\pi$弧度。\\[3mm]
-    通常在使用弧度制时，我们可以省略弧度的单位，直接书写弧度数即可。\\[3mm]
-    弧度的意义在于填补了角度制的设计缺陷，
-    去除了许多公式中的$\pi$，大幅度简化了运算。
+    弧度制是衡量角的大小的一种方式，单位是弧度。\\[3mm]
+    我们定义$1$弧度为单位圆上弧长为一的弧所对应的圆心角的大小。\\[3mm]
+    弧度的意义在于填补了角度制的设计缺陷，大幅度简化了运算。\\[3mm]
+    弧度在使用中，可以省略弧度单位，直接书写弧度数即可。\\[3mm]
+    根据弧度定义，在弧度制中，周角的大小是$2\pi$弧度。
 
 \subsection{扇形的弧长和面积}
     弧度的本质是单位圆上的角所对应的弧长，
     所以考虑圆的半径，我们就可以得出：\\[3mm]
     扇形的弧长公式：
     \begin{large}
-    \begin{equation*}
-        l=\alpha \cdot r    
-    \end{equation*}   
-    \end{large}\\[3mm]
+        \begin{equation*}
+            l=\alpha \cdot r    
+        \end{equation*}   
+    \end{large}\\
     我们知道圆的面积可以用$\pi r^2$计算，
-    显然扇形的面积和圆的面积比可以使用$\dfrac{\alpha}{2\pi}$表示，
-    两者相乘就可以得到关于弧度和半径的扇形面积公式。\\[3mm]
-    同时我们可以再代入弧长公式，
-    又可以得到关于弧长和半径的扇形面积公式。\\[3mm]
+    显然扇形的面积和圆的面积比可以使用$\dfrac{\alpha}{2\pi}$表示。\\[3mm]
+    因此我们可以通过将两者相乘，得到关于弧度和半径的扇形面积公式。\\[3mm]
+    同时我们可以再代入弧长公式，得到关于弧长和半径的扇形面积公式。\\[3mm]
     扇形的面积公式：
     \begin{large}
-    \begin{equation*}
-        S=\frac{1}{2}\cdot \alpha \cdot r^2=\frac{1}{2}\cdot l \cdot r
-    \end{equation*}   
-    \end{large}\\[3mm]
+        \begin{align*}
+            &S=\frac{1}{2}\cdot \alpha \cdot r^2=\frac{1}{2}\cdot l \cdot r
+        \end{align*}
+    \end{large}
 
 \newpage
 
 \subsection{三角比的定义}
     设三角形终边上一点$P(x,y)$，
-    同时令原点到点P的距离$OP=r$，$r=\sqrt{x^2+y^2}$。\\[3mm]
-    我们定义：\\[3mm]
-    正弦（sin）：
+    同时令原点到点P的距离$OP=r$，其中$r=\sqrt{x^2+y^2}$。\\[5mm]
+    首先定义以下三角比：\\[3mm]
+    正弦（$\sin$）：
     \begin{large}
     \begin{equation*}
         \sin{\alpha}=\dfrac{y}{r}
     \end{equation*}   
     \end{large}\\
-    余弦（cos）：
+    余弦（$\cos$）：
     \begin{large}
     \begin{equation*}
         \cos{\alpha}=\dfrac{x}{r}
     \end{equation*}   
     \end{large}\\
-    正切（tan）：
+    正切（$\tan$）：
     \begin{large}
     \begin{equation*}
         \tan{\alpha}=\dfrac{y}{x}
     \end{equation*}   
     \end{large}\\
-    \newline
-    对于上述三角比的倒数，我们定义：\\[3mm]
-    余割（csc）：
+    然后定义以下三角比：\\[3mm]
+    余割（$\csc$）：
     \begin{large}
     \begin{equation*}
-        \csc{\alpha}=\dfrac{1}{\sin{\alpha}}=\dfrac{r}{y}
+        \csc{\alpha}=\dfrac{r}{y}
     \end{equation*}   
     \end{large}\\
-    正割（sec）：
+    正割（$\sec$）：
     \begin{large}
     \begin{equation*}
-        \sec{\alpha}=\dfrac{1}{\cos{\alpha}}=\dfrac{r}{x}
+        \sec{\alpha}=\dfrac{r}{x}
     \end{equation*}   
     \end{large}\\
-    余切（cot）：
+    余切（$\cot$）：
     \begin{large}
     \begin{equation*}
-        \cot{\alpha}=\dfrac{1}{\tan{\alpha}}=\dfrac{x}{y}
+        \cot{\alpha}=\dfrac{x}{y}
     \end{equation*}   
     \end{large}\\[3mm]
-    特别的，如果在一个单位圆上，\\
-    角$\alpha$的终边与单位圆的交点为P$(x,y)$，
-    直线$OP$的斜率为$k$，那么我们可以得到：\\[5mm]
+    特别的，如果在一个单位圆上，角$\alpha$的终边与单位圆的交点为P$(x,y)$，直线$OP$的斜率为$k$。\\[3mm]
+    那么存在以下关系：
     \begin{large}
-        $x=\cos{\alpha}$\\[4mm]
-        $y=\sin{\alpha}$\\[4mm]
-        $k=\tan{\alpha}$\\[4mm]
+        \begin{align*}
+            &x=\cos{\alpha}\\[3mm]
+            &y=\sin{\alpha}\\[3mm]
+            &k=\tan{\alpha}
+        \end{align*}
     \end{large}
+
 \newpage
 
 \subsection{同角三角比的关系}
-    由于sin和csc互为倒数，cos和sec互为倒数，tan和cot互为倒数，我们可以得到：\\
-    \newline
+    由于$\sin$和$\csc$互为倒数，$\cos$和$\sec$互为倒数，$\tan$和$\cot$互为倒数，我们可以得到倒数关系。\\[3mm]
     \textbf{倒数关系：}
     \begin{large}
-    \begin{equation*}
-        \sin{\alpha} \cdot \csc{\alpha}=1
-    \end{equation*}
-    \begin{equation*}
-        \cos{\alpha} \cdot \sec{\alpha}=1
-    \end{equation*}   
-    \begin{equation*}
-        \tan{\alpha} \cdot \cot{\alpha}=1
-    \end{equation*}
+        \begin{equation*}
+            \sin{\alpha} \cdot \csc{\alpha}=1
+        \end{equation*}
+        \begin{equation*}
+            \cos{\alpha} \cdot \sec{\alpha}=1
+        \end{equation*}   
+        \begin{equation*}
+            \tan{\alpha} \cdot \cot{\alpha}=1
+        \end{equation*}
     \end{large}\\
-    由于$\sin \alpha=\dfrac{y}{r}$，$\cos \alpha=\dfrac{x}{r}$，
-    两者相除可以得到：\\
-    \newline
+    由于$\sin \alpha=\dfrac{y}{r}$，同时$\cos \alpha=\dfrac{x}{r}$，且$\tan \alpha=\dfrac{y}{x}$，通过两者相除可以得到商数关系。\\[3mm]
     \textbf{商数关系：}
     \begin{large}
-    \begin{equation*}
-        \tan \alpha=\frac{\sin \alpha}{\cos \alpha}
-    \end{equation*}
-    \end{large}\\
-    \newline
-    通过以下推导，我们可以得出：
-    \begin{equation*}
+        \begin{equation*}
+            \tan \alpha=\frac{\sin \alpha}{\cos \alpha}
+        \end{equation*}
+    \end{large}\\[4mm]
+    通过以下推导，我们可以得出平方关系：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{equation}
         \sin^2{\alpha}+\cos^2{\alpha}
         =\frac{y^2}{r^2}+\frac{x^2}{r^2}
         =\frac{x^2+y^2}{r^2}
         =\frac{x^2+y^2}{x^2+y^2}
         =1
-    \end{equation*}
-    \begin{equation*}
+    \end{equation}\vspace{5pt}
+    \begin{equation}
         \sec^2 \alpha-\tan^2 \alpha
         =\frac{r^2}{x^2}-\frac{y^2}{x^2}
         =\frac{x^2+y^2}{x^2}-\frac{y^2}{x^2}
         =1
-    \end{equation*}
-    \begin{equation*}
+    \end{equation}\vspace{5pt}
+    \begin{equation}
         \csc^2 \alpha-\cot^2 \alpha
         =\frac{r^2}{y^2}-\frac{x^2}{y^2}
         =\frac{x^2+y^2}{y^2}-\frac{x^2}{y^2}
         =1
-    \end{equation*}\\
+    \end{equation}\\
     \textbf{平方关系：}
     \begin{large}
-    \begin{equation*}
-        \sin^2 \alpha +\cos^2 \alpha=1
-    \end{equation*}
-    \end{large}
-    \begin{large}
-    \begin{equation*}
-        \sec^2 \alpha -\tan^2 \alpha=1
-    \end{equation*}
-    \end{large}
-    \begin{large}
-    \begin{equation*}
-        \csc^2 \alpha -\cot^2 \alpha=1
-    \end{equation*}
+        \begin{equation*}
+            \sin^2 \alpha +\cos^2 \alpha=1
+        \end{equation*}
+        \begin{equation*}
+            \sec^2 \alpha -\tan^2 \alpha=1
+        \end{equation*}
+        \begin{equation*}
+            \csc^2 \alpha -\cot^2 \alpha=1
+        \end{equation*}
     \end{large}
 
 \newpage
@@ -1965,7 +1954,7 @@
     \begin{large}
     \begin{align*}
         &\tan{\frac{\beta}{2}}=\pm\sqrt{\frac{1-\cos{\beta}}{1+\cos{\beta}}}\\[4mm]
-        &\tan{\frac{\beta}{2}}=\frac{\sin{\beta}}{1+\cos{\beta}}\\[3mm]
+        &\tan{\frac{\beta}{2}}=\frac{\sin{\beta}}{1+\cos{\beta}}\\[4mm]
         &\tan{\frac{\beta}{2}}=\frac{1-\cos{\beta}}{\sin{\beta}}
     \end{align*}
     \end{large}
@@ -6659,17 +6648,17 @@
     \textbf{条件4：}两条平行的直线确定一个平面。\\[3mm]
     条件4的证明：\\[3mm]
     1.设直线$l_a$上两点$A_1A_2$，设直线$l_b$上两点$B_1B_2$\\[2mm]
-    2.线段$A_1A_2$和线段$B_1B_2$满足$A_1A_2=B_1B_2$\\[3mm]
-    由于$A_1A_2=B_1B_2$且$A_1A_2\parallel B_1B_2$，因此四边形$A_1A_2B_2B_1$是平行四边形\\[2mm]
-    设平行四边形$A_1A_2B_2B_1$中，对角线$A_1B_2$和对角线$A_2B_1$的交点为$O$\\[2mm]
-    由公理3可知，点$A_1B_1O$可以共同确定一个平面$\alpha$，故点$A_1B_1O$均在平面$\alpha$上。\\[2mm]
-    由公理1可知，点$A_1O$在平面$\alpha$上，故直线$A_1O$上的点$B_2$也在平面$\alpha$上\\[2mm]
-    由公理1可知，点$B_1O$在平面$\alpha$上，故直线$B_1O$上的点$A_2$也在平面$\alpha$上\\[2mm]
-    由公理1可知，点$A_1A_2$在平面$\alpha$上，故直线$l_a$也在平面$\alpha$上。\\[2mm]
-    由公理1可知，点$B_1B_2$在平面$\alpha$上，故直线$l_b$也在平面$\alpha$上。
+    2.由公理3可设，点$A_1B_1B_2$在平面$\alpha$上。\\[2mm]
+    3.由公理3可设，点$A_2B_1B_2$在平面$\beta$上。\\[3mm]
+    使用反证法，假设平面$\alpha$和平面$\beta$不重合，则点$A_2$不在平面$\alpha$上。\\[2mm]
+    在平面$\alpha$内，过$A$作直线$l_{A_1A_3}$，使得$l_{A_1A_3}\parallel l_{B_1B_2}$。\\[2mm]
+    因为$l_{A_1A_3}\parallel l_{B_1B_2}$，同时$l_{A_1A_2}\parallel l_{B_1B_2}$，且两条直线均过点$A_1$。\\[2mm]
+    所以$l_{A_1A_3}$和$l_{A_1A_2}$是同一条直线，故点$A_2$在平面$\alpha$上，矛盾，故假设不成立。\\[2mm]
+    由公理$1$可知，点$A_1A_2$在平面$\alpha$上，故直线$l_a$也在平面$\alpha$上。\\[2mm]
+    由公理$1$可知，点$B_1B_2$在平面$\alpha$上，故直线$l_b$也在平面$\alpha$上。
 
 \subsection{空间中直线与直线的关系}
-    下表列出了空间中直线与直线的关系：\vspace{5pt}
+    下表列出了空间中直线与直线的关系：
     \begin{table}[h]
         \begin{center}
             \begin{tabular}{l|l}
@@ -6692,9 +6681,9 @@
     其中将直线$a_{0}$和直线$b_{0}$的夹角定义为两条空间直线所成的角。\\[3mm]
     两条直线间的距离的定义：对于两条平行直线或者两条异面直线$l_1$~$l_2$，作直线$l_1$~$l_2$的公垂线$l_0$，
     其中将公垂线$l_0$截两直线$l_1$~$l_2$的线段长度为两条直线间的距离。\\[5mm]
-    对于两条不重合的直线，若其所成角满足$\theta=\dfrac{\pi}{2}$，那么这两条直线垂直。\\[4mm]
+    对于两条不重合的直线，若其所成角满足$\theta=\dfrac{\pi}{2}$，那么这两条直线垂直。\\[3mm]
     对于两条垂直的直线$l_1$~$l_2$，我们可以记作：$l_1\perp l_2$\\[3mm]
-    对于两条平行的直线$l_1$~$l_2$���我们可以记作：$l_1\parallel l_2$
+    对于两条平行的直线$l_1$~$l_2$，我们可以记作：$l_1\parallel l_2$
 
 \newpage
     \textbf{等角定理：}若两条相交直线$a_1$$b_1$与另外两条相交直线$a_{2}$$b_{2}$分别平行，那么两组直线的夹角相等。\\[4mm]
