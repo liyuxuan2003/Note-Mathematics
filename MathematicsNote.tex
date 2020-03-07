@@ -6921,6 +6921,63 @@
 
 \newpage
 
+    \textbf{三垂线定理：}对于一个平面$\alpha$，设直线$a$在平面$\alpha$上，设直线$l_1$是平面$\alpha$的一条斜线，\\
+    若直线$a$垂直于射影$l_0$，那么直线$a$垂直于斜线$l_1$。\\[4mm]
+    三垂线定理的证明：\\[4mm]
+    过直线$l_1$上任意一点$P$作$PQ$垂直于平面$\alpha$，设垂足为$Q$，设斜线的斜足为$M$\\[3mm]
+    过点$Q$作直线$a$的平行线$b$，过点$M$作直线$a$的平行线$c$\\[5mm]
+    因为$MQ\perp a$，而直线$b$和直线$c$均平行于直线$a$\\[3mm]
+    所以$b\perp MQ$，所以$c\perp MQ$\\[3mm]
+    因为$PQ\perp \alpha$，而直线$b$和直线$c$均在平面$\alpha$上\\[3mm]
+    所以$b\perp PQ$\,，所以$c\perp PQ$\\[5mm]
+    因为直线$c$同时垂直于平面$PQM$上的两条相交直线$PQ$和$MQ$\\[3mm]
+    所以根据线面平行判定定理，直线$c$垂直于平面$PMQ$，所以$c\perp PM$\\[5mm]
+    因为直线$a$和直线$c$平行，所以$a\perp PM$，即$a\perp l_1$
+    \begin{figure}[h]
+        \begin{center}
+            \qquad\quad
+            \begin{tikzpicture}[>=stealth,scale=1.0]
+                \coordinate (I) at (4,1);
+                \coordinate (J) at (2,-1);
+                \coordinate (K) at (-4,-1);
+                \coordinate (L) at (-2,1);
+
+                \node at(-3.5,-0.8) {$\alpha$};
+
+                \draw (I)--(J);
+                \draw (J)--(K);
+                \draw (K)--(L);
+                \draw (L)--(I);
+
+                \draw (2.0,5.8)--(-1.5,-0.5);
+                \draw[dashed] (1,4)--(1,0);
+                \draw[dashed] (-1.5,-0.5)--(1,0);
+
+                \draw (1.24,0.7)--(2.6,-0.2);
+                \node at(2.7,0) {$a$};
+
+                \draw (0.3,0.5)--(1.7,-0.5);
+                \node at(1.9,-0.5) {$b$};
+
+                \draw (-1.15,-0.75)--(-2.2,0);
+                \node at(-0.95,-0.75) {$c$};
+
+                \node at(-1.8,-0.7) {$M$};
+                \node at(1,-0.3) {$Q$};
+                \node at(1.2,4) {$P$};
+
+                \node at(2.2,5.8) {$l_1$};
+                \node at(-0.2,0) {$l_0$};
+            \end{tikzpicture}
+            \caption{三垂线定理的示意图}
+        \end{center}
+    \end{figure}\\
+    \textbf{三垂线逆定理：}对于一个平面$\alpha$，设直线$a$在平面$\alpha$上，设直线$l_1$是平面$\alpha$的一条斜线，\\
+    若直线$a$垂直于斜线$l_1$，那么直线$a$垂直于射影$l_0$。\\[4mm]
+    三垂线逆定理可以使用类似的方法加以证明。
+
+\newpage
+
 \subsection{空间中平面与平面的关系}
     下表列出了空间中平面与平面的关系：
     \begin{table}[h]
