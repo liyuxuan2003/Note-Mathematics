@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  9 MAR 2020 14:44
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  10 MAR 2020 00:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1032,12 +1032,15 @@ LaTeX Font Warning: Font shape `TU/等线(0)/m/sl' undefined
 (Font)              using `TU/等线(0)/m/n' instead on input line 60.
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 147--195
+Underfull \hbox (badness 10000) in paragraph at lines 148--196
 
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
@@ -1046,11 +1049,20 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
-[7] [8] (./MathematicsExtension01.aux)
+[7] [8] [9] [10] [11]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [12]
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
+
+ []
+
+[13] [14] (./MathematicsExtension01.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1058,10 +1070,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  41824 strings out of 492922
  1033533 string characters out of 6136751
- 1186566 words of memory out of 5000000
+ 1186563 words of memory out of 5000000
  45169 multiletter control sequences out of 15000+600000
  546552 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,10n,150p,781b,826s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,12n,150p,781b,826s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MathematicsExtension01.pdf (8 pages).
+Output written on MathematicsExtension01.pdf (14 pages).

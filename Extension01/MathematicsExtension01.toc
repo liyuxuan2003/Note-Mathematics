@@ -9,3 +9,12 @@
 \contentsline {subsubsection}{\numberline {1.2.6}三角形面积公式$06$}{7}% 
 \contentsline {subsubsection}{\numberline {1.2.7}三角形面积公式$07$}{7}% 
 \contentsline {subsubsection}{\numberline {1.2.8}三角形面积公式$08$}{8}% 
+\contentsline {subsubsection}{\numberline {1.2.9}三角形面积公式$09$}{9}% 
+\contentsline {subsubsection}{\numberline {1.2.10}三角形面积公式$10$}{10}% 
+\contentsline {subsubsection}{\numberline {1.2.11}三角形面积公式$11$}{11}% 
+\contentsline {subsubsection}{\numberline {1.2.12}三角形面积公式$12$}{11}% 
+\contentsline {subsubsection}{\numberline {1.2.13}三角形面积公式$13$}{12}% 
+\contentsline {subsubsection}{\numberline {1.2.14}三角形面积公式$14$}{13}% 
+\contentsline {subsubsection}{\numberline {1.2.15}三角形面积公式$15$}{13}% 
+\contentsline {subsection}{\numberline {1.3}三角形的相关圆半径}{14}% 
+\contentsline {subsubsection}{\numberline {1.3.1}第一组关系}{14}% 

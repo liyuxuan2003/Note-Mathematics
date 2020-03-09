@@ -118,6 +118,7 @@
 \newpage
 
 \subsection{三角形的第一组面积公式}
+    本章将研究三角形中较为基本的面积公式，并进行相应推导。
 
 \subsubsection{三角形面积公式$01$}
     三角形面积公式$01$：
@@ -287,7 +288,7 @@
                 \tkzDrawCircle(I,R1)
 
             \end{tikzpicture}
-            \caption{三角形的内心}
+            \caption{三角形面积公式$05$示意图}
         \end{center}
     \end{figure}
 
@@ -337,15 +338,252 @@
             S_{\triangle}=\frac{1}{2}\cdot\sqrt{~c^2\cdot a^2-\left(\frac{c^2+a^2-b^2}{2}\right)^2}
         \end{align*}
     \end{large}\\
-    将余弦定理代入公式$02$：
+    对公式$02$进行变形：
     \setcounter{equation}{0}
     \begin{align}
         S_{\triangle}
         &=\frac{1}{2}\cdot a\cdot b\cdot\sin{C}\\[3mm]
         &=\frac{1}{2}\cdot a\cdot b\cdot\sqrt{1-\cos^2{C}}\\[3mm]
+    \end{align}\\
+    将余弦定理代入：
+    \begin{align}
+        S_{\triangle}
         &=\frac{1}{2}\cdot a\cdot b\cdot\sqrt{1-\left(\frac{a^2+b^2-c^2}{2\cdot a\cdot b}\right)}\\[3mm]
         &=\frac{1}{2}\cdot\sqrt{a^2\cdot b^2 -\left(\frac{a^2+b^2-c^2}{2}\right)}
     \end{align}\\
     三角形面积公式$08$也被称为秦九韶公式。
+
+\newpage
+
+\subsubsection{三角形面积公式$09$}
+    三角形面积公式$09$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=\sqrt{p\cdot(p-a)\cdot(p-b)\cdot(p-c)}
+        \end{equation*}
+    \end{large}\\
+    对公式$02$进行变形：
+    \setcounter{equation}{0}
+    \begin{align}
+        S_{\triangle}
+        &=\frac{1}{2}\cdot a\cdot b\cdot\sin{C}\\[3mm]
+        &=\sqrt{\left(\frac{a\cdot b}{2}\right)^2\cdot\sin^2{C}}\\[3mm]
+        &=\sqrt{\left(\frac{a\cdot b}{2}\right)^2\cdot\left(1-\cos^2{C}\right)}\\[3mm]
+        &=\sqrt{\left(\frac{a\cdot b}{2}\right)^2\cdot(1+\cos{C})\cdot(1-\cos{C})}\\[3mm]
+        &=\sqrt{\frac{a\cdot b\cdot(1+\cos{C})}{2}\cdot\frac{a\cdot b\cdot(1-\cos{C})}{2}}
+    \end{align}\\
+    将余弦定理代入：
+    \begin{align}
+        S_{\triangle}
+        &=\sqrt{\frac{a\cdot b\cdot\left(1+\dfrac{a^2+b^2-c^2}{2\cdot a\cdot b}\right)}{2}\cdot\frac{a\cdot b\cdot\left(1-\dfrac{a^2+b^2-c^2}{2\cdot a\cdot b}\right)}{2}}\\[3mm]
+        &=\sqrt{\frac{a\cdot b+\dfrac{a^2+b^2-c^2}{2}}{2}\cdot\frac{a\cdot b-\dfrac{a^2+b^2-c^2}{2}}{2}}\\[3mm]
+        &=\sqrt{\frac{\left(a^2+2ab+b^2\right)-c^2}{4}\cdot\frac{c^2-\left(a^2-2ab+b^2\right)}{4}}\\[3mm]
+        &=\sqrt{\frac{\left(a+b\right)^2-c^2}{4}\cdot\frac{c^2-\left(a+b\right)^2}{4}}\\[3mm]
+        &=\sqrt{\frac{a+b+c}{2}\cdot\frac{a+b-c}{2}\cdot\frac{c+a-b}{2}\cdot\frac{c-a+b}{2}}\\[3mm]
+        &=\sqrt{p\cdot(p-a)\cdot(p-b)\cdot(p-c)}
+    \end{align}\\
+    三角形面积公式$09$也被称为海伦公式。
+
+\newpage
+
+\subsubsection{三角形面积公式$10$}
+    三角形面积公式$10$：
+    \begin{large}
+        \begin{align*}
+            &S_{\triangle}=\frac{1}{4}\cdot\sqrt{\left[(a+b)^2-c^2\right]\cdot\left[c^2-(a+b)^2\right]}\\[3mm]
+            &S_{\triangle}=\frac{1}{4}\cdot\sqrt{\left[(b+c)^2-a^2\right]\cdot\left[a^2-(b+c)^2\right]}\\[3mm]
+            &S_{\triangle}=\frac{1}{4}\cdot\sqrt{\left[(c+a)^2-b^2\right]\cdot\left[b^2-(c+a)^2\right]}
+        \end{align*}
+    \end{large}\\
+    对公式$08$进行变形：
+    \setcounter{equation}{0}
+    \begin{large}
+        \begin{align}
+            S_{\triangle}
+            &=\frac{1}{2}\cdot\sqrt{a^2\cdot b^2-\left(\frac{a^2+b^2-c^2}{2}\right)^2}\\[4mm]
+            &=\frac{1}{2}\cdot\sqrt{\left(a\cdot b+\frac{a^2+b^2-c^2}{2}\right)\cdot\left(a\cdot b-\frac{a^2+b^2-c^2}{2}\right)}\\[4mm]
+            &=\frac{1}{4}\cdot\sqrt{\left(a^2+b^2+2ab-c^2\right)\cdot\left(c^2-a^2-b^2+2ab\right)}\\[4mm]
+            &=\frac{1}{4}\cdot\sqrt{\left[(a+b)^2-c^2\right]\cdot\left[c^2-(a-b)^2\right]}
+        \end{align}
+    \end{large}\\
+    三角形面积公式$10$常用于解决已知三角形边长和与边长差的问题。
+
+\newpage
+
+\subsubsection{三角形面积公式$11$}
+    三角形面积公式$11$：
+    \begin{large}
+        \begin{align*}
+            S_{\triangle}=h_a~^2\cdot\frac{\sin{A}}{2\cdot\sin{B}\cdot\sin{C}}\\[3mm]
+            S_{\triangle}=h_b~^2\cdot\frac{\sin{B}}{2\cdot\sin{C}\cdot\sin{A}}\\[3mm]
+            S_{\triangle}=h_c~^2\cdot\frac{\sin{C}}{2\cdot\sin{A}\cdot\sin{B}}
+        \end{align*}
+    \end{large}\\
+    将边长用高和角的正弦表示并代入公式$02$：
+    \setcounter{equation}{0}
+    \begin{align}
+        S_{\triangle}
+        &=\frac{1}{2}\cdot b\cdot c\cdot\sin{A}\\[4mm]
+        &=\frac{1}{2}\cdot\frac{h_a}{\sin{B}}\cdot\frac{h_a}{\sin{C}}\cdot\sin{A}\\[4mm]
+        &=h_a~^2\cdot\frac{\sin{A}}{2\cdot\sin{B}\cdot\sin{C}}
+    \end{align}
+
+\subsubsection{三角形面积公式$12$}
+    三角形面积公式$12$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=\frac{a\cdot b\cdot c}{2\cdot\left(a+b+c\right)}\cdot(\sin{A}+\sin{B}+\sin{C})
+        \end{equation*}
+    \end{large}\\
+    \setcounter{equation}{0}
+    联立公式$03$和公式$05$：
+    \begin{align}
+        &\frac{1}{4R}\cdot(a\cdot b\cdot c)=r\cdot p\\[3mm]
+        &\frac{1}{4R}\cdot(a\cdot b\cdot c)=\frac{r}{2}\cdot(a+b+c)\\[3mm]
+        &2\cdot R\cdot r=\frac{a\cdot b\cdot c}{a+b+c}\\[3mm]
+        &R\cdot r=\frac{a\cdot b\cdot c}{2\cdot(a+b+c)}
+    \end{align}\\
+    代入公式$07$：
+    \begin{align}
+        S_{\triangle}
+        &=R\cdot r\cdot(\sin{A}+\sin{B}+\sin{C})\\[3mm]
+        &=\frac{a\cdot b\cdot c}{2\cdot(a+b+c)}\cdot(\sin{A}+\sin{B}+\sin{C})
+    \end{align}
+
+\newpage
+
+\subsubsection{三角形面积公式$13$}
+    三角形面积公式$13$：
+    \begin{large}
+        \begin{align*}
+            S_{\triangle}=r_a\cdot(p-a)\\[3mm]
+            S_{\triangle}=r_b\cdot(p-b)\\[3mm]
+            S_{\triangle}=r_c\cdot(p-c)
+        \end{align*}
+    \end{large}\\
+    用角平分线将三角形分为三个小三角形：
+    \setcounter{equation}{0}
+    \begin{align}
+        S_{\triangle}
+        &=S_{\triangle PBA}+S_{\triangle PBC}-S_{\triangle PAC}\\[3mm]
+        &=\frac{1}{2}\cdot c\cdot r_b+\frac{1}{2}\cdot a\cdot r_b-\frac{1}{2}\cdot b\cdot r_b\\[3mm]
+        &=\frac{1}{2}\cdot(c+a-b)\cdot r_b\\[3mm]
+        &=r_b\cdot(p-b)
+    \end{align}
+    \begin{figure}[htbp]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[left](B)
+                \tkzLabelPoints[right](C)
+                \tkzDrawSegments(A,B B,C C,A)
+            
+                \tkzDefCircle[in](A,B,C)
+                \tkzGetPoint{I}
+                \tkzLabelPoints[below left](I)
+            
+                \tkzDrawSegments(A,I);
+                \tkzDrawSegments(B,I);
+                \tkzDrawSegments(C,I);
+            
+                \tkzDefLine[orthogonal=through I](A,B)
+                \tkzGetPoint{r1}
+                \tkzInterLL(I,r1)(A,B)
+                \tkzGetPoint{R1}
+
+                \tkzDefLine[orthogonal=through I](B,C)
+                \tkzGetPoint{r2}
+                \tkzInterLL(I,r2)(B,C)
+                \tkzGetPoint{R2}
+
+                \tkzDefLine[orthogonal=through I](C,A)
+                \tkzGetPoint{r3}
+                \tkzInterLL(I,r3)(C,A)
+                \tkzGetPoint{R3}
+
+                \tkzDrawSegments[dashed](I,R1)
+                \tkzDrawSegments[dashed](I,R2)
+                \tkzDrawSegments[dashed](I,R3)
+
+                \tkzDrawCircle(I,R1)
+
+            \end{tikzpicture}
+            \caption{三角形面积公式$13$示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+\subsubsection{三角形面积公式$14$}
+    三角形面积公式$14$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=\sqrt{r\cdot r_a\cdot r_b\cdot r_c}
+        \end{equation*}
+    \end{large}\\
+    将公式$05$和公式$13$变形代入公式$09$：
+    \setcounter{equation}{0}
+    \begin{align}
+        &S_{\triangle}=\sqrt{p\cdot(p-a)\cdot(p-b)\cdot(p-c)}\\[3mm]
+        &S_{\triangle}=\sqrt{\frac{S_{\triangle}}{r}\cdot\frac{S_{\triangle}}{r_a}\cdot\frac{S_{\triangle}}{r_b}\cdot\frac{S_{\triangle}}{r_c}}\\[3mm]
+        &S_{\triangle}=\sqrt{\frac{S_{\triangle}~^4}{r\cdot r_a\cdot r_b\cdot r_c}}\\[3mm]
+        &S_{\triangle}~^2=\frac{S_{\triangle}~^4}{r\cdot r_a\cdot r_b\cdot r_c}\\[3mm]
+        &S_{\triangle}~^2=r\cdot r_a\cdot r_b\cdot r_c\\[3mm]
+        &S_{\triangle}=\sqrt{r\cdot r_a\cdot r_b\cdot r_c}
+    \end{align}\\
+
+\subsubsection{三角形面积公式$15$}
+    三角形面积公式$15$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=\frac{1}{p}\cdot r_a\cdot r_b\cdot r_c
+        \end{equation*}
+    \end{large}\\
+    将公式$05$变形代入如公式$12$：
+    \setcounter{equation}{0}
+    \begin{align}
+        &S_{\triangle}=\sqrt{r\cdot r_a\cdot r_b\cdot r_c}\\[3mm]
+        &S_{\triangle}=\sqrt{\frac{S_{\triangle}}{p}\cdot r_a\cdot r_b\cdot r_c}\\[3mm]
+        &S_{\triangle}~^2=\frac{S_{\triangle}}{p}\cdot r_a\cdot r_b\cdot r_c\\[3mm]
+        &S_{\triangle}=\frac{1}{p}\cdot r_a\cdot r_b\cdot r_c
+    \end{align}
+
+\newpage
+
+\subsection{三角形的相关圆半径}
+    本章将研究三角形中，外接圆半径，内切圆半径，旁切圆半径，三者间的数量关系。
+
+\subsubsection{第一组关系}
+    第一组关系：
+    \begin{large}
+        \begin{equation*}
+            \frac{1}{r}=\frac{1}{r_a}+\frac{1}{r_b}+\frac{1}{r_c}
+        \end{equation*}
+    \end{large}\\
+    由公式$05$可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \frac{1}{r}=\frac{p}{S_{\triangle}}
+    \end{align}\\
+    由公式$11$可得：
+    \begin{align}
+        \frac{1}{r_a}=\frac{p-a}{S_{\triangle}}\\[3mm]
+        \frac{1}{r_b}=\frac{p-b}{S_{\triangle}}\\[3mm]
+        \frac{1}{r_c}=\frac{p-c}{S_{\triangle}}
+    \end{align}\\
+    我们可以进行以下推导：
+    \begin{align}
+        \frac{1}{r}
+        &=\frac{p}{S_{\triangle}}\\[3mm]
+        &=\frac{3p-(a+b+c)}{S_{\triangle}}\\[3mm]
+        &=\frac{(p-a)+(p-b)+(p-c)}{S_{\triangle}}\\[3mm]
+        &=\frac{p-a}{S_{\triangle}}+\frac{p-b}{S_{\triangle}}+\frac{p-c}{S_{\triangle}}\\[3mm]
+        &=\frac{1}{r_a}+\frac{1}{r_b}+\frac{1}{r_c}
+    \end{align}
 
 \end{document}
