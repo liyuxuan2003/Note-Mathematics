@@ -124,18 +124,18 @@
     三角形面积公式$01$：
     \begin{large}
         \begin{align*}
-            S_{\triangle}=\frac{1}{2}\cdot a\cdot h_a\\[3mm]
-            S_{\triangle}=\frac{1}{2}\cdot b\cdot h_b\\[3mm]
+            S_{\triangle}=\frac{1}{2}\cdot a\cdot h_a\\[2mm]
+            S_{\triangle}=\frac{1}{2}\cdot b\cdot h_b\\[2mm]
             S_{\triangle}=\frac{1}{2}\cdot b\cdot h_b
         \end{align*}
-    \end{large}
+    \end{large}\vspace{-20pt}
 
 \subsubsection{三角形面积公式$02$}
     三角形面积公式$02$：
     \begin{large}
         \begin{align*}
-            S_{\triangle}=\frac{1}{2}\cdot a\cdot b\cdot\sin{C}\\[3mm]
-            S_{\triangle}=\frac{1}{2}\cdot b\cdot c\cdot\sin{A}\\[3mm]
+            S_{\triangle}=\frac{1}{2}\cdot a\cdot b\cdot\sin{C}\\[2mm]
+            S_{\triangle}=\frac{1}{2}\cdot b\cdot c\cdot\sin{A}\\[2mm]
             S_{\triangle}=\frac{1}{2}\cdot c\cdot a\cdot\sin{B}
         \end{align*}
     \end{large}\\
@@ -146,7 +146,7 @@
         &=\frac{1}{2}\cdot a\cdot h_a\\[3mm]
         &=\frac{1}{2}\cdot a\cdot (b\cdot \sin{C})
     \end{align}
-    \begin{figure}[h]
+    \begin{figure}[h!]
         \begin{center}
             \begin{tikzpicture}
                 \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
@@ -192,7 +192,7 @@
             \end{tikzpicture}
             \caption{三角形面积公式$02$示意图}
         \end{center}
-    \end{figure}\\
+    \end{figure}
 
 \newpage
 
@@ -473,45 +473,57 @@
     \begin{figure}[htbp]
         \begin{center}
             \begin{tikzpicture}
-                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzInit[xmin=-0.5,xmax=8,ymin=-0.5,ymax=5]
                 \tkzClip
                 \tkzDefPoint(4,3){A}
                 \tkzDefPoint(0,0){B}
-                \tkzDefPoint(5,0){C}
+                \tkzDefPoint(3.5,0){C}
                 \tkzLabelPoints[above](A)
-                \tkzLabelPoints[left](B)
-                \tkzLabelPoints[right](C)
+                \tkzLabelPoints[below](B)
+                \tkzLabelPoints[below](C)
                 \tkzDrawSegments(A,B B,C C,A)
-            
-                \tkzDefCircle[in](A,B,C)
-                \tkzGetPoint{I}
-                \tkzLabelPoints[below left](I)
-            
-                \tkzDrawSegments(A,I);
-                \tkzDrawSegments(B,I);
-                \tkzDrawSegments(C,I);
-            
-                \tkzDefLine[orthogonal=through I](A,B)
-                \tkzGetPoint{r1}
-                \tkzInterLL(I,r1)(A,B)
-                \tkzGetPoint{R1}
 
-                \tkzDefLine[orthogonal=through I](B,C)
-                \tkzGetPoint{r2}
-                \tkzInterLL(I,r2)(B,C)
-                \tkzGetPoint{R2}
+                \tkzDefBarycentricPoint(B=-1,A=3)
+                \tkzGetPoint{D}
+                \tkzDrawSegments(A,D)
 
-                \tkzDefLine[orthogonal=through I](C,A)
-                \tkzGetPoint{r3}
-                \tkzInterLL(I,r3)(C,A)
-                \tkzGetPoint{R3}
+                \tkzDefBarycentricPoint(B=-1,C=1.8)
+                \tkzGetPoint{E}
+                \tkzDrawSegments(C,E)
 
-                \tkzDrawSegments[dashed](I,R1)
-                \tkzDrawSegments[dashed](I,R2)
-                \tkzDrawSegments[dashed](I,R3)
+                \tkzDefLine[bisector](D,A,C)
+                \tkzGetPoint{b1}
+                \tkzDefLine[bisector](E,C,A)
+                \tkzGetPoint{b2}
 
-                \tkzDrawCircle(I,R1)
+                \tkzInterLL(A,b1)(C,b2)
+                \tkzGetPoint{P}
 
+                \tkzDefLine[orthogonal=through P](A,D)
+                \tkzGetPoint{h1}
+
+                \tkzDefLine[orthogonal=through P](C,E)
+                \tkzGetPoint{h2}
+
+                \tkzDefLine[orthogonal=through P](A,C)
+                \tkzGetPoint{h3}
+
+                \tkzInterLL(P,h1)(A,D)
+                \tkzGetPoint{H1}
+
+                \tkzInterLL(P,h2)(C,E)
+                \tkzGetPoint{H2}
+
+                \tkzInterLL(P,h3)(A,C)
+                \tkzGetPoint{H3}
+
+                \tkzDrawCircle(P,H1)
+
+                \tkzDrawSegments[dashed](P,H1)
+                \tkzDrawSegments[dashed](P,H2)
+                \tkzDrawSegments[dashed](P,H3)
+                
+                \tkzLabelPoints[right](P)
             \end{tikzpicture}
             \caption{三角形面积公式$13$示意图}
         \end{center}
