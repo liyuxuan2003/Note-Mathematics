@@ -598,4 +598,40 @@
         &=\frac{1}{r_a}+\frac{1}{r_b}+\frac{1}{r_c}
     \end{align}
 
+\newpage
+
+\subsubsection{第二组关系}
+    第二组关系：
+    \begin{large}
+        \begin{equation*}
+            r_a+r_b+r_c-r=4R
+        \end{equation*}
+    \end{large}\\
+    我们可以进行以下推导：
+    \setcounter{equation}{0}
+    \begin{align}
+        r_a+r_b+r_c-r
+        &=\frac{S_{\triangle}}{p-a}+\frac{S_{\triangle}}{p-b}+\frac{S_{\triangle}}{p-c}-\frac{S_{\triangle}}{p}\\[3mm]
+        &=\frac{S_{\triangle}\cdot p-S_{\triangle}\cdot(p-a)}{p\cdot(p-a)}+\frac{S_{\triangle}\cdot (p-b)-S_{\triangle}\cdot(p-c)}{(p-b)\cdot(p-c)}\\[3mm]
+        &=\frac{S_{\triangle}\cdot p-S_{\triangle}\cdot p+S_{\triangle}\cdot a}{p\cdot(p-a)}+\frac{S_{\triangle}\cdot p-S_{\triangle}\cdot b+S_{\triangle}\cdot p-S_{\triangle}\cdot c}{(p-b)\cdot(p-c)}\\[3mm]
+        &=\frac{S_{\triangle}\cdot p-S_{\triangle}\cdot p+S_{\triangle}\cdot a}{p\cdot(p-a)}+\frac{S_{\triangle}\cdot (a+b+c)-S_{\triangle}\cdot (b-c)}{(p-b)\cdot(p-c)}\\[3mm]
+        &=\frac{S_{\triangle}\cdot a}{p\cdot(p-a)}+\frac{S_{\triangle}\cdot a}{(p-b)\cdot(p-c)}\\[3mm]
+        &=\frac{S_{\triangle}\cdot a\cdot\left[p\cdot(p-a)+(p-b)\cdot(p-c)\right]}{p\cdot(p-a)\cdot(p-b)\cdot(p-c)}
+    \end{align}\\
+    代入公式09可得：
+    \begin{align}
+        r_a+r_b+r_c-r
+        &=\frac{S_{\triangle}\cdot a\cdot\left[p\cdot(p-a)+(p-b)\cdot(p-c)\right]}{S_{\triangle}~^2}\\[3mm]
+        &=\frac{a\cdot[p\cdot(p-a)+(p-b)\cdot(p-c)]}{S_{\triangle}}\\[3mm]
+        &=\frac{a\cdot[p^2-ap+p^2-cp-bp+bc]}{S_{\triangle}}\\[3mm]
+        &=\frac{a\cdot[2p^2-p\cdot(a+b+c)+bc]}{S_{\triangle}}\\[3mm]
+        &=\frac{a\cdot[2p^2-2p^2+bc]}{S_{\triangle}}\\[3mm]
+        &=\frac{a\cdot b\cdot c}{S_{\triangle}}
+    \end{align}\\
+    代入公式$03$可得：
+    \begin{align}
+        r_a+r_b+r_c-r=4R
+    \end{align}
+    
+
 \end{document}
