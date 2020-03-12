@@ -1,0 +1,328 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{ctexart}
+
+\RequirePackage{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathpazo}
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+\RequirePackage{tkz-euclide}
+
+\usetkzobj{all}
+
+\RequirePackage{subfigure}
+
+\setmainfont{Times New Roman}
+
+\setCJKmainfont{等线}
+\setCJKsansfont{等线}
+\setCJKmonofont{等线}
+
+\let\nvec\vec
+\def\vec#1{\nvec{\vphantom b\smash{#1}}}
+
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\arccot}{\operatorname{arccot}}
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\usepackage{geometry}
+\geometry
+{
+    left=1.25in,
+    right=1.25in,
+    top=1in,
+    bottom=1in
+}
+
+\title{数学扩展研究\Rmnum{2}~~-~~四面体}
+\author{李宇轩}
+\date{2020.03.12}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\setlength{\parindent}{0pt}
+
+\section{四面体}
+
+\subsection{四面体的符号约定}
+    我们首先进行符号约定，若没有特殊说明，这些符号将在后文表达相同的含义。\\[3mm]
+    我们依照下方表格的规定进行符号约定：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                符号~~~~~~~~&含义~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\ \hline
+                $\alpha$&线线角（直线$OB$和直线$OC$所成角）\\ \hline
+                $\beta$&线线角（直线$OC$和直线$OA$所成角）\\ \hline
+                $\gamma$&线线角（直线$OA$和直线$OB$所成角）\\ \hline
+                $\theta_{a}$&线面角（直线$OA$和平面$ABC$所成角）\\ \hline
+                $\theta_{b}$&线面角（直线$OB$和平面$ABC$所成角）\\ \hline
+                $\theta_{c}$&线面角（直线$OC$和平面$ABC$所成角）\\ \hline
+                $A$&面面角（平面$OAC$和平面$OAB$所成角）\\ \hline
+                $B$&面面角（平面$OBA$和平面$OBC$所成角）\\ \hline
+                $C$&面面角（平面$OCB$和平面$OCA$所成角）\\ \hline
+            \end{tabular}
+            \caption{四面体的符号约定}
+        \end{center}
+    \end{table}\\
+    我们将下方图片所示的四面体作为参考：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=8.5,ymin=-1.5,ymax=4.5]
+                \tkzClip
+                \tkzDefPoint(5,-1){A}
+                \tkzDefPoint(8,0.5){B}
+                \tkzDefPoint(0,0){C}
+                \tkzDefPoint(4,4){O}
+
+                \tkzLabelPoints[below](A)
+                \tkzLabelPoints[right](B)
+                \tkzLabelPoints[left](C)
+                \tkzLabelPoints[above](O)
+
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments[dashed](B,C)
+                \tkzDrawSegments(C,A)
+                \tkzDrawSegments(O,A)
+                \tkzDrawSegments(O,B)
+                \tkzDrawSegments(O,C)
+                
+            \end{tikzpicture}
+            \caption{四面体的示意图}
+        \end{center}
+    \end{figure}\\
+
+\newpage
+
+\subsection{四面体的空间角公式}
+    本章将研究四面体中，线线角，线面角，面面角，三者间的数量关系。
+
+\subsubsection{四面体空间角基本公式}
+    四面体空间角基本公式（线线角形式）：
+    \begin{large}
+        \begin{align*}
+            \cos{\alpha}&=\cos{\beta}\cdot\cos{\gamma}+\sin{\beta}\cdot\sin{\gamma}\cdot\cos{A}\\[3mm]
+            \cos{\beta}&=\cos{\gamma}\cdot\cos{\alpha}+\sin{\gamma}\cdot\sin{\alpha}\cdot\cos{B}\\[3mm]
+            \cos{\gamma}&=\cos{\alpha}\cdot\cos{\beta}+\sin{\alpha}\cdot\sin{\beta}\cdot\cos{C}
+        \end{align*}
+    \end{large}\\
+    四面体空间角基本公式（面面角形式）：
+    \begin{large}
+        \begin{align*}
+            \cos{A}&=\frac{cos{\alpha}-\cos{\beta}\cdot\cos{\gamma}}{\sin{\beta}\cdot\sin{\gamma}}\\[3mm]
+            \cos{B}&=\frac{cos{\beta}-\cos{\gamma}\cdot\cos{\alpha}}{\sin{\gamma}\cdot\sin{\alpha}}\\[3mm]
+            \cos{C}&=\frac{cos{\gamma}-\cos{\alpha}\cdot\cos{\beta}}{\sin{\alpha}\cdot\sin{\beta}}
+        \end{align*}
+    \end{large}\\
+    在四面体$O-ABC$中，在$OA$上任取一点$D$。\\[2mm]
+    在四面体$O-ABC$中，取$OB$上一点$E$使得$ED\perp OA$。\\[2mm]
+    在四面体$O-ABC$中，取$OC$上一点$F$使得$FD\perp OA$。\\[4mm]
+    四面体$O-ABC$及其辅助线如下图所示：\vspace{-5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=6.9,ymin=-1.5,ymax=3.7]
+                \tkzClip
+                \tkzDefPoint(4,-0.8){A}
+                \tkzDefPoint(6.4,0.4){B}
+                \tkzDefPoint(0,0){C}
+                \tkzDefPoint(3.2,3.2){O}
+
+                \tkzLabelPoints[below](A)
+                \tkzLabelPoints[right](B)
+                \tkzLabelPoints[left](C)
+                \tkzLabelPoints[above](O)
+
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments[dashed](B,C)
+                \tkzDrawSegments(C,A)
+                \tkzDrawSegments(O,A)
+                \tkzDrawSegments(O,B)
+                \tkzDrawSegments(O,C)
+
+                \tkzDefBarycentricPoint(O=7,A=3)
+                \tkzGetPoint{D}
+
+                \tkzDefBarycentricPoint(O=4,B=6)
+                \tkzGetPoint{E}
+
+                \tkzDefBarycentricPoint(O=3,C=7)
+                \tkzGetPoint{F}
+
+                \tkzDrawSegments(D,E)
+                \tkzDrawSegments(D,F)
+                \tkzDrawSegments[dashed](E,F)
+
+                \tkzLabelPoints[above right](D)
+                \tkzLabelPoints[above right](E)
+                \tkzLabelPoints[above left](F)
+
+                \tkzDefBarycentricPoint(O=9,A=1)
+                \tkzGetPoint{M}
+
+                \tkzDefBarycentricPoint(O=15,C=1)
+                \tkzGetPoint{N}
+
+                \tkzDrawArc[color=black](O,M)(E)
+                \tkzDrawArc[color=black](O,N)(D)
+
+                \tkzDefShiftPoint[O](-150:0.45){b}
+                \tkzLabelPoint(b){$\beta$}
+
+                \tkzDefShiftPoint[O](-80:0.3){g}
+                \tkzLabelPoint(g){$\gamma$}
+            \end{tikzpicture}
+            \caption{四面体空间角基本公式的示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+    在$\triangle DEF$中根据余弦定理可得：
+    \begin{align}
+        EF^2=DE^2+DF^2-2\cdot DE\cdot DF\cdot\cos{A}
+    \end{align}\\
+    在$\triangle OEF$中根据余弦定理可得：
+    \begin{align}
+        EF^2=OE^2+OF^2-2\cdot OE\cdot OF\cdot\cos{\alpha}
+    \end{align}\\
+    在$\triangle ODE$中角$ODE$是直角，根据勾股定理可得：
+    \begin{align}
+        OE^2=OD^2+DE^2
+    \end{align}\\
+    在$\triangle ODE$中角$ODF$是直角，根据勾股定理可得：
+    \begin{align}
+        OF^2=OD^2+DF^2
+    \end{align}\\
+    将式(3)式(4)代入式(2)中，消去$OE^2$和$OF^2$：
+    \begin{align}
+        &EF^2=DE^2+DF^2-2\cdot OE\cdot OF\cdot\cos{\alpha}\\[3mm]
+        &EF^2=(OD^2+DE^2)+(OD^2+DF^2)-2\cdot OE\cdot OF\cdot\cos{\alpha}\\[3mm]
+        &EF^2=2OD^2+DE^2+DF^2-2\cdot OE\cdot OF\cdot\cos{\alpha}
+    \end{align}\\
+    将式(7)和式(1)相减，整理可得：\vspace{3pt}
+    \begin{align}
+        &\left(2OD^2+DE^2+DF^2-2\cdot OE\cdot OF\cdot\cos{\alpha}\right)-\left(DE^2+DF^2-2\cdot DE\cdot DF\cdot\cos{A}\right)=0\\[3mm]
+        &\left(2OD^2+DE^2+DF^2-DE^2-DF^2\right)-\left(2\cdot OE\cdot OF\cdot\cos{\alpha}-2\cdot DE\cdot DF\cdot\cos{A}\right)=0\\[3mm]
+        &~2\cdot OD^2-2\cdot OE\cdot OF\cdot\cos{\alpha}+2\cdot DE\cdot DF\cdot\cos{A}=0\\[3mm]
+        &~2\cdot OE\cdot OF\cdot\cos{\alpha}=2OD^2+2\cdot DE\cdot DF\cdot\cos{A}\\[3mm]
+        &~OE\cdot OF\cdot\cos{\alpha}=OD^2+DE\cdot DF\cdot\cos{A}
+    \end{align}\\
+    接下来将通过变形得到$\cos{\alpha}$和$\cos{A}$两者间的关系。
+
+\newpage
+
+    通过变形可以得到：
+    \begin{align}
+        &\cos{\alpha}=\frac{OD^2}{OE\cdot OF}+\frac{DE\cdot DF}{OE\cdot OF}\cdot\cos{A}\\[3mm]
+        &\cos{\alpha}=\frac{OD}{OE}\cdot\frac{OD}{OD}+\frac{DE}{OE}\cdot\frac{DF}{OF}\cdot\cos{A}
+    \end{align}\\
+    根据直角三角形$\triangle ODF$可以得到：
+    \begin{align}
+        &\cos{\beta}=\frac{OD}{OF}~~~~~~~~\sin{\beta}=\frac{DF}{OF}
+    \end{align}\\
+    根据直角三角形$\triangle ODE$可以得到：
+    \begin{align}
+        &\cos{\gamma}=\frac{OD}{OE}~~~~~~~~\sin{\gamma}=\frac{DE}{OE}
+    \end{align}\\
+    将四组三角比代入可得：
+    \begin{align}
+        \cos{\alpha}=\cos{\gamma}\cdot\cos{\beta}+\sin{\gamma}\cdot\sin{\beta}\cdot\cos{A}
+    \end{align}
+
+\newpage
+
+\subsubsection{四面体空间角导出公式}
+    四面体空间角导出公式：
+    \begin{large}
+        \begin{align*}
+            &\sin{A}\cdot\sin{\beta}\cdot\sin{\gamma}=k\\[3mm]
+            &\sin{B}\cdot\sin{\gamma}\cdot\sin{\alpha}=k\\[3mm]
+            &\sin{C}\cdot\sin{\alpha}\cdot\sin{\beta}=k
+        \end{align*}
+    \end{large}\\
+    其中代换变量$k$的取值为：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            k=\sqrt{1-\cos^2{\alpha}-\cos^2{\beta}-\cos^2{\gamma}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}
+        \end{equation*}
+    \end{large}\\[3mm]
+    代入四面体空间角基本公式可得：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        \sin{A}
+        &=\sqrt{1-\cos{A}^2}\\[3mm]
+        &=\sqrt{1-\left(\frac{\cos{\alpha}-\cos{\beta}\cdot\cos{\gamma}}{\sin{\beta}\cdot\sin{\gamma}}\right)^2}\\[3mm]
+        &=\sqrt{1-\frac{\left(\cos{\alpha}-\cos{\beta}\cdot\cos{\gamma}\right)^2}{\sin^2{\beta}\cdot\sin^2{\gamma}}}\\[3mm]
+        &=\sqrt{1-\frac{\cos^2{\alpha}+\cos^2{\beta}\cdot\cos^2{\gamma}-2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}{\sin^2{\beta}\cdot\sin^2{\gamma}}}\\[3mm]
+        &=\sqrt{\frac{\sin^2{\beta}\cdot\sin^2{\gamma}-\cos^2{\beta}\cdot\cos^2{\gamma}-\cos^2{\alpha}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}{\sin^2{\beta}\cdot\sin^2{\gamma}}}
+    \end{align}\\
+    进一步代换可以得到：\vspace{5pt}
+    \begin{align}
+        \sin{A}
+        &=\frac{\sqrt{\left(1-\cos^2{\beta}\right)\cdot\left(1-\cos^2{\gamma}\right)-\cos^2{\beta}\cdot\cos^2{\gamma}-\cos^2{\alpha}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}}{\sin{\beta}\cdot\sin{\gamma}}\\[3mm]
+        &=\frac{\sqrt{1-\cos^2{\beta}-\cos^2{\gamma}-\cos^2{\alpha}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}}{\sin{\beta}\cdot\sin{\gamma}}\\[3mm]
+        &=\frac{\sqrt{1-\cos^2{\alpha}-\cos^2{\beta}-\cos^2{\gamma}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}}{\sin{\beta}\cdot\sin{\gamma}}
+    \end{align}\\
+
+\newpage
+
+    定义代换变量$k$：
+    \begin{align}
+        k=\sqrt{1-\cos^2{\alpha}-\cos^2{\beta}-\cos^2{\gamma}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}
+    \end{align}\\
+    代入代换变量$k$：
+    \begin{align}
+        &\sin{A}=\frac{k}{\sin{\beta}\cdot\sin{\gamma}}\\[3mm]
+        &\sin{A}\cdot\sin{\beta}\cdot\sin{\gamma}=k
+    \end{align}\vspace{5pt}
+
+\subsubsection{四面体空间角比例公式}
+    四面体空间角比例公式：
+    \begin{large}
+        \begin{equation*}
+            \frac{\sin{A}}{\sin{\alpha}}=\frac{\sin{B}}{\sin{\beta}}=\frac{\sin{C}}{\sin{\gamma}}=\frac{k}{\sin{\alpha}\cdot\sin{\beta}\cdot\sin{\gamma}}
+        \end{equation*}
+    \end{large}\\
+    其中代换变量$k$的取值为：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            k=\sqrt{1-\cos^2{\alpha}-\cos^2{\beta}-\cos^2{\gamma}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}
+        \end{equation*}
+    \end{large}\\
+    在四面体空间角导出公式两边同除可得：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\sin{A}\cdot\sin{\beta}\cdot\sin{\gamma}=k\\[3mm]
+        &\frac{\sin{A}}{\sin{\alpha}}=\frac{k}{\sin{\alpha}\cdot\sin{\beta}\cdot\sin{\gamma}}\\[8mm]
+        &\sin{B}\cdot\sin{\gamma}\cdot\sin{\alpha}=k\\[3mm]
+        &\frac{\sin{B}}{\sin{\beta}}=\frac{k}{\sin{\alpha}\cdot\sin{\beta}\cdot\sin{\gamma}}\\[8mm]
+        &\sin{C}\cdot\sin{\alpha}\cdot\sin{\beta}=k\\[3mm]
+        &\frac{\sin{C}}{\sin{\gamma}}=\frac{k}{\sin{\alpha}\cdot\sin{\beta}\cdot\sin{\gamma}}
+    \end{align}
+    
+
+    
+
+
+\end{document}
