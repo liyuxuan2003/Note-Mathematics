@@ -4,3 +4,5 @@
 \contentsline {subsubsection}{\numberline {1.2.1}四面体空间角基本公式}{4}% 
 \contentsline {subsubsection}{\numberline {1.2.2}四面体空间角导出公式}{7}% 
 \contentsline {subsubsection}{\numberline {1.2.3}四面体空间角比例公式}{8}% 
+\contentsline {subsubsection}{\numberline {1.2.4}四面体空间角正弦三元素公式}{9}% 
+\contentsline {subsubsection}{\numberline {1.2.5}四面体空间角正弦乘积公式}{11}% 

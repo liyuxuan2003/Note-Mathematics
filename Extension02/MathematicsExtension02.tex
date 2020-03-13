@@ -74,9 +74,9 @@
                 $\alpha$&线线角（直线$OB$和直线$OC$所成角）\\ \hline
                 $\beta$&线线角（直线$OC$和直线$OA$所成角）\\ \hline
                 $\gamma$&线线角（直线$OA$和直线$OB$所成角）\\ \hline
-                $\theta_{a}$&线面角（直线$OA$和平面$ABC$所成角）\\ \hline
-                $\theta_{b}$&线面角（直线$OB$和平面$ABC$所成角）\\ \hline
-                $\theta_{c}$&线面角（直线$OC$和平面$ABC$所成角）\\ \hline
+                $\theta_{a}$&线面角（直线$OA$和平面$OBC$所成角）\\ \hline
+                $\theta_{b}$&线面角（直线$OB$和平面$OCA$所成角）\\ \hline
+                $\theta_{c}$&线面角（直线$OC$和平面$OAB$所成角）\\ \hline
                 $A$&面面角（平面$OAC$和平面$OAB$所成角）\\ \hline
                 $B$&面面角（平面$OBA$和平面$OBC$所成角）\\ \hline
                 $C$&面面角（平面$OCB$和平面$OCA$所成角）\\ \hline
@@ -320,9 +320,123 @@
         &\sin{C}\cdot\sin{\alpha}\cdot\sin{\beta}=k\\[3mm]
         &\frac{\sin{C}}{\sin{\gamma}}=\frac{k}{\sin{\alpha}\cdot\sin{\beta}\cdot\sin{\gamma}}
     \end{align}
-    
 
-    
+\newpage
+
+\subsubsection{四面体空间角正弦三元素公式}
+    四面体空间角正弦三元素公式：
+    \begin{large}
+        \begin{align*}
+            &\sin{\theta_a}=\sin{B}\cdot\sin{\gamma}~~~~~~~~\sin{\theta_a}=\sin{C}\cdot\sin{\beta}\\[3mm]
+            &\sin{\theta_b}=\sin{C}\cdot\sin{\alpha}~~~~~~~~\sin{\theta_b}=\sin{A}\cdot\sin{\gamma}\\[3mm]
+            &\sin{\theta_c}=\sin{A}\cdot\sin{\beta}~~~~~~~~\sin{\theta_c}=\sin{B}\cdot\sin{\alpha}
+        \end{align*}
+    \end{large}\\
+    在四面体$O-ABC$中，过$A$作直线$AP$垂直于平面$OBC$。\\[3mm]
+    在四面体$O-ABC$中，过$P$作直线$PH$垂直于直线$OC$。\\[3mm]
+    在四面体$O-ABC$中，联结$AH$，因为直线$OC$垂直于射影$PH$，所以直线$OC$垂直于斜线$AH$。\\[5mm]
+    四面体$O-ABC$及其辅助线如下图所示：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=6.9,ymin=-1.5,ymax=3.7]
+                \tkzClip
+                \tkzDefPoint(4,-0.8){C}
+                \tkzDefPoint(6.4,0.4){B}
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(3.2,3.2){A}
+
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[right](B)
+                \tkzLabelPoints[below](C)
+                \tkzLabelPoints[left](O)
+
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments(B,C)
+                \tkzDrawSegments(C,A)
+                \tkzDrawSegments(O,A)
+                \tkzDrawSegments[dashed](O,B)
+                \tkzDrawSegments(O,C)
+
+                \tkzDefPoint(3.2,-0.2){P}
+                \tkzLabelPoints[right](P)
+
+                \tkzDrawSegments[dashed](A,P)
+                \tkzDrawSegments[dashed](O,P)
+
+                \tkzDefBarycentricPoint(O=3,C=7)
+                \tkzGetPoint{H}
+                \tkzLabelPoints[below left](H)
+
+                \tkzDrawSegments[dashed](P,H)
+                \tkzDrawSegments(A,H)
+            \end{tikzpicture}
+            \caption{四面体空间角正弦三元素公式的示意图}
+        \end{center}
+    \end{figure}\\
+    由此可见四面体中出现了三组重要的垂直关系：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &AP\perp PO&\angle APO=90^\circ\\[3mm]
+        &AP\perp PH&\angle APH=90^\circ\\[3mm]
+        &AH\perp OH&\angle AHO=90^\circ
+    \end{align}\\
+    接下来将通过三个直角三角形，对空间角的三元素之间的关系进行推导。
+
+\newpage
+
+    在直角三角形$\triangle APO$中角$\angle AOP=\theta_a$，因此存在以下关系：\vspace{5pt}
+    \begin{equation}
+        \sin{\theta_a}=\frac{AP}{AO}
+    \end{equation}\\
+    在直角三角形$\triangle AHO$中角$\angle AOH=\beta$，因此存在以下关系：\vspace{5pt}
+    \begin{equation}
+        \sin{\beta}=\frac{AH}{AO}
+    \end{equation}\\
+    在直角三角形$\triangle APH$中角$\angle AHP=C$，因此存在以下关系：\vspace{5pt}
+    \begin{equation}
+        \sin{C}=\frac{AP}{AH}
+    \end{equation}\\
+    根据以下关系：
+    \begin{align}
+        \frac{AP}{AO}=\frac{AH}{AO}\cdot\frac{AP}{AH}
+    \end{align}\\
+    代入上述结论可以得到：
+    \begin{align}
+        \sin{\theta_a}=\sin{\beta}\cdot\sin{C}
+    \end{align}\\
+    根据比例公式可以得到：
+    \begin{align}
+        \sin{\theta_a}=\sin{\gamma}\cdot\sin{B}
+    \end{align}
+
+\newpage
+
+\subsubsection{四面体空间角正弦乘积公式}
+    四面体空间角正弦乘积公式：
+    \begin{large}
+        \begin{align*}
+            \sin{\theta_a}\cdot\sin{\alpha}=k\\[3mm]
+            \sin{\theta_b}\cdot\sin{\beta}=k\\[3mm]
+            \sin{\theta_c}\cdot\sin{\gamma}=k
+        \end{align*}
+    \end{large}\\
+    其中代换变量$k$的取值为：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            k=\sqrt{1-\cos^2{\alpha}-\cos^2{\beta}-\cos^2{\gamma}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}
+        \end{equation*}
+    \end{large}\\[3mm]
+    在四面体空间角正弦三元素公式中使用导出公式消去二面角：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\sin{\theta_a}=\sin{B}\cdot\sin{\gamma}\\[3mm]
+        &\sin{\theta_a}=\frac{k}{\sin{\gamma}\cdot\sin{\alpha}}\cdot\sin{\gamma}\\[3mm]
+        &\sin{\theta_a}=\frac{k}{\sin{\alpha}}\\[3mm]
+        &\sin{\theta_a}\cdot\sin{\alpha}=k
+    \end{align}
+
+
 
 
 \end{document}
