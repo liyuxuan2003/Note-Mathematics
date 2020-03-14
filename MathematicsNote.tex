@@ -15,7 +15,7 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{intersections}
 \usetikzlibrary{angles}
-\usetkzobj{angles}
+\usetkzobj{all}
 
 \RequirePackage{subfigure}
 
@@ -7187,6 +7187,148 @@
                 \node at(-3.3,0) {$O$};
             \end{tikzpicture}
             \caption{面面垂直性质定理的示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+\subsection{点到平面的距离}
+    求解点$P$到平面$\alpha$的距离$h$。\\[5mm]
+    过点$P$作直线$PH$垂直于平面$\alpha$，其垂足为点$H$。\\[3mm]
+    在平面$\alpha$上任取一点$Q$，连接$QH$，连接$PQ$，显然$PH\perp QH$。\\[6mm]
+    我们可以将距离用向量$\overrightarrow{PQ}$的模和角$\theta$的正弦表示：
+    \setcounter{equation}{0}
+    \begin{align}
+        h=|\overrightarrow{PQ}|\cdot\sin{\theta}
+    \end{align}\\
+    我们可以将角$\theta$的正弦用直线的方向向量$\overrightarrow{PQ}$和平面的法向量$\vec{n}$表示：\vspace{3pt}
+    \begin{align}
+        h
+        &=|\overrightarrow{PQ}|\cdot\frac{|\overrightarrow{PQ}\cdot\vec{n}|}{~|\overrightarrow{PQ}|\cdot|\vec{n}|~}\\[3mm]
+        &=\frac{|\overrightarrow{PQ}\cdot\vec{n}|}{|\vec{n}|}
+    \end{align}\\
+    点到平面的距离公式：
+    \begin{large}
+        \begin{equation*}
+            h=\frac{|\overrightarrow{PQ}\cdot\vec{n}|}{|\vec{n}|}
+        \end{equation*}
+    \end{large}\\
+    其中，点$P$代表平面$\alpha$外一点，点$Q$代表平面$\alpha$上任意一点。\\
+    \begin{figure}[htbp]
+        \begin{center}
+            \qquad\quad
+            \begin{tikzpicture}
+                \tkzDefPoint(4,1){a}
+                \tkzDefPoint(2,-1){b}
+                \tkzDefPoint(-4,-1){c}
+                \tkzDefPoint(-2,1){d}
+                \tkzDrawSegments(a,b)
+                \tkzDrawSegments(b,c)
+                \tkzDrawSegments(c,d)
+                \tkzDrawSegments(d,a)
+
+                \tkzDefPoint(1,4){P}
+                \tkzDefPoint(1,0){H}
+                \tkzDefPoint(-1,0){Q}
+                \tkzDrawSegments(P,H)
+                \tkzDrawSegments(H,Q)
+                \tkzDrawSegments(Q,P)
+
+                \tkzLabelPoints[right](P)
+                \tkzLabelPoints[right](H)
+                \tkzLabelPoints[left](Q)
+
+                \tkzDefPoint(2,0){n1}
+                \tkzDefPoint(2,2){n2}
+
+                \tkzDrawSegments[->](n1,n2)
+                \tkzLabelPoint[right](n2){$\vec{n}$}
+
+                \tkzDefPoint(3.4,1.05){alpha}
+                \tkzLabelPoint(alpha){$\alpha$}
+
+                \tkzDefBarycentricPoint(Q=6,H=1)
+                \tkzGetPoint{t}
+                \tkzDrawArc[color=black](Q,t)(P)
+                \tkzDefShiftPoint[Q](0.3,0.6){tl}
+                \tkzLabelPoint(tl){$\theta$}
+            \end{tikzpicture}
+            \caption{点到平面的距离示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+\subsection{异面直线的距离}
+    求解异面直线$a$和$b$间的距离$h$。\\[5mm]
+    在直线$a$上任取点$A$，在直线$b$上任取点$B$，过点$B$作直线$BH$垂直于平面$\alpha$。\\[3mm]
+    显然线段$BH$的长度就是所求距离$h$，运用点到平面的距离公式：
+    \setcounter{equation}{0}
+    \begin{align}
+        h
+        &=BH\\[3mm]
+        &=\frac{|\overrightarrow{AB}\cdot\vec{n}|}{|\vec{n}|}
+    \end{align}\\
+    异面直线的距离：
+    \begin{large}
+        \begin{equation*}
+            h=\frac{|\overrightarrow{AB}\cdot\vec{n}|}{|\vec{n}|}
+        \end{equation*}
+    \end{large}\\
+    \begin{figure}[htbp]
+        \begin{center}
+            \qquad\quad
+            \begin{tikzpicture}
+                \tkzDefPoint(4,1){a}
+                \tkzDefPoint(2,-1){b}
+                \tkzDefPoint(-4,-1){c}
+                \tkzDefPoint(-2,1){d}
+                \tkzDrawSegments(a,b)
+                \tkzDrawSegments(b,c)
+                \tkzDrawSegments(c,d)
+                \tkzDrawSegments(d,a)
+
+                \tkzDefBarycentricPoint(a=2,c=8)
+                \tkzGetPoint{al1}
+                \tkzDefBarycentricPoint(a=8,c=2)
+                \tkzGetPoint{al2}
+                \tkzDrawSegments(al1,al2)
+
+                \tkzDefPoint(-1,3){bl1}
+                \tkzDefPoint(3,3){bl2}
+                \tkzDrawSegments(bl1,bl2)
+
+                \tkzDefPoint(-2,0){bj1}
+                \tkzDefPoint(2,0){bj2}
+                \tkzDrawSegments(bj1,bj2)
+
+                \tkzLabelPoint[right](bj2){$b^{'}$}
+                \tkzLabelPoint[right](bl2){$b$}
+                \tkzLabelPoint[right](al2){$a$}
+
+                \tkzDefPoint(-0.5,3){B}
+                \tkzDefPoint(-0.5,0.5){H}
+                \tkzDefBarycentricPoint(al1=8,al2=1)
+                \tkzGetPoint{A}
+
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments(B,H)
+                \tkzDrawSegments(H,A)
+
+                \tkzLabelPoints[below](A)
+                \tkzLabelPoints[above](B)
+                \tkzLabelPoints[right](H)
+
+                \tkzDefPoint(1,0.5){n1}
+                \tkzDefPoint(1,2){n2}
+
+                \tkzDrawSegments[->](n1,n2)
+                \tkzLabelPoint[right](n2){$\vec{n}$}
+
+                \tkzDefPoint(3.4,1.05){alpha}
+                \tkzLabelPoint(alpha){$\alpha$}
+            \end{tikzpicture}
+            \caption{点到平面的距离示意图}
         \end{center}
     \end{figure}
 
