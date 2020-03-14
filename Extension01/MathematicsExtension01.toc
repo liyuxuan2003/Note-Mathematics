@@ -19,3 +19,15 @@
 \contentsline {subsection}{\numberline {1.3}三角形的相关圆半径}{14}% 
 \contentsline {subsubsection}{\numberline {1.3.1}第一组关系}{14}% 
 \contentsline {subsubsection}{\numberline {1.3.2}第二组关系}{15}% 
+\contentsline {subsection}{\numberline {1.4}三角形的半角公式}{16}% 
+\contentsline {subsubsection}{\numberline {1.4.1}三角形的正切半角公式}{16}% 
+\contentsline {subsubsection}{\numberline {1.4.2}三角形的正弦半角公式}{18}% 
+\contentsline {subsubsection}{\numberline {1.4.3}三角形的余弦半角公式}{19}% 
+\contentsline {subsection}{\numberline {1.5}三角形的第二组面积公式}{20}% 
+\contentsline {subsubsection}{\numberline {1.5.1}三角形面积公式$16$}{20}% 
+\contentsline {subsubsection}{\numberline {1.5.2}三角形面积公式$17$}{20}% 
+\contentsline {subsubsection}{\numberline {1.5.3}三角形面积公式$18$}{21}% 
+\contentsline {subsubsection}{\numberline {1.5.4}三角形面积公式$19$}{21}% 
+\contentsline {subsubsection}{\numberline {1.5.5}三角形面积公式$20$}{22}% 
+\contentsline {subsubsection}{\numberline {1.5.6}三角形面积公式$21$}{22}% 
+\contentsline {subsubsection}{\numberline {1.5.7}三角形面积公式$22$}{23}% 

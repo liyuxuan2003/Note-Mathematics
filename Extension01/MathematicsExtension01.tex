@@ -632,6 +632,297 @@
     \begin{align}
         r_a+r_b+r_c-r=4R
     \end{align}
+
+\subsection{三角形的半角公式}
+    本章将研究三角形中各个内角半角的三角比公式，并进行相应推导。
+
+\subsubsection{三角形的正切半角公式}
+    三角形的正切半角公式：
+    \begin{large}
+        \begin{align*}
+            \tan{\frac{A}{2}}=\sqrt{\frac{(p-b)\cdot(p-c)}{p\cdot(p-a)}}\\[3mm]
+            \tan{\frac{B}{2}}=\sqrt{\frac{(p-c)\cdot(p-a)}{p\cdot(p-b)}}\\[3mm]
+            \tan{\frac{C}{2}}=\sqrt{\frac{(p-a)\cdot(p-b)}{p\cdot(p-c)}}
+        \end{align*}
+    \end{large}\\
+    由三角形的半周长开始推导：\vspace{3pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        p
+        &=\frac{1}{2}\cdot(a+b+c)\\[3mm]
+        &=\frac{1}{2}\cdot(DB+DC+EC+EA+FA+FB)\\[3mm]
+        &=\frac{1}{2}\cdot(2DB+2DC+2EA)\\[3mm]
+        &=DB+DC+EA\\[3mm]
+        &=a+EA
+    \end{align}
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[below](B)
+                \tkzLabelPoints[below](C)
+                \tkzDrawSegments(A,B B,C C,A)
+            
+                \tkzDefCircle[in](A,B,C)
+                \tkzGetPoint{I}
+                \tkzLabelPoints[below left](I)
+            
+                \tkzDrawSegments(A,I);
+                \tkzDrawSegments(B,I);
+                \tkzDrawSegments(C,I);
+            
+                \tkzDefLine[orthogonal=through I](A,B)
+                \tkzGetPoint{r1}
+                \tkzInterLL(I,r1)(A,B)
+                \tkzGetPoint{F}
+
+                \tkzDefLine[orthogonal=through I](B,C)
+                \tkzGetPoint{r2}
+                \tkzInterLL(I,r2)(B,C)
+                \tkzGetPoint{D}
+
+                \tkzDefLine[orthogonal=through I](C,A)
+                \tkzGetPoint{r3}
+                \tkzInterLL(I,r3)(C,A)
+                \tkzGetPoint{E}
+
+                \tkzDrawSegments[dashed](I,D)
+                \tkzDrawSegments[dashed](I,E)
+                \tkzDrawSegments[dashed](I,F)
+
+                \tkzDrawCircle(I,F)
+
+                \tkzLabelPoints[below](D);
+                \tkzLabelPoints[right](E);
+                \tkzLabelPoints[above left](F);
+            \end{tikzpicture}
+            \caption{三角形正切半角公式示意图}
+        \end{center}
+    \end{figure}
+    
+\newpage
+
+    由上述推导结论可得：
+    \begin{align}
+        EA=p-a
+    \end{align}\\
+    由直角三角形$\triangle AEI$可得：
+    \begin{align}
+        \tan{\frac{A}{2}}
+        &=\frac{EI}{EA}\\[3mm]
+        &=\frac{r}{p-a}\\[3mm]
+        &=\frac{r\cdot p}{p\cdot(p-a)}\\[3mm]
+        &=\frac{S_{\triangle}}{p\cdot(p-a)}
+    \end{align}\\
+    由公式$09$代入后可得：
+    \begin{align}
+        \tan{\frac{A}{2}}
+        &=\frac{\sqrt{p\cdot(p-a)\cdot(p-b)\cdot(p-c)}}{p\cdot(p-a)}\\[3mm]
+        &=\sqrt{\frac{p\cdot(p-a)\cdot(p-b)\cdot(p-c)}{p^2\cdot(p-a)^2}}\\[3mm]
+        &=\sqrt{\frac{(p-b)\cdot(p-c)}{p\cdot(p-a)}}
+    \end{align}
+
+\newpage
+
+\subsubsection{三角形的正弦半角公式}
+    三角形的正弦半角公式：
+    \begin{large}
+        \begin{align*}
+            \sin{\frac{A}{2}}=\sqrt{\frac{(p-b)\cdot(p-c)}{b\cdot c}}\\[3mm]
+            \sin{\frac{B}{2}}=\sqrt{\frac{(p-c)\cdot(p-a)}{c\cdot a}}\\[3mm]
+            \sin{\frac{C}{2}}=\sqrt{\frac{(p-a)\cdot(p-b)}{a\cdot b}}
+        \end{align*}
+    \end{large}\\
+    根据三角形的正切半角公式可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \cot{\frac{A}{2}}=\sqrt{\frac{p\cdot(p-a)}{(p-b)\cdot(p-c)}}
+    \end{align}\\
+    由三角比的平方关系开始推导：\vspace{5pt}
+    \begin{align}
+        &\csc^2{\frac{A}{2}}-\cot^2{\frac{A}{2}}=1\\[3mm]
+        &\csc^2{\frac{A}{2}}=1+\cot^2{\frac{A}{2}}\\[3mm]
+        &\csc^2{\frac{A}{2}}=1+\frac{p\cdot(p-a)}{(p-b)\cdot(p-c)}\\[3mm]
+        &\csc^2{\frac{A}{2}}=\frac{p\cdot(p-a)+(p-b)\cdot(p-c)}{(p-b)\cdot(p-c)}\\[3mm]
+        &\csc^2{\frac{A}{2}}=\frac{p\cdot(p+b+c-2p)+(p-b)\cdot(p-c)}{(p-b)\cdot(p-c)}\\[3mm]
+        &\csc^2{\frac{A}{2}}=\frac{p^2+pb+pc-2p^2+p^2-pb-pc+bc}{(p-b)\cdot(p-c)}\\[3mm]
+        &\csc^2{\frac{A}{2}}=\frac{b\cdot c}{(p-b)\cdot(p-c)}\\[3mm]
+        &\sin^2{\frac{A}{2}}=\frac{(p-b)\cdot(p-c)}{b\cdot c}\\[3mm]
+        &\sin{\frac{A}{2}}=\sqrt{\frac{(p-b)\cdot(p-c)}{b\cdot c}}
+    \end{align}
+
+\newpage
+
+\subsubsection{三角形的余弦半角公式}
+    三角形的余弦半角公式：
+    \begin{large}
+        \begin{align*}
+            \cos{\frac{A}{2}}=\sqrt{\frac{p\cdot(p-a)}{b\cdot c}}\\[3mm]
+            \cos{\frac{B}{2}}=\sqrt{\frac{p\cdot(p-b)}{c\cdot a}}\\[3mm]
+            \cos{\frac{C}{2}}=\sqrt{\frac{p\cdot(p-c)}{a\cdot b}}\\[3mm]
+        \end{align*}
+    \end{large}
+    根据三角形的正切半角公式可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \tan{\frac{A}{2}}=\sqrt{\frac{(p-b)\cdot(p-c)}{p\cdot(p-a)}}
+    \end{align}\\
+    由三角比的平方关系开始推导：
+    \begin{align}
+        &\sec^2{\frac{A}{2}}-\tan^2{\frac{A}{2}}=1\\[3mm]
+        &\sec^2{\frac{A}{2}}=1+\tan^2{\frac{A}{2}}\\[3mm]
+        &\sec^2{\frac{A}{2}}=1+\frac{(p-b)\cdot(p-c)}{p\cdot(p-a)}\\[3mm]
+        &\sec^2{\frac{A}{2}}=\frac{p\cdot(p-a)+(p-b)\cdot(p-c)}{p\cdot(p-a)}\\[3mm]
+        &\sec^2{\frac{A}{2}}=\frac{p\cdot(p+b+c-2p)+(p-b)\cdot(p-c)}{p\cdot(p-a)}\\[3mm]
+        &\sec^2{\frac{A}{2}}=\frac{p^2+pb+pc-2p^2+p^2-pb-pc+bc}{p\cdot(p-a)}\\[3mm]
+        &\sec^2{\frac{A}{2}}=\frac{b\cdot c}{p\cdot(p-a)}\\[3mm]
+        &\cos^2{\frac{A}{2}}=\frac{p\cdot(p-a)}{b\cdot c}\\[3mm]
+        &\cos{\frac{A}{2}}=\sqrt{\frac{p\cdot(p-a)}{b\cdot c}}
+    \end{align}
+
+\newpage
+
+\subsection{三角形的第二组面积公式}
+    本章将研究三角形中与半角的三角函数相关的面积公式，并进行相应推导。
+
+\subsubsection{三角形面积公式$16$}
+    三角形面积公式$16$：
+    \begin{large}
+        \begin{align*}
+            &S_{\triangle}=p\cdot(p-a)\cdot\tan{\frac{A}{2}}\\[3mm]
+            &S_{\triangle}=p\cdot(p-b)\cdot\tan{\frac{B}{2}}\\[3mm]
+            &S_{\triangle}=p\cdot(p-c)\cdot\tan{\frac{C}{2}}
+        \end{align*}
+    \end{large}\\
+    将三角形正切半角公式推导的中间步骤变形可得：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\tan{\frac{A}{2}}=\frac{S_{\triangle}}{p\cdot(p-a)}\\[3mm]
+        &S_{\triangle}=p\cdot(p-a)\cdot\tan{\frac{A}{2}}
+    \end{align}
+
+\subsubsection{三角形面积公式$17$}
+    三角形面积公式$17$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=p^2\cdot\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}
+        \end{equation*}
+    \end{large}\\
+    由公式$16$可以得到：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}=\frac{S_{\triangle}}{p\cdot(p-a)}\cdot\frac{S_{\triangle}}{p\cdot(p-b)}\frac{S_{\triangle}}{p\cdot(p-c)}\\[3mm]
+        &\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}=\frac{S_{\triangle}~^3}{p^3\cdot(p-a)\cdot(p-b)\cdot(p-c)}\\[3mm]
+        &\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}=\frac{S_{\triangle}~^2}{p\cdot(p-a)\cdot(p-b)\cdot(p-c)}\cdot\frac{S_{\triangle}}{p^2}\\[3mm]
+        &\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}=\frac{S_{\triangle}~^2}{S_{\triangle}~^2}\cdot\frac{S_{\triangle}}{p^2}\\[3mm]
+        &\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}=\frac{S_{\triangle}}{p^2}\\[3mm]
+        &~S_{\triangle}=p^2\cdot\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}
+    \end{align}
+
+\newpage
+
+\subsubsection{三角形面积公式$18$}
+    三角形面积公式$18$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=a\cdot b\cdot c\cdot \frac{1}{p}\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}
+        \end{equation*}
+    \end{large}\\
+    由三角形余弦半角公式可以得到：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\cos^2{\frac{A}{2}}\cdot\cos^2{\frac{B}{2}}\cdot\cos^2{\frac{C}{2}}=\frac{p\cdot(p-a)}{b\cdot c}\cdot\frac{p\cdot(p-b)}{c\cdot a}\cdot\frac{p\cdot(p-c)}{a\cdot b}\\[3mm]
+        &\cos^2{\frac{A}{2}}\cdot\cos^2{\frac{B}{2}}\cdot\cos^2{\frac{C}{2}}=\frac{p^3\cdot(p-a)\cdot(p-b)\cdot(p-c)}{a^2\cdot b^2\cdot c^2}\\[3mm]
+        &\cos^2{\frac{A}{2}}\cdot\cos^2{\frac{B}{2}}\cdot\cos^2{\frac{C}{2}}=\frac{p^2\cdot S_{\triangle}~^2}{a^2\cdot b^2\cdot c^2}\\[3mm]
+        &\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}=\frac{p\cdot S_{\triangle}}{a\cdot b\cdot c}\\[3mm]
+        &~S_{\triangle}=a\cdot b\cdot c\cdot \frac{1}{p}\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}
+    \end{align}\\
+
+\subsubsection{三角形面积公式$19$}
+    三角形面积公式$19$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}~^2=a\cdot b\cdot c\cdot p\cdot\sin{\frac{A}{2}}\cdot\sin{\frac{B}{2}}\cdot\sin{\frac{C}{2}}
+        \end{equation*}
+    \end{large}\\
+    由三角形正弦半角公式可以得到：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\sin^2{\frac{A}{2}}\cdot\sin^2{\frac{B}{2}}\cdot\sin^2{\frac{C}{2}}=\frac{(p-b)\cdot(p-c)}{b\cdot c}\cdot\frac{(p-c)\cdot(p-a)}{c\cdot a}\cdot\frac{(p-a)\cdot(p-b)}{a\cdot b}\\[3mm]
+        &\sin^2{\frac{A}{2}}\cdot\sin^2{\frac{B}{2}}\cdot\sin^2{\frac{C}{2}}=\frac{p^2\cdot(p-a)^2\cdot(p-b)^2\cdot(p-c)^2}{a^2\cdot b^2\cdot c^2\cdot p^2}\\[3mm]
+        &\sin^2{\frac{A}{2}}\cdot\sin^2{\frac{B}{2}}\cdot\sin^2{\frac{C}{2}}=\frac{S_{\triangle}~^4}{a^2\cdot b^2\cdot c^2\cdot p^2}\\[3mm]
+        &\sin{\frac{A}{2}}\cdot\sin{\frac{B}{2}}\cdot\sin{\frac{C}{2}}=\frac{S_{\triangle}}{a\cdot b\cdot c}\\[3mm]
+        &~S_{\triangle}~^2=a\cdot b\cdot c\cdot p\cdot\sin{\frac{A}{2}}\cdot\sin{\frac{B}{2}}\cdot\sin{\frac{C}{2}}
+    \end{align}
+
+\newpage
+
+\subsubsection{三角形面积公式$20$}
+    三角形面积公式$20$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=4\cdot R\cdot p\cdot\sin{\frac{A}{2}}\cdot\sin{\frac{B}{2}}\cdot\sin{\frac{C}{2}}
+        \end{equation*}
+    \end{large}\\
+    将公式$04$代入公式$19$：
+    \setcounter{equation}{0}
+    \begin{align}
+        &S_{\triangle}~^2=a\cdot b\cdot c\cdot p\cdot\sin{\frac{A}{2}}\cdot\sin{\frac{B}{2}}\cdot\sin{\frac{C}{2}}\\[3mm]
+        &S_{\triangle}\cdot\frac{a\cdot b\cdot c}{4R}=a\cdot b\cdot c\cdot p\cdot\sin{\frac{A}{2}}\cdot\sin{\frac{B}{2}}\cdot\sin{\frac{C}{2}}\\[3mm]
+        &S_{\triangle}=4\cdot R\cdot p\cdot\sin{\frac{A}{2}}\cdot\sin{\frac{B}{2}}\cdot\sin{\frac{C}{2}}
+    \end{align}\\
+
+\subsubsection{三角形面积公式$21$}
+    三角形面积公式$21$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=4\cdot R\cdot r\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}
+        \end{equation*}
+    \end{large}\\
+    将公式$04$代入公式$18$：
+    \setcounter{equation}{0}
+    \begin{align}
+        &S_{\triangle}=a\cdot b\cdot c\cdot \frac{1}{p}\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}\\[3mm]
+        &\frac{a\cdot b\cdot c}{4R}=a\cdot b\cdot c\cdot \frac{1}{p}\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}\\[3mm]
+        &p=4\cdot R\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}
+    \end{align}\\
+    将上述结论代入公式$05$：
+    \begin{align}
+        &S_{\triangle}=r\cdot p\\[3mm]
+        &S_{\triangle}=r\cdot 4\cdot R\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}\\[3mm]
+        &S_{\triangle}=4\cdot R\cdot r\cdot\cos{\frac{A}{2}}\cdot\cos{\frac{B}{2}}\cdot\cos{\frac{C}{2}}
+    \end{align}
+
+\newpage
+
+\subsubsection{三角形面积公式$22$}
+    三角形面积公式$22$：
+    \begin{large}
+        \begin{equation*}
+            S_{\triangle}=r^2\cdot\cot{\frac{A}{2}}\cdot\cot{\frac{B}{2}}\cdot\cot{\frac{C}{2}}
+        \end{equation*}
+    \end{large}\\
+    将公式$05$和公式$17$对比：
+    \setcounter{equation}{0}
+    \begin{align}
+        &S_{\triangle}=r\cdot p\\[3mm]
+        &S_{\triangle}=p^2\cdot\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}\\[3mm]
+        &r=p\cdot\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}\\[3mm]
+        &p=\frac{r}{\tan{\dfrac{A}{2}}\cdot\tan{\dfrac{B}{2}}\cdot\tan{\dfrac{C}{2}}}
+    \end{align}\\
+    将上述结论代入公式$17$：\vspace{5pt}
+    \begin{align}
+        &S_{\triangle}=p^2\cdot\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}\\[3mm]
+        &S_{\triangle}=\frac{r^2}{\tan^2{\dfrac{A}{2}}\cdot\tan^2{\dfrac{B}{2}}\cdot\tan^2{\dfrac{C}{2}}}\cdot\tan{\frac{A}{2}}\cdot\tan{\frac{B}{2}}\cdot\tan{\frac{C}{2}}\\[3mm]
+        &S_{\triangle}=\frac{r^2}{\tan{\dfrac{A}{2}}\cdot\tan{\dfrac{B}{2}}\cdot\tan{\dfrac{C}{2}}}\\[3mm]
+        &S_{\triangle}=r^2\cdot\cot{\frac{A}{2}}\cdot\cot{\frac{B}{2}}\cdot\cot{\frac{C}{2}}
+    \end{align}
+
     
 
 \end{document}
