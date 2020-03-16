@@ -923,6 +923,111 @@
         &S_{\triangle}=r^2\cdot\cot{\frac{A}{2}}\cdot\cot{\frac{B}{2}}\cdot\cot{\frac{C}{2}}
     \end{align}
 
-    
+\newpage
+
+\subsection{三角形中的线段}
+    本章将研究三角形中的线段，并进行相应推导。
+
+\subsubsection{三角形内的线段长公式}
+    三角形内的线段长公式：
+    \begin{large}
+        \begin{align*}
+            i_a=\sqrt{\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot \mu}{\lambda +\mu}\cdot a^2\right)}\\[5mm]
+            i_b=\sqrt{\frac{1}{\lambda+\mu}\cdot\left(\lambda c^2+\mu a^2-\frac{\lambda\cdot \mu}{\lambda +\mu}\cdot b^2\right)}\\[5mm]
+            i_c=\sqrt{\frac{1}{\lambda+\mu}\cdot\left(\lambda a^2+\mu b^2-\frac{\lambda\cdot \mu}{\lambda +\mu}\cdot c^2\right)}
+        \end{align*}
+    \end{large}\\
+    线段$i_a$代表三角形内线段$AD$：
+    \begin{large}
+        \begin{equation*}
+            \frac{DB}{DC}=\frac{\lambda}{\mu}
+        \end{equation*}
+    \end{large}\\
+    线段$i_b$代表三角形内线段$BE$：
+    \begin{large}
+        \begin{equation*}
+            \frac{EC}{EA}=\frac{\lambda}{\mu}
+        \end{equation*}
+    \end{large}\\
+    线段$i_c$代表三角形内线段$CF$：
+    \begin{large}
+        \begin{equation*}
+            \frac{FA}{FB}=\frac{\lambda}{\mu}
+        \end{equation*}
+    \end{large}\\
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[below](B)
+                \tkzLabelPoints[below](C)
+                
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments(B,C)
+                \tkzDrawSegments(C,A)
+
+                \tkzDefMidPoint(B,C) \tkzGetPoint{D}
+
+                \tkzLabelPoints[below](D)
+
+                \tkzDrawSegments(A,D)
+                \tkzLabelSegment[right](A,D){$i_a$}
+
+                \tkzLabelSegment[below](D,B){$\lambda$}
+                \tkzLabelSegment[below](D,C){$\mu$}
+
+                \tkzMarkAngle[color=black,size=0.3](C,D,A)
+                \tkzLabelAngle[below left](C,D,A){$\theta_{\mu}$}
+
+                \tkzMarkAngle[color=black,size=0.3](A,D,B)
+                \tkzLabelAngle[below right](A,D,B){$\theta_{\lambda}$}
+
+            \end{tikzpicture}
+            \caption{三角形内的线段长公式}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+    如图所示可以得出以下结论：
+    \setcounter{equation}{0}
+    \begin{align}
+        DB=\frac{\lambda}{\lambda+\mu}\cdot a\\[3mm]
+        DC=\frac{\mu}{\lambda+\mu}\cdot a
+    \end{align}\\
+    由余弦定理可以得到：
+    \begin{align}
+        \cos{\theta_{\lambda}}=\frac{DB^2+DA^2-AB^2}{2\cdot DB\cdot DA}=\frac{~~\left(\dfrac{\lambda a}{\lambda+\mu}\right)+i_a~^2-c^2~~}{2\cdot\dfrac{\lambda a}{\lambda+\mu}\cdot i_a}\\[5mm]
+        \cos{\theta_{\mu}}=\frac{DC^2+DA^2-AC^2}{2\cdot DC\cdot DA}=\frac{~~\left(\dfrac{\mu a}{\lambda+\mu}\right)+i_a~^2-b^2~~}{2\cdot\dfrac{\mu a}{\lambda+\mu}\cdot i_a}
+    \end{align}\\
+    由于两个角的和：
+    \begin{align}
+        &\theta_{\lambda}+\theta_{\mu}=\pi\\[3mm]
+        &\cos{\theta_{\lambda}}+\cos{\theta_{\mu}}=0
+    \end{align}\\
+    代入后可以得到：\vspace{8pt}
+    \begin{align}
+        &\frac{~~\left(\dfrac{\lambda a}{\lambda+\mu}\right)+i_a~^2-c^2~~}{2\cdot\dfrac{\lambda a}{\lambda+\mu}\cdot i_a}+\frac{~~\left(\dfrac{\mu a}{\lambda+\mu}\right)+i_a~^2-b^2~~}{2\cdot\dfrac{\mu a}{\lambda+\mu}\cdot i_a}=0\\[3mm]
+        &\mu\cdot\left[\left(\frac{\lambda a}{\lambda+\mu}\right)^2+i_a~^2-c^2\right]+\lambda\cdot\left[\left(\frac{\lambda a}{\lambda+\mu}\right)^2+i_a~^2-b^2\right]=0\\[5mm]
+        &\mu\cdot\left[\left(\frac{\lambda^2 a^2}{(\lambda+\mu)^2}\right)^2+i_a~^2-c^2\right]+\lambda\cdot\left[\left(\frac{\mu^2 a^2}{(\lambda+\mu)^2}\right)^2+i_a~^2-b^2\right]=0\\[7mm]
+        &\frac{\lambda^2\cdot\mu\cdot a^2}{(\lambda+\mu)^2}+\frac{\mu^2\cdot\lambda\cdot a^2}{(\lambda+\mu)^2}+(\lambda+\mu)\cdot i_a~^2-\lambda b^2-\mu c^2=0\\[5mm]
+        &\frac{(\lambda+\mu)\cdot\left(\lambda\cdot\mu\cdot a^2\right)}{(\lambda+\mu)^2}+(\lambda+\mu)\cdot i_a~^2-\lambda b^2-\mu c^2=0\\[5mm]
+        &\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}+(\lambda+\mu)\cdot i_a~^2-\lambda b^2-\mu c^2=0
+    \end{align}
+
+\newpage
+
+    进一步变形可以得到：
+    \begin{align}
+        &(\lambda+\mu)\cdot i_a~^2=\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\\[4mm]
+        &i_a~^2=\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\right)\\[4mm]
+        &i_a=\sqrt{\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\right)}
+    \end{align}
+
 
 \end{document}
