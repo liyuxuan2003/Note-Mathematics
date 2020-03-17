@@ -988,7 +988,7 @@
                 \tkzLabelAngle[below right](A,D,B){$\theta_{\lambda}$}
 
             \end{tikzpicture}
-            \caption{三角形内的线段长公式}
+            \caption{三角形内的线段长公式示意图}
         \end{center}
     \end{figure}
 
@@ -1027,7 +1027,134 @@
         &(\lambda+\mu)\cdot i_a~^2=\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\\[4mm]
         &i_a~^2=\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\right)\\[4mm]
         &i_a=\sqrt{\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\right)}
+    \end{align}\\
+
+\subsubsection{三角形中线长公式$01$}
+    三角形中线长公式$01$：
+    \begin{large}
+        \begin{align*}
+            m_a=\sqrt{\frac{1}{2}\cdot\left(b^2+c^2-\frac{1}{2}\cdot a^2\right)}\\[4mm]
+            m_b=\sqrt{\frac{1}{2}\cdot\left(c^2+a^2-\frac{1}{2}\cdot b^2\right)}\\[4mm]
+            m_c=\sqrt{\frac{1}{2}\cdot\left(a^2+b^2-\frac{1}{2}\cdot c^2\right)}
+        \end{align*}
+    \end{large}\\
+    对于中线显然有以下性质：
+    \setcounter{equation}{0}
+    \begin{align}
+        \frac{DB}{DC}=\frac{\lambda}{\mu}=\frac{1}{1}
+    \end{align}\\
+    随后可以使用三角形内的线段长公式：\vspace{5pt}
+    \begin{align}
+        m_a
+        &=\sqrt{\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot \mu}{\lambda +\mu}\cdot a^2\right)}\\[4mm]
+        &=\sqrt{\frac{1}{1+1}\cdot\left(b^2+c^2-\frac{1\cdot 1}{1+1}\cdot a^2\right)}\\[4mm]
+        &=\sqrt{\frac{1}{2}\cdot\left(b^2+c^2-\frac{1}{2}\cdot a^2\right)}
     \end{align}
+
+\newpage
+
+\subsubsection{三角形中线长公式$02$}
+    三角形中线长公式$02$：
+    \begin{large}
+        \begin{align*}
+            &m_a~^2=\frac{1}{4}\cdot a^2+b\cdot c\cdot\cos{A}\\[3mm]
+            &m_b~^2=\frac{1}{4}\cdot b^2+c\cdot a\cdot\cos{B}\\[3mm]
+            &m_c~^2=\frac{1}{4}\cdot c^2+a\cdot b\cdot\cos{C}
+        \end{align*}
+    \end{large}\\
+    在三角形中线长公式$01$中代入余弦定理：\vspace{8pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &m_a=\sqrt{\frac{1}{2}\cdot\left(b^2+c^2-\frac{1}{2}\cdot a^2\right)}\\[3mm]
+        &m_a=\sqrt{\frac{1}{2}\cdot\left(b^2+c^2-a^2+\frac{1}{2}\cdot a^2\right)}\\[3mm]
+        &m_a=\sqrt{\frac{1}{2}\cdot\Big[b^2+c^2-\left(b^2+c^2-2\cdot b\cdot c\cdot\cos{A}\right)\Big]+\frac{1}{4}\cdot a^2}\\[3mm]
+        &m_a=\sqrt{\frac{1}{2}\cdot\Big[2\cdot b\cdot c\cdot\cos{A}\Big]+\frac{1}{4}\cdot a^2}\\[3mm]
+        &m_a=\sqrt{b\cdot c\cdot\cos{A}+\frac{1}{4}\cdot a^2}\\[3mm]
+        &m_a~^2=b\cdot c\cdot\cos{A}+\frac{1}{4}\cdot a^2\\[3mm]
+        &m_a~^2=\frac{1}{4}\cdot a^2+b\cdot c\cdot\cos{A}
+    \end{align}
+    
+\newpage
+
+\subsubsection{三角形角平分线长公式$01$}
+    三角形角平分线长公式$01$：
+    \begin{large}
+        \begin{align*}
+            t_a=\sqrt{b\cdot c\cdot\left[1-\frac{a^2}{(b+c)^2}\right]}\\[3mm]
+            t_b=\sqrt{c\cdot a\cdot\left[1-\frac{b^2}{(c+a)^2}\right]}\\[3mm]
+            t_c=\sqrt{a\cdot b\cdot\left[1-\frac{c^2}{(a+b)^2}\right]}
+        \end{align*}
+    \end{large}\\
+    在三角形$\triangle ABD$中运用正弦定理：
+    \setcounter{equation}{0}
+    \begin{align}
+        \frac{BD}{\sin{\angle BAD}}=\frac{AD}{\sin{B}}
+    \end{align}\\
+    在三角形$\triangle ACD$中运用正弦定理：
+    \begin{align}
+        \frac{CD}{\sin{\angle CAD}}=\frac{AD}{\sin{C}}
+    \end{align}\\
+    由于$AD$平分角$\angle BAC$，即$\angle BAD=\angle CAD$：\vspace{3pt}
+    \begin{align}
+        \frac{BD}{CD}=\frac{\sin{C}}{\sin{B}}
+    \end{align}\\
+    而在三角形$\triangle ABC$中使用正弦定理，可以得到：\vspace{3pt}
+    \begin{align}
+        \frac{AB}{AC}=\frac{\sin{C}}{\sin{B}}
+    \end{align}
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[below](B)
+                \tkzLabelPoints[below](C)
+                
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments(B,C)
+                \tkzDrawSegments(C,A)
+
+                \tkzDefLine[bisector](C,A,B)
+                \tkzGetPoint{d}
+
+                \tkzInterLL(A,d)(B,C)
+                \tkzGetPoint{D}
+
+                \tkzDrawSegments(A,D)
+
+                \tkzLabelPoints[below](D)
+
+                \tkzMarkAngle[color=black,size=0.33](B,A,D)
+                \tkzMarkAngle[color=black,size=0.4](D,A,C)
+
+            \end{tikzpicture}
+            \caption{三角形的角平分线长公式示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+    由上述两组结论此可以得到：
+    \begin{align}
+        \frac{BD}{CD}=\frac{AB}{AC}=\frac{c}{b}
+    \end{align}\\
+    对于角平分线因此有以下性质：
+    \begin{align}
+        \frac{BD}{CD}=\frac{\lambda}{\mu}=\frac{c}{b}
+    \end{align}\\
+    随后可以使用三角形内的线段长公式：\vspace{8pt}
+    \begin{align}
+        t_a
+        &=\sqrt{\frac{1}{b+c}\cdot\left(c\cdot b^2+b\cdot c^2-\frac{bc}{b+c}\cdot a^2\right)}\\[3mm]
+        &=\sqrt{\frac{1}{b+c}\cdot\left(bc\cdot(b+c)-\frac{bc}{b+c}\cdot a^2\right)}\\[3mm]
+        &=\sqrt{bc-\frac{bc\cdot a^2}{b+c}}\\[3mm]
+        &=\sqrt{bc\cdot\left(1-\frac{bc\cdot a^2}{b+c}\right)}
+    \end{align}
+
 
 
 \end{document}
