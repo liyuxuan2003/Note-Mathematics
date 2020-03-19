@@ -2943,13 +2943,47 @@
     那么这两个向量共线，且实数$\lambda$是唯一的。\\
 
 \subsubsection{空间向量共面定理}
-    如果两个平面向量满足以下条件：
+    如果三个空间向量满足以下条件：
     \begin{large}
         \begin{equation*}
             \vec{c}=\lambda\cdot \vec{a}+\mu\cdot \vec{b}
         \end{equation*}
     \end{large}\\
-    那么这两个向量共线，且实数对$\lambda,\mu$是唯一的。
+    那么这三个向量共面，且实数对$\lambda,\mu$是唯一的。
+
+\newpage
+
+\subsubsection{三点共线定理}
+    如果平面上两个点满足以下条件，那么这两个点共线：
+    \begin{large}
+        \begin{equation*}
+            \overrightarrow{OC}=x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}
+        \end{equation*}
+    \end{large}\\
+    根据平面向量共线定理，三个点共线的条件是：\vspace{3pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\overrightarrow{AC}=\lambda\cdot\overrightarrow{AB}\\[3mm]
+        &\overrightarrow{OC}-\overrightarrow{OA}=\lambda\cdot\left(\overrightarrow{OB}-\overrightarrow{OA}\right)\\[3mm]
+        &\overrightarrow{OC}-\overrightarrow{OA}=\lambda\cdot\overrightarrow{OB}-\lambda\cdot\overrightarrow{OA}\\[3mm]
+        &\overrightarrow{OC}=(1-\lambda)\cdot\overrightarrow{OA}+\lambda\cdot\overrightarrow{OB}
+    \end{align}\\
+    
+\subsubsection{四点共面定理}
+    如果空间中三个点满足以下条件，那么这三个点共面：
+    \begin{large}
+        \begin{equation*}
+            \overrightarrow{OD}=x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}
+        \end{equation*}
+    \end{large}\\
+    根据空间向量共面定理，四个点共面的条件是：\vspace{3pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\overrightarrow{AD}=\lambda\cdot\overrightarrow{AB}+\mu\cdot\overrightarrow{AC}\\[3mm]
+        &\overrightarrow{OD}-\overrightarrow{OA}=\lambda\cdot\left(\overrightarrow{OB}-\overrightarrow{OA}\right)+\mu\cdot\left(\overrightarrow{OC}-\overrightarrow{OA}\right)\\[3mm]
+        &\overrightarrow{OD}-\overrightarrow{OA}=\lambda\cdot\overrightarrow{OB}-\lambda\cdot\overrightarrow{OA}+\mu\cdot\overrightarrow{OC}-\mu\cdot\overrightarrow{OA}\\[3mm]
+        &\overrightarrow{OD}=(1-\lambda-\mu)\cdot\overrightarrow{OA}+\lambda\cdot\overrightarrow{OB}+\mu\cdot\overrightarrow{OC}
+    \end{align}
 
 \newpage
 

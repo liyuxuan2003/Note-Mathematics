@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  14 MAR 2020 18:17
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  19 MAR 2020 18:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1374,237 +1374,242 @@ Underfull \hbox (badness 10000) in paragraph at lines 2941--2944
 
  []
 
-[72] [73] [74] [75]
-Underfull \hbox (badness 10000) in paragraph at lines 3090--3092
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 2970--2971
+
+ []
+
+[73] [74] [75] [76]
+Underfull \hbox (badness 10000) in paragraph at lines 3124--3126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3112--3114
+Underfull \hbox (badness 10000) in paragraph at lines 3146--3148
 
  []
 
-[76] [77]
+[77] [78]
 Missing character: There is no ; in font nullfont!
- [78] [79]
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- [80]
+ [79] [80]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [81] [82] [83]
-Underfull \hbox (badness 10000) in paragraph at lines 3504--3506
+ [81]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [82] [83] [84]
+Underfull \hbox (badness 10000) in paragraph at lines 3538--3540
 
  []
 
-[84] [85] [86]
-Underfull \hbox (badness 10000) in paragraph at lines 3676--3677
+[85] [86] [87]
+Underfull \hbox (badness 10000) in paragraph at lines 3710--3711
 
  []
 
-[87] [88]
-Underfull \hbox (badness 10000) in paragraph at lines 3780--3784
-
- []
-
-[89]
-Underfull \hbox (badness 10000) in paragraph at lines 3866--3869
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3882--3887
+[88] [89]
+Underfull \hbox (badness 10000) in paragraph at lines 3814--3818
 
  []
 
 [90]
-Underfull \hbox (badness 10000) in paragraph at lines 3937--3940
-
- []
-
-[91] [92]
-Underfull \hbox (badness 10000) in paragraph at lines 4009--4012
-
- []
-
-[93]
-Underfull \hbox (badness 10000) in paragraph at lines 4063--4065
+Underfull \hbox (badness 10000) in paragraph at lines 3900--3903
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4081--4085
+Underfull \hbox (badness 10000) in paragraph at lines 3916--3921
 
  []
 
-[94] [95]
-Underfull \hbox (badness 10000) in paragraph at lines 4131--4133
+[91]
+Underfull \hbox (badness 10000) in paragraph at lines 3971--3974
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4138--4142
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4143--4144
+[92] [93]
+Underfull \hbox (badness 10000) in paragraph at lines 4043--4046
 
  []
 
-[96] [97] [98] [99]
-Underfull \hbox (badness 10000) in paragraph at lines 4288--4290
-
- []
-
-[100]
-Underfull \hbox (badness 10000) in paragraph at lines 4302--4304
-
- []
-
-[101] [102] [103] [104] [105] [106] [107]
-Underfull \hbox (badness 10000) in paragraph at lines 4612--4615
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 4097--4099
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4617--4621
+Underfull \hbox (badness 10000) in paragraph at lines 4115--4119
 
  []
 
-[108]
-Underfull \hbox (badness 10000) in paragraph at lines 4659--4664
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4666--4670
-
- []
-
-[109] [110]
-Underfull \hbox (badness 10000) in paragraph at lines 4712--4714
-
- []
-
-[111] [112] [113] [114]
-Underfull \hbox (badness 10000) in paragraph at lines 4842--4845
+[95] [96]
+Underfull \hbox (badness 10000) in paragraph at lines 4165--4167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4847--4851
+Underfull \hbox (badness 10000) in paragraph at lines 4172--4176
 
  []
 
-[115] [116] [117]
-Underfull \hbox (badness 10000) in paragraph at lines 4934--4935
+
+Underfull \hbox (badness 10000) in paragraph at lines 4177--4178
 
  []
 
-[118] [119]
-Underfull \hbox (badness 10000) in paragraph at lines 4974--4976
+[97] [98] [99] [100]
+Underfull \hbox (badness 10000) in paragraph at lines 4322--4324
 
  []
 
-[120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136]
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 5615--5615
+[101]
+Underfull \hbox (badness 10000) in paragraph at lines 4336--4338
+
+ []
+
+[102] [103] [104] [105] [106] [107] [108]
+Underfull \hbox (badness 10000) in paragraph at lines 4646--4649
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4651--4655
+
+ []
+
+[109]
+Underfull \hbox (badness 10000) in paragraph at lines 4693--4698
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4700--4704
+
+ []
+
+[110] [111]
+Underfull \hbox (badness 10000) in paragraph at lines 4746--4748
+
+ []
+
+[112] [113] [114] [115]
+Underfull \hbox (badness 10000) in paragraph at lines 4876--4879
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4881--4885
+
+ []
+
+[116] [117] [118]
+Underfull \hbox (badness 10000) in paragraph at lines 4968--4969
+
+ []
+
+[119] [120]
+Underfull \hbox (badness 10000) in paragraph at lines 5008--5010
+
+ []
+
+[121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 5649--5649
 [][] 
  []
 
 
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 5632--5632
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 5666--5666
 [][] 
  []
 
-[137] [138] [139]
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 5779--5779
-[][] 
- []
-
-
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 5797--5797
-[][] 
- []
-
-[140] [141]
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 5906--5906
+[138] [139] [140]
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 5813--5813
 [][] 
  []
 
 
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 5924--5924
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 5831--5831
 [][] 
  []
 
-[142] [143] [144]
-Underfull \hbox (badness 10000) in paragraph at lines 6001--6003
+[141] [142]
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 5940--5940
+[][] 
+ []
+
+
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 5958--5958
+[][] 
+ []
+
+[143] [144] [145]
+Underfull \hbox (badness 10000) in paragraph at lines 6035--6037
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6008--6010
+Underfull \hbox (badness 10000) in paragraph at lines 6042--6044
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6032--6035
+Underfull \hbox (badness 10000) in paragraph at lines 6066--6069
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6040--6042
-
- []
-
-[145]
-Underfull \hbox (badness 10000) in paragraph at lines 6080--6082
+Underfull \hbox (badness 10000) in paragraph at lines 6074--6076
 
  []
 
 [146]
-Underfull \hbox (badness 10000) in paragraph at lines 6127--6129
+Underfull \hbox (badness 10000) in paragraph at lines 6114--6116
 
  []
 
 [147]
-Underfull \hbox (badness 10000) in paragraph at lines 6174--6176
+Underfull \hbox (badness 10000) in paragraph at lines 6161--6163
 
  []
 
-[148] [149]
-Underfull \hbox (badness 10000) in paragraph at lines 6251--6254
+[148]
+Underfull \hbox (badness 10000) in paragraph at lines 6208--6210
 
  []
 
-[150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172]
-Underfull \hbox (badness 10000) in paragraph at lines 7381--7399
+[149] [150]
+Underfull \hbox (badness 10000) in paragraph at lines 6285--6288
 
  []
 
-[173] [174]
-Underfull \hbox (badness 10000) in paragraph at lines 7450--7467
+[151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173]
+Underfull \hbox (badness 10000) in paragraph at lines 7415--7433
 
  []
 
-[175] [176]
-Underfull \hbox (badness 10000) in paragraph at lines 7518--7536
+[174] [175]
+Underfull \hbox (badness 10000) in paragraph at lines 7484--7501
 
  []
 
-[177] [178]
-Underfull \hbox (badness 10000) in paragraph at lines 7576--7594
+[176] [177]
+Underfull \hbox (badness 10000) in paragraph at lines 7552--7570
 
  []
 
-[179] [180]
-Underfull \hbox (badness 10000) in paragraph at lines 7634--7650
+[178] [179]
+Underfull \hbox (badness 10000) in paragraph at lines 7610--7628
 
  []
 
-[181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] (./MathematicsNote.aux)
+[180] [181]
+Underfull \hbox (badness 10000) in paragraph at lines 7668--7684
+
+ []
+
+[182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] (./MathematicsNote.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1618,4 +1623,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  74i,21n,150p,762b,864s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MathematicsNote.pdf (192 pages).
+Output written on MathematicsNote.pdf (193 pages).
