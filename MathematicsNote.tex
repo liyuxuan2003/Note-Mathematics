@@ -4285,17 +4285,28 @@
     \setcounter{equation}{0}
     \begin{align}
         \overrightarrow{OQ}
-        &=\overrightarrow{OP}+\overrightarrow{PQ}\\[2mm]
-        &=\overrightarrow{OP}+2\cdot\overrightarrow{PH}\\[2mm]
-        &=\overrightarrow{OP}+2\cdot\left(\overrightarrow{OH}-\overrightarrow{OP}\right)\\[2mm]
-        &=\overrightarrow{OP}+2\cdot\overrightarrow{OH}-2\cdot\overrightarrow{OP}\\[2mm]
-        &=2\cdot\overrightarrow{OH}-\overrightarrow{OP}\\
-        &=2\cdot\left(\frac{-ac+b\cdot(bi-aj)}{a^2+b^2}~~,~~\frac{-bc-a\cdot(bi-aj)}{a^2+b^2}\right)-(i,j)
+        &=\overrightarrow{OP}+\overrightarrow{PQ}\\[3mm]
+        &=\overrightarrow{OP}+2\cdot\overrightarrow{PH}\\[3mm]
+        &=\overrightarrow{OP}+2\cdot\left(\overrightarrow{OH}-\overrightarrow{OP}\right)\\[3mm]
+        &=\overrightarrow{OP}+2\cdot\overrightarrow{OH}-2\cdot\overrightarrow{OP}\\[3mm]
+        &=2\cdot\overrightarrow{OH}-\overrightarrow{OP}\\[3mm]
+        &=2\cdot\left(\frac{-ac+b\cdot(bi-aj)}{a^2+b^2}~~,~~\frac{-bc-a\cdot(bi-aj)}{a^2+b^2}\right)-(i,j)\\[3mm]
+        &=\left(2\cdot\frac{-ac+b\cdot(bi-aj)}{a^2+b^2}-i~~,~~2\cdot\frac{-bc-a\cdot(bi-aj)}{a^2+b^2}-j\right)
+    \end{align}\\
+    进一步变形可以得到：
+    \begin{align}
+        \overrightarrow{OQ}
+        &=\left(\frac{-2ac+2b^2i-2abj}{a^2+b^2}-i~,~\frac{-2bc+2a^2j-abi}{a^2+b^2}-j\right)\\[3mm]
+        &=\left(\frac{-2ac+2b^2i-2abj-a^2i-b^2i}{a^2+b^2}~,~\frac{-2bc+2a^2j-2abi-a^2j-b^2j}{a^2+b^2}\right)\\[3mm]
+        &=\left(\frac{-2ac-2abj-a^2i+b^2i}{a^2+b^2}~,~\frac{-2bc-2abi-b^2j+a^2j}{a^2+b^2}\right)\\[3mm]
+        &=\left(\frac{-2a^2i-2abj-2ac+a^2i+b^2i}{a^2+b^2}~,~\frac{-2b^2j-2abi-2bc+b^2j+a^2j}{a^2+b^2}\right)\\[3mm]
+        &=\left(\frac{-2a\cdot(ai+bj+c)+i\cdot\left(a^2+b^2\right)}{a^2+b^2}~,~\frac{-2b\cdot(ai+bj+c)+j\cdot\left(a^2+b^2\right)}{a^2+b^2}\right)\\[3mm]
+        &=\left(i-\frac{2a\cdot(ai+bj+c)}{a^2+b^2}~,~j-\frac{2b\cdot(ai+bj+c)}{a^2+b^2}\right)
     \end{align}\\
     对称点$Q$的坐标：\vspace{5pt}
     \begin{large}
         \begin{equation*}
-            Q\left(2\cdot\frac{-ac+b\cdot(bi-aj)}{a^2+b^2}-i~~,~~2\cdot\frac{-bc-a\cdot(bi-aj)}{a^2+b^2}-j\right)
+            Q\left(i-\frac{2a\cdot(ai+bj+c)}{a^2+b^2}~,~j-\frac{2b\cdot(ai+bj+c)}{a^2+b^2}\right)
         \end{equation*}
     \end{large}
 

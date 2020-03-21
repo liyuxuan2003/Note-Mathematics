@@ -33,7 +33,12 @@
 \contentsline {subsubsection}{\numberline {1.5.7}三角形面积公式$22$}{24}% 
 \contentsline {subsection}{\numberline {1.6}三角形中的线段}{25}% 
 \contentsline {subsubsection}{\numberline {1.6.1}三角形内的线段长公式}{25}% 
-\contentsline {subsubsection}{\numberline {1.6.2}三角形中线长公式$01$}{27}% 
-\contentsline {subsubsection}{\numberline {1.6.3}三角形中线长公式$02$}{28}% 
-\contentsline {subsubsection}{\numberline {1.6.4}三角形角平分线长公式$01$}{29}% 
-\contentsline {subsubsection}{\numberline {1.6.5}三角形角平分线长公式$02$}{31}% 
+\contentsline {subsubsection}{\numberline {1.6.2}三角形中线长公式$01$}{28}% 
+\contentsline {subsubsection}{\numberline {1.6.3}三角形中线长公式$02$}{29}% 
+\contentsline {subsubsection}{\numberline {1.6.4}三角形角平分线长公式$01$}{30}% 
+\contentsline {subsubsection}{\numberline {1.6.5}三角形角平分线长公式$02$}{32}% 
+\contentsline {subsection}{\numberline {1.7}三角形中的点}{33}% 
+\contentsline {subsubsection}{\numberline {1.7.1}三角形内的点坐标公式}{33}% 
+\contentsline {subsubsection}{\numberline {1.7.2}三角形重心的坐标公式}{35}% 
+\contentsline {subsubsection}{\numberline {1.7.3}三角形外心的坐标表示}{36}% 
+\contentsline {subsubsection}{\numberline {1.7.4}三角形垂心的坐标表示}{37}% 

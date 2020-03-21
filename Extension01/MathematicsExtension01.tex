@@ -162,10 +162,6 @@
                 \tkzDrawSegments(B,C)
                 \tkzDrawSegments(C,A)
 
-                \tkzDefMidPoint(B,C) \tkzGetPoint{a}
-                \tkzDefMidPoint(C,A) \tkzGetPoint{b}
-                \tkzDefMidPoint(A,B) \tkzGetPoint{c}
-
                 \tkzDefLine[orthogonal=through A](B,C)
                 \tkzGetPoint{a}
                 \tkzInterLL(A,a)(B,C)
@@ -1028,6 +1024,9 @@
         &i_a~^2=\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\right)\\[4mm]
         &i_a=\sqrt{\frac{1}{\lambda+\mu}\cdot\left(\lambda b^2+\mu c^2-\frac{\lambda\cdot\mu\cdot a^2}{\lambda+\mu}\right)}
     \end{align}\\
+    之后可以使用该公式，推导三角形中线长和角平分线长。
+
+\newpage
 
 \subsubsection{三角形中线长公式$01$}
     三角形中线长公式$01$：
@@ -1180,6 +1179,254 @@
         &t_a=\frac{2\cdot b\cdot c}{b+c}\cdot\cos^2{\frac{A}{2}}
     \end{align}
 
+\newpage
 
+\subsection{三角形中的点}
+    本章将研究三角形中的点，并进行相应推导。
+
+\subsubsection{三角形内的点坐标公式}
+    三角形内的点坐标公式：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            W\left(\frac{S_a\cdot x_1+S_b\cdot x_2+S_c\cdot x_3}{S_\triangle}~,~\frac{S_a\cdot y_1+S_b\cdot y_2+S_c\cdot y_3}{S_\triangle}\right)
+        \end{equation*}
+    \end{large}\\
+    其中我们定义点的坐标如下：
+    \begin{large}
+        \begin{align*}
+            &A(x_1,y_1)\\[3mm]
+            &B(x_2,y_2)\\[3mm]
+            &C(x_3,y_3)
+        \end{align*}
+    \end{large}\\
+    其中我们定义三组面积如下：
+    \begin{large}
+        \begin{align*}
+            &S_a=S_{\triangle WBC}\\[3mm]
+            &S_b=S_{\triangle WCA}\\[3mm]
+            &S_c=S_{\triangle WAB}
+        \end{align*}
+    \end{large}
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzDefPoint(3,1){W}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[below](B)
+                \tkzLabelPoints[below](C)
+                \tkzLabelPoints[below](W)
+                
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments(B,C)
+                \tkzDrawSegments(C,A)
+
+                \tkzDrawSegments(W,A)
+                \tkzDrawSegments(W,B)
+                \tkzDrawSegments(W,C)
+
+                \tkzDefPoint(2.4,0.7){SA}
+                \tkzDefPoint(3.7,1.5){SB}
+                \tkzDefPoint(2.0,1.5){SC}
+
+                \tkzLabelPoint(SA){$S_a$}
+                \tkzLabelPoint(SB){$S_b$}
+                \tkzLabelPoint(SC){$S_c$}
+            \end{tikzpicture}
+            \caption{三角形内的点坐标公式示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+    根据四点共面定理可以得到：
+    \setcounter{equation}{0}
+    \begin{align}
+        x\cdot\overrightarrow{OA}+y\cdot\overrightarrow{OB}+z\cdot\overrightarrow{OC}=\overrightarrow{OW}~~~~~~~~(x+y+z=1)
+    \end{align}\\
+    不妨将点$W$作为任意点$O$：
+    \begin{align}
+        x\cdot\overrightarrow{WA}+y\cdot\overrightarrow{WB}+z\cdot\overrightarrow{WC}=\vec{0}~~~~~~~~~~~(x+y+z=1)
+    \end{align}\\
+    由于满足以下条件：
+    \begin{align}
+        \frac{S_a}{S_{\triangle}}+\frac{S_b}{S_{\triangle}}+\frac{S_c}{S_{\triangle}}=1
+    \end{align}\\
+    所以可以将其代入：
+    \begin{align}
+        &\frac{S_a}{S_{\triangle}}\cdot\overrightarrow{WA}+\frac{S_b}{S_{\triangle}}\cdot\overrightarrow{WB}+\frac{S_c}{S_{\triangle}}\cdot\overrightarrow{WC}=\vec{0}\\[4mm]
+        &S_a\cdot\overrightarrow{WA}+S_b\cdot\overrightarrow{WB}+S_c\cdot\overrightarrow{WC}=\vec{0}
+    \end{align}\\
+    从$x$坐标的角度考虑：
+    \begin{align}
+        &S_a\cdot(x_1-x_w)+S_b\cdot(x_2-x_w)+S_c\cdot(x_3-x_w)=0\\[3mm]
+        &S_a\cdot x_1+S_b\cdot x_2+S_c\cdot x_3-(S_a+S_b+S_c)\cdot x_w=0\\[3mm]
+        &S_a\cdot x_1+S_b\cdot x_2+S_c\cdot x_3=(S_a+S_b+S_c)\cdot x_w\\[3mm]
+        &S_a\cdot x_1+S_b\cdot x_2+S_c\cdot x_3=S_{\triangle}\cdot x_w\\[3mm]
+        &x_w=\frac{S_a\cdot x_1+S_b\cdot x_2+S_c\cdot x_3}{S_{\triangle}}
+    \end{align}\\
+    从$y$坐标的角度考虑：
+    \begin{align}
+        &S_a\cdot(y_1-y_w)+S_b\cdot(y_2-y_w)+S_c\cdot(y_3-y_w)=0\\[3mm]
+        &S_a\cdot y_1+S_b\cdot y_2+S_c\cdot y_3-(S_a+S_b+S_c)\cdot y_w=0\\[3mm]
+        &S_a\cdot y_1+S_b\cdot y_2+S_c\cdot y_3=(S_a+S_b+S_c)\cdot y_w\\[3mm]
+        &S_a\cdot y_1+S_b\cdot y_2+S_c\cdot y_3=S_{\triangle}\cdot y_w\\[3mm]
+        &y_w=\frac{S_a\cdot y_1+S_b\cdot y_2+S_c\cdot y_3}{S_{\triangle}}
+    \end{align}
+
+\newpage
+
+\subsubsection{三角形重心的坐标公式}
+    三角形重心的坐标公式：
+    \begin{large}
+        \begin{equation*}
+            G\left(\frac{x_1+x_2+x_3}{3}~,~\frac{y_1+y_2+y_3}{3}\right)
+        \end{equation*}
+    \end{large}\\
+    由于重心分中线长之比为$2:1$：
+    \setcounter{equation}{0}
+    \begin{align}
+        S_a=S_b=S_c=\frac{1}{3}\cdot S_{\triangle}
+    \end{align}\\
+    因此可以得到重心的坐标表示：\vspace{5pt}
+    \begin{align}
+        &G\left(\frac{S_a\cdot x_1+S_b\cdot x_2+S_c\cdot x_3}{S_\triangle}~,~\frac{S_a\cdot y_1+S_b\cdot y_2+S_c\cdot y_3}{S_\triangle}\right)\\[3mm]
+        &G\left(\frac{x_1+x_2+x_3}{3}~,~\frac{y_1+y_2+y_3}{3}\right)
+    \end{align}
+    \begin{figure}[htbp]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[left](B)
+                \tkzLabelPoints[right](C)
+                \tkzDrawSegments(A,B B,C C,A)
+            
+                \tkzDefMidPoint(B,C)
+                \tkzGetPoint{a}
+
+                \tkzDefBarycentricPoint(A=1,a=2)
+                \tkzGetPoint{G}
+                \tkzLabelPoints[below](G)
+            
+                \tkzDrawSegments(A,G);
+                \tkzDrawSegments(B,G);
+                \tkzDrawSegments(C,G);
+            \end{tikzpicture}
+            \caption{三角形外心的示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+\subsubsection{三角形外心的坐标表示}
+    三角形外心的坐标公式：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            O\left(\frac{\sin{2A}\cdot x_1+\sin{2B}\cdot x_2+\sin{2C}\cdot x_3}{\sin{2A}+\sin{2B}+\sin{2C}}~,~\frac{\sin{2A}\cdot y_1+\sin{2B}\cdot y_2+\sin{2C}\cdot y_3}{\sin{2A}+\sin{2B}+\sin{2C}}\right)
+        \end{equation*}
+    \end{large}\\
+    由于三角形面积满足以下条件：
+    \begin{align}
+        &S_a=\frac{1}{2}\cdot R^2\cdot\sin{2A}\\[3mm]
+        &S_b=\frac{1}{2}\cdot R^2\cdot\sin{2B}\\[3mm]
+        &S_c=\frac{1}{2}\cdot R^2\cdot\sin{2C}\\[3mm]
+        &S_{\triangle}=\frac{1}{2}\cdot R^2\cdot(\sin{2A}+\sin{2B}+\sin{2C})
+    \end{align}\\
+    因此可以得到外心的坐标表示：\vspace{5pt}
+    \begin{align}
+        &O\left(\frac{S_a\cdot x_1+S_b\cdot x_2+S_c\cdot x_3}{S_\triangle}~,~\frac{S_a\cdot y_1+S_b\cdot y_2+S_c\cdot y_3}{S_\triangle}\right)\\[3mm]
+        &O\left(\frac{\sin{2A}\cdot x_1+\sin{2B}\cdot x_2+\sin{2C}\cdot x_3}{\sin{2A}+\sin{2B}+\sin{2C}}~,~\frac{\sin{2A}\cdot y_1+\sin{2B}\cdot y_2+\sin{2C}\cdot y_3}{\sin{2A}+\sin{2B}+\sin{2C}}\right)
+    \end{align}
+    \begin{figure}[htbp]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[left](B)
+                \tkzLabelPoints[right](C)
+                \tkzDrawSegments(A,B B,C C,A)
+            
+                \tkzDefCircle[circum](A,B,C)
+                \tkzGetPoint{O}
+                \tkzLabelPoints[below](O)
+            
+                \tkzDrawSegments(A,O);
+                \tkzDrawSegments(B,O);
+                \tkzDrawSegments(C,O);
+            \end{tikzpicture}
+            \caption{三角形外心的示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+\subsubsection{三角形垂心的坐标表示}
+    三角形垂心的坐标表示：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            H\left(\frac{\tan{A}\cdot x_1+\tan{B}\cdot x_2+\tan{C}\cdot x_3}{\tan{A}+\tan{B}+\tan{C}}~,~\frac{\tan{A}\cdot y_1+\tan{B}\cdot y_2+\tan{C}\cdot y_3}{\tan{A}+\tan{B}+\tan{C}}\right)
+        \end{equation*}
+    \end{large}\\
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=5.5,ymin=-0.5,ymax=3.5]
+                \tkzClip
+                \tkzDefPoint(4,3){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(5,0){C}
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[left](B)
+                \tkzLabelPoints[right](C)
+                
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments(B,C)
+                \tkzDrawSegments(C,A)
+
+                \tkzDefLine[orthogonal=through A](B,C)
+                \tkzGetPoint{a}
+                \tkzInterLL(A,a)(B,C)
+                \tkzGetPoint{D}
+
+                \tkzDefLine[orthogonal=through B](C,A)
+                \tkzGetPoint{b}
+                \tkzInterLL(B,b)(C,A)
+                \tkzGetPoint{E}
+
+                \tkzDefLine[orthogonal=through C](A,B)
+                \tkzGetPoint{c}
+                \tkzInterLL(C,c)(A,B)
+                \tkzGetPoint{F}
+
+                \tkzDrawSegments(A,D)
+                \tkzDrawSegments(B,E)
+                \tkzDrawSegments(C,F)
+
+                \tkzMarkRightAngle[scale=0.5](A,D,B)
+                \tkzMarkRightAngle[scale=0.5](B,E,C)
+                \tkzMarkRightAngle[scale=0.5](C,F,B)
+
+                \tkzInterLL(A,D)(B,E)
+                \tkzGetPoint{h}
+
+                \tkzDefShiftPoint[h](-0.5,-0.1){H}
+                \tkzLabelPoints(H)
+            \end{tikzpicture}
+            \caption{三角形面积公式$02$示意图}
+        \end{center}
+    \end{figure}
 
 \end{document}
