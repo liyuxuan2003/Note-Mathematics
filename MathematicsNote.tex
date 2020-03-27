@@ -7675,6 +7675,61 @@
 
 \newpage
 
+\subsection{柱体的体积}
+    柱体的体积可以通过对柱体截面的积分得到。\\[3mm]
+    柱体截面面积$f(x)$关于截面至底面距离$x$的函数关系如下：
+    \setcounter{equation}{0}
+    \begin{align}
+        &f(x)=S
+    \end{align}\\
+    在上方的函数中，符号$S$表示柱体的底面积。\\[8mm]
+    对函数$f(x)$求解定积分可得：
+    \begin{align}
+        V
+        &=\int_0^h f(x)\cdot\dif x\\[4mm]
+        &=\int_0^h S\cdot\dif x\\[4mm]
+        &=[S\cdot x]_0^h\\[4mm]
+        &=S\cdot h
+    \end{align}\\
+    柱体的体积公式：
+    \begin{large}
+        \begin{equation*}
+            V=S\cdot h
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{锥体的体积}
+    锥体的体积可以通过对锥体截面的积分得到。\\[3mm]
+    锥体截面面积$f(x)$关于截面至底面距离$x$的函数关系如下：
+    \setcounter{equation}{0}
+    \begin{align}
+        f(x)=S\cdot\frac{(h-x)^2}{h^2}
+    \end{align}\\
+    在上方的函数中，符号$S$代表锥体的底面积，符号$h$代表锥体的高。\\[8mm]
+    对函数$f(x)$求解定积分可得：\vspace{3pt}
+    \begin{align}
+        V
+        &=\int_0^h f(x)\cdot\dif x\\[4mm]
+        &=\int_0^h S\cdot\frac{(h-x)^2}{h^2}\cdot\dif x\\[4mm]
+        &=\frac{S}{h^2}\cdot\int_0^h (h-x)^2\cdot\dif x\\[4mm]
+        &=\frac{S}{h^2}\cdot\int_0^h \left(h^2-2hx+x^2\right)\cdot\dif x\\[4mm]
+        &=\frac{S}{h^2}\cdot\left(\int_0^h h^2\cdot\dif x+\int_0^h -2hx\cdot\dif x+\int_0^h x^2\cdot\dif x\right)\\[4mm]
+        &=\frac{S}{h^2}\cdot\left([h^2\cdot x]_0^h+[-hx^2]_0^h+\left[\frac{1}{3}\cdot x^3\right]_0^h\right)\\[4mm]
+        &=\frac{S}{h^2}\cdot\left(h^3-h^3+\frac{1}{3}\cdot h^3\right)\\[4mm]
+        &=\frac{S}{h^2}\cdot\frac{1}{3}\cdot h^3\\[4mm]
+        &=\frac{1}{3}\cdot S\cdot h
+    \end{align}\\
+    锥体的体积公式：
+    \begin{large}
+        \begin{equation*}
+            V=\frac{1}{3}\cdot S\cdot h
+        \end{equation*}
+    \end{large}
+
+\newpage
+
 \subsection{球}
     \textbf{球：}一个半圆绕直径旋转一周所形成的几何体。\\[3mm]
     下表列出了球的相关概念：\vspace{5pt}
@@ -7786,58 +7841,59 @@
 
 \newpage
 
-\subsection{柱体的体积}
-    柱体的体积可以通过对柱体截面的积分得到。\\[3mm]
-    柱体截面面积$f(x)$关于截面至底面距离$x$的函数关系如下：
-    \setcounter{equation}{0}
-    \begin{align}
-        &f(x)=S
-    \end{align}\\
-    在上方的函数中，符号$S$表示柱体的底面积。\\[8mm]
-    对函数$f(x)$求解定积分可得：
-    \begin{align}
-        V
-        &=\int_0^h f(x)\cdot\dif x\\[4mm]
-        &=\int_0^h S\cdot\dif x\\[4mm]
-        &=[S\cdot x]_0^h\\[4mm]
-        &=S\cdot h
-    \end{align}\\
-    柱体的体积公式：
-    \begin{large}
-        \begin{equation*}
-            V=S\cdot h
-        \end{equation*}
-    \end{large}
+\subsubsection{球面距离}
 
-\newpage
+    \begin{figure}[h!]
+        \begin{center}
+            \qquad\qquad
+            \begin{tikzpicture}
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(3,0){R}
+                \tkzDrawCircle(O,R)
+                \draw[solid] (-3,0) arc (180:360:3 and 1.06);
+                \draw[dashed] (3,0) arc (0:180:3 and 1.06);
+                \draw[solid] (-2.24,2) arc (180:360:2.24 and 0.6);
+                \draw[dashed] (2.20,2) arc (5:175:2.22 and 0.6);
+                \tkzDefPoint(5,0){x}
+                \tkzDefPoint(-3,-3){y}
+                \tkzDefPoint(0,5){z}
+                \tkzDrawSegments[->](O,x)
+                \tkzDrawSegments[->](O,y)
+                \tkzDrawSegments[->](O,z)
+                \tkzLabelPoints[left](O)
+                \tkzLabelPoints[above](x)
+                \tkzLabelPoints[left](y)
+                \tkzLabelPoints[right](z)
 
-\subsection{锥体的体积}
-    锥体的体积可以通过对锥体截面的积分得到。\\[3mm]
-    锥体截面面积$f(x)$关于截面至底面距离$x$的函数关系如下：
-    \setcounter{equation}{0}
-    \begin{align}
-        f(x)=S\cdot\frac{(h-x)^2}{h^2}
-    \end{align}\\
-    在上方的函数中，符号$S$代表锥体的底面积，符号$h$代表锥体的高。\\[8mm]
-    对函数$f(x)$求解定积分可得：\vspace{3pt}
-    \begin{align}
-        V
-        &=\int_0^h f(x)\cdot\dif x\\[4mm]
-        &=\int_0^h S\cdot\frac{(h-x)^2}{h^2}\cdot\dif x\\[4mm]
-        &=\frac{S}{h^2}\cdot\int_0^h (h-x)^2\cdot\dif x\\[4mm]
-        &=\frac{S}{h^2}\cdot\int_0^h \left(h^2-2hx+x^2\right)\cdot\dif x\\[4mm]
-        &=\frac{S}{h^2}\cdot\left(\int_0^h h^2\cdot\dif x+\int_0^h -2hx\cdot\dif x+\int_0^h x^2\cdot\dif x\right)\\[4mm]
-        &=\frac{S}{h^2}\cdot\left([h^2\cdot x]_0^h+[-hx^2]_0^h+\left[\frac{1}{3}\cdot x^3\right]_0^h\right)\\[4mm]
-        &=\frac{S}{h^2}\cdot\left(h^3-h^3+\frac{1}{3}\cdot h^3\right)\\[4mm]
-        &=\frac{S}{h^2}\cdot\frac{1}{3}\cdot h^3\\[4mm]
-        &=\frac{1}{3}\cdot S\cdot h
-    \end{align}\\
-    锥体的体积公式：
-    \begin{large}
-        \begin{equation*}
-            V=\frac{1}{3}\cdot S\cdot h
-        \end{equation*}
-    \end{large}
+                \tkzDefPoint(2.24,2){A}
+                \tkzDefPoint(0,2){B}
+                \tkzDefPoint(1.5,2.40){C}
+                
+                \tkzDrawSegments[dashed](B,A)
+                \tkzDrawSegments[dashed](B,C)
+                \tkzDrawSegments[dashed](A,O)
+                
+                \tkzLabelPoints[right](A);
+                \tkzLabelPoints[left](B);
+                \tkzLabelPoints[above right](C);
+
+                \tkzDefPoint(2.24,0){H}
+                \tkzDrawSegments[dashed](A,H)
+                \tkzLabelPoints[below](H)
+
+                \tkzMarkAngle[size=0.5](A,B,C)
+                \tkzMarkAngle[size=0.3](H,O,A)
+                \tkzMarkRightAngle[scale=0.75](x,H,A)
+
+                \tkzDefPoint(0.7,2.35){alpha}
+                \tkzDefPoint(0.4,0.55){beta}
+                
+                \tkzLabelPoint(alpha){$\alpha$}
+                \tkzLabelPoint(beta){$\beta$}
+            \end{tikzpicture}
+            \caption{球面距离的示意图}
+        \end{center}
+    \end{figure}
 
 \newpage
 
