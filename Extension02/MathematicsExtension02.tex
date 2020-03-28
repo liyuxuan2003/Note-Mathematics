@@ -71,6 +71,13 @@
             \begin{tabular}{l|l}
                 \hline
                 符号~~~~~~~~&含义~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\ \hline
+                $a$&棱$OA$的长度\\ \hline
+                $b$&棱$OB$的长度\\ \hline
+                $c$&棱$OC$的长度\\ \hline
+                $S$&底面$ABC$的长度\\ \hline
+                $S_a$&侧面$OBC$的长度\\ \hline
+                $S_b$&侧面$OCA$的长度\\ \hline
+                $S_c$&侧面$OAB$的长度\\ \hline
                 $\alpha$&线线角（直线$OB$和直线$OC$所成角）\\ \hline
                 $\beta$&线线角（直线$OC$和直线$OA$所成角）\\ \hline
                 $\gamma$&线线角（直线$OA$和直线$OB$所成角）\\ \hline
@@ -85,9 +92,9 @@
         \end{center}
     \end{table}\\
     我们将下方图片所示的四面体作为参考：
-    \begin{figure}[h]
+    \begin{figure}[h!]
         \begin{center}
-            \begin{tikzpicture}
+            \begin{tikzpicture}[scale=0.85]
                 \tkzInit[xmin=-0.5,xmax=8.5,ymin=-1.5,ymax=4.5]
                 \tkzClip
                 \tkzDefPoint(5,-1){A}
@@ -110,7 +117,7 @@
             \end{tikzpicture}
             \caption{四面体的示意图}
         \end{center}
-    \end{figure}\\
+    \end{figure}
 
 \newpage
 
@@ -364,7 +371,7 @@
                 \tkzDrawSegments[dashed](A,P)
                 \tkzDrawSegments[dashed](O,P)
 
-                \tkzDefBarycentricPoint(O=3,C=7)
+                \tkzDefBarycentricPoint(O=4,C=6)
                 \tkzGetPoint{H}
                 \tkzLabelPoints[below left](H)
 
@@ -436,7 +443,143 @@
         &\sin{\theta_a}\cdot\sin{\alpha}=k
     \end{align}
 
+\newpage
 
+\subsection{四面体的体积公式}
+    本章将研究四面体的体积公式，并进行相应推导。
+
+\subsubsection{四面体体积公式$01$}
+    四面体体积公式$01$：
+    \begin{large}
+        \begin{equation*}
+            V=\frac{1}{3}\cdot S\cdot h
+        \end{equation*}
+    \end{large}\vspace{-10pt}
+
+\subsubsection{四面体体积公式$02$}
+    四面体体积公式$02$：
+    \begin{large}
+        \begin{align*}
+            V=\frac{2}{3}\cdot\frac{S_b\cdot S_c}{a}\cdot\sin{A}\\[4mm]
+            V=\frac{2}{3}\cdot\frac{S_c\cdot S_a}{b}\cdot\sin{B}\\[4mm]
+            V=\frac{2}{3}\cdot\frac{S_a\cdot S_b}{c}\cdot\sin{C}
+        \end{align*}
+    \end{large}\\
+    通过以下推导可以得出：
+    \setcounter{equation}{0}
+    \begin{align}
+        V
+        &=\frac{1}{3}\cdot S_a\cdot AP\\[4mm]
+        &=\frac{1}{3}\cdot S_a\cdot AH\cdot\sin{C}\\[4mm]
+        &=\frac{1}{3}\cdot S_a\cdot \frac{2\cdot S_b}{OC}\cdot\sin{C}
+    \end{align}\vspace{-10pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=6.9,ymin=-1.5,ymax=3.7]
+                \tkzClip
+                \tkzDefPoint(4,-0.8){C}
+                \tkzDefPoint(6.4,0.4){B}
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(3.2,3.2){A}
+
+                \tkzLabelPoints[above](A)
+                \tkzLabelPoints[right](B)
+                \tkzLabelPoints[below](C)
+                \tkzLabelPoints[left](O)
+
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments(B,C)
+                \tkzDrawSegments(C,A)
+                \tkzDrawSegments(O,A)
+                \tkzDrawSegments[dashed](O,B)
+                \tkzDrawSegments(O,C)
+
+                \tkzDefPoint(3.2,-0.2){P}
+                \tkzLabelPoints[right](P)
+
+                \tkzDrawSegments[dashed](A,P)
+
+                \tkzDefBarycentricPoint(O=4,C=6)
+                \tkzGetPoint{H}
+                \tkzLabelPoints[below left](H)
+
+                \tkzDrawSegments[dashed](P,H)
+                \tkzDrawSegments(A,H)
+            \end{tikzpicture}
+            \caption{四面体体积公式$02$示意图}
+        \end{center}
+    \end{figure}
+
+\newpage
+
+\subsubsection{四面体体积公式$03$}
+    四面体体积公式$03$：
+    \begin{large}
+        \begin{equation*}
+            V=\frac{1}{6}\cdot a\cdot b\cdot c\cdot k
+        \end{equation*}
+    \end{large}\\
+    其中代换变量$k$的取值为：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            k=\sqrt{1-\cos^2{\alpha}-\cos^2{\beta}-\cos^2{\gamma}+2\cdot\cos{\alpha}\cdot\cos{\beta}\cdot\cos{\gamma}}
+        \end{equation*}
+    \end{large}\\[3mm]
+    显然可以将面积表示为：
+    \setcounter{equation}{0}
+    \begin{align}
+        &S_b=\frac{1}{2}\cdot a\cdot c\cdot\sin{\beta}\\[3mm]
+        &S_c=\frac{1}{2}\cdot a\cdot b\cdot\sin{\gamma}
+    \end{align}\\
+    将上述结论代入公式$02$：\vspace{3pt}
+    \begin{align}
+        V
+        &=\frac{2}{3}\cdot\frac{S_b\cdot S_c}{a}\cdot\sin{A}\\[3mm]
+        &=\frac{2}{3}\cdot\frac{1}{a}\cdot\left(\frac{1}{2}\cdot a\cdot c\cdot\sin{\beta}\right)\cdot\left(\frac{1}{2}\cdot a\cdot b\cdot\sin{\gamma}\right)\cdot\sin{A}\\[3mm]
+        &=\frac{1}{6}\cdot a\cdot b\cdot c\cdot\sin{\beta}\cdot\sin{\gamma}\cdot\sin{A}\\[3mm]
+        &=\frac{1}{6}\cdot a\cdot b\cdot c\cdot k
+    \end{align}
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzInit[xmin=-0.5,xmax=6.9,ymin=-1.5,ymax=3.7]
+                \tkzClip
+                \tkzDefPoint(4,-0.8){A}
+                \tkzDefPoint(6.4,0.4){B}
+                \tkzDefPoint(0,0){C}
+                \tkzDefPoint(3.2,3.2){O}
+
+                \tkzLabelPoints[below](A)
+                \tkzLabelPoints[right](B)
+                \tkzLabelPoints[left](C)
+                \tkzLabelPoints[above](O)
+
+                \tkzDrawSegments(A,B)
+                \tkzDrawSegments[dashed](B,C)
+                \tkzDrawSegments(C,A)
+                \tkzDrawSegments(O,A)
+                \tkzDrawSegments(O,B)
+                \tkzDrawSegments(O,C)
+
+                \tkzDefBarycentricPoint(O=9,A=1)
+                \tkzGetPoint{M}
+
+                \tkzDefBarycentricPoint(O=15,C=1)
+                \tkzGetPoint{N}
+
+                \tkzDrawArc[color=black](O,M)(E)
+                \tkzDrawArc[color=black](O,N)(D)
+
+                \tkzDefShiftPoint[O](-150:0.45){b}
+                \tkzLabelPoint(b){$\beta$}
+
+                \tkzDefShiftPoint[O](-80:0.3){g}
+                \tkzLabelPoint(g){$\gamma$}
+            \end{tikzpicture}
+            \caption{四面体体积公式$03$示意图}
+        \end{center}
+    \end{figure}
 
 
 \end{document}

@@ -7842,7 +7842,30 @@
 \newpage
 
 \subsubsection{球面距离}
-
+    定义在$xOy$平面上，指向$y$正半轴方向的为东经，指向$y$负半轴方向的为西经。\\[3mm]
+    定义在$xOz$平面上，指向$z$正半轴方向的为北纬，指向$z$负半轴方向的为南纬。\\[3mm]
+    记经度为$\alpha$，东经取正，西经取负，记纬度为$\beta$，北纬取正，南纬取负。\\[5mm]
+    图中点$C$为所求点，大圆半径为$R$，小圆的半径为$r$：
+    \setcounter{equation}{0}
+    \begin{align}
+        r
+        &=OA\cdot\cos{\beta}\\[2mm]
+        &=R\cdot\cos{\beta}
+    \end{align}\\
+    根据单位圆的理论可以解得：
+    \begin{align}
+        &x
+        =r\cdot \cos{\alpha}
+        =R\cdot\cos{\beta}\cdot\cos{\alpha}\\[2mm]
+        &y
+        =r\cdot \sin{\alpha}
+        =R\cdot\cos{\beta}\cdot\sin{\alpha}
+    \end{align}\\
+    根据三角比的关系可以得到：
+    \begin{align}
+        z
+        &=R\cdot\cos{\beta}
+    \end{align}
     \begin{figure}[h!]
         \begin{center}
             \qquad\qquad
@@ -7894,6 +7917,32 @@
             \caption{球面距离的示意图}
         \end{center}
     \end{figure}
+
+\newpage
+
+    经纬度坐标和直角坐标的转换公式：\vspace{5pt}
+    \begin{large}
+        \begin{align*}
+            \begin{cases}
+                &x=R\cdot\cos{\beta}\cdot\cos{\alpha}\\[2mm]
+                &y=R\cdot\cos{\beta}\cdot\sin{\alpha}\\[2mm]
+                &z=R\cdot\cos{\beta}
+            \end{cases}
+        \end{align*}
+    \end{large}\\
+    求解球面距离时，第一步可以通过上述方法先将经纬度坐标转换为直角坐标。\\[3mm]
+    求解球面距离时，第二步可以通过向量的方法求出大圆上的角度差。\\[5mm]
+    设球面上的点$A$和点$B$，设$\theta=\angle AOB$：\vspace{3pt}
+    \begin{align}
+        \cos{\theta}
+        &=\frac{\overrightarrow{OA}\cdot\overrightarrow{OB}}{|\overrightarrow{OA}|\cdot|\overrightarrow{OB}|}\\[4mm]
+        &=\frac{\overrightarrow{OA}\cdot\overrightarrow{OB}}{R^2}
+    \end{align}\\
+    使用反三角函数解出$\theta$，求解弧长$d$：
+    \begin{align}
+        d=\theta\cdot R
+    \end{align}\\
+    得到的弧长$l$就是所求的$AB$两点间的球面距离。
 
 \newpage
 

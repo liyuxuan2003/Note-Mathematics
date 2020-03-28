@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  13 MAR 2020 13:46
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  28 MAR 2020 23:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1031,28 +1031,23 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <10.53937> not
 LaTeX Font Warning: Font shape `TU/等线(0)/m/sl' undefined
 (Font)              using `TU/等线(0)/m/n' instead on input line 60.
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 67--114
+[2] [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
 
  []
 
-[3] [4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
-
- []
-
-[7] [8] [9] [10] [11] (./MathematicsExtension02.aux)
+[7] [8] [9] [10] [11] [12] [13] (./MathematicsExtension02.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 41814 strings out of 492922
- 1034344 string characters out of 6136751
+ 41816 strings out of 492922
+ 1034398 string characters out of 6136751
  1185566 words of memory out of 5000000
- 45159 multiletter control sequences out of 15000+600000
+ 45161 multiletter control sequences out of 15000+600000
  546552 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 62i,11n,96p,781b,828s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,11n,96p,781b,842s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MathematicsExtension02.pdf (11 pages).
+Output written on MathematicsExtension02.pdf (13 pages).
