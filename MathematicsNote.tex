@@ -7949,18 +7949,12 @@
 \section{排列组合}
 
 \subsection{乘法原理}
-    乘法原理：如果完成一件事总共有$n$个步骤，其中第$i$个步骤有$m_i$种不同的方法，那么完成这件事共有$N$种方法。
+    乘法原理：如果完成一件事总共有$n$个步骤，其中第$i$个步骤有$m_i$种不同的方法，\\
+    那么完成这件事共有$N$种方法。\\[3mm]
+    乘法原理的数学表达：
     \begin{large}
         \begin{equation*}
             N=\prod_{i=1}^{n}m_i
-        \end{equation*}
-    \end{large}
-
-\subsection{加法原理}
-    加法原理：如果完成一件事总共有$n$类办法，其中第$i$个办法有$m_i$种不同的方法，那么完成这件事共有$N$种方法。
-    \begin{large}
-        \begin{equation*}
-            N=\sum_{i=1}^{n}m_i
         \end{equation*}
     \end{large}
 
@@ -7971,7 +7965,9 @@
         \begin{equation*}
             \mathrm{P}_n^m\qquad(m\leq n)
         \end{equation*}
-    \end{large}\\
+    \end{large}
+
+\subsubsection{排列数公式的累乘形式}
     从$4$个不同元素中取出$3$个元素，显然其排列数：
     \begin{equation*}
         \mathrm{P}_4^3=\underbrace{4\times 3\times 2}_{\text{共}\,3\,\text{项}}
@@ -7984,25 +7980,244 @@
     排列数公式（累乘形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\underbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}_{\text{共}\,m\,\text{项}}=\hspace{-5pt}\prod_{i=n-m+1}^n i
+            \mathrm{P}_n^m=\underbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}_{\text{共}\,m\,\text{项}}=\hspace{-5pt}\prod\nolimits_{i=n-m+1}^n~i
         \end{equation*}
     \end{large}
 
 \newpage
 
+\subsubsection{排列数公式的阶乘形式}
     通过以下推导，我们可以得出排列数公式的另一种形式：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
         \mathrm{P}_n^m~
-        &=\prod_{i=n-m+1}^n i\\[8mm]
-        &=~\frac{\left[\prod\limits_{i=n-m+1}^n i\right]\cdot\prod\limits_{i=1}^{n-m} i}{\prod\limits_{i=1}^{n-m} i}\\[2mm]
-        &=~\frac{~\prod\limits_{i=1}^{n}i~}{\,\prod\limits_{i=1}^{n-m} i}\\[6mm]
-        &=~\frac{n!}{(n-m)!}
+        &=\prod\nolimits_{i=n-m+1}^n~i\\[4mm]
+        &=\frac{\left[\prod_{i=n-m+1}^n~i\right]\cdot\prod_{i=1}^{n-m}~i}{\prod_{i=1}^{n-m}~i}\\[4mm]
+        &=\frac{\prod_{i=1}^{n}~i}{~\prod_{i=1}^{n-m}~i~}\\[4mm]
+        &=\frac{n!}{(n-m)!}
     \end{align}\\
     排列数公式（阶乘形式）：
     \begin{large}
         \begin{equation*}
             \mathrm{P}_n^m=\frac{n!}{(n-m)!}
+        \end{equation*}
+    \end{large}\\
+    特别的，当排列数中$m=1$时：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^1=n
+        \end{equation*}
+    \end{large}\\
+    特别的，当排列数中$m=n$时：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^n=n!
+        \end{equation*}
+    \end{large}
+
+\subsubsection{排列数公式$01$}
+    排列数公式$01$：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+        \end{equation*}
+    \end{large}\\
+    由排列数公式的阶乘形式可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\frac{n!}{(n-m)!}\\[3mm]
+        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    该排列数公式非常重要，是后续所有排列数公式推导的基础。
+
+\newpage
+
+\subsubsection{排列数公式$02$}
+    排列数公式$02$（强化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^n=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}
+        \end{equation*}
+    \end{large}\\
+    排列数公式$02$（弱化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^n=n\cdot\mathrm{P}_{n-1}^{n-1}
+        \end{equation*}
+    \end{large}\\
+    由排列数公式$01$变形可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{P}_n^k&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-k}^{n-k}}\\[3mm]
+        \mathrm{P}_n^n&=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}
+    \end{align}\\
+    特别的，令$k=1$可以得到：
+    \begin{align}
+        \mathrm{P}_n^n
+        &=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}\\[3mm]
+        &=\mathrm{P}_n^1\cdot\mathrm{P}_{n-1}^{n-1}\\[3mm]
+        &=n\cdot\mathrm{P}_{n-1}^{n-1}
+    \end{align}
+
+\newpage
+
+\subsubsection{排列数公式$03$}
+    排列数公式$03$（强化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{m-k}
+        \end{equation*}
+    \end{large}\\
+    排列数公式$03$（弱化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=n\cdot\mathrm{P}_{n-1}^{m-1}
+        \end{equation*}
+    \end{large}\\
+    将排列数公式$01$代入可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{P}_n^m&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    将排列数公式$02$代入可得：
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\frac{\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{n-m}^{n-m}}\\[3mm]
+        &=\mathrm{P}_n^k\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{n-m}^{n-m}}\\[3mm]
+        &=\mathrm{P}_n^k\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{(n-k)-(m-k)}^{(n-k)-(m-k)}}\\[3mm]
+        &=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{m-k}
+    \end{align}\\
+    特别的，令$k=1$可以得到：
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{m-k}\\[3mm]
+        &=\mathrm{P}_n^1\cdot\mathrm{P}_{n-1}^{m-1}\\[3mm]
+        &=n\cdot\mathrm{P}_{n-1}^{m-1}
+    \end{align}
+
+\newpage
+
+\subsubsection{排列数公式$04$}
+    排列数公式$04$（强化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n-k}^{m}
+        \end{equation*}
+    \end{large}\\
+    排列数公式$04$（弱化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=\frac{n}{n-m}\cdot\mathrm{P}_{n-k}^{m}
+        \end{equation*}
+    \end{large}\\
+    将排列数公式$01$代入可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{P}_n^m&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    将排列数公式$02$代入可得：
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n-k}^{m}
+    \end{align}\\
+    特别的，令$k=1$可以得到：
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n-k}^{m}\\[3mm]
+        &=\frac{\mathrm{P}_n^1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{P}_{n-1}^{m}\\[3mm]
+        &=\frac{n}{n-m}\cdot\mathrm{P}_{n-1}^{m}
+    \end{align}
+
+\newpage
+
+\subsubsection{排列数公式$05$}
+    排列数公式$05$（强化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n}^{m+k}
+        \end{equation*}
+    \end{large}\\
+    排列数公式$05$（弱化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=\frac{1}{n-m}\cdot\mathrm{P}_{n}^{m+1}
+        \end{equation*}
+    \end{large}\\
+    将排列数公式$01$代入可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{P}_n^m&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    将排列数公式$02$代入可得：
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_{n}^{n}}{\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
+        &=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n}^{m+k}
+    \end{align}\\
+    特别的，令$k=1$可以得到：
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n}^{m+k}\\[3mm]
+        &=\frac{1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{P}_{n}^{m+1}\\[3mm]
+        &=\frac{1}{n-m}\cdot\mathrm{P}_{n}^{m+1}
+    \end{align}
+
+\newpage
+
+\subsubsection{排列数公式$06$}
+    排列数公式$06$：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_n^m=\mathrm{P}_{n+1}^m-m\cdot\mathrm{P}_n^{m-1}
+        \end{equation*}
+    \end{large}\\
+    将排列数公式$04$进行递推可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        &\mathrm{P}_n^m=\frac{n}{n-m}\cdot\mathrm{P}_{n-1}^{m}\\[3mm]
+        &\mathrm{P}_{n+1}^m=\frac{n+1}{n-m+1}\cdot\mathrm{P}_{n}^{m}
+    \end{align}\\
+    将排列数公式$05$进行递推可得：
+    \begin{align}
+        &\mathrm{P}_n^m=\frac{1}{n-m}\cdot\mathrm{P}_{n}^{m+1}\\[3mm]
+        &\mathrm{P}_n^{m-1}=\frac{1}{n-m+1}\cdot\mathrm{P}_{n}^{m}
+    \end{align}\\
+    进行一些变形可以得到：
+    \begin{align}
+        \mathrm{P}_n^m
+        &=\frac{n-m+1}{n-m+1}\cdot\mathrm{P}_n^m\\[3mm]
+        &=\frac{n+1}{n-m+1}\cdot\mathrm{P}_n^m-\frac{m}{n-m+1}\cdot\mathrm{P}_n^m\\[3mm]
+        &=\frac{n+1}{n-m+1}\cdot\mathrm{P}_n^m-m\cdot\frac{1}{n-m+1}\cdot\mathrm{P}_n^m\\[3mm]
+        &=\mathrm{P}_n^m=\mathrm{P}_{n+1}^m-m\cdot\mathrm{P}_n^{m-1}
+    \end{align}\vspace{5pt}
+
+\subsubsection{排列数公式$07$}
+    排列数公式$07$：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{P}_{b+c}^{a+c}=\mathrm{P}_b^a\cdot\mathrm{P}_{b+c}^c
+        \end{equation*}
+    \end{large}\\
+    将排列数公式$01$代入可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{P}_b^a\cdot\mathrm{P}_{b+c}^c
+        &=\frac{\mathrm{P}_b^b}{\mathrm{P}_{b-a}^{b-a}}\cdot\frac{\mathrm{P}_{b+c}^{b+c}}{\mathrm{P}_b^b}\\[3mm]
+        &=\frac{\mathrm{P}_{b+c}^{b+c}}{\mathrm{P}_{b-a}^{b-a}}\\[3mm]
+        &=\mathrm{P}_{b+c}^{a+c}
+    \end{align}
+
+\newpage
+
+\subsection{加法原理}
+    加法原理：如果完成一件事总共有$n$类办法，其中第$i$个办法有$m_i$种不同的方法，\\
+    那么完成这件事共有$N$种方法。\\[3mm]
+    加法原理的数学表达：
+    \begin{large}
+        \begin{equation*}
+            N=\sum_{i=1}^{n}m_i
         \end{equation*}
     \end{large}
 
@@ -8013,8 +8228,10 @@
         \begin{equation*}
             \mathrm{C}_n^m\qquad(m\leq n)
         \end{equation*}
-    \end{large}\\
-    对于一个组合数$\mathrm{C}_n^m$，其中每一个组合的元素个数位$m$个，\\[2mm]
+    \end{large}
+
+\subsubsection{组合数公式的累乘形式}
+    对于一个组合数$\mathrm{C}_n^m$，其中每一个组合的元素个数为$m$个，\\[2mm]
     所以对于每一个组合，其在排列数$\mathrm{P}_n^m$中均会变为$\mathrm{P}_m^m$种不同的排列方式。\\[4mm]
     组合数和排列数的关系：
     \begin{large}
@@ -8025,19 +8242,20 @@
     组合数公式（累乘形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\overbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}^{\text{共}\,m\,\text{项}}}{\underbrace{m\times(m-1)\times(m-2)\times\cdots\times 1}_{\text{共}\,m\,\text{项}}}=\frac{~\prod\limits_{i=n-m+1}^{n}i~}{\,\prod\limits_{i=1}^{m}i}
+            \mathrm{C}_n^m=\frac{\overbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}^{\text{共}\,m\,\text{项}}}{\underbrace{m\times(m-1)\times(m-2)\times\cdots\times 1}_{\text{共}\,m\,\text{项}}}=\frac{~\prod_{i=n-m+1}^{n}~i~}{\,\prod_{i=1}^{m}~i}
         \end{equation*}
     \end{large}
     
 \newpage
 
+\subsubsection{组合数公式的阶乘形式}
     通过以下推导，我们可以得出排组合数公式的另一种形式：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
         \mathrm{C}_n^m~
-        &=~\frac{~\prod\limits_{i=n-m+1}^{n}i~}{\,\prod\limits_{i=1}^{m}i}\\[4mm]
-        &=~\frac{\left[\prod\limits_{i=n-m+1}^n i\right]\cdot\prod\limits_{i=1}^{n-m} i}{\prod\limits_{i=1}^{m}i\cdot\prod\limits_{i=1}^{n-m} i}\\[4mm]
-        &=~\frac{\prod\limits_{i=1}^{n}i}{~\prod\limits_{i=1}^{m}i\cdot\prod\limits_{i=1}^{n-m} i~}\\[4mm]
+        &=~\frac{~\prod_{i=n-m+1}^{n}i~}{\,\prod_{i=1}^{m}i}\\[4mm]
+        &=~\frac{\left[\prod_{i=n-m+1}^n~i\right]\cdot\prod_{i=1}^{n-m}~i}{\prod_{i=1}^{m}~i\cdot\prod_{i=1}^{n-m}~i}\\[4mm]
+        &=~\frac{\prod_{i=1}^{n}~i}{~\prod_{i=1}^{m}~i\cdot\prod_{i=1}^{n-m}~i~}\\[4mm]
         &=~\frac{n!}{m!~(n-m)!}
     \end{align}\\
     组合数公式（阶乘形式）：
