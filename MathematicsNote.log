@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  4 APR 2020 23:23
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  5 APR 2020 10:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1613,7 +1613,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 7734--7750
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] (./MathematicsNote.aux)
+ [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201]
+Underfull \hbox (badness 10000) in paragraph at lines 8446--8448
+
+ []
+
+[202] [203] [204] [205] (./MathematicsNote.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1627,4 +1632,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  74i,21n,150p,762b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MathematicsNote.pdf (201 pages).
+Output written on MathematicsNote.pdf (205 pages).

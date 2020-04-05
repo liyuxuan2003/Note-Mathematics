@@ -8263,47 +8263,188 @@
         \begin{equation*}
             \mathrm{C}_n^m=\frac{n!}{m!~(n-m)!}
         \end{equation*}
-    \end{large}
-
-\subsubsection{组合数性质$1$}
-    组合数性质$1$：
+    \end{large}\\
+    特别的，当组合数中$m=1$时：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_{n}^{m}=\mathrm{C}_{n}^{n-m}
+            \mathrm{C}_n^1=n
         \end{equation*}
     \end{large}\\
-    证明如下：
+    特别的，当组合数中$m=n$时：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^n=1
+        \end{equation*}
+    \end{large}
+
+\subsubsection{组合数公式$01$}
+    组合数公式$01$：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+        \end{equation*}
+    \end{large}\\
+    由组合数公式的阶乘形式可得：
     \setcounter{equation}{0}
     \begin{align}
         \mathrm{C}_n^m
-        &=\frac{n!}{m!~(n-m)!}\\[3mm]
-        &=\frac{n!}{\left[n-n+m\right]!~(n-m)!}\\[3mm]
-        &=\frac{n!}{\left[n-(n-m)\right]!~(n-m)!}\\[3mm]
-        &=\mathrm{C}_{n}^{n-m}
+        &=\frac{n!}{m!(n-m)!}\\[3mm]
+        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    该组合数公式非常重要，是后续所有组合数公式推导的基础。
+
+\newpage
+
+\subsubsection{组合数公式$02$}
+    组合数公式$02$（强化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
+        \end{equation*}
+    \end{large}\\
+    组合数公式$02$（弱化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\frac{n}{m}\cdot\mathrm{C}_{n-1}^{m-1}
+        \end{equation*}
+    \end{large}\\
+    将组合数公式$01$代入可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    将排列数公式$02$代入可得：
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{m-k}^{m-k}\cdot\mathrm{P}_{n-m}^{n-m}}\\[3mm]
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
+    \end{align}\\
+    特别的，令$k=1$可以得到：
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
+        &=\frac{\mathrm{P}_n^1}{\mathrm{P}_m^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
+        &=\frac{n}{m}\cdot\mathrm{C}_{n-1}^{m-1}
     \end{align}
 
 \newpage
 
-\subsubsection{组合数性质$2$}
-    组合数性质$2$：
+\subsubsection{组合数公式$03$}
+    组合数公式$03$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_{n}^{m}+\mathrm{C}_{n}^{m-1}=\mathrm{C}_{n+1}^{m}
+            \mathrm{C}_n^m=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^m
         \end{equation*}
     \end{large}\\
-    证明如下：
+    组合数公式$03$（弱化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^m
+        \end{equation*}
+    \end{large}\\
+    将组合数公式$01$代入可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_{n}^{m}+\mathrm{C}_{n}^{m-1}
-        &=\frac{n!}{m!~(n-m)!}+\frac{n!}{(m-1)!~[n-(m-1)]!}\\[3mm]
-        &=\frac{n!~(n-m+1)}{m!~(n-m+1)!}+\frac{n!~m}{m!~[n-m+1]!}\\[3mm]
-        &=\frac{n!~(n-m+1)+n!~m}{m!~(n-m+1)!}\\[3mm]
-        &=\frac{n!~(n-m+1+m)}{m!~(n-m+1)!}\\[3mm]
-        &=\frac{n!~(n+1)}{m!~(n-m+1)!}\\[3mm]
-        &=\frac{(n+1)!}{m!~(n-m+1)!}\\[3mm]
-        &=\frac{(n+1)!}{m!~[(n+1)-m]!}\\[3mm]
-        &=\mathrm{C}_{n+1}^{m}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    将排列数公式$02$代入可得：
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{m}^{m}\cdot\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}
+    \end{align}\\
+    特别的，令$k=1$可以得到：
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
+        &=\frac{\mathrm{P}_n^1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
+        &=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^{m}
     \end{align}
+    
+\newpage
+
+\subsubsection{组合数公式$04$}
+    组合数公式$04$（强化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k\cdot\mathrm{C}_n^{m+k}}
+        \end{equation*}
+    \end{large}\\
+    组合数公式$04$（弱化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m-1}
+        \end{equation*}
+    \end{large}\\
+    将组合数公式$01$代入可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    将排列数公式$02$代入可得：
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_n^n}{\mathrm{P}_{m+k}^{m+k}\cdot\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
+        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}
+    \end{align}\\
+    特别的，令$k=1$可以得到：
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}\\[3mm]
+        &=\frac{\mathrm{P}_{m+k}^1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{C}_n^{m+1}\\[3mm]
+        &=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m-1}
+    \end{align}
+
+\newpage
+
+\subsubsection{组合数公式$05$}
+    组合数公式$05$：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\mathrm{C}_{n+1}^m-\mathrm{C}_n^{m-1}
+        \end{equation*}
+    \end{large}\\
+    将组合数公式$03$进行递推可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        &\mathrm{C}_n^m=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^m\\[3mm]
+        &\mathrm{C}_{n+1}^m=\frac{n+1}{n-m+1}\cdot\mathrm{C}_{n}^m
+    \end{align}\\
+    将组合数公式$04$进行递推可得：
+    \begin{align}
+        &\mathrm{C}_n^m=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m-1}\\[3mm]
+        &\mathrm{C}_n^{m-1}=\frac{m}{n-m+1}\cdot\mathrm{C}_n^{m}\\[3mm]
+    \end{align}\\
+    进行一些变形可以得到：
+    \begin{align}
+        \mathrm{C}_n^m
+        &=\frac{n-m+1}{n-m+1}\cdot\mathrm{C}_n^m\\[3mm]
+        &=\frac{n+1}{n-m+1}\cdot\mathrm{C}_n^m-\frac{m}{n-m+1}\cdot\mathrm{C}_n^m\\[3mm]
+        &=\mathrm{C}_{n+1}^m-\mathrm{C}_n^{m-1}
+    \end{align}
+
+\newpage
+
+\subsubsection{组合数公式$06$}
+    组合数公式$06$：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\mathrm{C}_n^{n-m}
+        \end{equation*}
+    \end{large}\\
+    将组合数公式$01$代入左式可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{C}_n^m=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+    \end{align}\\
+    将组合数公式$01$代入右式可得：
+    \begin{align}
+        \mathrm{C}_n^{n-m}=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}\cdot\mathrm{P}_m^m}
+    \end{align}\\
+    左式等于右式，故组合数公式$06$成立。\\[1mm]
 
 \subsection{二项式定理}
     二项式定理研究了$a+b$的$n$次幂的展开式：
