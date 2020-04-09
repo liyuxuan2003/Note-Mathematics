@@ -4722,12 +4722,12 @@
     对隐函数$\dfrac{x^2}{l^2}+\dfrac{y^2}{s^2}=1$求导：
     \setcounter{equation}{0}
     \begin{align}
-        &\frac{dx^2}{dx}=2x\\[4mm]
-        &\frac{dy^2}{dx}=\frac{dy^2}{dy}\cdot\frac{dy}{dx}=2y\cdot\frac{dy}{dx}\\[6mm]
-        &\frac{1}{l^2}\cdot(2x)+\frac{1}{s^2}\cdot(2y\cdot\frac{dy}{dx})=0\\[5mm]
-        &\frac{2x}{l^2}+\frac{2y}{s^2}\cdot\frac{dy}{dx}=0\\[4mm]
-        &\frac{dy}{dx}=-\frac{2x}{l^2}\cdot\frac{s^2}{2y}\\[4mm]
-        &\frac{dy}{dx}=-\frac{s^2}{l^2}\cdot\frac{x}{y}
+        &\frac{\dif x^2}{\dif x}=2x\\[4mm]
+        &\frac{\dif y^2}{\dif x}=\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}=2y\cdot\frac{\dif y}{\dif x}\\[6mm]
+        &\frac{1}{l^2}\cdot(2x)+\frac{1}{s^2}\cdot(2y\cdot\frac{\dif y}{\dif x})=0\\[5mm]
+        &\frac{2x}{l^2}+\frac{2y}{s^2}\cdot\frac{\dif y}{\dif x}=0\\[4mm]
+        &\frac{\dif y}{\dif x}=-\frac{2x}{l^2}\cdot\frac{s^2}{2y}\\[4mm]
+        &\frac{\dif y}{\dif x}=-\frac{s^2}{l^2}\cdot\frac{x}{y}
     \end{align}\\
     代入点斜式方程：
     \begin{align}
@@ -4984,12 +4984,12 @@
     对隐函数$\dfrac{x^2}{l^2}-\dfrac{y^2}{s^2}=1$求导：
     \setcounter{equation}{0}
     \begin{align}
-        &\frac{dx^2}{dx}=2x\\[4mm]
-        &\frac{dy^2}{dx}=\frac{dy^2}{dy}\cdot\frac{dy}{dx}=2y\cdot\frac{dy}{dx}\\[6mm]
-        &\frac{1}{l^2}\cdot(2x)-\frac{1}{s^2}\cdot(2y\cdot\frac{dy}{dx})=0\\[5mm]
-        &\frac{2x}{l^2}-\frac{2y}{s^2}\cdot\frac{dy}{dx}=0\\[4mm]
-        &\frac{dy}{dx}=\frac{2x}{l^2}\cdot\frac{s^2}{2y}\\[4mm]
-        &\frac{dy}{dx}=\frac{s^2}{l^2}\cdot\frac{x}{y}
+        &\frac{\dif x^2}{\dif x}=2x\\[4mm]
+        &\frac{\dif y^2}{\dif x}=\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}=2y\cdot\frac{\dif y}{\dif x}\\[6mm]
+        &\frac{1}{l^2}\cdot(2x)-\frac{1}{s^2}\cdot(2y\cdot\frac{\dif y}{\dif x})=0\\[5mm]
+        &\frac{2x}{l^2}-\frac{2y}{s^2}\cdot\frac{\dif y}{\dif x}=0\\[4mm]
+        &\frac{\dif y}{\dif x}=\frac{2x}{l^2}\cdot\frac{s^2}{2y}\\[4mm]
+        &\frac{\dif y}{\dif x}=\frac{s^2}{l^2}\cdot\frac{x}{y}
     \end{align}\\
     代入点斜式方程：
     \begin{align}
@@ -5139,11 +5139,11 @@
     对隐函数$y^2=2px$求导：
     \setcounter{equation}{0}
     \begin{align}
-        &\frac{dx}{dx}=1\\[4mm]
-        &\frac{dy^2}{dx}=\frac{dy^2}{dy}\cdot\frac{dy}{dx}=2y\cdot\frac{dy}{dx}\\[6mm]
-        &2y\cdot\frac{dy}{dx}=2p\\[4mm]
-        &\frac{dy}{dx}=\frac{2p}{2y}\\[4mm]
-        &\frac{dy}{dx}=\frac{p}{y}
+        &\frac{\dif x}{\dif x}=1\\[4mm]
+        &\frac{\dif y^2}{\dif x}=\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}=2y\cdot\frac{\dif y}{\dif x}\\[6mm]
+        &2y\cdot\frac{\dif y}{\dif x}=2p\\[4mm]
+        &\frac{\dif y}{\dif x}=\frac{2p}{2y}\\[4mm]
+        &\frac{\dif y}{\dif x}=\frac{p}{y}
     \end{align}\\
     代入点斜式方程：
     \begin{align}
@@ -8108,7 +8108,7 @@
     排列数公式$04$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\frac{n}{n-m}\cdot\mathrm{P}_{n-k}^{m}
+            \mathrm{P}_n^m=\frac{n}{n-m}\cdot\mathrm{P}_{n-1}^{m}
         \end{equation*}
     \end{large}\\
     将排列数公式$01$代入可得：
