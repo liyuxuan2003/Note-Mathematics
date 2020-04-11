@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  9 APR 2020 09:51
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  11 APR 2020 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1613,23 +1613,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 7734--7750
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201]
-Underfull \hbox (badness 10000) in paragraph at lines 8446--8448
+ [187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202]
+Underfull \hbox (badness 10000) in paragraph at lines 8477--8497
 
  []
 
-[202] [203] [204] [205] (./MathematicsNote.aux)
+[203] [204] [205] [206]
+Underfull \hbox (badness 10000) in paragraph at lines 8756--8847
+
+ []
+
+[207] [208] [209] [210] [211] [212] (./MathematicsNote.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 49258 strings out of 492922
- 1194463 string characters out of 6136751
+ 49260 strings out of 492922
+ 1194497 string characters out of 6136751
  1290816 words of memory out of 5000000
- 52582 multiletter control sequences out of 15000+600000
+ 52584 multiletter control sequences out of 15000+600000
  547318 words of font info for 121 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  74i,21n,150p,762b,1046s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MathematicsNote.pdf (205 pages).
+Output written on MathematicsNote.pdf (212 pages).
