@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  13 APR 2020 23:50
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  14 APR 2020 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1584,7 +1584,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 6296--6299
 
  []
 
-[151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173]
+[151] [152] [153] [154] [155] [156] [157] [158]
+Missing character: There is no � in font Times New Roman/OT:script=latn;language=DFLT;mapping=tex-text;!
+Missing character: There is no � in font Times New Roman/OT:script=latn;language=DFLT;mapping=tex-text;!
+Missing character: There is no � in font Times New Roman/OT:script=latn;language=DFLT;mapping=tex-text;!
+ [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173]
 Underfull \hbox (badness 10000) in paragraph at lines 7426--7444
 
  []
