@@ -6637,7 +6637,7 @@
 
     但是当一元二次方程的参数均为实数时，由于根号下的$b^2-4ac$为实数，所以可以对其分类讨论，
     从而得以使用一般意义上的根号来表达求根公式。\\[3mm]
-    首先我们定义根���判别式：
+    首先我们定义根的判别式：
     \begin{large}
         \begin{equation*}
             \Delta=b^2-4ac
@@ -8296,13 +8296,33 @@
 \newpage
 
 \subsubsection{组合数公式$02$}
-    组合数公式$02$（强化形式）：
+    组合数公式$02$：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
+            \frac{\mathrm{P}_{n_1}^m}{\mathrm{P}_{n_2}^m}=\frac{\mathrm{C}_{n_1}^m}{\mathrm{C}_{n_2}^m}
         \end{equation*}
     \end{large}\\
-    组合数公式$02$（弱化形式）：
+    左侧可以使用排列数公式$01$展开：
+    \setcounter{equation}{0}
+    \begin{align}
+        \frac{\mathrm{P}_{n_1}^m}{\mathrm{P}_{n_2}^m}=\frac{\dfrac{\mathrm{P}_{n_1}^{n_1}}{\mathrm{P}_{n_1-m}^{n_1-m}}}{\dfrac{\mathrm{P}_{n_2}^{n_2}}{\mathrm{P}_{n_2-m}^{n_2-m}}}
+    \end{align}\\
+    右侧可以使用组合数公式$01$展开：
+    \begin{align}
+        \frac{\mathrm{C}_{n_1}^m}{\mathrm{C}_{n_2}^m}=\frac{\dfrac{\mathrm{P}_{n_1}^{n_1}}{\mathrm{P}_m^m\cdot\mathrm{P}_{n_1-m}^{n_1-m}}}{\dfrac{\mathrm{P}_{n_2}^{n_2}}{\mathrm{P}_m^m\cdot\mathrm{P}_{n_2-m}^{n_2-m}}}=\frac{\dfrac{\mathrm{P}_{n_1}^{n_1}}{\mathrm{P}_{n_1-m}^{n_1-m}}}{\dfrac{\mathrm{P}_{n_2}^{n_2}}{\mathrm{P}_{n_2-m}^{n_2-m}}}
+    \end{align}\\
+    左式等于右式，故组合数公式$02$成立。
+
+\newpage
+
+\subsubsection{组合数公式$03$}
+    组合数公式$03$（强化形式）：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{C}_n^m=\frac{\mathrm{C}_n^k}{\mathrm{C}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
+        \end{equation*}
+    \end{large}\\
+    组合数公式$03$（弱化形式）：
     \begin{large}
         \begin{equation*}
             \mathrm{C}_n^m=\frac{n}{m}\cdot\mathrm{C}_{n-1}^{m-1}
@@ -8318,26 +8338,27 @@
     \begin{align}
         \mathrm{C}_n^m
         &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{m-k}^{m-k}\cdot\mathrm{P}_{n-m}^{n-m}}\\[3mm]
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
+        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
         \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
-        &=\frac{\mathrm{P}_n^1}{\mathrm{P}_m^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
+        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
+        &=\frac{\mathrm{C}_n^1}{\mathrm{C}_m^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
         &=\frac{n}{m}\cdot\mathrm{C}_{n-1}^{m-1}
     \end{align}
 
 \newpage
 
-\subsubsection{组合数公式$03$}
-    组合数公式$03$（强化形式）：
+\subsubsection{组合数公式$04$}
+    组合数公式$04$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^m
+            \mathrm{C}_n^m=\frac{\mathrm{C}_n^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_{n-k}^m
         \end{equation*}
     \end{large}\\
-    组合数公式$03$（弱化形式）：
+    组合数公式$04$（弱化形式）：
     \begin{large}
         \begin{equation*}
             \mathrm{C}_n^m=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^m
@@ -8353,26 +8374,27 @@
     \begin{align}
         \mathrm{C}_n^m
         &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{m}^{m}\cdot\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}
+        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
+        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
         \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
-        &=\frac{\mathrm{P}_n^1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
+        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
+        &=\frac{\mathrm{C}_n^1}{\mathrm{C}_{n-m}^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
         &=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^{m}
     \end{align}
     
 \newpage
 
-\subsubsection{组合数公式$04$}
-    组合数公式$04$（强化形式）：
+\subsubsection{组合数公式$05$}
+    组合数公式$05$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}
+            \mathrm{C}_n^m=\frac{\mathrm{C}_{m+k}^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}
         \end{equation*}
     \end{large}\\
-    组合数公式$04$（弱化形式）：
+    组合数公式$05$（弱化形式）：
     \begin{large}
         \begin{equation*}
             \mathrm{C}_n^m=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m+1}
@@ -8388,35 +8410,36 @@
     \begin{align}
         \mathrm{C}_n^m
         &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_n^n}{\mathrm{P}_{m+k}^{m+k}\cdot\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
-        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}
+        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}\\[3mm]
+        &=\frac{\mathrm{C}_{m+k}^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
         \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}\\[3mm]
-        &=\frac{\mathrm{P}_{m+k}^1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{C}_n^{m+1}\\[3mm]
+        &=\frac{\mathrm{C}_{m+k}^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}\\[3mm]
+        &=\frac{\mathrm{C}_{m+k}^1}{\mathrm{C}_{n-m}^1}\cdot\mathrm{C}_n^{m+1}\\[3mm]
         &=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m+1}
     \end{align}
 
 \newpage
 
-\subsubsection{组合数公式$05$}
-    组合数公式$05$：
+\subsubsection{组合数公式$06$}
+    组合数公式$06$：
     \begin{large}
         \begin{equation*}
             \mathrm{C}_n^m=\mathrm{C}_{n+1}^m-\mathrm{C}_n^{m-1}
         \end{equation*}
     \end{large}\\
-    将组合数公式$03$进行递推可得：
+    将组合数公式$04$进行递推可得：
     \setcounter{equation}{0}
     \begin{align}
         &\mathrm{C}_n^m=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^m\\[3mm]
         &\mathrm{C}_{n+1}^m=\frac{n+1}{n-m+1}\cdot\mathrm{C}_{n}^m
     \end{align}\\
-    将组合数公式$04$进行递推可得：
+    将组合数公式$05$进行递推可得：
     \begin{align}
         &\mathrm{C}_n^m=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m-1}\\[3mm]
-        &\mathrm{C}_n^{m-1}=\frac{m}{n-m+1}\cdot\mathrm{C}_n^{m}\\[3mm]
+        &\mathrm{C}_n^{m-1}=\frac{m}{n-m+1}\cdot\mathrm{C}_n^{m}
     \end{align}\\
     进行一些变形可以得到：
     \begin{align}
@@ -8428,8 +8451,8 @@
 
 \newpage
 
-\subsubsection{组合数公式$06$}
-    组合数公式$06$：
+\subsubsection{组合数公式$07$}
+    组合数公式$07$：
     \begin{large}
         \begin{equation*}
             \mathrm{C}_n^m=\mathrm{C}_n^{n-m}
@@ -8444,7 +8467,129 @@
     \begin{align}
         \mathrm{C}_n^{n-m}=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}\cdot\mathrm{P}_m^m}
     \end{align}\\
-    左式等于右式，故组合数公式$06$成立。\vspace{15pt}
+    左式等于右式，故组合数公式$07$成立。
+
+\newpage
+
+\subsubsection{组合数公式$08$}
+    组合数公式$08$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=0}^n\mathrm{C}_n^i=2^n
+        \end{equation*}
+    \end{large}\\
+    考虑以下背景，集合$N$中含有$n$个元素，讨论其子集数量。\\[5mm]
+    集合$N$中有$0$个元素的子集的数量为$\mathrm{C}_n^0$。\\[3mm]
+    集合$N$中有$1$个元素的子集的数量为$\mathrm{C}_n^1$。\\[3mm]
+    集合$N$中有$2$个元素的子集的数量为$\mathrm{C}_n^2$。\\[3mm]
+    集合$N$中有$n$个元素的子集的数量为$\mathrm{C}_n^n$。\\[3mm]
+    根据加法原理可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{C}_n^0+\mathrm{C}_n^1+\mathrm{C}_n^2+\cdots+\mathrm{C}_n^n=\sum_{i=0}^n\mathrm{C}_n^i
+    \end{align}\\
+    集合$N$中的每一个元素可以选择是否属于这个子集，有$2$种情况，共$n$个元素。\\[3mm]
+    根据乘法原理可得：
+    \begin{align}
+        2\times 2\times 2\times\cdots\times 2=2^n
+    \end{align}\\
+    两种计数方式的结果应当是一致的，故组合数公式$08$成立。
+
+\newpage
+
+\subsubsection{组合数公式$09$}
+    组合数公式$09$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=1}^{n}i\cdot\mathrm{C}_n^i=n\cdot 2^{n-1}
+        \end{equation*}
+    \end{large}\\
+    使用组合数公式$03$变形可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \sum_{i=1}^{n}i\cdot\mathrm{C}_n^i
+        &=\sum_{i=1}^{n}\left[\frac{n}{i}\cdot\mathrm{C}_{n-1}^{i-1}\cdot i\right]\\[3mm]
+        &=\sum_{i=1}^{n}n\cdot\mathrm{C}_{n-1}^{i-1}\\[3mm]
+        &=n\cdot\sum_{i=1}^{n}\mathrm{C}_{n-1}^{i-1}\\[3mm]
+        &=n\cdot\sum_{i=0}^{n-1}\mathrm{C}_{n-1}^{i}
+    \end{align}\\
+    使用组合数公式$08$代入可得：
+    \begin{align}
+        \sum_{i=1}^{n}i\cdot\mathrm{C}_n^i
+        &=n\cdot\sum_{i=0}^{n-1}\mathrm{C}_{n-1}^{i}\\[3mm]
+        &=n\cdot 2^{n-1}
+    \end{align}
+
+\newpage
+
+\subsubsection{组合数公式$10$}
+    组合数公式$10$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=m}^n\mathrm{C}_i^m=\mathrm{C}_{n+1}^{m+1}
+        \end{equation*}
+    \end{large}\\
+    使用组合数公式$06$循环迭代可得：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        \sum_{i=m}^n\mathrm{C}_i^m
+        &=\mathrm{C}_m^m+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
+        &=\mathrm{C}_{m+1}^{m+1}+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
+        &=\mathrm{C}_{m+2}^{m+1}+\mathrm{C}_{m+2}^{m}+\sum_{i=m+3}^n\mathrm{C}_i^m\\[3mm]
+        &=\mathrm{C}_{m+3}^{m+1}+\mathrm{C}_{m+3}^{m}+\sum_{i=m+4}^n\mathrm{C}_i^m\\[3mm]
+        &~~\vdots\\[5mm]
+        &=\mathrm{C}_n^{m+1}+\mathrm{C}_n^{m+1}\\[5mm]
+        &=\mathrm{C}_{n+1}^{m+1}
+    \end{align}
+
+\newpage
+
+\subsubsection{组合数公式$11$}
+    组合数公式$11$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}=\mathrm{C}_{n_1+n_2}^m
+        \end{equation*}
+    \end{large}\\
+    考虑以下背景，集合$N_1$中含有$n_1$个元素，集合$N_2$中含有$n_2$个元素，现需选出$m$个元素。\\[5mm]
+    集合$N_1$中选出$0$个元素，集合$N_2$中选出$m-0$个元素，组合数为$\mathrm{C}_{n_1}^{0}\cdot\mathrm{C}_{n_2}^{m-0}$。\\[3mm]
+    集合$N_1$中选出$1$个元素，集合$N_2$中选出$m-1$个元素，组合数为$\mathrm{C}_{n_1}^{1}\cdot\mathrm{C}_{n_2}^{m-1}$。\\[3mm]
+    集合$N_1$中选出$2$个元素，集合$N_2$中选出$m-2$个元素，组合数为$\mathrm{C}_{n_1}^{2}\cdot\mathrm{C}_{n_2}^{m-2}$。\\[3mm]
+    集合$N_1$中选出$m$个元素，集合$N_2$中选出$m-m$个元素，组合数为$\mathrm{C}_{n_1}^{m}\cdot\mathrm{C}_{n_2}^{m-m}$。\\[3mm]
+    根据加法原理可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \mathrm{C}_{n_1}^{0}\cdot\mathrm{C}_{n_2}^{m-0}+\mathrm{C}_{n_1}^{1}\cdot\mathrm{C}_{n_2}^{m-1}+\cdots+\mathrm{C}_{n_1}^{m}\cdot\mathrm{C}_{n_2}^{m-m}=\sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}
+    \end{align}\\
+    同时考虑两个集合，共有$n_1+n_2$个元素，需选出$m$个元素。\\[3mm]
+    显然其组合数为：
+    \begin{align}
+        \mathrm{C}_{n_1+n_2}^m
+    \end{align}\\
+    两种计数方式的结果应当是一致的，故组合数公式$11$成立。
+
+\newpage
+
+\subsubsection{组合数公式$12$}
+    组合数公式$12$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=0}^{m}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
+        \end{equation*}
+    \end{large}\\
+    对于组合数公式$11$，特别的当$n=n_1=n_2=m$时：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}=\mathrm{C}_{n_1+n_2}^m\\[3mm]
+        &\sum_{i=0}^n\mathrm{C}_{n}^i\cdot\mathrm{C}_{n}^{n-i}=\mathrm{C}_{2n}^n
+    \end{align}\\
+    将组合数公式$07$代入可得：
+    \begin{align}
+        &\sum_{i=0}^n\mathrm{C}_{n}^i\cdot\mathrm{C}_{n}^{i}=\mathrm{C}_{2n}^n\\[3mm]
+        &\sum_{i=0}^{m}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
+    \end{align}
+
+\newpage
 
 \subsection{复杂的排列问题}
     我们首先约定符号和背景，以便后续讨论。\\[3mm]
