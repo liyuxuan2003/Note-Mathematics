@@ -34,6 +34,8 @@
 \renewcommand{\Im}{\operatorname{Im}}
 \newcommand{\arccot}{\operatorname{arccot}}
 
+\newcommand{\rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
 \usepackage{geometry}
 \geometry
 {
@@ -8526,28 +8528,6 @@
     组合数公式$10$：
     \begin{large}
         \begin{equation*}
-            \sum_{i=m}^n\mathrm{C}_i^m=\mathrm{C}_{n+1}^{m+1}
-        \end{equation*}
-    \end{large}\\
-    使用组合数公式$06$循环迭代可得：\vspace{5pt}
-    \setcounter{equation}{0}
-    \begin{align}
-        \sum_{i=m}^n\mathrm{C}_i^m
-        &=\mathrm{C}_m^m+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
-        &=\mathrm{C}_{m+1}^{m+1}+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
-        &=\mathrm{C}_{m+2}^{m+1}+\mathrm{C}_{m+2}^{m}+\sum_{i=m+3}^n\mathrm{C}_i^m\\[3mm]
-        &=\mathrm{C}_{m+3}^{m+1}+\mathrm{C}_{m+3}^{m}+\sum_{i=m+4}^n\mathrm{C}_i^m\\[3mm]
-        &~~\vdots\\[5mm]
-        &=\mathrm{C}_n^{m+1}+\mathrm{C}_n^{m+1}\\[5mm]
-        &=\mathrm{C}_{n+1}^{m+1}
-    \end{align}
-
-\newpage
-
-\subsubsection{组合数公式$11$}
-    组合数公式$11$：
-    \begin{large}
-        \begin{equation*}
             \sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}=\mathrm{C}_{n_1+n_2}^m
         \end{equation*}
     \end{large}\\
@@ -8566,18 +8546,19 @@
     \begin{align}
         \mathrm{C}_{n_1+n_2}^m
     \end{align}\\
-    两种计数方式的结果应当是一致的，故组合数公式$11$成立。
+    两种计数方式的结果应当是一致的，故组合数公式$10$成立。
 
 \newpage
 
-\subsubsection{组合数公式$12$}
-    组合数公式$12$：
+\subsubsection{组合数公式$11$}
+    组合数公式$11$：
     \begin{large}
         \begin{equation*}
-            \sum_{i=0}^{m}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
+            \sum_{i=0}^{n}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
         \end{equation*}
     \end{large}\\
-    对于组合数公式$11$，特别的当$n=n_1=n_2=m$时：\vspace{5pt}
+    组合数公式$11$实际上就是组合数公式$10$在满足$n=n_1=n_2=m$时的一种特殊形式。\\[3mm]
+    向组合数公式$10$代入条件：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
         &\sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}=\mathrm{C}_{n_1+n_2}^m\\[3mm]
@@ -8586,12 +8567,105 @@
     将组合数公式$07$代入可得：
     \begin{align}
         &\sum_{i=0}^n\mathrm{C}_{n}^i\cdot\mathrm{C}_{n}^{i}=\mathrm{C}_{2n}^n\\[3mm]
-        &\sum_{i=0}^{m}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
+        &\sum_{i=0}^{n}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
     \end{align}
 
 \newpage
 
-\subsection{复杂的排列问题}
+\subsubsection{组合数公式$12$}
+    组合数公式$12$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=m}^n\mathrm{C}_i^m=\mathrm{C}_{n+1}^{m+1}
+        \end{equation*}
+    \end{large}\\
+    使用组合数公式$06$循环迭代可得：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        \sum_{i=m}^n\mathrm{C}_i^m
+        &=\mathrm{C}_m^m+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
+        &=\mathrm{C}_{m+1}^{m+1}+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
+        &=\mathrm{C}_{m+2}^{m+1}+\mathrm{C}_{m+2}^{m}+\sum_{i=m+3}^n\mathrm{C}_i^m\\[3mm]
+        &=\mathrm{C}_{m+3}^{m+1}+\mathrm{C}_{m+3}^{m}+\sum_{i=m+4}^n\mathrm{C}_i^m\\[3mm]
+        &~~\vdots\\[5mm]
+        &=\mathrm{C}_n^{m+1}+\mathrm{C}_n^{m+1}\\[5mm]
+        &=\mathrm{C}_{n+1}^{m+1}
+    \end{align}
+
+\newpage
+
+    \subsection{二项式定理}
+    二项式定理研究了$a+b$的$n$次幂的展开式：
+    \begin{large}
+        \begin{equation*}
+            (a+b)^n\qquad n\in\mathbb{Z^+}
+        \end{equation*}
+    \end{large}\\
+    \setcounter{equation}{0}
+    我们从$(a+b)^4$开始考虑，显然其展开式的各项应依次为：
+    \begin{equation}
+        a^4\quad a^3b\quad a^2b^2\quad ab^3\quad b^4
+    \end{equation}\\
+    第一项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$0$个$b$，所以其系数为$\mathrm{C}_4^0$\\[1mm]
+    第二项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$1$个$b$，所以其系数为$\mathrm{C}_4^1$\\[1mm]
+    第三项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$2$个$b$，所以其系数为$\mathrm{C}_4^2$\\[1mm]
+    第四项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$3$个$b$，所以其系数为$\mathrm{C}_4^3$\\[1mm]
+    第五项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$4$个$b$，所以其系数为$\mathrm{C}_4^4$\\[5mm]
+    由此我们可以总结出一些规律：\\[3mm]
+    1.展开式共有$n+1$项。\\[3mm]
+    2.字母$a$的指数由$n$至$0$依次递减。\\[3mm]
+    3.字母$b$的指数由$0$至$n$依次递增。\\[3mm]
+    4.当项数为$r+1$时，系数为$\mathrm{C}_{n}^{r}$。\\[3mm]
+    5.当项数为$r+1$时，字母$a$的指数为$n-r$。\\[3mm]
+    6.当项数为$r+1$时，字母$b$的指数为$r$。\\[6mm]
+    二项式定理：
+    \begin{large}
+        \begin{equation*}
+            (a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r
+        \end{equation*}
+    \end{large}\\
+    二项数系数表：
+    \begin{center}
+        $(a+b)^1\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~1$\\[1mm]
+        $(a+b)^2\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~2~~~1$\\[1mm]
+        $(a+b)^3\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~3~~~3~~~1$\\[1mm]
+        $(a+b)^4\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~4~~~6~~~4~~~1$\\[1mm]
+    \end{center}\vspace{8pt}
+    该图形也被称为帕斯卡三角，其两条斜边上的数字均是$1$，其余数字等于其上方两数字的和。
+
+\subsubsection{二项式系数的性质$01$}
+    令$a=1$，令$b=1$，我们可以得到：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &(a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r\\[3mm]
+        &(1+1)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot 1^{n-r}\cdot 1^r\\[3mm]
+        &2^n=\sum_{r=0}^{n}~\mathrm{C}_n^r
+    \end{align}\\
+    二项式系数的性质$01$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{r=0}^{n}~\mathrm{C}_n^r=2^n
+        \end{equation*}
+    \end{large}
+
+\subsubsection{二项式系数的性质$02$}
+    令$a=1$，令$b=-1$，我们可以得到：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &(a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r\\[3mm]
+        &(1-1)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot 1^{n-r}\cdot (-1)^r\\[3mm]
+        &0^n=\sum_{r=0}^{n}~(-1)^r\cdot\mathrm{C}_n^r
+    \end{align}\\
+    二项式系数的性质$02$：
+    \begin{large}
+        \begin{equation*}
+            \sum_{r=0}^{n}~(-1)^r\cdot\mathrm{C}_n^r=0
+        \end{equation*}
+    \end{large}
+
+\newpage
+
+\subsection{排列组合问题\rnum{1}}
     我们首先约定符号和背景，以便后续讨论。\\[3mm]
     设共有$p$个元素，需对其进行排列。\\[3mm]
     其中的$p$个元素可以分至若干集合中，包含一个普通集合和若干个约束集合。\\[3mm]
@@ -8609,97 +8683,11 @@
     \end{large}\\
     如果存在多个约束集合 ，则可以视情况分别使用符号$X_1~X_2~X_3$等表示。\\[3mm]
     我们认为，普通集合中的元素在排列时无要求，约束集合中的元素在排列时存在约束条件。\\[3mm]
-    我们现在研究，在不同的约束条件下，总排列数$P$的值和约束条件的关系。
+    我们现在研究，在不同的约束条件下，总排列数$P$的值和约束条件的关系。\\
 
-\newpage
-
-\subsubsection{复杂排列问题$01$}
-    复杂排列问题$01$背景：存在一个约束集合$X$，其中的元素必须相邻。\\[3mm]
-    复杂排列问题$01$公式：
-    \begin{large}
-        \begin{equation*}
-           P=\mathrm{P}_{n+1}^{n+1}\cdot\mathrm{P}_x^x
-        \end{equation*}
-    \end{large}\\
-    将约束集合$X$中的元素视为组块：
-    \begin{figure}[h]
-        \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.0]
-                \node at(-3,0) {$x_1$};
-                \node at(-2,0) {$x_2$};
-                \node at(-1,0) {$x_3$};
-                \node at(+0,0) {$n_1$};
-                \node at(+1,0) {$n_2$};
-                \node at(+2,0) {$n_3$};
-                \node at(+3,0) {$n_4$};
-                \draw (-3.3,0.3) rectangle(-0.7,-0.3);
-            \end{tikzpicture}
-            \caption{复杂排列问题$01$的示意图}
-        \end{center}
-    \end{figure}\\
-    整体上考虑，共有$n+1$个元素或组块进行全排列，其排列数为$\mathrm{P}_{n+1}^{n+1}$。\\[3mm]
-    约束集合中共有$x$个元素，其在组块内共有$x$个位置，其排列数为$\mathrm{P}_{x}^{x}$。\\[3mm]
-
-\subsubsection{复杂排列问题$02$}
-    复杂排列问题$02$背景：存在一个约束集合$X$，其中的元素必须隔开。\\[3mm]
-    复杂排列问题$02$公式：
-    \begin{large}
-        \begin{equation*}
-           P=\mathrm{P}_{n+1}^{x}\cdot\mathrm{P}_n^n
-        \end{equation*}
-    \end{large}\\ 
-    将约束集合$X$中的元素进行插空：
-    \begin{figure}[h]
-        \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw (-3.3,0.3) rectangle(-2.7,-0.3);
-                \node at(-2,0) {$n_1$};
-                \draw (-1.3,0.3) rectangle(-0.7,-0.3);
-                \node at(+0,0) {$n_2$};
-                \draw (+0.7,0.3) rectangle(+1.3,-0.3);
-                \node at(+2,0) {$n_3$};
-                \draw (+2.7,0.3) rectangle(+3.3,-0.3);                
-            \end{tikzpicture}
-            \caption{复杂排列问题$02$的示意图}
-        \end{center}
-    \end{figure}\\
-    整体上考虑，共有$n$个普通元素进行全排列，其排列数为$\mathrm{P}_n^n$。\\[3mm]
-    约束集合中共有$x$个元素，其在插空时共有$n+1$个位置，其排列数为$\mathrm{P}_{n+1}^{x}$。
-    
-\newpage
-
-\subsubsection{复杂排列问题$03$}
-    复杂排列问题$03$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须相邻。\\[3mm]
-    复杂排列问题$03$公式：
-    \begin{large}
-        \begin{equation*}
-            P=\mathrm{P}_{n+\lambda}^{n+\lambda}\cdot\prod_{i=1}^\lambda\mathrm{P}_{x_i}^{x_i}
-        \end{equation*}
-    \end{large}\\
-    首先将$\lambda$个约束集合视作$\lambda$个组块。\\[3mm]
-    考虑整体，共有$n+\lambda$个元素或组块进行全排列，其排列数为$\mathrm{P}_{n+\lambda}^{n+\lambda}$。\\[3mm]
-    考虑约束集合$X_1$，其所构成的组块中共有$x_1$个元素，其排列数为$\mathrm{P}_{x_1}^{x_1}$。\\[3mm]
-    考虑约束集合$X_2$，其所构成的组块中共有$x_2$个元素，其排列数为$\mathrm{P}_{x_2}^{x_2}$。\\[3mm]
-    考虑约束集合$X_\lambda$，其所构成的组块中共有$x_\lambda$个元素，其排列数为$\mathrm{P}_{x_\lambda}^{x_\lambda}$。\vspace{8pt}
-
-\subsubsection{复杂排列问题$04$}
-    复杂排列问题$04$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须隔开。\\[3mm]
-    复杂排列问题$04$公式：
-    \begin{large}
-        \begin{equation*}
-            P=\mathrm{P}_{n}^{n}\cdot\prod_{i=1}^\lambda\mathrm{P}_{n+1+\sum_{j=1}^{i-1}x_j}^{x_i}
-        \end{equation*}
-    \end{large}\\
-    首先将$\lambda$个约束集合按元素数量从小到大排列并重新编号。\\[3mm]
-    考虑普通集合$N$，共有$n$个元素进行全排列，其排列数为$\mathrm{P}_{n}^{n}$。\\[3mm]
-    考虑约束集合$X_1$，共有$x_1$个元素，可用空位为$n+1$，其排列数为$\mathrm{P}_{n+1}^{x_1}$。\\[3mm]
-    考虑约束集合$X_2$，共有$x_2$个元素，可用空位为$n+x_1+1$，其排列数为$\mathrm{P}_{n+x_1+1}^{x_2}$。\\[3mm]
-    考虑约束集合$X_3$，共有$x_3$个元素，可用空位为$n+x_1+x_2+1$，其排列数为$\mathrm{P}_{n+x_1+x_2+1}^{x_3}$。\\[3mm]
-    依次类推即可，若任意一步出现空位不足，则说明该组数据无解。\vspace{8pt}
-
-\subsubsection{复杂排列问题$05$}
-    复杂排列问题$05$背景：存在一个约束集合$X$，其中的元素分别不能置于某各不相同的位置上。\\[3mm]
-    复杂排列问题$05$公式：
+\subsubsection{排列组合问题\rnum{1}-$01$}
+    排列组合问题\rnum{1}-$01$背景：存在$1$个约束集合$X$，其中的元素分别不能置于某各不相同的位置上。\\[3mm]
+    排列组合问题\rnum{1}-$01$公式：
     \begin{large}
         \begin{equation*}
             P=\mathrm{P}_p^p~-\sum_{i=0}^{\mathrm{min}(n,x-1)}\mathrm{C}_x^{x-i}\cdot\mathrm{P}_n^i\cdot\mathrm{P}_n^n
@@ -8749,7 +8737,7 @@
                 \draw[->] (2,-0.5)--(2,-0.7);
                 \node at(2,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$0$X}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$0$X}
         \end{center}
     \end{figure}\\
     在$4$个约束元素中，保留$4$个在排斥位上，共有$\mathrm{C}_4^4$种组合，即$\mathrm{C}_x^{x-0}$。\\[3mm]
@@ -8794,7 +8782,7 @@
                 \draw[->] (2,-0.5)--(2,-0.7);
                 \node at(2,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$1$X}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$1$X}
         \end{center}
     \end{figure}\\
     在$4$个约束元素中，保留$3$个在排斥位上，共有$\mathrm{C}_4^3$种组合，即$\mathrm{C}_x^{x-1}$。\\[3mm]
@@ -8842,7 +8830,7 @@
                 \draw[->] (2,-0.5)--(2,-0.7);
                 \node at(2,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$2$X}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$2$X}
         \end{center}
     \end{figure}\\
     在$4$个约束元素中，保留$2$个在排斥位上，共有$\mathrm{C}_4^2$种组合，即$\mathrm{C}_x^{x-2}$。\\[3mm]
@@ -8887,7 +8875,7 @@
                 \draw[->] (2,-0.5)--(2,-0.7);
                 \node at(2,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$3$X}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$3$X}
         \end{center}
     \end{figure}\\
     在$4$个约束元素中，保留$1$个在排斥位上，共有$\mathrm{C}_4^1$种组合，即$\mathrm{C}_x^{x-3}$。\\[3mm]
@@ -8938,7 +8926,7 @@
                 \draw[->] (3.0,-0.5)--(3.0,-0.7);
                 \node at(3.0,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$0$N}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$0$N}
         \end{center}
     \end{figure}\\
     在$5$个约束元素中，保留$5$个在排斥位上，共有$\mathrm{C}_5^5$种组合，即$\mathrm{C}_x^{x-0}$。\\[3mm]
@@ -8983,7 +8971,7 @@
                 \draw[->] (3.0,-0.5)--(3.0,-0.7);
                 \node at(3.0,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$1$N}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$1$N}
         \end{center}
     \end{figure}\\
     在$5$个约束元素中，保留$4$个在排斥位上，共有$\mathrm{C}_5^4$种组合，即$\mathrm{C}_x^{x-1}$。\\[3mm]
@@ -9031,7 +9019,7 @@
                 \draw[->] (3.0,-0.5)--(3.0,-0.7);
                 \node at(3.0,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$2$N}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$2$N}
         \end{center}
     \end{figure}\\
     在$5$个约束元素中，保留$3$个在排斥位上，共有$\mathrm{C}_5^3$种组合，即$\mathrm{C}_x^{x-2}$。\\[3mm]
@@ -9076,7 +9064,7 @@
                 \draw[->] (3.0,-0.5)--(3.0,-0.7);
                 \node at(3.0,-1.0){$n$};
             \end{tikzpicture}
-            \caption{复杂排列问题$03$的示意图~-~$3$N}
+            \caption{排列组合问题\rnum{1}-$01$的示意图~-~$3$N}
         \end{center}
     \end{figure}\\
     在$5$个约束元素中，保留$2$个在排斥位上，共有$\mathrm{C}_5^2$种组合，即$\mathrm{C}_x^{x-3}$。\\[3mm]
@@ -9087,62 +9075,321 @@
 
 \newpage
 
-\subsection{二项式定理}
-    二项式定理研究了$a+b$的$n$次幂的展开式：
+\subsubsection{排列组合问题\rnum{1}-$02$}
+    排列组合问题\rnum{1}-$02$背景：存在$1$个约束集合$X$，其中的元素必须相邻。\\[3mm]
+    排列组合问题\rnum{1}-$02$公式：
     \begin{large}
         \begin{equation*}
-            (a+b)^n\qquad n\in\mathbb{Z^+}
+           P=\mathrm{P}_{n+1}^{n+1}\cdot\mathrm{P}_x^x
         \end{equation*}
     \end{large}\\
-    \setcounter{equation}{0}
-    我们从$(a+b)^4$开始考虑，显然其展开式的各项应依次为：
-    \begin{equation}
-        a^4\quad a^3b\quad a^2b^2\quad ab^3\quad b^4
-    \end{equation}\\
-    第一项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$0$个$b$，所以其系数为$\mathrm{C}_4^0$\\[1mm]
-    第二项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$1$个$b$，所以其系数为$\mathrm{C}_4^1$\\[1mm]
-    第三项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$2$个$b$，所以其系数为$\mathrm{C}_4^2$\\[1mm]
-    第四项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$3$个$b$，所以其系数为$\mathrm{C}_4^3$\\[1mm]
-    第五项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$4$个$b$，所以其系数为$\mathrm{C}_4^4$
+    将约束集合$X$中的元素视为组块：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth,scale=1.0]
+                \node at(-3,0) {$x_1$};
+                \node at(-2,0) {$x_2$};
+                \node at(-1,0) {$x_3$};
+                \node at(+0,0) {$n_1$};
+                \node at(+1,0) {$n_2$};
+                \node at(+2,0) {$n_3$};
+                \node at(+3,0) {$n_4$};
+                \draw (-3.3,0.3) rectangle(-0.7,-0.3);
+            \end{tikzpicture}
+            \caption{排列组合问题\rnum{1}-$02$的示意图}
+        \end{center}
+    \end{figure}\\
+    整体上考虑，共有$n+1$个元素或组块进行全排列，其排列数为$\mathrm{P}_{n+1}^{n+1}$。\\[3mm]
+    约束集合中共有$x$个元素，其在组块内共有$x$个位置，其排列数为$\mathrm{P}_{x}^{x}$。\\
+
+\subsubsection{排列组合问题\rnum{1}-$03$}
+    排列组合问题\rnum{1}-$03$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须相邻。\\[3mm]
+    排列组合问题\rnum{1}-$03$公式：
+    \begin{large}
+        \begin{equation*}
+            P=\mathrm{P}_{n+\lambda}^{n+\lambda}\cdot\prod_{i=1}^\lambda\mathrm{P}_{x_i}^{x_i}
+        \end{equation*}
+    \end{large}\\
+    首先将$\lambda$个约束集合视作$\lambda$个组块。\\[3mm]
+    考虑整体，共有$n+\lambda$个元素或组块进行全排列，其排列数为$\mathrm{P}_{n+\lambda}^{n+\lambda}$。\\[3mm]
+    考虑约束集合$X_1$，其所构成的组块中共有$x_1$个元素，其排列数为$\mathrm{P}_{x_1}^{x_1}$。\\[3mm]
+    考虑约束集合$X_2$，其所构成的组块中共有$x_2$个元素，其排列数为$\mathrm{P}_{x_2}^{x_2}$。\\[3mm]
+    考虑约束集合$X_\lambda$，其所构成的组块中共有$x_\lambda$个元素，其排列数为$\mathrm{P}_{x_\lambda}^{x_\lambda}$。\vspace{8pt}
 
 \newpage
 
-    由此我们可以总结出一些规律：\\[3mm]
-    1.展开式共有$n+1$项。\\[3mm]
-    2.字母$a$的指数由$n$至$0$依次递减。\\[3mm]
-    3.字母$b$的指数由$0$至$n$依次递增。\\[3mm]
-    4.当项数为$r+1$时，系数为$\mathrm{C}_{n}^{r}$。\\[3mm]
-    5.当项数为$r+1$时，字母$a$的指数为$n-r$。\\[3mm]
-    6.当项数为$r+1$时，字母$b$的指数为$r$。\\[6mm]
-    二项式定理：
+\subsubsection{排列组合问题\rnum{1}-$04$}
+    排列组合问题\rnum{1}-$04$背景：存在$1$个约束集合$X$，其中的元素必须隔开。\\[3mm]
+    排列组合问题\rnum{1}-$04$公式：
     \begin{large}
         \begin{equation*}
-            (a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r
+           P=\mathrm{P}_{n+1}^{x}\cdot\mathrm{P}_n^n
+        \end{equation*}
+    \end{large}\\ 
+    将约束集合$X$中的元素进行插空：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth,scale=1.0]
+                \draw (-3.3,0.3) rectangle(-2.7,-0.3);
+                \node at(-2,0) {$n_1$};
+                \draw (-1.3,0.3) rectangle(-0.7,-0.3);
+                \node at(+0,0) {$n_2$};
+                \draw (+0.7,0.3) rectangle(+1.3,-0.3);
+                \node at(+2,0) {$n_3$};
+                \draw (+2.7,0.3) rectangle(+3.3,-0.3);                
+            \end{tikzpicture}
+            \caption{排列组合问题\rnum{1}-$04$的示意图}
+        \end{center}
+    \end{figure}\\
+    整体上考虑，共有$n$个普通元素进行全排列，其排列数为$\mathrm{P}_n^n$。\\[3mm]
+    约束集合中共有$x$个元素，其在插空时共有$n+1$个位置，其排列数为$\mathrm{P}_{n+1}^{x}$。\\
+
+\subsubsection{排列组合问题\rnum{1}-$05$}
+    排列组合问题\rnum{1}-$05$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须隔开。\\[3mm]
+    排列组合问题\rnum{1}-$05$公式：
+    \begin{large}
+        \begin{equation*}
+            P=\mathrm{P}_{n}^{n}\cdot\prod_{i=1}^\lambda\mathrm{P}_{n+1+\sum_{j=1}^{i-1}x_j}^{x_i}
         \end{equation*}
     \end{large}\\
-    二项数系数表：
-    \begin{center}
-        $(a+b)^1\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~1$\\[1mm]
-        $(a+b)^2\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~2~~~1$\\[1mm]
-        $(a+b)^3\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~3~~~3~~~1$\\[1mm]
-        $(a+b)^4\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~4~~~6~~~4~~~1$\\[1mm]
-    \end{center}\vspace{8pt}
-    该图形也被称为帕斯卡三角，其两条斜边上的数字均是$1$，其余数字等于其上方两数字的和。
+    首先将$\lambda$个约束集合按元素数量从小到大排列并重新编号。\\[3mm]
+    考虑普通集合$N$，共有$n$个元素进行全排列，其排列数为$\mathrm{P}_{n}^{n}$。\\[3mm]
+    考虑约束集合$X_1$，共有$x_1$个元素，可用空位为$n+1$，其排列数为$\mathrm{P}_{n+1}^{x_1}$。\\[3mm]
+    考虑约束集合$X_2$，共有$x_2$个元素，可用空位为$n+x_1+1$，其排列数为$\mathrm{P}_{n+x_1+1}^{x_2}$。\\[3mm]
+    考虑约束集合$X_3$，共有$x_3$个元素，可用空位为$n+x_1+x_2+1$，其排列数为$\mathrm{P}_{n+x_1+x_2+1}^{x_3}$。\\[3mm]
+    依次类推即可，若任意一步出现空位不足，则说明该组数据无解。\vspace{8pt}
 
-\subsubsection{二项式系数的性质}
-    令$a=1$，令$b=1$，我们可以得到：\vspace{5pt}
-    \setcounter{equation}{0}
-    \begin{align}
-        &(a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r\\[3mm]
-        &(1+1)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot 1^{n-r}\cdot 1^r\\[3mm]
-        &2^n=\sum_{r=0}^{n}~\mathrm{C}_n^r
-    \end{align}\\
-    二项式系数的性质：
+\newpage
+
+\subsubsection{排列组合问题\rnum{1}-$06$}
+    排列组合问题\rnum{1}-$06$背景：存在$1$个约束集合$X$，其中的元素必须保持相对顺序固定。\\[3mm]
+    排列组合问题\rnum{1}-$06$公式：
     \begin{large}
         \begin{equation*}
-            \sum_{r=0}^{n}~\mathrm{C}_n^r=2^n
+            P=\frac{\mathrm{P}_p^p}{\mathrm{P}_x^x}
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    考虑约束集合$X$中按照下图所示排列：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth,scale=1.0]
+                \draw (-3.3,0.3) rectangle(-2.7,-0.3);
+                \node at(-3,0) {$x$};
+                \draw (-2.3,0.3) rectangle(-1.7,-0.3);
+                \node at(-2,0) {$x$};
+                \draw (-1.3,0.3) rectangle(-0.7,-0.3);
+                \node at(-1,0) {$x$};
+                \node at(+0,0) {$n_1$};
+                \node at(+1,0) {$n_2$};
+                \node at(+2,0) {$n_3$};
+                \node at(+3,0) {$n_4$};
+            \end{tikzpicture}
+            \caption{排列组合问题\rnum{1}-$06$的示意图}
+        \end{center}
+    \end{figure}\\
+    如图所示，约束集合$X$中的元素只能放置于方框中，普通集合$N$中的元素位置顺序固定。\\[3mm]
+    显然该背景下约束元素有$\mathrm{P}_x^x$种排列，但是依照约束条件只有$1$种是合法的，故总数上除以$\mathrm{P}_x^x$。\\
+
+\subsubsection{排列组合问题\rnum{1}-$07$}
+    排列组合问题\rnum{1}-$07$背景：存在$\lambda$个约束集合$X_1\sum X_\lambda$，其中的元素必须保持相对顺序固定。\\[3mm]
+    排列组合问题\rnum{1}-$07$公式：
+    \begin{large}
+        \begin{equation*}
+            P=\frac{\mathrm{P}_p^p}{\prod_{i=1}^{\lambda}\mathrm{P}_{x_i}^{x_i}}
+        \end{equation*}
+    \end{large}\\
+    考虑约束集合$X_1$，在$\mathrm{P}_{x_1}^{x_1}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_1}^{x_1}$。\\[3mm]
+    考虑约束集合$X_2$，在$\mathrm{P}_{x_2}^{x_2}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_2}^{x_2}$。\\[3mm]
+    考虑约束集合$X_3$，在$\mathrm{P}_{x_2}^{x_2}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_3}^{x_3}$。\\[3mm]
+    考虑约束集合$X_\lambda$，在$\mathrm{P}_{x_\lambda}^{x_\lambda}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_\lambda}^{x_\lambda}$。
+
+\newpage
+
+\subsection{排列组合问题\rnum{2}}
+    我们首先约定符号和背景，以便后续讨论。\\[3mm]
+    这一类排列组合问题实际上可以概括为球盒问题，球对应小球，盒对应盒子，为了叙述的便利和规避集合不能存在相同元素的问题，
+    这里使用了小球盒子而非元素集合这样更为抽象的表述。\\[3mm]
+    球盒问题：现有$n$个（相同/不同）的小球，放入$m$个（相同/不同）的盒子，求总方案数$P$。\\[3mm]
+    球盒问题通常还带有附加条件，最常见的为盒子中至少需要放入一个小球。\\[3mm]
+    球盒问题中认为盒子内部的小球是无所谓顺序的，即不考虑盒子内部的小球排列。
+
+\subsubsection{斯特林数}
+    第二类斯特林数即$\mathrm{S}_n^m$，表示将$n$个不同元素分入$m$个相同集合的方案数，集合要求非空。\\[3mm]
+    第二类斯特林数的计算公式：
+    \begin{large}
+        \begin{equation*}
+            \mathrm{S}_n^m=\frac{1}{\mathrm{P}_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n
+        \end{equation*}
+    \end{large}\\
+    接下来我们将证明第二类斯特林数的计算公式。\\[3mm]
+    为了便于计算，编号相同集合，使其成为不同集合，后续所有的讨论均在该背景下进行。\\[3mm]
+    为了便于推导，定义函数$T(h)$，该函数代表空集数为$h$时有$T(h)$种分配方案。\\[3mm]
+    例如$T(0)$代表空集数为$0$时的方案数。\\[3mm]
+    例如$T(5)$代表空集数为$5$时的方案数。\\[3mm]
+    显然第二类斯特林数可以表示为：
+    \setcounter{equation}{0}
+    \begin{align}
+        T(0)=\mathrm{P}_m^m\cdot\mathrm{S}_n^m
+    \end{align}\\
+    考虑空集数$>=1$的情况：
+    \begin{align}
+        \mathrm{C}_m^1\cdot(m-1)^n=\mathrm{C}_1^1\cdot T(1)+\mathrm{C}_2^1\cdot T(2)+\mathrm{C}_3^1\cdot T(3)+\cdots+\mathrm{C}_m^1\cdot T(m)=\sum_{h=1}^m\mathrm{C}_h^1\cdot T(h)
+    \end{align}\\
+    考虑空集数$>=2$的情况：
+    \begin{align}
+        \mathrm{C}_m^2\cdot(m-2)^n=\mathrm{C}_2^2\cdot T(2)+\mathrm{C}_3^2\cdot T(3)+\mathrm{C}_4^2\cdot T(4)+\cdots+\mathrm{C}_m^1\cdot T(m)=\sum_{h=1}^m\mathrm{C}_h^2\cdot T(h)
+    \end{align}\\
+    之所以在等式右侧有$\mathrm{C}_n^1$或$\mathrm{C}_n^2$等，是因为左侧的计数实际上存在重复。
+
+\newpage
+
+    对于空集数$\geq 1$的情况，左侧的思路为先选出$1$个作为空集，剩余的自由分配。\\[3mm]
+    对于空集数$\geq 1$的情况，我们不妨以$T(3)$一项为例考虑：\\[3mm]
+    1.当$\mathrm{C}_m^1$选定$A$作为空集，后续分配使得$B,C$成为空集。\\[3mm]
+    2.当$\mathrm{C}_m^1$选定$B$作为空集，后续分配使得$C,A$成为空集。\\[3mm]
+    3.当$\mathrm{C}_m^1$选定$C$作为空集，后续分配使得$A,B$成为空集。\\[3mm]
+    但实际上这三种情况本质上为同一种情况，在左侧被重复记录了$\mathrm{C}_3^1$次，故右侧需乘上$\mathrm{C}_3^1$。\\[6mm]
+    对于空盒数$\geq 2$的情况，左侧的思路为先选出$2$个作为空盒，剩余的自由分配。\\[3mm]
+    对于空集数$\geq 2$的情况，我们不妨以$T(3)$一项为例考虑：\\[3mm]
+    1.当$\mathrm{C}_m^2$选定$A,B$作为空集，后续分配使得$C$成为空集。\\[3mm]
+    2.当$\mathrm{C}_m^2$选定$B,C$作为空集，后续分配使得$A$成为空集。\\[3mm]
+    3.当$\mathrm{C}_m^2$选定$C,A$作为空集，后续分配使得$B$成为空集。\\[4mm]
+    但实际上这三种情况本质上为同一种情况，在左侧被重复记录了$\mathrm{C}_3^2$次，故右侧需乘上$\mathrm{C}_3^2$。\\[6mm]
+    较为普适的，我们可以得出空集数$\geq k$的情况：
+    \begin{align}
+        \mathrm{C}_m^k\cdot(m-k)^n=\sum_{h=k}^mC_h^k\cdot T(h)
+    \end{align}\\
+    根据上方得出的结论，我们可以构建一个等式：
+    \begin{align}
+        \sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=\sum_{k=0}^m(-1)^k\cdot\sum_{h=k}^m\mathrm{C}_n^k\cdot T(h)
+    \end{align}\\
+    接下来将对等式右侧进行累加关系的变换。
+
+\newpage
+
+    右侧很显然等于：
+    \begin{align}
+        &(-1)^0\cdot\Big[\overbrace{\mathrm{C}_0^0\cdot T(0)+\mathrm{C}_1^0\cdot T(1)+\mathrm{C}_2^0\cdot T(2)+\cdots+\mathrm{C}_m^0\cdot T(m)}^{\text{共}m-0\text{项}}\Big]+\\[3mm]
+        &(-1)^1\cdot\Big[\overbrace{\mathrm{C}_1^1\cdot T(1)+\mathrm{C}_2^1\cdot T(2)+\mathrm{C}_3^1\cdot T(3)+\cdots+\mathrm{C}_m^1\cdot T(m)}^{\text{共}m-1\text{项}}\Big]+\\[3mm]
+        &(-1)^2\cdot\Big[\overbrace{\mathrm{C}_2^2\cdot T(2)+\mathrm{C}_3^2\cdot T(3)+\mathrm{C}_4^2\cdot T(4)+\cdots+\mathrm{C}_m^2\cdot T(m)}^{\text{共}m-2\text{项}}\Big]+\\[3mm]
+        &(-1)^3\cdot\Big[\overbrace{\mathrm{C}_3^3\cdot T(3)+\mathrm{C}_4^3\cdot T(4)+\mathrm{C}_5^3\cdot T(5)+\cdots+\mathrm{C}_m^3\cdot T(m)}^{\text{共}m-3\text{项}}\Big]+\\[3mm]
+        &\vdots\\[3mm]
+        &(-1)^m\cdot\Big[\mathrm{C}_m^m\cdot T(m)\Big]
+    \end{align}\\
+    右侧可以变形为：
+    \begin{align}
+        &T(0)\cdot\Big[(-1)^0\cdot \mathrm{C}_0^0\Big]+\\[3mm]
+        &T(1)\cdot\Big[(-1)^0\cdot \mathrm{C}_1^0+(-1)^1\cdot \mathrm{C}_1^1\Big]+\\[3mm]
+        &T(2)\cdot\Big[(-1)^0\cdot \mathrm{C}_2^0+(-1)^1\cdot \mathrm{C}_2^1+(-1)^2\cdot \mathrm{C}_2^2\Big]+\\[3mm]
+        &T(2)\cdot\Big[(-1)^0\cdot \mathrm{C}_3^0+(-1)^1\cdot \mathrm{C}_3^1+(-1)^3\cdot \mathrm{C}_3^2+(-1)^3\cdot \mathrm{C}_3^3\Big]+\\[3mm]
+        &\vdots\\[3mm]
+        &T(m)\cdot\Big[(-1)^0\cdot \mathrm{C}_m^0+(-1)^1\cdot \mathrm{C}_m^1+(-1)^3\cdot \mathrm{C}_m^2+\cdots+(-1)^m\cdot \mathrm{C}_m^m\Big]
+    \end{align}\\
+    接下来将用累加符号表示变形后的右侧式子。
+
+\newpage
+
+    根据上述变换的结论，我们可以得到变形后的等式：
+    \begin{align}
+        \sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=\sum_{h=0}^mT(h)\cdot\sum_{k=0}^h(-1)^k\cdot\mathrm{C}_h^k
+    \end{align}\\
+    然而根据二项式定理的结论：
+    \begin{align}
+        \sum_{k=0}^h(-1)^k\cdot\mathrm{C}_h^k=0~~~~~~~~(h\geq 1)
+    \end{align}\\
+    所以等式可以进一步变形为：
+    \begin{align}
+        &\sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=T(0)\\[3mm]
+        &\sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=\mathrm{P}_m^m\cdot\mathrm{S}_n^m
+    \end{align}\\
+    移项整理，即可得到第二类斯特林数的计算公式。\\
+
+\subsubsection{排列组合问题\rnum{2}-$01$}
+    排列组合问题\rnum{2}-$01$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{相同的}盒中，保证至少$1$个。\\[3mm]
+    排列组合问题\rnum{2}-$01$公式：
+    \begin{large}
+        \begin{equation*}
+            P=\frac{1}{\mathrm{P}_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n
+        \end{equation*}
+    \end{large}\\
+    这一点可以直接由第二类斯特林数的计算公式得到。\\
+
+\subsubsection{排列组合问题\rnum{2}-$02$}
+    排列组合问题\rnum{2}-$02$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{不同的}盒中，保证至少$1$个。\\[3mm]
+    排列组合问题\rnum{2}-$02$公式：
+    \begin{large}
+        \begin{equation*}
+            P=\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n    
+        \end{equation*}
+    \end{large}\\
+    这一点可以直接由第二类斯特林数的计算公式得到。
+
+\newpage
+
+\subsubsection{排列组合问题\rnum{2}-$03$}
+    排列组合问题\rnum{2}-$03$背景：将$n$个\textbf{相同的}球放入$m$个\textbf{不同的}盒中，保证盒$m_i$个中至少$x_i$个。\\[3mm]
+    排列组合问题\rnum{2}-$03$背景：
+    \begin{large}
+        \begin{equation*}
+            P=\mathrm{C}_{n-\sum_{i=1}^m[x_i-1]-1}^m
+        \end{equation*}
+    \end{large}\\
+    考虑以下示意图：\vspace{3pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth,scale=1.0]
+                \draw (-3,0) circle(0.2);
+                \draw (-2,0) circle(0.2);
+                \draw (-1,0) circle(0.2);
+                \draw (0,0) circle(0.2);
+                \draw (+1,0) circle(0.2);
+                \draw (+2,0) circle(0.2);
+                \draw (+3,0) circle(0.2);
+
+                \draw[ultra thick] (-3.5,+0.4)--(-3.5,-0.4);
+                \draw[ultra thick] (-1.5,+0.4)--(-1.5,-0.4);
+                \draw[ultra thick] (+2.5,+0.4)--(+2.5,-0.4);
+                \draw[ultra thick] (+3.5,+0.4)--(+3.5,-0.4);
+
+                \node at(-2.5,-0.6){$m_1$};
+                \node at(+0.5,-0.6){$m_2$};
+                \node at(+3.0,-0.6){$m_3$};
+
+                \draw[very thick] (4.3,-0.3)--(5.7,-0.3);
+                \draw[very thick] (6.3,-0.3)--(7.7,-0.3);
+                \draw[very thick] (8.3,-0.3)--(9.7,-0.3);
+
+                \draw[very thick] (4.3,-0.3)--(4.3,+0.2);
+                \draw[very thick] (5.7,-0.3)--(5.7,+0.2);
+                \draw[very thick] (6.3,-0.3)--(6.3,+0.2);
+                \draw[very thick] (7.7,-0.3)--(7.7,+0.2);
+                \draw[very thick] (8.3,-0.3)--(8.3,+0.2);
+                \draw[very thick] (9.7,-0.3)--(9.7,+0.2);
+
+                \draw (5.3,0) circle(0.2);
+                \draw (7.3,0) circle(0.2);
+                \draw (9.3,0) circle(0.2);
+
+                \node at(4.8,0){$1\times$};
+                \node at(6.8,0){$2\times$};
+                \node at(8.8,0){$3\times$};
+
+                \node at(5,-0.6){$x_1=2$};
+                \node at(7,-0.6){$x_2=3$};
+                \node at(9,-0.6){$x_3=4$};
+            \end{tikzpicture}
+            \caption{排列组合问题\rnum{2}-$03$的示意图}
+        \end{center}
+    \end{figure}\\
+    首先对于第$i$个盒子$m_i$放入$x_i-1$个小球：\\[3mm]
+    第$1$个盒子要求至少$2$个，则放入$1$个小球。\\[3mm]
+    第$2$个盒子要求至少$3$个，则放入$2$个小球。\\[3mm]
+    第$3$个盒子要求至少$4$个，则放入$3$个小球。\\[5mm]
+    然后在剩余小球除去两侧的共$n-\sum_{i=1}^{m}[x_i-1]-1$个缝隙中任意插入$m_i-1$块板。\\[3mm]
+    在这个例子中共插入$2$块板，图中两侧绘制的表示边缘，并不是插入的板。\\[3mm]
+    在这个例子中共形成了三个空，其中的球依次归属盒子$m_1,m_2,m_3$。\\[3mm]
+    由于每个盒子中通过预处理只差一个，而板不能置于两侧，且两块板不能放在一个缝隙。\\[3mm]
+    因此每个空中至少能有一个球，分入对应的盒子中则一定可以使其满足预定要求。
 
 \newpage
 
