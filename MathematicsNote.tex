@@ -8667,8 +8667,8 @@
 
 \subsection{排列组合问题\rnum{1}}
     我们首先约定符号和背景，以便后续讨论。\\[3mm]
-    设共有$p$个元素，需对其进行排列。\\[3mm]
-    其中的$p$个元素可以分至若干集合中，包含一个普通集合和若干个约束集合。\\[3mm]
+    设共有$p$个元素，需对其中$p$个元素进行排列。\\[3mm]
+    此处的$p$个元素可以分至若干集合中，包含一个普通集合和若干个约束集合。\\[3mm]
     普通集合用符号$N$表示，其中共有$n$个元素：
     \begin{large}
         \begin{equation*}
@@ -9191,7 +9191,7 @@
     显然该背景下约束元素有$\mathrm{P}_x^x$种排列，但是依照约束条件只有$1$种是合法的，故总数上除以$\mathrm{P}_x^x$。\\
 
 \subsubsection{排列组合问题\rnum{1}-$07$}
-    排列组合问题\rnum{1}-$07$背景：存在$\lambda$个约束集合$X_1\sum X_\lambda$，其中的元素必须保持相对顺序固定。\\[3mm]
+    排列组合问题\rnum{1}-$07$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须保持相对顺序固定。\\[3mm]
     排列组合问题\rnum{1}-$07$公式：
     \begin{large}
         \begin{equation*}
@@ -9206,6 +9206,76 @@
 \newpage
 
 \subsection{排列组合问题\rnum{2}}
+    我们首先约定符号和背景，以便后续讨论。\\[3mm]
+    设共有$p$个元素，需对其中$q$个元素进行组合。\\[3mm]
+    此处的$p$个元素可以分至若干集合中，包含一个普通集合和若干个约束集合。\\[3mm]
+    普通集合用符号$N$表示，其中共有$n$个元素：
+    \begin{large}
+        \begin{equation*}
+            N=\left\{n_1,n_2,\cdots,n_n\right\}
+        \end{equation*}
+    \end{large}\\
+    约束集合用符号$X\,$表示，其中共含有$x$个元素：
+    \begin{large}
+        \begin{equation*}
+            X=\left\{x_1,x_2,\cdots,x_x\right\}
+        \end{equation*}
+    \end{large}\\
+    如果存在多个约束集合 ，则可以视情况分别使用符号$X_1~X_2~X_3$等表示。\\[3mm]
+    我们认为，普通集合中的元素在排列时无要求，约束集合中的元素在排列时存在约束条件。\\[3mm]
+    我们现在研究，在不同的约束条件下，总组合数$C$的值和约束条件的关系。
+
+\subsubsection{排列组合问题\rnum{2}-$01$}
+    排列组合问题\rnum{2}-$01$背景：存在$1$个约束集合$X$，其中的元素必须选取$m_1\sim m_2$个。\\[3mm]
+    排列组合问题\rnum{2}-$01$公式：
+    \begin{large}
+        \begin{equation*}
+            C=\sum_{i=m_1}^{m_2}\mathrm{C}_{x}^{\,i}\cdot\mathrm{C}_{n}^{q-i}
+        \end{equation*}
+    \end{large}\\
+    请注意该公式的累加符号内部，同时包含了其后的两项。\\[3mm]
+    按照如下方式依次考虑：\\[3mm]
+    1.从约束集合$X$中选取$m_1+0$个元素，从普通集合$N$中选取剩余$q-(m_1+0)$个元素。\\[3mm]
+    2.从约束集合$X$中选取$m_1+1$个元素，从普通集合$N$中选取剩余$q-(m_1+1)$个元素。\\[3mm]
+    3.从约束集合$X$中选取$m_1+2$个元素，从普通集合$N$中选取剩余$q-(m_1+2)$个元素。\\[3mm]
+    直至从约束集合中选取的元素数达到上限$m_2$时终止，按照加法原理将这些情况相加。\\[5mm]
+    实际上该模型也可以适用于至多至少的情况：\\[3mm]
+    约束集合中的元素至少选取$m$个，则可以在该模型下，令下限$m_1=m$，令上限$m_2=q$。\\[3mm]
+    约束集合中的元素至多选取$m$个，则可以在该模型下，令上限$m_2=m$，令下限$m_1=0$。
+
+\newpage
+
+\subsubsection{排列组合问题\rnum{2}-$02$}
+    排列组合问题\rnum{2}-$02$背景：仅有$2$个约束集合$X_1\sim X_2$，其中的元素必须选取$m_i$个。\\[3mm]
+    排列组合问题\rnum{2}-$02$公式：
+    \begin{large}
+        \begin{equation*}
+            C=\mathrm{C}_{x_1}^{m_1}\cdot\mathrm{C}_{x_2}^{m_2}
+        \end{equation*}
+    \end{large}\\
+    1.由于约束集合$X_1$中要求必须选取$m_1$个元素，故有组合数$\mathrm{C}_{x_1}^{m_1}$。\\[3mm]
+    2.由于约束集合$X_2$中要求必须选取$m_2$个元素，故有组合数$\mathrm{C}_{x_2}^{m_2}$。\\[3mm]
+    根据乘法原理将两项相乘即可。\\
+
+
+\subsubsection{排列组合问题\rnum{2}-$03$}
+    排列组合问题\rnum{2}-$03$背景：仅有$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须选取$m_i$个。\\[3mm]
+    排列组合问题\rnum{2}-$03$公式：
+    \begin{large}
+        \begin{equation*}
+            C=\prod_{i=1}^{\lambda}\mathrm{C}_{x_i}^{m_i}
+        \end{equation*}
+    \end{large}\\
+    按照如下方式依次考虑：\\[3mm]
+    1.由于约束集合$X_1$中要求必须选取$m_1$个元素，故有组合数$\mathrm{C}_{x_1}^{m_1}$。\\[3mm]
+    2.由于约束集合$X_2$中要求必须选取$m_2$个元素，故有组合数$\mathrm{C}_{x_2}^{m_2}$。\\[3mm]
+    3.由于约束集合$X_3$中要求必须选取$m_3$个元素，故有组合数$\mathrm{C}_{x_3}^{m_3}$。\\[3mm]
+    4.由于约束集合$X_\lambda$中要求必须选取$m_\lambda$个元素，故有组合数$\mathrm{C}_{x_\lambda}^{m_\lambda}$。\\[3mm]
+    根据乘法原理将各项相乘即可。
+
+\newpage
+
+\subsection{排列组合问题\rnum{3}}
     我们首先约定符号和背景，以便后续讨论。\\[3mm]
     这一类排列组合问题实际上可以概括为球盒问题，球对应小球，盒对应盒子，为了叙述的便利和规避集合不能存在相同元素的问题，
     这里使用了小球盒子而非元素集合这样更为抽象的表述。\\[3mm]
@@ -9237,7 +9307,7 @@
     \end{align}\\
     考虑空集数$>=2$的情况：
     \begin{align}
-        \mathrm{C}_m^2\cdot(m-2)^n=\mathrm{C}_2^2\cdot T(2)+\mathrm{C}_3^2\cdot T(3)+\mathrm{C}_4^2\cdot T(4)+\cdots+\mathrm{C}_m^1\cdot T(m)=\sum_{h=1}^m\mathrm{C}_h^2\cdot T(h)
+        \mathrm{C}_m^2\cdot(m-2)^n=\mathrm{C}_2^2\cdot T(2)+\mathrm{C}_3^2\cdot T(3)+\mathrm{C}_4^2\cdot T(4)+\cdots+\mathrm{C}_m^2\cdot T(m)=\sum_{h=2}^m\mathrm{C}_h^2\cdot T(h)
     \end{align}\\
     之所以在等式右侧有$\mathrm{C}_n^1$或$\mathrm{C}_n^2$等，是因为左侧的计数实际上存在重复。
 
@@ -9281,9 +9351,9 @@
         &T(0)\cdot\Big[(-1)^0\cdot \mathrm{C}_0^0\Big]+\\[3mm]
         &T(1)\cdot\Big[(-1)^0\cdot \mathrm{C}_1^0+(-1)^1\cdot \mathrm{C}_1^1\Big]+\\[3mm]
         &T(2)\cdot\Big[(-1)^0\cdot \mathrm{C}_2^0+(-1)^1\cdot \mathrm{C}_2^1+(-1)^2\cdot \mathrm{C}_2^2\Big]+\\[3mm]
-        &T(2)\cdot\Big[(-1)^0\cdot \mathrm{C}_3^0+(-1)^1\cdot \mathrm{C}_3^1+(-1)^3\cdot \mathrm{C}_3^2+(-1)^3\cdot \mathrm{C}_3^3\Big]+\\[3mm]
+        &T(2)\cdot\Big[(-1)^0\cdot \mathrm{C}_3^0+(-1)^1\cdot \mathrm{C}_3^1+(-1)^2\cdot \mathrm{C}_3^2+(-1)^3\cdot \mathrm{C}_3^3\Big]+\\[3mm]
         &\vdots\\[3mm]
-        &T(m)\cdot\Big[(-1)^0\cdot \mathrm{C}_m^0+(-1)^1\cdot \mathrm{C}_m^1+(-1)^3\cdot \mathrm{C}_m^2+\cdots+(-1)^m\cdot \mathrm{C}_m^m\Big]
+         &T(m)\cdot\Big[(-1)^0\cdot \mathrm{C}_m^0+(-1)^1\cdot \mathrm{C}_m^1+(-1)^2\cdot \mathrm{C}_m^2+\cdots+(-1)^m\cdot \mathrm{C}_m^m\Big]
     \end{align}\\
     接下来将用累加符号表示变形后的右侧式子。
 
@@ -9304,9 +9374,9 @@
     \end{align}\\
     移项整理，即可得到第二类斯特林数的计算公式。\\
 
-\subsubsection{排列组合问题\rnum{2}-$01$}
-    排列组合问题\rnum{2}-$01$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{相同的}盒中，保证至少$1$个。\\[3mm]
-    排列组合问题\rnum{2}-$01$公式：
+\subsubsection{排列组合问题\rnum{3}-$01$}
+    排列组合问题\rnum{3}-$01$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{相同的}盒中，保证至少$1$个。\\[3mm]
+    排列组合问题\rnum{3}-$01$公式：
     \begin{large}
         \begin{equation*}
             P=\frac{1}{\mathrm{P}_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n
@@ -9314,9 +9384,9 @@
     \end{large}\\
     这一点可以直接由第二类斯特林数的计算公式得到。\\
 
-\subsubsection{排列组合问题\rnum{2}-$02$}
-    排列组合问题\rnum{2}-$02$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{不同的}盒中，保证至少$1$个。\\[3mm]
-    排列组合问题\rnum{2}-$02$公式：
+\subsubsection{排列组合问题\rnum{3}-$02$}
+    排列组合问题\rnum{3}-$02$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{不同的}盒中，保证至少$1$个。\\[3mm]
+    排列组合问题\rnum{3}-$02$公式：
     \begin{large}
         \begin{equation*}
             P=\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n    
@@ -9326,15 +9396,15 @@
 
 \newpage
 
-\subsubsection{排列组合问题\rnum{2}-$03$}
-    排列组合问题\rnum{2}-$03$背景：将$n$个\textbf{相同的}球放入$m$个\textbf{不同的}盒中，保证盒$m_i$个中至少$x_i$个。\\[3mm]
-    排列组合问题\rnum{2}-$03$背景：
+\subsubsection{排列组合问题\rnum{3}-$03$}
+    排列组合问题\rnum{3}-$03$背景：将$n$个\textbf{相同的}球放入$m$个\textbf{不同的}盒中，保证盒$m_i$个中至少$x_i$个。\\[3mm]
+    排列组合问题\rnum{3}-$03$背景：
     \begin{large}
         \begin{equation*}
-            P=\mathrm{C}_{n-\sum_{i=1}^m[x_i-1]-1}^m
+            P=\mathrm{C}_{n-\sum_{i=1}^m[x_i-1]-1}^{m-1}
         \end{equation*}
     \end{large}\\
-    考虑以下示意图：\vspace{3pt}
+    可以以插板的思路解决该问题：\vspace{3pt}
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
@@ -9378,14 +9448,14 @@
                 \node at(7,-0.6){$x_2=3$};
                 \node at(9,-0.6){$x_3=4$};
             \end{tikzpicture}
-            \caption{排列组合问题\rnum{2}-$03$的示意图}
+            \caption{排列组合问题\rnum{3}-$03$的示意图}
         \end{center}
     \end{figure}\\
-    首先对于第$i$个盒子$m_i$放入$x_i-1$个小球：\\[3mm]
+    首先对于盒$m_i$放入$x_i-1$个球：\\[3mm]
     第$1$个盒子要求至少$2$个，则放入$1$个小球。\\[3mm]
     第$2$个盒子要求至少$3$个，则放入$2$个小球。\\[3mm]
     第$3$个盒子要求至少$4$个，则放入$3$个小球。\\[5mm]
-    然后在剩余小球除去两侧的共$n-\sum_{i=1}^{m}[x_i-1]-1$个缝隙中任意插入$m_i-1$块板。\\[3mm]
+    然后在剩余小球除去两侧的共$n-\sum_{i=1}^{m}[x_i-1]-1$个缝隙中任意插入$m-1$块板。\\[3mm]
     在这个例子中共插入$2$块板，图中两侧绘制的表示边缘，并不是插入的板。\\[3mm]
     在这个例子中共形成了三个空，其中的球依次归属盒子$m_1,m_2,m_3$。\\[3mm]
     由于每个盒子中通过预处理只差一个，而板不能置于两侧，且两块板不能放在一个缝隙。\\[3mm]
@@ -9395,7 +9465,7 @@
 
 \section{概率论初步}
     
-\subsection{事件}
+\subsection{随机事件}
     必然事件：在每次试验中一定发生，通常用符号$\Omega$表示。\\[3mm]
     不可能事件：在每一次试验中一定不发生，通常用符号$\emptyset$表示。\\[3mm]
     必然事件的概率为$1$：
@@ -9419,58 +9489,106 @@
     \end{large}\\
     一般来说，随机事件也可以简称为事件。
 
-\subsubsection{互斥事件}
-    如果两个事件满足以下条件，我们将其称为互斥事件：
-    \begin{large}
-        \begin{equation*}
-            P(A\cap B)=0
-        \end{equation*}
-    \end{large}
-    \vspace{-20pt}
-
-\subsubsection{对立事件}
-    如果两个事件满足以下条件，我们将其称为对立事件（事件$A$对立事件记作$\bar{A}$）：
-    \begin{large}
-        \begin{equation*}
-            P(A\cap B)=0\qquad P(A\cup B)=1
-        \end{equation*}
-    \end{large}
-    \vspace{-20pt}
-
-\subsubsection{基本事件}
-    我们将每次试验中不能再分的最简单的随机事件，称为基本事件，通常用$\omega$表示。\\[3mm]
-    所有基本事件的概率和为$1$：
+\subsection{古典概型}
+    我们将每次试验中最为简单不能再分的随机事件，称为基本事件，通常用符号$\omega$表示。\\[3mm]
+    所有的基本事件的概率和为$1$：
     \begin{large}
         \begin{equation*}
             \sum_{i=1}^{n}P(\omega_i)=1
         \end{equation*}
     \end{large}\\
-    实际上，我们可以将所有随机事件看作若干个基本事件的组合。
-
-\subsection{古典概型}
+    实际上，我们可以将所有随机事件看作若干个基本事件的组合。\\[6mm]
     若一个试验满足以下条件，我们将其称为古典概型：\\[3mm]
-    有限性：在试验中，基本事件的数量是有限的。\\[2mm]
+    有限性：在试验中，基本事件的数量是有限的。\\[3mm]
     等可能性：在试验中，每个基本事件发生的可能性均等。\\[4mm]
     古典概型的概率：
     \begin{large}
         \begin{equation*}
-            P(A)=\frac{\omega_{A}}{\omega_{\Omega}}
+            P(A)=\frac{|A|}{|\Omega|}
         \end{equation*}
     \end{large}\\
-    此处的$\omega_A$和$\omega_{\Omega}$分别代表事件$A$和事件$\Omega$中基本事件的数量。\vspace{3pt}
+    此处的$|A|$和$|\Omega|$分别随机事件$A$和必然事件$\Omega$中，包含的基本事件的数量。
 
-\subsection{几何概型}
-    若一个试验满足以下条件，我们将其称为几何概型：\\[3mm]
-    无限性：在试验中，基本事件的数量是无限的。\\[2mm]
-    等可能性：在试验中，每个基本事件发生的可能性均等。\\[4mm]
-    几何概型的概率：
+\newpage
+
+\subsection{事件关系的运算}
+    任何一个事件都可以视作由基本事件组成的集合。\\[3mm]
+    例如必然事件可以表示为：
     \begin{large}
         \begin{equation*}
-            P(A)=\frac{\mu_{A}}{\mu_{\Omega}}
+            \Omega=\{\omega_1,\omega_2,\cdots,\omega_n\}
         \end{equation*}
     \end{large}\\
-    此处的$\mu_A$和$\mu_{\Omega}$分别代表区域$A$和区域$\Omega$的几何度量大小。\\[3mm]
-    在几何概型中，我们可以将一个事件理解为一块区域，而事件的概率只与区域的几何度量有关。\vspace{3pt}
+    例如随机事件可以表示为：
+    \begin{large}
+        \begin{equation*}
+            A=\{\omega_1,\omega_2\}~~~~B=\{\omega_2,\omega_3,\omega_4\}
+        \end{equation*}
+    \end{large}\\
+    以此为基础，可以将概率的运算，对应为集合的运算。\\
+
+\subsubsection{积事件}
+    我们这样定义两个事件的积事件：
+    \begin{large}
+        \begin{equation*}
+            A\cap B=\{\omega\mid \omega\in A~\text{且}~\omega\in B\}    
+        \end{equation*}
+    \end{large}\\
+    我们这样定义多个事件的积事件：
+    \begin{large}
+        \begin{equation*}
+            \bigcap_{i=1}^{n}A_i=\{\omega\mid \omega\in A_1~\text{且}~\omega\in A_2~\text{且}~\cdots~\text{且}~\omega\in A_n\}
+        \end{equation*}
+    \end{large}\\
+    即事件$A$发生\textbf{且}事件$B$发生，其积事件$A\cap B$才会发生。\\
+
+\subsubsection{和事件}
+    我们这样定义两个事件的和事件：
+    \begin{large}
+        \begin{equation*}
+            A\cup B=\{\omega\mid \omega\in A~\text{或}~\omega\in B\}    
+        \end{equation*}
+    \end{large}\\
+    我们这样定义多个事件的积事件：
+    \begin{large}
+        \begin{equation*}
+            \bigcup_{i=1}^{n}A_i=\{\omega\mid \omega\in A_1~\text{或}~\omega\in A_2~\text{或}~\cdots~\text{或}~\omega\in A_n\}
+        \end{equation*}
+    \end{large}\\
+    即事件$A$发生\textbf{或}事件$B$发生，其和事件$A\cup B$就会发生。
+
+\newpage
+
+\subsubsection{差事件}
+    我们这样定义两个事件的差事件：
+    \begin{large}
+        \begin{equation*}
+            A-B=\{\omega\mid \omega\in A~\text{且}~\omega\notin B\}    
+        \end{equation*}
+    \end{large}\\
+    即事件$A$发生\textbf{且}事件$B$不发生，其差事件$A-B$才会发生。\\
+
+\subsubsection{互斥事件}
+    如果两个事件满足以下条件，我们将其称为互斥事件：
+    \begin{large}
+        \begin{equation*}
+            A\cap B=\emptyset
+        \end{equation*}
+    \end{large}\\
+    所以事件$A$和事件$B$为互斥事件的条件是，其积事件为不可能事件。\\
+
+\subsubsection{对立事件}
+    如果两个事件满足以下条件，我们将其称为对立事件：
+    \begin{large}
+        \begin{align*}
+            &A\cap B=\emptyset\\[3mm]
+            &A\cup B=\Omega
+        \end{align*}
+    \end{large}\\
+    所以事件$A$和事件$B$为互斥事件的条件是，其积事件为不可能事件，其和事件为必然事件。\\[3mm]
+    由于事件$A$的对立事件是唯一的，因此事件$A$的对立事件可以记作$\bar{A}$。
+
+\newpage
 
 \subsection{频数和频率}
     如果进行了$n$次重复试验，事件$A$出现了$m$次：\\[3mm]
