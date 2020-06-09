@@ -50,6 +50,9 @@
 \date{2019.07.27}
 
 \begin{document}
+
+\definecolor{LightGray}{rgb}{0.95,0.95,0.95}
+
 \maketitle
 
 \newpage
@@ -144,12 +147,31 @@
 
 \subsubsection{交集运算}
     由属于集合$A$且属于集合$B$的元素组成的集合，称为集合$A$与集合$B$的交集。\\[3mm]
-    集合$A$和集合$B$的交集：
+    集合$A$和集合$B$的交集的数学表达：
     \begin{large}
         \begin{equation*}
             A\cap B=\big\{ x\mid x\in A~\text{且}~x\in B\big\}
         \end{equation*}
     \end{large}\\
+    集合$A$和集合$B$的交集的文氏图表达：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \begin{scope}
+                    \clip (-1,0) circle (1.5);
+                    \clip (+1,0) circle (1.5);
+                    \fill[LightGray] (-1,0) circle (1.5);
+                    \fill[LightGray] (+1,0) circle (1.5);
+                \end{scope}
+                \draw (-1,0) circle (1.5);
+                \draw (+1,0) circle (1.5);
+                \node at(-1,0) {$A$};
+                \node at(+1,0) {$B$};
+                \node at(0,-2) {$A\cap B$};
+            \end{tikzpicture}
+            \caption{交集的文氏图表达}
+        \end{center}
+    \end{figure}\\
     集合的交集运算有以下重要性质：
     \begin{large}
         \begin{align*}
@@ -160,15 +182,39 @@
             &A\cap B\subseteq B
         \end{align*}
     \end{large}\\
+    此外多个集合的交集也可以表示为：
+    \begin{large}
+        \begin{equation*}
+            \bigcap_{i=1}^{n}A_n=A_1\cap A_2\cap\cdots\cap A_n
+        \end{equation*}
+    \end{large}\\
+    这个符号代表$A_1\sim A_n$共计$n$个集合依次取交集。
+
+\newpage
 
 \subsubsection{并集运算}
     由属于集合$A$或属于集合$B$的元素组成的集合，称为集合$A$与集合$B$的并集。\\[3mm]
-    集合$A$和集合$B$的并集：
+    集合$A$和集合$B$的并集的文氏图表达：
     \begin{large}
         \begin{equation*}
             A\cup B=\big\{ x\mid x\in A~\text{或}~x\in B\big\}
         \end{equation*}
     \end{large}\\
+    集合$A$和集合$B$的并集的文氏图表达：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \fill[LightGray] (-1,0) circle (1.5);
+                \fill[LightGray] (+1,0) circle (1.5);
+                \draw (-1,0) circle (1.5);
+                \draw (+1,0) circle (1.5);
+                \node at(-1,0) {$A$};
+                \node at(+1,0) {$B$};
+                \node at(0,-2) {$A\cup B$};
+            \end{tikzpicture}
+            \caption{并集的文氏图表达}
+        \end{center}
+    \end{figure}\\
     集合的并集运算有以下重要性质：
     \begin{large}
         \begin{align*}
@@ -179,6 +225,13 @@
             &A\cup B\supseteq B
         \end{align*}
     \end{large}\\
+    此外多个集合的并集也可以表示为：
+    \begin{large}
+        \begin{equation*}
+            \bigcup_{i=1}^{n}A_n=A_1\cup A_2\cup\cdots\cup A_n
+        \end{equation*}
+    \end{large}\\
+    这个符号代表$A_1\sim A_n$共计$n$个集合依次取并集。\\[12mm]
 
 \newpage
 
@@ -186,46 +239,660 @@
     由属于集合$U$且不属于集合$A$的元素组成的集合，称为集合$A$在集合$U$中的补集。\\[3mm]
     需要指出的是，集合$U$应当满足为集合$A$的超集，集合$A$应当满足为集合$U$的子集。\\[3mm]
     需要说明的是，集合$U$在补集运算中，通常被称为全集。\\[4mm]
-    集合$A$在集合$U$中的补集：
+    集合$A$在集合$U$中的补集的数学表达：
     \begin{large}
         \begin{equation*}
             \complement_UA=\big\{ x\mid x\in U~\text{且}~x\notin A\big\}
         \end{equation*}
     \end{large}\\
+    集合$A$在集合$U$中的补集的文氏图表达：\vspace{3pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \fill[LightGray] (-3,+2.0) rectangle (+3,-2.0);
+                \fill[white] (0,0) circle (1.5);
+
+                \draw (-3,+2.0) rectangle (+3,-2.0);
+                \draw (0,0) circle (1.5);
+                
+                \node at(0,0) {$A$};
+                \node at(0,-2.5) {$\complement_U A$};
+            \end{tikzpicture}
+            \caption{补集的文氏图表达}
+        \end{center}
+    \end{figure}\\
     集合的补集运算有以下重要性质：
     \begin{large}
         \begin{align*}
             &\complement_UA\cap A=\emptyset\\[3mm]
-            &\complement_UA\cup A=A\\[3mm]
+            &\complement_UA\cup A=U\\[3mm]
             &\complement_U\big[\complement_UA\big]=A
         \end{align*}
     \end{large}
 
-\subsubsection{集合的运算性质}
-    集合$A$与集合$B~C$并集的交集，等于集合$A$分别与集合$B~C$得到的两个交集的并集：
-    \begin{large}
-        \begin{equation*}
-            A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
-        \end{equation*}
-    \end{large}\\
-    集合$A$与集合$B~C$并集的交集，等于集合$A$分别与集合$B~C$得到的两个并集的交集：
+\newpage
+
+\subsubsection{集合的性质$1$}
+    集合的性质$1$的基本形式：
     \begin{large}
         \begin{equation*}
             A\cup(B\cap C)=(A\cup B)\cap(A\cup C)
         \end{equation*}
     \end{large}\\
-    集合$A$和集合$B$补集的并集，等于集合$A$和集合$B$交集的补集：
+    集合的性质$1$的推广形式：
     \begin{large}
         \begin{equation*}
-            \complement_UA\cup\complement_UB=\complement\left(A\cap B\right)
+            A\cup\left(\bigcap_{i=1}^n B_i\right)=\bigcap_{i=1}^n(A\cup B_i)
         \end{equation*}
-    \end{large}\\
-    集合$A$和集合$B$补集的交集，等于集合$A$和集合$B$并集的补集：
+    \end{large}\\[1mm]
+    基本形式的等式左侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (0,1.732) circle (1.5);
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (-1,0) circle (1.5);
+                            \clip (+1,0) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                            \fill[LightGray] (+1,0) circle (1.5);
+                        \end{scope}
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$B\cap C$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (-1,0) circle (1.5);
+                            \clip (+1,0) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                            \fill[LightGray] (+1,0) circle (1.5);
+                        \end{scope}
+                        \fill[LightGray] (0,1.732) circle (1.5);
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A\cup(B\cap C)$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式左侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    基本形式的等式右侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (0,1.732) circle (1.5);
+                        \fill[LightGray] (-1,0) circle (1.5);
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A\cup B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (0,1.732) circle (1.5);
+                        \fill[LightGray] (+1,0) circle (1.5);
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A\cup C$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (-1,0) circle (1.5);
+                            \clip (+1,0) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                            \fill[LightGray] (+1,0) circle (1.5);
+                        \end{scope}
+                        \fill[LightGray] (0,1.732) circle (1.5);
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$(A\cup B)\cap (A\cup C)$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式右侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    由两组文氏图可以看出，最终得出的结论是一致的，因此基本形式由此证明。
+
+\newpage
+
+    推广形式可以使用第一类数学归纳法加以证明。\\[3mm]
+    假设以下式子成立：
+    \setcounter{equation}{0}
+    \begin{align}
+        A\cup\left(\bigcap_{i=1}^n B_i\right)=\bigcap_{i=1}^n(A\cup B_i)
+    \end{align}\\
+    我们进行以下代换：
+    \begin{align}
+        B_1=C_1~~,~~B_2=C_2~~,~~\cdots~~,~~B_{n-1}=C_{n-1}~~,~~B_n=C_n\cap C_{n+1}
+    \end{align}\\
+    左式既可以表示为：
+    \begin{align}
+        A\cup\left(\bigcap_{i=1}^n B_i\right)=A\cup\left(\bigcap_{i=1}^{n+1} C_i\right)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    \end{align}\\
+    左侧也可以表示为：
+    \begin{align}
+        A\cup\left(\bigcap_{i=1}^n B_i\right)
+        &=\bigcap_{i=1}^n(A\cup B_i)\\[3mm]
+        &=\left[\bigcap_{i=1}^{n-1}(A\cup B_i)\right]\cap(A\cup B_n)\\[3mm]
+        &=\left[\bigcap_{i=1}^{n-1}(A\cup C_i)\right]\cap(A\cup (C_n\cap C_{n+1}))\\[3mm]
+        &=\left[\bigcap_{i=1}^{n-1}(A\cup C_i)\right]\cap(A\cup C_n)\cap(A\cup C_{n+1})\\[3mm]
+        &=\bigcap_{i=1}^{n+1}(A\cup C_i)
+    \end{align}\\
+    联立两个结论可得：
+    \begin{align}
+        A\cup\left(\bigcap_{i=1}^{n+1} C_i\right)=\bigcap_{i=1}^{n+1}(A\cup C_i)
+    \end{align}\\
+    由此证明了该假设可以由$n\Rightarrow n+1$，然而已经证明该假设在$n=2$时成立，因此假设成立。
+
+\newpage
+
+\subsubsection{集合的性质$2$}
+    集合的性质$2$的基本形式：
     \begin{large}
         \begin{equation*}
-            \complement_UA\cap\complement_UB=\complement\left(A\cup B\right)
+            A\cap(B\cup C)=(A\cap B)\cup(A\cap C)
         \end{equation*}
     \end{large}\\
+    集合的性质$2$的推广形式：
+    \begin{large}
+        \begin{equation*}
+            A\cap\left(\bigcup_{i=1}^n B_i\right)=\bigcup_{i=1}^n(A\cap B_i)
+        \end{equation*}
+    \end{large}\\[1mm]
+    基本形式的等式左侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (0,1.732) circle (1.5);
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-1,0) circle (1.5);
+                        \fill[LightGray] (+1,0) circle (1.5);
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$B\cup C$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (0,1.732) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                            \fill[LightGray] (+1,0) circle (1.5);
+                        \end{scope}
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A\cap(B\cup C)$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式左侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    基本形式的等式右侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (0,1.732) circle (1.5);
+                            \clip (-1,0) circle (1.5);
+                            \fill[LightGray] (0,1.732) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                        \end{scope}
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A\cap B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (0,1.732) circle (1.5);
+                            \clip (+1,0) circle (1.5);
+                            \fill[LightGray] (0,1.732) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                        \end{scope}
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$A\cap C$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.23\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (0,1.732) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                            \fill[LightGray] (+1,0) circle (1.5);
+                        \end{scope}
+                        \draw (0,1.732) circle (1.5);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(0,1.732) {$A$};
+                        \node at(-1,0) {$B$};
+                        \node at(+1,0) {$C$};
+                        \node at(0,-2) {$(A\cap B)\cup (A\cap C)$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式右侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    由两组文氏图可以看出，最终得出的结论是一致的，因此基本形式由此证明。
+
+\newpage
+
+    推广形式可以使用第一类数学归纳法加以证明。\\[3mm]
+    假设以下式子成立：
+    \setcounter{equation}{0}
+    \begin{align}
+        A\cap\left(\bigcup_{i=1}^n B_i\right)=\bigcup_{i=1}^n(A\cap B_i)
+    \end{align}\\
+    我们进行以下代换：
+    \begin{align}
+        B_1=C_1~~,~~B_2=C_2~~,~~\cdots~~,~~B_{n-1}=C_{n-1}~~,~~B_n=C_n\cup C_{n+1}
+    \end{align}\\
+    左式既可以表示为：
+    \begin{align}
+        A\cap\left(\bigcup_{i=1}^n B_i\right)=A\cap\left(\bigcup_{i=1}^{n+1} C_i\right)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    \end{align}\\
+    左侧也可以表示为：
+    \begin{align}
+        A\cap\left(\bigcup_{i=1}^n B_i\right)
+        &=\bigcup_{i=1}^n(A\cap B_i)\\[3mm]
+        &=\left[\bigcup_{i=1}^{n-1}(A\cap B_i)\right]\cup(A\cap B_n)\\[3mm]
+        &=\left[\bigcup_{i=1}^{n-1}(A\cap C_i)\right]\cup(A\cap (C_n\cup C_{n+1}))\\[3mm]
+        &=\left[\bigcup_{i=1}^{n-1}(A\cap C_i)\right]\cup(A\cap C_n)\cup(A\cap C_{n+1})\\[3mm]
+        &=\bigcup_{i=1}^{n+1}(A\cap C_i)
+    \end{align}\\
+    联立两个结论可得：
+    \begin{align}
+        A\cap\left(\bigcup_{i=1}^{n+1} C_i\right)=\bigcup_{i=1}^{n+1}(A\cap C_i)
+    \end{align}\\
+    由此证明了该假设可以由$n\Rightarrow n+1$，然而已经证明该假设在$n=2$时成立，因此假设成立。
+
+\newpage
+
+\subsubsection{集合的性质$3$}
+    集合的性质$3$的基本形式：
+    \begin{large}
+        \begin{equation*}
+            \complement_UA\cap\complement_UB=\complement_U\left(A\cup B\right)
+        \end{equation*}
+    \end{large}\\
+    集合的性质$3$的推广形式：
+    \begin{large}
+        \begin{equation*}
+            \bigcap_{i=1}^n \complement_UA_i=\complement_U\left(\bigcup_{i=1}^n A_i\right)
+        \end{equation*}
+    \end{large}\\[1mm]
+    基本形式的等式左侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \fill[white] (-1,0) circle (1.5);
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_U A$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\quad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \fill[white] (+1,0) circle (1.5);
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_U B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\quad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \fill[white] (-1,0) circle (1.5);
+                        \fill[white] (+1,0) circle (1.5);
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_UA\cap\complement_UB$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式左侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    基本形式的等式右侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-1,0) circle (1.5);
+                        \fill[LightGray] (+1,0) circle (1.5);
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$A\cup B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\quad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \fill[white] (-1,0) circle (1.5);
+                        \fill[white] (+1,0) circle (1.5);
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_U\left(A\cup B\right)$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式左侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    由两组文氏图可以看出，最终得出的结论是一致的，因此基本形式由此证明。
+
+\newpage
+
+    推广形式可以使用第一类数学归纳法加以证明。\\[3mm]
+    假设以下式子成立：
+    \setcounter{equation}{0}
+    \begin{align}
+        \bigcap_{i=1}^n \complement_UB_i=\complement_U\left(\bigcup_{i=1}^n B_i\right)
+    \end{align}\\
+    我们进行以下代换：
+    \begin{align}
+        B_1=C_1~~,~~B_2=C_2~~,~~\cdots~~,~~B_{n-1}=C_{n-1}~~,~~B_n=C_n\cup C_{n+1}
+    \end{align}\\
+    左式既可以表示为：
+    \begin{align}
+        \complement_U\left(\bigcup_{i=1}^n B_i\right)=\complement_U\left(\bigcap_{i=1}^{n+1}Ci\right)~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    \end{align}\\
+    左侧也可以表示为：
+    \begin{align}
+        \complement_U\left(\bigcup_{i=1}^n B_i\right)
+        &=\bigcap_{i=1}^n\complement_U B_i\\[3mm]
+        &=\left(\bigcap_{i=1}^{n-1}\complement_U B_i\right)\cap\complement_U B_n\\[3mm]
+        &=\left(\bigcap_{i=1}^{n-1}\complement_U C_i\right)\cap\complement_U\left(C_n\cup C_{n+1}\right)\\[3mm]
+        &=\left(\bigcap_{i=1}^{n-1}\complement_U C_i\right)\cap\complement_UC_n\cap \complement_UC_{n+1}\\[3mm]
+        &=\bigcap_{i=1}^{n+1}\complement_U C_i
+    \end{align}\\
+    联立两个结论可得：
+    \begin{align}
+        \bigcap_{i=1}^{n+1} \complement_UC_i=\complement_U\left(\bigcup_{i=1}^{n+1} C_i\right)
+    \end{align}\\
+    由此证明了该假设可以由$n\Rightarrow n+1$，然而已经证明该假设在$n=2$时成立，因此假设成立。
+
+\newpage
+
+\subsubsection{集合的性质$4$}
+    集合的性质$4$的基本形式：
+    \begin{large}
+        \begin{equation*}
+            \complement_UA\cup\complement_UB=\complement_U\left(A\cap B\right)
+        \end{equation*}
+    \end{large}\\
+    集合的性质$4$的推广形式：
+    \begin{large}
+        \begin{equation*}
+            \bigcup_{i=1}^n \complement_UA_i=\complement_U\left(\bigcap_{i=1}^n A_i\right)
+        \end{equation*}
+    \end{large}\\[1mm]
+    基本形式的等式左侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \fill[white] (-1,0) circle (1.5);
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_U A$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\quad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \fill[white] (+1,0) circle (1.5);
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_U B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\quad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \begin{scope}
+                            \clip (-1,0) circle (1.5);
+                            \clip (+1,0) circle (1.5);
+                            \fill[white] (-1,0) circle (1.5);
+                            \fill[white] (+1,0) circle (1.5);
+                        \end{scope}
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_UA\cup\complement_UB$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式左侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    基本形式的等式右侧可以用文氏图表示为：\vspace{5pt}
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \begin{scope}
+                            \clip (-1,0) circle (1.5);
+                            \clip (+1,0) circle (1.5);
+                            \fill[LightGray] (-1,0) circle (1.5);
+                            \fill[LightGray] (+1,0) circle (1.5);
+                        \end{scope}
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$A\cup B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\quad
+            \subfigure
+            {
+                \begin{minipage}[t]{0.27\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \fill[LightGray] (-3,+2) rectangle (+3,-2);
+                        \begin{scope}
+                            \clip (-1,0) circle (1.5);
+                            \clip (+1,0) circle (1.5);
+                            \fill[white] (-1,0) circle (1.5);
+                            \fill[white] (+1,0) circle (1.5);
+                        \end{scope}
+                        \draw (-3,+2) rectangle (+3,-2);
+                        \draw (-1,0) circle (1.5);
+                        \draw (+1,0) circle (1.5);
+                        \node at(-1,0) {$A$};
+                        \node at(+1,0) {$B$};
+                        \node at(0,-2.7) {$\complement_U\left(A\cap B\right)$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{等式左侧的文氏图表达}
+        \end{center}
+    \end{figure}\\
+    由两组文氏图可以看出，最终得出的结论是一致的，因此基本形式由此证明。
+
+\newpage
+
+    推广形式可以使用第一类数学归纳法加以证明。\\[3mm]
+    假设以下式子成立：
+    \setcounter{equation}{0}
+    \begin{align}
+        \bigcup_{i=1}^n \complement_UB_i=\complement_U\left(\bigcap_{i=1}^n B_i\right)
+    \end{align}\\
+    我们进行以下代换：
+    \begin{align}
+        B_1=C_1~~,~~B_2=C_2~~,~~\cdots~~,~~B_{n-1}=C_{n-1}~~,~~B_n=C_n\cap C_{n+1}
+    \end{align}\\
+    左式既可以表示为：
+    \begin{align}
+        \complement_U\left(\bigcap_{i=1}^n B_i\right)=\complement_U\left(\bigcup_{i=1}^{n+1}Ci\right)~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    \end{align}\\
+    左侧也可以表示为：
+    \begin{align}
+        \complement_U\left(\bigcap_{i=1}^n B_i\right)
+        &=\bigcup_{i=1}^n\complement_U B_i\\[3mm]
+        &=\left(\bigcup_{i=1}^{n-1}\complement_U B_i\right)\cup\complement_U B_n\\[3mm]
+        &=\left(\bigcup_{i=1}^{n-1}\complement_U C_i\right)\cup\complement_U\left(C_n\cap C_{n+1}\right)\\[3mm]
+        &=\left(\bigcup_{i=1}^{n-1}\complement_U C_i\right)\cup\complement_UC_n\cup \complement_UC_{n+1}\\[3mm]
+        &=\bigcup_{i=1}^{n+1}\complement_U C_i
+    \end{align}\\
+    联立两个结论可得：
+    \begin{align}
+        \bigcup_{i=1}^{n+1} \complement_UC_i=\complement_U\left(\bigcap_{i=1}^{n+1} C_i\right)
+    \end{align}\\
+    由此证明了该假设可以由$n\Rightarrow n+1$，然而已经证明该假设在$n=2$时成立，因此假设成立。
 
 \newpage
 
@@ -256,7 +923,46 @@
             \end{tabular}
         \end{center}
         \caption{数集的符号}
-    \end{table}
+    \end{table}\\
+    实际上，非零自然数集$\mathbb{N^*}$和正整数集$\mathbb{Z^+}$的意义是完全相同的。
+
+\newpage
+
+\subsubsection{数集的区间表示}
+    数集除了可以使用集合的方式表示，也可以使用区间进行表示。\\[3mm]
+    数集的区间表示（有限区间）：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                区间表示~~~~~~~~~~~~~~~~~~~~~~~~&集合表示~~~~~~~~~~~~~~~~~~~~~~~~\\ \hline
+                $[a,b]$&$\left\{x\mid a\leq x\leq b\right\}$\\ \hline
+                $[a,b)$&$\left\{x\mid a\leq x<b\right\}$\\ \hline
+                $(a,b)$&$\left\{x\mid a<x<b\right\}$\\ \hline
+                $(a,b]$&$\left\{x\mid a<x\leq b\right\}$\\ \hline
+            \end{tabular}
+        \end{center}
+        \caption{数集的区间表示（有限区间）}
+    \end{table}\\
+    数集的区间表示（无限空间）：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{l|l}
+                \hline
+                区间表示~~~~~~~~~~~~~~~~~~~~~~~~&集合表示~~~~~~~~~~~~~~~~~~~~~~~~\\ \hline
+                $[a,+\infty)$&$\left\{x\geq a\right\}$\\ \hline
+                $(a,+\infty)$&$\left\{x> a\right\}$\\ \hline
+                $(-\infty,a]$&$\left\{x\leq a\right\}$\\ \hline
+                $(-\infty,a)$&$\left\{x< a\right\}$\\ \hline
+            \end{tabular}
+        \end{center}
+        \caption{数集的区间表示（无限区间）}
+    \end{table}\\[1mm]
+    从上面的例子中可以看出，中括号代表包含（闭），圆括号代表排除（开）。\\[3mm]
+    左侧为闭，右侧为闭，范围从$a$至$b$的区间，可以称为$a$至$b$的闭区间。\\[3mm]
+    左侧为开，右侧为开，范围从$a$至$b$的区间，可以称为$a$至$b$的开区间。\\[3mm]
+    左侧为闭，右侧为开，范围从$a$至$b$的区间，可以称为$a$至$b$的左闭右开区间。\\[3mm]
+    左侧为开，右侧为闭，范围从$a$至$b$的区间，可以称为$a$至$b$的左开右闭区间。
 
 \newpage
 
@@ -285,8 +991,8 @@
     对于命题$\alpha\Rightarrow\beta$：\\[3mm]
     我们称$\alpha$是$\beta$的充分条件。\\[3mm]
     我们称$\beta$是$\alpha$的必要条件。\\[6mm]
-    充分条件的含义：因为$\alpha\Rightarrow\beta$，若有条件$\alpha$，那么事件$\beta$成立。\\[3mm]
-    必要条件的含义：因为$\bar{\beta}\Rightarrow\bar{\alpha}$，若无条件$\beta$，那么事件$\alpha$不成立。\\[6mm]
+    充分条件的含义：因为$\alpha\Rightarrow\beta$，若有条件$\alpha$，那么事件$\beta$必然成立，因此$\alpha$对$\beta$是充分的。\\[3mm]
+    必要条件的含义：因为$\bar{\beta}\Rightarrow\bar{\alpha}$，若无条件$\beta$，那么事件$\alpha$不能成立，因此$\beta$对$\alpha$是必要的。\\[6mm]
     若同时满足$\alpha\Rightarrow\beta$和$\beta\Rightarrow\alpha$，即$\alpha\Leftrightarrow\beta$，我们称$\alpha$和$\beta$互为充要条件。
 
 \newpage
@@ -294,20 +1000,218 @@
 \section{不等式}
 
 \subsection{不等式的性质}
+    不等式和实数的大小关系存在以下联系：\vspace{5pt}
+    \begin{large}
+        \begin{align*}
+            &a-b>0~\Rightarrow~a>b~~~~~~(a,b\in\mathbb{R})\\[2mm]
+            &a-b<0~\Rightarrow~a<b~~~~~~(a,b\in\mathbb{R})
+        \end{align*}
+    \end{large}\\
+    不等式和实数的比例关系存在以下联系：\vspace{5pt}
+    \begin{large}
+        \begin{align*}
+            &\frac{a}{b}>1~\Rightarrow~a>b~~~~~~(a,b\in\mathbb{R^+})\\[6mm]
+            &\frac{a}{b}<1~\Rightarrow~a<b~~~~~~(a,b\in\mathbb{R^+})
+        \end{align*}
+    \end{large}\\
+    接下来将逐条列出不等式的若干性质，这些性质是不等式推导的基础。\vspace{5pt}
 
-\text{不等式的对称性：}
+\subsubsection{不等式的可加性}
+    不等式的可加性：\vspace{5pt}
     \begin{large}
         \begin{equation*}
-            a>b~~\Leftrightarrow~~b<a
+            \begin{cases}
+                ~a>b\\[2mm]
+                ~a,b\in\mathbb{R}~~~~\lambda\in\mathbb{R}
+            \end{cases}
+            \Rightarrow~~~~a+\lambda>b+\lambda
         \end{equation*}
-    \end{large}
+    \end{large}\\[1mm]
+    该性质表明，不等式两侧加上任意数，此时不等式仍然成立。
 
-\text{不等式的可加性：}
+\subsubsection{不等式的可乘性}
+    不等式的可乘性：\vspace{5pt}
     \begin{large}
         \begin{equation*}
-            a>b~~\Leftrightarrow~~a+c>b+c
+            \begin{cases}
+                ~a>b\\[2mm]
+                ~a,b\in\mathbb{R}~~~~\lambda\in\mathbb{R^+}
+            \end{cases}
+            \Rightarrow~~~~a\cdot\lambda>b\cdot\lambda
         \end{equation*}
-    \end{large}
+    \end{large}\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[2mm]
+                ~a,b\in\mathbb{R}~~~~\lambda\in\mathbb{R^-}
+            \end{cases}
+            \Rightarrow~~~~a\cdot\lambda<b\cdot\lambda
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，不等式两侧乘上任意正数，不等式符号不变，此时不等式仍然成立。\\[3mm]
+    该性质表明，不等式两侧乘上任意负数，不等式符号改变，此时不等式仍然成立。
+
+\newpage
+
+\subsubsection{不等式的对称性}
+    不等式的对称性：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            a>b~~\Rightarrow~~b<a
+        \end{equation*}
+    \end{large}\\
+    该性质表明，不等式的两侧交换并变号，此时不等式仍然成立。\\
+
+\subsubsection{不等式的叠加性}
+    不等式的叠加性：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~c>d\\[3mm]
+                ~a,b,c,d\in\mathbb{R}
+            \end{cases}
+            \Rightarrow~~~~a+c>b+d
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，两个同号不等式叠加后，此时不等式仍然成立。\\
+
+\subsubsection{不等式的叠乘性}
+    不等式的叠乘性：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~c>d\\[3mm]
+                ~a,b,c,d\in\mathbb{R^+}
+            \end{cases}
+            \Rightarrow~~~~a\cdot c>b\cdot d
+        \end{equation*}
+    \end{large}\\
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~c>d\\[3mm]
+                ~a,b,c,d\in\mathbb{R^-}
+            \end{cases}
+            \Rightarrow~~~~a\cdot c<b\cdot d
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，两个同号不等式叠乘后，若两侧为正数则不等式符号不变，此时不等式仍然成立。\\[3mm]
+    该性质表明，两个同号不等式叠乘后，若两侧为负数则不等式符号改变，此时不等式仍然成立。
+
+\newpage
+
+\subsubsection{不等式的乘方法则}
+    不等式的乘方法则：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~a,b\in\mathbb{R^+}~~~~n\in\mathbb{Z^+}
+            \end{cases}
+            \Rightarrow~~~~a^n>b^n
+        \end{equation*}
+    \end{large}\\
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~a,b\in\mathbb{R^+}~~~~n\in\mathbb{Z^-}
+            \end{cases}
+            \Rightarrow~~~~a^n<b^n
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，不等式的两侧均为正数，进行正指数的乘方运算后不变号，此时不等式仍然成立。\\[3mm]
+    该性质表明，不等式的两侧均为正数，进行负指数的乘方运算后需变号，此时不等式仍然成立。\\
+
+\subsubsection{不等式的开方法则}
+    不等式的开方法则：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~a,b\in\mathbb{R^+}~~~~n\in\mathbb{N}
+            \end{cases}
+            \Rightarrow~~~~\sqrt[n]{\vphantom{b}a}>\sqrt[n]{b}
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，不等式的两侧均为正数，进行开方运算后不变号，此时不等式仍然成立。\\
+
+\subsubsection{不等式的倒数法则}
+    不等式的倒数法则：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~ab>0~~~~a,b\in\mathbb{R}
+            \end{cases}
+            \Rightarrow~~~~\frac{1}{a}<\frac{1}{b}
+        \end{equation*}
+    \end{large}\\
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~ab<0~~~~a,b\in\mathbb{R}
+            \end{cases}
+            \Rightarrow~~~~\frac{1}{a}>\frac{1}{b}
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，不等式的两侧若同号，取倒数后需变号，此时不等式仍然成立。\\[3mm]
+    该性质表明，不等式的两侧若异号，取倒数后不变号，此时不等式仍然成立。
+
+\newpage
+
+\subsubsection{不等式的指数法则}
+    不等式的指数法则：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~a,b\in\mathbb{R}~~~~x\in\mathbb{R^+}~~~~x>1
+            \end{cases}
+            \Rightarrow~~~~x^a>x^b
+        \end{equation*}
+    \end{large}\\
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~a,b\in\mathbb{R}~~~~x\in\mathbb{R^+}~~~~n<1
+            \end{cases}
+            \Rightarrow~~~~x^a>x^b
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，将不等式两侧作为指数，若底数大于$1$且为正数则不变号，此时不等式仍然成立。\\[3mm]
+    该性质表明，将不等式两侧作为指数，若底数小于$1$且为正数则需变号，此时不等式仍然成立。\\
+
+\subsubsection{不等式的对数法则}
+    不等式的对数法则：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~a,b\in\mathbb{R}~~~~x\in\mathbb{R^+}~~~~n>1
+            \end{cases}
+            \Rightarrow~~~~\log_{x}a>\log_{x}b
+        \end{equation*}
+    \end{large}\\
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a>b\\[3mm]
+                ~a,b\in\mathbb{R}~~~~x\in\mathbb{R^+}~~~~n<1
+            \end{cases}
+            \Rightarrow~~~~\log_{x}a<\log_{x}b
+        \end{equation*}
+    \end{large}\\[1mm]
+    该性质表明，将不等式两侧作为真数，若底数大于$1$且为正数则不变号，此时不等式仍然成立。\\[3mm]
+    该性质表明，将不等式两侧作为真数，若底数小于$1$且为正数则需变号，此时不等式仍然成立。
+
+\newpage
 
 \text{不等式的可乘性：}
     \begin{large}
@@ -9572,7 +10476,7 @@
     如果两个事件满足以下条件，我们将其称为互斥事件：
     \begin{large}
         \begin{equation*}
-            A\cap B=\emptyset
+            P(A\cap B)=P(\emptyset)
         \end{equation*}
     \end{large}\\
     所以事件$A$和事件$B$为互斥事件的条件是，其积事件为不可能事件。\\
@@ -9581,22 +10485,132 @@
     如果两个事件满足以下条件，我们将其称为对立事件：
     \begin{large}
         \begin{align*}
-            &A\cap B=\emptyset\\[3mm]
-            &A\cup B=\Omega
+            &P(A\cap B)=P(\emptyset)\\[3mm]
+            &P(A\cup B)=P(\Omega)
         \end{align*}
     \end{large}\\
     所以事件$A$和事件$B$为互斥事件的条件是，其积事件为不可能事件，其和事件为必然事件。\\[3mm]
-    由于事件$A$的对立事件是唯一的，因此事件$A$的对立事件可以记作$\bar{A}$。
+    由于事件$A$的对立事件是唯一的，因此事件$A$的对立事件可以记作$\bar{A}$。\\
+
+\subsection{概率的加法定理}
+    对于两个普通事件$A~B$：
+    \begin{large}
+        \begin{equation*}
+            P(A\cup B)=P(A)+P(B)-P(A\cap B)
+        \end{equation*}
+    \end{large}\\
+    对于两个互斥事件$A~B$：
+    \begin{large}
+        \begin{equation*}
+            P(A\cup B)=P(A)+P(B)
+        \end{equation*}
+    \end{large}\\
+    概率的加法定理给出了和事件概率的计算方法。
 
 \newpage
 
-\subsection{频数和频率}
-    如果进行了$n$次重复试验，事件$A$出现了$m$次：\\[3mm]
-    我们将$m$称为事件$A$出现的频数。\\[2mm]
-    我们将$m/n$称为事件$A$出现的频率。\\[4mm]
-    需要注意的是，频率和概率的意义并不一致：\\[3mm]
-    频率是测量值，是某事件单位时间内发生的次数。\\[2mm]
-    概率是理论值，是某事件发生的可能性。\\[4mm]
-    大数定律：当试验次数无限增大时，事件的频率趋近于概率，即概率是频率的极限。
+\subsection{条件概率的计算}
+    我们这样定义条件概率：
+    \begin{large}
+        \begin{equation*}
+            P(A\mid B)=\frac{P(A\cap B)}{P(B)}
+        \end{equation*}
+    \end{large}\\
+    其中等式左侧的符号代表，在事件$B$发生的条件下，此时事件$A$发生的条件概率。\\[6mm]
+    设积事件$A\cap B$中基本事件数量为$a$，设事件$B$中基本事件数量为$b$，设基本事件的总数为$n$。\\[3mm]
+    由于需在事件$B$发生的条件下使得事件$A$发生，因此我们可以得到以下等式：\vspace{10pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &P(A\mid B)
+        =\frac{a}{b}
+        =\frac{a/n}{b/n}
+        =\frac{P(A\cap B)}{P(B)}
+    \end{align}\\
+    由此证明了条件概率的计算公式。
+
+\subsubsection{独立事件}
+    如果两个事件满足以下条件，我们将其称为独立事件：
+    \begin{large}
+        \begin{align*}
+            P(A\mid B)=P(A)\\[3mm]
+            P(B\mid A)=P(B)
+        \end{align*}
+    \end{large}\\
+    即当事件$A$和事件$B$的发生都不会影响对方的条件概率时，称其互为独立事件。\\[3mm]
+    上述列出的两个条件实际上是等价的，只要其中任何一个成立另一个也一定成立。\\
+
+\subsection{概率的乘法定理}
+    对于两个普通事件$A~B$：
+    \begin{large}
+        \begin{equation*}
+            P(A\cap B)=P(A\mid B)\cdot P(B)
+        \end{equation*}
+    \end{large}\\
+    对于两个独立事件$A~B$
+    \begin{large}
+        \begin{equation*}
+            P(A\cap B)=P(A)\cdot P(B)
+        \end{equation*}
+    \end{large}\\
+    概率的乘法定理给出了积事件概率的计算方法。
+
+\newpage
+
+\section{基本统计方法}
+
+\subsection{总体均值和总体方差}
+    在统计问题中，我们将研究对象的全体称为总体，我们将每一个研究对象称为个体。\\[3mm]
+    设个体数量为$n$，设个体的取值分别为$x_1,x_2,\cdots,x_n$。\\[3mm]
+    我们定义总体均值：
+    \begin{large}
+        \begin{equation*}
+            \mu=\frac{1}{n}\cdot\left[x_1+x_2+\cdots+x_n\right]
+        \end{equation*}
+    \end{large}\\
+    我们定义总体方差：
+    \begin{large}
+        \begin{equation*}
+            \sigma^2=\frac{1}{n}\cdot\left[(x_1-\mu)^2+(x_2-\mu)^2+\cdots+(x_n-\mu)^2\right]
+        \end{equation*}
+    \end{large}\\
+    总体均值表现了总体中个体的平均大小，总体方差表现了总体中个体的离散程度。\\
+
+\subsubsection{总体方差的两种形式}
+    实际上总体方差有两种计算方式：
+    \begin{large}
+        \begin{align*}
+            &\sigma^2=\frac{1}{n}\cdot\left[(x_1-\mu)^2+(x_2-\mu)^2+\cdots+(x_n-\mu)^2\right]\\[3mm]
+            &\sigma^2=\frac{1}{n}\cdot\left[(x_1)^2+(x_2)^2+\cdots+(x_n)^2\right]-\mu^2
+        \end{align*}
+    \end{large}\\
+    其中第二种形式可以由第一种形式推导而来：\vspace{3pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        \sigma^2
+        &=\frac{1}{n}\cdot\left[\sum_{i=1}^n(x_i-\mu)^2\right]\\[3mm]
+        &=\frac{1}{n}\cdot\left[\sum_{i=1}^n(x_i)^2-\sum_{i=1}^n(2\cdot x_i\cdot \mu)+\sum_{i=1}^n(\mu)^2\right]\\[3mm]
+        &=\frac{1}{n}\cdot\left[\sum_{i=1}^n(x_i)^2-2\cdot n\cdot\mu^2+n\cdot\mu^2\right]\\[3mm]
+        &=\frac{1}{n}\cdot\left[\sum_{i=1}^n(x_i)^2\right]-\mu^2
+    \end{align}
+
+\newpage
+
+\subsection{样本均值和样本方差}
+    在统计问题中，我们将总体中抽出的一部分个体称为样本，其包含个体的数量称为样本容量。\\[3mm]
+    设样本容量为$m$，设个体的取值分别为$x_1,x_2,\cdots,x_m$。\\[3mm]
+    我们定义样本均值：
+    \begin{large}
+        \begin{equation*}
+            \nu=\frac{1}{m}\cdot\left[x_1+x_2+\cdots+x_m\right]
+        \end{equation*}
+    \end{large}\\
+    我们定义样本方差：
+    \begin{large}
+        \begin{equation*}
+            s^2=\frac{1}{m-1}\cdot\left[(x_1-\nu)^2+(x_2-\nu)^2+\cdots+(x_n-\nu)^2\right]
+        \end{equation*}
+    \end{large}\\
+    样本均值表现了样本中个体的平均大小，样本方差表现了样本对总体离散程度的估计。
+
 
 \end{document}
