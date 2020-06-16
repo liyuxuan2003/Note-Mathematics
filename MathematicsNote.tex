@@ -988,11 +988,11 @@
     需要指出的是，互为逆否命题的两个命题同时为真或同时为假。\\
 
 \subsubsection{充分条件和必要条件}
-    对于命题$\alpha\Rightarrow\beta$：\\[3mm]
-    我们称$\alpha$是$\beta$的充分条件。\\[3mm]
-    我们称$\beta$是$\alpha$的必要条件。\\[6mm]
+    对于命题$\alpha\Rightarrow\beta$：
+    我们称$\alpha$是$\beta$的充分条件，
+    我们称$\beta$是$\alpha$的必要条件。\\[5mm]
     充分条件的含义：因为$\alpha\Rightarrow\beta$，若有条件$\alpha$，那么事件$\beta$必然成立，因此$\alpha$对$\beta$是充分的。\\[3mm]
-    必要条件的含义：因为$\bar{\beta}\Rightarrow\bar{\alpha}$，若无条件$\beta$，那么事件$\alpha$不能成立，因此$\beta$对$\alpha$是必要的。\\[6mm]
+    必要条件的含义：因为$\bar{\beta}\Rightarrow\bar{\alpha}$，若无条件$\beta$，那么事件$\alpha$不能成立，因此$\beta$对$\alpha$是必要的。\\[5mm]
     若同时满足$\alpha\Rightarrow\beta$和$\beta\Rightarrow\alpha$，即$\alpha\Leftrightarrow\beta$，我们称$\alpha$和$\beta$互为充要条件。
 
 \newpage
@@ -1213,135 +1213,970 @@
 
 \newpage
 
-\text{不等式的可乘性：}
+\subsection{一元二次方程的求解}
+    一元二次方程需要解决这样的问题：
+    \setcounter{equation}{0}
+    \begin{align}
+        ax^2+bx+c=0
+    \end{align}\\
+    对一元二次方程进行配方可以得到：
+    \begin{align}
+        &x^2+\frac{b}{a}x+\frac{c}{a}=0\\[3mm]
+        &\left(x^2+\frac{b}{a}x+\frac{b^2}{4a^2}\right)-\frac{b^2}{4a^2}+\frac{c}{a}\\[3mm]
+        &\left(x+\frac{b}{2a}\right)^2-\frac{b^2}{4a^2}+\frac{c}{a}=0\\[3mm]
+        &\left(x+\frac{b}{2a}\right)^2=\frac{b^2}{4a^2}-\frac{c}{a}\\[3mm]
+        &\left(x+\frac{b}{2a}\right)^2=\frac{b^2}{4a^2}-\frac{4ac}{4a^2}\\[3mm]
+        &\left(x+\frac{b}{2a}\right)^2=\frac{b^2-4ac}{4a^2}
+    \end{align}\\
+    定义一元二次方程根的判别式：
     \begin{large}
         \begin{equation*}
-            a>b~~\Leftrightarrow~~a\cdot c>b\cdot c~~~~(c>0)
+            \Delta=b^2-4ac
         \end{equation*}
+    \end{large}\\
+    上述得出的等式中，右侧的正负性仅由分数线上方的部分决定，即只由判别式的正负决定。\\[10mm]
+    当$\Delta>0$时，一元二次方程有两个解：
+    \begin{large}
         \begin{equation*}
-            a>b~~\Leftrightarrow~~a\cdot c<b\cdot c~~~~(c<0)
+            x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    当$\Delta=0$时，一元二次方程有一个解：
+    \begin{large}
+        \begin{equation*}
+            x=-\frac{b}{2a}
+        \end{equation*}
+    \end{large}\\
+    当$\Delta=0$时，一元二次方无解。
 
-\text{不等式的乘方法则：}
-    \begin{large}
-        \begin{equation*}
-            a>b>0~~\Leftrightarrow~~a^n>b^n>0
-        \end{equation*}
-    \end{large}
+\newpage
 
-\text{不等式的对数法则：}
-    \begin{large}
-        \begin{align*}
-            &a>b>0~~\Leftrightarrow~~\log_{c}a<\log_{c}b~~~~~~~~(c<1)\\[1mm]
-            &a>b>0~~\Leftrightarrow~~\log_{c}a>\log_{c}b~~~~~~~~(c>1)
-        \end{align*}
-    \end{large}
+    一元二次方程可以用图像表示：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[$\Delta>0$时的图像]
+            {
+                \begin{minipage}[t]{0.22\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-4,0) -- (4,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[cyan,smooth,thick,samples=100,domain=-2.3:2.3] 
+                            plot(\x,{2*\x*\x-1});
+                        \fill[black] (-0.721,0) circle (0.1);
+                        \fill[black] (+0.721,0) circle (0.1);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[$\Delta=0$时的图像]
+            {
+                \begin{minipage}[t]{0.22\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-4,0) -- (4,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[cyan,smooth,thick,samples=100,domain=-2.3:2.3] 
+                            plot(\x,{2*\x*\x});
+                        \fill[black] (0,0) circle (0.1);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[$\Delta<0$时的图像]
+            {
+                \begin{minipage}[t]{0.22\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.4]
+                        \draw[->] (-4,0) -- (4,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[cyan,smooth,thick,samples=100,domain=-2.3:2.3] 
+                            plot(\x,{2*\x*\x+1});
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{一元二次方程的图像}
+        \end{center}
+    \end{figure}\\
+    当满足$\Delta>0$时，证明如下：
+    \setcounter{equation}{0}
+    \begin{align}
+        &x+\frac{b}{2a}=\pm\sqrt{\frac{b^2-4ac}{4a^2}}\\[4mm]
+        &x+\frac{b}{2a}=\frac{\pm\sqrt{b^2-4ac}}{2a}\\[4mm]
+        &x=\frac{\pm\sqrt{b^2-4ac}}{2a}-\frac{b}{2a}\\[4mm]
+        &x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+    \end{align}\\
+    当满足$\Delta=0$时，证明如下：
+    \begin{align}
+        &x+\frac{b}{2a}=0\\[4mm]
+        &x=-\frac{b}{2a}
+    \end{align}\\
+    当满足$\Delta<0$时，证明如下：
+    \begin{align}
+        &\left(x+\frac{b}{2a}\right)^2>0~~~~~~~~\frac{b^2-4a}{4a^2}<0
+    \end{align}\\
+    等式左侧始终为负，等式右侧始终为正，故必然无解。
 
-\text{不等式的倒数法则：}
+\newpage
+
+    在满足$\Delta\geq 0$时求解两根之和：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        x_1+x_2
+        &=\frac{-b-\sqrt{b^2-4ac}}{2a}+\frac{-b+\sqrt{b^2-4ac}}{2a}\\[3mm]
+        &=\frac{-2b-\sqrt{b^2-4ac}+\sqrt{b^2-4ac}}{2a}\\[3mm]
+        &=-\frac{2b}{2a}\\[3mm]
+        &=-\frac{b}{a}
+    \end{align}\\
+    当满足$\Delta\leq 0$时求解两根之积：\vspace{5pt}
+    \begin{align}
+        x_1\cdot x_2
+        &=\frac{-b-\sqrt{b^2-4ac}}{2a}\cdot\frac{-b+\sqrt{b^2-4ac}}{2a}\\[3mm]
+        &=\frac{b^2-\left(b^2-4ac\right)}{4a^2}\\[3mm]
+        &=\frac{b^2-b^2+4ac}{4a^2}\\[3mm]
+        &=\frac{4ac}{4a^2}\\[3mm]
+        &=\frac{c}{a}
+    \end{align}\\
+    故两根之和和两根之积可以表示为：
     \begin{large}
         \begin{equation*}
-            a>b~~~~ab>0~~\Leftrightarrow~~\frac{1}{a}<\frac{1}{b}
+            x_1+x_2=-\frac{b}{a}~~~~~~~~~~~~x_1\cdot x_2=\frac{c}{a}
         \end{equation*}
-        \vspace{5pt}
-        \begin{equation*}
-            a>b~~~~ab<0~~\Leftrightarrow~~\frac{1}{a}>\frac{1}{b}
-        \end{equation*}
-    \end{large}
+    \end{large}\\
+    这两条结论也被称为韦达定理。
 
 \newpage
 
 \subsection{一元二次不等式的求解}
-    我们将形如$ax^2+by+c>0$或$ax^2+by+c<0$的不等式称为一元二次不等式。\\[5mm]
-    当$a>0$时，函数开口向上：\vspace{5pt}
+    一元二次不等式需要解决这样的问题：
+    \setcounter{equation}{0}
+    \begin{align}
+        &ax^2+bx+c>0\\[3mm]
+        &ax^2+bx+c\geq 0\\[3mm]
+        &ax^2+bx+c<0\\[3mm]
+        &ax^2+bx+c\leq 0
+    \end{align}\\
+    我们定义$s$来表示不等式的符号：\\[3mm]
+    当不等式的符号为大于（$>$）或大于等于（$\geq$）时，规定变量$s>0$。\\[3mm]
+    当不等式的符号为小于（$<$）或大于等于（$\leq$）时，规定变量$s<0$。\\[10mm]
+    当一元二次不等式满足$\Delta<0$时，图像如下：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[满足（$a>0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{2*\x*\x+1});
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a>0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{2*\x*\x+1});
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{-2*\x*\x-1});
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{-2*\x*\x-1});
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{满足$\Delta<0$时的图像}
+        \end{center}
+    \end{figure}\\
+    当一元二次不等式满足$\Delta<0$时，性质总结如下：\vspace{5pt}
     \begin{table}[h]
         \begin{center}
-            \begin{tabular}{l|l|l|l}
+            \begin{tabular}{l|l|l}
                 \hline
-                &$\Delta>0$\qquad\qquad\qquad\qquad&$\Delta=0$\qquad\qquad\qquad\qquad&$\Delta<0$\qquad\qquad\qquad\qquad \\ \hline
-                $ax^2+by+c>0$\qquad&$x<x_1$或$x>x_2$&$x\neq x_1$&$\mathbb{R}$\\ \hline
-                $ax^2+by+c<0$\qquad&$x>x_1$且$x<x_2$&$\emptyset$&$\emptyset$\\ \hline
+                满足条件~~~~~~~~~~~~&符号不能取等~~~~~~~~~~~~~~~~~~~~&符号可以取等~~~~~~~~~~~~~~~~~~~~\\ \hline
+                $a\cdot s>0$&$\mathbb{R}$&$\mathbb{R}$\\ \hline
+                $a\cdot s<0$&$\emptyset$&$\emptyset$\\ \hline
             \end{tabular}
-            \caption{当$a>0$时一元二次不等式的情况}
+            \caption{满足$\Delta<0$时的性质总结}
         \end{center}
     \end{table}\\
-    当$a<0$时，函数开口向下：\vspace{5pt}
-    \begin{table}[h]
+    以上图像中，黑色部分代表在解集内，灰色部分代表在解集外。
+
+\newpage
+
+    当一元二次不等式满足$\Delta=0$时，且符号不能取等时，图像如下：
+    \begin{figure}[h!]
         \begin{center}
-            \begin{tabular}{l|l|l|l}
-                \hline
-                &$\Delta>0$\qquad\qquad\qquad\qquad&$\Delta=0$\qquad\qquad\qquad\qquad&$\Delta<0$\qquad\qquad\qquad\qquad \\ \hline
-                $ax^2+by+c>0$\qquad&$x>x_1$且$x<x_2$&$\emptyset$&$\emptyset$\\ \hline
-                $ax^2+by+c<0$\qquad&$x<x_1$或$x>x_2$&$x\neq x_1$&$\mathbb{R}$\\ \hline
-            \end{tabular}
-            \caption{当$a<0$时一元二次不等式的情况}
+            \subfigure[满足（$a>0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{2*\x*\x});
+                        \fill[white] (0,0) circle (0.2);
+                        \draw[thin] (0,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a>0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{2*\x*\x});
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{-2*\x*\x});
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{-2*\x*\x});
+                        \fill[white] (0,0) circle (0.2);
+                        \draw[thin] (0,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{满足$\Delta=0$时的图像（不能取等）}
         \end{center}
-    \end{table}
+    \end{figure}\\
+    当一元二次不等式满足$\Delta=0$时，且符号可以取等时，图像如下：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[满足（$a>0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{2*\x*\x});
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a>0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{2*\x*\x});
+                        \fill[black] (0,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{-2*\x*\x});
+                        \fill[black] (0,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:2.3]
+                            plot(\x,{-2*\x*\x});
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{满足$\Delta=0$时的图像（可以取等）}
+        \end{center}
+    \end{figure}\\
+    当一元二次不等式满足$\Delta=0$时，性质总结如下：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{l|l|l}
+                \hline
+                满足条件~~~~~~~~~~~~&符号不取等~~~~~~~~~~~~~~~~~~~~&符号取等~~~~~~~~~~~~~~~~~~~~\\ \hline
+                $a\cdot s>0$&$x\neq x_0$&$\mathbb{R}$\\ \hline
+                $a\cdot s<0$&$\emptyset$&$x=x_0$\\ \hline
+            \end{tabular}
+            \caption{满足$\Delta=0$时的性质总结}
+        \end{center}
+    \end{table}\\
+    该情况下的解集，也可以代入$\Delta>0$时的解集公式中求解，可以得出相同的结论。\\[3mm]
+    以上图像中，黑色部分代表在解集内，灰色部分代表在解集外。
+
+\newpage
+
+    当一元二次不等式满足$\Delta>0$时，且符号不能取等时，图像如下：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[满足（$a>0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[black,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[gray,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \fill[white] (-0.721,0) circle (0.2);
+                        \fill[white] (+0.721,0) circle (0.2);
+                        \draw[thin] (-0.721,0) circle (0.2);
+                        \draw[thin] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a>0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[gray,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[black,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \fill[white] (-0.721,0) circle (0.2);
+                        \fill[white] (+0.721,0) circle (0.2);
+                        \draw[thin] (-0.721,0) circle (0.2);
+                        \draw[thin] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[gray,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[black,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \fill[white] (-0.721,0) circle (0.2);
+                        \fill[white] (+0.721,0) circle (0.2);
+                        \draw[thin] (-0.721,0) circle (0.2);
+                        \draw[thin] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[black,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[gray,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \fill[white] (-0.721,0) circle (0.2);
+                        \fill[white] (+0.721,0) circle (0.2);
+                        \draw[thin] (-0.721,0) circle (0.2);
+                        \draw[thin] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{满足$\Delta>0$时的图像（不能取等）}
+        \end{center}
+    \end{figure}\\
+    当一元二次不等式满足$\Delta>0$时，且符号可以取等时，图像如下：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[满足（$a>0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[black,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[gray,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \fill[black] (-0.721,0) circle (0.2);
+                        \fill[black] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a>0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-2) -- (0,13) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[gray,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{2*\x*\x-1});
+                        \draw[black,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{2*\x*\x-1});
+                        \fill[black] (-0.721,0) circle (0.2);
+                        \fill[black] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s>0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[gray,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[gray,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[black,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \fill[black] (-0.721,0) circle (0.2);
+                        \fill[black] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[满足（$a<0~~~~s<0$）]
+            {
+                \begin{minipage}[t]{0.18\linewidth}
+                    \begin{tikzpicture}[>=stealth,scale=0.3]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-13) -- (0,2) node[right] {$y$};
+                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
+                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                        \draw[black,smooth,thick,samples=100,domain=-2.3:-0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[black,smooth,thick,samples=100,domain=+0.721:+2.3]
+                            plot(\x,{-2*\x*\x+1});
+                        \draw[gray,smooth,thick,samples=100,domain=-0.721:+0.721]
+                            plot(\x,{-2*\x*\x+1});
+                        \fill[black] (-0.721,0) circle (0.2);
+                        \fill[black] (+0.721,0) circle (0.2);
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{满足$\Delta>0$时的图像（可以取等）}
+        \end{center}
+    \end{figure}\\
+    当一元二次不等式满足$\Delta>0$时，性质总结如下：\vspace{5pt}
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{l|l|l}
+                \hline
+                满足条件~~~~~~~~~~~~&符号不取等~~~~~~~~~~~~~~~~~~~~&符号取等~~~~~~~~~~~~~~~~~~~~\\ \hline
+                $a\cdot s>0$&$x<x_1~~$或$~~x>x_2$&$x\leq x_1~~$或$~~x\geq x_2$\\ \hline
+                $a\cdot s<0$&$x>x_1~~$且$~~x<x_2$&$x\geq x_1~~$且$~~x\leq x_2$\\ \hline
+            \end{tabular}
+            \caption{满足$\Delta>0$时的性质总结}
+        \end{center}
+    \end{table}\\
+    当满足$a\cdot s>0$时，即当二次项系数和符号同号时，取两根之外。\\[3mm]
+    当满足$a\cdot s<0$时，即当二次项系数和符号异号时，取两根之间。\\[3mm]
+    以上图像中，黑色部分代表在解集内，灰色部分代表在解集外。
+
+\newpage
+
+\subsection{一元高次不等式的求解}
+    一元高次不等式需要解决这样的问题：
+    \setcounter{equation}{0}
+    \begin{align}
+        &\prod_{i=1}^n(x-a_i)^{b_i}>0\\[3mm]
+        &\prod_{i=1}^n(x-a_i)^{b_i}\geq 0\\[3mm]
+        &\prod_{i=1}^n(x-a_i)^{b_i}<0\\[3mm]
+        &\prod_{i=1}^n(x-a_i)^{b_i}\leq 0
+    \end{align}\\
+    我们首先研究一种特殊情况：
+    \begin{align}
+        (x-A)^3\cdot(x-B)^1\cdot(x-C)^2\cdot(x-D)^1>0~~~~~~~~(A<B<C<D)
+    \end{align}\\
+    我们可以通过数轴标根法来绘制大致图像：\\[3mm]
+    1.当$x$的取值同时大于三个数时，其取值为正，因此曲线从右侧上方穿入。\\[3mm]
+    2.当$x$经过点$D$时取值为零，由于次数为$1$是奇数，故其左侧和右侧异号，曲线上表现为穿透。\\[3mm]
+    3.当$x$经过点$C$时取值为零，由于次数为$2$是奇数，故其左侧和右侧同号，曲线上表现为反弹。\\[3mm]
+    4.当$x$经过点$B$时取值为零，由于次数为$1$是奇数，故其左侧和右侧异号，曲线上表现为穿透。\\[3mm]
+    5.当$x$经过点$A$时取值为零，由于次数为$3$是奇数，故其左侧和右侧异号，曲线上表现为穿透。
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth]
+                \draw[->] (0,0) -- (10,0) node[above] {$x$};
+                \draw (8.66,1)--(8,0);
+                \draw (8,0).. controls(7,-1.5) ..(6,0);
+                \draw (6,0).. controls(5,-1.5) ..(4,0);
+                \draw (4,0).. controls(3,+1.5) ..(2,0);
+                \draw (2,0)--(1.33,-1);
+
+                \fill[white] (2,0) circle (0.08);
+                \fill[white] (4,0) circle (0.08);
+                \fill[white] (6,0) circle (0.08);
+                \fill[white] (8,0) circle (0.08);
+
+                \draw[thin] (2,0) circle (0.08);
+                \draw[thin] (4,0) circle (0.08);
+                \draw[thin] (6,0) circle (0.08);
+                \draw[thin] (8,0) circle (0.08);
+
+                \node at(2,-0.5) {$A$};
+                \node at(4,-0.5) {$B$};
+                \node at(6,-0.5) {$C$};
+                \node at(8,-0.5) {$D$};
+            \end{tikzpicture}
+        \end{center}
+    \end{figure}\\
+    根据大致图像可以得到解集为：$x\in(A,B)\cup(D,+\infty)$\\[3mm]
+    这就是数轴标根法的思想：曲线从右上穿入，遇到奇次项穿透，遇到偶次项反弹，即奇穿偶回。
+    
+\newpage
+
+\subsection{根的分布}
+    根的分布研究这样一类问题，给定方程的根的范围，求解一元二次方程参数需满足的条件。\\[3mm]
+    根的分布的问题最终都可以通过分类讨论，化归为以下两类基本情况。
+
+\subsubsection{根的分布基本情况$1$}
+    根的分布基本情况$1$的条件如下：
+    \begin{large}
+        \begin{equation*}
+            x_1\in(A,B)~~~~~~~~x_2\in(C,D)~~~~~~~~(A<B\leq C<D)
+        \end{equation*}
+    \end{large}\\
+    根的分布基本情况$1$的示意图如下：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[当满足$a>0$时]
+            {
+                \begin{minipage}[t]{0.78\linewidth}
+                    \begin{tikzpicture}[>=stealth]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[black,smooth,thick,samples=100,domain=-3:+3]
+                            plot(\x,{+0.25*\x*\x-1});
+        
+                        \draw (-2.5,0)--(-2.5,0.2);
+                        \draw (-1.5,0)--(-1.5,0.2);
+                        \draw (+1.5,0)--(+1.5,0.2);
+                        \draw (+2.5,0)--(+2.5,0.2);
+        
+                        \node at(-2.5,-0.2) {$A$};
+                        \node at(-1.5,-0.2) {$B$};
+                        \node at(+1.5,-0.2) {$C$};
+                        \node at(+2.5,-0.2) {$D$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\\[4mm]
+            \subfigure[当满足$a<0$时]
+            {
+                \begin{minipage}[t]{0.78\linewidth}
+                    \begin{tikzpicture}[>=stealth]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[black,smooth,thick,samples=100,domain=-3:+3]
+                            plot(\x,{-0.25*\x*\x+1});
+        
+                        \draw (-2.5,0)--(-2.5,0.2);
+                        \draw (-1.5,0)--(-1.5,0.2);
+                        \draw (+1.5,0)--(+1.5,0.2);
+                        \draw (+2.5,0)--(+2.5,0.2);
+        
+                        \node at(-2.5,-0.2) {$A$};
+                        \node at(-1.5,-0.2) {$B$};
+                        \node at(+1.5,-0.2) {$C$};
+                        \node at(+2.5,-0.2) {$D$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{根的分布基本情况$1$的示意图}
+        \end{center}
+    \end{figure}\\
+    根的分布基本情况$1$的参数如下：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~~F(A)>0\\[1mm]
+                ~~F(B)<0\\[1mm]
+                ~~F(C)<0\\[1mm]
+                ~~F(D)>0\\[1mm]
+            \end{cases}
+            ~~(a>0)
+            ~~~~~~~~~~~~~~~~
+            \begin{cases}
+                ~~F(A)<0\\[1mm]
+                ~~F(B)>0\\[1mm]
+                ~~F(C)>0\\[1mm]
+                ~~F(D)<0\\[1mm]
+            \end{cases}
+            ~~(a<0)
+        \end{equation*}
+    \end{large}\\[1mm]
+    在这一情况中，允许$A=-\infty$，允许$D=+\infty$，包含无穷的条件视为无效。
+
+\newpage
+
+\subsubsection{根的分布基本情况$2$}
+    根的分布基本情况$2$的条件如下：
+    \begin{large}
+        \begin{equation*}
+            x_1\in(A,B)~~~~~~~~x_2\in(A,B)~~~~~~~~(A<B)
+        \end{equation*}
+    \end{large}\\
+    根的分布基本情况$2$的示意图如下：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[当满足$a>0$时]
+            {
+                \begin{minipage}[t]{0.78\linewidth}
+                    \begin{tikzpicture}[>=stealth]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[black,smooth,thick,samples=100,domain=-3:+3]
+                            plot(\x,{+0.25*\x*\x-1});
+        
+                        \draw (-2.5,0)--(-2.5,0.2);
+                        \draw (+2.5,0)--(+2.5,0.2);
+        
+                        \node at(-2.5,-0.2) {$A$};
+                        \node at(+2.5,-0.2) {$B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\\[4mm]
+            \subfigure[当满足$a<0$时]
+            {
+                \begin{minipage}[t]{0.78\linewidth}
+                    \begin{tikzpicture}[>=stealth]
+                        \draw[->] (-6,0) -- (6,0) node[above] {$x$};
+                        \draw[black,smooth,thick,samples=100,domain=-3:+3]
+                            plot(\x,{-0.25*\x*\x+1});
+        
+                        \draw (-2.5,0)--(-2.5,0.2);
+                        \draw (+2.5,0)--(+2.5,0.2);
+        
+                        \node at(-2.5,-0.2) {$A$};
+                        \node at(+2.5,-0.2) {$B$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{根的分布基本情况$2$的示意图}
+        \end{center}
+    \end{figure}\\
+    根的分布基本情况$2$的参数如下：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~~F(A)>0\\[2mm]
+                ~~F(B)>0\\[2mm]
+                ~~-\dfrac{b}{2a}>A\\[4mm]
+                ~~-\dfrac{b}{2a}<B\\[3mm]
+                ~~\Delta>0\\[1mm]
+            \end{cases}
+            ~~(a>0)
+            ~~~~~~~~~~~~~~~~
+            \begin{cases}
+                ~~F(A)<0\\[2mm]
+                ~~F(B)<0\\[2mm]
+                ~~-\dfrac{b}{2a}>A\\[4mm]
+                ~~-\dfrac{b}{2a}<B\\[3mm]
+                ~~\Delta>0\\[1mm]
+            \end{cases}
+            ~~(a<0)
+        \end{equation*}
+    \end{large}\\[1mm]
+    在这一情况中，允许$A=-\infty$，允许$B=+\infty$，包含无穷的条件视为无效。
+
+\newpage
 
 \subsection{分式不等式的求解}
-    对于表达式$f(x)$，表达式$g(x)$，有以下同解原理：\\[1mm]
+    分式不等式的求解需要利用以下同解原理。\\[3mm]
+    分式不等式的同解原理$1$：
     \begin{large}
         \begin{equation*}
-            \frac{f(x)}{g(x)}>0~~\Rightarrow~~f(x)\cdot g(x)>0~~~~\left[~g(x)\neq 0~\right]
-        \end{equation*}\vspace{5pt}
-        \begin{equation*}
-            \frac{f(x)}{g(x)}<0~~\Rightarrow~~f(x)\cdot g(x)<0~~~~\left[~g(x)\neq 0~\right]
+            \frac{f(x)}{g(x)}>0~~~~\Rightarrow~~~~f(x)\cdot g(x)>0
         \end{equation*}
-    \end{large}\vspace{10pt}
+    \end{large}\\
+    分式不等式的同解原理$2$：
+    \begin{large}
+        \begin{equation*}
+            \frac{f(x)}{g(x)}<0~~~~\Rightarrow~~~~f(x)\cdot g(x)<0
+        \end{equation*}
+    \end{large}\\
+    分式不等式的同解原理$3$：
+    \begin{large}
+        \begin{equation*}
+            \frac{f(x)}{g(x)}\geq 0~~~~\Rightarrow~~~~
+            \begin{cases}
+                ~~f(x)\cdot g(x)\geq 0\\[1mm]
+                ~~g(x)\neq 0
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    分式不等式的同解原理$4$：
+    \begin{large}
+        \begin{equation*}
+            \frac{f(x)}{g(x)}\leq 0~~~~\Rightarrow~~~~
+            \begin{cases}
+                ~~f(x)\cdot g(x)\leq 0\\[1mm]
+                ~~g(x)\neq 0
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    需要特别注意的是，若不等式右侧的数不为零，必须将其移至左侧同分，切不可直接套用。
+
+\newpage
 
 \subsection{无理不等式的求解}
-    对于表达式$f(x)$，表达式$g(x)$，有以下同解原理：\\[1mm]
+    无理不等式的求解需要利用以下同解原理。\\[3mm]
+    无理不等式的同解原理$1$：
     \begin{large}
         \begin{equation*}
-            \sqrt{f(x)}~>\sqrt{g(x)}~~\Rightarrow~~f(x)>g(x)~~~~\left[~f(x)\ge 0~,~g(x)\ge 0~\right]
+            \sqrt{f(x)}<\sqrt{g(x)}~~~~\Rightarrow~~~~
+            \begin{cases}
+                f(x)\geq 0\\[1mm]
+                g(x)\geq 0\\[1mm]
+                f(x)<g(x)\\[1mm]
+            \end{cases}
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    无理不等式的同解原理$2$：
+    \begin{large}
+        \begin{equation*}
+            \sqrt{f(x)}>\sqrt{g(x)}~~~~\Rightarrow~~~~
+            \begin{cases}
+                f(x)\geq 0\\[1mm]
+                g(x)\geq 0\\[1mm]
+                f(x)>g(x)\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    无理不等式的同解原理$3$：
+    \begin{large}
+        \begin{equation*}
+            \sqrt{f(x)}<g(x)~~~~\Rightarrow~~~~
+            \begin{cases}
+                f(x)\geq 0\\[1mm]
+                g(x)\geq 0\\[1mm]
+                f(x)<g^2(x)\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    无理不等式的同解原理$4$：
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\sqrt{f(x)}>g(x)~~~~\Rightarrow~~~~
+            \begin{cases}
+                f(x)\geq 0\\[1mm]
+                g(x)\geq 0\\[1mm]
+                f(x)>g^2(x)\\[1mm]
+            \end{cases}
+            \text{或}~~~~~~~~
+            \begin{cases}
+                f(x)\geq 0\\[1mm]
+                g(x)<0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    需要说明的是，若将大于替换为大于等于，或将小于替换为小于等于，同解原理仍然成立。
 
 \newpage
 
 \subsection{绝对值不等式的求解}
-    对于表达式$f(x)$，有以下性质：
+    绝对值不等式的求解需要利用以下同解原理。\\[3mm]
+    绝对值不等式的同解原理$1$：
     \begin{large}
         \begin{equation*}
-            \left|f(x)\right|<c~~~~\Leftrightarrow~~~~f(x)>-c~~\text{且}~~f(x)<c
-        \end{equation*}
-        \begin{equation*}
-            \left|f(x)\right|>c~~~~\Leftrightarrow~~~~f(x)<-c~~\text{或}~~f(x)>c
+            \big|f(x)\big|<a~~(a>0)~~~~\Rightarrow~~~~x>-a~~\text{且}~~x<a
         \end{equation*}
     \end{large}\\
-    对于表达式$f(x)$，表达式$g(x)$，有以下性质：
+    绝对值不等式的同解原理$2$：
     \begin{large}
         \begin{equation*}
-            \left|f(x)\right|>\left|g(x)\right|~~~~\Rightarrow~~~~f(x)^2>g(x)^2
-        \end{equation*}
-        \begin{equation*}
-            \left|f(x)\right|<\left|g(x)\right|~~~~\Rightarrow~~~~f(x)^2<g(x)^2
-        \end{equation*}
-    \end{large}
-
-\subsection{基本不等式}
-
-\subsubsection{基本不等式1}
-    对于任意实数a和b：
-    \begin{large}
-        \begin{equation*}
-            a^2+b^2\ge 2ab~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
-        \end{equation*}
-    \end{large}
-
-\subsubsection{基本不等式2}
-    对于任意正数a和b：
-    \begin{large}
-        \begin{equation*}
-            a+b\ge +2\sqrt{ab}~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
+            \big|f(x)\big|>a~~(a>0)~~~~\Rightarrow~~~~x<-a~~\text{或}~~x>a
         \end{equation*}
     \end{large}\\
-    对于任意负数a和b：
+    绝对值不等式的同解原理$3$：
     \begin{large}
         \begin{equation*}
-            a+b\le -2\sqrt{ab}~~~~~~~~\text{(当且仅当~~}a=b\text{~~时等号成立)}
+            \big|f(x)\big|<\big|g(x)\big|~~~~\Rightarrow~~~~f^2(x)<g^2(x)
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    绝对值不等式的同解原理$4$：
+    \begin{large}
+        \begin{equation*}
+            \big|f(x)\big|>\big|g(x)\big|~~~~\Rightarrow~~~~f^2(x)>g^2(x)
+        \end{equation*}
+    \end{large}\\
+    需要说明的是，若将大于替换为大于等于，或将小于替换为小于等于，同解原理仍然成立。
+
+\newpage
+
+\subsection{基本不等式$1$}
+    基本不等式$1$的基本形式：
+    \begin{large}
+        \begin{equation*}
+            a^2+b^2 \geq 2\cdot a\cdot b~~~~~~~~a,b\in\mathbb{R}~~~~~~~~\text{（当且仅当$a=b$时等号成立）}
+        \end{equation*}
+    \end{large}\\
+    基本不等式$1$的扩展形式：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            ~~~~
+            \begin{cases}
+                +(a^2+b^2)\geq 2\cdot a\cdot b~~~~~~~~a,b\in\mathbb{R}~~~~~~~~\text{（当且仅当$a=+b$时等号成立）}\\[1mm]
+                -(a^2+b^2)\leq 2\cdot a\cdot b~~~~~~~~a,b\in\mathbb{R}~~~~~~~~\text{（当且仅当$a=-b$时等号成立）}\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\[5mm]
+    当满足$a\neq +b$时有：
+    \setcounter{equation}{0}
+    \begin{align}
+        &(a-b)^2>0\\[2mm]
+        &~a^2-2\cdot a\cdot b+b^2>0\\[2mm]
+        &~a^2+b^2>2\cdot a\cdot b\\[2mm]
+        &+(a^2+b^2)>2\cdot a\cdot b
+    \end{align}\\
+    当满足$a\neq -b$时有：
+    \begin{align}
+        &(a+b)^2>0\\[2mm]
+        &~a^2+2\cdot a\cdot b+b^2>0\\[2mm]
+        &~a^2+b^2>-2\cdot a\cdot b\\[2mm]
+        &-(a^2+b^2)<2\cdot a\cdot b
+    \end{align}\\
+    当满足$a=+b$时有：
+    \begin{align}
+        +(a^2+b^2)=2\cdot a\cdot b
+    \end{align}\\
+    当满足$a=-b$时有：
+    \begin{align}
+        -(a^2+b^2)=2\cdot a\cdot b
+    \end{align}\\
+    由此证明了基本不等式$1$的基本形式和扩展形式成立。
+
+
+\newpage
+
+\subsection{基本不等式$2$}
+    基本不等式$2$的基本形式：
+    \begin{large}
+        \begin{equation*}
+            a+b \geq 2\cdot\sqrt{a\cdot b}~~~~~~~a,b\in\mathbb{R^+}~~~~~~\text{（当且仅当$a=b$时等号成立）}
+        \end{equation*}
+    \end{large}\\
+    基本不等式$2$的扩展形式：\vspace{2pt}
+    \begin{large}
+        \begin{equation*}
+            ~~~~
+            \begin{cases}
+                ~a+b\geq +2\cdot\sqrt{a\cdot b}~~~~~~~~~~a,b\in\mathbb{R^+}~~~~~~~~\text{（当且仅当$a=b$时等号成立）}\\[1mm]
+                ~a+b\leq -2\cdot\sqrt{a\cdot b}~~~~~~~~~~a,b\in\mathbb{R^-}~~~~~~~~\text{（当且仅当$a=b$时等号成立）}\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\[2mm]
+    当满足$a^{'}>0$且$b^{'}>0$时可以进行以下代换：
+    \setcounter{equation}{0}
+    \begin{align}
+        &a=\sqrt{a^{'}}~~~~~~b=\sqrt{b^{'}}\\[2mm]
+        &a^2=a^{'}~~~~~~b^2=b^{'}
+    \end{align}\\
+    代入基本不等式$1$的基本形式可得：
+    \begin{align}
+        &a^2+b^2\geq 2\cdot a\cdot b\\[3mm]
+        &a^{'}+b^{'}\geq 2\cdot\sqrt{a^{'}}\cdot\sqrt{b^{'}}\\[3mm]
+        &a^{'}+b^{'}\geq 2\cdot\sqrt{a^{'}\cdot b^{'}}\\[3mm]
+        &a^{'}+b^{'}\geq +2\cdot\sqrt{a^{'}\cdot b^{'}}
+    \end{align}\\
+    当满足$a^{'}<0$且$b^{'}<0$时可以进行以下代换：
+    \begin{align}
+        &a=-\sqrt{-a^{'}}~~~~~~b=-\sqrt{-b^{'}}\\[2mm]
+        &a^2=-a^{'}~~~~~~b^2=-b^{'}
+    \end{align}\\
+    代入基本不等式$1$的基本形式可得：
+    \begin{align}
+        &a^2+b^2\geq 2\cdot a\cdot b\\[3mm]
+        &-a^{'}-b^{'}\geq 2\cdot\sqrt{-a^{'}}\cdot\sqrt{-b^{'}}\\[3mm]
+        &-a^{'}-b^{'}\geq 2\cdot\sqrt{a^{'}\cdot b^{'}}\\[3mm]
+        &a^{'}+b^{'}\leq -2\cdot\sqrt{a^{'}\cdot b^{'}}
+    \end{align}\\
+    由此证明了基本不等式$2$的基本形式和扩展形式成立。
 
 \newpage
 
