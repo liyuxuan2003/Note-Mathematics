@@ -52,6 +52,7 @@
 \begin{document}
 
 \definecolor{LightGray}{rgb}{0.95,0.95,0.95}
+\definecolor{MediumGray}{rgb}{0.7,0.7,0.7}
 
 \maketitle
 
@@ -2101,36 +2102,35 @@
         \begin{equation*}
             ~~~~
             \begin{cases}
-                +(a^2+b^2)\geq 2\cdot a\cdot b~~~~~~~~a,b\in\mathbb{R}~~~~~~~~\text{（当且仅当$a=+b$时等号成立）}\\[1mm]
-                -(a^2+b^2)\leq 2\cdot a\cdot b~~~~~~~~a,b\in\mathbb{R}~~~~~~~~\text{（当且仅当$a=-b$时等号成立）}\\[1mm]
+                ~2\cdot a\cdot b\leq+(a^2+b^2) ~~~~~~~~a,b\in\mathbb{R}~~~~~~~~\text{（当且仅当$a=+b$时等号成立）}\\[1mm]
+                ~2\cdot a\cdot b\geq-(a^2+b^2)~~~~~~~~a,b\in\mathbb{R}~~~~~~~~\text{（当且仅当$a=-b$时等号成立）}\\[1mm]
             \end{cases}
         \end{equation*}
     \end{large}\\[5mm]
-    当满足$a\neq +b$时有：
+    当满足$a=+b$时有：
     \setcounter{equation}{0}
+    \begin{align}
+        2\cdot a\cdot b=+(a^2+b^2)
+    \end{align}\\
+    当满足$a\neq +b$时有：
     \begin{align}
         &(a-b)^2>0\\[2mm]
         &~a^2-2\cdot a\cdot b+b^2>0\\[2mm]
         &~a^2+b^2>2\cdot a\cdot b\\[2mm]
-        &+(a^2+b^2)>2\cdot a\cdot b
+        &~2\cdot a\cdot b<+(a^2+b^2)
+    \end{align}\\
+    当满足$a=-b$时有：
+    \begin{align}
+        2\cdot a\cdot b=-(a^2+b^2)
     \end{align}\\
     当满足$a\neq -b$时有：
     \begin{align}
         &(a+b)^2>0\\[2mm]
         &~a^2+2\cdot a\cdot b+b^2>0\\[2mm]
         &~a^2+b^2>-2\cdot a\cdot b\\[2mm]
-        &-(a^2+b^2)<2\cdot a\cdot b
-    \end{align}\\
-    当满足$a=+b$时有：
-    \begin{align}
-        +(a^2+b^2)=2\cdot a\cdot b
-    \end{align}\\
-    当满足$a=-b$时有：
-    \begin{align}
-        -(a^2+b^2)=2\cdot a\cdot b
+        &~2\cdot a\cdot b>-(a^2+b^2)
     \end{align}\\
     由此证明了基本不等式$1$的基本形式和扩展形式成立。
-
 
 \newpage
 
@@ -2141,7 +2141,7 @@
             a+b \geq 2\cdot\sqrt{a\cdot b}~~~~~~~a,b\in\mathbb{R^+}~~~~~~\text{（当且仅当$a=b$时等号成立）}
         \end{equation*}
     \end{large}\\
-    基本不等式$2$的扩展形式：\vspace{2pt}
+    基本不等式$2$的扩展形式：\vspace{3pt}
     \begin{large}
         \begin{equation*}
             ~~~~
@@ -2177,6 +2177,168 @@
         &a^{'}+b^{'}\leq -2\cdot\sqrt{a^{'}\cdot b^{'}}
     \end{align}\\
     由此证明了基本不等式$2$的基本形式和扩展形式成立。
+
+\newpage
+
+\subsubsection{使用基本不等式求解函数最值$1$}
+    求解形如下方的函数的最值：
+    \setcounter{equation}{0}
+    \begin{equation}
+        f(x)=\frac{a\cdot x^2+b\cdot x+c}{d\cdot x+e}
+    \end{equation}\\
+    定义代换变量$t$代换$x$有：
+    \begin{align}
+        t=d\cdot x+e
+    \end{align}\\
+    用变量$t$将$x$反表示则有：
+    \begin{align}
+        x=\frac{1}{d}\cdot(t-e)
+    \end{align}\\
+    即变量$x$可以表示为关于代换变量$t$的函数，记之为函数$x=g(t)$。\\[16mm]
+    将其代入函数$f(x)$可得：
+    \begin{align}
+        &f(x)=\frac{a\cdot x^2+b\cdot x+c}{d\cdot x+e}\\[3mm]
+        &f(t)=\frac{a\cdot g(t)^2+b\cdot g(t)+c}{t}\\[3mm]
+        &f(t)=\frac{A\cdot t^2+B\cdot t+C}{t}\\[3mm]
+        &f(t)=A\cdot t+B+C\cdot\frac{1}{t}\\[3mm]
+        &f(t)=A\cdot t+C\cdot\frac{1}{t}+B
+    \end{align}\\
+    观察函数$f(t)$可以发现：
+    \begin{align}
+        f(t)=\underbrace{\left(A\cdot t+C\cdot\frac{1}{t}\right)}_{\text{基本不等式2}}+B
+    \end{align}\\
+    因此此时即可通过基本不等式$2$求解函数最值。
+
+\newpage
+
+    上述第五步至第六步的推导如下：
+    \begin{align}
+        &f(t)=\frac{1}{t}\cdot\left[a\cdot g(t)^2+b\cdot g(t)+c\right]\\[4mm]
+        &f(t)=\frac{1}{t}\cdot\left[\frac{a}{d^2}\cdot(t-e)^2+\frac{b}{d}\cdot(t-e)+c\right]\\[4mm]
+        &f(t)=\frac{1}{t}\cdot\left[t^2\cdot\frac{a}{d^2}-t\cdot\frac{2ae}{d^2}+\frac{ae^2}{d^2}+t\cdot\frac{b}{d}-\frac{be}{d}+c\right]\\[4mm]
+        &f(t)=\frac{1}{t}\cdot\left[t^2\cdot\frac{a}{d^2}+t\cdot\frac{bd-2ae}{d^2}+\frac{ae^2+cd^2-bde}{d^2}\right]
+    \end{align}\\
+    定义代换变量$A$替代二次项系数：
+    \begin{align}
+        A=\frac{a}{d^2}
+    \end{align}\\
+    定义代换变量$B$替代一次项系数：
+    \begin{align}
+        B=\frac{bd-2ae}{d^2}
+    \end{align}\\
+    定义代换变量$C$替代常数项系数：
+    \begin{align}
+        C=\frac{ae^2+cd^2-bde}{d^2}
+    \end{align}\\
+    代入三个代换变量可得：
+    \begin{align}
+        f(t)=\frac{A\cdot t^2+B\cdot t+C}{t}
+    \end{align}\\
+    由此从上述过程中的第五步推导至第六步。
+
+\newpage
+
+\subsubsection{使用基本不等式求解函数最值$2$}
+    求解形如下方的函数的最值：
+    \setcounter{equation}{0}
+    \begin{align}
+        f(x)=\frac{p}{ax+b}+\frac{q}{cx+d}
+    \end{align}\\
+    定义代换变量$A$：
+    \begin{align}
+        A=ax+b
+    \end{align}\\
+    定义代换变量$B$：
+    \begin{align}
+        B=cx+d
+    \end{align}\\
+    将其代入函数$f(x)$可知：
+    \begin{align}
+        f(x)
+        &=\frac{p}{ax+b}+\frac{q}{cx+d}\\[5mm]
+        &=\frac{p}{A}+\frac{q}{C}
+    \end{align}\\
+    进行以下的推导可以得到：
+    \begin{align}
+        &~A\cdot c-C\cdot a\\[3mm]
+        &=c\cdot(ax+b)-a\cdot(cx+d)\\[3mm]
+        &=a\cdot c\cdot x+b\cdot c-a\cdot c\cdot x-a\cdot d\\[3mm]
+        &=b\cdot c-a\cdot d
+    \end{align}\\
+    因此两者作比的结果为一：
+    \begin{align}
+        \frac{A\cdot c-C\cdot a}{b\cdot c-a\cdot d}=1
+    \end{align}\\
+    由于该比的比值为一，所以可以将该比乘在函数$f(x)$后而无影响。
+
+\newpage
+
+    函数$f(x)$乘以该比可得：
+    \begin{align}
+        &f(x)=\left[\frac{p}{A}+\frac{q}{C}\right]\cdot\frac{A\cdot c-C\cdot a}{b\cdot c-a\cdot d}\\[5mm]
+        &f(x)=\left[\frac{p}{A}\cdot(A\cdot c-C\cdot a)+\frac{q}{C}\cdot(A\cdot c-C\cdot a)\right]\cdot\frac{1}{b\cdot c-a\cdot d}\\[5mm]
+        &f(x)=\left[c\cdot p-\frac{C}{A}\cdot p\cdot a+\frac{A}{C}\cdot q\cdot c-a\cdot q\right]\cdot\frac{1}{b\cdot c-a\cdot d}\\[5mm]
+        &f(x)=\left[c\cdot p-a\cdot q+\frac{A}{C}\cdot q\cdot c-\frac{C}{A}\cdot p\cdot a\right]\cdot\frac{1}{b\cdot c-a\cdot d}
+    \end{align}\\
+    观察函数$f(t)$可以发现：
+    \begin{align}
+        f(x)=\left[c\cdot p-a\cdot q+\underbrace{\frac{A}{C}\cdot q\cdot c-\frac{C}{A}\cdot p\cdot a}_{\text{基本不等式2}}\right]\cdot\frac{1}{b\cdot c-a\cdot d}
+    \end{align}\\
+    因此此时即可通过基本不等式$2$求解函数最值。
+
+\newpage
+
+\subsection{柯西不等式}
+    柯西不等式（完整形式）：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~\left({\sum_{i=1}^n}a_i\cdot b_i\right)\leq\left(\sum_{i=1}^n a_i^2\right)\cdot\left(\sum_{i=1}^n b_i^2\right)~~~~~~\text{（当且仅当$\frac{a_1}{b_1}=\frac{a_2}{b_2}=\cdots=\frac{a_n}{b_n}$时等号成立）}
+        \end{equation*}
+    \end{large}\\[2mm]
+    柯西不等式（当$n=2$的情况）：
+    \begin{large}
+        \begin{equation*}
+            ~~~~a_1\cdot b_1+a_2\cdot b_2\leq(a_1^2+a_2^2)\cdot\left(b_1^2+b_2^2\right)
+        \end{equation*}
+    \end{large}\\
+    柯西不等式（当$n=3$的情况）：
+    \begin{large}
+        \begin{equation*}
+            ~~~~a_1\cdot b_1+a_2\cdot b_2+a_3\cdot b_3\leq(a_1^2+a_2^2+a_3^2)\cdot\left(b_1^2+b_2^2+b_3^2\right)
+        \end{equation*}
+    \end{large}\\
+    构造以下二次函数：
+    \setcounter{equation}{0}
+    \begin{align}
+        &f(x)=\sum_{i=1}^n(a_i\cdot x+b_i)^2\\[4mm]
+        &f(x)=\sum_{i=1}^n\left(a_i^2x^2+2\cdot a_i\cdot b_i\cdot x+b_i^2\right)
+    \end{align}\\
+    很显然其判别式为：
+    \begin{align}
+        \Delta=4\cdot\left(\sum_{i=1}^na_i\cdot b_i\right)^2-4\cdot\left(\sum_{i=1}^n a_i^2\right)\cdot\left(\sum_{i=1}^n b_i^2\right)
+    \end{align}\\
+    由于$f(x)$由若干平方数组成，故$f(x)\leq 0$，即$\Delta\leq 0$。\\[3mm]
+    据此可得到不等式：
+    \begin{align}
+        &4\cdot\left(\sum_{i=1}^na_i\cdot b_i\right)^2-4\cdot\left(\sum_{i=1}^n a_i^2\right)\cdot\left(\sum_{i=1}^n b_i^2\right)\leq 0\\[3mm]
+        &\left(\sum_{i=1}^na_i\cdot b_i\right)^2-\left(\sum_{i=1}^n a_i^2\right)\cdot\left(\sum_{i=1}^n b_i^2\right)\leq 0\\[3mm]
+        &\left(\sum_{i=1}^na_i\cdot b_i\right)^2\leq \left(\sum_{i=1}^n a_i^2\right)\cdot\left(\sum_{i=1}^n b_i^2\right)
+    \end{align}\\
+    由此证明了柯西不等式的不等式部分。
+
+\newpage
+
+    由于$f(x)$由若干平方数组成，因此只有每一项都为零时，等号才能成立，即$\Delta=0$。\\[3mm]
+    由于$f(x)$由若干平方数组成，因此只要用一项不为零时，等号不能成立，即$\Delta\neq 0$。\\[3mm]
+    故等号成立的条件是：
+    \begin{align}
+        &a_i\cdot x+b_i=0\\[3mm]
+        &a_i\cdot x=-b_i\\[3mm]
+        &\frac{a_i}{b_i}=-x\\[3mm]
+        &\frac{a_i}{b_i}=C
+    \end{align}\\
+    即当任意$a_i$和$b_i$的比值为定值时，不等式等号成立。\\[3mm]
+    由此证明了柯西不等式的等号成立部分。
 
 \newpage
 
@@ -6142,51 +6304,73 @@
 \newpage
 
 \subsubsection{圆的标准方程}
-    通过将圆的方程两边平方，可以得到圆的标准方程：\\[2mm]
     圆的标准方程：
     \begin{large}
         \begin{equation*}
             (x-a)^2+(y-b)^2=r^2
         \end{equation*}
-    \end{large}
-
-\subsubsection{圆的一般方程}
-    通过将圆的标准方程展开，我们可以得到圆的一般式方程：\vspace{5pt}
+    \end{large}\\
+    将圆的方程两边平方：
     \setcounter{equation}{0}
     \begin{align}
-        &(x-a)^2+(y-b)^2=r^2\\[3mm]
-        &x^2-2ax+a^2+y^2-2by+b^2=r^2\\[3mm]
-        &x^2+y^2-2ax-2by+a^2+b^2-r^2=0
+        &\sqrt{(x-a)^2+(y-b)^2}=r\\[3mm]
+        &(x-a)^2+(y-b)^2=r^2
     \end{align}\\
-    通过字母代换上方的化简结果：
-    \begin{equation}
-        D=-2a\qquad
-        E=-2b\qquad
-        F=a^2-b^2-r^2
-    \end{equation}\\
+    由此证明了圆的标准方程。\\
+
+\subsubsection{圆的一般方程}
     圆的一般方程：
     \begin{large}
         \begin{equation*}
             x^2+y^2+Dx+Ey+F=0
         \end{equation*}
     \end{large}\\
-    圆的判别式：
+    将圆的标准方程展开：
+    \setcounter{equation}{0}
+    \begin{align}
+        &(x-a)^2+(y-b)^2=r^2\\[3mm]
+        &x^2-2ax+a^2+y^2-2by+b^2=r^2\\[3mm]
+        &x^2+y^2-2ax-2by+a^2+b^2-r^2=0
+    \end{align}\\
+    定义代换变量$D$：
+    \begin{equation}
+        D=-2a
+    \end{equation}\\
+    定义代换变量$E$：
+    \begin{equation}
+        E=-2b
+    \end{equation}\\
+    定义代换变量$F$：
+    \begin{equation}
+        F=a^2+b^2-r^2
+    \end{equation}\\
+    代入可得：
+    \begin{equation}
+        x^2+y^2+Dx+Ey+F=0
+    \end{equation}\\
+    由此证明了圆的一般方程。
+
+\newpage
+
+\subsubsection{圆的一般方程判别式}
+    圆的一般方程判别式：
     \begin{large}
         \begin{equation*}
             r^2=\frac{D^2+E^2-4F}{4}
         \end{equation*}
-    \end{large}\\[2mm]
-    因为只有当一般式的参数使得判别式大于$0$，即$r^2>0$时，
-    该方程才有意义，
-    所以必须通过判别式判断圆的一般方程是否能真正表示一个圆。\\[3mm]
+    \end{large}\\
+    因为只有当圆的一般方程的参数使得半径的平方大于零时，此方程才能真正表达一个圆。\\[3mm]
+    因此不是所有圆的一般方程都能表达圆，必须通过判别式是否大于零来判断方程是否有意义。\\[3mm]
     判别式的推导如下：
     \setcounter{equation}{0}
     \begin{align}
-        r^2
-        &=\left(-\frac{D}{2}\right)^2+\left(-\frac{E}{2}\right)^2-F\\[4mm]
-        &=\frac{D^2}{4}+\frac{E^2}{4}-F\\[4mm]
-        &=\frac{D^2+E^2-4F}{4}
-    \end{align}
+        &F=a^2+b^2-r^2\\[4mm]
+        &r^2=F-a^2-b^2\\[4mm]
+        &r^2=\left(-\frac{D}{2}\right)^2+\left(-\frac{E}{2}\right)^2-F\\[4mm]
+        &r^2=\frac{D^2}{4}+\frac{E^2}{4}-F\\[4mm]
+        &r^2=\frac{D^2+E^2-4F}{4}
+    \end{align}\\
+    由此证明了圆的一般方程判别式。 
     
 \newpage
 
@@ -6339,20 +6523,21 @@
 
 \subsection{椭圆的方程}
     椭圆的定义：
-    到平面上两个定点的距离和等于常数的点的轨迹称为椭圆。\\[1mm]
+    到平面上两个定点的距离和等于常数的点的轨迹称为椭圆。\\[2mm]
     其中定点$F_1$，$F_2$被称为焦点，
-    而两个焦点间的距离$|F_1F_2|$被称为焦距。\\[3mm]
+    而两个焦点间的距离$|F_1F_2|$被称为焦距。\\[6mm]
     设焦点$F_1(x_1,y_1),F_2(x_2,y_2)$，
-    点到两焦点的距离和为$2r$。\\[3mm]
+    点到两焦点的距离和为$2a$。\\[2mm]
     椭圆的方程：
     \begin{large}
         \begin{equation*}
-            \sqrt{(x-x_1)^2+(y-y_1)^2}+\sqrt{(x-x_2)^2+(y-y_2)^2}=2r
+            \sqrt{(x-x_1)^2+(y-y_1)^2}+\sqrt{(x-x_2)^2+(y-y_2)^2}=2a
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    椭圆的图像：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.1]
+            \begin{tikzpicture}[>=stealth,scale=1.0]
                 \draw[->] (-5.8,0) -- (5.8,0) node[above] {$x$};
                 \draw[->] (0,-5.8) -- (0,5.8) node[right] {$y$};
                 \foreach \x in {-5,-4,...,-1}
@@ -6369,196 +6554,444 @@
             \end{tikzpicture}
             \caption{椭圆的图像}
         \end{center}
-    \end{figure}
+    \end{figure}\\
+    接下来将由此开始研究椭圆的相关性质。
 
 \newpage
 
 \subsubsection{椭圆的标准方程}
     特别的，如果两个焦点均在$x$轴上，
-    且椭圆中心为原点$(0,0)$时，\\
-    我们可以设焦距为$2f$，
-    点到两焦点的距离和为$2r$，
-    焦点$F_1(f,0)$，
-    焦点$F_2(-f,0)$。\\[3mm]
-    推导如下：\vspace{3pt}
+    且椭圆中心为原点$(0,0)$时：\\
+    我们可以设焦距为$2c$，
+    点到两焦点的距离和为$2a$，
+    焦点$F_1(c,0)$，
+    焦点$F_2(-c,0)$。\\[3mm]
+    进行以下推导：\vspace{3pt}
     \setcounter{equation}{0}
     \begin{align}
-        &\sqrt{(x-f)^2+y^2}+\sqrt{(x+f)^2+y^2}=2r\\[4mm]
-        &\sqrt{(x-f)^2+y^2}=2r-\sqrt{(x+f)^2+y^2}\\[4mm]
-        &(x-f)^2+y^2=4r^2+(x+f)^2+y^2-4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &x^2+f^2-2xf+y^2=4r^2+x^2+f^2+2xf+y^2-4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &4r^2+4xf=4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &r^2+xf=r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &r^4+2xfr^2+x^2f^2=r^2 \cdot ((x+f)^2+y^2)\\[4mm]
-        &r^4+x^2f^2-x^2r^2-y^2r^2-r^2f^2=0\\[4mm]
-        &r^4+x^2(f^2-r^2)-y^2r^2-r^2f^2=0\\[4mm]
-        &(r^2-f^2)x^2+r^2y^2=r^4-r^2f^2\\[4mm]
-        &(r^2-f^2)x^2+r^2y^2=r^2(r^2-f^2)\\[4mm]
-        &\frac{x^2}{r^2}+\frac{y^2}{r^2-f^2}=1
-    \end{align}\\[1mm]
-    当椭圆中心为原点，焦点在$x$轴上时，椭圆的方程：\\
-    \begin{large}
-        \begin{equation*}
-            \frac{x^2}{r^2}+\frac{y^2}{r^2-f^2}=1\qquad(r>f)
-        \end{equation*}
-    \end{large}\\[1mm]
-    当椭圆中心为原点，焦点在$y$轴上时，椭圆的方程：\\
-    \begin{large}
-        \begin{equation*}
-            \frac{y^2}{r^2}+\frac{x^2}{r^2-f^2}=1\qquad(r>f)
-        \end{equation*}
-    \end{large}
+        &\sqrt{(x-c)^2+y^2}+\sqrt{(x+c)^2+y^2}=2a\\[3.5mm]
+        &\sqrt{(x-c)^2+y^2}=2a-\sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &(x-c)^2+y^2=4a^2+(x+c)^2+y^2-4a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &x^2+c^2-2xc+y^2=4a^2+x^2+c^2+2xc+y^2-4a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &4a^2+4xc=4a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &a^2+xc=a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &a^4+2xc^2+x^2c^2=a^2 \cdot ((x+c)^2+y^2)\\[3.5mm]
+        &a^4+x^2c^2-x^2a^2-y^2a^2-a^2c^2=0\\[3.5mm]
+        &a^4+x^2(c^2-a^2)-y^2a^2-a^2c^2=0\\[3.5mm]
+        &(a^2-c^2)x^2+a^2y^2=a^4-a^2c^2\\[3.5mm]
+        &(a^2-c^2)x^2+a^2y^2=a^2(a^2-c^2)\\[3.5mm]
+        &\frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1
+    \end{align}\\
+    当椭圆中心为原点，焦点在$x$轴上时，椭圆的方程：\vspace{5pt}
+    \begin{equation}
+        \frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1\qquad(a>c)
+    \end{equation}\\
+    当椭圆中心为原点，焦点在$y$轴上时，椭圆的方程：\vspace{5pt}
+    \begin{equation}
+        \frac{y^2}{a^2}+\frac{x^2}{a^2-c^2}=1\qquad(a>c)
+    \end{equation}\\
+    为了简化方程，定义以代换变量$b^2=a^2-c^2$，将其代入即可得到椭圆的标准方程。
+    
 
 \newpage
 
-    椭圆的顶点指的是
-    椭圆与两个坐标轴的四个交点：
-    $A_1(-l,0)$，
-    $A_2(l,0)$，
-    $B_1(0,-s)$，
-    $B_2(0,s)$。\\[3mm]
-    椭圆的长轴（major axis of the ellipse）：
-    线段$A_1A_2$，长度等于$2l$。\\[1mm]
-    椭圆的短轴（minor axis of the ellipse）：
-    线段$B_1B_2$\;，长度等于$2s$。\\[3mm]
-    设想一个焦点位于$x$轴上的椭圆，
-    以及椭圆上一点$P$。\\[2mm]
-    当点$P$位于$x$轴上时，
-    可以看出此时点$P$到两焦点距离和，
-    也就是$2r$，恰好等于长轴$2l$。\\[2mm]
-    当点$P$位于$y$轴上时，
-    此时点$P$到其中一个焦点的距离应当为$r$，
-    而点$P$到原点的距离为半短轴$s$，
-    原点到焦点的距离则为$f$，
-    根据勾股定理我们可以得到半短轴的公式。\\[3mm]
-    半长轴和半短轴：
-    \begin{large}
-        \begin{align*}
-            &l^2=r^2\\[3mm]
-            &s^2=r^2-f^2
-        \end{align*}
-    \end{large}\\
-    根据两者的定义，显然我们有以下关系：
+    椭圆的标准方程（焦点位于$x$轴）：
     \begin{large}
         \begin{equation*}
-            l>s
+            \frac{x^2}{a^2}+\frac{y^2}{b^2}=1
         \end{equation*}
     \end{large}\\
-    代入椭圆方程可得关于长轴短轴的椭圆方程：\\[3mm]
-    当焦点位于$x$轴时：\\
+    椭圆的标准方程（焦点位于$y$轴）：
     \begin{large}
         \begin{equation*}
-            \frac{x^2}{l^2}+\frac{y^2}{s^2}=1
+            \frac{y^2}{a^2}+\frac{x^2}{b^2}=1
         \end{equation*}
     \end{large}\\
-    当焦点位于$y$轴时：\\
+    椭圆中长度为$2a$的线段$A_1A_2$称为椭圆的长轴，因此标准方程中的$a$称为椭圆的半长轴。\\[3mm]
+    椭圆中长度为$2b$的线段$B_1B_2$称为椭圆的短轴，因此标准方程中的$b$称为椭圆的半短轴。\\[5mm]
+    椭圆的图像如下：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[焦点在$x$轴上的椭圆]
+            {
+                \begin{minipage}[t]{0.446\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                        \draw[cyan] (0,0) ellipse (3 and 2);
+
+                        \fill(-2.236,0) circle(0.05);
+                        \fill(+2.236,0) circle(0.05);
+
+                        \fill(-3,0) circle(0.05);
+                        \fill(+3,0) circle(0.05);
+
+                        \fill(0,-2) circle(0.05);
+                        \fill(0,+2) circle(0.05);
+
+                        \node at(-3.3,-0.35) {$A_1$};
+                        \node at(+3.3,-0.35) {$A_2$};
+                        \node at(-0.35,-2.4) {$B_1$};
+                        \node at(-0.35,+2.4) {$B_2$};
+                        \node at(-2.236,-0.40) {$F_1$};
+                        \node at(+2.236,-0.40) {$F_2$};
+                        \node at(-0.3,-0.3) {$O$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[焦点在$y$轴上的椭圆]
+            {
+                \begin{minipage}[t]{0.446\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                        \draw[cyan] (0,0) ellipse (2 and 3);
+
+                        \fill(0,-2.236) circle(0.05);
+                        \fill(0,+2.236) circle(0.05);
+
+                        \fill(0,-3) circle(0.05);
+                        \fill(0,+3) circle(0.05);
+
+                        \fill(-2,0) circle(0.05);
+                        \fill(+2,0) circle(0.05);
+
+                        \node at(-2.3,-0.35) {$B_1$};
+                        \node at(+2.3,-0.35) {$B_2$};
+                        \node at(-0.35,-3.4) {$A_1$};
+                        \node at(-0.35,+3.4) {$A_2$};
+                        \node at(-0.35,-2.236) {$F_1$};
+                        \node at(-0.35,+2.236) {$F_2$};
+                        \node at(-0.3,-0.3) {$O$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{椭圆的图像}
+        \end{center}
+    \end{figure}\\
+    椭圆中有以下重要关系：
     \begin{large}
         \begin{equation*}
-            \frac{y^2}{l^2}+\frac{x^2}{s^2}=1
+            c^2=a^2-b^2
         \end{equation*}
     \end{large}\\
-    关于长轴短轴的椭圆方程被定义为椭圆的标准方程。
+    即半焦距的平方是半长轴和半短轴的平方差。
+
+\newpage
 
 \subsubsection{椭圆的切线方程}
-    对隐函数$\dfrac{x^2}{l^2}+\dfrac{y^2}{s^2}=1$求导：
+    我们现在研究椭圆$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$上一点$(x_0,y_0)$处的切线方程。\\[5mm]
+    对标准方程的第一项求导：
     \setcounter{equation}{0}
     \begin{align}
-        &\frac{\dif x^2}{\dif x}=2x\\[4mm]
-        &\frac{\dif y^2}{\dif x}=\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}=2y\cdot\frac{\dif y}{\dif x}\\[6mm]
-        &\frac{1}{l^2}\cdot(2x)+\frac{1}{s^2}\cdot(2y\cdot\frac{\dif y}{\dif x})=0\\[5mm]
-        &\frac{2x}{l^2}+\frac{2y}{s^2}\cdot\frac{\dif y}{\dif x}=0\\[4mm]
-        &\frac{\dif y}{\dif x}=-\frac{2x}{l^2}\cdot\frac{s^2}{2y}\\[4mm]
-        &\frac{\dif y}{\dif x}=-\frac{s^2}{l^2}\cdot\frac{x}{y}
+        \frac{\dif}{\dif x}\left(\frac{x^2}{a^2}\right)
+        &=\frac{1}{a^2}\cdot\frac{\dif x^2}{\dif x}~~~~~~~~\\[4mm]
+        &=\frac{1}{a^2}\cdot 2\cdot x\\[4mm]
+        &=\frac{2x}{a^2}
     \end{align}\\
-    代入点斜式方程：
+    对标准方程的第二项求导：
+    \setcounter{equation}{0}
     \begin{align}
-        &(y-y_0)=k\cdot(x-x_0)\\[4mm]
-        &(y-y_0)=-\frac{s^2}{l^2}\cdot\frac{x_0}{y_0}\cdot(x-x_0)\\[4mm]
-        &y_0\cdot(y-y_0)=-\frac{s^2}{l^2}\cdot x_0\cdot(x-x_0)\\[4mm]
-        &y\cdot y_0-{y_0}^2=-\frac{s^2}{l^2}\cdot(x\cdot x_0-{x_0}^2)\\[4mm]
-        &\frac{y\cdot y_0}{s^2}-\frac{{y_0}^2}{s^2}=-\frac{x\cdot x_0}{l^2}+\frac{{x_0}^2}{l^2}\\[6mm]
-        &\frac{x\cdot x_0}{l^2}+\frac{y\cdot y_0}{s^2}=\frac{{x_0}^2}{l^2}+\frac{{y_0}^2}{s^2}\\[6mm]
-        &\frac{x\cdot x_0}{l^2}+\frac{y\cdot y_0}{s^2}=\frac{{x_0}^2}{l^2}+\frac{{y_0}^2}{s^2}
-    \end{align}
+        \frac{\dif}{\dif x}\left(\frac{y^2}{b^2}\right)
+        &=\frac{1}{b^2}\cdot\frac{\dif y^2}{\dif x}\\[4mm]
+        &=\frac{1}{b^2}\cdot\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}\\[4mm]
+        &=\frac{1}{b^2}\cdot 2\cdot y\cdot \frac{\dif y}{\dif x}\\[4mm]
+        &=\frac{2y}{b^2}\cdot\frac{\dif y}{\dif x}
+    \end{align}\\
+    对标准方程右侧求导，由于右侧为常数，故求导结果为零。\\[12mm]
+    故标准方程求导结果为：
+    \begin{align}
+        &\frac{2x}{a^2}+\frac{2y}{b^2}\cdot\frac{\dif y}{\dif x}=0\\[5mm]
+        &\frac{\dif y}{\dif x}=-\frac{2x}{a^2}\cdot\frac{b^2}{2y}\\[5mm]
+        &\frac{\dif y}{\dif x}=-\frac{a^2}{b^2}\cdot\frac{x}{y}
+    \end{align}\\
+    由此得到了椭圆上任意一点处的导数，即得到了椭圆上任意一点处的切线斜率。
 
 \newpage
 
-    将椭圆方程$\dfrac{x^2}{l^2}+\dfrac{y^2}{s^2}=1$代入，
-    最终得到椭圆的切线方程：\\[4mm]
-    焦点位于$x$轴的椭圆切线方程：
+    代入点斜式方程：
+    \begin{align}
+        &(y-y_0)=k\cdot(x-x_0)\\[5mm]
+        &(y-y_0)=-\frac{b^2}{a^2}\cdot\frac{x_0}{y_0}\cdot(x-x_0)\\[5mm]
+        &~y_0\cdot(y-y_0)=-\frac{b^2}{a^2}\cdot x_0\cdot(x-x_0)\\[5mm]
+        &~y\cdot y_0-{y_0}^2=-\frac{b^2}{a^2}\cdot(x\cdot x_0-{x_0}^2)\\[5mm]
+        &~\frac{y\cdot y_0}{b^2}-\frac{{y_0}^2}{b^2}=-\frac{x\cdot x_0}{a^2}+\frac{{x_0}^2}{a^2}\\[5mm]
+        &~\frac{x\cdot x_0}{a^2}+\frac{y\cdot y_0}{b^2}=\frac{{x_0}^2}{a^2}+\frac{{y_0}^2}{b^2}\\[5mm]
+        &~\frac{x\cdot x_0}{a^2}+\frac{y\cdot y_0}{b^2}=\frac{{x_0}^2}{a^2}+\frac{{y_0}^2}{b^2}
+    \end{align}\\
+    由标准方程可知：
+    \begin{align}
+        &\frac{{x_0}^2}{a^2}+\frac{{y_0}^2}{b^2}=1\\[5mm]
+        &\frac{x\cdot x_0}{a^2}+\frac{y\cdot y_0}{b^2}=1
+    \end{align}\\
+    椭圆的切线方程（焦点位于$x$轴）：
     \begin{large}
         \begin{equation*}
-            \frac{x \cdot x_0}{l^2}+\frac{y \cdot y_0}{s^2}=1
+            \frac{x \cdot x_0}{a^2}+\frac{y \cdot y_0}{b^2}=1
         \end{equation*}
     \end{large}\\
-    焦点位于$y$轴的椭圆切线方程：
+    椭圆的切线方程（焦点位于$y$轴）：
     \begin{large}
         \begin{equation*}
-            \frac{y \cdot y_0}{l^2}+\frac{x \cdot x_0}{s^2}=1
+            \frac{y \cdot y_0}{a^2}+\frac{x \cdot x_0}{b^2}=1
         \end{equation*}
     \end{large}\\
+    由此证明了椭圆的切线方程。
+
+\newpage
 
 \subsubsection{椭圆的焦点三角形}
     椭圆的焦点三角形指的是椭圆上任意一点与椭圆两焦点组成的三角形。\\[3mm]
-    设椭圆上一点为$P$，对于焦点三角形$\triangle PF_1F_2$：
+    椭圆的焦点三角形的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                \draw[->] (0,-3.5) -- (0,3.5) node[right] {$y$};
+                \draw[cyan] (0,0) ellipse (3 and 2);
+
+                \fill(-2.236,0) circle(0.05);
+                \fill(+2.236,0) circle(0.05);
+                \fill(+1,1.886) circle(0.05);
+
+                \node at(-2.236,-0.40) {$F_1$};
+                \node at(+2.236,-0.40) {$F_2$};
+
+                \draw(+1,1.886)--(-2.236,0);
+                \draw(+1,1.886)--(+2.236,0);
+
+                \node at(+1.1,2.3) {$P$};
+            \end{tikzpicture}
+            \caption{椭圆的焦点三角形}
+        \end{center}
+    \end{figure}\\
+    椭圆上有一点$P$，对于焦点三角形$\triangle PF_1F_2$：
     \setcounter{equation}{0}
     \begin{equation}
-        PF_1=m\qquad PF_2=n\qquad F_1F_2=2f\qquad \angle~ F_1PF_2=\theta
+        PF_1=m\qquad PF_2=n\qquad F_1F_2=2c\qquad \angle~ F_1PF_2=\theta
     \end{equation}\\
-    根据余弦定理：
+    根据余弦定理可以得到：
     \begin{align}
         \cos{\theta}
-        &=\frac{m^2+n^2-(2f)^2}{2mn}\\[5mm]
-        &=\frac{(m+n)^2-(2f)^2-2mn}{2mn}\\[5mm]
-        &=\frac{(2r)^2-(2f)^2-2mn}{2mn}\\[5mm]
-        &=\frac{4r^2-4f^2-2mn}{2mn}\\[5mm]
-        &=\frac{4(r^2-f^2)-2mn}{2mn}\\[5mm]
-        &=\frac{4s^2-2mn}{2mn}\\[5mm]
-        &=\frac{2s^2-mn}{mn}
-    \end{align}
+        &=\frac{m^2+n^2-(2c)^2}{2mn}\\[3mm]
+        &=\frac{(m+n)^2-(2c)^2-2mn}{2mn}\\[3mm]
+        &=\frac{(2a)^2-(2c)^2-2mn}{2mn}\\[3mm]
+        &=\frac{4a^2-4c^2-2mn}{2mn}\\[3mm]
+        &=\frac{4(a^2-c^2)-2mn}{2mn}\\[3mm]
+        &=\frac{4b^2-2mn}{2mn}\\[3mm]
+        &=\frac{2b^2-mn}{mn}
+    \end{align}\\
+    由此得到了一个角$\theta$的余弦和半短轴$b$以及焦半径$m$和焦半径$n$的关系式。
 
 \newpage
 
-    对该式进行变换：
+    对该式进行变换可得：
     \begin{align}
-        &mn\cdot\cos{\theta}=2s^2-mn\\[3mm]
-        &mn\cdot\cos{\theta}+mn=2s^2\\[3mm]
-        &mn\cdot(\cos{\theta}+1)=2s^2\\[3mm]
-        &mn=\frac{2s^2}{\cos{\theta}+1}
+        &\cos{\theta}=\frac{2b^2-mn}{mn}\\[5mm]
+        &~mn\cdot\cos{\theta}=2b^2-mn\\[5mm]
+        &~mn\cdot\cos{\theta}+mn=2b^2\\[5mm]
+        &~mn\cdot(\cos{\theta}+1)=2b^2\\[5mm]
+        &~mn=\frac{2b^2}{\cos{\theta}+1}
     \end{align}\\
     根据三角形面积公式：
     \begin{align}
         S&=\frac{1}{2}\cdot mn\cdot\sin{\theta}\\[5mm]
-        &=\frac{1}{2}\cdot \frac{2s^2}{\cos{\theta}+1}\cdot\sin{\theta}\\[5mm]
-        &=\frac{s^2}{\cos{\theta}+1}\cdot\sin{\theta}\\[5mm]
-        &=\frac{\sin{\theta}}{\cos{\theta}+1}\cdot s^2\\[5mm]
-        &=\tan{\left(\frac{\theta}{2}\right)}\cdot s^2
+        &=\frac{1}{2}\cdot \frac{2b^2}{\cos{\theta}+1}\cdot\sin{\theta}\\[5mm]
+        &=\frac{b^2}{\cos{\theta}+1}\cdot\sin{\theta}\\[5mm]
+        &=\frac{\sin{\theta}}{\cos{\theta}+1}\cdot b^2\\[5mm]
+        &=\tan{\left(\frac{\theta}{2}\right)}\cdot b^2
     \end{align}\\
     椭圆的焦点三角形的面积公式：
     \begin{large}
         \begin{equation*}
-            S=\tan{\left(\frac{\theta}{2}\right)}\cdot s^2
+            S=\tan{\left(\frac{\theta}{2}\right)}\cdot b^2
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    由此证明了椭圆的焦点三角形的面积公式。
+
+\newpage
+
+\subsubsection{椭圆和点的关系}
+    椭圆和点的关系有三种：在椭圆上，在椭圆内，在椭圆外。\\[3mm]
+    椭圆和点的关系的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                \draw[->] (0,-3.5) -- (0,3.5) node[right] {$y$};
+                \draw[cyan] (0,0) ellipse (3 and 2);
+
+                \fill(1.5,0) circle(0.05);
+                \fill(3.0,0) circle(0.05);
+                \fill(4.5,0) circle(0.05);
+
+                \node at(+1.5,-0.4) {$A$};
+                \node at(+3.1,-0.4) {$B$};
+                \node at(+4.5,-0.4) {$C$}; 
+            \end{tikzpicture}
+            \caption{椭圆和点的关系}
+        \end{center}
+    \end{figure}\\
+    当点在椭圆内时：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{a^2}+\frac{y^2}{b^2}<1
+        \end{equation*}
+    \end{large}\\
+    当点在椭圆上时：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+        \end{equation*}
+    \end{large}\\
+    当点在椭圆外时：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{a^2}+\frac{y^2}{b^2}>1
+        \end{equation*}
+    \end{large}\\
+    在示意图中，点$A$是在椭圆内，点$B$是在椭圆上，点$C$是在椭圆外。
+
+\newpage
+
+    当点在椭圆内时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+
+                \fill[LightGray] (1.00,1.886) rectangle (0,0);
+                \fill[LightGray] (1.80,1.600) rectangle (0,0);
+                \fill[LightGray] (2.40,1.200) rectangle (0,0);
+                \fill[LightGray] (2.80,0.718) rectangle (0,0);
+
+                \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+                \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                \draw[cyan] (0,0) ellipse (3 and 2);
+
+                \draw[thin] (0.00,2.000) circle (0.05);
+                \draw[thin] (1.00,1.886) circle (0.05);
+                \draw[thin] (1.80,1.600) circle (0.05);
+                \draw[thin] (2.40,1.200) circle (0.05);
+                \draw[thin] (2.80,0.718) circle (0.05);
+                \draw[thin] (3.00,0.000) circle (0.05);
+
+                \draw (1.00,1.886)--(1.00,0);
+                \draw (1.80,1.600)--(1.80,0);
+                \draw (2.40,1.200)--(2.40,0);
+                \draw (2.80,0.718)--(2.80,0);
+
+                \draw (1.00,1.886)--(0,1.886);
+                \draw (1.80,1.600)--(0,1.600);
+                \draw (2.40,1.200)--(0,1.200);
+                \draw (2.80,0.718)--(0,0.718); 
+
+                \fill[white] (0.00,2.000) circle (0.05);
+                \fill[white] (1.00,1.886) circle (0.05);
+                \fill[white] (1.80,1.600) circle (0.05);
+                \fill[white] (2.40,1.200) circle (0.05);
+                \fill[white] (2.80,0.718) circle (0.05);
+                \fill[white] (3.00,0.000) circle (0.05);
+
+                \draw[dashed] (-4,-3)rectangle (+4,+3);
+            \end{tikzpicture}
+            \caption{点在椭圆内时的示意图}
+        \end{center}
+    \end{figure}\\
+    对于椭圆上任意一点$(x_0,y_0)$，则平面上任意满足下列不等式的一点$(x,y)$：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\begin{cases}
+            |x|\leq|x_0|\\[1mm]
+            |y|\leq|y_0|\\[1mm]
+        \end{cases}~~~~\text{（等号不能同时成立）}\\[6mm]
+        &\begin{cases}
+            x^2\leq x_0^2\\[1mm]
+            y^2\leq y_0^2\\[1mm]
+        \end{cases}~~~~~~~\text{（等号不能同时成立）}
+    \end{align}\\
+    所构成的集合为椭圆的内部，将其代入标准方程即可得到$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}<1$的条件。
+
+\newpage
+
+    当点在椭圆外时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \fill[LightGray] (0.00,2.000) rectangle (4,3);
+                \fill[LightGray] (1.00,1.886) rectangle (4,3);
+                \fill[LightGray] (1.80,1.600) rectangle (4,3);
+                \fill[LightGray] (2.40,1.200) rectangle (4,3);
+                \fill[LightGray] (2.80,0.718) rectangle (4,3);
+                \fill[LightGray] (3.00,0.000) rectangle (4,3);
+
+                \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+                \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                \draw[cyan] (0,0) ellipse (3 and 2);
+
+                \draw[thin] (0.00,2.000) circle (0.05);
+                \draw[thin] (1.00,1.886) circle (0.05);
+                \draw[thin] (1.80,1.600) circle (0.05);
+                \draw[thin] (2.40,1.200) circle (0.05);
+                \draw[thin] (2.80,0.718) circle (0.05);
+                \draw[thin] (3.00,0.000) circle (0.05);
+
+                \draw (1.00,1.886)--(1.00,3);
+                \draw (1.80,1.600)--(1.80,3);
+                \draw (2.40,1.200)--(2.40,3);
+                \draw (2.80,0.718)--(2.80,3);
+                \draw (3.00,0.000)--(3.00,3);
+
+                \draw (0.00,2.000)--(4,2.000);
+                \draw (1.00,1.886)--(4,1.886);
+                \draw (1.80,1.600)--(4,1.600);
+                \draw (2.40,1.200)--(4,1.200);
+                \draw (2.80,0.718)--(4,0.718);
+
+                \fill[white] (0.00,2.000) circle (0.05);
+                \fill[white] (1.00,1.886) circle (0.05);
+                \fill[white] (1.80,1.600) circle (0.05);
+                \fill[white] (2.40,1.200) circle (0.05);
+                \fill[white] (2.80,0.718) circle (0.05);
+                \fill[white] (3.00,0.000) circle (0.05);
+
+                \draw[dashed] (-4,-3)rectangle (+4,+3);
+            \end{tikzpicture}
+            \caption{点在椭圆内时的示意图}
+        \end{center}
+    \end{figure}\\
+    对于椭圆上任意一点$(x_0,y_0)$，则平面上任意满足下列不等式的一点$(x,y)$：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\begin{cases}
+            |x|\geq|x_0|\\[1mm]
+            |y|\geq|y_0|\\[1mm]
+        \end{cases}~~~~\text{（等号不能同时成立）}\\[6mm]
+        &\begin{cases}
+            x^2\geq x_0^2\\[1mm]
+            y^2\geq y_0^2\\[1mm]
+        \end{cases}~~~~~~~\text{（等号不能同时成立）}
+    \end{align}\\
+    所构成的集合为椭圆的外部，将其代入标准方程即可得到$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}>1$的条件。
 
 \newpage
 
 \subsection{双曲线的方程}
     双曲线的定义：
-    到平面上两个定点的距离差等于常数的点的轨迹称为双曲线。\\[1mm]
-    其中定点$F_1$，$F_2$被称为焦点，
-    而两个焦点间的距离$|F_1F_2|$被称为焦距。\\[3mm]
-    设焦点$F_1(x_1,y_1),F_2(x_2,y_2)$，
-    点到两焦点的距离差的绝对值为$2r$。\\[3mm]
+    到平面上两个定点的距离差等于常数的点的轨迹称为双曲线。\\[2mm]
+    其中定点$F_1$，定点$F_2$被称为焦点，
+    而两个焦点间的距离$|F_1F_2|$被称为焦距。\\[6mm]
+    如果设焦点$F_1(x_1,y_1),F_2(x_2,y_2)$，
+    点到两焦点的距离差的绝对值为$2a$。\\[2mm]
     双曲线的方程：
     \begin{large}
         \begin{equation*}
-            \sqrt{(x-x_1)^2+(y-y_1)^2}-\sqrt{(x-x_2)^2+(y-y_2)^2}=\pm 2r
+            \sqrt{(x-x_1)^2+(y-y_1)^2}-\sqrt{(x-x_2)^2+(y-y_2)^2}=\pm 2a
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    双曲线的图像：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.1]
+            \begin{tikzpicture}[>=stealth,scale=1.0]
                 \draw[->] (-5.8,0) -- (5.8,0) node[above] {$x$};
                 \draw[->] (0,-5.8) -- (0,5.8) node[right] {$y$};
                 \foreach \x in {-5,-4,...,-1}
@@ -6576,246 +7009,532 @@
             \end{tikzpicture}
             \caption{双曲线的图像}
         \end{center}
-    \end{figure}
+    \end{figure}\\
+    接下来将由此开始研究双曲线的相关性质。
 
 \newpage
 
 \subsubsection{双曲线的标准方程}
     特别的，如果两个焦点均在$x$轴上，
-    且双曲线中心为原点$(0,0)$时，\\
-    我们可以设焦距为$2f$，
-    点到两焦点的距离差的绝对值为$2r$，
-    焦点$F_1(f,0)$，
-    焦点$F_2(-f,0)$。\\[3mm]
-    由于双曲线的方程右侧的正负号不确定，所以此处需要分类讨论。\\[3mm]
-    当双曲线的差值为正数时：\vspace{8pt}
+    且双曲线中心为原点$(0,0)$时：\\
+    我们可以设焦距为$2c$，
+    点到两焦点的距离差的绝对值为$2a$，
+    焦点$F_1(c,0)$，
+    焦点$F_2(-c,0)$。\\[3mm]
+    虽然双曲线方程的右侧，既可以为正，也可以为负，但两者结果是一致的，故此处只考虑前者。\\[3mm]
+    进行以下推导：\vspace{3pt}
     \setcounter{equation}{0}
     \begin{align}
-        &\sqrt{(x-f)^2+y^2}-\sqrt{(x+f)^2+y^2}=2r\\[4mm]
-        &\sqrt{(x-f)^2+y^2}=2r+\sqrt{(x+f)^2+y^2}\\[4mm]
-        &(x-f)^2+y^2=4r^2+(x+f)^2+y^2+4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &x^2+f^2-2xf+y^2=4r^2+x^2+f^2+2xf+y^2+4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &4r^2+4xf=-4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &r^2+xf=-r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &r^4+2xfr^2+x^2f^2=r^2 \cdot ((x+f)^2+y^2)\\[4mm]
-        &r^4+x^2f^2-x^2r^2-y^2r^2-r^2f^2=0\\[4mm]
-        &r^4+x^2(f^2-r^2)-y^2r^2-r^2f^2=0\\[4mm]
-        &(r^2-f^2)x^2+r^2y^2=r^4-r^2f^2\\[4mm]
-        &(r^2-f^2)x^2+r^2y^2=r^2(r^2-f^2)\\[4mm]
-        &\frac{x^2}{r^2}+\frac{y^2}{r^2-f^2}=1
-    \end{align}\\[3mm]
-    从过程中可以看出，
-    等式右侧符号带来的影响已经在第二次平方后被消除，
-    所以由此可以猜测，无论双曲线的差值为正数还是负数，
-    得出的结论均是相同的。
+        &\sqrt{(x-c)^2+y^2}-\sqrt{(x+c)^2+y^2}=2a\\[3.5mm]
+        &\sqrt{(x-c)^2+y^2}=2a+\sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &(x-c)^2+y^2=4a^2+(x+c)^2+y^2+4a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &x^2+c^2-2xc+y^2=4a^2+x^2+c^2+2xc+y^2+4a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &4a^2+4xc=-4a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &a^2+xc=-a \cdot \sqrt{(x+c)^2+y^2}\\[3.5mm]
+        &a^4+2xca^2+x^2c^2=a^2 \cdot ((x+c)^2+y^2)\\[3.5mm]
+        &a^4+x^2c^2-x^2a^2-y^2a^2-a^2c^2=0\\[3.5mm]
+        &a^4+x^2(c^2-a^2)-y^2a^2-a^2c^2=0\\[3.5mm]
+        &(a^2-c^2)x^2+a^2y^2=a^4-a^2c^2\\[3.5mm]
+        &(a^2-c^2)x^2+a^2y^2=a^2(a^2-c^2)\\[3.5mm]
+        &\frac{x^2}{a^2}+\frac{y^2}{a^2-c^2}=1
+    \end{align}\\
+    当双曲线中心为原点，焦点在$x$轴上时，双曲线的方程：\vspace{5pt}
+    \begin{equation}
+        \frac{x^2}{a^2}-\frac{y^2}{c^2-a^2}=1\qquad(c>a)
+    \end{equation}\\
+    当双曲线中心为原点，焦点在$y$轴上时，双曲线的方程：\vspace{5pt}
+    \begin{equation}
+        \frac{y^2}{a^2}-\frac{x^2}{c^2-a^2}=1\qquad(c>a)
+    \end{equation}\\
+    为了简化方程，定义以代换变量$b^2=c^2-a^2$，将其代入即可得到双曲线的标准方程。
 
 \newpage
 
-    当双曲线的差值为负数时：\vspace{8pt}
-    \begin{align}
-        &\sqrt{(x-f)^2+y^2}-\sqrt{(x+f)^2+y^2}=-2r\\[4mm]
-        &\sqrt{(x-f)^2+y^2}=-2r+\sqrt{(x+f)^2+y^2}\\[4mm]
-        &(x-f)^2+y^2=4r^2+(x+f)^2+y^2-4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &x^2+f^2-2xf+y^2=4r^2+x^2+f^2+2xf+y^2-4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &4r^2+4xf=4r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &r^2+xf=r \cdot \sqrt{(x+f)^2+y^2}\\[4mm]
-        &r^4+2xfr^2+x^2f^2=r^2 \cdot ((x+f)^2+y^2)\\[4mm]
-        &r^4+x^2f^2-x^2r^2-y^2r^2-r^2f^2=0\\[4mm]
-        &r^4+x^2(f^2-r^2)-y^2r^2-r^2f^2=0\\[4mm]
-        &(r^2-f^2)x^2+r^2y^2=r^4-r^2f^2\\[4mm]
-        &(r^2-f^2)x^2+r^2y^2=r^2(r^2-f^2)\\[4mm]
-        &\frac{x^2}{r^2}+\frac{y^2}{r^2-f^2}=1
-    \end{align}\\[1mm]
-    当双曲线中心为原点，焦点在$x$轴上时，双曲线的方程：\\
+    双曲线的标准方程（焦点位于$x$轴）：
     \begin{large}
         \begin{equation*}
-            \frac{x^2}{r^2}-\frac{y^2}{f^2-r^2}=1\qquad(f<r)
-        \end{equation*}
-    \end{large}\\[1mm]
-    当双曲线中心为原点，焦点在$y$轴上时，双曲线的方程：\\
-    \begin{large}
-        \begin{equation*}
-            \frac{y^2}{r^2}-\frac{x^2}{f^2-r^2}=1\qquad(f<r)
-        \end{equation*}
-    \end{large}
-
-\newpage
-
-    双曲线的顶点指的是双曲线于一个坐标轴的两个交点：$A_1(-l,0)$，$A_2(l,0)$。\\[3mm]
-    双曲线的渐近线上横坐标等于$\pm~l$的两点在另一坐标轴上的两个射影点：$B_1(-s,0)$，$B_2(s,0)$。\\[3mm]
-    双曲线的实轴（transverse axis of the hyperbola）：线段$A_1A_2$，长度等于$2l$。\\[1mm]
-    双曲线的虚轴（conjugate~ axis of the hyperbola）：线段$B_1B_2$\;，长度等于$2s$。\\[3mm]
-    设想一个焦点位于x轴上的双曲线，以及双曲线上一点P。\\[1mm]
-    当$P$点位于双曲线顶点时，可以看出此时点$P$到两焦点的距离差，也就是$2r$，恰好等于实轴$2l$。\\[3mm]
-    半实轴和半虚轴：
-    \begin{large}
-        \begin{align*}
-            &l^2=r^2\\[3mm]
-            &s^2=f^2-r^2
-        \end{align*}
-    \end{large}\\
-    半实轴和半虚轴间不存在大小关系。\\[6mm]
-    代入双曲线方程可得关于实轴虚轴的双曲线方程：\\[3mm]
-    当焦点位于$x$轴上时：
-    \begin{large}
-        \begin{equation*}
-            \frac{x^2}{l^2}-\frac{y^2}{s^2}=1
+            \frac{x^2}{a^2}-\frac{y^2}{b^2}=1
         \end{equation*}
     \end{large}\\
-    当焦点位于$y$轴上时：
+    双曲线的标准方程（焦点位于$y$轴）：
     \begin{large}
         \begin{equation*}
-            \frac{y^2}{l^2}-\frac{x^2}{s^2}=1
+            \frac{y^2}{a^2}-\frac{x^2}{b^2}=1
         \end{equation*}
     \end{large}\\
-    关于实轴虚轴的双曲线方程被定义为双曲线的标准方程。
+    双曲线中长度为$2a$的线段$A_1A_2$称为双曲线的实轴，因此标准方程中的$a$称为双曲线的半实轴。\\[3mm]
+    双曲线中长度为$2b$的线段$B_1B_2$称为双曲线的虚轴，因此标准方程中的$b$称为双曲线的半虚轴。\\[3mm]
+    双曲线中的点$B_1$和点$B_2$的图像意义是渐进线上横坐标为$\pm a$的一点在纵坐标轴上的投影点。\\[5mm]
+    双曲线的图像如下：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[焦点在$x$轴上的双曲线]
+            {
+                \begin{minipage}[t]{0.446\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                        \draw[cyan] plot[variable=\t,domain=-67:67] ({+1.5*sec(\t)},{+1.5*tan(\t)});
+                        \draw[cyan] plot[variable=\t,domain=-67:67] ({-1.5*sec(\t)},{-1.5*tan(\t)});
 
-\newpage
+                        \draw[MediumGray,dashed] (-4.5,-4.5)--(+4.5,+4.5);
+                        \draw[MediumGray,dashed] (+4.5,-4.5)--(-4.5,+4.5);
 
-\subsubsection{双曲线的渐近线方程}
-    对双曲线的标准方程进行变换，可以得到双曲线位于第一象限内的显函数：\vspace{3pt}
-    \setcounter{equation}{0}
-    \begin{align}
-        &\frac{x^2}{l^2}-\frac{y^2}{s^2}=1\\[3mm]
-        &s^2\cdot x^2-l^2\cdot y^2=s^2\cdot l^2\\[3mm]
-        &l^2\cdot y^2=s^2\cdot x^2-s^2\cdot l^2\\[3mm]
-        &l^2\cdot y^2=s^2\cdot \left(x^2-l^2\right)\\[3mm]
-        &y^2=\frac{s^2}{l^2}\cdot \left(x^2-l^2\right)\\[3mm]
-        &y=\frac{s}{l}\cdot \sqrt{x^2-l^2}
-    \end{align}\\[1mm]
-    双曲线和其渐近线在第一象限的方程：\vspace{3pt}
-    \begin{align}
-        &y=\frac{s}{l}\cdot \sqrt{x^2-l^2}\qquad(x>l)\\[4mm]
-        &y=\frac{s}{l}\cdot x\qquad(x>0)
-    \end{align}\\[1mm]
-    第一步证明双曲线必然在渐近线下方：\vspace{3pt}
-    \begin{align}
-        &l^2>0\\[3mm]
-        &x_0\;^2+l^2>x_0\;^2\\[3mm]
-        &x_0\;^2-l^2<x_0\;^2\\[3mm]
-        &x_0>\sqrt{x_0\;^2-l^2}
-    \end{align}
+                        \draw[MediumGray,dashed] (-1.5,+1.5)--(-1.5,-1.5);
+                        \draw[MediumGray,dashed] (+1.5,+1.5)--(+1.5,-1.5);
+                        \draw[MediumGray,dashed] (-1.5,+1.5)--(+1.5,+1.5);
+                        \draw[MediumGray,dashed] (-1.5,-1.5)--(+1.5,-1.5);
 
-\newpage
+                        \fill(-2.121,0) circle(0.05);
+                        \fill(+2.121,0) circle(0.05);
 
-    第二步证明渐近线和双曲线的差的极限为零：\vspace{3pt}
-    \begin{align}
-        &\lim_{x\rightarrow \infty}\left[\frac{s}{l}\cdot x-\frac{s}{l}\cdot \sqrt{x^2-l^2}\right]\\[5mm]
-        =&\lim_{x\rightarrow \infty}\left[\frac{s}{l}\cdot\left(x-\sqrt{x^2-l^2}\right)\right]\\[5mm]
-        =&\lim_{x\rightarrow \infty}\left[\frac{s\cdot\left(x-\sqrt{x^2-l^2}\right)\cdot\left(x+\sqrt{x^2-l^2}\right)}{l\cdot\left(x+\sqrt{x^2-l^2}\right)}\right]\\[5mm]
-        =&\lim_{x\rightarrow \infty}\left[\frac{s\cdot\left(x^2-\left(x^2-l^2\right)\right)}{l\cdot\left(x+\sqrt{x^2-l^2}\right)}\right]\\[5mm]
-        =&\lim_{x\rightarrow \infty}\left[\frac{s\cdot\left(x^2-x^2+l^2\right)}{l\cdot\left(x+\sqrt{x^2-l^2}\right)}\right]\\[5mm]
-        =&\lim_{x\rightarrow \infty}\left[\frac{s\cdot l^2}{l\cdot\left(x+\sqrt{x^2-l^2}\right)}\right]\\[5mm]
-        =&\lim_{x\rightarrow \infty}\left[\frac{l\cdot s}{x+\sqrt{x^2-l^2}}\right]\\[5mm]
-        =&~0
-    \end{align}
-    由于双曲线同时关于$x$轴和$y$轴对称，所以可以最终得到其渐近线方程：\\[3mm]
-    焦点位于$x$轴的双曲线的渐近线方程：
-    \begin{equation*}
-        y~=~\pm \frac{s}{l}\cdot x~~~~~~y=~\pm \sqrt{\frac{s^2}{l^2}}\cdot x
-    \end{equation*}\\
-    焦点位于$y$轴的双曲线的渐近线方程：
-    \begin{equation*}
-        y~=~\pm \frac{l}{s}\cdot x~~~~~~y=~\pm \sqrt{\frac{l^2}{s^2}}\cdot x
-    \end{equation*}\\
+                        \fill(0,-1.5) circle(0.05);
+                        \fill(0,+1.5) circle(0.05);
+
+                        \fill(-1.5,0) circle(0.05);
+                        \fill(+1.5,0) circle(0.05);
+
+                        \node at(-1.1,-0.35) {$A_1$};
+                        \node at(+1.1,-0.35) {$A_2$};
+                        \node at(-0.35,-1.8) {$B_1$};
+                        \node at(-0.35,+1.8) {$B_2$};
+                        \node at(-2.121,-0.40) {$F_1$};
+                        \node at(+2.121,-0.40) {$F_2$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[焦点在$y$轴上的双曲线]
+            {
+                \begin{minipage}[t]{0.446\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                        \draw[cyan] plot[variable=\t,domain=-67:67] ({+1.5*tan(\t)},{+1.5*sec(\t)});
+                        \draw[cyan] plot[variable=\t,domain=-67:67] ({-1.5*tan(\t)},{-1.5*sec(\t)});
+
+                        \draw[MediumGray,dashed] (-4.5,-4.5)--(+4.5,+4.5);
+                        \draw[MediumGray,dashed] (+4.5,-4.5)--(-4.5,+4.5);
+
+                        \draw[MediumGray,dashed] (-1.5,+1.5)--(-1.5,-1.5);
+                        \draw[MediumGray,dashed] (+1.5,+1.5)--(+1.5,-1.5);
+                        \draw[MediumGray,dashed] (-1.5,+1.5)--(+1.5,+1.5);
+                        \draw[MediumGray,dashed] (-1.5,-1.5)--(+1.5,-1.5);
+
+                        \fill(0,-2.121) circle(0.05);
+                        \fill(0,+2.121) circle(0.05);
+
+                        \fill(0,-1.5) circle(0.05);
+                        \fill(0,+1.5) circle(0.05);
+
+                        \fill(-1.5,0) circle(0.05);
+                        \fill(+1.5,0) circle(0.05);
+
+                        \node at(-0.35,-1.2) {$A_1$};
+                        \node at(-0.35,+1.2) {$A_2$};
+                        \node at(-1.8,-0.4) {$B_1$};
+                        \node at(+1.8,-0.4) {$B_2$};
+                        \node at(-0.35,-2.121) {$F_1$};
+                        \node at(-0.35,+2.121) {$F_2$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{双曲线的图像}
+        \end{center}
+    \end{figure}\\
+    双曲线中有以下重要关系：
+    \begin{large}
+        \begin{equation*}
+            c^2=a^2+b^2
+        \end{equation*}
+    \end{large}\\
+    即半焦距的平方是半长轴和半短轴的平方和。
 
 \newpage
 
 \subsubsection{双曲线的切线方程}
-    对隐函数$\dfrac{x^2}{l^2}-\dfrac{y^2}{s^2}=1$求导：
+    我们现在研究双曲线$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1$上一点$(x_0,y_0)$处的切线方程。\\[5mm]
+    对标准方程的第一项求导：
     \setcounter{equation}{0}
     \begin{align}
-        &\frac{\dif x^2}{\dif x}=2x\\[4mm]
-        &\frac{\dif y^2}{\dif x}=\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}=2y\cdot\frac{\dif y}{\dif x}\\[6mm]
-        &\frac{1}{l^2}\cdot(2x)-\frac{1}{s^2}\cdot(2y\cdot\frac{\dif y}{\dif x})=0\\[5mm]
-        &\frac{2x}{l^2}-\frac{2y}{s^2}\cdot\frac{\dif y}{\dif x}=0\\[4mm]
-        &\frac{\dif y}{\dif x}=\frac{2x}{l^2}\cdot\frac{s^2}{2y}\\[4mm]
-        &\frac{\dif y}{\dif x}=\frac{s^2}{l^2}\cdot\frac{x}{y}
+        \frac{\dif}{\dif x}\left(\frac{x^2}{a^2}\right)
+        &=\frac{1}{a^2}\cdot\frac{\dif x^2}{\dif x}~~~~~~~~\\[4mm]
+        &=\frac{1}{a^2}\cdot 2\cdot x\\[4mm]
+        &=\frac{2x}{a^2}
     \end{align}\\
-    代入点斜式方程：
+    对标准方程的第二项求导：
+    \setcounter{equation}{0}
     \begin{align}
-        &(y-y_0)=k\cdot(x-x_0)\\[4mm]
-        &(y-y_0)=\frac{s^2}{l^2}\cdot\frac{x_0}{y_0}\cdot(x-x_0)\\[4mm]
-        &y_0\cdot(y-y_0)=\frac{s^2}{l^2}\cdot x_0\cdot(x-x_0)\\[4mm]
-        &y\cdot y_0-{y_0}^2=\frac{s^2}{l^2}\cdot(x\cdot x_0-{x_0}^2)\\[4mm]
-        &\frac{y\cdot y_0}{s^2}-\frac{{y_0}^2}{s^2}=\frac{x\cdot x_0}{l^2}-\frac{{x_0}^2}{l^2}\\[6mm]
-        &\frac{x\cdot x_0}{l^2}-\frac{y\cdot y_0}{s^2}=\frac{{x_0}^2}{l^2}-\frac{{y_0}^2}{s^2}\\[6mm]
-        &\frac{x\cdot x_0}{l^2}-\frac{y\cdot y_0}{s^2}=\frac{{x_0}^2}{l^2}-\frac{{y_0}^2}{s^2}
-    \end{align}
+        \frac{\dif}{\dif x}\left(\frac{y^2}{b^2}\right)
+        &=\frac{1}{b^2}\cdot\frac{\dif y^2}{\dif x}\\[4mm]
+        &=\frac{1}{b^2}\cdot\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}\\[4mm]
+        &=\frac{1}{b^2}\cdot 2\cdot y\cdot \frac{\dif y}{\dif x}\\[4mm]
+        &=\frac{2y}{b^2}\cdot\frac{\dif y}{\dif x}
+    \end{align}\\
+    对标准方程右侧求导，由于右侧为常数，故求导结果为零。\\[12mm]
+    故标准方程求导结果为：
+    \begin{align}
+        &\frac{2x}{a^2}-\frac{2y}{b^2}\cdot\frac{\dif y}{\dif x}=0\\[5mm]
+        &\frac{\dif y}{\dif x}=\frac{2x}{a^2}\cdot\frac{b^2}{2y}\\[5mm]
+        &\frac{\dif y}{\dif x}=\frac{b^2}{a^2}\cdot\frac{x}{y}
+    \end{align}\\
+    由此得到了双曲线上任意一点处的导数，即得到了双曲线上任意一点处的切线斜率。
 
 \newpage
 
-    将双曲线方程$\dfrac{x^2}{l^2}-\dfrac{y^2}{s^2}=1$代入，
-    最终得到双曲线的切线方程：\\[4mm]
-    焦点位于$x$轴的双曲线切线方程：
+    代入点斜式方程：
+    \begin{align}
+        &(y-y_0)=k\cdot(x-x_0)\\[5mm]
+        &(y-y_0)=\frac{b^2}{a^2}\cdot\frac{x_0}{y_0}\cdot(x-x_0)\\[5mm]
+        &~y_0\cdot(y-y_0)=\frac{b^2}{a^2}\cdot x_0\cdot(x-x_0)\\[5mm]
+        &~y\cdot y_0-{y_0}^2=\frac{b^2}{a^2}\cdot(x\cdot x_0-{x_0}^2)\\[5mm]
+        &~\frac{y\cdot y_0}{b^2}-\frac{{y_0}^2}{b^2}=\frac{x\cdot x_0}{a^2}-\frac{{x_0}^2}{a^2}\\[5mm]
+        &~\frac{x\cdot x_0}{a^2}-\frac{y\cdot y_0}{b^2}=\frac{{x_0}^2}{a^2}-\frac{{y_0}^2}{b^2}\\[5mm]
+        &~\frac{x\cdot x_0}{a^2}-\frac{y\cdot y_0}{b^2}=\frac{{x_0}^2}{a^2}-\frac{{y_0}^2}{b^2}
+    \end{align}\\
+    由标准方程可知：
+    \begin{align}
+        &\frac{{x_0}^2}{a^2}-\frac{{y_0}^2}{b^2}=1\\[5mm]
+        &\frac{x\cdot x_0}{a^2}-\frac{y\cdot y_0}{b^2}=1
+    \end{align}\\
+    双曲线的切线方程（焦点位于$x$轴）：
     \begin{large}
         \begin{equation*}
-            \frac{x \cdot x_0}{l^2}-\frac{y \cdot y_0}{s^2}=1
+            \frac{x \cdot x_0}{a^2}-\frac{y \cdot y_0}{b^2}=1
         \end{equation*}
     \end{large}\\
-    焦点位于$y$轴的双曲线切线方程：
+    双曲线的切线方程（焦点位于$y$轴）：
     \begin{large}
         \begin{equation*}
-            \frac{y \cdot y_0}{l^2}-\frac{x \cdot x_0}{s^2}=1
+            \frac{y \cdot y_0}{a^2}-\frac{x \cdot x_0}{b^2}=1
         \end{equation*}
     \end{large}\\
+    由此证明了双曲线的切线方程。
+
+\newpage
 
 \subsubsection{双曲线的焦点三角形}
     双曲线的焦点三角形指的是双曲线上任意一点与双曲线两焦点组成的三角形。\\[3mm]
+    双曲线的焦点三角形的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                \draw[->] (0,-3.5) -- (0,3.5) node[right] {$y$};
+                \draw[cyan] plot[variable=\t,domain=-65:65] ({+1.5*sec(\t)},{+1.5*tan(\t)});
+                \draw[cyan] plot[variable=\t,domain=-65:65] ({-1.5*sec(\t)},{-1.5*tan(\t)});
+
+                \fill(-2.121,0) circle(0.05);
+                \fill(+2.121,0) circle(0.05);
+                \fill(+2,+1.323) circle(0.05);
+
+                \node at(-2.121,-0.40) {$F_1$};
+                \node at(+2.121,-0.40) {$F_2$};
+
+                \draw(+2,1.323)--(-2.121,0);
+                \draw(+2,1.323)--(+2.121,0);
+
+                \node at(+1.7,+1.6) {$P$};
+            \end{tikzpicture}
+            \caption{双曲线的焦点三角形}
+        \end{center}
+    \end{figure}\\
     设双曲线上一点为$P$，对于焦点三角形$\triangle PF_1F_2$：
     \setcounter{equation}{0}
     \begin{equation}
-        PF_1=m\qquad PF_2=n\qquad F_1F_2=2f\qquad \angle~ F_1PF_2=\theta
+        PF_1=m\qquad PF_2=n\qquad F_1F_2=2c\qquad \angle~ F_1PF_2=\theta
     \end{equation}\\
     根据余弦定理：
     \begin{align}
         \cos{\theta}
-        &=\frac{m^2+n^2-(2f)^2}{2mn}\\[5mm]
-        &=\frac{(m-n)^2-(2f)^2+2mn}{2mn}\\[5mm]
-        &=\frac{(2r)^2-(2f)^2+2mn}{2mn}\\[5mm]
-        &=\frac{4r^2-4f^2+2mn}{2mn}\\[5mm]
-        &=\frac{4(r^2-f^2)+2mn}{2mn}\\[5mm]
-        &=\frac{-4s^2+2mn}{2mn}\\[5mm]
-        &=\frac{-2s^2+mn}{mn}
-    \end{align}
+        &=\frac{m^2+n^2-(2c)^2}{2mn}\\[3mm]
+        &=\frac{(m-n)^2-(2c)^2+2mn}{2mn}\\[3mm]
+        &=\frac{(2a)^2-(2c)^2+2mn}{2mn}\\[3mm]
+        &=\frac{4a^2-4c^2+2mn}{2mn}\\[3mm]
+        &=\frac{4(a^2-c^2)+2mn}{2mn}\\[3mm]
+        &=\frac{-4b^2+2mn}{2mn}\\[3mm]
+        &=\frac{-2b^2+mn}{mn}
+    \end{align}\\
+    由此得到了一个角$\theta$的余弦和半短轴$b$以及焦半径$m$和焦半径$n$的关系式。
+
+\newpage
 
     对该式进行变换：
     \begin{align}
-        &mn\cdot\cos{\theta}=-2s^2+mn\\[3mm]
-        &mn\cdot\cos{\theta}-mn=-2s^2\\[3mm]
-        &mn\cdot(\cos{\theta}-1)=-2s^2\\[3mm]
-        &mn=\frac{-2s^2}{1-\cos{\theta}}
+        &\cos{\theta}=\frac{-2b^2+mn}{mn}\\[5mm]
+        &~mn\cdot\cos{\theta}=-2b^2+mn\\[5mm]
+        &~mn\cdot\cos{\theta}-mn=-2b^2\\[5mm]
+        &~mn\cdot(\cos{\theta}-1)=-2b^2\\[5mm]
+        &~mn=\frac{-2b^2}{1-\cos{\theta}}
     \end{align}\\
     根据三角形面积公式：
     \begin{align}
         S&=\frac{1}{2}\cdot mn\cdot\sin{\theta}\\[5mm]
-        &=\frac{1}{2}\cdot \frac{2s^2}{1-\cos{\theta}}\cdot\sin{\theta}\\[5mm]
-        &=\frac{s^2}{\cos{\theta}+1}\cdot\sin{\theta}\\[5mm]
-        &=\frac{\sin{\theta}}{1-\cos{\theta}}\cdot s^2\\[5mm]
-        &=\cot{\left(\frac{\theta}{2}\right)}\cdot s^2
+        &=\frac{1}{2}\cdot \frac{2b^2}{1-\cos{\theta}}\cdot\sin{\theta}\\[5mm]
+        &=\frac{b^2}{\cos{\theta}+1}\cdot\sin{\theta}\\[5mm]
+        &=\frac{\sin{\theta}}{1-\cos{\theta}}\cdot b^2\\[5mm]
+        &=\cot{\left(\frac{\theta}{2}\right)}\cdot b^2
     \end{align}\\
     双曲线的焦点三角形的面积公式：
     \begin{large}
         \begin{equation*}
-            S=\cot{\left(\frac{\theta}{2}\right)}\cdot s^2
+            S=\cot{\left(\frac{\theta}{2}\right)}\cdot b^2
         \end{equation*}
     \end{large}
+    由此证明了双曲线的焦点三角形的面积公式。
+
+\newpage
+
+\subsubsection{双曲线和点的关系}
+    双曲线和点的关系有三种：在双曲线上，在双曲线内，在双曲线外。\\[3mm]
+    双曲线和点的关系的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                \draw[->] (0,-3.5) -- (0,3.5) node[right] {$y$};
+                \draw[cyan] plot[variable=\t,domain=-65:65] ({+1.5*sec(\t)},{+1.5*tan(\t)});
+                \draw[cyan] plot[variable=\t,domain=-65:65] ({-1.5*sec(\t)},{-1.5*tan(\t)});
+
+                \fill(0.75,0) circle(0.05);
+                \fill(1.50,0) circle(0.05);
+                \fill(3.00,0) circle(0.05);
+
+                \node at(+0.75,-0.4) {$C$};
+                \node at(+1.80,-0.4) {$B$};
+                \node at(+3.00,-0.4) {$A$}; 
+            \end{tikzpicture}
+            \caption{双曲线和点的关系}
+        \end{center}
+    \end{figure}\\
+    当点在双曲线内时：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{a^2}-\frac{y^2}{b^2}>1
+        \end{equation*}
+    \end{large}\\
+    当点在双曲线上时：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{a^2}-\frac{y^2}{b^2}=1
+        \end{equation*}
+    \end{large}\\
+    当点在双曲线外时：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{a^2}-\frac{y^2}{b^2}<1
+        \end{equation*}
+    \end{large}\\
+    在示意图中，点$A$是在双曲线内，点$B$是在双曲线上，点$C$是在双曲线外。
+
+\newpage
+
+    当点在双曲线内时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \fill[LightGray] (1.500,0.000) rectangle (4,0);
+                \fill[LightGray] (1.750,0.901) rectangle (4,0);
+                \fill[LightGray] (2.000,1.323) rectangle (4,0);
+                \fill[LightGray] (2.500,2.000) rectangle (4,0);
+                \fill[LightGray] (3.000,2.598) rectangle (4,0);
+                \fill[LightGray] (3.354,3.000) rectangle (4,0);
+
+                \fill[white] (1.500,0.000) circle (0.05);
+                \fill[white] (1.750,0.901) circle (0.05);
+                \fill[white] (2.000,1.323) circle (0.05);
+                \fill[white] (2.500,2.000) circle (0.05);
+                \fill[white] (3.000,2.598) circle (0.05);
+                \fill[white] (3.354,3.000) circle (0.05);
+
+                \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+                \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                \draw[cyan] plot[variable=\t,domain=-67:67] ({+1.5*sec(\t)},{+1.5*tan(\t)});
+                \draw[cyan] plot[variable=\t,domain=-67:67] ({-1.5*sec(\t)},{-1.5*tan(\t)});
+
+                \draw[thin] (1.500,0.000) circle (0.05);
+                \draw[thin] (1.750,0.901) circle (0.05);
+                \draw[thin] (2.000,1.323) circle (0.05);
+                \draw[thin] (2.500,2.000) circle (0.05);
+                \draw[thin] (3.000,2.598) circle (0.05);
+                \draw[thin] (3.354,3.000) circle (0.05);
+
+                \draw (1.500,0.000)--(4.00,0.000);
+                \draw (1.750,0.901)--(4.00,0.901);
+                \draw (2.000,1.323)--(4.00,1.323);
+                \draw (2.500,2.000)--(4.00,2.000);
+                \draw (3.000,2.598)--(4.00,2.598);
+                \draw (3.354,3.000)--(4.00,3.000);
+
+                \draw (1.750,0.901)--(1.750,0.00);
+                \draw (2.000,1.323)--(2.000,0.00);
+                \draw (2.500,2.000)--(2.500,0.00);
+                \draw (3.000,2.598)--(3.000,0.00);
+                \draw (3.354,3.000)--(3.354,0.00);
+
+                \draw[dashed] (-4,-3)rectangle (+4,+3);
+
+                \fill[white] (1.500,0.000) circle (0.05);
+                \fill[white] (1.750,0.901) circle (0.05);
+                \fill[white] (2.000,1.323) circle (0.05);
+                \fill[white] (2.500,2.000) circle (0.05);
+                \fill[white] (3.000,2.598) circle (0.05);
+                \fill[white] (3.354,3.000) circle (0.05);
+            \end{tikzpicture}
+            \caption{点在双曲线内时的示意图}
+        \end{center}
+    \end{figure}\\
+    对于双曲线上任意一点$(x_0,y_0)$，则平面上任意满足下列不等式的一点$(x,y)$：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\begin{cases}
+            |x|\geq|x_0|\\[1mm]
+            |y|\leq|y_0|\\[1mm]
+        \end{cases}~~~~\text{（等号不能同时成立）}\\[6mm]
+        &\begin{cases}
+            x^2\geq x_0^2\\[1mm]
+            y^2\leq y_0^2\\[1mm]
+        \end{cases}~~~~~~~\text{（等号不能同时成立）}
+    \end{align}\\
+    所构成的集合为双曲线的内部，将其代入标准方程即可得到$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}>1$的条件。
+
+\newpage
+
+    当点在双曲线外时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \fill[LightGray] (1.500,0.000) rectangle (0,3);
+                \fill[LightGray] (1.750,0.901) rectangle (0,3);
+                \fill[LightGray] (2.000,1.323) rectangle (0,3);
+                \fill[LightGray] (2.500,2.000) rectangle (0,3);
+                \fill[LightGray] (3.000,2.598) rectangle (0,3);
+                \fill[LightGray] (3.354,3.000) rectangle (0,3);
+
+                \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+                \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                \draw[cyan] plot[variable=\t,domain=-67:67] ({+1.5*sec(\t)},{+1.5*tan(\t)});
+                \draw[cyan] plot[variable=\t,domain=-67:67] ({-1.5*sec(\t)},{-1.5*tan(\t)});
+
+                \draw[thin] (1.500,0.000) circle (0.05);
+                \draw[thin] (1.750,0.901) circle (0.05);
+                \draw[thin] (2.000,1.323) circle (0.05);
+                \draw[thin] (2.500,2.000) circle (0.05);
+                \draw[thin] (3.000,2.598) circle (0.05);
+                \draw[thin] (3.354,3.000) circle (0.05);
+
+                \draw (1.750,0.901)--(0.000,0.901);
+                \draw (2.000,1.323)--(0.000,1.323);
+                \draw (2.500,2.000)--(0.000,2.000);
+                \draw (3.000,2.598)--(0.000,2.598);
+                \draw (3.354,3.000)--(0.000,3.000);
+
+                \draw (1.500,0.000)--(1.500,3.000);
+                \draw (1.750,0.901)--(1.750,3.000);
+                \draw (2.000,1.323)--(2.000,3.000);
+                \draw (2.500,2.000)--(2.500,3.000);
+                \draw (3.000,2.598)--(3.000,3.000);
+
+                \draw[dashed] (-4,-3)rectangle (+4,+3);
+
+                \fill[white] (1.500,0.000) circle (0.05);
+                \fill[white] (1.750,0.901) circle (0.05);
+                \fill[white] (2.000,1.323) circle (0.05);
+                \fill[white] (2.500,2.000) circle (0.05);
+                \fill[white] (3.000,2.598) circle (0.05);
+                \fill[white] (3.354,3.000) circle (0.05);
+            \end{tikzpicture}
+            \caption{点在双曲线外时的示意图}
+        \end{center}
+    \end{figure}\\
+    对于双曲线上任意一点$(x_0,y_0)$，则平面上任意满足下列不等式的一点$(x,y)$：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\begin{cases}
+            |x|\leq|x_0|\\[1mm]
+            |y|\geq|y_0|\\[1mm]
+        \end{cases}~~~~\text{（等号不能同时成立）}\\[6mm]
+        &\begin{cases}
+            x^2\leq x_0^2\\[1mm]
+            y^2\geq y_0^2\\[1mm]
+        \end{cases}~~~~~~~\text{（等号不能同时成立）}
+    \end{align}\\
+    所构成的集合为双曲线的内部，将其代入标准方程即可得到$\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}<1$的条件。
+
+\newpage
+
+\subsubsection{双曲线的渐近线方程}
+    对双曲线的标准方程进行一些变换：
+    \setcounter{equation}{0}
+    \begin{align}
+        &\frac{x^2}{a^2}-\frac{y^2}{b^2}=1
+    \end{align}\\
+    可以得到其位于第一象限的显函数：\vspace{3pt}
+    \begin{align}
+        &b^2\cdot x^2-a^2\cdot y^2=b^2\cdot a^2\\[5mm]
+        &a^2\cdot y^2=b^2\cdot x^2-b^2\cdot a^2\\[5mm]
+        &a^2\cdot y^2=b^2\cdot \left(x^2-a^2\right)\\[5mm]
+        &y^2=\frac{b^2}{a^2}\cdot \left(x^2-a^2\right)\\[5mm]
+        &y=\frac{b}{a}\cdot \sqrt{x^2-a^2}
+    \end{align}\\
+    双曲线在第一象限的方程：
+    \begin{align}
+        &y=\frac{b}{a}\cdot \sqrt{x^2-a^2}\qquad(x>a)
+    \end{align}\\
+    渐近线在第一象限的方程：
+    \begin{align}
+        &y=\frac{b}{a}\cdot x\qquad(x>0)    
+    \end{align}\\
+    接下来将证明此处设出的渐近线方程确实是双曲线的渐近线。\\[3mm]
+    由于双曲线同时关于横纵坐标轴对称，因此只需要证明在第一象限该结论成立即可。\\[15mm]
+    证明渐进线需要分为两步：\\[3mm]
+    1.证明渐近线的图像始终在双曲线上方，以说明双曲线和渐进线始终没有交点。\\[3mm]
+    2.证明双曲线和渐近线的差的极限为零，以说明双曲线和渐近线将会无限趋近。
+    
+\newpage
+
+    第一步证明渐近线的图像始终在双曲线上方：\vspace{3pt}
+    \begin{align}
+        &a^2>0\\[5mm]
+        &x^2>x^2-a^2\\[5mm]
+        &x>\sqrt{x^2-a^2}\\[5mm]
+        &\frac{b}{a}\cdot x>\frac{b}{a}\cdot\sqrt{x^2-a^2}~~~~~~~~
+    \end{align}\\
+    第二步证明渐近线和双曲线的差的极限为零：\vspace{8pt}
+    \begin{align}
+        &\lim_{x\rightarrow \infty}\left[\frac{b}{a}\cdot x-\frac{b}{a}\cdot \sqrt{x^2-a^2}\right]\\[4mm]
+        =&\lim_{x\rightarrow \infty}\left[\frac{b}{a}\cdot\left(x-\sqrt{x^2-a^2}\right)\right]\\[4mm]
+        =&\lim_{x\rightarrow \infty}\left[\frac{b}{a}\cdot\frac{\left(x-\sqrt{x^2-a^2}\right)\cdot\left(x+\sqrt{x^2-a^2}\right)}{\left(x+\sqrt{x^2-a^2}\right)}\right]\\[4mm]
+        =&\lim_{x\rightarrow \infty}\left[\frac{b}{a}\cdot\frac{x^2-\left(x^2-a^2\right)}{x+\sqrt{x^2-a^2}}\right]\\[4mm]
+        =&\lim_{x\rightarrow \infty}\left[\frac{b}{a}\cdot\frac{a^2}{x+\sqrt{x^2-a^2}}\right]\\[4mm]
+        =&\lim_{x\rightarrow \infty}\left[\frac{a\cdot b}{x+\sqrt{x^2-a^2}}\right]\\[4mm]
+        =&~0
+    \end{align}\\
+    焦点位于$x$轴的双曲线的渐近线方程：
+    \begin{equation*}
+        \frac{x^2}{a^2}-\frac{y^2}{b^2}=1~~~~~~~~y=\frac{b}{a}\cdot x~~~~~~~~y=-\frac{b}{a}\cdot x
+    \end{equation*}\\
+    焦点位于$y$轴的双曲线的渐近线方程：
+    \begin{equation*}
+        \frac{y^2}{a^2}-\frac{x^2}{b^2}=1~~~~~~~~y=\frac{a}{b}\cdot x~~~~~~~~y=-\frac{a}{b}\cdot x
+    \end{equation*}\\
+    此处的渐近线方程的斜率可以简单的记忆为：总是$y$下面的数除以$x$下面的数。
 
 \newpage
 
 \subsection{抛物线的方程}
-    抛物线的定义：到平面上一个定点和一条定直线的距离相等的点的轨迹称为抛物线。\\[1mm]
-    其中定点$F$被称为焦点，而定直线被称为准线。\\[3mm]
-    设焦点$F(x_0,y_0)$，准线$l:ax+by+c=0$。\\[3mm]
+    抛物线的定义：到平面上一个定点和一条定直线的距离相等的点的轨迹称为抛物线。\\[2mm]
+    其中定点$F$被称为焦点，而定直线被称为准线。\\[6mm]
+    设焦点$F(x_0,y_0)$，准线$l:ax+by+c=0$。\\[2mm]
     抛物线的方程：
     \begin{large}
         \begin{equation*}
             \sqrt{\left(x-x_0\right)^2+\left(y-y_0\right)^2}=\frac{\left|ax+by+c\right|}{\sqrt{a^2+b^2}}
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    抛物线的图像：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.1]
+            \begin{tikzpicture}[>=stealth,scale=1.0]
                 \draw[->] (-5.8,0) -- (5.8,0) node[above] {$x$};
                 \draw[->] (0,-5.8) -- (0,5.8) node[right] {$y$};
                 \foreach \x in {-5,-4,...,-1}
@@ -6828,87 +7547,323 @@
                     \draw[shift={(0,\y)}] (0.1,0) -- (-0.1,0) node[left] {$\y$};
                 \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
                 \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                \draw[cyan] plot[variable=\t,domain=-3.5:0] ({\t},{-0.4*\t^2});
-                \draw[cyan] plot[variable=\t,domain=0:3.5] ({\t},{0.4*\t^2});
+                \draw[cyan] plot[variable=\t,domain=-3.2:0] ({\t},{-0.5*\t^2});
+                \draw[cyan] plot[variable=\t,domain=0:+3.2] ({\t},{0.5*\t^2});
             \end{tikzpicture}
             \caption{抛物线的图像}
         \end{center}
-    \end{figure}
+    \end{figure}\\
+    接下来将由此开始研究抛物线的相关形式。
 
 \newpage
 
 \subsubsection{抛物线的标准方程}
     特别的，如果焦点在$x$轴上，准线垂直于$x$轴且交点与焦点关于原点$(0,0)$对称时，\\[2mm]
-    我们可以设焦点为$F~(\dfrac{p}{2},0)$，准线为$x=-\dfrac{p}{2}$，焦点到准线的距离为$2p$。\\[4mm]
-    推导如下：
+    我们可以设焦点为$F~(\dfrac{p}{2},0)$，准线为$x=-\dfrac{p}{2}$。\\[4mm]
+    进行以下推导：
     \setcounter{equation}{0}
     \begin{align}
-        &\sqrt{\left(x-\frac{p}{2}\right)^2+y^2}=\left|x+\frac{p}{2}\right|\\[3mm]
-        &\left(x-\frac{p}{2}\right)^2+y^2=\left(x+\frac{p}{2}\right)^2\\[3mm]
-        &x^2-px+\frac{p^2}{4}+y^2=x^2+px+\frac{p^2}{4}\\[1mm]
-        &y^2=x^2-x^2+px+px+\frac{p^2}{4}-\frac{p^2}{4}\\[1mm]
-        &y^2=2px
+        &\sqrt{\left(x-\frac{p}{2}\right)^2+y^2}=\left|x+\frac{p}{2}\right|\\[5mm]
+        &\left(x-\frac{p}{2}\right)^2+y^2=\left(x+\frac{p}{2}\right)^2\\[5mm]
+        &~x^2-px+\frac{p^2}{4}+y^2=x^2+px+\frac{p^2}{4}\\[5mm]
+        &~y^2=x^2-x^2+px+px+\frac{p^2}{4}-\frac{p^2}{4}\\[5mm]
+        &~y^2=2px
     \end{align}\\
     特别的，如果焦点在$y$轴上，准线垂直于$y$轴且交点与焦点关于原点$(0,0)$对称时，\\[2mm]
-    我们可以设焦点为$F~(0,\dfrac{p}{2})$，准线为$y=-\dfrac{p}{2}$，焦点到准线的距离为$2p$。\\[4mm]
-    推导如下：
+    我们可以设焦点为$F~(0,\dfrac{p}{2})$，准线为$y=-\dfrac{p}{2}$。\\[4mm]
+    进行以下推导：
     \setcounter{equation}{0}
     \begin{align}
-        &\sqrt{\left(y-\frac{p}{2}\right)^2+x^2}=\left|y+\frac{p}{2}\right|\\[3mm]
-        &\left(y-\frac{p}{2}\right)^2+x^2=\left(y+\frac{p}{2}\right)^2\\[3mm]
-        &y^2-py+\frac{p^2}{4}+x^2=y^2+py+\frac{p^2}{4}\\[1mm]
-        &x^2=y^2-y^2+py+py+\frac{p^2}{4}-\frac{p^2}{4}\\[1mm]
-        &x^2=2py
+        &\sqrt{\left(y-\frac{p}{2}\right)^2+x^2}=\left|y+\frac{p}{2}\right|\\[5mm]
+        &\left(y-\frac{p}{2}\right)^2+x^2=\left(y+\frac{p}{2}\right)^2\\[5mm]
+        &~y^2-py+\frac{p^2}{4}+x^2=y^2+py+\frac{p^2}{4}\\[5mm]
+        &~x^2=y^2-y^2+py+py+\frac{p^2}{4}-\frac{p^2}{4}\\[5mm]
+        &~x^2=2py
     \end{align}\\
-    焦点在$x$轴上的抛物线（开口向左或向右）：
+    由此得到了抛物线的标准方程。
+
+\newpage
+
+    抛物线的标准方程（焦点位于$x$轴）：
     \begin{large}
         \begin{equation*}
             y^2=2px
         \end{equation*}
     \end{large}\\
-    焦点在$y$轴上的抛物线（开口向上或向下）：
+    抛物线的标准方程（焦点位于$y$轴）：
     \begin{large}
         \begin{equation*}
             x^2=2py
         \end{equation*}
     \end{large}\\
-    这两个形式的抛物线方程被定义为抛物线的标准方程。
+    抛物线中焦点至准线长度为$p$的线段称为抛物线的焦准距。\\[3mm]
+    抛物线焦点在$x$轴时，在$p>0$时为右开口，焦点在准线右侧。\\[3mm]
+    抛物线焦点在$x$轴时，在$p<0$时为左开口，焦点在准线左侧。\\[3mm]
+    抛物线焦点在$y$轴时，在$p>0$时为上开口，焦点在准线上侧。\\[3mm]
+    抛物线焦点在$y$轴时，在$p<0$时为下开口，焦点在准线下侧。\\[5mm]
+    抛物线的图像如下：
+    \begin{figure}[h!]
+        \begin{center}
+            \subfigure[焦点在$x$轴上的抛物线]
+            {
+                \begin{minipage}[t]{0.446\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-5) -- (0,5) node[right] {$y$};
 
+                        \draw[cyan] plot[variable=\t,domain=-1.5:+1.5] ({2*\t*\t},{\t});
+
+                        \fill(1.0,0) circle(0.05);
+                        \draw[dashed] (-1.0,-4)--(-1.0,+4);
+
+                        \node at(+1.0,-0.5) {$F$};
+                        \node at(-1.0,-4.5) {$l$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }\qquad
+            \subfigure[焦点在$y$轴上的抛物线]
+            {
+                \begin{minipage}[t]{0.446\linewidth}
+                    \begin{tikzpicture}[scale=0.7]
+                        \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                        \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+
+                        \draw[cyan] plot[variable=\t,domain=-1.5:+1.5] ({\t},{2*\t*\t});
+
+                        \fill(0,1.0) circle(0.05);
+                        \draw[dashed] (-4,-1.0)--(+4,-1.0);
+
+                        \node at(-0.3,+1.0) {$F$};
+                        \node at(-4.3,-1.0) {$l$};
+                    \end{tikzpicture}
+                \end{minipage}
+            }
+            \caption{抛物线的图像}
+        \end{center}
+    \end{figure}\\
+    焦准距$p$可以取正可以取负，其正负表征了焦点和准线位置的相对关系。
+    
 \newpage
 
 \subsubsection{抛物线的切线方程}
-    对隐函数$y^2=2px$求导：
+    我们现在研究双曲线$y^2=2px$上一点$(x_0,y_0)$处的切线方程。\\[5mm]
+    对标准方程的左侧求导：
     \setcounter{equation}{0}
     \begin{align}
-        &\frac{\dif x}{\dif x}=1\\[4mm]
-        &\frac{\dif y^2}{\dif x}=\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}=2y\cdot\frac{\dif y}{\dif x}\\[6mm]
-        &2y\cdot\frac{\dif y}{\dif x}=2p\\[4mm]
-        &\frac{\dif y}{\dif x}=\frac{2p}{2y}\\[4mm]
+        \frac{\dif}{\dif x}\left(y^2\right)
+        &=\frac{\dif y^2}{\dif y}\cdot\frac{\dif y}{\dif x}\\[6mm]
+        &=2y\cdot\frac{\dif y}{\dif x}
+    \end{align}\\
+    对标准方程的右侧求导：
+    \begin{align}
+        \frac{\dif}{\dif x}\left(2px\right)
+        &=\frac{\dif x}{\dif x}\cdot 2p\\[6mm]
+        &=2p
+    \end{align}\\
+    故标准方程求导结果为：
+    \begin{align}
+        &2y\cdot\frac{\dif y}{\dif x}=2p\\[6mm]
+        &\frac{\dif y}{\dif x}=\frac{2p}{2y}\\[6mm]
         &\frac{\dif y}{\dif x}=\frac{p}{y}
     \end{align}\\
+    由此得到了抛物线上任意一点处的导数，即得到了抛物线上任意一点处的切线斜率。
+
+\newpage
+
     代入点斜式方程：
     \begin{align}
-        &(y-y_0)=k\cdot(x-x_0)\\[4mm]
-        &(y-y_0)=\frac{p}{y_0}\cdot(x-x_0)\\[4mm]
-        &y\cdot y_0-y_0\;^2=p\cdot(x-x_0)\\[4mm]
-        &y\cdot y_0-y_0\;^2=px-px_0\\[4mm]
-        &y\cdot y_0-2px_0=px-px_0\\[4mm]
-        &y\cdot y_0=px-px_0+2px_0\\[4mm]
-        &y\cdot y_0=px+px_0\\[4mm]
+        &(y-y_0)=k\cdot(x-x_0)\\[3mm]
+        &(y-y_0)=\frac{p}{y_0}\cdot(x-x_0)\\[3mm]
+        &y\cdot y_0-y_0^2=p\cdot(x-x_0)\\[3mm]
+        &y\cdot y_0-y_0^2=px-px_0
+    \end{align}\\
+    由标准方程可知：
+    \begin{align}
+        &y\cdot y_0-2px_0=px-px_0\\[3mm]
+        &y\cdot y_0=px-px_0+2px_0\\[3mm]
+        &y\cdot y_0=px+px_0\\[3mm]
         &y\cdot y_0=p\cdot(x+x_0)
-    \end{align}\vspace{3pt}
-    焦点位于$x$轴的抛物线切线方程：
+    \end{align}\\
+    抛物线的切线方程（焦点位于$x$轴）：
     \begin{large}
         \begin{equation*}
             y\cdot y_0=p\cdot(x+x_0)
         \end{equation*}
     \end{large}\\
-    焦点位于$y$轴的双曲线切线方程：
+    抛物线的切线方程（焦点位于$y$轴）：
     \begin{large}
         \begin{equation*}
             x\cdot x_0=p\cdot(y+y_0)
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    由此证明了抛物线的切线方程。
+
+\newpage
+
+\subsubsection{抛物线和点的关系}
+    抛物线和点的关系有三种：在抛物线上，在抛物线内，在抛物线外。\\[3mm]
+    抛物线和点的关系的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \draw[->] (-5,0) -- (5,0) node[above] {$x$};
+                \draw[->] (0,-3.5) -- (0,3.5) node[right] {$y$};
+
+                \draw[cyan] plot[variable=\t,domain=-1.5:+1.5] ({2*\t*\t},{\t});
+
+                \fill(-3,0) circle(0.05);
+                \fill(0,0) circle(0.05);
+                \fill(+3,0) circle(0.05);
+
+                \node at(-3.0,-0.4) {$C$};
+                \node at(-0.3,-0.4) {$B$};
+                \node at(+3.0,-0.4) {$A$}; 
+            \end{tikzpicture}
+            \caption{抛物线和点的关系}
+        \end{center}
+    \end{figure}\\
+    当点在抛物线内时：
+    \begin{large}
+        \begin{equation*}
+            y^2<2px
+        \end{equation*}
+    \end{large}\\
+    当点在抛物线上时：
+    \begin{large}
+        \begin{equation*}
+            y^2=2px
+        \end{equation*}
+    \end{large}\\
+    当点在抛物线外时：
+    \begin{large}
+        \begin{equation*}
+            y^2>2px
+        \end{equation*}
+    \end{large}\\
+    在示意图中，点$A$是在抛物线内，点$B$是在抛物线上，点$C$是在抛物线外。
+
+\newpage
+
+    当点在抛物线内时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \fill[LightGray] (0.50,0.500) rectangle (4.5,0);
+                \fill[LightGray] (1.50,0.866) rectangle (4.5,0);
+                \fill[LightGray] (2.50,1.118) rectangle (4.5,0);
+                \fill[LightGray] (3.50,1.323) rectangle (4.5,0);
+
+                \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+                \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                \draw[cyan] plot[variable=\t,domain=-1.5:+1.5] ({2*\t*\t},{\t});
+
+                \draw[thin] (0.00,0.000) circle (0.05);
+                \draw[thin] (0.50,0.500) circle (0.05);
+                \draw[thin] (1.50,0.866) circle (0.05);
+                \draw[thin] (2.50,1.118) circle (0.05);
+                \draw[thin] (3.50,1.323) circle (0.05);
+                \draw[thin] (4.50,1.500) circle (0.05);
+
+                % \draw (0.00,0.000)--(4.5,0.500);
+                \draw (0.50,0.500)--(4.5,0.500);
+                \draw (1.50,0.866)--(4.5,0.866);
+                \draw (2.50,1.118)--(4.5,1.118);
+                \draw (3.50,1.323)--(4.5,1.323);
+                % \draw (4.50,1.500)--(4.5,1.500);
+
+                % \draw (0.00,0.000)--(4.5,0.500);
+                \draw (0.50,0.500)--(0.50,0);
+                \draw (1.50,0.866)--(1.50,0);
+                \draw (2.50,1.118)--(2.50,0);
+                \draw (3.50,1.323)--(3.50,0);
+                % \draw (4.50,1.500)--(4.5,1.500);
+
+                \draw[dashed] (-4.5,-2.5)rectangle (+4.5,+2.5);
+
+                \fill[white] (0.00,0.000) circle (0.05);
+                \fill[white] (0.50,0.500) circle (0.05);
+                \fill[white] (1.50,0.866) circle (0.05);
+                \fill[white] (2.50,1.118) circle (0.05);
+                \fill[white] (3.50,1.323) circle (0.05);
+                \fill[white] (4.50,1.500) circle (0.05);
+            \end{tikzpicture}
+            \caption{点在抛物线内时的示意图}
+        \end{center}
+    \end{figure}\\
+    对于抛物线上任意一点$(x_0,y_0)$，则平面上任意满足下列不等式的一点$(x,y)$：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\begin{cases}
+            x\geq x_0\\[1mm]
+            |y|\leq|y_0|\\[1mm]
+        \end{cases}~~~~\text{（等号不能同时成立）}\\[6mm]
+        &\begin{cases}
+            x\geq x_0\\[1mm]
+            y^2\leq y_0^2\\[1mm]
+        \end{cases}~~~~~~~\text{（等号不能同时成立）}
+    \end{align}\\
+    所构成的集合为双曲线的内部，将其代入标准方程即可得到$y^2<2px$的条件。
+
+\newpage
+
+    当点在抛物线外时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.0]
+                \fill[LightGray] (0.50,0.500) rectangle (0,2.5);
+                \fill[LightGray] (1.50,0.866) rectangle (0,2.5);
+                \fill[LightGray] (2.50,1.118) rectangle (0,2.5);
+                \fill[LightGray] (3.50,1.323) rectangle (0,2.5);
+                \fill[LightGray] (4.50,1.500) rectangle (0,2.5);
+
+                \draw[->] (-7,0) -- (7,0) node[above] {$x$};
+                \draw[->] (0,-5) -- (0,5) node[right] {$y$};
+                \draw[cyan] plot[variable=\t,domain=-1.5:+1.5] ({2*\t*\t},{\t});
+
+                \draw[thin] (0.00,0.000) circle (0.05);
+                \draw[thin] (0.50,0.500) circle (0.05);
+                \draw[thin] (1.50,0.866) circle (0.05);
+                \draw[thin] (2.50,1.118) circle (0.05);
+                \draw[thin] (3.50,1.323) circle (0.05);
+                \draw[thin] (4.50,1.500) circle (0.05);
+
+                \draw (0.50,0.500)--(0,0.500);
+                \draw (1.50,0.866)--(0,0.866);
+                \draw (2.50,1.118)--(0,1.118);
+                \draw (3.50,1.323)--(0,1.323);
+                \draw (4.50,1.500)--(0,1.500);
+
+                \draw (0.50,0.500)--(0.50,2.5);
+                \draw (1.50,0.866)--(1.50,2.5);
+                \draw (2.50,1.118)--(2.50,2.5);
+                \draw (3.50,1.323)--(3.50,2.5);
+                \draw (4.50,1.500)--(4.50,2.5);
+
+                \draw[dashed] (-4.5,-2.5)rectangle (+4.5,+2.5);
+
+                \fill[white] (0.00,0.000) circle (0.05);
+                \fill[white] (0.50,0.500) circle (0.05);
+                \fill[white] (1.50,0.866) circle (0.05);
+                \fill[white] (2.50,1.118) circle (0.05);
+                \fill[white] (3.50,1.323) circle (0.05);
+                \fill[white] (4.50,1.500) circle (0.05);
+            \end{tikzpicture}
+            \caption{点在抛物线外时的示意图}
+        \end{center}
+    \end{figure}\\
+    对于抛物线上任意一点$(x_0,y_0)$，则平面上任意满足下列不等式的一点$(x,y)$：\vspace{5pt}
+    \setcounter{equation}{0}
+    \begin{align}
+        &\begin{cases}
+            x\leq x_0\\[1mm]
+            |y|\geq|y_0|\\[1mm]
+        \end{cases}~~~~\text{（等号不能同时成立）}\\[6mm]
+        &\begin{cases}
+            x\leq x_0\\[1mm]
+            y^2\geq y_0^2\\[1mm]
+        \end{cases}~~~~~~~\text{（等号不能同时成立）}
+    \end{align}\\
+    所构成的集合为双曲线的外部，将其代入标准方程即可得到$y^2>2px$的条件。
 
 \newpage
 
@@ -6998,7 +7953,7 @@
             \ ~y=kx+b\vspace{3pt}
         \end{cases}
     \end{equation}\\[1mm]
-    将直线方程代入圆锥曲线方程，可以得到：
+    将直线方程代入圆锥曲线方程：
     \begin{align}
         &Ax^2+B(kx+b)^2+C=0\\[3mm]
         &Ax^2+B(k^2x^2+2kbx+b^2)+C=0\\[3mm]
@@ -7043,15 +7998,15 @@
             \ y=kx+b\vspace{3pt}
         \end{cases}
     \end{equation}\\[3mm]
-    将圆锥曲线方程代入直线方程，可以得到：\vspace{5pt}
+    将圆锥曲线方程代入直线方程：\vspace{5pt}
     \begin{align}
         &\frac{x^2}{2p}=kx+b\\[3mm]
         &\frac{x^2}{2p}-kx-b=0
     \end{align}\\[1mm]
     根据韦达定理：
     \begin{align}
-        &s_x=x_1+x_2=-\frac{b}{a}=2pk\qquad~~
-        m_x=x_1\cdot x_2=\frac{c}{a}=-2pb
+        &s_x=x_1+x_2=-\frac{b}{a}=2pk\\[3mm]
+        &m_x=x_1\cdot x_2=\frac{c}{a}=-2pb
     \end{align}\\[1mm]
     根据判别式：
     \begin{align}
@@ -7106,15 +8061,15 @@
             \ x=ty+b\vspace{3pt}
         \end{cases}
     \end{equation}\\[3mm]
-    将圆锥曲线方程代入直线方程，可以得到：\vspace{5pt}
+    将圆锥曲线方程代入直线方程：\vspace{5pt}
     \begin{align}
         &\frac{y^2}{2p}=ty+b\\[3mm]
         &\frac{y^2}{2p}-ty-b=0
     \end{align}\\[1mm]
     根据韦达定理：
     \begin{align}
-        &s_y=y_1+y_2=-\frac{b}{a}=2pt\qquad~~
-        m_y=y_1\cdot y_2=\frac{c}{a}=-2pb
+        &s_y=y_1+y_2=-\frac{b}{a}=2pt\\[3mm]
+        &m_y=y_1\cdot y_2=\frac{c}{a}=-2pb
     \end{align}\\[1mm]
     根据判别式：
     \begin{align}
@@ -7276,6 +8231,11 @@
 
 \newpage
 
+\subsection{直线至圆锥曲线的距离}
+    已知一条圆锥曲线和一条直线，求直线至圆锥曲线的距离。
+
+\newpage
+
 \subsection{圆锥曲线的第二定义}
     圆锥曲线的第二定义：到一个定焦点和到一个定准线的距离之比为常数$e$的点的轨迹。\\[3mm]
     其中我们将比值$e$称为离心率，而圆锥曲线的类型正是和离心率的取值有关：\vspace{5pt}
@@ -7284,7 +8244,7 @@
         \begin{center}
             \begin{tabular}{l|l}
                 \hline
-                \textbf{离心率}\qquad\qquad\qquad\qquad&\textbf{类型}\qquad\qquad\qquad\qquad\\ \hline
+                离心率范围\qquad\qquad\qquad\qquad&圆锥曲线类型\qquad\qquad\qquad\qquad\\ \hline
                 $e\in\{ 0 \}$&圆\\ \hline
                 $e\in(0,1)$&椭圆\\ \hline
                 $e\in\{ 1 \}$&抛物线\\ \hline
@@ -7294,35 +8254,35 @@
         \end{center}
     \end{table}\\
     接下来将证明圆锥曲线的第二定义符合其原始定义，同时推导相关性质：\\[3mm]
-    设焦点$F(h,0)$，设准线$l:x=m$，定义焦准距$p=h-m$：\\[3mm]
+    设焦点$F(n,0)$，设准线$l:x=m$，定义焦准距$p=n-m$：\\[3mm]
     当焦准距$p<0$时，代表焦点在准线左侧。\\[2mm]
     当焦准距$p>0$时，代表焦点在准线右侧。\\[6mm]
     由离心率的定义：
     \setcounter{equation}{0}
     \begin{equation}
-        e=\frac{\sqrt{(x-h)^2+y^2}}{|x-m|}
+        e=\frac{\sqrt{(x-n)^2+y^2}}{|x-m|}
     \end{equation}\\[1mm]
     可以得到：
     \begin{align}
-        &\sqrt{(x-h)^2+y^2}=e\cdot|x-m|\\[3mm]
-        &(x-h)^2+y^2=e^2\cdot(x-m)^2\\[3mm]
-        &(x^2-2hx+h^2)+y^2=e^2\cdot\left(x^2-2mx+m^2\right)\\[3mm]
-        &~x^2-2hx+h^2+y^2=e^2x^2-2me^2x+m^2e^2\\[3mm]
+        &\sqrt{(x-n)^2+y^2}=e\cdot|x-m|\\[3mm]
+        &(x-n)^2+y^2=e^2\cdot(x-m)^2\\[3mm]
+        &(x^2-2nx+h^2)+y^2=e^2\cdot\left(x^2-2mx+m^2\right)\\[3mm]
+        &~x^2-2nx+h^2+y^2=e^2x^2-2me^2x+m^2e^2\\[3mm]
         &\left(1-e^2\right)x^2+2\left(me^2-h\right)x+y^2=m^2e^2-h^2
     \end{align}
 
 \newpage
 
-    \textbf{1.当曲线为椭圆时}\\[3mm]
+\subsubsection{椭圆的圆锥曲线第二定义}
     \setcounter{equation}{0}
     由于椭圆的标准方程下，椭圆的中心点位于原点$O(0,0)$，故$x$的一次项系数为零：\vspace{5pt}
     \begin{align}
-        &2\left(me^2-h\right)=0\\[3mm]
-        &h=me^2
+        &2\left(me^2-n\right)=0\\[3mm]
+        &n=me^2
     \end{align}\\
     代入方程可得：
     \begin{align}
-        &\left(1-e^2\right)x^2+y^2=m^2e^2-h^2\\[3mm]
+        &\left(1-e^2\right)x^2+y^2=m^2e^2-n^2\\[3mm]
         &\left(1-e^2\right)x^2+y^2=m^2e^2-m^2e^4\\[3mm]
         &\left(1-e^2\right)x^2+y^2=m^2e^2\cdot\left(1-e^2\right)\\[3mm]
         &\frac{x^2}{m^2e^2}+\frac{y^2}{m^2e^2\cdot\left(1-e^2\right)}=1
@@ -7334,8 +8294,8 @@
     \end{align}\\
     进而我们可以得到椭圆的长轴，椭圆的短轴，椭圆的焦距：\vspace{5pt}
     \begin{align}
-        l^2&=m^2e^2\qquad s^2=m^2e^2\cdot\left(1-e^2\right)\\[4mm]
-        f^2&=l^2-s^2\\[3mm]
+        a^2&=m^2e^2\qquad b^2=m^2e^2\cdot\left(1-e^2\right)\\[4mm]
+        c^2&=l^2-s^2\\[3mm]
         &=m^2e^2-m^2e^2\cdot\left(1-e^2\right)\\[3mm]
         &=m^2e^2\cdot\left(1-1+e^2\right)\\[3mm]
         &=m^2e^2\cdot e^2\\[3mm]
@@ -7343,32 +8303,32 @@
     \end{align}
     很显然，由于焦点为$F(h,0)$：
     \begin{equation}
-        f=|h|
+        c=|n|
     \end{equation}
 
 \newpage
 
     推导离心率$e$：
     \begin{align}
-        &f=\left|me^2\right|\qquad l=|me|\\[3mm]
-        &e=|e|=\left|\frac{me\cdot e}{me}\right|=\left|\frac{me^2}{me}\right|=\frac{\left|me^2\right|}{|me|}=\frac{f}{l}
+        &c=\left|me^2\right|\qquad a=|me|\\[3mm]
+        &e=|e|=\left|\frac{me\cdot e}{me}\right|=\left|\frac{me^2}{me}\right|=\frac{\left|me^2\right|}{|me|}=\frac{c}{a}
     \end{align}\\
     推导准线$m$：
     \begin{align}
-        &h=me^2\qquad l^2=m^2e^2\\[3mm]
+        &n=me^2\qquad a^2=m^2e^2\\[3mm]
         &m
         =\frac{me^2\cdot m}{me^2}
         =\frac{m^2e^2}{me^2}
-        =\frac{l^2}{h}
+        =\frac{a^2}{n}
     \end{align}\\
     推导焦准距$p$：
     \begin{align}
-        &h=me^2\qquad s^2=m^2e^2\cdot\left(1-e^2\right)\\[3mm]
+        &n=me^2\qquad b^2=m^2e^2\cdot\left(1-e^2\right)\\[3mm]
         &p
         =-m\cdot\left(1-e^2\right)
         =-\frac{me^2\cdot m\cdot\left(1-e^2\right)}{me^2}
         =-\frac{m^2e^2\cdot\left(1-e^2\right)}{me^2}
-        =-\frac{s^2}{h}
+        =-\frac{b^2}{n}
     \end{align}\\
     得出以下结论：
     \begin{large}
