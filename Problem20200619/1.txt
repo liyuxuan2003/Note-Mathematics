@@ -1,0 +1,200 @@
+\subsection{李宇轩的解法}
+    \setcounter{equation}{0}
+    椭圆的半长轴为：
+    \begin{align}
+        a=10
+    \end{align}\\
+    椭圆的半短轴为：
+    \begin{align}
+        b=8
+    \end{align}\\
+    椭圆的半焦距为：
+    \begin{align}
+        c=6
+    \end{align}\\
+    椭圆的离心率为：
+    \begin{align}
+        e=\frac{c}{a}=\frac{3}{5}
+    \end{align}\\
+    由于$A(0,8)$，因此直线$AM$（即直线$AP$）可设为：
+    \begin{align}
+        y=k_1x+8
+    \end{align}\\
+    由于$A(0,8)$，因此直线$AN$（即直线$AQ$）可设为：
+    \begin{align}
+        y=k_2x+8
+    \end{align}\\
+    由于直线$PQ$过圆心$O$，因此$AM$和$AN$的斜率积：\vspace{5pt}
+    \begin{align}
+        &k_1\cdot k_2=e^2-1\\[3mm]
+        &k_1\cdot k_2=-\frac{16}{25}
+    \end{align}\\
+    根据直线方程可得：
+    \begin{align}
+        M(-\frac{8}{k_1},0)~~~~~~~~N(-\frac{8}{k_2},0)
+    \end{align}
+
+\newpage
+
+    假设定点存在，并将定点称为$S(x,y)$。\\[3mm]
+    由此可以解得向量：
+    \begin{align}
+        \overrightarrow{MS}=\left(x+\frac{8}{k_1},y\right)~~~~~~~~~~~~\overrightarrow{NS}=\left(x+\frac{8}{k_2},y\right)
+    \end{align}\\
+    两者的内积可写作：
+    \begin{align}
+        &\overrightarrow{MS}\cdot\overrightarrow{NS}=x^2+x\cdot\left(\frac{8}{k_1}+\frac{8}{k_2}\right)+\frac{64}{k_1\cdot k_2}+y^2\\[5mm]
+        &\overrightarrow{MS}\cdot\overrightarrow{NS}=x^2+x\cdot\left(\frac{8\cdot(k_1+k_2)}{k_1\cdot k_2}\right)+\frac{64}{k_1\cdot k_2}+y^2\\[5mm]
+        &\overrightarrow{MS}\cdot\overrightarrow{NS}=x^2-x\cdot\left(\frac{25\cdot(k_1+k_2)}{2}\right)-100+y^2\\[5mm]
+        &\overrightarrow{MS}\cdot\overrightarrow{NS}=x^2-\frac{25}{2}\cdot(k_1+k_2)\cdot x-100+y^2
+    \end{align}\\
+    由于$S$为以$MN$为直径的圆上一点：
+    \begin{align}
+        \overrightarrow{MS}\cdot\overrightarrow{NS}=0
+    \end{align}\\
+    因此可以得到：
+    \begin{align}
+        x^2-\frac{25}{2}\cdot(k_1+k_2)\cdot x-100+y^2=0
+    \end{align}\\
+    然而$S(x,y)$为定点，因此其坐标取值应当使该等式恒成立。\\[3mm]
+    由于$x$的一次项系数并非定值，因而$x=0$，解得$y=\pm 10$，即恒过定点$S(0,\pm 10)$。
+
+\newpage
+
+\subsection{乔君毅的解法}
+    \setcounter{equation}{0}
+    设点$P(x_1,y_1)$，故点$Q(-x_1,-y_1)$，这是因为两点关于原点对称。\\[3mm]
+    由于$A(8,0)$可知：
+    \begin{align}
+        \overrightarrow{AP}=(x_1,y_1-8)~~~~~~~~~~~~\overrightarrow{AQ}=(-x_1,-y_1-8)
+    \end{align}\\
+    设直线$AP$（即直线$AM$）关于点$A$的点方向式方程：
+    \begin{align}
+        l_{AP}:\frac{x}{x_1}=\frac{y-8}{y_1-8}
+    \end{align}\\
+    设直线$AQ$（即直线$AN$）关于点$A$的点方向式方程：
+    \begin{align}
+        l_{AQ}:\frac{x}{x_1}=\frac{y-8}{y_1+8}
+    \end{align}\\
+    令$y=0$求解点$M$的横坐标：
+    \begin{align}
+        x_M=x=\frac{-8x_1}{y_1-8}~~~~~~~~~~~~M\left(\frac{-8x_1}{y_1-8},0\right)
+    \end{align}\\
+    令$y=0$求解点$N$的横坐标：
+    \begin{align}
+        x_N=x=\frac{-8x_1}{y_1+8}~~~~~~~~~~~~N\left(\frac{-8x_1}{y_1+8},0\right)
+    \end{align}\\
+    设点$M$和点$N$的中点$C(x_C,0)$：
+    \begin{align}
+        x_C
+        &=\frac{1}{2}\cdot(x_M+x_N)\\[5mm]
+        &=\frac{1}{2}\cdot\left(\frac{-8x_1}{y_1-8}+\frac{-8x_1}{y_1+8}\right)\\[5mm]
+        &=\frac{-4x_1}{y_1-8}+\frac{-4x_1}{y_1+8}\\[5mm]
+        &=-4x_1\cdot\left[\frac{(y_1+8)+(y_1-8)}{(y_1-8)\cdot(y_1+8)}\right]\\[5mm]
+        &=-4x_1\cdot\left[\frac{2y_1}{y_1^2-64}\right]\\[5mm]
+        &=-\frac{8x_1y_1}{y_1^2-64}
+    \end{align}\\
+    求解圆的半径可得：
+    \begin{align}
+        r
+        &=\frac{1}{2}\cdot\left|x_M-x_N\right|\\[6mm]
+        &=\frac{1}{2}\cdot\left|\frac{-8x_1}{y_1-8}+\frac{-8x_1}{y_1+8}\right|\\[6mm]
+        &=\frac{1}{2}\cdot\left|\frac{8x_1}{y_1+8}-\frac{8x_1}{y_1-8}\right|\\[6mm]
+        &=\frac{1}{2}\cdot\left|\frac{8x_1\cdot(y_1-8)-8x_1\cdot(y_1+8)}{(y_1+8)\cdot(y_1-8)}\right|\\[6mm]
+        &=\frac{1}{2}\cdot\left|\frac{-128x_1}{y_1^2-64}\right|\\[6mm]
+        &=\left|\frac{64x_1}{y_1^2-64}\right|
+    \end{align}\\
+    因此可设圆的方程：\vspace{5pt}
+    \begin{align}
+        &\left(x+\frac{8x_1y_1}{y_1^2-64}\right)^2+y^2=\frac{(64x_1)^2}{\left(y_1^2-64\right)^2}\\[6mm]
+        &~~x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+\left(\frac{8x_1y_1}{y_1^2-64}\right)^2+y^2=\frac{(64x_1)^2}{\left(y_1^2-64\right)^2}\\[6mm]
+        &~~x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+\frac{(8x_1y_1)^2}{\left(y_1^2-64\right)^2}+y^2=\frac{(64x_1)^2}{\left(y_1^2-64\right)^2}\\[6mm]
+        &~~x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+y^2=\frac{(64x_1)^2-(8x_1y_1)^2}{\left(y_1^2-64\right)^2}
+    \end{align}\\
+
+\newpage
+
+    由于点$P(x_1,y_1)$在椭圆上：
+    \begin{align}
+        &\frac{x_1^2}{100}+\frac{y_1^2}{64}=1\\[3mm]
+        &64x_1^2+100y_1^2-6400=0\\[3mm]
+        &16x_1^2+25y_1^2-1600=0\\[3mm]
+        &25y_1^2=1600-16x_1^2\\[3mm]
+        &y_1^2=64-\frac{16}{25}\cdot x_1^2
+    \end{align}\\
+    将圆的方程中的$y_1$代换得：\vspace{8pt}
+    \begin{align}
+        &x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+y^2=\frac{(64x_1)^2-(8x_1y_1)^2}{\left(y_1^2-64\right)^2}\\[3mm]
+        &x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+y^2=\frac{[64x_1]^2-\left[64x_1^2-\left(64-\dfrac{16}{25}\cdot x_1^2\right)\right]^2}{\left[(64-\dfrac{16}{25})-64\right]^2}\\[3mm]
+        &x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+y^2=\frac{64x_1\cdot\left[64x_1-64x_1+\dfrac{16}{25}\cdot x_1^3\right]}{\left(\dfrac{16}{25}\right)^2\cdot x_1^4}\\[3mm]
+        &x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+y^2=\frac{\left(\dfrac{1024}{25}\right)\cdot x_1^4}{\left(\dfrac{256}{25}\right)\cdot x_1^4}\\[8mm]
+        &x^2+x\cdot\left(\frac{16x_1y_1}{y_1^2-64}\right)+y^2=100
+    \end{align}\\
+    若圆上有一定点$(x,y)$，其应当使得$x_1$和$y_1$无论如何变化，方程都能始终成立。\\[3mm]
+    由于$x$的一次项系数并非定值，因而$x=0$，解得$y=\pm 10$，即恒过定点$(0,\pm 10)$。
+
+\newpage
+
+\subsection{李周的解法}
+    \setcounter{equation}{0}
+    根据椭圆的标准方程：
+    \begin{align}
+        \frac{x^2}{100}+\frac{y^2}{64}=1
+    \end{align}\\
+    可得椭圆的参数方程：
+    \begin{align}
+        \begin{cases}
+            ~~x=10\cdot\cos{\theta}\\[1mm]
+            ~~y=8\cdot\sin{\theta}\\[1mm]
+        \end{cases}
+    \end{align}\\
+    根据参数方程，可设点$P$为：
+    \begin{align}
+        P(10\cdot\cos{\theta},8\cdot\cos{\theta})~~~~~~~~(\cos{\theta}\neq 0)
+    \end{align}\\
+    根据参数方程，可设点$P$为：
+    \begin{align}
+        P(-10\cdot\cos{\theta},-8\cdot\cos{\theta})~~~~~~~~(\cos{\theta}\neq 0)
+    \end{align}\\
+    由于$A(8,0)$可设直线$AP$（即直线$AM$）的方程：
+    \begin{align}
+        y=\frac{4\sin{\theta}-4}{5\cos{\theta}}x+8
+    \end{align}\\
+    由于$A(8,0)$可设直线$AQ$（即直线$AN$）的方程：
+    \begin{align}
+        y=\frac{4\sin{\theta}+4}{5\cos{\theta}}x+8
+    \end{align}\\
+    令$y=0$求解点$M$的横坐标：
+    \begin{align}
+        x_M=x=\frac{10\cdot\cos{\theta}}{1-\sin{\theta}}~~~~~~~~~~~~M\left(\frac{10\cdot\cos{\theta}}{1-\sin{\theta}},0\right)
+    \end{align}\\
+    令$y=0$求解点$N$的横坐标：
+    \begin{align}
+        x_N=x=\frac{-10\cdot\cos{\theta}}{1+\sin{\theta}}~~~~~~~~~~~~N\left(\frac{-10\cdot\cos{\theta}}{1+\sin{\theta}},0\right)
+    \end{align}
+
+\newpage
+
+    假设定点存在，并将定点称为$S(x,y)$。\\[3mm]
+    由此可以解得向量：
+    \begin{align}
+        \overrightarrow{MS}=\left(x-\frac{10\cdot\cos{\theta}}{1-\sin{\theta}},y\right)~~~~~~~~~~~~\overrightarrow{NS}=\left(x+\frac{10\cdot\cos{\theta}}{1+\sin{\theta}},y\right)
+    \end{align}\\
+    两者的内积可写作：
+    \begin{align}
+        &\overrightarrow{MS}\cdot\overrightarrow{NS}=x^2+\left(\frac{10\cdot\cos{\theta}}{1+\sin{\theta}}-\frac{10\cdot\cos{\theta}}{1-\sin{\theta}}\right)\cdot x-\left(\frac{100\cdot\cos^2{\theta}}{1-\sin^2{\theta}}\right)+y^2\\[5mm]
+        &\overrightarrow{MS}\cdot\overrightarrow{NS}=x^2+\left(\frac{10\cdot\cos{\theta}}{1+\sin{\theta}}-\frac{10\cdot\cos{\theta}}{1-\sin{\theta}}\right)\cdot x-\left(\frac{100}{\sec^2{\theta}-\tan^2{\theta}}\right)+y^2\\[5mm]
+        &\overrightarrow{MS}\cdot\overrightarrow{NS}=x^2+\left(\frac{10\cdot\cos{\theta}}{1+\sin{\theta}}-\frac{10\cdot\cos{\theta}}{1-\sin{\theta}}\right)\cdot x-100+y^2
+    \end{align}\\
+    由于$S$为以$MN$为直径的圆上一点：
+    \begin{align}
+        \overrightarrow{MS}\cdot\overrightarrow{NS}=0
+    \end{align}\\
+    因此可以得到：
+    \begin{align}
+        x^2+\left(\frac{10\cdot\cos{\theta}}{1+\sin{\theta}}-\frac{10\cdot\cos{\theta}}{1-\sin{\theta}}\right)\cdot x-100+y^2=0
+    \end{align}\\
+    然而$S(x,y)$为定点，因此其坐标取值应当使该等式恒成立。\\[3mm]
+    由于$x$的一次项系数并非定值，因而$x=0$，解得$y=\pm 10$，即恒过定点$S(0,\pm 10)$。
+
+\newpage

@@ -8232,7 +8232,126 @@
 \newpage
 
 \subsection{直线至圆锥曲线的距离}
-    已知一条圆锥曲线和一条直线，求直线至圆锥曲线的距离。
+    已知一条圆锥曲线和一条直线，求直线至圆锥曲线的距离。\\[3mm]
+    我们已知的直线：
+    \setcounter{equation}{0}
+    \begin{align}
+        y=kx+b
+    \end{align}\\
+    设一条平行直线：
+    \begin{align}
+        y=kx+d
+    \end{align}\\
+    由于直线至圆锥曲线的距离，相当于直线至其平行切线的距离。\\[3mm]
+    因此后续我们只需要得出平行直线将何时与圆锥曲线曲线相切即可求出距离。\\[6mm]
+    此处首先计算两条平行直线间的距离：\vspace{5pt}
+    \begin{align}
+        &\begin{cases}
+            ~y=kx+b\\[1mm]
+            ~y=kx+d\\[1mm]
+        \end{cases}\\[3mm]
+        &\begin{cases}
+            ~kx-y+b=0\\[1mm]
+            ~kx-y+d=0\\[1mm]
+        \end{cases}
+    \end{align}\\[1mm]
+    根据两条平行线间距离公式可以得到：
+    \begin{large}
+        \begin{equation*}
+            r=\frac{|b-d|}{\sqrt{k^2+1}~}
+        \end{equation*}
+    \end{large}\\
+    需要说明的是，无论是设$k$式的直线方程，还是设$t$式的直线方程，都不会影响此处的结论。
+
+
+\newpage
+
+\subsubsection{直线至椭圆或双曲线的距离}
+    将其与圆锥曲线联立：
+    \setcounter{equation}{0}
+    \begin{align}
+        \begin{cases}
+            ~Ax^2+By^2+C=0\\[1mm]
+            ~~y=kx+d\\[1mm]
+        \end{cases}
+    \end{align}\\
+    根据弦长公式的结论：
+    \begin{align}
+        &\Delta=-4\cdot\left(ABd^2+BCk^2+AC\right)=0
+    \end{align}\\
+    对其变换可得：
+    \begin{align}
+        &Abd^2+BCk^2+AC=0\\[3mm]
+        &Abd^2=-BCk^2-AC\\[3mm]
+        &~d^2=\frac{-BCk^2-AC}{AB}\\[3mm]
+        &~d^2=-\frac{BCk^2}{AC}-\frac{AC}{AB}\\[3mm]
+        &~d^2=-\frac{Ck^2}{A}-\frac{C}{B}
+    \end{align}\\
+    最终的结论为：
+    \begin{large}
+        \begin{equation*}
+            d=\pm\sqrt{\frac{Ck^2}{A}-\frac{C}{B}}
+        \end{equation*}
+    \end{large}\\
+    将得到的的两个$d$代回，求与原直线的平行线间距离，较短的为最短距离，较长的为最长距离。
+
+\newpage
+
+\subsubsection{直线至上下开口的抛物线的距离}
+    将其与圆锥曲线联立：
+    \setcounter{equation}{0}
+    \begin{align}
+        \begin{cases}
+            ~x^2=2py\\[1mm]
+            ~y=kx+d\\[1mm]
+        \end{cases}
+    \end{align}\\
+    根据弦长公式的结论：
+    \begin{align}
+        &\Delta=k^2+\frac{2d}{p}=0
+    \end{align}\\
+    对其变换可得：
+    \begin{align}
+        &\frac{2d}{p}=k^2\\[3mm]
+        &\frac{d}{p}=\frac{k^2}{2}\\[3mm]
+        &d=\frac{pk^2}{2}
+    \end{align}\\
+    最终的结论为：
+    \begin{large}
+        \begin{equation*}
+            d=\frac{pk^2}{2}
+        \end{equation*}
+    \end{large}\\
+    将得到的的一个$d$代回，求与原直线的平行线间距离，所得距离即是最短距离。
+
+\newpage
+
+\subsubsection{直线至作由开口的抛物线的距离}
+    将其与圆锥曲线联立：
+    \setcounter{equation}{0}
+    \begin{align}
+        \begin{cases}
+            ~y^2=2px\\[1mm]
+            ~x=ty+d\\[1mm]
+        \end{cases}
+    \end{align}\\
+    根据弦长公式的结论：
+    \begin{align}
+        &\Delta=t^2+\frac{2d}{p}=0
+    \end{align}\\
+    对其变换可得：
+    \begin{align}
+        &\frac{2d}{p}=t^2\\[3mm]
+        &\frac{d}{p}=\frac{t^2}{2}\\[3mm]
+        &d=\frac{pt^2}{2}
+    \end{align}\\
+    最终的结论为：
+    \begin{large}
+        \begin{equation*}
+            d=\frac{pt^2}{2}
+        \end{equation*}
+    \end{large}\\
+    将得到的的一个$d$代回，求与原直线的平行线间距离，所得距离即是最短距离。
 
 \newpage
 
@@ -8245,39 +8364,72 @@
             \begin{tabular}{l|l}
                 \hline
                 离心率范围\qquad\qquad\qquad\qquad&圆锥曲线类型\qquad\qquad\qquad\qquad\\ \hline
-                $e\in\{ 0 \}$&圆\\ \hline
-                $e\in(0,1)$&椭圆\\ \hline
-                $e\in\{ 1 \}$&抛物线\\ \hline
-                $e\in(1,\infty)$&双曲线\\ \hline
+                $e=0$&圆\\ \hline
+                $e<1$&椭圆\\ \hline
+                $e=1$&抛物线\\ \hline
+                $e>1$&双曲线\\ \hline
             \end{tabular}
             \caption{离心率和圆锥曲线类型}
         \end{center}
     \end{table}\\
-    接下来将证明圆锥曲线的第二定义符合其原始定义，同时推导相关性质：\\[3mm]
-    设焦点$F(n,0)$，设准线$l:x=m$，定义焦准距$p=n-m$：\\[3mm]
-    当焦准距$p<0$时，代表焦点在准线左侧。\\[2mm]
-    当焦准距$p>0$时，代表焦点在准线右侧。\\[6mm]
-    由离心率的定义：
+    接下来将证明圆锥曲线的第二定义符合其原始定义，同时推导相关性质。\\[6mm]
+    设定焦点$F$的横坐标为$n$：
     \setcounter{equation}{0}
-    \begin{equation}
-        e=\frac{\sqrt{(x-n)^2+y^2}}{|x-m|}
-    \end{equation}\\[1mm]
-    可以得到：
     \begin{align}
-        &\sqrt{(x-n)^2+y^2}=e\cdot|x-m|\\[3mm]
-        &(x-n)^2+y^2=e^2\cdot(x-m)^2\\[3mm]
-        &(x^2-2nx+h^2)+y^2=e^2\cdot\left(x^2-2mx+m^2\right)\\[3mm]
-        &~x^2-2nx+h^2+y^2=e^2x^2-2me^2x+m^2e^2\\[3mm]
-        &\left(1-e^2\right)x^2+2\left(me^2-h\right)x+y^2=m^2e^2-h^2
-    \end{align}
+        ~F~(~n~,~0~)
+    \end{align}\\
+    设定准线$L$的横坐标为$m$：
+    \begin{align}
+        L:x=m
+    \end{align}\\
+    焦点至准线的有向距离称为焦准距，用符号$p$表示。\\[3mm]
+    焦准距可以表示为：
+    \begin{align}
+        p=n-m
+    \end{align}\\
+    当焦准距$p>0$时，说明焦点的横坐标较大，代表焦点在准线右侧。\\[2mm]
+    当焦准距$p<0$时，说明焦点的横坐标较小，代表焦点在准线左侧。
+
+\newpage
+
+    平面上一点$(x,y)$到定焦点的距离为：
+    \begin{align}
+        d_F=\sqrt{(x-n)^2+y^2}
+    \end{align}\\
+    平面上一点$(x,y)$到定准线的距离为：
+    \begin{align}
+        d_L=|x-m|
+    \end{align}\\
+    离心率$e$为点到定焦点和定准线的距离比：
+    \begin{equation}
+        e=\frac{d_F}{d_L}=\frac{\sqrt{(x-n)^2+y^2}}{|x-m|}
+    \end{equation}\\[1mm]
+    对其变形展开可以得到：
+    \begin{align}
+        &~\sqrt{(x-n)^2+y^2}=e\cdot|x-m|\\[5mm]
+        &~(x-n)^2+y^2=e^2\cdot(x-m)^2\\[5mm]
+        &\left(x^2-2nx+n^2\right)+y^2=e^2\cdot\left(x^2-2mx+m^2\right)\\[5mm]
+        &~x^2-2nx+n^2+y^2=e^2x^2-2me^2x+m^2e^2\\[5mm]
+        &\left(1-e^2\right)x^2+2\left(me^2-n\right)x+y^2=m^2e^2-n^2
+    \end{align}\\
+    接下来将对此处得到的结论进行讨论。\\[6mm]
 
 \newpage
 
 \subsubsection{椭圆的圆锥曲线第二定义}
     \setcounter{equation}{0}
-    由于椭圆的标准方程下，椭圆的中心点位于原点$O(0,0)$，故$x$的一次项系数为零：\vspace{5pt}
+    对于上述得出的结论：
     \begin{align}
-        &2\left(me^2-n\right)=0\\[3mm]
+        \left(1-e^2\right)x^2+2\left(me^2-n\right)x+y^2=m^2e^2-n^2
+    \end{align}\\
+    其在椭圆中必须满足以下条件：
+    \begin{align}
+        &2\left(me^2-n\right)=0
+    \end{align}\\
+    这是因为椭圆的标准方程下，椭圆的中心点位于原点$O(0,0)$，故$x$的一次项系数为零。\\[10mm]
+    对其化简可得：
+    \begin{align}
+        &me^2-n=0\\[3mm]
         &n=me^2
     \end{align}\\
     代入方程可得：
@@ -8287,24 +8439,56 @@
         &\left(1-e^2\right)x^2+y^2=m^2e^2\cdot\left(1-e^2\right)\\[3mm]
         &\frac{x^2}{m^2e^2}+\frac{y^2}{m^2e^2\cdot\left(1-e^2\right)}=1
     \end{align}\\[1mm]
-    对于椭圆，其$y$的二次项下的系数必然大于零：\vspace{5pt}
+    椭圆的离心率范围推动如下：\vspace{3pt}
     \begin{align}
         &m^2e^2\cdot\left(1-e^2\right)>0\\[3mm]
-        &e\in(0,1)
+        &1-e^2>0\\[3mm]
+        &e^2<1\\[3mm]
+        &e<1
     \end{align}\\
-    进而我们可以得到椭圆的长轴，椭圆的短轴，椭圆的焦距：\vspace{5pt}
+    这是因为椭圆中$y$的二次项下的系数必然大于零。
+
+\newpage
+
+    由上述的结论：
     \begin{align}
-        a^2&=m^2e^2\qquad b^2=m^2e^2\cdot\left(1-e^2\right)\\[4mm]
-        c^2&=l^2-s^2\\[3mm]
-        &=m^2e^2-m^2e^2\cdot\left(1-e^2\right)\\[3mm]
-        &=m^2e^2\cdot\left(1-1+e^2\right)\\[3mm]
-        &=m^2e^2\cdot e^2\\[3mm]
+        \frac{x^2}{m^2e^2}+\frac{y^2}{m^2e^2\cdot\left(1-e^2\right)}=1
+    \end{align}\\
+    可以推得椭圆的半长轴：
+    \begin{align}
+        a^2&=m^2e^2~~~~~~~~~~~~~~~~
+    \end{align}\\
+    可以推得椭圆的半短轴：
+    \begin{align}
+        b^2=m^2e^2\cdot\left(1-e^2\right)
+    \end{align}\\
+    可以推得椭圆的半焦距：
+    \begin{align}
+        ~~~~~~~~~~~~c^2&=a^2-b^2\\[5mm]
+        &=m^2e^2-m^2e^2\cdot\left(1-e^2\right)\\[5mm]
+        &=m^2e^2\cdot\left(1-1+e^2\right)\\[5mm]
+        &=m^2e^2\cdot e^2\\[5mm]
         &=m^2e^4
-    \end{align}
-    很显然，由于焦点为$F(h,0)$：
-    \begin{equation}
-        c=|n|
-    \end{equation}
+    \end{align}\\
+    椭圆的半长轴：
+    \begin{large}
+        \begin{equation*}
+            a^2=m^2e^2
+        \end{equation*}
+    \end{large}\\
+    椭圆的半短轴：
+    \begin{large}
+        \begin{equation*}
+            b^2=m^2e^2\cdot\left(1-e^2\right)
+        \end{equation*}
+    \end{large}\\
+    椭圆的半焦距：
+    \begin{large}
+        \begin{equation*}
+            c^2=m^2e^4
+        \end{equation*}
+    \end{large}\\
+    由于椭圆的焦点为$F(n,0)$，因此半焦距和焦点横坐标的关系为$c=|n|$。
 
 \newpage
 
