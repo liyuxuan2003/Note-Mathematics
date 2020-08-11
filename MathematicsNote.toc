@@ -199,132 +199,125 @@
 \contentsline {subsubsection}{\numberline {12.4.3}抛物线的切线方程}{186}{subsubsection.12.4.3}% 
 \contentsline {subsubsection}{\numberline {12.4.4}抛物线和基于$k$的直线的联立}{188}{subsubsection.12.4.4}% 
 \contentsline {subsubsection}{\numberline {12.4.5}抛物线和基于$t$的直线的联立}{190}{subsubsection.12.4.5}% 
-\contentsline {subsection}{\numberline {12.5}弦长公式}{192}{subsection.12.5}% 
-\contentsline {subsubsection}{\numberline {12.5.1}弦长公式在椭圆和双曲线中的应用}{194}{subsubsection.12.5.1}% 
-\contentsline {subsubsection}{\numberline {12.5.2}弦长公式在上下开口的抛物线中的应用}{195}{subsubsection.12.5.2}% 
-\contentsline {subsubsection}{\numberline {12.5.3}弦长公式在左右开口的抛物线中的应用}{197}{subsubsection.12.5.3}% 
-\contentsline {subsection}{\numberline {12.6}弦中点公式}{199}{subsection.12.6}% 
-\contentsline {subsubsection}{\numberline {12.6.1}弦中点公式在椭圆和双曲线中的应用}{199}{subsubsection.12.6.1}% 
-\contentsline {subsubsection}{\numberline {12.6.2}弦中点公式在上下开口的抛物线中的应用}{200}{subsubsection.12.6.2}% 
-\contentsline {subsubsection}{\numberline {12.6.3}弦中点公式在左右开口的抛物线中的应用}{201}{subsubsection.12.6.3}% 
-\contentsline {subsection}{\numberline {12.7}直线至圆锥曲线的距离}{202}{subsection.12.7}% 
-\contentsline {subsubsection}{\numberline {12.7.1}直线至椭圆或双曲线的距离}{203}{subsubsection.12.7.1}% 
-\contentsline {subsubsection}{\numberline {12.7.2}直线至上下开口的抛物线的距离}{204}{subsubsection.12.7.2}% 
-\contentsline {subsubsection}{\numberline {12.7.3}直线至作由开口的抛物线的距离}{205}{subsubsection.12.7.3}% 
-\contentsline {subsection}{\numberline {12.8}圆锥曲线的第二定义}{206}{subsection.12.8}% 
-\contentsline {subsubsection}{\numberline {12.8.1}椭圆的圆锥曲线第二定义}{208}{subsubsection.12.8.1}% 
-\contentsline {subsubsection}{\numberline {12.8.2}关于圆锥曲线第二定义的结论}{218}{subsubsection.12.8.2}% 
-\contentsline {section}{\numberline {13}参数方程}{221}{section.13}% 
-\contentsline {subsection}{\numberline {13.1}直线的参数方程}{221}{subsection.13.1}% 
-\contentsline {subsection}{\numberline {13.2}圆的参数方程}{222}{subsection.13.2}% 
-\contentsline {subsection}{\numberline {13.3}椭圆的参数方程}{223}{subsection.13.3}% 
-\contentsline {subsection}{\numberline {13.4}双曲线的参数方程}{224}{subsection.13.4}% 
-\contentsline {subsection}{\numberline {13.5}抛物线的参数方程}{225}{subsection.13.5}% 
-\contentsline {section}{\numberline {14}复数}{226}{section.14}% 
-\contentsline {subsection}{\numberline {14.1}复数的定义}{226}{subsection.14.1}% 
-\contentsline {subsection}{\numberline {14.2}复平面}{227}{subsection.14.2}% 
-\contentsline {subsection}{\numberline {14.3}复数的相等}{227}{subsection.14.3}% 
-\contentsline {subsection}{\numberline {14.4}复数的加法和减法}{227}{subsection.14.4}% 
-\contentsline {subsection}{\numberline {14.5}复数的绝对值及其运算}{228}{subsection.14.5}% 
-\contentsline {subsection}{\numberline {14.6}复数的共轭及其运算}{228}{subsection.14.6}% 
-\contentsline {subsection}{\numberline {14.7}复数的代数形式}{229}{subsection.14.7}% 
-\contentsline {subsection}{\numberline {14.8}复数的三角形式}{229}{subsection.14.8}% 
-\contentsline {subsection}{\numberline {14.9}复数的乘法和除法}{230}{subsection.14.9}% 
-\contentsline {subsection}{\numberline {14.10}复数的乘方和开方}{232}{subsection.14.10}% 
-\contentsline {subsection}{\numberline {14.11}复数集内的一元二次方程}{233}{subsection.14.11}% 
-\contentsline {section}{\numberline {15}空间直线与平面}{235}{section.15}% 
-\contentsline {subsection}{\numberline {15.1}直线和平面}{235}{subsection.15.1}% 
-\contentsline {subsubsection}{\numberline {15.1.1}确定一个平面的条件}{235}{subsubsection.15.1.1}% 
-\contentsline {subsection}{\numberline {15.2}空间中直线与直线的关系}{236}{subsection.15.2}% 
-\contentsline {subsection}{\numberline {15.3}空间中直线与平面的关系}{238}{subsection.15.3}% 
-\contentsline {subsection}{\numberline {15.4}空间中平面与平面的关系}{242}{subsection.15.4}% 
-\contentsline {subsection}{\numberline {15.5}点到平面的距离}{246}{subsection.15.5}% 
-\contentsline {subsection}{\numberline {15.6}异面直线的距离}{247}{subsection.15.6}% 
-\contentsline {section}{\numberline {16}简单几何体}{248}{section.16}% 
-\contentsline {subsection}{\numberline {16.1}多面体}{248}{subsection.16.1}% 
-\contentsline {subsubsection}{\numberline {16.1.1}正多面体}{248}{subsubsection.16.1.1}% 
-\contentsline {subsubsection}{\numberline {16.1.2}欧拉定理}{248}{subsubsection.16.1.2}% 
-\contentsline {subsection}{\numberline {16.2}棱柱}{249}{subsection.16.2}% 
-\contentsline {subsubsection}{\numberline {16.2.1}棱柱的性质}{249}{subsubsection.16.2.1}% 
-\contentsline {subsubsection}{\numberline {16.2.2}正棱柱的表面积}{250}{subsubsection.16.2.2}% 
-\contentsline {subsection}{\numberline {16.3}棱锥}{251}{subsection.16.3}% 
-\contentsline {subsubsection}{\numberline {16.3.1}棱锥的性质}{251}{subsubsection.16.3.1}% 
-\contentsline {subsubsection}{\numberline {16.3.2}正棱锥的表面积}{252}{subsubsection.16.3.2}% 
-\contentsline {subsection}{\numberline {16.4}圆柱}{253}{subsection.16.4}% 
-\contentsline {subsubsection}{\numberline {16.4.1}圆柱的性质}{253}{subsubsection.16.4.1}% 
-\contentsline {subsubsection}{\numberline {16.4.2}圆柱的表面积}{254}{subsubsection.16.4.2}% 
-\contentsline {subsection}{\numberline {16.5}圆锥}{255}{subsection.16.5}% 
-\contentsline {subsubsection}{\numberline {16.5.1}圆锥的性质}{255}{subsubsection.16.5.1}% 
-\contentsline {subsubsection}{\numberline {16.5.2}圆锥的表面积}{256}{subsubsection.16.5.2}% 
-\contentsline {subsection}{\numberline {16.6}柱体的体积}{257}{subsection.16.6}% 
-\contentsline {subsection}{\numberline {16.7}锥体的体积}{258}{subsection.16.7}% 
-\contentsline {subsection}{\numberline {16.8}球}{259}{subsection.16.8}% 
-\contentsline {subsubsection}{\numberline {16.8.1}球的性质}{259}{subsubsection.16.8.1}% 
-\contentsline {subsubsection}{\numberline {16.8.2}球的表面积}{260}{subsubsection.16.8.2}% 
-\contentsline {subsubsection}{\numberline {16.8.3}球的体积}{261}{subsubsection.16.8.3}% 
-\contentsline {subsubsection}{\numberline {16.8.4}球面距离}{262}{subsubsection.16.8.4}% 
-\contentsline {section}{\numberline {17}排列组合}{264}{section.17}% 
-\contentsline {subsection}{\numberline {17.1}乘法原理}{264}{subsection.17.1}% 
-\contentsline {subsection}{\numberline {17.2}排列}{264}{subsection.17.2}% 
-\contentsline {subsubsection}{\numberline {17.2.1}排列数公式的累乘形式}{264}{subsubsection.17.2.1}% 
-\contentsline {subsubsection}{\numberline {17.2.2}排列数公式的阶乘形式}{265}{subsubsection.17.2.2}% 
-\contentsline {subsubsection}{\numberline {17.2.3}排列数公式$01$}{265}{subsubsection.17.2.3}% 
-\contentsline {subsubsection}{\numberline {17.2.4}排列数公式$02$}{266}{subsubsection.17.2.4}% 
-\contentsline {subsubsection}{\numberline {17.2.5}排列数公式$03$}{267}{subsubsection.17.2.5}% 
-\contentsline {subsubsection}{\numberline {17.2.6}排列数公式$04$}{268}{subsubsection.17.2.6}% 
-\contentsline {subsubsection}{\numberline {17.2.7}排列数公式$05$}{269}{subsubsection.17.2.7}% 
-\contentsline {subsubsection}{\numberline {17.2.8}排列数公式$06$}{270}{subsubsection.17.2.8}% 
-\contentsline {subsubsection}{\numberline {17.2.9}排列数公式$07$}{270}{subsubsection.17.2.9}% 
-\contentsline {subsection}{\numberline {17.3}加法原理}{271}{subsection.17.3}% 
-\contentsline {subsection}{\numberline {17.4}组合}{271}{subsection.17.4}% 
-\contentsline {subsubsection}{\numberline {17.4.1}组合数公式的累乘形式}{271}{subsubsection.17.4.1}% 
-\contentsline {subsubsection}{\numberline {17.4.2}组合数公式的阶乘形式}{272}{subsubsection.17.4.2}% 
-\contentsline {subsubsection}{\numberline {17.4.3}组合数公式$01$}{272}{subsubsection.17.4.3}% 
-\contentsline {subsubsection}{\numberline {17.4.4}组合数公式$02$}{273}{subsubsection.17.4.4}% 
-\contentsline {subsubsection}{\numberline {17.4.5}组合数公式$03$}{274}{subsubsection.17.4.5}% 
-\contentsline {subsubsection}{\numberline {17.4.6}组合数公式$04$}{275}{subsubsection.17.4.6}% 
-\contentsline {subsubsection}{\numberline {17.4.7}组合数公式$05$}{276}{subsubsection.17.4.7}% 
-\contentsline {subsubsection}{\numberline {17.4.8}组合数公式$06$}{277}{subsubsection.17.4.8}% 
-\contentsline {subsubsection}{\numberline {17.4.9}组合数公式$07$}{278}{subsubsection.17.4.9}% 
-\contentsline {subsubsection}{\numberline {17.4.10}组合数公式$08$}{279}{subsubsection.17.4.10}% 
-\contentsline {subsubsection}{\numberline {17.4.11}组合数公式$09$}{280}{subsubsection.17.4.11}% 
-\contentsline {subsubsection}{\numberline {17.4.12}组合数公式$10$}{281}{subsubsection.17.4.12}% 
-\contentsline {subsubsection}{\numberline {17.4.13}组合数公式$11$}{282}{subsubsection.17.4.13}% 
-\contentsline {subsubsection}{\numberline {17.4.14}组合数公式$12$}{283}{subsubsection.17.4.14}% 
-\contentsline {subsection}{\numberline {17.5}二项式定理}{284}{subsection.17.5}% 
-\contentsline {subsubsection}{\numberline {17.5.1}二项式系数的性质$01$}{285}{subsubsection.17.5.1}% 
-\contentsline {subsubsection}{\numberline {17.5.2}二项式系数的性质$02$}{285}{subsubsection.17.5.2}% 
-\contentsline {subsection}{\numberline {17.6}排列组合问题\uppercase {i\relax }}{286}{subsection.17.6}% 
-\contentsline {subsubsection}{\numberline {17.6.1}排列组合问题\uppercase {i\relax }-$01$}{286}{subsubsection.17.6.1}% 
-\contentsline {subsubsection}{\numberline {17.6.2}排列组合问题\uppercase {i\relax }-$02$}{291}{subsubsection.17.6.2}% 
-\contentsline {subsubsection}{\numberline {17.6.3}排列组合问题\uppercase {i\relax }-$03$}{291}{subsubsection.17.6.3}% 
-\contentsline {subsubsection}{\numberline {17.6.4}排列组合问题\uppercase {i\relax }-$04$}{292}{subsubsection.17.6.4}% 
-\contentsline {subsubsection}{\numberline {17.6.5}排列组合问题\uppercase {i\relax }-$05$}{292}{subsubsection.17.6.5}% 
-\contentsline {subsubsection}{\numberline {17.6.6}排列组合问题\uppercase {i\relax }-$06$}{293}{subsubsection.17.6.6}% 
-\contentsline {subsubsection}{\numberline {17.6.7}排列组合问题\uppercase {i\relax }-$07$}{293}{subsubsection.17.6.7}% 
-\contentsline {subsection}{\numberline {17.7}排列组合问题\uppercase {ii\relax }}{294}{subsection.17.7}% 
-\contentsline {subsubsection}{\numberline {17.7.1}排列组合问题\uppercase {ii\relax }-$01$}{294}{subsubsection.17.7.1}% 
-\contentsline {subsubsection}{\numberline {17.7.2}排列组合问题\uppercase {ii\relax }-$02$}{295}{subsubsection.17.7.2}% 
-\contentsline {subsubsection}{\numberline {17.7.3}排列组合问题\uppercase {ii\relax }-$03$}{295}{subsubsection.17.7.3}% 
-\contentsline {subsection}{\numberline {17.8}排列组合问题\uppercase {iii\relax }}{296}{subsection.17.8}% 
-\contentsline {subsubsection}{\numberline {17.8.1}斯特林数}{296}{subsubsection.17.8.1}% 
-\contentsline {subsubsection}{\numberline {17.8.2}排列组合问题\uppercase {iii\relax }-$01$}{299}{subsubsection.17.8.2}% 
-\contentsline {subsubsection}{\numberline {17.8.3}排列组合问题\uppercase {iii\relax }-$02$}{299}{subsubsection.17.8.3}% 
-\contentsline {subsubsection}{\numberline {17.8.4}排列组合问题\uppercase {iii\relax }-$03$}{300}{subsubsection.17.8.4}% 
-\contentsline {section}{\numberline {18}概率论初步}{301}{section.18}% 
-\contentsline {subsection}{\numberline {18.1}随机事件}{301}{subsection.18.1}% 
-\contentsline {subsection}{\numberline {18.2}古典概型}{301}{subsection.18.2}% 
-\contentsline {subsection}{\numberline {18.3}事件关系的运算}{302}{subsection.18.3}% 
-\contentsline {subsubsection}{\numberline {18.3.1}积事件}{302}{subsubsection.18.3.1}% 
-\contentsline {subsubsection}{\numberline {18.3.2}和事件}{302}{subsubsection.18.3.2}% 
-\contentsline {subsubsection}{\numberline {18.3.3}差事件}{303}{subsubsection.18.3.3}% 
-\contentsline {subsubsection}{\numberline {18.3.4}互斥事件}{303}{subsubsection.18.3.4}% 
-\contentsline {subsubsection}{\numberline {18.3.5}对立事件}{303}{subsubsection.18.3.5}% 
-\contentsline {subsection}{\numberline {18.4}概率的加法定理}{303}{subsection.18.4}% 
-\contentsline {subsection}{\numberline {18.5}条件概率的计算}{304}{subsection.18.5}% 
-\contentsline {subsubsection}{\numberline {18.5.1}独立事件}{304}{subsubsection.18.5.1}% 
-\contentsline {subsection}{\numberline {18.6}概率的乘法定理}{304}{subsection.18.6}% 
-\contentsline {section}{\numberline {19}基本统计方法}{305}{section.19}% 
-\contentsline {subsection}{\numberline {19.1}总体均值和总体方差}{305}{subsection.19.1}% 
-\contentsline {subsubsection}{\numberline {19.1.1}总体方差的两种形式}{305}{subsubsection.19.1.1}% 
-\contentsline {subsection}{\numberline {19.2}样本均值和样本方差}{306}{subsection.19.2}% 
+\contentsline {subsection}{\numberline {12.5}圆锥曲线和直线}{192}{subsection.12.5}% 
+\contentsline {subsubsection}{\numberline {12.5.1}弦长公式}{192}{subsubsection.12.5.1}% 
+\contentsline {subsubsection}{\numberline {12.5.2}弦中点公式（椭圆或双曲线）}{194}{subsubsection.12.5.2}% 
+\contentsline {subsubsection}{\numberline {12.5.3}弦中点公式（上下开口的抛物线）}{196}{subsubsection.12.5.3}% 
+\contentsline {subsubsection}{\numberline {12.5.4}弦中点公式（左右开口的抛物线）}{197}{subsubsection.12.5.4}% 
+\contentsline {subsection}{\numberline {12.6}圆锥曲线的第二定义}{198}{subsection.12.6}% 
+\contentsline {subsubsection}{\numberline {12.6.1}椭圆的圆锥曲线第二定义}{201}{subsubsection.12.6.1}% 
+\contentsline {subsubsection}{\numberline {12.6.2}关于圆锥曲线第二定义的结论}{211}{subsubsection.12.6.2}% 
+\contentsline {section}{\numberline {13}参数方程}{214}{section.13}% 
+\contentsline {subsection}{\numberline {13.1}直线的参数方程}{214}{subsection.13.1}% 
+\contentsline {subsection}{\numberline {13.2}圆的参数方程}{215}{subsection.13.2}% 
+\contentsline {subsection}{\numberline {13.3}椭圆的参数方程}{216}{subsection.13.3}% 
+\contentsline {subsection}{\numberline {13.4}双曲线的参数方程}{217}{subsection.13.4}% 
+\contentsline {subsection}{\numberline {13.5}抛物线的参数方程}{218}{subsection.13.5}% 
+\contentsline {section}{\numberline {14}复数}{219}{section.14}% 
+\contentsline {subsection}{\numberline {14.1}复数的定义}{219}{subsection.14.1}% 
+\contentsline {subsection}{\numberline {14.2}复平面}{220}{subsection.14.2}% 
+\contentsline {subsection}{\numberline {14.3}复数的相等}{220}{subsection.14.3}% 
+\contentsline {subsection}{\numberline {14.4}复数的加法和减法}{220}{subsection.14.4}% 
+\contentsline {subsection}{\numberline {14.5}复数的绝对值及其运算}{221}{subsection.14.5}% 
+\contentsline {subsection}{\numberline {14.6}复数的共轭及其运算}{221}{subsection.14.6}% 
+\contentsline {subsection}{\numberline {14.7}复数的代数形式}{222}{subsection.14.7}% 
+\contentsline {subsection}{\numberline {14.8}复数的三角形式}{222}{subsection.14.8}% 
+\contentsline {subsection}{\numberline {14.9}复数的乘法和除法}{223}{subsection.14.9}% 
+\contentsline {subsection}{\numberline {14.10}复数的乘方和开方}{225}{subsection.14.10}% 
+\contentsline {subsection}{\numberline {14.11}复数集内的一元二次方程}{226}{subsection.14.11}% 
+\contentsline {section}{\numberline {15}空间直线与平面}{228}{section.15}% 
+\contentsline {subsection}{\numberline {15.1}直线和平面}{228}{subsection.15.1}% 
+\contentsline {subsubsection}{\numberline {15.1.1}确定一个平面的条件}{228}{subsubsection.15.1.1}% 
+\contentsline {subsection}{\numberline {15.2}空间中直线与直线的关系}{229}{subsection.15.2}% 
+\contentsline {subsection}{\numberline {15.3}空间中直线与平面的关系}{231}{subsection.15.3}% 
+\contentsline {subsection}{\numberline {15.4}空间中平面与平面的关系}{235}{subsection.15.4}% 
+\contentsline {subsection}{\numberline {15.5}点到平面的距离}{239}{subsection.15.5}% 
+\contentsline {subsection}{\numberline {15.6}异面直线的距离}{240}{subsection.15.6}% 
+\contentsline {section}{\numberline {16}简单几何体}{241}{section.16}% 
+\contentsline {subsection}{\numberline {16.1}多面体}{241}{subsection.16.1}% 
+\contentsline {subsubsection}{\numberline {16.1.1}正多面体}{241}{subsubsection.16.1.1}% 
+\contentsline {subsubsection}{\numberline {16.1.2}欧拉定理}{241}{subsubsection.16.1.2}% 
+\contentsline {subsection}{\numberline {16.2}棱柱}{242}{subsection.16.2}% 
+\contentsline {subsubsection}{\numberline {16.2.1}棱柱的性质}{242}{subsubsection.16.2.1}% 
+\contentsline {subsubsection}{\numberline {16.2.2}正棱柱的表面积}{243}{subsubsection.16.2.2}% 
+\contentsline {subsection}{\numberline {16.3}棱锥}{244}{subsection.16.3}% 
+\contentsline {subsubsection}{\numberline {16.3.1}棱锥的性质}{244}{subsubsection.16.3.1}% 
+\contentsline {subsubsection}{\numberline {16.3.2}正棱锥的表面积}{245}{subsubsection.16.3.2}% 
+\contentsline {subsection}{\numberline {16.4}圆柱}{246}{subsection.16.4}% 
+\contentsline {subsubsection}{\numberline {16.4.1}圆柱的性质}{246}{subsubsection.16.4.1}% 
+\contentsline {subsubsection}{\numberline {16.4.2}圆柱的表面积}{247}{subsubsection.16.4.2}% 
+\contentsline {subsection}{\numberline {16.5}圆锥}{248}{subsection.16.5}% 
+\contentsline {subsubsection}{\numberline {16.5.1}圆锥的性质}{248}{subsubsection.16.5.1}% 
+\contentsline {subsubsection}{\numberline {16.5.2}圆锥的表面积}{249}{subsubsection.16.5.2}% 
+\contentsline {subsection}{\numberline {16.6}柱体的体积}{250}{subsection.16.6}% 
+\contentsline {subsection}{\numberline {16.7}锥体的体积}{251}{subsection.16.7}% 
+\contentsline {subsection}{\numberline {16.8}球}{252}{subsection.16.8}% 
+\contentsline {subsubsection}{\numberline {16.8.1}球的性质}{252}{subsubsection.16.8.1}% 
+\contentsline {subsubsection}{\numberline {16.8.2}球的表面积}{253}{subsubsection.16.8.2}% 
+\contentsline {subsubsection}{\numberline {16.8.3}球的体积}{254}{subsubsection.16.8.3}% 
+\contentsline {subsubsection}{\numberline {16.8.4}球面距离}{255}{subsubsection.16.8.4}% 
+\contentsline {section}{\numberline {17}排列组合}{257}{section.17}% 
+\contentsline {subsection}{\numberline {17.1}乘法原理}{257}{subsection.17.1}% 
+\contentsline {subsection}{\numberline {17.2}排列}{257}{subsection.17.2}% 
+\contentsline {subsubsection}{\numberline {17.2.1}排列数公式的累乘形式}{257}{subsubsection.17.2.1}% 
+\contentsline {subsubsection}{\numberline {17.2.2}排列数公式的阶乘形式}{258}{subsubsection.17.2.2}% 
+\contentsline {subsubsection}{\numberline {17.2.3}排列数公式$01$}{258}{subsubsection.17.2.3}% 
+\contentsline {subsubsection}{\numberline {17.2.4}排列数公式$02$}{259}{subsubsection.17.2.4}% 
+\contentsline {subsubsection}{\numberline {17.2.5}排列数公式$03$}{260}{subsubsection.17.2.5}% 
+\contentsline {subsubsection}{\numberline {17.2.6}排列数公式$04$}{261}{subsubsection.17.2.6}% 
+\contentsline {subsubsection}{\numberline {17.2.7}排列数公式$05$}{262}{subsubsection.17.2.7}% 
+\contentsline {subsubsection}{\numberline {17.2.8}排列数公式$06$}{263}{subsubsection.17.2.8}% 
+\contentsline {subsubsection}{\numberline {17.2.9}排列数公式$07$}{263}{subsubsection.17.2.9}% 
+\contentsline {subsection}{\numberline {17.3}加法原理}{264}{subsection.17.3}% 
+\contentsline {subsection}{\numberline {17.4}组合}{264}{subsection.17.4}% 
+\contentsline {subsubsection}{\numberline {17.4.1}组合数公式的累乘形式}{264}{subsubsection.17.4.1}% 
+\contentsline {subsubsection}{\numberline {17.4.2}组合数公式的阶乘形式}{265}{subsubsection.17.4.2}% 
+\contentsline {subsubsection}{\numberline {17.4.3}组合数公式$01$}{265}{subsubsection.17.4.3}% 
+\contentsline {subsubsection}{\numberline {17.4.4}组合数公式$02$}{266}{subsubsection.17.4.4}% 
+\contentsline {subsubsection}{\numberline {17.4.5}组合数公式$03$}{267}{subsubsection.17.4.5}% 
+\contentsline {subsubsection}{\numberline {17.4.6}组合数公式$04$}{268}{subsubsection.17.4.6}% 
+\contentsline {subsubsection}{\numberline {17.4.7}组合数公式$05$}{269}{subsubsection.17.4.7}% 
+\contentsline {subsubsection}{\numberline {17.4.8}组合数公式$06$}{270}{subsubsection.17.4.8}% 
+\contentsline {subsubsection}{\numberline {17.4.9}组合数公式$07$}{271}{subsubsection.17.4.9}% 
+\contentsline {subsubsection}{\numberline {17.4.10}组合数公式$08$}{272}{subsubsection.17.4.10}% 
+\contentsline {subsubsection}{\numberline {17.4.11}组合数公式$09$}{273}{subsubsection.17.4.11}% 
+\contentsline {subsubsection}{\numberline {17.4.12}组合数公式$10$}{274}{subsubsection.17.4.12}% 
+\contentsline {subsubsection}{\numberline {17.4.13}组合数公式$11$}{275}{subsubsection.17.4.13}% 
+\contentsline {subsubsection}{\numberline {17.4.14}组合数公式$12$}{276}{subsubsection.17.4.14}% 
+\contentsline {subsection}{\numberline {17.5}二项式定理}{277}{subsection.17.5}% 
+\contentsline {subsubsection}{\numberline {17.5.1}二项式系数的性质$01$}{278}{subsubsection.17.5.1}% 
+\contentsline {subsubsection}{\numberline {17.5.2}二项式系数的性质$02$}{278}{subsubsection.17.5.2}% 
+\contentsline {subsection}{\numberline {17.6}排列组合问题\uppercase {i\relax }}{279}{subsection.17.6}% 
+\contentsline {subsubsection}{\numberline {17.6.1}排列组合问题\uppercase {i\relax }-$01$}{279}{subsubsection.17.6.1}% 
+\contentsline {subsubsection}{\numberline {17.6.2}排列组合问题\uppercase {i\relax }-$02$}{284}{subsubsection.17.6.2}% 
+\contentsline {subsubsection}{\numberline {17.6.3}排列组合问题\uppercase {i\relax }-$03$}{284}{subsubsection.17.6.3}% 
+\contentsline {subsubsection}{\numberline {17.6.4}排列组合问题\uppercase {i\relax }-$04$}{285}{subsubsection.17.6.4}% 
+\contentsline {subsubsection}{\numberline {17.6.5}排列组合问题\uppercase {i\relax }-$05$}{285}{subsubsection.17.6.5}% 
+\contentsline {subsubsection}{\numberline {17.6.6}排列组合问题\uppercase {i\relax }-$06$}{286}{subsubsection.17.6.6}% 
+\contentsline {subsubsection}{\numberline {17.6.7}排列组合问题\uppercase {i\relax }-$07$}{286}{subsubsection.17.6.7}% 
+\contentsline {subsection}{\numberline {17.7}排列组合问题\uppercase {ii\relax }}{287}{subsection.17.7}% 
+\contentsline {subsubsection}{\numberline {17.7.1}排列组合问题\uppercase {ii\relax }-$01$}{287}{subsubsection.17.7.1}% 
+\contentsline {subsubsection}{\numberline {17.7.2}排列组合问题\uppercase {ii\relax }-$02$}{288}{subsubsection.17.7.2}% 
+\contentsline {subsubsection}{\numberline {17.7.3}排列组合问题\uppercase {ii\relax }-$03$}{288}{subsubsection.17.7.3}% 
+\contentsline {subsection}{\numberline {17.8}排列组合问题\uppercase {iii\relax }}{289}{subsection.17.8}% 
+\contentsline {subsubsection}{\numberline {17.8.1}斯特林数}{289}{subsubsection.17.8.1}% 
+\contentsline {subsubsection}{\numberline {17.8.2}排列组合问题\uppercase {iii\relax }-$01$}{292}{subsubsection.17.8.2}% 
+\contentsline {subsubsection}{\numberline {17.8.3}排列组合问题\uppercase {iii\relax }-$02$}{292}{subsubsection.17.8.3}% 
+\contentsline {subsubsection}{\numberline {17.8.4}排列组合问题\uppercase {iii\relax }-$03$}{293}{subsubsection.17.8.4}% 
+\contentsline {section}{\numberline {18}概率论初步}{294}{section.18}% 
+\contentsline {subsection}{\numberline {18.1}随机事件}{294}{subsection.18.1}% 
+\contentsline {subsection}{\numberline {18.2}古典概型}{294}{subsection.18.2}% 
+\contentsline {subsection}{\numberline {18.3}事件关系的运算}{295}{subsection.18.3}% 
+\contentsline {subsubsection}{\numberline {18.3.1}积事件}{295}{subsubsection.18.3.1}% 
+\contentsline {subsubsection}{\numberline {18.3.2}和事件}{295}{subsubsection.18.3.2}% 
+\contentsline {subsubsection}{\numberline {18.3.3}差事件}{296}{subsubsection.18.3.3}% 
+\contentsline {subsubsection}{\numberline {18.3.4}互斥事件}{296}{subsubsection.18.3.4}% 
+\contentsline {subsubsection}{\numberline {18.3.5}对立事件}{296}{subsubsection.18.3.5}% 
+\contentsline {subsection}{\numberline {18.4}概率的加法定理}{296}{subsection.18.4}% 
+\contentsline {subsection}{\numberline {18.5}条件概率的计算}{297}{subsection.18.5}% 
+\contentsline {subsubsection}{\numberline {18.5.1}独立事件}{297}{subsubsection.18.5.1}% 
+\contentsline {subsection}{\numberline {18.6}概率的乘法定理}{297}{subsection.18.6}% 
+\contentsline {section}{\numberline {19}基本统计方法}{298}{section.19}% 
+\contentsline {subsection}{\numberline {19.1}总体均值和总体方差}{298}{subsection.19.1}% 
+\contentsline {subsubsection}{\numberline {19.1.1}总体方差的两种形式}{298}{subsubsection.19.1.1}% 
+\contentsline {subsection}{\numberline {19.2}样本均值和样本方差}{299}{subsection.19.2}% 

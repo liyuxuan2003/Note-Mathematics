@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  11 AUG 2020 12:07
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2019.7.21)  11 AUG 2020 22:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2248,660 +2248,660 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [157] [158]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7219.
+(hyperref)                removing `math shift' on input line 7218.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7219.
+(hyperref)                removing `math shift' on input line 7218.
 
 [159] [160] [161] [162]
-Overfull \hbox (12.39574pt too wide) in paragraph at lines 7433--7433
+Overfull \hbox (12.39574pt too wide) in paragraph at lines 7431--7431
 [][] 
  []
 
 
-Overfull \hbox (12.39574pt too wide) in paragraph at lines 7470--7470
+Overfull \hbox (12.39574pt too wide) in paragraph at lines 7468--7468
 [][] 
  []
 
 [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7921.
+(hyperref)                removing `math shift' on input line 7919.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7921.
+(hyperref)                removing `math shift' on input line 7919.
 
 [175] [176]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8005.
+(hyperref)                removing `math shift' on input line 8002.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8005.
+(hyperref)                removing `math shift' on input line 8002.
 
 [177] [178] [179] [180]
-Overfull \hbox (12.39574pt too wide) in paragraph at lines 8185--8185
+Overfull \hbox (12.39574pt too wide) in paragraph at lines 8181--8181
 [][] 
  []
 
 
-Overfull \hbox (12.39574pt too wide) in paragraph at lines 8210--8210
+Overfull \hbox (12.39574pt too wide) in paragraph at lines 8206--8206
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8218--8222
+Underfull \hbox (badness 10000) in paragraph at lines 8214--8218
 
  []
 
 [181]
-Overfull \hbox (12.39574pt too wide) in paragraph at lines 8258--8258
+Overfull \hbox (12.39574pt too wide) in paragraph at lines 8254--8254
 [][] 
  []
 
 
-Overfull \hbox (12.39574pt too wide) in paragraph at lines 8283--8283
+Overfull \hbox (12.39574pt too wide) in paragraph at lines 8279--8279
 [][] 
  []
 
 [182] [183] [184] [185] [186] [187]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8505.
+(hyperref)                removing `math shift' on input line 8501.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8505.
+(hyperref)                removing `math shift' on input line 8501.
 
 [188] [189]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8592.
+(hyperref)                removing `math shift' on input line 8588.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8592.
+(hyperref)                removing `math shift' on input line 8588.
 
-[190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203] [204] [205] [206]
-Underfull \hbox (badness 10000) in paragraph at lines 9223--9225
+[190] [191] [192] [193] [194] [195] [196] [197] [198] [199]
+Underfull \hbox (badness 10000) in paragraph at lines 8965--8967
 
  []
+
+[200] [201] [202]
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 9096--9096
+[][] 
+ []
+
+
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 9113--9113
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[203] [204] [205] [206]
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 9260--9260
+[][] 
+ []
+
+
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 9278--9278
+[][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [207] [208] [209]
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 9354--9354
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 9387--9387
 [][] 
  []
 
 
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 9371--9371
-[][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[210] [211] [212] [213]
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 9518--9518
-[][] 
- []
-
-
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 9536--9536
+Overfull \hbox (3.75735pt too wide) in paragraph at lines 9405--9405
 [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[214] [215] [216]
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 9645--9645
-[][] 
- []
-
-
-Overfull \hbox (3.75735pt too wide) in paragraph at lines 9663--9663
-[][] 
- []
-
+[210]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[217]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[218] [219] [220]
-Underfull \hbox (badness 10000) in paragraph at lines 9740--9742
+[211] [212] [213]
+Underfull \hbox (badness 10000) in paragraph at lines 9482--9484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9747--9749
+Underfull \hbox (badness 10000) in paragraph at lines 9489--9491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9771--9774
+Underfull \hbox (badness 10000) in paragraph at lines 9513--9516
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9779--9781
+Underfull \hbox (badness 10000) in paragraph at lines 9521--9523
 
  []
 
-[221]
-Underfull \hbox (badness 10000) in paragraph at lines 9819--9821
+[214]
+Underfull \hbox (badness 10000) in paragraph at lines 9561--9563
 
  []
 
-[222]
-Underfull \hbox (badness 10000) in paragraph at lines 9866--9868
+[215]
+Underfull \hbox (badness 10000) in paragraph at lines 9608--9610
 
  []
 
-[223]
-Underfull \hbox (badness 10000) in paragraph at lines 9913--9915
+[216]
+Underfull \hbox (badness 10000) in paragraph at lines 9655--9657
 
  []
 
-[224] [225]
-Underfull \hbox (badness 10000) in paragraph at lines 9990--9993
+[217] [218]
+Underfull \hbox (badness 10000) in paragraph at lines 9732--9735
 
  []
 
-[226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247] [248]
-Underfull \hbox (badness 10000) in paragraph at lines 11120--11138
+[219] [220] [221] [222] [223] [224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238] [239] [240] [241]
+Underfull \hbox (badness 10000) in paragraph at lines 10862--10880
 
  []
 
-[249] [250]
-Underfull \hbox (badness 10000) in paragraph at lines 11189--11206
+[242] [243]
+Underfull \hbox (badness 10000) in paragraph at lines 10931--10948
 
  []
 
-[251] [252]
-Underfull \hbox (badness 10000) in paragraph at lines 11257--11275
+[244] [245]
+Underfull \hbox (badness 10000) in paragraph at lines 10999--11017
 
  []
 
-[253] [254]
-Underfull \hbox (badness 10000) in paragraph at lines 11315--11333
+[246] [247]
+Underfull \hbox (badness 10000) in paragraph at lines 11057--11075
 
  []
 
-[255] [256] [257] [258]
-Underfull \hbox (badness 10000) in paragraph at lines 11428--11444
+[248] [249] [250] [251]
+Underfull \hbox (badness 10000) in paragraph at lines 11170--11186
 
  []
 
-[259] [260] [261]
+[252] [253] [254]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [262] [263] [264]
+ [255] [256] [257]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11712.
+(hyperref)                removing `math shift' on input line 11454.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11712.
+(hyperref)                removing `math shift' on input line 11454.
+
+[258]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11472.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11472.
+
+[259]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11501.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11501.
+
+[260]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11537.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11537.
+
+[261]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11571.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11571.
+
+[262]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11632.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11632.
+
+[263] [264]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11716.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11716.
 
 [265]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11730.
+(hyperref)                removing `math shift' on input line 11734.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11730.
+(hyperref)                removing `math shift' on input line 11734.
 
 [266]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11759.
+(hyperref)                removing `math shift' on input line 11754.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11759.
+(hyperref)                removing `math shift' on input line 11754.
 
 [267]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11795.
+(hyperref)                removing `math shift' on input line 11790.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11795.
+(hyperref)                removing `math shift' on input line 11790.
 
 [268]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11829.
+(hyperref)                removing `math shift' on input line 11826.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11829.
+(hyperref)                removing `math shift' on input line 11826.
 
 [269]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11863.
+(hyperref)                removing `math shift' on input line 11862.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11863.
+(hyperref)                removing `math shift' on input line 11862.
+
+[270]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 11890.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 11890.
 
+[271]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11890.
-
-[270] [271]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11974.
+(hyperref)                removing `math shift' on input line 11910.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11974.
+(hyperref)                removing `math shift' on input line 11910.
 
 [272]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11992.
+(hyperref)                removing `math shift' on input line 11936.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 11992.
+(hyperref)                removing `math shift' on input line 11936.
 
 [273]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12012.
+(hyperref)                removing `math shift' on input line 11961.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12012.
+(hyperref)                removing `math shift' on input line 11961.
 
 [274]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12048.
+(hyperref)                removing `math shift' on input line 11987.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12048.
+(hyperref)                removing `math shift' on input line 11987.
 
 [275]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12084.
+(hyperref)                removing `math shift' on input line 12009.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12084.
+(hyperref)                removing `math shift' on input line 12009.
 
 [276]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12120.
+(hyperref)                removing `math shift' on input line 12070.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12120.
+(hyperref)                removing `math shift' on input line 12070.
 
 [277]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12148.
+(hyperref)                removing `math shift' on input line 12085.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12148.
+(hyperref)                removing `math shift' on input line 12085.
 
 [278]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12168.
+(hyperref)                removing `\uppercase' on input line 12102.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12116--12121
+
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12168.
-
-[279]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12194.
+(hyperref)                removing `\uppercase' on input line 12122.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12194.
-
-[280]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12219.
+(hyperref)                removing `math shift' on input line 12122.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12219.
+(hyperref)                removing `math shift' on input line 12122.
 
-[281]
+[279] [280] [281]
+Underfull \hbox (badness 10000) in paragraph at lines 12323--12414
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12245.
+ []
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12245.
-
-[282]
+[282] [283]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12267.
+(hyperref)                removing `\uppercase' on input line 12512.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12267.
-
-[283]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12328.
+(hyperref)                removing `math shift' on input line 12512.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12328.
+(hyperref)                removing `math shift' on input line 12512.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12518--12538
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 12539.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12539.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12539.
 
 [284]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12343.
+(hyperref)                removing `\uppercase' on input line 12555.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12343.
+(hyperref)                removing `math shift' on input line 12555.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12555.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12561--12580
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 12581.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12581.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12581.
 
 [285]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12360.
+(hyperref)                removing `\uppercase' on input line 12598.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12374--12379
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12598.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12598.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12604--12626
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12380.
+(hyperref)                removing `\uppercase' on input line 12627.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12380.
+(hyperref)                removing `math shift' on input line 12627.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12380.
+(hyperref)                removing `math shift' on input line 12627.
 
-[286] [287] [288]
-Underfull \hbox (badness 10000) in paragraph at lines 12581--12672
-
- []
-
-[289] [290]
+[286]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12770.
+(hyperref)                removing `\uppercase' on input line 12642.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12770.
+(hyperref)                removing `\uppercase' on input line 12662.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12770.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12776--12796
-
- []
+(hyperref)                removing `math shift' on input line 12662.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12797.
+(hyperref)                removing `math shift' on input line 12662.
+
+[287]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 12682.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12797.
+(hyperref)                removing `math shift' on input line 12682.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12797.
-
-[291]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12813.
+(hyperref)                removing `math shift' on input line 12682.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12813.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12813.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12819--12838
+Underfull \hbox (badness 10000) in paragraph at lines 12688--12693
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12839.
+(hyperref)                removing `\uppercase' on input line 12695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12839.
+(hyperref)                removing `math shift' on input line 12695.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12839.
+(hyperref)                removing `math shift' on input line 12695.
+
+[288]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 12712.
+
+[289] [290] [291]
+Underfull \hbox (badness 10000) in paragraph at lines 12808--12810
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 12811.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12811.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12811.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12817--12820
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\uppercase' on input line 12821.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12821.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 12821.
 
 [292]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12856.
+(hyperref)                removing `\uppercase' on input line 12833.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12856.
+(hyperref)                removing `math shift' on input line 12833.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12856.
+(hyperref)                removing `math shift' on input line 12833.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 12862--12884
+[293] [294]
+Underfull \hbox (badness 10000) in paragraph at lines 12960--12963
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12885.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12885.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12885.
-
-[293]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12900.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12920.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12920.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12920.
-
-[294]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12940.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12940.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12940.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12946--12951
+Underfull \hbox (badness 10000) in paragraph at lines 12975--12978
 
  []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12953.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12953.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 12953.
 
 [295]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 12970.
-
-[296] [297] [298]
-Underfull \hbox (badness 10000) in paragraph at lines 13066--13068
+Underfull \hbox (badness 10000) in paragraph at lines 13001--13004
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 13069.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13069.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13069.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13075--13078
+Underfull \hbox (badness 10000) in paragraph at lines 13010--13013
 
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 13079.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13079.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13079.
-
-[299]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 13091.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13091.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13091.
-
-[300] [301]
-Underfull \hbox (badness 10000) in paragraph at lines 13218--13221
+Underfull \hbox (badness 10000) in paragraph at lines 13020--13024
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 13233--13236
-
- []
-
-[302]
-Underfull \hbox (badness 10000) in paragraph at lines 13259--13262
+[296]
+Underfull \hbox (badness 10000) in paragraph at lines 13067--13071
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 13268--13271
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13278--13282
+[297]
+Underfull \hbox (badness 10000) in paragraph at lines 13104--13107
 
  []
 
-[303]
-Underfull \hbox (badness 10000) in paragraph at lines 13325--13329
-
- []
-
-[304]
-Underfull \hbox (badness 10000) in paragraph at lines 13362--13365
-
- []
-
-[305] [306]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13404.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 13404.
+[298] [299]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 13146.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 13146.
  (./MathematicsNote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 13404.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 13404.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 13146.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 13146.
 Package rerunfilecheck Info: File `MathematicsNote.out' has not changed.
-(rerunfilecheck)             Checksum: 29F5F4496E70A1972073F714684CC3DE.
+(rerunfilecheck)             Checksum: 0EF56DD0BAD8ED0BB466B0E06FA249FE.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13404.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 13146.
  ) 
 Here is how much of TeX's memory you used:
- 58326 strings out of 492922
- 1341545 string characters out of 6136751
- 1517822 words of memory out of 5000000
- 61604 multiletter control sequences out of 15000+600000
+ 58432 strings out of 492922
+ 1343553 string characters out of 6136751
+ 1517816 words of memory out of 5000000
+ 61710 multiletter control sequences out of 15000+600000
  550109 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  74i,21n,150p,762b,1068s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MathematicsNote.pdf (306 pages).
+Output written on MathematicsNote.pdf (299 pages).
