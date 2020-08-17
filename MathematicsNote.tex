@@ -8881,600 +8881,1027 @@
 \newpage
 
 \subsection{圆锥曲线的第二定义}
+    \setcounter{equation}{0}
     圆锥曲线的第二定义：到一个定焦点和到一个定准线的距离之比为常数的点的轨迹。\\[3mm]
-    圆锥曲线的第二定义可以用下图表示：
+    圆锥曲线中的常数称为离心率，通常用$e$表示，其取值决定了圆锥曲线的类型。\\[3mm]
+    圆锥曲线的类型和离心率的关系如下：\vspace{5pt}
+    \begin{table}[h]
+        \begin{center}
+            \begin{tabular}{p{130pt}|p{80pt}}
+                \hline
+                圆（Circle）&$e=0$\\ \hline
+                椭圆（Ellipse）&$e<1$\\ \hline
+                抛物线（Parabola）&$e=1$\\ \hline
+                双曲线（Hyperbola）&$e>1$\\ \hline
+            \end{tabular}
+            \caption{圆锥曲线的类型和离心率的关系}
+        \end{center}
+    \end{table}\\
+    我们首先研究这样一种特殊情况，焦点被固定在$x$轴上，准线被固定为垂直于$x$轴。\\[3mm]
+    我们研究的这种情况可以用下图表示：\vspace{5pt}
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}
-                \tkzDefPoint(0,0){O}
 
-                \tkzDefPoint(-7,0){X1}
-                \tkzDefPoint(+7,0){X2}
-
-                \tkzDefPoint(0,-4){Y1}
-                \tkzDefPoint(0,+4){Y2}
+                \tkzDefPoint(-6,0){X1}
+                \tkzDefPoint(+6,0){X2}
 
                 \tkzDrawSegment[->](X1,X2)
-                \tkzDrawSegment[->](Y1,Y2)
+                \tkzLabelPoint[above](X2){$x$}
 
-                \tkzDrawPoint[fill=white](O)
+                \tkzDefPoint(-3,0){L}
+                \tkzDefPoint(+3,0){F}
 
-                \draw[cyan,thick] (0,0) ellipse (1 and 0.866);
-                \draw[cyan,thick] plot[variable=\t,domain=0:1] ({8*\t^2},{8*\t});
-                \draw[cyan,thick] plot[variable=\t,domain=-40:40] ({4*sec(\t)},{6.928*tan(\t)});
+                \tkzDefShiftPoint[L](0,-2.5){L1}
+                \tkzDefShiftPoint[L](0,+2.5){L2}
+
+                \tkzDrawSegment[dashed](L1,L2)
+                \tkzDrawSegment[very thick,-latex](L,F)
+
+                \tkzLabelPoint[below](L1){$L:x=l$}
+                \tkzLabelPoint[below](F){$F(f~,~0)$}
+                \tkzLabelPoint[below right](L){$L(l~,~0)$}
+
+                \tkzLabelSegment[above,pos=0.8](L,F){$p$}
+
+                \tkzDrawPoints[fill=white](L,F)
             \end{tikzpicture}
             \caption{圆锥曲线的第二定义}
         \end{center}
-    \end{figure}
-
-\newpage
-    其中我们将比值$e$称为离心率，而圆锥曲线的类型正是和离心率的取值有关：\vspace{5pt}
-    \setcounter{equation}{0}
-    \begin{table}[h]
-        \begin{center}
-            \begin{tabular}{l|l}
-                \hline
-                离心率范围\qquad\qquad\qquad\qquad&圆锥曲线类型\qquad\qquad\qquad\qquad\\ \hline
-                $e=0$&圆\\ \hline
-                $e<1$&椭圆\\ \hline
-                $e=1$&抛物线\\ \hline
-                $e>1$&双曲线\\ \hline
-            \end{tabular}
-            \caption{离心率和圆锥曲线类型}
-        \end{center}
-    \end{table}\\
-    接下来将证明圆锥曲线的第二定义符合其原始定义，同时推导相关性质。\\[6mm]
-    设定焦点$F$的横坐标为$n$：
-    \setcounter{equation}{0}
-    \begin{align}
-        ~F~(~n~,~0~)
-    \end{align}\\
-    设定准线$L$的横坐标为$m$：
-    \begin{align}
-        L:x=m
-    \end{align}\\
-    焦点至准线的有向距离称为焦准距，用符号$p$表示。\\[3mm]
-    焦准距可以表示为：
-    \begin{align}
-        p=n-m
-    \end{align}\\
-    当焦准距$p>0$时，说明焦点的横坐标较大，代表焦点在准线右侧。\\[2mm]
-    当焦准距$p<0$时，说明焦点的横坐标较小，代表焦点在准线左侧。
+    \end{figure}\\
+    设焦点$F$的横坐标为$f$，即焦点坐标为$F(f~,~0)$。\\[3mm]
+    设准线$L$的横坐标为$l$\hspace{2.0pt}，即准线方程为$L:x=l$。\\[3mm]
+    设焦准距$p$为准线和$x$轴的交点$L$指向焦点$F$的有向距离，向右时取正，向左时取负。\\[3mm]
+    故焦准距可以表示为：
+    \begin{large}
+        \begin{equation*}
+            p=f-l
+        \end{equation*}
+    \end{large}\\
+    即焦准距为焦点的横坐标减去准线的横坐标。
 
 \newpage
 
     平面上一点$(x,y)$到定焦点的距离为：
     \begin{align}
-        d_F=\sqrt{(x-n)^2+y^2}
+        d_F=\sqrt{(x-f)^2+y^2}
     \end{align}\\
     平面上一点$(x,y)$到定准线的距离为：
     \begin{align}
-        d_L=|x-m|
+        d_L=|x-l|
     \end{align}\\
-    离心率$e$为点到定焦点和定准线的距离比：
+    离心率为两者的距离比：
     \begin{equation}
-        e=\frac{d_F}{d_L}=\frac{\sqrt{(x-n)^2+y^2}}{|x-m|}
+        e=\frac{d_F}{d_L}=\frac{\sqrt{(x-f)^2+y^2}}{|x-l|}
     \end{equation}\\[1mm]
     对其变形展开可以得到：
     \begin{align}
-        &~\sqrt{(x-n)^2+y^2}=e\cdot|x-m|\\[5mm]
-        &~(x-n)^2+y^2=e^2\cdot(x-m)^2\\[5mm]
-        &\left(x^2-2nx+n^2\right)+y^2=e^2\cdot\left(x^2-2mx+m^2\right)\\[5mm]
-        &~x^2-2nx+n^2+y^2=e^2x^2-2me^2x+m^2e^2\\[5mm]
-        &\left(1-e^2\right)x^2+2\left(me^2-n\right)x+y^2=m^2e^2-n^2
+        &~\sqrt{(x-f)^2+y^2}=e\cdot|x-l|\\[7mm]
+        &~(x-f)^2+y^2=e^2\cdot(x-l)^2\\[7mm]
+        &\left(x^2-2fx+f^2\right)+y^2=e^2\cdot\left(x^2-2lx+m^2\right)\\[7mm]
+        &~x^2-2fx+f^2+y^2=e^2x^2-2le^2x+l^2e^2\\[7mm]
+        &~x^2-e^2x^2+2le^2x-2fx+y^2=l^2e^2-f^2\\[7mm]
+        &\left(1-e^2\right)\cdot x^2+2\cdot\left(le^2-f\right)\cdot x+y^2=l^2e^2-f^2
     \end{align}\\
-    接下来将对此处得到的结论进行讨论。\\[6mm]
+    由此得到这样一个方程：
+    \begin{large}
+        \begin{equation*}
+            \left(1-e^2\right)\cdot x^2+2\cdot\left(le^2-f\right)\cdot x+y^2=l^2e^2-f^2
+        \end{equation*}
+    \end{large}\\
+    其描述了一条圆锥曲线，离心率为$e$，焦点位于$x$轴横坐标为$f$，准线垂直于$x$轴横坐标为$l$。\\[3mm]
+    接下来将据此推导圆锥曲线的中心点在原点的情况，同时证明圆锥曲线第二定义与原定义相符，
+    并研究圆锥曲线第二定义的参量和圆锥曲线标准方程的参量间的关系。
 
 \newpage
 
-\subsubsection{椭圆的圆锥曲线第二定义}
+\subsubsection{圆锥曲线的第二定义在椭圆中的应用}
     \setcounter{equation}{0}
-    对于上述得出的结论：
+    对于中心点在原点的椭圆，其$x$的一次项系数必然为零。\\[3mm]
+    因此在方程中：
     \begin{align}
-        \left(1-e^2\right)x^2+2\left(me^2-n\right)x+y^2=m^2e^2-n^2
+        \left(1-e^2\right)\cdot x^2+2\cdot\left(le^2-f\right)\cdot x+y^2=l^2e^2-f^2
     \end{align}\\
-    其在椭圆中必须满足以下条件：
+    需要满足等式：
     \begin{align}
-        &2\left(me^2-n\right)=0
+        &2(le^2-f)=0\\[3mm]
+        &2le^2=2f\\[3mm]
+        &le^2=f
     \end{align}\\
-    这是因为椭圆的标准方程下，椭圆的中心点位于原点$O(0,0)$，故$x$的一次项系数为零。\\[10mm]
-    对其化简可得：
+    故椭圆的焦点和准线有以下关系：
+    \begin{large}
+        \begin{equation*}
+            f=le^2
+        \end{equation*}
+    \end{large}\\
+    故中心点在原点的椭圆，若离心率一定，已知焦点可以确定准线，已知准线也可以确定焦点。\\[10mm]
+    将以上结论代入方程可得：
     \begin{align}
-        &me^2-n=0\\[3mm]
-        &n=me^2
+        &\left(1-e^2\right)\cdot x^2+y^2=l^2e^2-f^2\\[3mm]
+        &\left(1-e^2\right)\cdot x^2+y^2=l^2e^2-m^2e^4\\[3mm]
+        &\left(1-e^2\right)\cdot x^2+y^2=l^2e^2\cdot\left(1-e^2\right)\\[3mm]
+        &\frac{x^2}{l^2e^2}+\frac{y^2}{l^2e^2\cdot\left(1-e^2\right)}=1
     \end{align}\\
-    代入方程可得：
+    由此可推导离心率的范围：
     \begin{align}
-        &\left(1-e^2\right)x^2+y^2=m^2e^2-n^2\\[3mm]
-        &\left(1-e^2\right)x^2+y^2=m^2e^2-m^2e^4\\[3mm]
-        &\left(1-e^2\right)x^2+y^2=m^2e^2\cdot\left(1-e^2\right)\\[3mm]
-        &\frac{x^2}{m^2e^2}+\frac{y^2}{m^2e^2\cdot\left(1-e^2\right)}=1
-    \end{align}\\[1mm]
-    椭圆的离心率范围推动如下：\vspace{3pt}
-    \begin{align}
-        &m^2e^2\cdot\left(1-e^2\right)>0\\[3mm]
+        &l^2e^2\cdot\left(1-e^2\right)>0~~~~~~\\[3mm]
         &1-e^2>0\\[3mm]
         &e^2<1\\[3mm]
         &e<1
     \end{align}\\
-    这是因为椭圆中$y$的二次项下的系数必然大于零。
+    由此证明了圆锥曲线的第二定义在$e<1$时，得出的椭圆方程与原定义下的方程相同。
 
 \newpage
 
-    由上述的结论：
+    根据圆锥曲线第二定义下的椭圆方程：
     \begin{align}
-        \frac{x^2}{m^2e^2}+\frac{y^2}{m^2e^2\cdot\left(1-e^2\right)}=1
+        \frac{x^2}{l^2e^2}+\frac{y^2}{l^2e^2\cdot\left(1-e^2\right)}=1
     \end{align}\\
-    可以推得椭圆的半长轴：
+    求解半长轴$a$并两次代入$l=\dfrac{f}{e^2}$：
     \begin{align}
-        a^2&=m^2e^2~~~~~~~~~~~~~~~~
+        &a^2=l^2e^2\\[4mm]
+        &a^2=fl\\[4mm]
+        &a^2=\frac{f^2}{e^2}
     \end{align}\\
-    可以推得椭圆的半短轴：
+    求解半短轴$b$并两次代入$l=\dfrac{f}{e^2}$：
     \begin{align}
-        b^2=m^2e^2\cdot\left(1-e^2\right)
+        &b^2=l^2e^2\cdot(1-e^2)\\[4mm]
+        &b^2=fl\cdot(1-e^2)\\[4mm]
+        &b^2=\frac{f^2}{e^2}\cdot\left(1-e^2\right)
     \end{align}\\
-    可以推得椭圆的半焦距：
+    求解半焦距$c$并两次代入$f=le^2$：
     \begin{align}
-        ~~~~~~~~~~~~c^2&=a^2-b^2\\[5mm]
-        &=m^2e^2-m^2e^2\cdot\left(1-e^2\right)\\[5mm]
-        &=m^2e^2\cdot\left(1-1+e^2\right)\\[5mm]
-        &=m^2e^2\cdot e^2\\[5mm]
-        &=m^2e^4
+        &c^2=f^2\\[4mm]
+        &c^2=fle^2\\[4mm]
+        &c^2=l^2e^4
     \end{align}\\
-    椭圆的半长轴：
+    椭圆中圆锥曲线标准方程的参量可以表示为：\vspace{5pt}
     \begin{large}
         \begin{equation*}
-            a^2=m^2e^2
+            ~~~~
+            \begin{cases}
+                ~a^2=l^2e^2\\[5mm]
+                ~b^2=l^2e^2\cdot\left(1-e^2\right)\\[5mm]
+                ~c^2=l^2e^4
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~a^2=fl\\[5mm]
+                ~b^2=fl\cdot\left(1-e^2\right)\\[5mm]
+                ~c^2=fle^2
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~a^2=\dfrac{f^2}{e^2}\\[5mm]
+                ~b^2=\dfrac{f^2}{e^2}\cdot\left(1-e^2\right)\\[5mm]
+                ~c^2=f^2
+            \end{cases}
         \end{equation*}
     \end{large}\\
-    椭圆的半短轴：
-    \begin{large}
-        \begin{equation*}
-            b^2=m^2e^2\cdot\left(1-e^2\right)
-        \end{equation*}
-    \end{large}\\
-    椭圆的半焦距：
-    \begin{large}
-        \begin{equation*}
-            c^2=m^2e^4
-        \end{equation*}
-    \end{large}\\
-    由于椭圆的焦点为$F(n,0)$，因此半焦距和焦点横坐标的关系为$c=|n|$。
+    由此得到了椭圆中圆锥曲线标准方程的参量和圆锥曲线第二定义的参量的关系。
 
 \newpage
 
-    推导离心率$e$：
+    证明椭圆的离心率：
     \begin{align}
-        &c=\left|me^2\right|\qquad a=|me|\\[3mm]
-        &e=|e|=\left|\frac{me\cdot e}{me}\right|=\left|\frac{me^2}{me}\right|=\frac{\left|me^2\right|}{|me|}=\frac{c}{a}
+        &\frac{c^2}{a^2}=\frac{l^2e^4}{l^2e^2}~~~~~~~~~~~~~~\\[3mm]
+        &\frac{c^2}{a^2}=e^2\\[3mm]
+        &\frac{c}{a}=e
     \end{align}\\
-    推导准线$m$：
+    证明椭圆的焦准距：
     \begin{align}
-        &n=me^2\qquad a^2=m^2e^2\\[3mm]
-        &m
-        =\frac{me^2\cdot m}{me^2}
-        =\frac{m^2e^2}{me^2}
-        =\frac{a^2}{n}
+        &\frac{b^2}{f}=\frac{fl}{f}\cdot\left(1-e^2\right)\\[3mm]
+        &\frac{b^2}{f}=l\cdot\left(1-e^2\right)\\[3mm]
+        &\frac{b^2}{f}=l-le^2\\[3mm]
+        &\frac{b^2}{f}=l-f\\[3mm]
+        &\frac{b^2}{f}=-p
     \end{align}\\
-    推导焦准距$p$：
+    证明椭圆的准线坐标：
     \begin{align}
-        &n=me^2\qquad b^2=m^2e^2\cdot\left(1-e^2\right)\\[3mm]
-        &p
-        =-m\cdot\left(1-e^2\right)
-        =-\frac{me^2\cdot m\cdot\left(1-e^2\right)}{me^2}
-        =-\frac{m^2e^2\cdot\left(1-e^2\right)}{me^2}
-        =-\frac{b^2}{n}
+        &\frac{a^2}{f}=\frac{f\cdot l}{f}~~~~~~~~~~~~~~\\[3mm]
+        &\frac{a^2}{f}=l
     \end{align}\\
-    得出以下结论：
+    椭圆中圆锥曲线第二定义的参量可以表示为：\vspace{3pt}
     \begin{large}
         \begin{equation*}
-            e=\frac{f}{l}\qquad m=\frac{l^2}{h}\qquad p=-\frac{s^2}{h}
+            \begin{cases}
+                ~e\hspace{2.0pt}=\dfrac{c}{a}\\[6mm]
+                ~l\hspace{3.0pt}=+\dfrac{a^2}{f}\\[6mm]
+                ~p=-\dfrac{b^2}{f}
+            \end{cases}~~~~~~~~~\big(f=\pm c\big)
         \end{equation*}
-    \end{large}\\[1mm]
-    当$h<0$时，$F$为左焦点，$l$为左准线，准线方程为$x=-\dfrac{l^2}{f}$，\\[1mm]
-    由于此时$p>0$，故焦点在准线右侧。\\[3mm]
-    当$h>0$时，$F$为右焦点，$l$为右准线，准线方程为$x=+\dfrac{l^2}{f}$，\\[1mm]
-    由于此时$p<0$，故焦点在准线左侧。\vspace{6pt}
+    \end{large}\\
+    由此得到了椭圆中圆锥曲线第二定义的参量和圆锥曲线标准方程的参量的关系。
+
+\newpage
+
+    当焦点坐标$f=\pm c$时分别可以得到：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~f=+c\\[6mm]
+                ~l\hspace{2.5pt}=+\dfrac{a^2}{c}\\[6mm]
+                ~p=-\dfrac{b^2}{c}
+            \end{cases}
+            ~~~~~~~~~~~~~~~~~~~~
+            \begin{cases}
+                ~f=-c\\[6mm]
+                ~l\hspace{2.5pt}=-\dfrac{a^2}{c}\\[6mm]
+                ~p=+\dfrac{b^2}{c}
+            \end{cases}
+        \end{equation*}
+    \end{large}\\[2mm]
+    当焦点坐标$f=+c$时的椭圆图像：
     \begin{figure}[h]
         \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.42\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
-                        \draw[->] (-9,0) -- (9,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan] (0,0) ellipse (4.5 and 3.5);
-                        \fill (-2,0) circle (4pt);
-                        \node at(-2,-1) {$F$};
-                        \draw[dashed] (-7,4.3) -- (-7,-4.3);
-                        \node at(-7,-5.3) {$l$};
-                    \end{tikzpicture}
-                    \caption{对于$h<0$的椭圆图像}
-                \end{minipage}
-            }\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.42\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
-                        \draw[->] (-9,0) -- (9,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan] (0,0) ellipse (4.5 and 3.5);
-                        \fill (2,0) circle (4pt);
-                        \node at(2,-1) {$F$};
-                        \draw[dashed] (7,4.3) -- (7,-4.3);
-                        \node at(7,-5.3) {$l$};
-                    \end{tikzpicture}
-                    \caption{对于$h>0$的椭圆图像}
-                \end{minipage}
-            }
+            \begin{tikzpicture}[scale=0.35]
+                \draw[->] (-11,0) -- (11,0) node[above] {$x$};
+                \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+
+                \draw[cyan,thick] (0,0) ellipse (4.5 and 3.5);
+
+                \tkzDefPoint(+2,0){F}
+                \tkzDefPoint(+7,0){L}
+
+                \tkzDefShiftPoint[L](0,-4.3){L1}
+                \tkzDefShiftPoint[L](0,+4.3){L2}
+
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzLabelPoint[below](L1){$L$}
+                \tkzLabelPoint[below](F){$F$}
+
+                \tkzDrawPoints[fill=white](F,L)
+            \end{tikzpicture}
+            \caption{对于$f=+c$时的椭圆图像}
         \end{center}
-    \end{figure}
+    \end{figure}\\
+    当焦点坐标$f=-c$时的椭圆图像：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.35]
+                \draw[->] (-11,0) -- (11,0) node[above] {$x$};
+                \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+
+                \draw[cyan,thick] (0,0) ellipse (4.5 and 3.5);
+
+                \tkzDefPoint(-2,0){F}
+                \tkzDefPoint(-7,0){L}
+
+                \tkzDefShiftPoint[L](0,-4.3){L1}
+                \tkzDefShiftPoint[L](0,+4.3){L2}
+
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzLabelPoint[below](L1){$L$}
+                \tkzLabelPoint[below](F){$F$}
+
+                \tkzDrawPoints[fill=white](F,L)
+            \end{tikzpicture}
+            \caption{对于$f=-c$时的椭圆图像}
+        \end{center}
+    \end{figure}\\
+    对于中心点在原点的椭圆，公式指出焦点和准线总是在原点的同一侧。\\[3mm]
+    当焦点坐标$f=+c$时，公式指出$p$为负，即焦点在准线左侧，即焦点比准线更靠近原点。\\[3mm]
+    当焦点坐标$f=-c$时，公式指出$p$为正，即焦点在准线右侧，即焦点比准线更靠近原点。
 
 \newpage
 
-    以焦点在左侧的椭圆为例，推导椭圆的焦半径：\vspace{5pt}
+\subsubsection{圆锥曲线的第二定义在双曲线中的应用}
+    \setcounter{equation}{0}
+    对于中心点在原点的双曲线，其$x$的一次项系数必然为零。\\[3mm]
+    因此在方程中：
+    \begin{align}
+        \left(1-e^2\right)\cdot x^2+2\cdot\left(le^2-f\right)\cdot x+y^2=l^2e^2-f^2
+    \end{align}\\
+    需要满足等式：
+    \begin{align}
+        &2(le^2-f)=0\\[3mm]
+        &2le^2=2f\\[3mm]
+        &le^2=f
+    \end{align}\\
+    故双曲线的焦点和准线有以下关系：
+    \begin{large}
+        \begin{equation*}
+            f=le^2
+        \end{equation*}
+    \end{large}\\
+    故中心点在原点的双曲线，若离心率一定，已知焦点可以确定准线，已知准线也可以确定焦点。\\[10mm]
+    将以上结论代入方程可得：
+    \begin{align}
+        &\left(1-e^2\right)\cdot x^2+y^2=l^2e^2-f^2\\[3mm]
+        &\left(1-e^2\right)\cdot x^2+y^2=l^2e^2-m^2e^4\\[3mm]
+        &\left(1-e^2\right)\cdot x^2+y^2=l^2e^2\cdot\left(1-e^2\right)\\[3mm]
+        &\frac{x^2}{l^2e^2}+\frac{y^2}{l^2e^2\cdot\left(1-e^2\right)}=1
+    \end{align}\\
+    由此可推导离心率的范围：
+    \begin{align}
+        &l^2e^2\cdot\left(1-e^2\right)<0~~~~~~\\[3mm]
+        &1-e^2<0\\[3mm]
+        &e^2>1\\[3mm]
+        &e>1
+    \end{align}\\
+    由此证明了圆锥曲线的第二定义在$e>1$时，得出的双曲线方程与原定义下的方程相同。
+
+\newpage
+
+    根据圆锥曲线第二定义下的双曲线方程：
+    \begin{align}
+        \frac{x^2}{l^2e^2}-\frac{y^2}{l^2e^2\cdot\left(e^2-1\right)}=1
+    \end{align}\\
+    求解半实轴$a$并两次代入$l=\dfrac{f}{e^2}$：
+    \begin{align}
+        &a^2=l^2e^2\\[4mm]
+        &a^2=fl\\[4mm]
+        &a^2=\frac{f^2}{e^2}
+    \end{align}\\
+    求解半虚轴$b$并两次代入$l=\dfrac{f}{e^2}$：
+    \begin{align}
+        &b^2=l^2e^2\cdot(e^2-1)\\[4mm]
+        &b^2=fl\cdot(e^2-1)\\[4mm]
+        &b^2=\frac{f^2}{e^2}\cdot\left(e^2-1\right)
+    \end{align}\\
+    求解半焦距$c$并两次代入$f=le^2$：
+    \begin{align}
+        &c^2=f^2\\[4mm]
+        &c^2=fle^2\\[4mm]
+        &c^2=l^2e^4
+    \end{align}\\
+    双曲线中圆锥曲线标准方程的参量可以表示为：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            ~~~~
+            \begin{cases}
+                ~a^2=l^2e^2\\[5mm]
+                ~b^2=l^2e^2\cdot\left(e^2-1\right)\\[5mm]
+                ~c^2=l^2e^4
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~a^2=fl\\[5mm]
+                ~b^2=fl\cdot\left(e^2-1\right)\\[5mm]
+                ~c^2=fle^2
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~a^2=\dfrac{f^2}{e^2}\\[5mm]
+                ~b^2=\dfrac{f^2}{e^2}\cdot\left(e^2-1\right)\\[5mm]
+                ~c^2=f^2
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    由此得到了双曲线中圆锥曲线标准方程的参量和圆锥曲线第二定义的参量的关系。
+
+\newpage
+
+    证明双曲线的离心率：
+    \begin{align}
+        &\frac{c^2}{a^2}=\frac{l^2e^4}{l^2e^2}~~~~~~~~~~~~~~\\[3mm]
+        &\frac{c^2}{a^2}=e^2\\[3mm]
+        &\frac{c}{a}=e
+    \end{align}\\
+    证明双曲线的焦准距：
+    \begin{align}
+        &\frac{b^2}{f}=\frac{fl}{f}\cdot\left(e^2-1\right)\\[3mm]
+        &\frac{b^2}{f}=l\cdot\left(e^2-1\right)\\[3mm]
+        &\frac{b^2}{f}=le^2-l\\[3mm]
+        &\frac{b^2}{f}=f-l\\[3mm]
+        &\frac{b^2}{f}=p
+    \end{align}\\
+    证明双曲线的准线坐标：
+    \begin{align}
+        &\frac{a^2}{f}=\frac{f\cdot l}{f}~~~~~~~~~~~~~~\\[3mm]
+        &\frac{a^2}{f}=l
+    \end{align}\\
+    双曲线中圆锥曲线第二定义的参量可以表示为：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~e\hspace{2.0pt}=\dfrac{c}{a}\\[6mm]
+                ~l\hspace{3.0pt}=+\dfrac{a^2}{f}\\[6mm]
+                ~p=+\dfrac{b^2}{f}
+            \end{cases}~~~~~~~~~\big(f=\pm c\big)
+        \end{equation*}
+    \end{large}\\
+    由此得到了双曲线中圆锥曲线第二定义的参量和圆锥曲线标准方程的参量的关系。
+
+\newpage
+
+    当焦点坐标$f=\pm c$时分别可以得到：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~f=+c\\[6mm]
+                ~l\hspace{2.5pt}=+\dfrac{a^2}{c}\\[6mm]
+                ~p=+\dfrac{b^2}{c}
+            \end{cases}
+            ~~~~~~~~~~~~~~~~~~~~
+            \begin{cases}
+                ~f=-c\\[6mm]
+                ~l\hspace{2.5pt}=-\dfrac{a^2}{c}\\[6mm]
+                ~p=-\dfrac{b^2}{c}
+            \end{cases}
+        \end{equation*}
+    \end{large}\\[2mm]
+    当焦点坐标$f=+c$时的双曲线图像：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.35]
+                \draw[->] (-11,0) -- (11,0) node[above] {$x$};
+                \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+
+                \draw[cyan,thick] plot[variable=\t,domain=-77:77] ({1.5*sec(\t)},{tan(\t)});
+                \draw[cyan,thick] plot[variable=\t,domain=-77:77] ({1.5*-sec(\t)},{tan(\t)});
+
+                \tkzDefPoint(+3.5,0){F}
+                \tkzDefPoint(+0.85,0){L}
+
+                \tkzDefShiftPoint[L](0,-4.3){L1}
+                \tkzDefShiftPoint[L](0,+4.3){L2}
+
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzLabelPoint[below](L1){$L$}
+                \tkzLabelPoint[below](F){$F$}
+
+                \tkzDrawPoints[fill=white](F,L)
+            \end{tikzpicture}
+            \caption{对于$f=+c$时的双曲线图像}
+        \end{center}
+    \end{figure}\\
+    当焦点坐标$f=-c$时的双曲线图像：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.35]
+                \draw[->] (-11,0) -- (11,0) node[above] {$x$};
+                \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+
+                \draw[cyan,thick] plot[variable=\t,domain=-77:77] ({1.5*sec(\t)},{tan(\t)});
+                \draw[cyan,thick] plot[variable=\t,domain=-77:77] ({1.5*-sec(\t)},{tan(\t)});
+
+                \tkzDefPoint(-3.5,0){F}
+                \tkzDefPoint(-0.85,0){L}
+
+                \tkzDefShiftPoint[L](0,-4.3){L1}
+                \tkzDefShiftPoint[L](0,+4.3){L2}
+
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzLabelPoint[below](L1){$L$}
+                \tkzLabelPoint[below](F){$F$}
+
+                \tkzDrawPoints[fill=white](F,L)
+            \end{tikzpicture}
+            \caption{对于$f=-c$时的双曲线图像}
+        \end{center}
+    \end{figure}\\
+    对于中心点在原点的双曲线，公式指出焦点和准线总是在原点的同一侧。\\[3mm]
+    当焦点坐标$f=+c$时，公式指出$p$为正，即焦点在准线右侧，即焦点比准线更远离原点。\\[3mm]
+    当焦点坐标$f=-c$时，公式指出$p$为负，即焦点在准线左侧，即焦点比准线更远离原点。
+
+\newpage
+
+\subsubsection{圆锥曲线的第二定义在抛物线中的应用}
+    \setcounter{equation}{0}
+    在圆锥曲线的方程中：
+    \begin{align}
+        \left(1-e^2\right)\cdot x^2+2\cdot\left(le^2-f\right)\cdot x+y^2=l^2e^2-f^2
+    \end{align}\\
+    对于焦点在水平轴的抛物线，其二次项系数必然为零：\vspace{3pt}
+    \begin{align}
+        &1-e^2=0~~~\\[3mm]
+        &e^2=1\\[3mm]
+        &e=1
+    \end{align}\\
+    对于中心点在原点的抛物线，其常数项系数必然为零：\vspace{3pt}
+    \begin{align}
+        &l^2e^2-f^2=0\\[3mm]
+        &f^2=l^2e^2\\[3mm]
+        &f^2=l^2\\[3mm]
+        &f=-l
+    \end{align}\\
+    故抛物线的焦点和准线有以下关系：
+    \begin{large}
+        \begin{equation*}
+            f=-l
+        \end{equation*}
+    \end{large}\\
+    故中心点在原点的抛物线，焦点横坐标总是和准线横坐标互为相反数。\\[10mm]
+    将以上的结论代入方程可得：
+    \begin{align}
+        &2\cdot(le^2-f)\cdot x+y^2=0~~\\[3mm]
+        &2\cdot(l-f)\cdot x+y^2=0\\[3mm]
+        &y^2=2\cdot(f-l)\cdot x\\[3mm]
+        &y^2=2px
+    \end{align}\\
+    由此证明了圆锥曲线的第二定义在$e=1$时，得出的抛物线方程与原定义下的方程相同。\\[3mm]
+    
+\newpage
+
+    根据焦准距$p=f-l$的定义可知：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            ~~\begin{cases}
+                ~f=+\dfrac{p}{2}\\[8mm]
+                ~l\hspace{2.5pt}=-\dfrac{p}{2}
+            \end{cases}
+        \end{equation*}
+    \end{large}\\[2mm]
+    当焦准距$p>0$时的抛物线图像：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth,scale=0.35]
+                \draw[->] (-11,0) -- (11,0) node[above] {$x$};
+                \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+
+                \draw[cyan,thick] plot[variable=\t,domain=-4:0] ({-0.4*\t^2},{\t});
+                \draw[cyan,thick] plot[variable=\t,domain=0:4] ({0.4*\t^2},{\t});
+
+                \tkzDefPoint(+2,0){F}
+                \tkzDefPoint(-2,0){L}
+
+                \tkzDefShiftPoint[L](0,-4.3){L1}
+                \tkzDefShiftPoint[L](0,+4.3){L2}
+
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzLabelPoint[below](L1){$L$}
+                \tkzLabelPoint[below](F){$F$}
+
+                \tkzDrawPoints[fill=white](F,L)
+            \end{tikzpicture}
+            \caption{对于$p>0$的抛物线图像}
+        \end{center}
+    \end{figure}\\
+    当焦准距$p<0$时的抛物线图像：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[>=stealth,scale=0.35]
+                \draw[->] (-11,0) -- (11,0) node[above] {$x$};
+                \draw[->] (0,-6) -- (0,6) node[right] {$y$};
+
+                \draw[cyan,thick] plot[variable=\t,domain=-4:0] ({0.4*\t^2},{\t});
+                \draw[cyan,thick] plot[variable=\t,domain=0:4] ({-0.4*\t^2},{\t});
+
+                \tkzDefPoint(-2,0){F}
+                \tkzDefPoint(+2,0){L}
+
+                \tkzDefShiftPoint[L](0,-4.3){L1}
+                \tkzDefShiftPoint[L](0,+4.3){L2}
+
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzLabelPoint[below](L1){$L$}
+                \tkzLabelPoint[below](F){$F$}
+
+                \tkzDrawPoints[fill=white](F,L)
+            \end{tikzpicture}
+            \caption{对于$p<0$的抛物线图像}
+        \end{center}
+    \end{figure}\\
+    对于中心点在原点的抛物线，公式指出焦点和准线总是在原点的两侧且到原点距离相同。\\[3mm]
+    当焦准距$p>0$时，公式指出焦点在原点右侧，公式指出准线在原点左侧。\\[3mm]
+    当焦准距$p<0$时，公式指出焦点在原点左侧，公式指出准线在原点右侧。
+
+\newpage
+
+\subsubsection{椭圆的焦半径公式}
+    椭圆的焦半径指的是椭圆上一点到两个焦点的距离，椭圆的焦半径有两个且不是定值。\\[3mm]
+    椭圆的焦半径的示意图如下：
     \setcounter{equation}{0}
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=0.5]
+            \begin{tikzpicture}[scale=0.5]
                 \draw[->] (-12,0) -- (12,0) node[above] {$x$};
-                \draw[->] (0,-5.8) -- (0,5.8) node[right] {$y$};
-                \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
+                \draw[->] (0,-8) -- (0,8) node[right] {$y$};
 
-                \draw[cyan] (0,0) ellipse (4.5 and 3.5);
-                
-                \fill (-2.4,0) circle (2pt);
-                \node at(-2.4,-1) {$F_1$};
+                \draw[cyan,thick] (0,0) ellipse (4.5 and 3.5);
 
-                \fill (2.4,0) circle (2pt);
-                \node at(2.4,-1) {$F_2$};
+                \tkzDefPoint(-2.4,0){F1}
+                \tkzDefPoint(+2.4,0){F2}
+                \tkzDefPoint(-7,0){L}
+                \tkzDefShiftPoint[L](0,-6){L1}
+                \tkzDefShiftPoint[L](0,+6){L2}
+                \tkzDefPoint(-2,3.13){P}
+                \tkzDefPoint(-7,3.13){H}
 
-                \draw[dashed] (-7,5) -- (-7,-5);
-                \node at(-7,-5.7) {$l$};
+                \tkzDrawSegment(P,F1)
+                \tkzDrawSegment(P,F2)
+                \tkzDrawSegment(P,H)
+                \tkzDrawSegment[dashed](L1,L2)
 
-                \draw (-2,3.13) -- (-7,3.13);
-                \draw (-2,3.13) -- (-2.4,0);
-                \draw (-2,3.13) -- (2.4,0);
+                \tkzMarkRightAngle[size=0.4](L,H,P)
+                \tkzDrawPoints[fill=white](P,F1,F2,H,L)
 
-                \fill (-2,3.13) circle (2pt);
-                \node at(-2,3.63) {$P$};
-
-                \fill (-7,3.13) circle (2pt);
-                \node at(-6.5,3.63) {$H$};
+                \tkzLabelPoint[below](F1){$F_1$}
+                \tkzLabelPoint[below](F2){$F_2$}
+                \tkzLabelPoint[above](P){$P$}
+                \tkzLabelPoint[above right](H){$H$}
+                \tkzLabelPoint[below](L1){$L$}
             \end{tikzpicture}
             \caption{椭圆的焦半径}
         \end{center}
     \end{figure}\\
-    推导椭圆的焦半径：
-    \begin{align}
-        PH&=x_0+\frac{l^2}{f}\\[5mm]
-        PF_1&=e\cdot PH\\[3mm]
-        &=\frac{f}{l}\cdot\left(x_0+\frac{l^2}{f}\right)\\[3mm]
-        &=\frac{f}{l}\cdot x_0+\frac{f}{l}\cdot\frac{l^2}{f}\\[3mm]
-        &=e\cdot x_0+l\\[3mm]
-        &=r+e\cdot x_0\\[5mm]
-        PF_2&=2r-PF_1\\[3mm]
-        &=2r-(r+e\cdot x_0)\\[3mm]
-        &=r-e\cdot x_0
-    \end{align}\\
-    椭圆的焦半径：
+    椭圆上一点$P(x_0,y_0)$至左焦点$F_1$的焦半径公式：
     \begin{large}
         \begin{equation*}
-            PF_1=r+e\cdot x_0\qquad PF_2=r-e\cdot x_0
-        \end{equation*}
-    \end{large}
-
-\newpage
-
-    \textbf{2.当曲线为双曲线时}\\[3mm]
-    \setcounter{equation}{0}
-    由于双曲线的标准方程下，双曲线的中心点位于原点$O(0,0)$，故$x$的一次项系数为零：\vspace{5pt}
-    \begin{align}
-        &2\left(me^2-h\right)=0\\[3mm]
-        &h=me^2
-    \end{align}\\
-    代入方程可得：
-    \begin{align}
-        &\left(1-e^2\right)x^2+y^2=m^2e^2-h^2\\[3mm]
-        &\left(1-e^2\right)x^2+y^2=m^2e^2-m^2e^4\\[3mm]
-        &\left(1-e^2\right)x^2+y^2=m^2e^2\cdot\left(1-e^2\right)\\[3mm]
-        &\frac{x^2}{m^2e^2}+\frac{y^2}{m^2e^2\cdot\left(1-e^2\right)}=1
-    \end{align}\\[1mm]
-    对于双曲线，其$y$的二次项下的系数必然小于零：\vspace{5pt}
-    \begin{align}
-        &m^2e^2\cdot\left(1-e^2\right)<0\\[3mm]
-        &e\in(1,+\infty)
-    \end{align}\\
-    进而我们可以得到双曲线的实轴，双曲线的虚轴，双曲线的焦距：\vspace{5pt}
-    \begin{align}
-        l^2&=m^2e^2\qquad s^2=m^2e^2\cdot\left(e^2-1\right)\\[4mm]
-        f^2&=l^2+s^2\\[3mm]
-        &=m^2e^2+m^2e^2\cdot\left(e^2-1\right)\\[3mm]
-        &=m^2e^2\cdot\left(1+e^2-1\right)\\[3mm]
-        &=m^2e^2\cdot e^2\\[3mm]
-        &=m^2e^4
-    \end{align}
-    很显然，由于焦点为$F(h,0)$：
-    \begin{equation}
-        f=|h|
-    \end{equation}
-
-\newpage
-
-    推导离心率$e$：
-    \begin{align}
-        &f=\left|me^2\right|\qquad l=|me|\\[3mm]
-        &e=|e|=\left|\frac{me\cdot e}{me}\right|=\left|\frac{me^2}{me}\right|=\frac{\left|me^2\right|}{|me|}=\frac{f}{l}
-    \end{align}\\
-    推导准线$m$：
-    \begin{align}
-        &h=me^2\qquad l^2=m^2e^2\\[3mm]
-        &m
-        =\frac{me^2\cdot m}{me^2}
-        =\frac{m^2e^2}{me^2}
-        =\frac{l^2}{h}
-    \end{align}\\
-    推导焦准距$p$：
-    \begin{align}
-        &h=me^2\qquad s^2=m^2e^2\cdot\left(e^2-1\right)\\[3mm]
-        &p
-        =m\cdot\left(e^2-1\right)
-        =\frac{me^2\cdot m\cdot\left(e^2-1\right)}{me^2}
-        =\frac{m^2e^2\cdot\left(e^2-1\right)}{me^2}
-        =\frac{s^2}{h}
-    \end{align}\\
-    得出以下结论：
-    \begin{large}
-        \begin{equation*}
-            e=\frac{f}{l}\qquad m=\frac{l^2}{h}\qquad p=\frac{s^2}{h}
-        \end{equation*}
-    \end{large}\\[1mm]
-    当$h<0$时，$F$为左焦点，$l$为左准线，准线方程为$x=-\dfrac{l^2}{f}$，\\[1mm]
-    由于此时$p<0$，故焦点在准线左侧。\\[3mm]
-    当$h>0$时，$F$为右焦点，$l$为右准线，准线方程为$x=+\dfrac{l^2}{f}$，\\[1mm]
-    由于此时$p>0$，故焦点在准线右侧。\vspace{6pt}
-    \begin{figure}[h]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.42\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
-                        \draw[->] (-9,0) -- (9,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan] plot[variable=\t,domain=-77:77] ({1.5*sec(\t)},{tan(\t)});
-                        \draw[cyan] plot[variable=\t,domain=-77:77] ({1.5*-sec(\t)},{tan(\t)});
-                        \fill (-3.5,0) circle (4pt);
-                        \node at(-3.5,-1) {$F$};
-                        \draw[dashed] (-0.8,4.5) -- (-0.8,-4.3);
-                        \node at(-0.85,-5.3) {$l$};
-                    \end{tikzpicture}
-                    \caption{对于$h<0$的双曲线图像}
-                \end{minipage}
-            }\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.42\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
-                        \draw[->] (-9,0) -- (9,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan] plot[variable=\t,domain=-77:77] ({1.5*sec(\t)},{tan(\t)});
-                        \draw[cyan] plot[variable=\t,domain=-77:77] ({1.5*-sec(\t)},{tan(\t)});
-                        \fill (3.5,0) circle (4pt);
-                        \node at(3.5,-1) {$F$};
-                        \draw[dashed] (0.8,4.5) -- (0.8,-4.3);
-                        \node at(0.85,-5.3) {$l$};
-                    \end{tikzpicture}
-                    \caption{对于$h>0$的双曲线图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}
-
-\newpage
-
-    以焦点在左侧的双曲线为例，推导双曲线的焦半径：\vspace{5pt}
-    \setcounter{equation}{0}
-    \begin{figure}[h]
-        \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=0.5]
-                \draw[->] (-12,0) -- (12,0) node[above] {$x$};
-                \draw[->] (0,-5.8) -- (0,5.8) node[right] {$y$};
-                \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-
-                \draw[cyan] plot[variable=\t,domain=-79:79] ({1.5*sec(\t)},{tan(\t)});
-                \draw[cyan] plot[variable=\t,domain=-79:79] ({1.5*-sec(\t)},{tan(\t)});
-                
-                \fill (-3,0) circle (2pt);
-                \node at(-3,-1) {$F_1$};
-
-                \fill (3,0) circle (2pt);
-                \node at(3,-1) {$F_2$};
-
-                \draw[dashed] (-0.8,5) -- (-0.8,-5);
-                \node at(-0.85,-5.7) {$l$};
-
-                \draw (-5,3.18) -- (-3,0);
-                \draw (-5,3.18) -- (3,0);
-                \draw (-5,3.18) -- (-0.8,3.18);
-
-                \fill (-5,3.18) circle (2pt);
-                \node at(-5,3.68) {$P$};
-
-                \fill (-0.8,3.18) circle (2pt);
-                \node at(-1.3,3.63) {$H$};
-            \end{tikzpicture}
-            \caption{双曲线的焦半径}
-        \end{center}
-    \end{figure}\\
-    推导双曲线的焦半径：
-    \begin{align}
-        PH&=-\frac{l^2}{f}-x_0\\[5mm]
-        PF_1&=e\cdot PH\\[3mm]
-        &=\frac{f}{l}\cdot\left(-\frac{l^2}{f}-x_0\right)\\[3mm]
-        &=-\frac{f}{l}\cdot\frac{l^2}{f}-\frac{f}{l}\cdot x_0\\[3mm]
-        &=-l-e\cdot x_0\\[3mm]
-        &=-e\cdot x_0-r\\[5mm]
-        PF_2&=2r+PF_1\\[3mm]
-        &=2r+(-e\cdot x_0-r)\\[3mm]
-        &=-e\cdot x_0+r
-    \end{align}\\
-    双曲线的焦半径：
-    \begin{large}
-        \begin{equation*}
-            PF_1=r+e\cdot x_0\qquad PF_2=r-e\cdot x_0
-        \end{equation*}
-    \end{large}
-
-\newpage
-
-    \textbf{3.当曲线为抛物线时}\\[3mm]
-    \setcounter{equation}{0}
-    由于曲线为抛物线，故$x$的二次项系数为零：
-    \begin{align}
-        &1-e^2=0\\[2mm]
-        &e=1
-    \end{align}\\
-    由于抛物线的标准方程下，抛物线的中心点位于原点$O(0,0)$，故常数项为零：\vspace{3pt}
-    \begin{align}
-        &m^2e^2-h^2=0\\[2mm]
-        &h^2=m^2e^2\\[2mm]
-        &h^2=m^2
-    \end{align}\\
-    代入方程可得：
-    \begin{align}
-        &2(m-h)x+y^2=0\\[2mm]
-        &y^2=-2(m-h)x\\[2mm]
-        &y^2=2(h-m)x\\[2mm]
-        &y^2=2px
-    \end{align}
-    得出以下结论：
-    \begin{large}
-        \begin{equation*}
-            e=1\qquad m=-h\qquad p=2h
+            PF_1=r+e\cdot x_0
         \end{equation*}
     \end{large}\\
-    当$h<0$时，焦点$F$位于$x$的左半轴，准线$l$位于$x$的右半轴。\\[2mm]
-    当$h>0$时，焦点$F$位于$x$的右半轴，准线$l$位于$x$的左半轴。
-    \begin{figure}[h]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.42\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
-                        \draw[->] (-9,0) -- (9,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan] plot[variable=\t,domain=-4:0] ({0.4*\t^2},{\t});
-                        \draw[cyan] plot[variable=\t,domain=0:4] ({-0.4*\t^2},{\t});
-                        \fill (-2,0) circle (4pt);
-                        \node at(-2,-1) {$F$};
-                        \draw[dashed] (2,4.5) -- (2,-4.3);
-                        \node at(2,-5.3) {$l$};
-                    \end{tikzpicture}
-                    \caption{对于$h<0$的抛物线图像}
-                \end{minipage}
-            }\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.42\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.35]
-                        \draw[->] (-9,0) -- (9,0) node[above] {$x$};
-                        \draw[->] (0,-6) -- (0,6) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan] plot[variable=\t,domain=-4:0] ({-0.4*\t^2},{\t});
-                        \draw[cyan] plot[variable=\t,domain=0:4] ({0.4*\t^2},{\t});
-                        \fill (2,0) circle (4pt);
-                        \node at(2,-1) {$F$};
-                        \draw[dashed] (-2,4.5) -- (-2,-4.3);
-                        \node at(-2,-5.3) {$l$};
-                    \end{tikzpicture}
-                    \caption{对于$h>0$的抛物线图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}
+    椭圆上一点$P(x_0,y_0)$至右焦点$F_2$的焦半径公式：
+    \begin{large}
+        \begin{equation*}
+            PF_2=r-e\cdot x_0
+        \end{equation*}
+    \end{large}\\
+    以焦点在原点左侧的情况为例，设椭圆上一点为$P(x_0,y_0)$，设其在准线上的投影为$H(l,y_0)$。\\[3mm]
+    由于焦点在原点的左侧，故此时$f=-c$：
+    \begin{align}
+        l=-\frac{a^2}{c}
+    \end{align}\\
+    此处焦点指的是在圆锥曲线第二定义下与左准线$L$搭配的左焦点$F_1$。
 
 \newpage
 
-\subsubsection{关于圆锥曲线第二定义的结论}
+    据此可以得出点$P$至准线$L$的距离$PH$：
+    \begin{align}
+        &PH=x_0-l\\[5mm]
+        &PH=x_0+\frac{a^2}{c}~~~~~~~~~~~~~~
+    \end{align}\\
+    根据离心率定义推导$PF_1$：
+    \begin{align}
+        &PF_1=e\cdot PH\\[5mm]
+        &PF_1=e\cdot\left(x_0+\frac{a^2}{c}\right)\\[5mm]
+        &PF_1=e\cdot x_0+\frac{c}{a}\cdot\frac{a^2}{c}~~~~\\[5mm]
+        &PF_1=e\cdot x_0+a\\[5mm]
+        &PF_1=a+e\cdot x_0
+    \end{align}\\
+    根据椭圆的定义推导$PF_2$：
+    \begin{align}
+        &PF_2=2a-PF_1\\[5mm]
+        &PF_2=2a-(a+e\cdot x_0)\\[5mm]
+        &PF_2=a-e\cdot x_0
+    \end{align}\\
+    由此证明了椭圆的焦半径公式。
 
-    证明：在一个椭圆中，对于任意一条过椭圆中心点的弦$AB$，椭圆上任意一点$P$与交点AB构成的直线$PA$和直线$PB$的斜率之积为$e^2-1$。
+\newpage
+
+\subsubsection{双曲线左支的焦半径公式}
+    双曲线的焦半径指的是双曲线上一点到两个焦点的距离，双曲线的焦半径有两个且不是定值。\\[3mm]
+    双曲线的焦半径不同于椭圆，其在左支和右支时具有不同的函数表达式，本节讨论左支的情况。\\[3mm]
+    双曲线左支的焦半径的示意图如下：
+    \setcounter{equation}{0}
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}
-                \draw[->] (-7,0) -- (7,0) node[above] {$x$};
-                \draw[->] (0,-5) -- (0,5) node[right] {$y$};
-                \draw[cyan] ellipse(4 and 3);
-                \draw[solid] (-2,2.598) -- (2,-2.598);
-                \draw[solid] (-2,2.598) -- (2.5,2.342);
-                \draw[solid] (2,-2.598) -- (2.5,2.342);
-                \node at(-2.3,2.798) {$A$};
-                \node at(2.2,-2.798) {$B$};
-                \node at(2.7,2.542) {$P$};
+            \begin{tikzpicture}[scale=0.5]
+                \draw[->] (-12,0) -- (12,0) node[above] {$x$};
+                \draw[->] (0,-8) -- (0,8) node[right] {$y$};
+
+                \draw[cyan,thick] plot[variable=\t,domain=-79:79] ({1.5*sec(\t)},{tan(\t)});
+                \draw[cyan,thick] plot[variable=\t,domain=-79:79] ({1.5*-sec(\t)},{tan(\t)});
+
+                \tkzDefPoint(-3,0){F1}
+                \tkzDefPoint(+3,0){F2}
+                \tkzDefPoint(-0.8,0){L}
+                \tkzDefShiftPoint[L](0,-6){L1}
+                \tkzDefShiftPoint[L](0,+6){L2}
+                \tkzDefPoint(-5,3.18){P}
+                \tkzDefPoint(-0.8,3.18){H}
+
+                \tkzDrawSegment(P,F1)
+                \tkzDrawSegment(P,F2)
+                \tkzDrawSegment(P,H)
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzMarkRightAngle[size=0.4](L,H,P)
+                \tkzDrawPoints[fill=white](P,F1,F2,H,L)
+
+                \tkzLabelPoint[below](F1){$F_1$}
+                \tkzLabelPoint[below](F2){$F_2$}
+                \tkzLabelPoint[above](P){$P$}
+                \tkzLabelPoint[above left](H){$H$}
+                \tkzLabelPoint[below](L1){$L$}
             \end{tikzpicture}
-            \caption{证明示意图}
+            \caption{双曲线左支的焦半径}
         \end{center}
     \end{figure}\\
-    如图，由于直线$AB$过椭圆中心点，两点必然关于中心点对称。\\[3mm]
-    我们设椭圆方程为$Ax^2+By^2+C=0$，点$P(x_2,y_2)$，点$A(x_1,y_1)$，点$B(-x_1,-y_1)$。\\[5mm]
-    将点$P$和点$A$代入椭圆方程中可得：
-    \setcounter{equation}{0}
-    \begin{equation}
-        \begin{cases}
-            ~Ax_1\;^2+By_1\;^2+C=0\\[1mm]
-            ~Ax_2\;^2+By_2\;^2+C=0
-        \end{cases}
-    \end{equation}\\
-    两式相减，运用弦中点公式的思想：
+    双曲线左支上一点$P(x_0,y_0)$至左焦点$F_1$的焦半径公式：
+    \begin{large}
+        \begin{equation*}
+            PF_1=-e\cdot x_0-a
+        \end{equation*}
+    \end{large}\\
+    双曲线左支上一点$P(x_0,y_0)$至右焦点$F_2$的焦半径公式：
+    \begin{large}
+        \begin{equation*}
+            PF_2=-e\cdot x_0+a
+        \end{equation*}
+    \end{large}\\
+    以焦点在原点左侧的情况为例，设双曲线上一点为$P(x_0,y_0)$，设其在准线上的投影为$H(l,y_0)$。\\[3mm]
+    由于焦点在原点的左侧，故此时$f=-c$：
     \begin{align}
-        &A\cdot\left(x_1\;^2-x_2\;^2\right)+B\cdot\left(y_1\;^2-y_2\;^2\right)=0\\[3mm]
-        &A\cdot(x_1+x_2)\cdot(x_1-x_2)+B\cdot(y_1+y_2)\cdot(y_1-y_2)=0\\[3mm]
-        &A\cdot(x_1+x_2)\cdot(x_1-x_2)=-B\cdot(y_1+y_2)\cdot(y_1-y_2)
-    \end{align}
+        l=-\frac{a^2}{c}
+    \end{align}\\
+    此处焦点指的是在圆锥曲线第二定义下与左准线$L$搭配的左焦点$F_1$。
 
 \newpage
 
-    对方程进行变换：
+    据此可以得出点$P$至准线$L$的距离$PH$：
     \begin{align}
-        &-\frac{A}{B}=\frac{y_1+y_2}{x_1+x_2}+\frac{y_1-y_2}{x_1-x_2}\\[4mm]
-        &-\frac{A}{B}=\frac{y_2+y_1}{x_2+x_1}+\frac{y_2-y_1}{x_2-x_1}\\[4mm]
-        &-\frac{A}{B}=k_{PA}\cdot k_{PB}
+        &PH=l-x_0\\[5mm]
+        &PH=-\frac{a^2}{c}-x_0~~~~~~~~~~~
     \end{align}\\
-    根据椭圆的标准方程：
+    根据离心率定义推导$PF_1$：
     \begin{align}
-        &\frac{x^2}{l^2}+\frac{y^2}{s^2}=1\\[3mm]
-        &s^2\cdot x^2+l^2\cdot y^2=l^2\cdot s^2\\[3mm]
-        &s^2\cdot x^2+l^2\cdot y^2-l^2\cdot s^2=0\\[3mm]
-        &A=s^2\qquad B=l^2\qquad C=-l^2\cdot s^2
+        &PF_1=e\cdot PH\\[5mm]
+        &PF_1=e\cdot\left(-\frac{a^2}{c}-x_0\right)\\[5mm]
+        &PF_1=-e\cdot x_0-\frac{c}{a}\cdot\frac{a^2}{c}\\[5mm]
+        &PF_1=-e\cdot x_0-a
     \end{align}\\
-    根据离心率的定义：
+    根据双曲线定义推导$PF_2$：
     \begin{align}
-        e^2-1
-        &=\frac{f^2}{l^2}-1\\[3mm]
-        &=\frac{l^2-s^2}{l^2}-1\\[3mm]
-        &=\frac{B-A}{B}-1\\[3mm]
-        &=-\frac{A}{B}
+        &PF_2=PF_1+2a\\[5mm]
+        &PF_2=-e\cdot x_0-a+2a\\[5mm]
+        &PF_2=-e\cdot x_0+a
     \end{align}\\
-    由此我们得出结论：
+    由此证明了双曲线左支的焦半径公式。
+
+\newpage
+
+\subsubsection{双曲线右支的焦半径公式}
+    双曲线的焦半径指的是双曲线上一点到两个焦点的距离，双曲线的焦半径有两个且不是定值。\\[3mm]
+    双曲线的焦半径不同于椭圆，其在左支和右支时具有不同的函数表达式，本节讨论右支的情况。\\[3mm]
+    双曲线右支的焦半径的示意图如下：
+    \setcounter{equation}{0}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.5]
+                \draw[->] (-12,0) -- (12,0) node[above] {$x$};
+                \draw[->] (0,-8) -- (0,8) node[right] {$y$};
+
+                \draw[cyan,thick] plot[variable=\t,domain=-79:79] ({1.5*sec(\t)},{tan(\t)});
+                \draw[cyan,thick] plot[variable=\t,domain=-79:79] ({1.5*-sec(\t)},{tan(\t)});
+
+                \tkzDefPoint(-3,0){F1}
+                \tkzDefPoint(+3,0){F2}
+                \tkzDefPoint(-0.8,0){L}
+                \tkzDefShiftPoint[L](0,-6){L1}
+                \tkzDefShiftPoint[L](0,+6){L2}
+                \tkzDefPoint(+5,3.18){P}
+                \tkzDefPoint(-0.8,3.18){H}
+
+                \tkzDrawSegment(P,F1)
+                \tkzDrawSegment(P,F2)
+                \tkzDrawSegment(P,H)
+                \tkzDrawSegment[dashed](L1,L2)
+
+                \tkzMarkRightAngle[size=0.4](L,H,P)
+                \tkzDrawPoints[fill=white](P,F1,F2,H,L)
+
+                \tkzLabelPoint[below](F1){$F_1$}
+                \tkzLabelPoint[below](F2){$F_2$}
+                \tkzLabelPoint[above](P){$P$}
+                \tkzLabelPoint[above left](H){$H$}
+                \tkzLabelPoint[below](L1){$L$}
+            \end{tikzpicture}
+            \caption{双曲线右支的焦半径}
+        \end{center}
+    \end{figure}\\
+    双曲线右支上一点$P(x_0,y_0)$至左焦点$F_1$的焦半径公式：
+    \begin{large}
+        \begin{equation*}
+            PF_1=e\cdot x_0-a
+        \end{equation*}
+    \end{large}\\
+    双曲线右支上一点$P(x_0,y_0)$至右焦点$F_2$的焦半径公式：
+    \begin{large}
+        \begin{equation*}
+            PF_2=e\cdot x_0+a
+        \end{equation*}
+    \end{large}\\
+    以焦点在原点左侧的情况为例，设双曲线上一点为$P(x_0,y_0)$，设其在准线上的投影为$H(l,y_0)$。\\[3mm]
+    由于焦点在原点的左侧，故此时$f=-c$：
+    \begin{align}
+        l=-\frac{a^2}{c}
+    \end{align}\\
+    此处焦点指的是在圆锥曲线第二定义下与左准线$L$搭配的左焦点$F_1$。
+
+\newpage
+
+    据此可以得出点$P$至准线$L$的距离$PH$：
+    \begin{align}
+        &PH=x_0-l\\[5mm]
+        &PH=x_0+\frac{a^2}{c}~~~~~~~~~~~
+    \end{align}\\
+    根据离心率定义推导$PF_1$：
+    \begin{align}
+        &PF_1=e\cdot PH\\[5mm]
+        &PF_1=e\cdot\left(x_0+\frac{a^2}{c}\right)\\[5mm]
+        &PF_1=e\cdot x_0+\frac{c}{a}\cdot\frac{a^2}{c}\\[5mm]
+        &PF_1=e\cdot x_0+a
+    \end{align}\\
+    根据双曲线定义推导$PF_2$：
+    \begin{align}
+        &PF_2=PF_1-2a\\[5mm]
+        &PF_2=e\cdot x_0+a-2a\\[5mm]
+        &PF_2=e\cdot x_0-a
+    \end{align}\\
+    由此证明了双曲线右支的焦半径公式。
+
+\newpage
+
+\subsubsection{关于椭圆的一个重要结论}
+    \setcounter{equation}{0}
+    椭圆上任意一点$P$和任意过原点的弦$AB$所构成的直线$PA$和$PB$的斜率之积为定值。\\[3mm]
+    椭圆的该结论可以用以下示意图表示：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[->] (-8,0) -- (8,0) node[above] {$x$};
+                \draw[->] (0,-7) -- (0,7) node[right] {$y$};
+                \draw[cyan,thick] ellipse(4 and 3);
+
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(-2,2.598){A}
+                \tkzDefPoint(2,-2.598){B}
+                \tkzDefPoint(2.5,2.342){P}
+
+                \tkzDrawSegments(A,B B,P P,A)
+
+                \tkzDrawPoints[fill=white](O,A,B,P)
+
+                \tkzLabelPoint[above](A){$A$}
+                \tkzLabelPoint[below](B){$B$}
+                \tkzLabelPoint[above](P){$P$}
+
+                \tkzLabelPoint[below left](O){$O$}
+            \end{tikzpicture}
+            \caption{关于椭圆的一个重要结论}
+        \end{center}
+    \end{figure}\\
+    对于焦点在$x$轴上的椭圆：
     \begin{large}
         \begin{equation*}
             k_{PA}\cdot k_{PB}=e^2-1
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    对于焦点在$y$轴上的椭圆：
+    \begin{large}
+        \begin{equation*}
+            k_{PA}\cdot k_{PB}=\frac{1}{e^2-1}
+        \end{equation*}
+    \end{large}\\
+    接下来将通过点差法的思想证明这一结论。
 
+\newpage
 
+    由于直线$AB$原点，两点必然关于原点对称。\\[3mm]
+    我们设椭圆方程为$Ax^2+By^2+C=0$，点$P(x_2,y_2)$，点$A(x_1,y_1)$，点$B(-x_1,-y_1)$。\\[3mm]
+    因此直线$PA$的斜率可以表达为：
+    \begin{align}
+        k_{PA}=\frac{x_1-x_2}{y_1-y_2}
+    \end{align}\\
+    因此直线$PB$的斜率可以表达为：
+    \begin{align}
+        k_{PB}=\frac{x_1+x_2}{y_1+y_2}
+    \end{align}\\
+    对点$A(x_1,y_1)$和点$P(x_2,y_2)$运用点差法可得：\vspace{5pt}
+    \begin{align}
+        &~\begin{cases}
+            ~Ax_1^2+By_1^2+C=0\\[1mm]
+            ~Ax_2^2+By_2^2+C=0
+        \end{cases}\\[8mm]
+        &~~A\cdot\left(x_1\;^2-x_2\;^2\right)+B\cdot\left(y_1\;^2-y_2\;^2\right)=0\\[8mm]
+        &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)+B\cdot(y_1+y_2)\cdot(y_1-y_2)=0\\[8mm]
+        &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)=-B\cdot(y_1+y_2)\cdot(y_1-y_2)\\[8mm]
+        &-\frac{A}{B}=\frac{y_1+y_2}{x_1+x_2}+\frac{y_1-y_2}{x_1-x_2}\\[8mm]
+        &-\frac{A}{B}=k_{PA}\cdot k_{PB}
+    \end{align}\\
+    由此得到了斜率之积的表达式。
+
+\newpage
+
+    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    \begin{align}
+        &\begin{cases}
+            A=b^2\\[1mm]
+            B=a^2\\[1mm]
+        \end{cases}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=-\frac{A}{B}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=-\frac{b^2}{a^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{c^2-a^2}{a^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{c^2}{a^2}-\frac{a^2}{a^2}~~~~~~~~\\[3mm]
+        &~k_{PA}\cdot k_{PB}=e^2-1
+    \end{align}\\
+    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    \begin{align}
+        &\begin{cases}
+            A=a^2\\[1mm]
+            B=b^2\\[1mm]
+        \end{cases}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=-\frac{A}{B}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=-\frac{a^2}{b^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{a^2}{c^2-a^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{1}{\frac{c^2}{a^2}-\frac{a^2}{a^2}}~~~~~~~~\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{1}{e^2-1}
+    \end{align}\\
+    由此我们证明了这一结论。
+
+\newpage
+
+\subsubsection{关于双曲线的一个重要结论}
+    \setcounter{equation}{0}
+    双曲线上任意一点$P$和任意过原点的弦$AB$所构成的直线$PA$和$PB$的斜率之积为定值。\\[3mm]
+    双曲线的该结论可以用以下示意图表示：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \draw[->] (-8,0) -- (8,0) node[above] {$x$};
+                \draw[->] (0,-7) -- (0,7) node[right] {$y$};
+                \draw[cyan,thick] plot[variable=\t,domain=-76:76] ({1*sec(\t)},{1.2*tan(\t)});
+                \draw[cyan,thick] plot[variable=\t,domain=-76:76] ({1*-sec(\t)},{1.2*tan(\t)});
+
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(-1.154,0.693){A}
+                \tkzDefPoint(1.154,-0.693){B}
+                \tkzDefPoint(2.924,3.297){P}
+
+                \tkzDrawSegments(A,B B,P P,A)
+
+                \tkzDrawPoints[fill=white](O,A,B,P)
+
+                \tkzLabelPoint[left](A){$A$}
+                \tkzLabelPoint[right](B){$B$}
+                \tkzLabelPoint[above](P){$P$}
+
+                \tkzLabelPoint[below left](O){$O$}
+            \end{tikzpicture}
+            \caption{关于双曲线的一个重要结论}
+        \end{center}
+    \end{figure}\\
+    对于焦点在$x$轴上的双曲线：
+    \begin{large}
+        \begin{equation*}
+            k_{PA}\cdot k_{PB}=e^2-1
+        \end{equation*}
+    \end{large}\\
+    对于焦点在$y$轴上的双曲线：
+    \begin{large}
+        \begin{equation*}
+            k_{PA}\cdot k_{PB}=\frac{1}{e^2-1}
+        \end{equation*}
+    \end{large}\\
+    接下来将通过点差法的思想证明这一结论。
+
+\newpage
+
+    由于直线$AB$过原点，两点必然关于原点对称。\\[3mm]
+    设双曲线方程为$Ax^2+By^2+C=0$，点$P(x_2,y_2)$，点$A(x_1,y_1)$，点$B(-x_1,-y_1)$。\\[3mm]
+    因此直线$PA$的斜率可以表达为：
+    \begin{align}
+        k_{PA}=\frac{x_1-x_2}{y_1-y_2}
+    \end{align}\\
+    因此直线$PB$的斜率可以表达为：
+    \begin{align}
+        k_{PB}=\frac{x_1+x_2}{y_1+y_2}
+    \end{align}\\
+    对点$A(x_1,y_1)$和点$P(x_2,y_2)$运用点差法可得：\vspace{5pt}
+    \begin{align}
+        &~\begin{cases}
+            ~Ax_1^2+By_1^2+C=0\\[1mm]
+            ~Ax_2^2+By_2^2+C=0
+        \end{cases}\\[8mm]
+        &~~A\cdot\left(x_1\;^2-x_2\;^2\right)+B\cdot\left(y_1\;^2-y_2\;^2\right)=0\\[8mm]
+        &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)+B\cdot(y_1+y_2)\cdot(y_1-y_2)=0\\[8mm]
+        &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)=-B\cdot(y_1+y_2)\cdot(y_1-y_2)\\[8mm]
+        &-\frac{A}{B}=\frac{y_1+y_2}{x_1+x_2}+\frac{y_1-y_2}{x_1-x_2}\\[8mm]
+        &-\frac{A}{B}=k_{PA}\cdot k_{PB}
+    \end{align}\\
+    由此得到了斜率之积的表达式。
+
+\newpage
+
+    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    \begin{align}
+        &\begin{cases}
+            A=b^2\\[1mm]
+            B=-a^2\\[1mm]
+        \end{cases}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=-\frac{A}{B}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{b^2}{a^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{c^2-a^2}{a^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{c^2}{a^2}-\frac{a^2}{a^2}~~~~~~~~\\[3mm]
+        &~k_{PA}\cdot k_{PB}=e^2-1
+    \end{align}\\
+    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    \begin{align}
+        &\begin{cases}
+            A=-a^2\\[1mm]
+            B=b^2\\[1mm]
+        \end{cases}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=-\frac{A}{B}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{a^2}{b^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{a^2}{c^2-a^2}\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{1}{\frac{c^2}{a^2}-\frac{a^2}{a^2}}~~~~~~~~\\[3mm]
+        &~k_{PA}\cdot k_{PB}=\frac{1}{e^2-1}
+    \end{align}\\
+    由此我们证明了这一结论。
 
 \newpage
 

@@ -1,0 +1,197 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{ctexart}
+
+\RequirePackage{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathpazo}
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+\RequirePackage{tkz-euclide}
+
+\RequirePackage[hidelinks]{hyperref}
+
+\RequirePackage{multicol}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{angles}
+\usetkzobj{all}
+
+\RequirePackage{subfigure}
+
+\setmainfont{Times New Roman}
+
+\setCJKmainfont{等线}
+\setCJKsansfont{等线}
+\setCJKmonofont{等线}
+
+\let\nvec\vec
+\def\vec#1{\nvec{\vphantom b\smash{#1}}}
+
+\renewcommand\parallel{{\mathrel{/\mskip-2.5mu/}}}
+
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\arccot}{\operatorname{arccot}}
+
+\newcommand{\rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{geometry}
+\geometry
+{
+    left=1.25in,
+    right=1.25in,
+    top=1in,
+    bottom=1in
+}
+
+\title{关于第09期题目的讨论}
+\author{数学学习小组}
+\date{2020.08.06}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\setlength{\parindent}{0pt}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{40pt}
+
+\section{题目09-1}
+    本题来源于第09期（2020.08.06）小组讨论题中，原题号为2019年崇明一模20题的第3小问。\\[3mm]
+    对于椭圆$\Gamma$：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{16}+\frac{y^2}{4}=1
+        \end{equation*}
+    \end{large}\\
+    设椭圆$\Gamma$的短轴的上端点为$B_1$。\\[3mm]
+    设椭圆$\Gamma$的短轴的下端点为$B_2$。\\[3mm]
+    设点$P$为椭圆$\Gamma$上异于$B_1,B_2$的动点。\\[3mm]
+    设平面上一点$R$满足$RB_1\perp PB_1$且$RB_2\perp PB_2$。
+    \begin{figure}[h]
+        \begin{center}
+            \qquad\qquad\qquad
+            \begin{tikzpicture}[scale=0.8]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-8,0){X1}
+                \tkzDefPoint(+8,0){X2}
+
+                \tkzDefPoint(0,-6){Y1}
+                \tkzDefPoint(0,+6){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick](0,0) ellipse(4 and 2);
+
+                \tkzDefPoint(0,+2){B1}
+                \tkzDefPoint(0,-2){B2}
+
+                \tkzDefPoint(3,1.323){P}
+                \tkzDefPoint(-0.805,-1.445){R}
+
+                \tkzDrawSegment[add=0.5 and 0.7](P,R)
+
+                \tkzDrawSegments(P,B1 R,B1 P,B2 R,B2)
+
+                \tkzMarkRightAngle[size=0.2](P,B1,R)
+                \tkzMarkRightAngle[size=0.2](P,B2,R)
+
+                \tkzDrawPoints[fill=white](P,B1,B2,R)
+
+                \tkzLabelPoint[above right](B1){$B_1$}
+                \tkzLabelPoint[below right](B2){$B_2$}
+
+                \tkzLabelPoint[above](P){$P$}
+                \tkzLabelPoint[left=2pt](R){$R$}
+
+            \end{tikzpicture}
+            \caption{题目09-01的示意图}
+        \end{center}
+    \end{figure}\\
+    证明$\triangle PB_1B_2$和$\triangle RB_1B_2$的面积比为定值。
+
+\newpage
+
+\subsection{第一种解法}
+    \begin{center}
+        整理者：施安然
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：联立直线求横坐标的关系。}\\[5mm]
+        设点$P(x_1, y_1)$，设$R(x_2, y_2)$。\\[5mm]
+        因为$B_1(+2,0)$：$k_{PB_1} = \dfrac{y_1-2}{x_1}$\\[5mm]
+        因为$B_2(-2,0)$：$k_{PB_2} = \dfrac{y_1+2}{x_2}$\\[5mm]
+        由于$PB_1\perp RB_1$：$k_{RB_1} = -\dfrac{x_1}{y_1-2}$\\[5mm]
+        由于$PB_2\perp RB_2$：$k_{RB_2} = -\dfrac{x_1}{y_1+2}$\\[5mm]
+        故直线$RB_1: y = -\dfrac{x_1}{y_1-2}\cdot x + 2$\\[5mm]
+        故直线$RB_2: y = -\dfrac{x_1}{y_1+2}\cdot x - 2$\\[5mm]
+        由于$R$在直线上$RB_1: y = -\dfrac{x_1}{y_1-2}\cdot x_2 + 2$\\[5mm]
+        由于$R$在直线上$RB_2: y = -\dfrac{x_1}{y_1+2}\cdot x_2 - 2$\\[8mm]
+        联立两式可以得到： \\[5mm]
+        $\dfrac{x_1}{y_1-2}\cdot x_2 - 2 = \dfrac{x_1}{y_1+2}\cdot x_2 + 2 $\\[100mm]
+        $x_2=\dfrac{4}{\dfrac{x_1}{y_1-2}-\dfrac{x_1}{y_1+2}}$\\[5mm]
+        $x_2=\dfrac{4}{\dfrac{4x_1}{y_1^2-4}}$\\[5mm]
+        $x_2=\dfrac{4}{\dfrac{4x_1}{y_1^2-4}}$\\[5mm]
+        $x_2=\dfrac{{y_1}^2 - 4}{x_1}$\\[8mm]
+        由于两个三角形同底：\\[5mm]
+        $\dfrac{S_\triangle PB_1B_2}{S_\triangle RB_1B_2} = \dfrac{|x_1|}{|x_2|}$\\[5mm]
+        $\dfrac{S_\triangle PB_1B_2}{S_\triangle RB_1B_2} = \left|\dfrac{x_1^2}{y_1^2-4}\right|$\\[5mm]
+        $\dfrac{S_\triangle PB_1B_2}{S_\triangle RB_1B_2} = 4$
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\subsection{第二种解法}
+    \begin{center}
+        整理者：乔君毅
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：四点共圆。}\\[5mm]
+        因为$RB_{1} \perp PB_{1}$，同时$RB_{2}\perp PB_{2}$，故四点共圆。\\[5mm]
+        设点$P(x_{1},y_{1})$，设点$R(X_{2},Y_{2})$。\\[5mm]
+        设圆的圆心为$(a,b)$，设圆的半径为$r$。\\[5mm]
+        设圆的方程为：$(x-a)^{2}+(y-b)^{2}= r^{2}$ 。\\[5mm]
+        因为$B_{1}(0,2),B_{2}(0,-2)$在圆上：\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~a^{2}+(b-2)^{2}= r^{2}\\[1mm]
+                ~a^{2}+(b+2)^{2}= r^{2}\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        两式相减得$b=0$，所以$a^{2}+4= r^{2}$，故圆心$(a,0)$。\\[5mm]
+        将点$P$带入圆中得$(x_{1}-a)^{2}+y_{1}^{2}=r^{2}$。\\[5mm]
+        由于$P$在椭圆上$y_1^2=4-\dfrac{x_1^2}{4}$。\\[5mm]
+        因此原式可以变为：\\[5mm]
+        $(x_{1}-a)^{2}+4-\dfrac{x_{1}^{2} }{4}=a^{2}+4$\\[5mm]
+        ${x_{1}}^{2} -2ax_{1}+a^{2} +4-\dfrac{x_{1}^{2} }{4}=a^{2}+4$ \\[5mm]
+        ${x_{1}}^{2} -2ax_{1}-\dfrac{x_{1}^{2} }{4}=0$ \\[5mm]
+        $\dfrac{3x_1^2}{4}-2ax_1=0$ \\[5mm]
+        $x_1=\dfrac{3a}{8}$~~~~或~~~~$x_1=0$（舍）\\[100mm]
+        因为$RP$为直径，其中点为圆心。\\[5mm]
+        所以$x_{1}+x_{2}=2a$，故$x_2=-\dfrac{2}{3}a$。\\[5mm]
+        所以$\dfrac{S_{\triangle}PB_{1}B_{2} }{S_{\triangle}RB_{1}B_{2} } =\dfrac{\left | x_{1} \right | }{\left | x_{2} \right | }=4 $
+        \newpage
+    \end{multicols}
+
+\end{document}

@@ -1,7 +1,0 @@
-\contentsline {section}{\numberline {1}题目05-1}{3}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}第一种解法}{4}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}第二种解法}{5}{subsection.1.2}% 
-\contentsline {subsection}{\numberline {1.3}第三种解法}{6}{subsection.1.3}% 
-\contentsline {subsection}{\numberline {1.4}第四种解法}{7}{subsection.1.4}% 
-\contentsline {subsection}{\numberline {1.5}第五种解法}{8}{subsection.1.5}% 
-\contentsline {subsection}{\numberline {1.6}第六种解法}{9}{subsection.1.6}% 

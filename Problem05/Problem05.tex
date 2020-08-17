@@ -1,0 +1,452 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{ctexart}
+
+\RequirePackage{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathpazo}
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+\RequirePackage{tkz-euclide}
+
+\RequirePackage[hidelinks]{hyperref}
+
+\RequirePackage{multicol}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{angles}
+\usetkzobj{all}
+
+\RequirePackage{subfigure}
+
+\setmainfont{Times New Roman}
+
+\setCJKmainfont{等线}
+\setCJKsansfont{等线}
+\setCJKmonofont{等线}
+
+\let\nvec\vec
+\def\vec#1{\nvec{\vphantom b\smash{#1}}}
+
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\arccot}{\operatorname{arccot}}
+
+\newcommand{\rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{geometry}
+\geometry
+{
+    left=1.25in,
+    right=1.25in,
+    top=1in,
+    bottom=1in
+}
+
+\title{关于第05期题目的讨论}
+\author{数学学习小组}
+\date{2020.06.24}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\setlength{\parindent}{0pt}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{40pt}
+
+\section{题目05-1}
+    本题来源于第05期（2020.06.24）小组讨论题中，原题号为第2大题第4小问。\\[3mm]
+    对于椭圆$\Gamma$：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{100}+\frac{y^2}{64}=1
+        \end{equation*}
+    \end{large}\\
+    设点$A$为椭圆短轴上的顶点。\\[3mm]
+    设点$P$点$Q$为椭圆上异于$A$的任意一点，且两点关于原点$O$对称。\\[3mm]
+    直线$AP$交$x$轴于点$M$。\\[3mm]
+    直线$AQ$交$x$轴于点$N$。
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.5]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-13,0){X1};
+                \tkzDefPoint(+13,0){X2};
+
+                \tkzDefPoint(0,-7){Y1};
+                \tkzDefPoint(0,+7){Y2};
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick] (0,0) ellipse (5 and 4);
+
+                \tkzDefPoint(0,4){A}
+                \tkzDefPoint(-4.0,+2.4){P}
+                \tkzDefPoint(+4.0,-2.4){Q}
+
+                \tkzDrawSegments[dashed](P,Q)
+                
+                \tkzInterLL(A,P)(X1,X2)
+                \tkzGetPoint{M}
+
+                \tkzInterLL(A,Q)(X1,X2)
+                \tkzGetPoint{N}
+
+                \tkzDrawSegments[solid](A,M)
+                \tkzDrawSegments[solid](A,Q)
+
+                \tkzLabelPoint[above right](A) {$A$}
+                \tkzLabelPoint[above](P) {$P$}
+                \tkzLabelPoint[below](Q) {$Q$}
+                \tkzLabelPoint[below](M) {$M$}
+                \tkzLabelPoint[below right](N) {$N$}
+                \tkzLabelPoint[below left](O) {$O$}
+            \end{tikzpicture}
+            \caption{题目05-01的示意图}
+        \end{center}
+    \end{figure}\\
+    请判断以线段$MN$为直径的圆是否过定点？\\[3mm]
+    若是求出定点坐标，若否则说明理由。
+
+\newpage
+
+\subsection{第一种解法}
+    \begin{center}
+        提出者：李宇轩
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：利用$k_1\cdot k_2=e^2-1$，设定点$S(x,y)$。}\\[4mm]
+        已知椭圆方程：$\dfrac{x^2}{100}+\dfrac{y^2}{64}=1$\\[5mm]
+        解得$A(0,8)$~~~~$a=10$~~~~$c=6$~~~~~$e=\dfrac{c}{a}=\dfrac{3}{5}$\\[5mm]
+        设$l_{AP}:y=k_1x+8$~~~~令$y=0$~~~~则$x_M=-\dfrac{8}{k_1}$\\[5mm]
+        设$l_{AQ}:y=k_2x+8$~~~~令$y=0$~~~~则$x_N=-\dfrac{8}{k_2}$\\[8mm]
+        直线$PQ$过圆心，故$AP$与$AQ$的斜率积为定值。\\[4mm]
+        $k_1\cdot k_2=e^2-1$\\[5mm]
+        $k_1\cdot k_2=-\dfrac{16}{25}$\\[8mm]
+        设以直线$MN$为直径的圆所过定点为$S(x,y)$\\[5mm]
+        因此则有$\overrightarrow{MS}\cdot\overrightarrow{NS}=0$\\[5mm]
+        $M\left(-\dfrac{8}{k_1},0\right)$~~~~$\overrightarrow{MS}=\left(x+\dfrac{8}{k_1},y\right)$\\[5mm]
+        $N\,\left(-\dfrac{8}{k_2},0\right)$~~~~$\overrightarrow{NS}\,=\left(x+\dfrac{8}{k_2},y\right)$\\[12mm]
+        代入可得：\\[3mm]
+        $x^2+x\cdot\left(\dfrac{8}{k_1}+\dfrac{8}{k_2}\right)+\dfrac{64}{k_1\cdot k_2}+y^2=0$\\[5mm]
+        $x^2+x\cdot\left(\dfrac{8\cdot(k_1+k_2)}{k_1\cdot k_2}\right)+\dfrac{64}{k_1\cdot k_2}+y^2=0$\\[5mm]
+        $x^2-x\cdot\left(\dfrac{25\cdot(k_1+k_2)}{2}\right)-100+y^2=0$\\[5mm]
+        $x^2-\dfrac{25}{2}\cdot(k_1+k_2)\cdot x-100+y^2=0$\\[30mm]
+        由于$S(x,y)$为圆所过的定点。\\[3mm]
+        所以$S$的坐标取值应当使得上方推出等式恒成立。\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~x^2+y^2=100\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~y=\pm 10\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        故定点为~~$S(0,10)$~~或~~$S(0,-10)$
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\subsection{第二种解法}
+    \begin{center}
+        提出者：师梦萍
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：求解$x_M,x_N$，设定点$S(x,y)$。}\\[4mm]
+        已知椭圆方程：$\dfrac{x^2}{100}+\dfrac{y^2}{64}=1$\\[5mm]
+        解得$A(0,8)$~~~~设$P(x_1,y_1)$~~~~则$Q(-x_1,-y_1)$\\[5mm]
+        $\overrightarrow{AP}=(x_1,y_1-8)$\\[5mm]
+        $\overrightarrow{QA}=(x_1,y_1+8)$\\[5mm]
+        $l_{AP}:\dfrac{x}{x_1}=\dfrac{y-8}{y_1-8}$~~~~令$y=0$~~~~则$x_M=\dfrac{-8x_1}{y_1-8}$\\[5mm]
+        $l_{AQ}:\dfrac{x}{x_1}=\dfrac{y-8}{y_1+8}$~~~~令$y=0$~~~~则$x_N=\dfrac{-8x_1}{y_1+8}$\\[5mm]
+        上一步也可以用同理替代。\\[8mm]
+        设以直线$MN$为直径的圆所过定点为$S(x,y)$\\[3mm]
+        因此则有$\overrightarrow{SM}\cdot\overrightarrow{SN}=0$\\[5mm]
+        $M\left(\dfrac{-8x_1}{y_1-8},0\right)$~~~~$\overrightarrow{SM}=\left(\dfrac{-8x_1}{y_1-8}-x,-y\right)$\\[5mm]
+        $N\,\left(\dfrac{-8x_1}{y_1+8},0\right)$~~~~$\overrightarrow{SN}\,=\left(\dfrac{-8x_1}{y_1+8}-x,-y\right)$\\[12mm]
+        代入可得：\\[5mm]
+        $\left(\dfrac{-8x_1}{y_1-8}-x\right)\cdot\left(\dfrac{-8x_1}{y_1+8}-x\right)+y^2=0$\\[5mm]
+        $x^2+y^2+\left(\dfrac{8x_1}{y_1+8}+\dfrac{8x_1}{y_1-8}\right)\cdot x+\dfrac{64x_1^2}{y_1^2-64}=0$\\[5mm]
+        $x^2+y^2+\dfrac{8x_1\cdot(y_1+8+y_1-8)}{y_1^2-64}\cdot x+\dfrac{64x_1^2}{y_1^2-64}=0$\\[5mm]
+        $x^2+y^2+\dfrac{16x_1y_1}{y_1^2-64}\cdot x+\dfrac{64x_1^2}{y_1^2-64}=0$\\[30mm]
+        由椭圆方程得：\\[5mm]
+        $\dfrac{x^2}{100}+\dfrac{y^2}{64}=1$\\[5mm]
+        $y_1^2=64\cdot\left(1-\dfrac{x^2}{100}\right)$\\[5mm]
+        $y_1^2=64-\dfrac{16}{25}x_1^2$\\[10mm]
+        将其代入可得：\\[5mm]
+        $x^2+y^2+\dfrac{16x_1y_1}{y_1^2-64}\cdot x+\dfrac{64x_1^2}{y_1^2-64}=0$\\[5mm]
+        $x^2+y^2+\dfrac{16x_1y_1}{64-\frac{16}{25}x_1^2-64}\cdot x+\dfrac{64x_1^2}{64-\frac{16}{25}x_1^2-64}=0$\\[5mm]
+        $x^2+y^2-\dfrac{16x_1y_1}{\frac{16}{25}x_1^2}\cdot x-\dfrac{64x_1^2}{\frac{16}{25}x_1^2}=0$\\[5mm]
+        $x^2+y^2-\dfrac{25y_1}{x_1}\cdot x-100=0$\\[10mm]
+        由于$S(x,y)$为圆所过的定点。\\[3mm]
+        所以$S$的坐标取值应当使得上方推出等式恒成立。\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~x^2+y^2=100\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~y=\pm 10\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        故定点为~~$S(0,10)$~~或~~$S(0,-10)$
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\subsection{第三种解法}
+    \begin{center}
+        提出者：乔君毅
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：求解$x_M,x_N$，设圆的方程。}\\[4mm]
+        已知椭圆方程：$\dfrac{x^2}{100}+\dfrac{y^2}{64}=1$\\[5mm]
+        解得$A(0,8)$~~~~设$P(x_1,y_1)$~~~~则$Q(-x_1,-y_1)$\\[5mm]
+        $\overrightarrow{AP}=(x_1,y_1-8)$\\[5mm]
+        $\overrightarrow{QA}=(x_1,y_1+8)$\\[5mm]
+        $l_{AP}:\dfrac{x}{x_1}=\dfrac{y-8}{y_1-8}$~~~~令$y=0$~~~~则$x_M=\dfrac{-8x_1}{y_1-8}$\\[5mm]
+        $l_{AQ}:\dfrac{x}{x_1}=\dfrac{y-8}{y_1+8}$~~~~令$y=0$~~~~则$x_N=\dfrac{-8x_1}{y_1+8}$\\[5mm]
+        上一步也可以用同理替代。\\[8mm]
+        设点$M$和点$N$的中点$C(x_C,0)$。\\[3mm]
+        求解圆的圆心可得：\\[4mm]
+        $x_C=\dfrac{1}{2}\cdot(x_M+x_N)$\\[5mm]
+        $x_C=\dfrac{1}{2}\cdot\left(\dfrac{-8x_1}{y_1-8}+\dfrac{-8x_1}{y_1+8}\right)$\\[5mm]
+        $x_C=\dfrac{-4x_1}{y_1-8}+\dfrac{-4x_1}{y_1+8}$\\[5mm]
+        $x_C=-\dfrac{8x_1y_1}{y_1^2-64}$\\[5mm]
+        求解圆的半径可得：\\[4mm]
+        $r=\dfrac{1}{2}\cdot\left|x_M-x_N\right|$\\[5mm]
+        $r=\dfrac{1}{2}\cdot\left|\dfrac{-8x_1}{y_1-8}+\dfrac{-8x_1}{y_1+8}\right|$\\[5mm]
+        $r=\dfrac{1}{2}\cdot\left|\dfrac{8x_1}{y_1+8}-\dfrac{8x_1}{y_1-8}\right|$\\[5mm]
+        $r=\left|\dfrac{64x_1}{y_1^2-64}\right|$\\[10mm]
+        因此可设圆的方程：\\[4mm]
+        $\left(x+\dfrac{8x_1y_1}{y_1^2-64}\right)^2+y^2=\dfrac{(64x_1)^2}{\left(y_1^2-64\right)^2}$\\[5mm]
+        $~~x^2+x\cdot\left(\dfrac{16x_1y_1}{y_1^2-64}\right)+y^2=\dfrac{(64x_1)^2-(8x_1y_1)^2}{\left(y_1^2-64\right)^2}$\\[5mm]
+        根据椭圆方程可得：
+        $y_1^2=64-\dfrac{16}{25}x_1^2$\\[5mm]
+        将其代入可以得到：\\[4mm]
+        $x^2+x\cdot\left(\dfrac{16x_1y_1}{y_1^2-64}\right)+y^2=\dfrac{(64x_1)^2-(8x_1y_1)^2}{\left(y_1^2-64\right)^2}$\\[5mm]
+        $x^2+x\cdot\left(\dfrac{16x_1y_1}{y_1^2-64}\right)+y^2=\dfrac{\left(\dfrac{1024}{25}\right)\cdot x_1^4}{\left(\dfrac{256}{25}\right)\cdot x_1^4}$\\[5mm]
+        $x^2+x\cdot\left(\dfrac{16x_1y_1}{y_1^2-64}\right)+y^2=100$\\[8mm]
+        若圆上有一点$(x,y)$为定点。\\[3mm]
+        那么该定点的取值应当使得上方推出等式恒成立。\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~x^2+y^2=100\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~y=\pm 10\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        故定点为~~$(0,10)$~~或~~$(0,-10)$
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\subsection{第四种解法}
+    \begin{center}
+        提出者：李周
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：参数方程，求解$x_M,x_N$，设定点$S(x,y)$。}\\[4mm]
+        已知椭圆的标准方程：$\dfrac{x^2}{100}+\dfrac{y^2}{64}=1$\\[5mm]
+        可得椭圆的参数方程：
+        \begin{math}
+            \begin{cases}
+                ~~x=10\cdot\cos{\theta}\\[1mm]
+                ~~y=8\cdot\sin{\theta}\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        设$P(10\cdot\cos{\theta},8\cdot\cos{\theta})$\\[5mm]
+        故$Q(-10\cdot\cos{\theta},-8\cdot\cos{\theta})$\\[5mm]
+        且根据方程可知$A(0,8)$\\[5mm]
+        $l_{AP}:y=\dfrac{4\sin{\theta}-4}{5\cos{\theta}}x+8$\\[5mm]
+        $l_{AQ}:y=\dfrac{4\sin{\theta}+4}{5\cos{\theta}}x+8$\\[5mm]
+        令$y=0$解得$x_M=\dfrac{10\cdot\cos{\theta}}{1-\sin{\theta}}$\\[5mm]
+        令$y=0$解得$x_N=\dfrac{-10\cdot\cos{\theta}}{1+\sin{\theta}}$\\[10mm]
+        设以直线$MN$为直径的圆所过定点为$S(x,y)$\\[3mm]
+        因此则有$\overrightarrow{MS}\cdot\overrightarrow{NS}=0$\\[5mm]
+        $M\left(\dfrac{10\cdot\cos{\theta}}{1-\sin{\theta}},0\right)~~~~~~\overrightarrow{MS}=\left(x-\dfrac{10\cdot\cos{\theta}}{1-\sin{\theta}},y\right)$\\[5mm]
+        $N\left(\dfrac{-10\cdot\cos{\theta}}{1-\sin{\theta}},0\right)~~~~\overrightarrow{NS}=\left(x+\dfrac{10\cdot\cos{\theta}}{1-\sin{\theta}},y\right)$\\[60mm]
+        代入可得：
+        \begin{align*}
+            x^2+\left(\dfrac{10\cdot\cos{\theta}}{1+\sin{\theta}}-\dfrac{10\cdot\cos{\theta}}{1-\sin{\theta}}\right)\cdot x-\dfrac{100\cdot\cos^2{\theta}}{1-\sin^2{\theta}}+y^2=0   
+        \end{align*}
+        $x^2+\left(\dfrac{10\cdot\cos{\theta}}{1+\sin{\theta}}-\dfrac{10\cdot\cos{\theta}}{1-\sin{\theta}}\right)\cdot x-100+y^2=0$\\[8mm]
+        由于$S(x,y)$为圆所过的定点。\\[3mm]
+        所以$S$的坐标取值应当使得上方推出等式恒成立。\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~x^2+y^2=100\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~y=\pm 10\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        故定点为~~$S(0,10)$~~或~~$S(0,-10)$
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\subsection{第五种解法}
+    \begin{center}
+        提出者：白昱轩
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        已知椭圆方程：$\dfrac{x^2}{100} + \dfrac{y^2}{64}=1$\\[5mm]
+        经过变换可得：$16x^2+25y^2-1600=0$\\[5mm]
+        设直线$PQ$：$y=kx$\\[5mm]
+        联立方程：
+        \begin{math}
+            \begin{cases}
+                ~16x^2+25y^2-1600=0\\[1mm]
+                ~y=kx\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        $16x^2+25k^2x^2-1600=0$\\[5mm]
+        $x_1=\dfrac{40}{\sqrt{25k^2+16}}$~~~~$P\left(\dfrac{40}{\sqrt{25k^2+16}},\dfrac{40k}{\sqrt{25k^2+16}}\right)$\\[5mm]
+        $x_2=\dfrac{-40}{\sqrt{25k^2+16}}$~~~~$Q\left(\dfrac{40}{\sqrt{25k^2+16}},\dfrac{-40k}{\sqrt{25k^2+16}}\right)$\\[8mm]
+        据椭圆方程可知$A(0,8)$\\[5mm]
+        $l_{AP\,}:\dfrac{x}{x_P}=\dfrac{y-8}{y_P-8}$\\[5mm]
+        $l_{AQ}:\dfrac{x}{x_Q}=\dfrac{y-8}{y_Q-8}$\\[8mm]
+        令$y=0$~~~~则$x_M=\dfrac{-8x_P}{y_P-8}=\dfrac{-40}{5k-\sqrt{25k^2+16}}$\\[5mm]
+        令$y=0$~~~~则$x_N=\dfrac{-8x_Q}{y_Q-8}=\dfrac{-40}{5k+\sqrt{25k^2+16}}$\\[80mm]
+        设以$MN$为直径的圆所过定点为$S(x,y)$\\[5mm]
+        因此则有$\overrightarrow{MS}\cdot\overrightarrow{NS}=0$\\[5mm]
+        将其代入可得：\\[3mm]
+        $~\left(x-x_M\right)\left(x-x_N\right)+y^2=0$\\[5mm]
+        $\left(x+\frac{40}{5k-\sqrt{25k^2+16}}\right)\left(x+\frac{40}{5k+\sqrt{25k^2+16}}\right)+y^2=0$\\[8mm]
+        将其展开可得：\\[3mm]
+        $x^2+\left(\frac{40}{5k-\sqrt{25k^2+16}}+\frac{40}{5k+\sqrt{25k^2+16}}\right)\cdot x-100+y^2=0$\\[8mm]
+        若圆上有一点$(x,y)$为定点。\\[3mm]
+        那么该定点的取值应当使得上方推出等式恒成立。\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~x^2+y^2=100\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~x=0\\[1mm]
+                ~y=\pm 10\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        故定点为~~$(0,10)$~~或~~$(0,-10)$
+        \newpage
+    \end{multicols}
+
+
+\newpage
+
+\subsection{第六种解法}
+    \begin{center}
+        提出者：杨骐荣
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：取特殊值，利用两圆的交点。}\\[4mm]
+        已知椭圆的标准方程：$\dfrac{x^2}{100}+\dfrac{y^2}{64}=1$\\[5mm]
+        可得椭圆的参数方程：
+        \begin{math}
+            \begin{cases}
+                ~~x=10\cdot\cos{\theta}\\[1mm]
+                ~~y=8\cdot\sin{\theta}\\[1mm]
+            \end{cases}
+        \end{math}\\[8mm]
+        1.令$\cos{\theta}=1$~~~~有$\sin{\theta}=0$\\[5mm]
+        解得$P\;(10,0)$~~~~$Q(-10,0)$\\[5mm]
+        显然$M(10,0)$~~~~$N(-10,0)$\\[5mm]
+        可设圆$MN$的方程$x^2+y^2=100$\\[12mm]
+        2.令$\cos{\theta}=\dfrac{4}{5}$~~~~有$\sin{\theta}=\dfrac{3}{5}$\\[5mm]
+        解得$P(8,\dfrac{24}{5})$~~~~$Q(-8,-\dfrac{24}{5})$~~~~$A(0,8)$\\[5mm]
+        $l_{AP}:\dfrac{x-8}{8}=-\dfrac{y-\dfrac{24}{5}}{8-\dfrac{24}{5}}$~~~~令$y=0$~~~~$x_M=20$\\[5mm]
+        $l_{AQ}:\dfrac{x-8}{8}=-\dfrac{y+\dfrac{24}{5}}{8+\dfrac{24}{5}}$~~~~令$y=0$~~~~$x_N=-5$\\[5mm]
+        因此$M(20,0)$~~~~$N(-5,0)$\\[5mm]
+        可设圆$MN$的方程$\left(x-\dfrac{15}{2}\right)^2+y^2=\left(\dfrac{25}{2}\right)^2$\\[8mm]
+        联立两个圆的方程后化简可得：\\[3mm]
+        \begin{math}
+            \begin{cases}
+                ~x^2+y^2=100\\[1mm]
+                ~x^2+y^2-15x=100\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        解得$(0,\pm 10)$，故猜测定点为$(0,\pm 10)$。\\[20mm]
+        \textbf{核心思路：取特殊值，利用椭圆的对称性。}\\[4mm]
+        设$P$关于$y$轴的对称点为$P^{'}$。\\[5mm]
+        设$Q$关于$y$轴的对称点为$Q^{'}$。\\[5mm]
+        直线$AP^{'}$交$x$轴于点$M^{'}$。\\[5mm]
+        直线$AQ^{'}$交$x$轴于点$N^{'}$。\\[5mm]
+        显然$MN$与$M^{'}N^{'}$对称。\\[5mm]
+        故以其为直径的圆也对称。\\[5mm]
+        因此两圆的交点必然在$y$轴上。\\[5mm]
+        取$P(10,0)$~~~~$Q(-10,0)$\\[5mm]
+        圆$MN:x^2+y^2=100$\\[5mm]
+        与$y$轴交点$(0,\pm 10)$，故猜测定点为$(0,\pm 10)$。
+        \newpage
+        以上为第一部分猜测定点的两种方法。\\[5mm]
+        以下为第二部分证明定点的一种方法。\\[5mm]        
+        设$P(x_1,y_1)$~~~~则$Q(-x_1,-y_1)$~~~~同时$A(0,8)$\\[5mm]
+        $\overrightarrow{AP}=(x_1,y_1-8)$\\[5mm]
+        $\overrightarrow{QA}=(x_1,y_1+8)$\\[5mm]
+        $l_{AP}:\dfrac{x}{x_1}=\dfrac{y-8}{y_1-8}$~~~~令$y=0$~~~~则$x_M=\dfrac{-8x_1}{y_1-8}$\\[5mm]
+        $l_{AQ}:\dfrac{x}{x_1}=\dfrac{y-8}{y_1+8}$~~~~令$y=0$~~~~则$x_N=\dfrac{-8x_1}{y_1+8}$\\[5mm]
+        上一步也可以用同理替代。\\[8mm]
+        对于定点$S(0,\pm 10)$~~~~有$\overrightarrow{SM}\cdot\overrightarrow{SN}=0$\\[5mm]
+        $M\left(\dfrac{-8x_1}{y_1-8},0\right)$~~~~$\overrightarrow{SM}=\left(\dfrac{-8x_1}{y_1-8},\pm 10\right)$\\[5mm]
+        $N\,\left(\dfrac{-8x_1}{y_1+8},0\right)$~~~~$\overrightarrow{SN}\,=\left(\dfrac{-8x_1}{y_1+8},\pm 10\right)$\\[8mm]
+        代入可以得到：\\[5mm]
+        $\dfrac{-8x_1}{y_1-8}\cdot\dfrac{-8x_1}{y_1+8}+100=0$\\[5mm]
+        $\dfrac{64x_1^2}{y_1^2-64}+100=0$\\[8mm]
+        由椭圆方程得：\\[5mm]
+        $\dfrac{x^2}{100}+\dfrac{y^2}{64}=1$\\[5mm]
+        $y_1^2=64\cdot\left(1-\dfrac{x^2}{100}\right)$\\[5mm]
+        $y_1^2=64-\dfrac{16}{25}x_1^2$\\[8mm]
+        将其代入观察到等式成立。\\[5mm]
+        因此证明了$\overrightarrow{SM}\cdot\overrightarrow{SN}=0$，故定点$S(0,\pm 10)。$\\[5mm]
+        \newpage
+    \end{multicols}
+
+
+\end{document}

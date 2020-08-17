@@ -1,0 +1,3 @@
+\contentsline {section}{\numberline {1}题目09-1}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}第一种解法}{4}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}第二种解法}{5}{subsection.1.2}% 

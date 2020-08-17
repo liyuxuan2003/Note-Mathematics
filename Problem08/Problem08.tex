@@ -1,0 +1,418 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{ctexart}
+
+\RequirePackage{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathpazo}
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+\RequirePackage{tkz-euclide}
+
+\RequirePackage[hidelinks]{hyperref}
+
+\RequirePackage{multicol}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{angles}
+\usetkzobj{all}
+
+\RequirePackage{subfigure}
+
+\setmainfont{Times New Roman}
+
+\setCJKmainfont{等线}
+\setCJKsansfont{等线}
+\setCJKmonofont{等线}
+
+\let\nvec\vec
+\def\vec#1{\nvec{\vphantom b\smash{#1}}}
+
+\renewcommand\parallel{{\mathrel{/\mskip-2.5mu/}}}
+
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\arccot}{\operatorname{arccot}}
+
+\newcommand{\rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{geometry}
+\geometry
+{
+    left=1.25in,
+    right=1.25in,
+    top=1in,
+    bottom=1in
+}
+
+\title{关于第08期题目的讨论}
+\author{数学学习小组}
+\date{2020.07.25}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\setlength{\parindent}{0pt}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{40pt}
+
+\section{题目08-1}
+    本题来源于第08期（2020.07.25）小组讨论题中，原题号为2018年宝山一模20题的第3小问。\\[3mm]
+    对于椭圆$\Gamma$：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{4}+\frac{y^2}{3}=1
+        \end{equation*}
+    \end{large}\\
+    设椭圆$\Gamma$的右焦点为$F$，过右焦点$F$的直线$l$交$\Gamma$于$A,B$两点。\\[3mm]
+    设点$A$在直线$x=4$上的射影点为$D$。\\[3mm]
+    设点$B$在直线$x=4$上的射影点为$E$。
+    \begin{figure}[h]
+        \begin{center}
+            \qquad\qquad\qquad
+            \begin{tikzpicture}[scale=0.8]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-8,0){X1}
+                \tkzDefPoint(+8,0){X2}
+
+                \tkzDefPoint(0,-6){Y1}
+                \tkzDefPoint(0,+6){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick](0,0) ellipse(3.4641 and 3);
+
+                \tkzDefPoint(6.9282,0){P}
+                \tkzDefShiftPoint[P](0,-2.966){D}
+                \tkzDefShiftPoint[P](0,+1.703){E}
+                
+                \tkzDefPoint(+0.517,-2.966){A}
+                \tkzDefPoint(+2.852,+1.703){B}
+                \tkzDefPoint(2,0){F}
+
+                \tkzDrawSegment[add=0.4 and 0.4](A,B)
+                \tkzDrawSegment[add=0.4 and 0.4](D,E)
+
+                \tkzDrawSegment(B,E)
+                \tkzDrawSegment(A,D)
+
+                \tkzDrawPoints[fill=white](A,B,D,E,F)
+
+                \tkzLabelPoint[below](A){$A$}
+                \tkzLabelPoint[below=2pt](F){$F$}
+                \tkzLabelPoint[below=2pt](B){$B$}
+                \tkzLabelPoint[below left](O){$O$}
+
+                \tkzLabelPoint[right](E){$E$}
+                \tkzLabelPoint[right](D){$D$}
+            \end{tikzpicture}
+            \caption{题目08-01的示意图}
+        \end{center}
+    \end{figure}\\
+    当直线$l$绕点$F$转动时，直线$AE$和直线$BD$是否相交于定点？
+
+\newpage
+
+\subsection{第一种解法}
+    \begin{center}
+        整理者：李宇轩
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：特殊值法，利用向量平行。}\\[5mm]
+        设$x=ty+1$，当$t$不存在时，舍。\\[4mm]
+        取特殊值$t=0$，此时两直线相较于$S(2.5,0)$。\\[4mm]
+        因此两条直线若交于定点，则必交于$S(2.5,0)$。\\[8mm]
+        设点$A(x_1,y_1)$，故$D(4,y_1)$。\\[5mm]
+        设点$B(x_2,y_2)$\hspace{1.5pt}，故$E\hspace{1pt}(4,y_2)$。\\[5mm]
+        联立直线和椭圆可得：\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~3x^2+4y^2-12=0\\[1mm]
+                ~x=ty+1\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        $(3t^2+4)\cdot x^2+6ty-9=0$\\[5mm]
+        $y_1+y_2=\dfrac{-6t}{3t^2+4}$\\[5mm]
+        $y_1\cdot y_2=\dfrac{-9}{3t^2+4}$\\[5mm]
+        若$S$在直线$AE$上，则需满足$\overrightarrow{SA}\parallel\overrightarrow{SE}$。\\[5mm]
+        若$S$在直线$BD$上，则需满足$\overrightarrow{SB}\parallel\overrightarrow{SD}$。\\[5mm]
+        $\overrightarrow{SA}=(x_1-2.5~,~y_1)$\\[5mm]
+        $\overrightarrow{SE}\hspace{1pt}=(1.5~,~y_2)$\\[100mm]
+        $\hphantom{=}x_1y_2-2.5y_2-1.5y_1$\\[5mm]
+        $=(ty_1+1)y_2-2.5y_2-1.5y_1$\\[5mm]
+        $=ty_1y_2+y_1-2.5y_2-1.5y_1$\\[5mm]
+        $=ty_1y_2-1.5(y_1+y_2)$\\[5mm]
+        $=ty_1y_2-1.5(y_1+y_2)$\\[5mm]
+        $=\dfrac{-9t^2}{3t^2+4}+\dfrac{9t^2}{3t^2+4}$\\[5mm]
+        $=0$\\[8mm]
+        因此$\overrightarrow{SA}\parallel\overrightarrow{SE}$成立。\\[5mm]
+        同理$\overrightarrow{SB}\parallel\overrightarrow{SD}$成立。\\[5mm]
+        因此两条直线相交于定点$S(2.5,0)$。
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\section{题目08-2}
+    本题来源于第08期（2020.07.25）小组讨论题中，原题号为2018年浦东一模20题的第3小问。\\[3mm]
+    对于椭圆$\Gamma$：
+    \begin{large}
+        \begin{equation*}
+            \frac{x^2}{4}+\frac{y^2}{1}=1
+        \end{equation*}
+    \end{large}\\
+    已知一定点$E(2,1)$。\\[3mm]
+    设点$A$为椭圆$\Gamma$的上端点。\\[3mm]
+    设点$P$\hspace{1.0pt}为椭圆$\Gamma$上一动点。
+    \begin{figure}[h]
+        \begin{center}
+            \qquad\qquad\qquad
+            \begin{tikzpicture}[scale=0.8]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-8,0){X1}
+                \tkzDefPoint(+8,0){X2}
+
+                \tkzDefPoint(0,-6){Y1}
+                \tkzDefPoint(0,+6){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick](0,0) ellipse(4 and 2);
+
+                \tkzDefPoint(0,2){A}
+                \tkzDefPoint(4,-2){E}
+                \tkzDefPoint(-3.489,-0.978){P}
+                \tkzDefPoint(4,0){Ex}
+                \tkzDefPoint(0,-2){Ey}
+
+                \tkzDrawPolygon(A,E,P)
+                \tkzDrawSegments[dashed](E,Ex E,Ey)
+                \tkzDrawPoints[fill=white](A,E,Ex,Ey,P)
+                \tkzLabelPoint[above left](A){$A$}
+                \tkzLabelPoint[below](E){$E$}
+                \tkzLabelPoint[below left](P){$P$}
+            \end{tikzpicture}
+            \caption{题目08-02的示意图}
+        \end{center}
+    \end{figure}\\
+    当$P$在椭圆上移动时，讨论$\triangle AEP$在不同的面积区间中存在的个数。
+
+\newpage
+
+\subsection{第一种解法}
+    \begin{center}
+        整理者：白昱轩
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：标准方程，设平行直线求距离。}\\[5mm]
+        已知$E(2,-1)$，同时$A(0,1)$，因此$k_{AE}=-1$。\\[5mm]
+        故过$P$的平行于$AE$的直线可设为：\\[5mm]
+        $l_P:y=-x+b$\\[5mm]
+        联立直线和椭圆可得：\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~y=-x+b\\[1mm]
+                ~x^2+4y^2-4=0\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        $5x^2-8bx+4b^2-4=0$\\[5mm]
+        $\Delta=-16b^2+80$\\[5mm]
+        $\Delta=0 $\\[5mm]
+        $ b = \pm \sqrt{5}$\\[5mm]
+        当$b = +\sqrt{5}$时，$S_{\triangle AEP}= \sqrt{5}-1$\\[5mm]
+        当$b = -\sqrt{5}$时，$S_{\triangle AEP}= \sqrt{5}+1$\\[5mm]
+        存在$4$个：满足$S_{\triangle AEP} \in \left(0,\sqrt{5}-1\right)$\\[5mm]
+        存在$3$个：满足$S_{\triangle AEP} = \sqrt{5}-1$\\[5mm]
+        存在$2$个：满足$S_{\triangle AEP} \in \left(\sqrt{5}-1,\sqrt{5}+1\right)$\\[5mm]
+        存在$1$个：满足$S_{\triangle AEP}= \sqrt{5}+1$\\[5mm]
+        存在$0$个：满足$S_{\triangle AEP} \in \left(\sqrt{5}+1,\infty \right)$\\[50mm]
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\subsection{第二种解法}
+    \begin{center}
+        整理者：白昱轩
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：参数方程，计算点到直线距离。}\\[5mm]
+        已知$E(2,-1)$，同时$A(0,1)$，因此$k_{AE}=-1$。\\[5mm]
+        故直线$AE$可表达为：\\[5mm]
+        $l_{AE} : y = -x + 1$。\\[5mm]
+        $l_{AE} : x+y-1=0$。\\[5mm]
+        由参数方程设$P(2\cos\theta,\sin\theta)$，其中$\theta\in[0,2\pi)$。\\[5mm]
+        根据点到直线距离公式：\\[5mm]
+        $d = \dfrac{|2\cos\theta+\sin\theta-1|}{\sqrt{2}} \in \left[0,\dfrac{\sqrt{5}+1}{\sqrt{2}}\right]$\\[5mm]
+        $d_1 = \dfrac{\sqrt{5}-1}{\sqrt{2}}$\\[5mm]
+        $d_2 = \dfrac{\sqrt{5}+1}{\sqrt{2}}$\\[5mm]
+        此外$AE=2\sqrt{2}$。\\[5mm]
+        存在$4$个：满足$S_{\triangle AEP} \in \left(0,\sqrt{5}-1\right)$\\[5mm]
+        存在$3$个：满足$S_{\triangle AEP} = \sqrt{5}-1$\\[5mm]
+        存在$2$个：满足$S_{\triangle AEP} \in \left(\sqrt{5}-1,\sqrt{5}+1\right)$\\[5mm]
+        存在$1$个：满足$S_{\triangle AEP}= \sqrt{5}+1$\\[5mm]
+        存在$0$个：满足$S_{\triangle AEP} \in \left(\sqrt{5}+1,\infty \right)$
+        \newpage
+    \end{multicols}
+
+\section{题目08-3}
+    本题来源于第08期（2020.07.25）小组讨论题中，原题号为2018年静安一模20题的第3小问。\\[3mm]
+    对于曲线$\Gamma$：
+    \begin{large}
+        \begin{equation*}
+            \left|x^2-y^2\right|=1
+        \end{equation*}
+    \end{large}\\
+    设动点$P$是曲线$\Gamma$上一动点，设直线$l_1:y=x$，设直线$l_2:y=-x$。\\[3mm]
+    过动点$P$作直线$l_1$的平行线，交曲线$\Gamma$于点$Q$。\\[3mm]
+    过动点$P$作直线$l_2$的平行线，交曲线$\Gamma$于点$R$。\\[3mm]
+    \begin{figure}[h]
+        \begin{center}
+            \qquad\qquad\qquad
+            \begin{tikzpicture}[scale=0.8]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-8,0){X1}
+                \tkzDefPoint(+8,0){X2}
+
+                \tkzDefPoint(0,-6){Y1}
+                \tkzDefPoint(0,+6){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick] plot[variable=\t,domain=-55:55] ({+3*sec(\t)},{+3*tan(\t)});
+                \draw[thick] plot[variable=\t,domain=-55:55] ({-3*sec(\t)},{+3*tan(\t)});
+
+                \draw[thick] plot[variable=\t,domain=-55:55] ({+3*tan(\t)},{+3*sec(\t)});
+                \draw[thick] plot[variable=\t,domain=-55:55] ({+3*tan(\t)},{-3*sec(\t)});
+
+                \tkzDefPoint(-5,-5){L1D}
+                \tkzDefPoint(+5,+5){L1U}
+
+                \tkzDefPoint(+5,-5){L2D}
+                \tkzDefPoint(-5,+5){L2U}
+
+                \tkzDrawSegments[dashed](L1D,L1U L2D,L2U)
+
+                \tkzDefPoint(-1.6,3.4){P}
+                \tkzDefPoint(-3.4,1.6){Q}
+                \tkzDefPoint(3.4,-1.6){R}
+
+                \tkzDrawSegment[add=0 and 0.7](P,Q)
+                \tkzDrawSegment[add=0 and 0.3](P,R)
+
+                \tkzLabelPoint[above right](L1U){$l_1$}
+                \tkzLabelPoint[above left](L2U){$l_2$}
+                \tkzLabelPoint[above](P){$P$}
+                \tkzLabelPoint[right](R){$R$}
+                \tkzLabelPoint[left=2pt](Q){$Q$}
+
+                \tkzDrawPoints[fill=white](P,Q,R)
+
+            \end{tikzpicture}
+            \caption{题目08-03的示意图}
+        \end{center}
+    \end{figure}\\
+    证明三角形$\triangle PQR$的面积为定值，并求出该面积。
+
+\newpage
+
+\subsection{第一种解法}
+    \begin{center}
+        整理者：施安然
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：联立求点，代入双曲线方程。}\\[5mm]
+        由于$\left|x^2-y^2\right|=1$具有对称性。\\[5mm]
+        因此只需要讨论$P$在$y^2-x^2=1$上的情况即可。\\[5mm]
+        因此点$P(x_0,y_0)$满足$y_0^2-x_0^2=1$。\\[8mm]
+        联立直线$PQ$和左右开口的双曲线：\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~y - y_0 = x - x_0\\[2mm]
+                ~x^2 - y^2 = 1\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        $x^2-(x-x_0+y_0)^2=1$\\[5mm]
+        $x^2-(x^2+x_0^2+y_0^2-2xx_0+2xy_0-2x_0y_0)=1$\\[5mm]
+        $x_0^2+y_0^2-2xx_0+2xy_0-2x_0y_0=-1$\\[5mm]
+        $(x_0-y_0)^2-2x\cdot(x_0-y_0)=-1$\\[5mm]
+        $2x\cdot(x_0-y_0)=(x_0-y_0)^2+1$\\[5mm]
+        $2x\cdot(x_0-y_0)=(x_0-y_0)^2-(x_0^2-y_0^2)$\\[5mm]
+        $2x\cdot(x_0-y_0)=(x_0-y_0)^2-(x_0+y_0)\cdot(x_0-y_0)$\\[5mm]
+        $2x=(x_0-y_0)-(x_0+y_0)$\\[5mm]
+        $x=-y_0$\\[100mm]
+        因此$Q(-y_0, -x_0)$\\[5mm]
+        同理$R(+y_0, +x_0)$\\[5mm]
+        \begin{math}
+            \begin{vmatrix}
+                +x_0&+y_0&1\\
+                +y_0&+x_0&1\\
+                -y_0&-x_0&1\\
+            \end{vmatrix}=2x_0^2-2y_0^2=-2
+        \end{math}\\[5mm]
+        $S_{\triangle PQR}=\dfrac{1}{2}\cdot\left|-2\right|=1$\\[5mm]
+        $\because y^2 - x^2 = 1 $与$ x^2 - y^2 = 1 $共渐近线$ y = \pm x$\\[5mm]
+        $\therefore P、Q$关于$y = -x$ 对称\\[5mm]
+        $\therefore Q(-y_0, -x_0)$\\[5mm]
+        同理：$R(y_0, x_0)$\\[5mm]
+    \end{multicols}
+
+\newpage
+
+\subsection{第二种解法}
+    \begin{center}
+        整理者：施安然
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：利用关于直线的对称点。}\\[5mm]
+        由于$x^2-y^2=1$和$y^2-x^2=1$互为共轭双曲线。\\[5mm]
+        故其渐近线均为$y=+x$和$y=-x$，设$P(x_0,y_0)$。\\[5mm]
+        $P$关于$y=-x$的对称点为$Q(-y_0,-x_0)$。\\[5mm]
+        $P$关于$y=+x$的对称点为$R(+y_0,+x_0)$。\\[5mm]
+        \begin{math}
+            \begin{vmatrix}
+                +x_0&+y_0&1\\
+                +y_0&+x_0&1\\
+                -y_0&-x_0&1\\
+            \end{vmatrix}=2x_0^2-2y_0^2=-2
+        \end{math}\\[5mm]
+        $S_{\triangle PQR}=\dfrac{1}{2}\cdot\left|-2\right|=1$\\[5mm]
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\end{document}

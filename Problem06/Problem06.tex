@@ -1,0 +1,454 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{ctexart}
+
+\RequirePackage{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathpazo}
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+\RequirePackage{tkz-euclide}
+
+\RequirePackage[hidelinks]{hyperref}
+
+\RequirePackage{multicol}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{intersections}
+\usetikzlibrary{angles}
+\usetkzobj{all}
+
+\RequirePackage{subfigure}
+
+\setmainfont{Times New Roman}
+
+\setCJKmainfont{等线}
+\setCJKsansfont{等线}
+\setCJKmonofont{等线}
+
+\let\nvec\vec
+\def\vec#1{\nvec{\vphantom b\smash{#1}}}
+
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\arccot}{\operatorname{arccot}}
+
+\newcommand{\rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{geometry}
+\geometry
+{
+    left=1.25in,
+    right=1.25in,
+    top=1in,
+    bottom=1in
+}
+
+\title{关于第06期题目的讨论}
+\author{数学学习小组}
+\date{2020.07.09}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\setlength{\parindent}{0pt}
+\setlength{\columnseprule}{0.4pt}
+\setlength{\columnsep}{40pt}
+
+\section{题目06-1}
+    本题来源于第06期（2020.07.09）小组讨论题中，原题号为第3题。\\[3mm]
+    对于抛物线$\Gamma$：
+    \begin{large}
+        \begin{equation*}
+            x^2=4y
+        \end{equation*}
+    \end{large}\\
+    设直线$l$过点$P(0,-1)$。\\[3mm]
+    将直线$l$与抛物线$\Gamma$的交点称为点$A$和点$B$。\\[3mm]
+    将点$A$关于$y$轴的对称点称为点$A^{'}$。
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.5]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-13,0){X1}
+                \tkzDefPoint(+13,0){X2}
+
+                \tkzDefPoint(0,-4){Y1}
+                \tkzDefPoint(0,+12){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick,samples=100,domain=-7:7] plot(\x,{0.2*\x*\x});
+
+                \tkzDefPoint(6,7.2){B}
+                \tkzDefPoint(1.5,0.45){A1}
+                \tkzDefPoint(-1.5,0.45){A2}
+                \tkzInterLL(A1,B)(Y1,Y2)
+                \tkzGetPoint{P}
+
+                \tkzDrawSegment[add=0.25 and 0.2](B,P)
+                \tkzDrawSegment[add=0.30 and 0.3](B,A2)
+
+                \tkzLabelPoint[right](P){$P$}
+                \tkzLabelPoint[right=0.1](A1){$A$}
+                \tkzLabelPoint[left=0.2](A2){$A^{'}$}
+                \tkzLabelPoint[right=0.1](B){$B$}
+                \tkzLabelPoint[below left](O){$O$}
+
+                \tkzDrawPoints[fill=white](A1,A2,B,P,O)
+            \end{tikzpicture}
+            \caption{题目06-01的示意图}
+        \end{center}
+    \end{figure}\\
+    现连接直线$A^{'}B$，求证直线$A^{'}B$过一定点，并求出该定点。
+
+\newpage
+
+\subsection{第一种解法}
+    \begin{center}
+        整理者：李宇轩
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：利用向量平行。}\\[5mm]
+        设定点为$S(x,y)$，因为$S$在$A^{'}B$上，故$\overrightarrow{A^{'}S}\parallel\overrightarrow{A^{'}B}$。\\[5mm]
+        设点$A(x_1,y_1)$，设点$B(x_2,y_2)$，故点$A^{'}(-x_1,y_1)$。\\[5mm]
+        $\overrightarrow{A^{'}S}=(x+x_1,y-y_1)$\\[5mm]
+        $\overrightarrow{A^{'}B}=(x_2+x_1,y_2-y_1)$\\[7mm]
+        根据条件可设直线$l:y=kx_1$。\\[5mm]
+        由于点$A(x_1,y_1)$在直线$l$上，故$y_1=kx_1-1$。\\[5mm]
+        由于点$A(x_2,y_2)$在直线$l$上，故$y_2=kx_2-1$。\\[8mm]
+        由平行条件可得：\\[3mm]
+        $(x+x_1)\cdot (y_2-y_1)=(y-y_1)\cdot (x_2+x_1)$\\[5mm]
+        $(y_2-y_1) x+x_1y_2=(x_2+x_1) y-x_2y_1$\\[5mm]
+        $(y_2-y_1) x+kx_1x_2-x_1=(x_2+x_1) y-kx_1x_2+x_2$\\[8mm]
+        联立直线和抛物线：\\[4mm]
+        \begin{math}
+            \begin{cases}
+                ~y=kx-1\\[1mm]
+                ~x^2-4y\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        $x^2=4\cdot(kx-1)$\\[5mm]
+        $x^2-4kx-4=0$\\[8mm]
+        由韦达定理可知：\\[3mm]
+        $x_1+x_2=4k$\\[5mm]
+        $x_1\cdot x_2=4$\\[8mm]
+        将两者代入可得：\\[3mm]
+        $(y_2-y_1) x+kx_1x_2-x_1=(x_2+x_1) y-kx_1x_2+x_2$\\[5mm]
+        $(y_2-y_1)\cdot x=4ky+4k-8k$\\[5mm]
+        $(y_2-y_1)\cdot x=4ky-4k$\\[5mm]
+        要使$S$为定点，其坐标必为$S(0,1)$。
+        \newpage
+    \end{multicols}
+
+\newpage
+
+\subsection{第二种解法}
+    \begin{center}
+        整理者：李宇轩
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：特殊值法，利用对称性，利用向量平行。}\\[5mm]
+        由于对称性，若$A^{'}B$过定点，则定点必在$y$轴上。\\[5mm]
+        设定点为$S(0,y)$，因为$S$在$A^{'}B$上，故$\overrightarrow{A^{'}S}\parallel\overrightarrow{A^{'}B}$。\\[5mm]
+        设点$A(x_1,y_1)$，设点$B(x_2,y_2)$，故点$A^{'}(-x_1,y_1)$。\\[5mm]
+        $\overrightarrow{A^{'}S}=(x_1,y-y_1)$\\[5mm]
+        $\overrightarrow{A^{'}B}=(x_2+x_1,y_2-y_1)$\\[7mm]
+        根据条件可设直线$l:y=kx_1$。\\[5mm]
+        由于点$A(x_1,y_1)$在直线$l$上，故$y_1=kx_1-1$。\\[5mm]
+        由于点$A(x_2,y_2)$在直线$l$上，故$y_2=kx_2-1$。\\[8mm]
+        由平行条件可得：\\[3mm]
+        $x_1\cdot(y_2-y_1)=(y-y_1)\cdot(x_2+x_1)$\\[5mm]
+        $x_1y_2-x_1y_1=(x_2+x_1)\cdot y-x_2y_1-x_1y_1$\\[5mm]
+        $x_1y_2+x_2y_1=(x_2+x_1)\cdot y$\\[8mm]
+        求解定点纵坐标：\\[4mm]
+        $y=\dfrac{x_1y_2+x_2y_1}{x_1+x_2}$\\[5mm]
+        $y=\dfrac{kx_1x_2-x_1+kx_1x_2-x_2}{x_1+x_2}$\\[5mm]
+        $y=\dfrac{2kx_1x_2-(x_1+x_2)}{x_1+x_2}$\\[5mm]
+        $y=\dfrac{2kx_1x_2}{x_1+x_2}-1$\\[50mm]
+        联立直线和抛物线：\\[4mm]
+        \begin{math}
+            \begin{cases}
+                ~y=kx-1\\[1mm]
+                ~x^2-4y\\[1mm]
+            \end{cases}
+        \end{math}\\[5mm]
+        $x^2=4\cdot(kx-1)$\\[5mm]
+        $x^2-4kx-4=0$\\[8mm]
+        由韦达定理可知：\\[3mm]
+        $x_1+x_2=4k$\\[5mm]
+        $x_1\cdot x_2=4$\\[8mm]
+        将两者代入可得：\\[3mm]
+        $y=\dfrac{2k\cdot x_1\cdot x_2}{x_1+x_2}-1$\\[5mm]
+        $y=\dfrac{2k\cdot 4}{4k}-1$\\[6mm]
+        $y=1$\\[8mm]
+        因此点$S$为定点，其坐标为$S(0,1)$。
+        \newpage
+    \end{multicols}
+
+\newpage
+
+    当点$B$在右侧时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.4]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-13,0){X1}
+                \tkzDefPoint(+13,0){X2}
+
+                \tkzDefPoint(0,-4){Y1}
+                \tkzDefPoint(0,+12){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick,samples=100,domain=-7:7] plot(\x,{0.2*\x*\x});
+
+                \tkzDefPoint(6,7.2){B}
+                \tkzDefPoint(1.5,0.45){A1}
+                \tkzDefPoint(-1.5,0.45){A2}
+                \tkzInterLL(A1,B)(Y1,Y2)
+                \tkzGetPoint{P}
+
+                \tkzDrawSegment[add=0.25 and 0.2](B,P)
+                \tkzDrawSegment[add=0.30 and 0.3](B,A2)
+
+                \tkzLabelPoint[right](P){$P$}
+                \tkzLabelPoint[right=0.1](A1){$A$}
+                \tkzLabelPoint[left=0.2](A2){$A^{'}$}
+                \tkzLabelPoint[right=0.1](B){$B$}
+                \tkzLabelPoint[below left](O){$O$}
+
+                \tkzDrawPoints[fill=white](A1,A2,B,P,O)
+            \end{tikzpicture}
+            \caption{当点$B$在右侧时的示意图}
+        \end{center}
+    \end{figure}\\
+    当点$B$在左侧时的示意图：
+    \begin{figure}[h!]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.4]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-13,0){X1}
+                \tkzDefPoint(+13,0){X2}
+
+                \tkzDefPoint(0,-4){Y1}
+                \tkzDefPoint(0,+12){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick,samples=100,domain=-7:7] plot(\x,{0.2*\x*\x});
+
+                \tkzDefPoint(-6,7.2){B}
+                \tkzDefPoint(-1.5,0.45){A1}
+                \tkzDefPoint(+1.5,0.45){A2}
+                \tkzInterLL(A1,B)(Y1,Y2)
+                \tkzGetPoint{P}
+
+                \tkzDrawSegment[add=0.25 and 0.2](B,P)
+                \tkzDrawSegment[add=0.30 and 0.3](B,A2)
+
+                \tkzLabelPoint[left](P){$P$}
+                \tkzLabelPoint[left=0.1](A1){$A$}
+                \tkzLabelPoint[right=0.2](A2){$A^{'}$}
+                \tkzLabelPoint[left=0.1](B){$B$}
+                \tkzLabelPoint[below right](O){$O$}
+
+                \tkzDrawPoints[fill=white](A1,A2,B,P,O)
+            \end{tikzpicture}
+            \caption{当点$B$在左侧时的示意图}
+        \end{center}
+    \end{figure}\\
+    以上是本解法的配图。
+
+\newpage
+
+\section{题目06-02}
+    本题来源于第06期（2020.07.09）小组讨论题中，原题号为第5题。\\[3mm]
+    对于抛物线$\Gamma$：
+    \begin{large}
+        \begin{equation*}
+            y^2=4x
+        \end{equation*}
+    \end{large}\\
+    设直线$l_1$过点$P(12,8)$，交抛物线$\Gamma$于点$C$和点$D$，两者的中点为点$M$。\\[3mm]
+    设直线$l_2$过点$P(12,8)$，交抛物线$\Gamma$于点$E$和点$F$，两者的中点为点$N$。
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.5]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefPoint(-4,0){X1}
+                \tkzDefPoint(+13,0){X2}
+
+                \tkzDefPoint(0,-9){Y1}
+                \tkzDefPoint(0,+9){Y2}
+
+                \tkzDrawSegments[->](X1,X2)
+                \tkzDrawSegments[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2) {$x$}
+                \tkzLabelPoint[right](Y2) {$y$}
+                
+                \draw[thick,samples=100,domain=0:7] plot({+0.2*\x^2},{+\x});
+                \draw[thick,samples=100,domain=0:7] plot({+0.2*\x^2},{-\x});
+
+                \tkzDefPoint(6,8){P}
+
+                \tkzDefPoint(+4.3252,+4.6504){C}
+                \tkzDefPoint(+0.9249,-2.1503){D}
+
+                \tkzDefPoint(+5.2852,+5.1406){E}
+                \tkzDefPoint(+3.0274,-3.8906){F}
+
+                \tkzDrawSegment[add=0 and 0.4](P,D)
+                \tkzDrawSegment[add=0 and 0.3](P,F)
+
+                \tkzDefMidPoint(C,D)
+                \tkzGetPoint{M}
+                \tkzDefMidPoint(E,F)
+                \tkzGetPoint{N}
+
+                \tkzLabelPoint[right](P){$P$}
+                \tkzLabelPoint[above left](C){$C$}
+                \tkzLabelPoint[below right](E){$E$}
+                \tkzLabelPoint[left](M){$M$}
+                \tkzLabelPoint[right](N){$N$}
+                \tkzLabelPoint[left](D){$D$}
+                \tkzLabelPoint[above right](F){$F$}
+
+                \tkzDrawPoints[fill=white](P,M,N,C,D,E,F)
+            \end{tikzpicture}
+            \caption{题目06-02的示意图}
+        \end{center}
+    \end{figure}\\
+    若两直线满足倾斜角互余，求证直线$MN$过一定点，并求出该定点。
+
+\newpage
+
+\subsection{第一种解法}
+    \begin{center}
+        整理者：乔君毅
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：设直线求解。}\\[5mm]
+        因为直线$l_1$和直线$l_2$的倾斜角互余。\\[5mm]
+        故设直线$l_1$的斜率为$k$，同时直线$l_2$的斜率为$\dfrac{1}{k}$。\\[5mm]
+        设点$C(x_1,y_1)$，设点$D(x_2,y_2)$。\\[5mm]
+        故中点$M(\dfrac{x_1+x_2}{2},\dfrac{y_1+y_2}{2})$\\[5mm]
+        由于直线$l_1$在点$P(12,8)$上：\\[3mm]
+        $l_1:y-8=k(x-12)$\\[5mm]
+        $l_1:y=kx-16k+8$\\[5mm]
+        联立直线$l_1$和抛物线：\\[5mm]
+        \begin{math}
+            \begin{cases}
+                ~y=kx-12k+8\\[1mm]
+                ~y^2=4x\\[1mm]
+                \end{cases}        
+        \end{math}\\[5mm]
+        $ky^2-4y+32-48k=0$\\[5mm]
+        $y_1+y_2=\dfrac{4}{k}$\\[5mm]
+        $y_1\cdot y_2=\dfrac{32-48k}{k} $\\[5mm]
+        $x_1+x_2=\dfrac{1}{4}\cdot\left(y_1^2+y_2^2\right)$\\[5mm]
+        $x_1+x_2=\dfrac{1}{4}\cdot\left[\left(y_1+y_2\right)^2-2\cdot y_1\cdot y_2\right]$\\[5mm]
+        $x_1+x_2=\dfrac{1}{4}\cdot\left[\dfrac{16}{k^2}-\frac{64}{k}+96\right]$\\[5mm]
+        $x_1+x_2=\dfrac{4}{k^2}-\dfrac{16}{k}+24$\\[5mm]
+        所以$M$点坐标为$\Big(12+\dfrac{2}{k^2}-\dfrac{8}{k}~~,~~\dfrac{2}{k}\Big)$\\[5mm]
+        同理$N\,$点坐标为$\Big(12+2k^2-8k~,~2k\Big)$\\[50mm]
+        求解直线$MN$的斜率：\\[4mm]
+        $k_{MN}=\dfrac{y_M-y_N}{x_M-x_N}$\\[5mm]
+        $k_{MN}=\dfrac{\dfrac{2}{k}-2k }{2(\dfrac{1}{k^2}-k^2 )-8(\dfrac{1}{k}-k)}$\\[5mm]
+        $k_{MN}=\dfrac{1}{\dfrac{1}{k}+k-4} $\\[8mm]
+        求解直线$MN$的方程：\\[4mm]
+        $l_{MN}:y-2k=\dfrac{1}{\dfrac{1}{k}+k -4}\cdot [x-(12+2k^2-8k)]$\\[5mm]
+        $l_{MN}:(\dfrac{1}{k}+k -4)\cdot(y-2k)=x-2k^2+8k-12$\\[5mm]
+        $l_{MN}:(\dfrac{1}{k}+k -4)\cdot y=x-10$\\[8mm]
+        因为定点$S$的坐标应使得上式恒成立。\\[3mm]
+        所以定点的坐标为$S(10,0)$。
+        \newpage
+    \end{multicols}
+
+
+\newpage
+
+\subsection{第二种解法}
+    \begin{center}
+        整理者：施安然
+    \end{center}
+    \begin{multicols}{2}
+        \small
+        \textbf{核心思路：利用直线交点求特殊值。}\\[5mm]
+        因为直线$l_1$和直线$l_2$的倾斜角互余。\\[5mm]
+        故设直线$l_1$的斜率为$k$，同时直线$l_2$的斜率为$\dfrac{1}{k}$。\\[5mm]
+        设点$C(x_1,y_1)$，设点$D(x_2,y_2)$。\\[5mm]
+        故中点$M(\dfrac{x_1+x_2}{2},\dfrac{y_1+y_2}{2})$\\[5mm]
+        由于直线$l_1$在点$P(12,8)$上：\\[5mm]
+        $l_1:y-8=k(x-12)$\\[5mm]
+        $l_2:y-8=\dfrac{1}{k}(x-12)$\\[5mm]
+        当$k<0$时，倾斜角大于$90$度，无余角，舍。\\[5mm]
+        当$k=1$时，两条直线重合，不合题意，舍。\\[5mm]
+        当$k=0$时，只有三个交点，不合题意，舍。\\[5mm]
+        当$k$不存在时，只有三个交点，不合题意，舍。\\[5mm]
+        因此$k$存在，同时满足$k\in(0,1)\cap(1,+\infty)$\\[5mm]
+        所以$x_1\neq x_2$，同时$y_1 \neq y_2$。\\[5mm]
+        $y_1^2 = 4x_1$\\[5mm]
+        $y_2^2 = 4x_2$\\[5mm]
+        $(y_1 - y_2)(y_1 + y_2) = 4(x_1 - x_2)$\\[5mm]
+        $y_1+y_2=\dfrac{4}{k}$\\[5mm]
+        $x_1+x_2=\dfrac{4}{k^2}-\dfrac{16}{k}+24$\\[5mm]
+        所以$M$点坐标为$\Big(12+\dfrac{2}{k^2}-\dfrac{8}{k}~~,~~\dfrac{2}{k}\Big)$\\[5mm]
+        同理$N\,$点坐标为$\Big(12+2k^2-8k~,~2k\Big)$\\[5mm]
+        联立直线$l_1$和抛物线：\\[3mm]
+        \begin{math}
+            \begin{cases}
+                ~y-8=k(x-12)\\[1mm]
+                ~y^2 = 4x\\[1mm]
+                \end{cases}
+        \end{math}\\[5mm]
+        $y^2 - \dfrac{4}{k}y + \dfrac{32}{k} - 48 = 0$\\[5mm]
+        解得：$\Delta = \dfrac{16}{k^2} - \dfrac{128}{k} + 192 > 0$\\[5mm]
+        同理：$\Delta = 16k^2 - 128k + 192 > 0$\\[6mm]
+        $k \in (0, \dfrac{1}{6}) \cup  (\dfrac{1}{2}, 2)$\\[8mm]
+        代入 $k = \dfrac{1}{10}$ ：$M(132, 20)$~~~~$N(\dfrac{561}{50}, \dfrac{1}{5})$\\[5mm]
+        $l_{MN} : y = \dfrac{10}{61}x - \dfrac{100}{61}$\\[8mm]
+        代入 $k = \dfrac{3}{2}$：$M(\dfrac{68}{9} , \dfrac{4}{3} )$~~~~$N(\dfrac{9}{2}, 3)$\\[5mm]
+        $l_{MN} : y = -\dfrac{6}{11}x + \dfrac{60}{11}$\\[8mm]
+        联立直线求得$(10, 0)$，故猜测定点为$S(10, 0)$。\\[8mm]
+        过$S$设$l_{MN}:x=ty+10$\\[5mm]
+        将$M$代入得：$t = k + \dfrac{1}{k} - 4$\\[5mm]
+        将$N\,$代入得：$t = k + \dfrac{1}{k} - 4$\\[5mm]
+        因此对于任意$k$，点$S(10,0)$均在直线$MN$上\\[3mm]
+        由此证明了定点为$S(10, 0)$。
+        \newpage
+    \end{multicols}
+
+\end{document}
