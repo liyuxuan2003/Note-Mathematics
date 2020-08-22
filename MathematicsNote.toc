@@ -263,67 +263,61 @@
 \contentsline {subsubsection}{\numberline {16.8.3}球的体积}{262}{subsubsection.16.8.3}% 
 \contentsline {subsubsection}{\numberline {16.8.4}球面距离}{263}{subsubsection.16.8.4}% 
 \contentsline {section}{\numberline {17}排列组合}{265}{section.17}% 
-\contentsline {subsection}{\numberline {17.1}乘法原理}{265}{subsection.17.1}% 
-\contentsline {subsection}{\numberline {17.2}排列}{265}{subsection.17.2}% 
-\contentsline {subsubsection}{\numberline {17.2.1}排列数公式的累乘形式}{265}{subsubsection.17.2.1}% 
+\contentsline {subsection}{\numberline {17.1}乘法原理和加法原理}{265}{subsection.17.1}% 
+\contentsline {subsection}{\numberline {17.2}排列}{266}{subsection.17.2}% 
+\contentsline {subsubsection}{\numberline {17.2.1}排列数公式的累乘形式}{266}{subsubsection.17.2.1}% 
 \contentsline {subsubsection}{\numberline {17.2.2}排列数公式的阶乘形式}{266}{subsubsection.17.2.2}% 
-\contentsline {subsubsection}{\numberline {17.2.3}排列数公式$01$}{266}{subsubsection.17.2.3}% 
+\contentsline {subsubsection}{\numberline {17.2.3}排列数公式$01$}{267}{subsubsection.17.2.3}% 
 \contentsline {subsubsection}{\numberline {17.2.4}排列数公式$02$}{267}{subsubsection.17.2.4}% 
 \contentsline {subsubsection}{\numberline {17.2.5}排列数公式$03$}{268}{subsubsection.17.2.5}% 
 \contentsline {subsubsection}{\numberline {17.2.6}排列数公式$04$}{269}{subsubsection.17.2.6}% 
 \contentsline {subsubsection}{\numberline {17.2.7}排列数公式$05$}{270}{subsubsection.17.2.7}% 
 \contentsline {subsubsection}{\numberline {17.2.8}排列数公式$06$}{271}{subsubsection.17.2.8}% 
-\contentsline {subsubsection}{\numberline {17.2.9}排列数公式$07$}{271}{subsubsection.17.2.9}% 
-\contentsline {subsection}{\numberline {17.3}加法原理}{272}{subsection.17.3}% 
-\contentsline {subsection}{\numberline {17.4}组合}{272}{subsection.17.4}% 
-\contentsline {subsubsection}{\numberline {17.4.1}组合数公式的累乘形式}{272}{subsubsection.17.4.1}% 
-\contentsline {subsubsection}{\numberline {17.4.2}组合数公式的阶乘形式}{273}{subsubsection.17.4.2}% 
-\contentsline {subsubsection}{\numberline {17.4.3}组合数公式$01$}{273}{subsubsection.17.4.3}% 
-\contentsline {subsubsection}{\numberline {17.4.4}组合数公式$02$}{274}{subsubsection.17.4.4}% 
-\contentsline {subsubsection}{\numberline {17.4.5}组合数公式$03$}{275}{subsubsection.17.4.5}% 
-\contentsline {subsubsection}{\numberline {17.4.6}组合数公式$04$}{276}{subsubsection.17.4.6}% 
-\contentsline {subsubsection}{\numberline {17.4.7}组合数公式$05$}{277}{subsubsection.17.4.7}% 
-\contentsline {subsubsection}{\numberline {17.4.8}组合数公式$06$}{278}{subsubsection.17.4.8}% 
-\contentsline {subsubsection}{\numberline {17.4.9}组合数公式$07$}{279}{subsubsection.17.4.9}% 
-\contentsline {subsubsection}{\numberline {17.4.10}组合数公式$08$}{280}{subsubsection.17.4.10}% 
-\contentsline {subsubsection}{\numberline {17.4.11}组合数公式$09$}{281}{subsubsection.17.4.11}% 
-\contentsline {subsubsection}{\numberline {17.4.12}组合数公式$10$}{282}{subsubsection.17.4.12}% 
-\contentsline {subsubsection}{\numberline {17.4.13}组合数公式$11$}{283}{subsubsection.17.4.13}% 
-\contentsline {subsubsection}{\numberline {17.4.14}组合数公式$12$}{284}{subsubsection.17.4.14}% 
-\contentsline {subsection}{\numberline {17.5}二项式定理}{285}{subsection.17.5}% 
-\contentsline {subsubsection}{\numberline {17.5.1}二项式系数的性质$01$}{286}{subsubsection.17.5.1}% 
-\contentsline {subsubsection}{\numberline {17.5.2}二项式系数的性质$02$}{286}{subsubsection.17.5.2}% 
-\contentsline {subsection}{\numberline {17.6}排列组合问题\uppercase {i\relax }}{287}{subsection.17.6}% 
-\contentsline {subsubsection}{\numberline {17.6.1}排列组合问题\uppercase {i\relax }-$01$}{287}{subsubsection.17.6.1}% 
-\contentsline {subsubsection}{\numberline {17.6.2}排列组合问题\uppercase {i\relax }-$02$}{292}{subsubsection.17.6.2}% 
-\contentsline {subsubsection}{\numberline {17.6.3}排列组合问题\uppercase {i\relax }-$03$}{292}{subsubsection.17.6.3}% 
-\contentsline {subsubsection}{\numberline {17.6.4}排列组合问题\uppercase {i\relax }-$04$}{293}{subsubsection.17.6.4}% 
-\contentsline {subsubsection}{\numberline {17.6.5}排列组合问题\uppercase {i\relax }-$05$}{293}{subsubsection.17.6.5}% 
-\contentsline {subsubsection}{\numberline {17.6.6}排列组合问题\uppercase {i\relax }-$06$}{294}{subsubsection.17.6.6}% 
-\contentsline {subsubsection}{\numberline {17.6.7}排列组合问题\uppercase {i\relax }-$07$}{294}{subsubsection.17.6.7}% 
-\contentsline {subsection}{\numberline {17.7}排列组合问题\uppercase {ii\relax }}{295}{subsection.17.7}% 
-\contentsline {subsubsection}{\numberline {17.7.1}排列组合问题\uppercase {ii\relax }-$01$}{295}{subsubsection.17.7.1}% 
-\contentsline {subsubsection}{\numberline {17.7.2}排列组合问题\uppercase {ii\relax }-$02$}{296}{subsubsection.17.7.2}% 
-\contentsline {subsubsection}{\numberline {17.7.3}排列组合问题\uppercase {ii\relax }-$03$}{296}{subsubsection.17.7.3}% 
-\contentsline {subsection}{\numberline {17.8}排列组合问题\uppercase {iii\relax }}{297}{subsection.17.8}% 
-\contentsline {subsubsection}{\numberline {17.8.1}斯特林数}{297}{subsubsection.17.8.1}% 
-\contentsline {subsubsection}{\numberline {17.8.2}排列组合问题\uppercase {iii\relax }-$01$}{300}{subsubsection.17.8.2}% 
-\contentsline {subsubsection}{\numberline {17.8.3}排列组合问题\uppercase {iii\relax }-$02$}{300}{subsubsection.17.8.3}% 
-\contentsline {subsubsection}{\numberline {17.8.4}排列组合问题\uppercase {iii\relax }-$03$}{301}{subsubsection.17.8.4}% 
-\contentsline {section}{\numberline {18}概率论初步}{302}{section.18}% 
-\contentsline {subsection}{\numberline {18.1}随机事件}{302}{subsection.18.1}% 
-\contentsline {subsection}{\numberline {18.2}古典概型}{302}{subsection.18.2}% 
-\contentsline {subsection}{\numberline {18.3}事件关系的运算}{303}{subsection.18.3}% 
-\contentsline {subsubsection}{\numberline {18.3.1}积事件}{303}{subsubsection.18.3.1}% 
-\contentsline {subsubsection}{\numberline {18.3.2}和事件}{303}{subsubsection.18.3.2}% 
-\contentsline {subsubsection}{\numberline {18.3.3}差事件}{304}{subsubsection.18.3.3}% 
-\contentsline {subsubsection}{\numberline {18.3.4}互斥事件}{304}{subsubsection.18.3.4}% 
-\contentsline {subsubsection}{\numberline {18.3.5}对立事件}{304}{subsubsection.18.3.5}% 
-\contentsline {subsection}{\numberline {18.4}概率的加法定理}{304}{subsection.18.4}% 
-\contentsline {subsection}{\numberline {18.5}条件概率的计算}{305}{subsection.18.5}% 
-\contentsline {subsubsection}{\numberline {18.5.1}独立事件}{305}{subsubsection.18.5.1}% 
-\contentsline {subsection}{\numberline {18.6}概率的乘法定理}{305}{subsection.18.6}% 
-\contentsline {section}{\numberline {19}基本统计方法}{306}{section.19}% 
-\contentsline {subsection}{\numberline {19.1}总体均值和总体方差}{306}{subsection.19.1}% 
-\contentsline {subsubsection}{\numberline {19.1.1}总体方差的两种形式}{306}{subsubsection.19.1.1}% 
-\contentsline {subsection}{\numberline {19.2}样本均值和样本方差}{307}{subsection.19.2}% 
+\contentsline {subsection}{\numberline {17.3}组合}{272}{subsection.17.3}% 
+\contentsline {subsubsection}{\numberline {17.3.1}组合数公式的累乘形式}{272}{subsubsection.17.3.1}% 
+\contentsline {subsubsection}{\numberline {17.3.2}组合数公式的阶乘形式}{272}{subsubsection.17.3.2}% 
+\contentsline {subsubsection}{\numberline {17.3.3}组合数公式$01$}{273}{subsubsection.17.3.3}% 
+\contentsline {subsubsection}{\numberline {17.3.4}组合数公式$02$}{273}{subsubsection.17.3.4}% 
+\contentsline {subsubsection}{\numberline {17.3.5}组合数公式$03$}{274}{subsubsection.17.3.5}% 
+\contentsline {subsubsection}{\numberline {17.3.6}组合数公式$04$}{275}{subsubsection.17.3.6}% 
+\contentsline {subsubsection}{\numberline {17.3.7}组合数公式$05$}{276}{subsubsection.17.3.7}% 
+\contentsline {subsubsection}{\numberline {17.3.8}组合数公式$06$}{277}{subsubsection.17.3.8}% 
+\contentsline {subsubsection}{\numberline {17.3.9}组合数公式$07$}{278}{subsubsection.17.3.9}% 
+\contentsline {subsubsection}{\numberline {17.3.10}组合数公式$08$}{279}{subsubsection.17.3.10}% 
+\contentsline {subsubsection}{\numberline {17.3.11}组合数公式$09$}{280}{subsubsection.17.3.11}% 
+\contentsline {subsubsection}{\numberline {17.3.12}组合数公式$10$}{281}{subsubsection.17.3.12}% 
+\contentsline {subsubsection}{\numberline {17.3.13}组合数公式$11$}{282}{subsubsection.17.3.13}% 
+\contentsline {subsubsection}{\numberline {17.3.14}组合数公式$12$}{283}{subsubsection.17.3.14}% 
+\contentsline {subsection}{\numberline {17.4}二项式定理}{284}{subsection.17.4}% 
+\contentsline {subsubsection}{\numberline {17.4.1}二项式定理的推论}{285}{subsubsection.17.4.1}% 
+\contentsline {subsection}{\numberline {17.5}排列组合问题\uppercase {i\relax }}{286}{subsection.17.5}% 
+\contentsline {subsubsection}{\numberline {17.5.1}排列组合问题\uppercase {i\relax }-$01$}{286}{subsubsection.17.5.1}% 
+\contentsline {subsubsection}{\numberline {17.5.2}排列组合问题\uppercase {i\relax }-$02$}{291}{subsubsection.17.5.2}% 
+\contentsline {subsubsection}{\numberline {17.5.3}排列组合问题\uppercase {i\relax }-$03$}{292}{subsubsection.17.5.3}% 
+\contentsline {subsubsection}{\numberline {17.5.4}排列组合问题\uppercase {i\relax }-$04$}{293}{subsubsection.17.5.4}% 
+\contentsline {subsection}{\numberline {17.6}排列组合问题\uppercase {ii\relax }}{294}{subsection.17.6}% 
+\contentsline {subsubsection}{\numberline {17.6.1}排列组合问题\uppercase {ii\relax }-$01$}{294}{subsubsection.17.6.1}% 
+\contentsline {subsubsection}{\numberline {17.6.2}排列组合问题\uppercase {ii\relax }-$02$}{295}{subsubsection.17.6.2}% 
+\contentsline {subsubsection}{\numberline {17.6.3}排列组合问题\uppercase {ii\relax }-$03$}{296}{subsubsection.17.6.3}% 
+\contentsline {subsection}{\numberline {17.7}球盒问题}{297}{subsection.17.7}% 
+\contentsline {subsubsection}{\numberline {17.7.1}球盒问题$01$}{297}{subsubsection.17.7.1}% 
+\contentsline {subsubsection}{\numberline {17.7.2}斯特林数}{298}{subsubsection.17.7.2}% 
+\contentsline {subsubsection}{\numberline {17.7.3}球盒问题$02$}{301}{subsubsection.17.7.3}% 
+\contentsline {subsubsection}{\numberline {17.7.4}球盒问题$03$}{302}{subsubsection.17.7.4}% 
+\contentsline {section}{\numberline {18}概率论初步}{303}{section.18}% 
+\contentsline {subsection}{\numberline {18.1}随机事件}{303}{subsection.18.1}% 
+\contentsline {subsection}{\numberline {18.2}古典概型}{303}{subsection.18.2}% 
+\contentsline {subsection}{\numberline {18.3}事件关系的运算}{304}{subsection.18.3}% 
+\contentsline {subsubsection}{\numberline {18.3.1}积事件}{304}{subsubsection.18.3.1}% 
+\contentsline {subsubsection}{\numberline {18.3.2}和事件}{304}{subsubsection.18.3.2}% 
+\contentsline {subsubsection}{\numberline {18.3.3}差事件}{305}{subsubsection.18.3.3}% 
+\contentsline {subsubsection}{\numberline {18.3.4}互斥事件}{305}{subsubsection.18.3.4}% 
+\contentsline {subsubsection}{\numberline {18.3.5}对立事件}{305}{subsubsection.18.3.5}% 
+\contentsline {subsection}{\numberline {18.4}概率的加法定理}{305}{subsection.18.4}% 
+\contentsline {subsection}{\numberline {18.5}条件概率的计算}{306}{subsection.18.5}% 
+\contentsline {subsubsection}{\numberline {18.5.1}独立事件}{306}{subsubsection.18.5.1}% 
+\contentsline {subsection}{\numberline {18.6}概率的乘法定理}{306}{subsection.18.6}% 
+\contentsline {section}{\numberline {19}基本统计方法}{307}{section.19}% 
+\contentsline {subsection}{\numberline {19.1}总体均值和总体方差}{307}{subsection.19.1}% 
+\contentsline {subsubsection}{\numberline {19.1.1}总体方差的两种形式}{307}{subsubsection.19.1.1}% 
+\contentsline {subsection}{\numberline {19.2}样本均值和样本方差}{308}{subsection.19.2}% 

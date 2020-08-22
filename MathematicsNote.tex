@@ -38,6 +38,10 @@
 
 \newcommand{\rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
 
+\newcommand{\Pe}{\mathrm{P}}
+\newcommand{\Co}{\mathrm{C}}
+\newcommand{\St}{\mathrm{S}}
+
 \usepackage{geometry}
 \geometry
 {
@@ -8786,7 +8790,7 @@
     \end{align}\\
     将横坐标代入斜率变形后的直线方程可得：
     \begin{align}
-        &y_0=-\frac{A}{Bk}\cdot\frac{-Bbk}{A+Bk^2}~~\\[3mm]
+        &y_0=-\frac{A}{Bk}\cdot\frac{-Bbk}{A+Bk^2}~~~\\[3mm]
         &y_0=\frac{Ab}{A+Bk^2}
     \end{align}\\
     弦中点公式（直线$y=kx+b$，圆锥曲线$Ax^2+By^2+C=0$）：
@@ -9501,13 +9505,13 @@
     椭圆上一点$P(x_0,y_0)$至左焦点$F_1$的焦半径公式：
     \begin{large}
         \begin{equation*}
-            PF_1=r+e\cdot x_0
+            PF_1=a+e\cdot x_0
         \end{equation*}
     \end{large}\\
     椭圆上一点$P(x_0,y_0)$至右焦点$F_2$的焦半径公式：
     \begin{large}
         \begin{equation*}
-            PF_2=r-e\cdot x_0
+            PF_2=a-e\cdot x_0
         \end{equation*}
     \end{large}\\
     以焦点在原点左侧的情况为例，设椭圆上一点为$P(x_0,y_0)$，设其在准线上的投影为$H(l,y_0)$。\\[3mm]
@@ -9770,18 +9774,19 @@
         &~~A\cdot\left(x_1\;^2-x_2\;^2\right)+B\cdot\left(y_1\;^2-y_2\;^2\right)=0\\[8mm]
         &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)+B\cdot(y_1+y_2)\cdot(y_1-y_2)=0\\[8mm]
         &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)=-B\cdot(y_1+y_2)\cdot(y_1-y_2)\\[8mm]
-        &-\frac{A}{B}=\frac{y_1+y_2}{x_1+x_2}+\frac{y_1-y_2}{x_1-x_2}\\[8mm]
+        &-\frac{A}{B}=\frac{(y_1+y_2)\cdot(y_1-y_2)}{(x_1+x_2)\cdot(x_1-x_2)}\\[8mm]
+        &-\frac{A}{B}=\frac{y_1+y_2}{x_1+x_2}\cdot\frac{y_1-y_2}{x_1-x_2}\\[8mm]
         &-\frac{A}{B}=k_{PA}\cdot k_{PB}
     \end{align}\\
     由此得到了斜率之积的表达式。
 
 \newpage
 
-    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    根据焦点在$x$轴上的椭圆的一般方程的参数：\vspace{7pt}
     \begin{align}
         &\begin{cases}
             A=b^2\\[1mm]
-            B=a^2\\[1mm]
+            B=a^2
         \end{cases}\\[3mm]
         &~k_{PA}\cdot k_{PB}=-\frac{A}{B}\\[3mm]
         &~k_{PA}\cdot k_{PB}=-\frac{b^2}{a^2}\\[3mm]
@@ -9789,11 +9794,11 @@
         &~k_{PA}\cdot k_{PB}=\frac{c^2}{a^2}-\frac{a^2}{a^2}~~~~~~~~\\[3mm]
         &~k_{PA}\cdot k_{PB}=e^2-1
     \end{align}\\
-    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    根据焦点在$y$轴上的椭圆的一般方程的参数：\vspace{7pt}
     \begin{align}
         &\begin{cases}
             A=a^2\\[1mm]
-            B=b^2\\[1mm]
+            B=b^2
         \end{cases}\\[3mm]
         &~k_{PA}\cdot k_{PB}=-\frac{A}{B}\\[3mm]
         &~k_{PA}\cdot k_{PB}=-\frac{a^2}{b^2}\\[3mm]
@@ -9870,14 +9875,15 @@
         &~~A\cdot\left(x_1\;^2-x_2\;^2\right)+B\cdot\left(y_1\;^2-y_2\;^2\right)=0\\[8mm]
         &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)+B\cdot(y_1+y_2)\cdot(y_1-y_2)=0\\[8mm]
         &~~A\cdot(x_1+x_2)\cdot(x_1-x_2)=-B\cdot(y_1+y_2)\cdot(y_1-y_2)\\[8mm]
-        &-\frac{A}{B}=\frac{y_1+y_2}{x_1+x_2}+\frac{y_1-y_2}{x_1-x_2}\\[8mm]
+        &-\frac{A}{B}=\frac{(y_1+y_2)\cdot(y_1-y_2)}{(x_1+x_2)\cdot(x_1-x_2)}\\[8mm]
+        &-\frac{A}{B}=\frac{y_1+y_2}{x_1+x_2}\cdot\frac{y_1-y_2}{x_1-x_2}\\[8mm]
         &-\frac{A}{B}=k_{PA}\cdot k_{PB}
     \end{align}\\
     由此得到了斜率之积的表达式。
 
 \newpage
 
-    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    根据焦点在$x$轴上的双曲线的一般方程的参数：\vspace{7pt}
     \begin{align}
         &\begin{cases}
             A=b^2\\[1mm]
@@ -9889,7 +9895,7 @@
         &~k_{PA}\cdot k_{PB}=\frac{c^2}{a^2}-\frac{a^2}{a^2}~~~~~~~~\\[3mm]
         &~k_{PA}\cdot k_{PB}=e^2-1
     \end{align}\\
-    根据焦点在$x$轴上的椭圆的一般方程的参数代换：\vspace{5pt}
+    根据焦点在$y$轴上的双曲线的一般方程的参数：\vspace{7pt}
     \begin{align}
         &\begin{cases}
             A=-a^2\\[1mm]
@@ -11811,117 +11817,157 @@
 
 \section{排列组合}
 
-\subsection{乘法原理}
-    乘法原理：如果完成一件事总共有$n$个步骤，其中第$i$个步骤有$m_i$种不同的方法，\\
-    那么完成这件事共有$N$种方法。\\[3mm]
+\subsection{乘法原理和加法原理}
+    若完成一件事总共有$n$个步骤，第$i$个步骤有$m_i$种不同方法，那么完成这件事共有$N$种方法。\\[3mm]
+    乘法原理可以用于解决形如上方形式的问题。\\[3mm]
     乘法原理的数学表达：
     \begin{large}
         \begin{equation*}
             N=\prod_{i=1}^{n}m_i
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    若完成一件事总共有$n$类办法，第$i$类办法有$m_i$种不同方法，那么完成这件事共有$N$种方法。\\[3mm]
+    加法原理可以用于解决形如上方形式的问题。\\[3mm]
+    加法原理的数学表达：
+    \begin{large}
+        \begin{equation*}
+            N=\sum_{i=1}^{n}m_i
+        \end{equation*}
+    \end{large}\\
+    考虑以下的示意图：\vspace{3pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzDefPoint(-6,0){A}
+                \tkzDefPoint(0,0){B}
+                \tkzDefPoint(+6,0){C}
+
+                \foreach \i in{-2,-1}
+                {
+                    \tkzDefPoint(-3,\i){M}
+                    \tkzDrawSegments[dashed](A,M M,B)
+                }
+
+                \foreach \i in{0,1,2}
+                {
+                    \tkzDefPoint(-3,\i){M}
+                    \tkzDrawSegments(A,M M,B)
+                }
+
+                \foreach \i in{-2}
+                {
+                    \tkzDefPoint(+3,\i){M}
+                    \tkzDrawSegments[dashed](B,M M,C)
+                }
+
+                \foreach \i in{0,2}
+                {
+                    \tkzDefPoint(+3,\i){M}
+                    \tkzDrawSegments(B,M M,C)
+                }
+
+                \tkzDrawPoints[fill=white](A,B,C)
+                \tkzLabelPoints[below](A,B,C)
+            \end{tikzpicture}
+            \caption{乘法原理和加法原理的联用}
+        \end{center}
+    \end{figure}\\
+    如图所示，路径$A-B$总共有两类办法，实线类有$3$种方法，虚线类有$2$种方法。\\[3mm]
+    如图所示，路径$B\hspace{1.0pt}-C$总共有两类办法，实线类有$2$种方法，虚线类有$1$种方法。\\[3mm]
+    根据加法原理可知，第一段路径上总共有$N=3+2=5$种方法。\\[3mm]
+    根据加法原理可知，第二段路径上总共有$N=2+1=3$种方法。\\[3mm]
+    根据乘法原理可知，由起点至终点总共有$N=5\times 3=15$种方法。\\[3mm]
+    由此可见，在解决某些较为复杂问题时，可以按照一定顺序联用乘法原理和加法原理。
 
 \subsection{排列}
-    从$n$个不同元素中取出$m$个元素排成一列，称为一个排列（Permutation）。\\[3mm]
+    排列（Permutation）指的是从$n$个不同元素中取出$m$个元素排成一列。\\[3mm]
     排列的个数称为排列数，记作：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m\qquad(m\leq n)
+            \Pe_n^m\qquad(m\leq n)
         \end{equation*}
     \end{large}
 
 \subsubsection{排列数公式的累乘形式}
-    从$4$个不同元素中取出$3$个元素，显然其排列数：
-    \begin{equation*}
-        \mathrm{P}_4^3=\underbrace{4\times 3\times 2}_{\text{共}\,3\,\text{项}}
-    \end{equation*}\\
-    从$6$个不同元素中取出$4$个元素，显然其排列数：
-    \begin{equation*}
-        \mathrm{P}_6^4=\underbrace{6\times 5\times 4\times 3}_{\text{共}\,4\,\text{项}}
-    \end{equation*}\\
-    根据这样的思路，我们可以推测$\mathrm{P}^m_n$的结果。\\[3mm]
+    从$4$个不同元素中取出$3$个元素，显然其排列数$\Pe_4^3=\underbrace{4\times 3\times 2}_{\text{共}\,3\,\text{项}}$。\\
+    从$6$个不同元素中取出$4$个元素，显然其排列数$\Pe_6^4=\underbrace{6\times 5\times 4\times 3}_{\text{共}\,4\,\text{项}}$。\\
+    根据这样的思路，我们可以推测$\Pe^m_n$的结果。\\[6mm]
     排列数公式（累乘形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\underbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}_{\text{共}\,m\,\text{项}}=\hspace{-5pt}\prod\nolimits_{i=n-m+1}^n~i
+            \Pe_n^m=\underbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}_{\text{共}\,m\,\text{项}}=\hspace{-5pt}\prod\nolimits_{i=n-m+1}^n~i
         \end{equation*}
     \end{large}
 
-\newpage
-
 \subsubsection{排列数公式的阶乘形式}
-    通过以下推导，我们可以得出排列数公式的另一种形式：\vspace{5pt}
+    通过以下推导可以得到：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{P}_n^m~
-        &=\prod\nolimits_{i=n-m+1}^n~i\\[4mm]
-        &=\frac{\left[\prod_{i=n-m+1}^n~i\right]\cdot\prod_{i=1}^{n-m}~i}{\prod_{i=1}^{n-m}~i}\\[4mm]
-        &=\frac{\prod_{i=1}^{n}~i}{~\prod_{i=1}^{n-m}~i~}\\[4mm]
-        &=\frac{n!}{(n-m)!}
+        \Pe_n^m
+        =\frac{\prod_{i=1}^{n-m}i\cdot\prod_{i=n-m+1}^ni}{\prod_{i=1}^{n-m}i}
+        =\frac{\prod_{i=1}^{n}i}{\prod_{i=1}^{n-m}i}
+        =\frac{n!}{(n-m)!}
     \end{align}\\
     排列数公式（阶乘形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\frac{n!}{(n-m)!}
+            \Pe_n^m=\frac{n!}{(n-m)!}
         \end{equation*}
     \end{large}\\
     特别的，当排列数中$m=1$时：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^1=n
+            \Pe_n^1=n
         \end{equation*}
     \end{large}\\
     特别的，当排列数中$m=n$时：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^n=n!
+            \Pe_n^n=n!
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    排列数公式的阶乘形式较为简洁也较为常用。
 
 \subsubsection{排列数公式$01$}
     排列数公式$01$：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+            \Pe_n^m=\frac{\Pe_n^n}{\Pe_{n-m}^{n-m}}
         \end{equation*}
     \end{large}\\
     由排列数公式的阶乘形式可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{P}_n^m
-        &=\frac{n!}{(n-m)!}\\[3mm]
-        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
-    \end{align}\\
-    该排列数公式非常重要，是后续所有排列数公式推导的基础。
-
-\newpage
+        &\Pe_n^m=\frac{n!}{(n-m)!}\\[3mm]
+        &\Pe_n^m=\frac{\Pe_n^n}{\Pe_{n-m}^{n-m}}
+    \end{align}\vspace{1pt}
 
 \subsubsection{排列数公式$02$}
     排列数公式$02$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^n=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}
+            \Pe_n^n=\Pe_n^k\cdot\Pe_{n-k}^{n-k}
         \end{equation*}
     \end{large}\\
     排列数公式$02$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^n=n\cdot\mathrm{P}_{n-1}^{n-1}
+            \Pe_n^n=n\cdot\Pe_{n-1}^{n-1}
         \end{equation*}
     \end{large}\\
     由排列数公式$01$变形可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{P}_n^k&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-k}^{n-k}}\\[3mm]
-        \mathrm{P}_n^n&=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}
+        &\Pe_n^k=\frac{\Pe_n^n}{\Pe_{n-k}^{n-k}}\\[3mm]
+        &\Pe_n^n=\Pe_n^k\cdot\Pe_{n-k}^{n-k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
-        \mathrm{P}_n^n
-        &=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}\\[3mm]
-        &=\mathrm{P}_n^1\cdot\mathrm{P}_{n-1}^{n-1}\\[3mm]
-        &=n\cdot\mathrm{P}_{n-1}^{n-1}
-    \end{align}
+        &\Pe_n^n=\Pe_n^k\cdot\Pe_{n-k}^{n-k}\\[3mm]
+        &\Pe_n^n=\Pe_n^1\cdot\Pe_{n-1}^{n-1}\\[3mm]
+        &\Pe_n^n=n\cdot\Pe_{n-1}^{n-1}
+    \end{align}\\
+    由此证明了排列数公式$02$成立。
 
 \newpage
 
@@ -11929,35 +11975,34 @@
     排列数公式$03$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{m-k}
+            \Pe_n^m=\Pe_n^k\cdot\Pe_{n-k}^{m-k}
         \end{equation*}
     \end{large}\\
     排列数公式$03$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=n\cdot\mathrm{P}_{n-1}^{m-1}
+            \Pe_n^m=n\cdot\Pe_{n-1}^{m-1}
         \end{equation*}
     \end{large}\\
     将排列数公式$01$代入可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{P}_n^m&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+        &\Pe_n^m=\frac{\Pe_n^n}{\Pe_{n-m}^{n-m}}
     \end{align}\\
     将排列数公式$02$代入可得：
     \begin{align}
-        \mathrm{P}_n^m
-        &=\frac{\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{n-m}^{n-m}}\\[3mm]
-        &=\mathrm{P}_n^k\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{n-m}^{n-m}}\\[3mm]
-        &=\mathrm{P}_n^k\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{(n-k)-(m-k)}^{(n-k)-(m-k)}}\\[3mm]
-        &=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{m-k}
+        &~~~~~~~~~\Pe_n^m=\frac{\Pe_n^k\cdot\Pe_{n-k}^{n-k}}{\Pe_{n-m}^{n-m}}\\[3mm]
+        &~~~~~~~~~\Pe_n^m=\Pe_n^k\cdot\frac{\Pe_{n-k}^{n-k}}{\Pe_{n-m}^{n-m}}\\[3mm]
+        &~~~~~~~~~\Pe_n^m=\Pe_n^k\cdot\frac{\Pe_{n-k}^{n-k}}{\Pe_{(n-k)-(m-k)}^{(n-k)-(m-k)}}\\[3mm]
+        &~~~~~~~~~\Pe_n^m=\Pe_n^k\cdot\Pe_{n-k}^{m-k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
-        \mathrm{P}_n^m
-        &=\mathrm{P}_n^k\cdot\mathrm{P}_{n-k}^{m-k}\\[3mm]
-        &=\mathrm{P}_n^1\cdot\mathrm{P}_{n-1}^{m-1}\\[3mm]
-        &=n\cdot\mathrm{P}_{n-1}^{m-1}
-    \end{align}
+        &\Pe_n^m=\Pe_n^k\cdot\Pe_{n-k}^{m-k}~~~~\\[3mm]
+        &\Pe_n^m=\Pe_n^1\cdot\Pe_{n-1}^{m-1}\\[3mm]
+        &\Pe_n^m=n\cdot\Pe_{n-1}^{m-1}
+    \end{align}\\
+    由此证明了排列数公式$03$成立。
 
 \newpage
 
@@ -11965,33 +12010,32 @@
     排列数公式$04$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n-k}^{m}
+            \Pe_n^m=\frac{\Pe_n^k}{\Pe_{n-m}^k}\cdot\Pe_{n-k}^{m}
         \end{equation*}
     \end{large}\\
     排列数公式$04$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\frac{n}{n-m}\cdot\mathrm{P}_{n-1}^{m}
+            \Pe_n^m=\frac{n}{n-m}\cdot\Pe_{n-1}^{m}
         \end{equation*}
     \end{large}\\
     将排列数公式$01$代入可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{P}_n^m&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+        &\Pe_n^m=\frac{\Pe_n^n}{\Pe_{n-m}^{n-m}}
     \end{align}\\
     将排列数公式$02$代入可得：
     \begin{align}
-        \mathrm{P}_n^m
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n-k}^{m}
+        &\Pe_n^m=\frac{\Pe_n^k}{\Pe_{n-m}^k}\cdot\frac{\Pe_{n-k}^{n-k}}{\Pe_{n-m-k}^{n-m-k}}\\[3mm]
+        &\Pe_n^m=\frac{\Pe_n^k}{\Pe_{n-m}^k}\cdot\Pe_{n-k}^{m}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
-        \mathrm{P}_n^m
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n-k}^{m}\\[3mm]
-        &=\frac{\mathrm{P}_n^1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{P}_{n-1}^{m}\\[3mm]
-        &=\frac{n}{n-m}\cdot\mathrm{P}_{n-1}^{m}
-    \end{align}
+        &\Pe_n^m=\frac{\Pe_n^k}{\Pe_{n-m}^k}\cdot\Pe_{n-k}^{m}~~~~~~\\[3mm]
+        &\Pe_n^m=\frac{\Pe_n^1}{\Pe_{n-m}^1}\cdot\Pe_{n-1}^{m}\\[3mm]
+        &\Pe_n^m=\frac{n}{n-m}\cdot\Pe_{n-1}^{m}
+    \end{align}\\
+    由此证明了排列数公式$04$成立。
 
 \newpage
 
@@ -11999,33 +12043,32 @@
     排列数公式$05$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n}^{m+k}
+            \Pe_n^m=\frac{1}{\Pe_{n-m}^k}\cdot\Pe_{n}^{m+k}
         \end{equation*}
     \end{large}\\
     排列数公式$05$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\frac{1}{n-m}\cdot\mathrm{P}_{n}^{m+1}
+            \Pe_n^m=\frac{1}{n-m}\cdot\Pe_{n}^{m+1}
         \end{equation*}
     \end{large}\\
     将排列数公式$01$代入可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{P}_n^m&=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}}
+        \Pe_n^m&=\frac{\Pe_n^n}{\Pe_{n-m}^{n-m}}
     \end{align}\\
     将排列数公式$02$代入可得：
     \begin{align}
-        \mathrm{P}_n^m
-        &=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_{n}^{n}}{\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
-        &=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n}^{m+k}
+        &\Pe_n^m=\frac{1}{\Pe_{n-m}^k}\cdot\frac{\Pe_{n}^{n}}{\Pe_{n-m-k}^{n-m-k}}\\[3mm]
+        &\Pe_n^m=\frac{1}{\Pe_{n-m}^k}\cdot\Pe_{n}^{m+k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
-        \mathrm{P}_n^m
-        &=\frac{1}{\mathrm{P}_{n-m}^k}\cdot\mathrm{P}_{n}^{m+k}\\[3mm]
-        &=\frac{1}{\mathrm{P}_{n-m}^1}\cdot\mathrm{P}_{n}^{m+1}\\[3mm]
-        &=\frac{1}{n-m}\cdot\mathrm{P}_{n}^{m+1}
-    \end{align}
+        &\Pe_n^m=\frac{1}{\Pe_{n-m}^k}\cdot\Pe_{n}^{m+k}~~~~~\\[3mm]
+        &\Pe_n^m=\frac{1}{\Pe_{n-m}^1}\cdot\Pe_{n}^{m+1}\\[3mm]
+        &\Pe_n^m=\frac{1}{n-m}\cdot\Pe_{n}^{m+1}
+    \end{align}\\
+    由此证明了排列数公式$05$成立。
 
 \newpage
 
@@ -12033,148 +12076,120 @@
     排列数公式$06$：
     \begin{large}
         \begin{equation*}
-            \mathrm{P}_n^m=\mathrm{P}_{n+1}^m-m\cdot\mathrm{P}_n^{m-1}
+            \Pe_n^m=\Pe_{n+1}^m-m\cdot\Pe_n^{m-1}
         \end{equation*}
     \end{large}\\
     将排列数公式$04$进行递推可得：
     \setcounter{equation}{0}
     \begin{align}
-        &\mathrm{P}_n^m=\frac{n}{n-m}\cdot\mathrm{P}_{n-1}^{m}\\[3mm]
-        &\mathrm{P}_{n+1}^m=\frac{n+1}{n-m+1}\cdot\mathrm{P}_{n}^{m}
+        &\Pe_n^m=\frac{n}{n-m}\cdot\Pe_{n-1}^{m}\\[3mm]
+        &\Pe_{n+1}^m=\frac{n+1}{n-m+1}\cdot\Pe_{n}^{m}
     \end{align}\\
     将排列数公式$05$进行递推可得：
     \begin{align}
-        &\mathrm{P}_n^m=\frac{1}{n-m}\cdot\mathrm{P}_{n}^{m+1}\\[3mm]
-        &\mathrm{P}_n^{m-1}=\frac{1}{n-m+1}\cdot\mathrm{P}_{n}^{m}
+        &\Pe_n^m=\frac{1}{n-m}\cdot\Pe_{n}^{m+1}\\[3mm]
+        &\Pe_n^{m-1}=\frac{1}{n-m+1}\cdot\Pe_{n}^{m}
     \end{align}\\
     进行一些变形可以得到：
     \begin{align}
-        \mathrm{P}_n^m
-        &=\frac{n-m+1}{n-m+1}\cdot\mathrm{P}_n^m\\[3mm]
-        &=\frac{n+1}{n-m+1}\cdot\mathrm{P}_n^m-\frac{m}{n-m+1}\cdot\mathrm{P}_n^m\\[3mm]
-        &=\frac{n+1}{n-m+1}\cdot\mathrm{P}_n^m-m\cdot\frac{1}{n-m+1}\cdot\mathrm{P}_n^m\\[3mm]
-        &=\mathrm{P}_n^m=\mathrm{P}_{n+1}^m-m\cdot\mathrm{P}_n^{m-1}
-    \end{align}\vspace{5pt}
-
-\subsubsection{排列数公式$07$}
-    排列数公式$07$：
-    \begin{large}
-        \begin{equation*}
-            \mathrm{P}_{b+c}^{a+c}=\mathrm{P}_b^a\cdot\mathrm{P}_{b+c}^c
-        \end{equation*}
-    \end{large}\\
-    将排列数公式$01$代入可得：
-    \setcounter{equation}{0}
-    \begin{align}
-        \mathrm{P}_b^a\cdot\mathrm{P}_{b+c}^c
-        &=\frac{\mathrm{P}_b^b}{\mathrm{P}_{b-a}^{b-a}}\cdot\frac{\mathrm{P}_{b+c}^{b+c}}{\mathrm{P}_b^b}\\[3mm]
-        &=\frac{\mathrm{P}_{b+c}^{b+c}}{\mathrm{P}_{b-a}^{b-a}}\\[3mm]
-        &=\mathrm{P}_{b+c}^{a+c}
-    \end{align}
+        &\Pe_n^m=\frac{n-m+1}{n-m+1}\cdot\Pe_n^m\\[3mm]
+        &\Pe_n^m=\frac{n+1}{n-m+1}\cdot\Pe_n^m-\frac{m}{n-m+1}\cdot\Pe_n^m\\[3mm]
+        &\Pe_n^m=\frac{n+1}{n-m+1}\cdot\Pe_n^m-m\cdot\frac{1}{n-m+1}\cdot\Pe_n^m\\[3mm]
+        &\Pe_n^m=\Pe_n^m=\Pe_{n+1}^m-m\cdot\Pe_n^{m-1}
+    \end{align}\\
+    由此证明了排列数公式$06$成立。
 
 \newpage
 
-\subsection{加法原理}
-    加法原理：如果完成一件事总共有$n$类办法，其中第$i$个办法有$m_i$种不同的方法，\\
-    那么完成这件事共有$N$种方法。\\[3mm]
-    加法原理的数学表达：
-    \begin{large}
-        \begin{equation*}
-            N=\sum_{i=1}^{n}m_i
-        \end{equation*}
-    \end{large}
-
 \subsection{组合}
-    从$n$个不同元素中取出$m$个元素组成一组，称为一个组合（Combination）。\\[3mm]
+    组合（Combination）指的是从$n$个不同元素中取出$m$个元素组成一组。\\[3mm]
     组合的个数称为组合数，记作：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m\qquad(m\leq n)
+            \Co_n^m\qquad(m\leq n)
         \end{equation*}
-    \end{large}
+    \end{large}\vspace{-5pt}
 
 \subsubsection{组合数公式的累乘形式}
-    对于一个组合数$\mathrm{C}_n^m$，其中每一个组合的元素个数为$m$个，\\[2mm]
-    所以对于每一个组合，其在排列数$\mathrm{P}_n^m$中均会变为$\mathrm{P}_m^m$种不同的排列方式。\\[4mm]
+    因为对于一个组合数$\Co_n^m$，其中每一个组合的元素个数为$m$个。\\[3mm]
+    所以对于每一个组合，其在排列数$\Pe_n^m$中均会变为$\Pe_m^m$种不同的排列方式。\\[4mm]
     组合数和排列数的关系：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{P}_n^m}{\mathrm{P}_m^m}
+            \Co_n^m=\frac{\Pe_n^m}{\Pe_m^m}
         \end{equation*}        
     \end{large}\\
     组合数公式（累乘形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\overbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}^{\text{共}\,m\,\text{项}}}{\underbrace{m\times(m-1)\times(m-2)\times\cdots\times 1}_{\text{共}\,m\,\text{项}}}=\frac{~\prod_{i=n-m+1}^{n}~i~}{\,\prod_{i=1}^{m}~i}
+            \Co_n^m=\frac{\overbrace{n\times(n-1)\times(n-2)\times\cdots\times(n-m+1)}^{\text{共}\,m\,\text{项}}}{\underbrace{m\times(m-1)\times(m-2)\times\cdots\times 1}_{\text{共}\,m\,\text{项}}}=\frac{~\prod_{i=n-m+1}^{n}~i~}{\,\prod_{i=1}^{m}~i}
         \end{equation*}
-    \end{large}
-    
-\newpage
+    \end{large}\vspace{-5pt}
 
 \subsubsection{组合数公式的阶乘形式}
     通过以下推导，我们可以得出排组合数公式的另一种形式：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_n^m~
-        &=~\frac{~\prod_{i=n-m+1}^{n}i~}{\,\prod_{i=1}^{m}i}\\[4mm]
-        &=~\frac{\left[\prod_{i=n-m+1}^n~i\right]\cdot\prod_{i=1}^{n-m}~i}{\prod_{i=1}^{m}~i\cdot\prod_{i=1}^{n-m}~i}\\[4mm]
-        &=~\frac{\prod_{i=1}^{n}~i}{~\prod_{i=1}^{m}~i\cdot\prod_{i=1}^{n-m}~i~}\\[4mm]
-        &=~\frac{n!}{m!~(n-m)!}
+        \Co_n^m
+        =\frac{\prod_{i=1}^{n-m}i\cdot\prod_{i=n-m+1}^ni}{\prod_{i=1}^{n-m}i\cdot\prod_{i=1}^{m}i}
+        =\frac{\prod_{i=1}^{n}i}{\prod_{i=1}^{n-m}i\cdot\prod_{i=1}^{m}i}
+        =\frac{n!}{m!~(n-m)!}
     \end{align}\\
     组合数公式（阶乘形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{n!}{m!~(n-m)!}
+            \Co_n^m=\frac{n!}{m!~(n-m)!}
         \end{equation*}
     \end{large}\\
     特别的，当组合数中$m=1$时：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^1=n
+            \Co_n^1=n
         \end{equation*}
     \end{large}\\
     特别的，当组合数中$m=n$时：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^n=1
+            \Co_n^n=1
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    组合数公式的的阶乘形式较为简洁也较为常用。
 
 \subsubsection{组合数公式$01$}
     组合数公式$01$：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+            \Co_n^m=\frac{\Pe_n^n}{\Pe_m^m\cdot\Pe_{n-m}^{n-m}}
         \end{equation*}
     \end{large}\\
     由组合数公式的阶乘形式可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{n!}{m!(n-m)!}\\[3mm]
-        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
-    \end{align}\\
-    该组合数公式非常重要，是后续所有组合数公式推导的基础。
-
-\newpage
+        &\Co_n^m=\frac{n!}{m!(n-m)!}\\[3mm]
+        &\Co_n^m=\frac{\Pe_n^n}{\Pe_m^m\cdot\Pe_{n-m}^{n-m}}
+    \end{align}\vspace{2pt}
 
 \subsubsection{组合数公式$02$}
     组合数公式$02$：
     \begin{large}
         \begin{equation*}
-            \frac{\mathrm{P}_{n_1}^m}{\mathrm{P}_{n_2}^m}=\frac{\mathrm{C}_{n_1}^m}{\mathrm{C}_{n_2}^m}
+            \frac{\Pe_{n_1}^m}{\Pe_{n_2}^m}=\frac{\Co_{n_1}^m}{\Co_{n_2}^m}
         \end{equation*}
     \end{large}\\
     左侧可以使用排列数公式$01$展开：
     \setcounter{equation}{0}
     \begin{align}
-        \frac{\mathrm{P}_{n_1}^m}{\mathrm{P}_{n_2}^m}=\frac{\dfrac{\mathrm{P}_{n_1}^{n_1}}{\mathrm{P}_{n_1-m}^{n_1-m}}}{\dfrac{\mathrm{P}_{n_2}^{n_2}}{\mathrm{P}_{n_2-m}^{n_2-m}}}
+        \frac{\Pe_{n_1}^m}{\Pe_{n_2}^m}=\frac{\dfrac{\Pe_{n_1}^{n_1}}{\Pe_{n_1-m}^{n_1-m}}}{\dfrac{\Pe_{n_2}^{n_2}}{\Pe_{n_2-m}^{n_2-m}}}
     \end{align}\\
     右侧可以使用组合数公式$01$展开：
     \begin{align}
-        \frac{\mathrm{C}_{n_1}^m}{\mathrm{C}_{n_2}^m}=\frac{\dfrac{\mathrm{P}_{n_1}^{n_1}}{\mathrm{P}_m^m\cdot\mathrm{P}_{n_1-m}^{n_1-m}}}{\dfrac{\mathrm{P}_{n_2}^{n_2}}{\mathrm{P}_m^m\cdot\mathrm{P}_{n_2-m}^{n_2-m}}}=\frac{\dfrac{\mathrm{P}_{n_1}^{n_1}}{\mathrm{P}_{n_1-m}^{n_1-m}}}{\dfrac{\mathrm{P}_{n_2}^{n_2}}{\mathrm{P}_{n_2-m}^{n_2-m}}}
+        \frac{\Co_{n_1}^m}{\Co_{n_2}^m}=\frac{\dfrac{\Pe_{n_1}^{n_1}}{\Pe_m^m\cdot\Pe_{n_1-m}^{n_1-m}}}{\dfrac{\Pe_{n_2}^{n_2}}{\Pe_m^m\cdot\Pe_{n_2-m}^{n_2-m}}}
     \end{align}\\
-    左式等于右式，故组合数公式$02$成立。
+    观察可知左式等于右式：
+    \begin{align}
+        \frac{\Pe_{n_1}^m}{\Pe_{n_2}^m}=\frac{\Co_{n_1}^m}{\Co_{n_2}^m}
+    \end{align}\\
+    由此证明了组合数公式$02$成立。
 
 \newpage
 
@@ -12182,35 +12197,33 @@
     组合数公式$03$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{C}_n^k}{\mathrm{C}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
+            \Co_n^m=\frac{\Co_n^k}{\Co_m^k}\cdot\Co_{n-k}^{m-k}
         \end{equation*}
     \end{large}\\
     组合数公式$03$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{n}{m}\cdot\mathrm{C}_{n-1}^{m-1}
+            \Co_n^m=\frac{n}{m}\cdot\Co_{n-1}^{m-1}
         \end{equation*}
     \end{large}\\
     将组合数公式$01$代入可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+        \Co_n^m=\frac{\Pe_n^n}{\Pe_m^m\cdot\Pe_{n-m}^{n-m}}~
     \end{align}\\
     将排列数公式$02$代入可得：
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{m-k}^{m-k}\cdot\mathrm{P}_{n-m}^{n-m}}\\[3mm]
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
-        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}
+        &~~~~\Co_n^m=\frac{\Pe_n^k}{\Pe_m^k}\cdot\frac{\Pe_{n-k}^{n-k}}{\Pe_{m-k}^{m-k}\cdot\Pe_{n-m}^{n-m}}\\[3mm]
+        &~~~~\Co_n^m=\frac{\Pe_n^k}{\Pe_m^k}\cdot\Co_{n-k}^{m-k}\\[3mm]
+        &~~~~\Co_n^m=\frac{\Co_n^k}{\Co_m^k}\cdot\Co_{n-k}^{m-k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_m^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
-        &=\frac{\mathrm{C}_n^1}{\mathrm{C}_m^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
-        &=\frac{n}{m}\cdot\mathrm{C}_{n-1}^{m-1}
-    \end{align}
+        &\Co_n^m=\frac{\Co_n^k}{\Co_m^k}\cdot\Co_{n-k}^{m-k}~~~~~~~~\\[3mm]
+        &\Co_n^m=\frac{\Co_n^1}{\Co_m^1}\cdot\Co_{n-1}^{m-1}\\[3mm]
+        &\Co_n^m=\frac{n}{m}\cdot\Co_{n-1}^{m-1}
+    \end{align}\\
+    由此证明了组合数公式$03$成立。
 
 \newpage
 
@@ -12218,35 +12231,33 @@
     组合数公式$04$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{C}_n^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_{n-k}^m
+            \Co_n^m=\frac{\Co_n^k}{\Co_{n-m}^k}\cdot\Co_{n-k}^m
         \end{equation*}
     \end{large}\\
     组合数公式$04$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^m
+            \Co_n^m=\frac{n}{n-m}\cdot\Co_{n-1}^m
         \end{equation*}
     \end{large}\\
     将组合数公式$01$代入可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+        \Co_n^m=\frac{\Pe_n^n}{\Pe_m^m\cdot\Pe_{n-m}^{n-m}}~
     \end{align}\\
     将排列数公式$02$代入可得：
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_{n-k}^{n-k}}{\mathrm{P}_{m}^{m}\cdot\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
-        &=\frac{\mathrm{P}_n^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
-        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}
+        &~~~~\Co_n^m=\frac{\Pe_n^k}{\Pe_{n-m}^k}\cdot\frac{\Pe_{n-k}^{n-k}}{\Pe_{m}^{m}\cdot\Pe_{n-m-k}^{n-m-k}}\\[3mm]
+        &~~~~\Co_n^m=\frac{\Pe_n^k}{\Pe_{n-m}^k}\cdot\Co_{n-k}^{m-k}\\[3mm]
+        &~~~~\Co_n^m=\frac{\Co_n^k}{\Co_{n-m}^k}\cdot\Co_{n-k}^{m-k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{C}_n^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_{n-k}^{m-k}\\[3mm]
-        &=\frac{\mathrm{C}_n^1}{\mathrm{C}_{n-m}^1}\cdot\mathrm{C}_{n-1}^{m-1}\\[3mm]
-        &=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^{m}
-    \end{align}
+        &\Co_n^m=\frac{\Co_n^k}{\Co_{n-m}^k}\cdot\Co_{n-k}^{m-k}~~~~~~~~\\[3mm]
+        &\Co_n^m=\frac{\Co_n^1}{\Co_{n-m}^1}\cdot\Co_{n-1}^{m-1}\\[3mm]
+        &\Co_n^m=\frac{n}{n-m}\cdot\Co_{n-1}^{m}
+    \end{align}\\
+    由此证明了组合数公式$04$成立。
     
 \newpage
 
@@ -12254,35 +12265,33 @@
     组合数公式$05$（强化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{\mathrm{C}_{m+k}^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}
+            \Co_n^m=\frac{\Co_{m+k}^k}{\Co_{n-m}^k}\cdot\Co_n^{m+k}
         \end{equation*}
     \end{large}\\
     组合数公式$05$（弱化形式）：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m+1}
+            \Co_n^m=\frac{m+1}{n-m}\cdot\Co_n^{m+1}
         \end{equation*}
     \end{large}\\
     将组合数公式$01$代入可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+        \Co_n^m=\frac{\Pe_n^n}{\Pe_m^m\cdot\Pe_{n-m}^{n-m}}
     \end{align}\\
     将排列数公式$02$代入可得：
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\frac{\mathrm{P}_n^n}{\mathrm{P}_{m+k}^{m+k}\cdot\mathrm{P}_{n-m-k}^{n-m-k}}\\[3mm]
-        &=\frac{\mathrm{P}_{m+k}^k}{\mathrm{P}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}\\[3mm]
-        &=\frac{\mathrm{C}_{m+k}^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}
+        &~~~~~\Co_n^m=\frac{\Pe_{m+k}^k}{\Pe_{n-m}^k}\cdot\frac{\Pe_n^n}{\Pe_{m+k}^{m+k}\cdot\Pe_{n-m-k}^{n-m-k}}\\[3mm]
+        &~~~~~\Co_n^m=\frac{\Pe_{m+k}^k}{\Pe_{n-m}^k}\cdot\Co_n^{m+k}\\[3mm]
+        &~~~~~\Co_n^m=\frac{\Co_{m+k}^k}{\Co_{n-m}^k}\cdot\Co_n^{m+k}
     \end{align}\\
     特别的，令$k=1$可以得到：
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{\mathrm{C}_{m+k}^k}{\mathrm{C}_{n-m}^k}\cdot\mathrm{C}_n^{m+k}\\[3mm]
-        &=\frac{\mathrm{C}_{m+k}^1}{\mathrm{C}_{n-m}^1}\cdot\mathrm{C}_n^{m+1}\\[3mm]
-        &=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m+1}
-    \end{align}
+        &\Co_n^m=\frac{\Co_{m+k}^k}{\Co_{n-m}^k}\cdot\Co_n^{m+k}~~~~~~~~~~\\[3mm]
+        &\Co_n^m=\frac{\Co_{m+k}^1}{\Co_{n-m}^1}\cdot\Co_n^{m+1}\\[3mm]
+        &\Co_n^m=\frac{m+1}{n-m}\cdot\Co_n^{m+1}
+    \end{align}\\
+    由此证明了组合数公式$05$成立。
 
 \newpage
 
@@ -12290,27 +12299,27 @@
     组合数公式$06$：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\mathrm{C}_{n+1}^m-\mathrm{C}_n^{m-1}
+            \Co_n^m=\Co_{n+1}^m-\Co_n^{m-1}
         \end{equation*}
     \end{large}\\
     将组合数公式$04$进行递推可得：
     \setcounter{equation}{0}
     \begin{align}
-        &\mathrm{C}_n^m=\frac{n}{n-m}\cdot\mathrm{C}_{n-1}^m\\[3mm]
-        &\mathrm{C}_{n+1}^m=\frac{n+1}{n-m+1}\cdot\mathrm{C}_{n}^m
+        &\Co_n^m=\frac{n}{n-m}\cdot\Co_{n-1}^m\\[3mm]
+        &\Co_{n+1}^m=\frac{n+1}{n-m+1}\cdot\Co_{n}^m
     \end{align}\\
     将组合数公式$05$进行递推可得：
     \begin{align}
-        &\mathrm{C}_n^m=\frac{m+1}{n-m}\cdot\mathrm{C}_n^{m-1}\\[3mm]
-        &\mathrm{C}_n^{m-1}=\frac{m}{n-m+1}\cdot\mathrm{C}_n^{m}
+        &\Co_n^m=\frac{m+1}{n-m}\cdot\Co_n^{m-1}\\[3mm]
+        &\Co_n^{m-1}=\frac{m}{n-m+1}\cdot\Co_n^{m}
     \end{align}\\
     进行一些变形可以得到：
     \begin{align}
-        \mathrm{C}_n^m
-        &=\frac{n-m+1}{n-m+1}\cdot\mathrm{C}_n^m\\[3mm]
-        &=\frac{n+1}{n-m+1}\cdot\mathrm{C}_n^m-\frac{m}{n-m+1}\cdot\mathrm{C}_n^m\\[3mm]
-        &=\mathrm{C}_{n+1}^m-\mathrm{C}_n^{m-1}
-    \end{align}
+        &~~~~\Co_n^m=\frac{n-m+1}{n-m+1}\cdot\Co_n^m\\[3mm]
+        &~~~~\Co_n^m=\frac{n+1}{n-m+1}\cdot\Co_n^m-\frac{m}{n-m+1}\cdot\Co_n^m\\[3mm]
+        &~~~~\Co_n^m=\Co_{n+1}^m-\Co_n^{m-1}
+    \end{align}\\
+    由此证明了组合数公式$06$成立。
 
 \newpage
 
@@ -12318,19 +12327,23 @@
     组合数公式$07$：
     \begin{large}
         \begin{equation*}
-            \mathrm{C}_n^m=\mathrm{C}_n^{n-m}
+            \Co_n^m=\Co_n^{n-m}
         \end{equation*}
     \end{large}\\
     将组合数公式$01$代入左式可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_n^m=\frac{\mathrm{P}_n^n}{\mathrm{P}_m^m\cdot\mathrm{P}_{n-m}^{n-m}}
+        \Co_n^m=\frac{\Pe_n^n}{\Pe_m^m\cdot\Pe_{n-m}^{n-m}}
     \end{align}\\
     将组合数公式$01$代入右式可得：
     \begin{align}
-        \mathrm{C}_n^{n-m}=\frac{\mathrm{P}_n^n}{\mathrm{P}_{n-m}^{n-m}\cdot\mathrm{P}_m^m}
+        \Co_n^{n-m}=\frac{\Pe_n^n}{\Pe_{n-m}^{n-m}\cdot\Pe_m^m}
     \end{align}\\
-    左式等于右式，故组合数公式$07$成立。
+    观察可知左式等于右式：
+    \begin{align}
+        \Co_n^m=\Co_n^{n-m}
+    \end{align}\\
+    由此证明了组合数公式$07$成立。
 
 \newpage
 
@@ -12338,23 +12351,23 @@
     组合数公式$08$：
     \begin{large}
         \begin{equation*}
-            \sum_{i=0}^n\mathrm{C}_n^i=2^n
+            \sum_{i=0}^n\Co_n^i=2^n
         \end{equation*}
     \end{large}\\
-    考虑以下背景，集合$N$中含有$n$个元素，讨论其子集数量。\\[5mm]
-    集合$N$中有$0$个元素的子集的数量为$\mathrm{C}_n^0$。\\[3mm]
-    集合$N$中有$1$个元素的子集的数量为$\mathrm{C}_n^1$。\\[3mm]
-    集合$N$中有$2$个元素的子集的数量为$\mathrm{C}_n^2$。\\[3mm]
-    集合$N$中有$n$个元素的子集的数量为$\mathrm{C}_n^n$。\\[3mm]
-    根据加法原理可得：
-    \setcounter{equation}{0}
-    \begin{align}
-        \mathrm{C}_n^0+\mathrm{C}_n^1+\mathrm{C}_n^2+\cdots+\mathrm{C}_n^n=\sum_{i=0}^n\mathrm{C}_n^i
-    \end{align}\\
+    集合$N$中含有$n$个元素，讨论其子集数量。\\[3mm]
     集合$N$中的每一个元素可以选择是否属于这个子集，有$2$种情况，共$n$个元素。\\[3mm]
     根据乘法原理可得：
     \begin{align}
         2\times 2\times 2\times\cdots\times 2=2^n
+    \end{align}\\
+    集合$N$中有$0$个元素的子集的数量为$\Co_n^0$。\\[3mm]
+    集合$N$中有$1$个元素的子集的数量为$\Co_n^1$。\\[3mm]
+    集合$N$中有$2$个元素的子集的数量为$\Co_n^2$。\\[3mm]
+    集合$N$中有$n$个元素的子集的数量为$\Co_n^n$。\\[3mm]
+    根据加法原理可得：
+    \setcounter{equation}{0}
+    \begin{align}
+        \Co_n^0+\Co_n^1+\Co_n^2+\cdots+\Co_n^n=\sum_{i=0}^n\Co_n^i
     \end{align}\\
     两种计数方式的结果应当是一致的，故组合数公式$08$成立。
 
@@ -12364,24 +12377,25 @@
     组合数公式$09$：
     \begin{large}
         \begin{equation*}
-            \sum_{i=1}^{n}i\cdot\mathrm{C}_n^i=n\cdot 2^{n-1}
+            \sum_{i=0}^m\Co_{n_1}^i\cdot\Co_{n_2}^{m-i}=\Co_{n_1+n_2}^m
         \end{equation*}
     \end{large}\\
-    使用组合数公式$03$变形可得：
+    集合$N_1$中含有$n_1$个元素，集合$N_2$中含有$n_2$个元素，现需选出$m$个元素。\\[3mm]
+    集合$N_1$和集合$N_2$同时考虑，共有$n_1+n_2$个元素，需选出$m$个元素。\\[3mm]
+    根据组合数的定义：
+    \begin{align}
+        \Co_{n_1+n_2}^m
+    \end{align}\\
+    集合$N_1$中选出$0$个元素，集合$N_2$中选出$m-0$个元素，组合数为$\Co_{n_1}^{0}\cdot\Co_{n_2}^{m-0}$。\\[3mm]
+    集合$N_1$中选出$1$个元素，集合$N_2$中选出$m-1$个元素，组合数为$\Co_{n_1}^{1}\cdot\Co_{n_2}^{m-1}$。\\[3mm]
+    集合$N_1$中选出$2$个元素，集合$N_2$中选出$m-2$个元素，组合数为$\Co_{n_1}^{2}\cdot\Co_{n_2}^{m-2}$。\\[3mm]
+    集合$N_1$中选出$m$个元素，集合$N_2$中选出$m-m$个元素，组合数为$\Co_{n_1}^{m}\cdot\Co_{n_2}^{m-m}$。\\[3mm]
+    根据加法原理可得：
     \setcounter{equation}{0}
     \begin{align}
-        \sum_{i=1}^{n}i\cdot\mathrm{C}_n^i
-        &=\sum_{i=1}^{n}\left[\frac{n}{i}\cdot\mathrm{C}_{n-1}^{i-1}\cdot i\right]\\[3mm]
-        &=\sum_{i=1}^{n}n\cdot\mathrm{C}_{n-1}^{i-1}\\[3mm]
-        &=n\cdot\sum_{i=1}^{n}\mathrm{C}_{n-1}^{i-1}\\[3mm]
-        &=n\cdot\sum_{i=0}^{n-1}\mathrm{C}_{n-1}^{i}
+        \Co_{n_1}^{0}\cdot\Co_{n_2}^{m-0}+\Co_{n_1}^{1}\cdot\Co_{n_2}^{m-1}+\cdots+\Co_{n_1}^{m}\cdot\Co_{n_2}^{m-m}=\sum_{i=0}^m\Co_{n_1}^i\cdot\Co_{n_2}^{m-i}
     \end{align}\\
-    使用组合数公式$08$代入可得：
-    \begin{align}
-        \sum_{i=1}^{n}i\cdot\mathrm{C}_n^i
-        &=n\cdot\sum_{i=0}^{n-1}\mathrm{C}_{n-1}^{i}\\[3mm]
-        &=n\cdot 2^{n-1}
-    \end{align}
+    两种计数方式的结果应当是一致的，故组合数公式$09$成立。
 
 \newpage
 
@@ -12389,25 +12403,23 @@
     组合数公式$10$：
     \begin{large}
         \begin{equation*}
-            \sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}=\mathrm{C}_{n_1+n_2}^m
+            \sum_{i=1}^{n}i\cdot\Co_n^i=n\cdot 2^{n-1}
         \end{equation*}
     \end{large}\\
-    考虑以下背景，集合$N_1$中含有$n_1$个元素，集合$N_2$中含有$n_2$个元素，现需选出$m$个元素。\\[5mm]
-    集合$N_1$中选出$0$个元素，集合$N_2$中选出$m-0$个元素，组合数为$\mathrm{C}_{n_1}^{0}\cdot\mathrm{C}_{n_2}^{m-0}$。\\[3mm]
-    集合$N_1$中选出$1$个元素，集合$N_2$中选出$m-1$个元素，组合数为$\mathrm{C}_{n_1}^{1}\cdot\mathrm{C}_{n_2}^{m-1}$。\\[3mm]
-    集合$N_1$中选出$2$个元素，集合$N_2$中选出$m-2$个元素，组合数为$\mathrm{C}_{n_1}^{2}\cdot\mathrm{C}_{n_2}^{m-2}$。\\[3mm]
-    集合$N_1$中选出$m$个元素，集合$N_2$中选出$m-m$个元素，组合数为$\mathrm{C}_{n_1}^{m}\cdot\mathrm{C}_{n_2}^{m-m}$。\\[3mm]
-    根据加法原理可得：
+    使用组合数公式$03$变形可得：
     \setcounter{equation}{0}
     \begin{align}
-        \mathrm{C}_{n_1}^{0}\cdot\mathrm{C}_{n_2}^{m-0}+\mathrm{C}_{n_1}^{1}\cdot\mathrm{C}_{n_2}^{m-1}+\cdots+\mathrm{C}_{n_1}^{m}\cdot\mathrm{C}_{n_2}^{m-m}=\sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}
+        &\sum_{i=1}^{n}i\cdot\Co_n^i=\sum_{i=1}^{n}i\cdot\frac{n}{i}\cdot\Co_{n-1}^{i-1}\\[3mm]
+        &\sum_{i=1}^{n}i\cdot\Co_n^i=\sum_{i=1}^{n}n\cdot\Co_{n-1}^{i-1}\\[3mm]
+        &\sum_{i=1}^{n}i\cdot\Co_n^i=n\cdot\sum_{i=1}^{n}\Co_{n-1}^{i-1}\\[3mm]
+        &\sum_{i=1}^{n}i\cdot\Co_n^i=n\cdot\sum_{i=0}^{n-1}\Co_{n-1}^{i}
     \end{align}\\
-    同时考虑两个集合，共有$n_1+n_2$个元素，需选出$m$个元素。\\[3mm]
-    显然其组合数为：
+    使用组合数公式$08$代入可得：
     \begin{align}
-        \mathrm{C}_{n_1+n_2}^m
+        &\sum_{i=1}^{n}i\cdot\Co_n^i=n\cdot\sum_{i=0}^{n-1}\Co_{n-1}^{i}~~~~\hspace{0.5pt}\\[3mm]
+        &\sum_{i=1}^{n}i\cdot\Co_n^i=n\cdot 2^{n-1}
     \end{align}\\
-    两种计数方式的结果应当是一致的，故组合数公式$10$成立。
+    由此证明了组合数公式$10$成立。
 
 \newpage
 
@@ -12415,21 +12427,23 @@
     组合数公式$11$：
     \begin{large}
         \begin{equation*}
-            \sum_{i=0}^{n}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
+            \sum_{i=0}^{n}{\Co_n^i}^2=\Co_{2n}^{n}
         \end{equation*}
     \end{large}\\
-    组合数公式$11$实际上就是组合数公式$10$在满足$n=n_1=n_2=m$时的一种特殊形式。\\[3mm]
-    向组合数公式$10$代入条件：\vspace{5pt}
+    在组合数公式$09$的基础上，令$n=n_1$，令$n=n_2$，令$n=m$。\\[3mm]
+    向组合数公式$09$代入条件：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
-        &\sum_{i=0}^m\mathrm{C}_{n_1}^i\cdot\mathrm{C}_{n_2}^{m-i}=\mathrm{C}_{n_1+n_2}^m\\[3mm]
-        &\sum_{i=0}^n\mathrm{C}_{n}^i\cdot\mathrm{C}_{n}^{n-i}=\mathrm{C}_{2n}^n
+        &~~\sum_{i=0}^m\Co_{n_1}^i\cdot\Co_{n_2}^{m-i}=\Co_{n_1+n_2}^m\\[3mm]
+        &~~\sum_{i=0}^n\Co_{n}^i\cdot\Co_{n}^{n-i}=\Co_{2n}^n
     \end{align}\\
     将组合数公式$07$代入可得：
     \begin{align}
-        &\sum_{i=0}^n\mathrm{C}_{n}^i\cdot\mathrm{C}_{n}^{i}=\mathrm{C}_{2n}^n\\[3mm]
-        &\sum_{i=0}^{n}\left(\mathrm{C}_n^i\right)^2=\mathrm{C}_{2n}^{n}
-    \end{align}
+        &\sum_{i=0}^n\Co_{n}^i\cdot\Co_{n}^{n-i}=\Co_{2n}^n~~~~~\\[3mm]
+        &\sum_{i=0}^n\Co_{n}^i\cdot\Co_{n}^{i}=\Co_{2n}^n\\[3mm]
+        &\sum_{i=0}^{n}{\Co_n^i}^2=\Co_{2n}^{n}
+    \end{align}\\
+    由此证明了组合数公式$11$成立。
 
 \newpage
 
@@ -12437,92 +12451,92 @@
     组合数公式$12$：
     \begin{large}
         \begin{equation*}
-            \sum_{i=m}^n\mathrm{C}_i^m=\mathrm{C}_{n+1}^{m+1}
+            \sum_{i=m}^n\Co_i^m=\Co_{n+1}^{m+1}
         \end{equation*}
     \end{large}\\
-    使用组合数公式$06$循环迭代可得：\vspace{5pt}
+    使用组合数公式$06$循环迭代可得：\vspace{7pt}
     \setcounter{equation}{0}
     \begin{align}
-        \sum_{i=m}^n\mathrm{C}_i^m
-        &=\mathrm{C}_m^m+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
-        &=\mathrm{C}_{m+1}^{m+1}+\mathrm{C}_{m+1}^{m}+\sum_{i=m+2}^n\mathrm{C}_i^m\\[3mm]
-        &=\mathrm{C}_{m+2}^{m+1}+\mathrm{C}_{m+2}^{m}+\sum_{i=m+3}^n\mathrm{C}_i^m\\[3mm]
-        &=\mathrm{C}_{m+3}^{m+1}+\mathrm{C}_{m+3}^{m}+\sum_{i=m+4}^n\mathrm{C}_i^m\\[3mm]
+        &\sum_{i=m}^n\Co_i^m=\Co_m^m+\Co_{m+1}^{m}+\sum_{i=m+2}^n\Co_i^m\\[3mm]
+        &\sum_{i=m}^n\Co_i^m=\Co_{m+1}^{m+1}+\Co_{m+1}^{m}+\sum_{i=m+2}^n\Co_i^m\\[3mm]
+        &\sum_{i=m}^n\Co_i^m=\Co_{m+2}^{m+1}+\Co_{m+2}^{m}+\sum_{i=m+3}^n\Co_i^m\\[3mm]
+        &\sum_{i=m}^n\Co_i^m=\Co_{m+3}^{m+1}+\Co_{m+3}^{m}+\sum_{i=m+4}^n\Co_i^m\\[3mm]
         &~~\vdots\\[5mm]
-        &=\mathrm{C}_n^{m+1}+\mathrm{C}_n^{m+1}\\[5mm]
-        &=\mathrm{C}_{n+1}^{m+1}
-    \end{align}
+        &\sum_{i=m}^n\Co_i^m=\Co_n^{m+1}+\Co_n^{m+1}\\[5mm]
+        &\sum_{i=m}^n\Co_i^m=\Co_{n+1}^{m+1}
+    \end{align}\\
+    由此证明了组合数公式$12$成立。
 
 \newpage
 
-    \subsection{二项式定理}
-    二项式定理研究了$a+b$的$n$次幂的展开式：
+\subsection{二项式定理}
+    \setcounter{equation}{0}
+    二项式定理研究$(a+b)^n$的展开式：
+    \begin{align}
+        (a+b)^n=\underbrace{(a+b)\cdot(a+b)\cdot\cdots\cdot(a+b)\cdot(a+b)}_{\text{共}n\text{项}}~~~~~~(n\in\mathbb{Z^+})
+    \end{align}\\
+    二项式$(a+b)^n$展开后各项依次为：
+    \begin{align}
+        \underbrace{a^{n}~~~~a^{n-1}b^1~~~~a^{n-2}b^2~~~~\cdots~~~~a^{n-r}b^r~~~~\cdots~~~~a^2b^{n-2}~~~~a^1b^{n-1}~~~~b^{n}}_{\text{共}n+1\text{项}}
+    \end{align}\\
+    这是因为展开式的每一项，都是由$n$个括号中的每一个选取一个字母相乘得到。\\[3mm]
+    对于第$1$项$a^{n-0}b^0$，其需从$n$个括号中选取$0$个$b$，因此该项的系数为$\Co_n^0$。\\[3mm]
+    对于第$2$项$a^{n-1}b^1$，其需从$n$个括号中选取$1$个$b$，因此该项的系数为$\Co_n^1$。\\[3mm]
+    对于第$3$项$a^{n-2}b^2$，其需从$n$个括号中选取$2$个$b$，因此该项的系数为$\Co_n^2$。\\[3mm]
+    对于第$4$项$a^{n-2}b^3$，其需从$n$个括号中选取$3$个$b$，因此该项的系数为$\Co_n^3$。\\[3mm]
+    对于第$5$项$a^{n-2}b^4$，其需从$n$个括号中选取$4$个$b$，因此该项的系数为$\Co_n^4$。\\[3mm]
+    由此可以推定第$r+1$项$a^{n-r}b^r$的系数为$\Co_n^r$，将$n+1$项加和即可得到$(a+b)^n$的展开式。\\[8mm]
+    二项式定理可以表达为：
     \begin{large}
         \begin{equation*}
-            (a+b)^n\qquad n\in\mathbb{Z^+}
+            (a+b)^n=\sum_{r=0}^{n}~\Co_n^r\cdot a^{n-r}\cdot b^r
         \end{equation*}
     \end{large}\\
-    \setcounter{equation}{0}
-    我们从$(a+b)^4$开始考虑，显然其展开式的各项应依次为：
-    \begin{equation}
-        a^4\quad a^3b\quad a^2b^2\quad ab^3\quad b^4
-    \end{equation}\\
-    第一项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$0$个$b$，所以其系数为$\mathrm{C}_4^0$\\[1mm]
-    第二项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$1$个$b$，所以其系数为$\mathrm{C}_4^1$\\[1mm]
-    第三项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$2$个$b$，所以其系数为$\mathrm{C}_4^2$\\[1mm]
-    第四项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$3$个$b$，所以其系数为$\mathrm{C}_4^3$\\[1mm]
-    第五项需要从$(a+b)\cdot(a+b)\cdot(a+b)\cdot(a+b)$中选取$4$个$b$，所以其系数为$\mathrm{C}_4^4$\\[5mm]
-    由此我们可以总结出一些规律：\\[3mm]
-    1.展开式共有$n+1$项。\\[3mm]
-    2.字母$a$的指数由$n$至$0$依次递减。\\[3mm]
-    3.字母$b$的指数由$0$至$n$依次递增。\\[3mm]
-    4.当项数为$r+1$时，系数为$\mathrm{C}_{n}^{r}$。\\[3mm]
-    5.当项数为$r+1$时，字母$a$的指数为$n-r$。\\[3mm]
-    6.当项数为$r+1$时，字母$b$的指数为$r$。\\[6mm]
-    二项式定理：
+    二项式定理中的$\Co_n^r$称为二项式系数。\\[3mm]
+    二项式定理中的$\Co_n^r\cdot a^{n-r}\cdot b^r$称为二项式展开式的通项。\\[10mm]
+    通项可以使用下式表达:
     \begin{large}
         \begin{equation*}
-            (a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r
+            T_{r+1}=\Co_n^r\cdot a^{n-r}\cdot b^r
         \end{equation*}
     \end{large}\\
-    二项数系数表：
-    \begin{center}
-        $(a+b)^1\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~1$\\[1mm]
-        $(a+b)^2\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~2~~~1$\\[1mm]
-        $(a+b)^3\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~3~~~3~~~1$\\[1mm]
-        $(a+b)^4\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots\cdots 1~~~4~~~6~~~4~~~1$\\[1mm]
-    \end{center}\vspace{8pt}
-    该图形也被称为帕斯卡三角，其两条斜边上的数字均是$1$，其余数字等于其上方两数字的和。
+    通项中的$T_{r+1}$代表二项展开式中的循环变量为$r$的第$r+1$项。
 
-\subsubsection{二项式系数的性质$01$}
-    令$a=1$，令$b=1$，我们可以得到：\vspace{5pt}
-    \setcounter{equation}{0}
-    \begin{align}
-        &(a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r\\[3mm]
-        &(1+1)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot 1^{n-r}\cdot 1^r\\[3mm]
-        &2^n=\sum_{r=0}^{n}~\mathrm{C}_n^r
-    \end{align}\\
-    二项式系数的性质$01$：
+\newpage
+
+\subsubsection{二项式定理的推论}
+    二项式定理的推论：
     \begin{large}
         \begin{equation*}
-            \sum_{r=0}^{n}~\mathrm{C}_n^r=2^n
+            \sum_{r=0}^n\Co_n^r\cdot(k-1)^r=k^n
         \end{equation*}
-    \end{large}
-
-\subsubsection{二项式系数的性质$02$}
-    令$a=1$，令$b=-1$，我们可以得到：\vspace{5pt}
-    \setcounter{equation}{0}
+    \end{large}\\
+    二项式定理中可以令变量：\vspace{3pt}
     \begin{align}
-        &(a+b)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot a^{n-r}\cdot b^r\\[3mm]
-        &(1-1)^n=\sum_{r=0}^{n}~\mathrm{C}_n^r\cdot 1^{n-r}\cdot (-1)^r\\[3mm]
-        &0^n=\sum_{r=0}^{n}~(-1)^r\cdot\mathrm{C}_n^r
+        &~a=1~~~~~~b=k-1\\[3mm]
+        &\sum_{r=0}^{n}~\Co_n^r\cdot a^{n-r}\cdot b^r=(a+b)^n\\[3mm]
+        &\sum_{r=0}^{n}~\Co_n^r\cdot 1^{n-r}\cdot (k-1)^r=k^n\\[3mm]
+        &\sum_{r=0}^{n}~\Co_n^r\cdot (k-1)^r=k^n
     \end{align}\\
-    二项式系数的性质$02$：
+    若令二项式定理的推论中的$k=2$则有：
     \begin{large}
         \begin{equation*}
-            \sum_{r=0}^{n}~(-1)^r\cdot\mathrm{C}_n^r=0
+            \sum_{r=0}^n\Co_n^r=2^n
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    若令二项式定理的推论中的$k=0$则有：
+    \begin{large}
+        \begin{equation*}
+            \sum_{r=0}^n\Co_n^r\cdot(-1)^r=0
+        \end{equation*}
+    \end{large}\\
+    上述公式揭示了三个重要性质：\\[3mm]
+    1.二项式系数的和为$2^n$。\\[3mm]
+    2.二项式系数中的奇数项的和为$2^{n-1}$。\\[3mm]
+    3.二项式系数中的偶数项的和为$2^{n-1}$。\\[6mm]
+    由于第二个公式中，当$r$为偶数即为奇数项时$(-1)^r$取正。\\[3mm]
+    由于第二个公式中，当$r$为奇数即为偶数项时$(-1)^r$取负。\\[3mm]
+    因此第二个公式表明了，二项式系数中的奇数项之和与偶数项之和的差为零，即两者是相等的。
 
 \newpage
 
@@ -12542,19 +12556,33 @@
             X=\left\{x_1,x_2,\cdots,x_x\right\}
         \end{equation*}
     \end{large}\\
-    如果存在多个约束集合 ，则可以视情况分别使用符号$X_1~X_2~X_3$等表示。\\[3mm]
-    我们认为，普通集合中的元素在排列时无要求，约束集合中的元素在排列时存在约束条件。\\[3mm]
-    我们现在研究，在不同的约束条件下，总排列数$P$的值和约束条件的关系。\\
-
-\subsubsection{排列组合问题\rnum{1}-$01$}
-    排列组合问题\rnum{1}-$01$背景：存在$1$个约束集合$X$，其中的元素分别不能置于某各不相同的位置上。\\[3mm]
-    排列组合问题\rnum{1}-$01$公式：
+    显然元素数$p$与$n$和$x$存在以下关系：
     \begin{large}
         \begin{equation*}
-            P=\mathrm{P}_p^p~-\sum_{i=0}^{\mathrm{min}(n,x-1)}\mathrm{C}_x^{x-i}\cdot\mathrm{P}_n^i\cdot\mathrm{P}_n^n
+            p=n+x
         \end{equation*}
     \end{large}\\
-    所有元素任意排列有$\mathrm{P}_p^p$种排列，在此基础上减去违背约束的条件。
+    如果存在多个约束集合 ，则可以视情况分别使用符号$X_1~X_2~X_3$等表示。\\[3mm]
+    我们认为，普通集合中的元素在排列时无要求，约束集合中的元素在排列时存在约束条件。\\[3mm]
+    我们现在研究，在不同的约束条件下，总排列数$P$的值和约束条件的关系。
+
+\subsubsection{排列组合问题\rnum{1}-$01$}
+    \setcounter{equation}{0}
+    排列组合问题\rnum{1}-$01$背景：存在$1$个约束集合$X$，其中的元素分别不能置于某各不相同的位置上。\\[3mm]
+    排列组合问题\rnum{1}-$01$公式（第一种形式）：
+    \begin{large}
+        \begin{equation*}
+            P=\Pe_p^p~-\sum_{i=0}^{\mathrm{min}(n,x-1)}\Co_x^{x-i}\cdot\Pe_n^i\cdot\Pe_n^n
+        \end{equation*}
+    \end{large}\\
+    排列组合问题\rnum{1}-$01$公式（第二种形式）：
+    \begin{large}
+        \begin{equation*}
+            P=\Pe_p^p~-\sum_{i=0}^{\mathrm{min}(n,x-1)}\Co_x^i\cdot\Pe_n^i\cdot\Pe_n^n
+        \end{equation*}
+    \end{large}\\
+    假设不考虑约束集合的约束条件，则共有$\Pe_{n+x}^{n+x}$或者$\Pe_p^p$种排列。\\[3mm]
+    现在研究在此基础上违背约束集合的约束条件的情况，将这些情况数减去即可得到计算公式。
 
 \newpage
 
@@ -12563,10 +12591,10 @@
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-4.3,0.3) rectangle(-3.7,-0.3);
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-4.3,0.3) rectangle(-3.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
                 \draw (-0.3,0.3) rectangle(+0.3,-0.3);
 
@@ -12601,17 +12629,18 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$0$X}
         \end{center}
     \end{figure}\\
-    在$4$个约束元素中，保留$4$个在排斥位上，共有$\mathrm{C}_4^4$种组合，即$\mathrm{C}_x^{x-0}$。\\[3mm]
-    在$4$个约束元素中，移出$0$个至普通位上，共有$\mathrm{P}_5^0\,$种排列，即$\mathrm{P}_n^{0}$。\\[3mm]
-    对于$5$个普通元素，剩余$5$个空位，共有$\mathrm{P}_5^5$种排列，即$\mathrm{P}_n^n$。\\[10mm]
+    在$4$个约束元素中，保留$4$个在排斥位上，共有$\Co_4^4$种组合，即$\Co_x^{x-0}$。\\[3mm]
+    在$4$个约束元素中，移出$0$个至普通位上，共有$\Pe_5^0\,$种排列，即$\Pe_n^{0}$。\\[3mm]
+    对于$5$个普通元素，剩余$5$个空位，共有$\Pe_5^5$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-0}\cdot\Pe_n^0\cdot\Pe_n^n=\Co_x^0\cdot\Pe_n^0\cdot\Pe_n^n$。\\[10mm]
     当循环变量$i=1$时：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-4.3,0.3) rectangle(-3.7,-0.3);
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-4.3,0.3) rectangle(-3.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
                 \draw (-0.3,0.3) rectangle(+0.3,-0.3);
 
@@ -12646,20 +12675,24 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$1$X}
         \end{center}
     \end{figure}\\
-    在$4$个约束元素中，保留$3$个在排斥位上，共有$\mathrm{C}_4^3$种组合，即$\mathrm{C}_x^{x-1}$。\\[3mm]
-    在$4$个约束元素中，移出$1$个至普通位上，共有$\mathrm{P}_5^1\,$种排列，即$\mathrm{P}_n^{1}$。\\[3mm]
-    对于$5$个普通元素，剩余$5$个空位，共有$\mathrm{P}_5^5$种排列，即$\mathrm{P}_n^n$。
+    在$4$个约束元素中，保留$3$个在排斥位上，共有$\Co_4^3$种组合，即$\Co_x^{x-1}$。\\[3mm]
+    在$4$个约束元素中，移出$1$个至普通位上，共有$\Pe_5^1\,$种排列，即$\Pe_n^{1}$。\\[3mm]
+    对于$5$个普通元素，剩余$5$个空位，共有$\Pe_5^5$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-1}\cdot\Pe_n^1\cdot\Pe_n^n=\Co_x^1\cdot\Pe_n^1\cdot\Pe_n^n$。\\[10mm]
+    以上示意图中，灰色的方块代表排斥位，即约束元素不能放置的位置。\\[3mm]
+    以上示意图中，白色的方块代表普通位，即所有元素均可放置的位置。\\[3mm]
 
 \newpage
 
+    \textbf{1.首先考虑$x-1<n$的情况：}\\[5mm]
     当循环变量$i=2$时：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-4.3,0.3) rectangle(-3.7,-0.3);
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-4.3,0.3) rectangle(-3.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
                 \draw (-0.3,0.3) rectangle(+0.3,-0.3);
 
@@ -12694,17 +12727,18 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$2$X}
         \end{center}
     \end{figure}\\
-    在$4$个约束元素中，保留$2$个在排斥位上，共有$\mathrm{C}_4^2$种组合，即$\mathrm{C}_x^{x-2}$。\\[3mm]
-    在$4$个约束元素中，移出$2$个至普通位上，共有$\mathrm{P}_5^2\,$种排列，即$\mathrm{P}_n^{2}$。\\[3mm]
-    对于$5$个普通元素，剩余$5$个空位，共有$\mathrm{P}_5^5$种排列，即$\mathrm{P}_n^n$。\\[10mm]
+    在$4$个约束元素中，保留$2$个在排斥位上，共有$\Co_4^2$种组合，即$\Co_x^{x-2}$。\\[3mm]
+    在$4$个约束元素中，移出$2$个至普通位上，共有$\Pe_5^2\,$种排列，即$\Pe_n^{2}$。\\[3mm]
+    对于$5$个普通元素，剩余$5$个空位，共有$\Pe_5^5$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-2}\cdot\Pe_n^2\cdot\Pe_n^n=\Co_x^2\cdot\Pe_n^2\cdot\Pe_n^n$。\\[10mm]
     当循环变量$i=3$时：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-4.3,0.3) rectangle(-3.7,-0.3);
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-4.3,0.3) rectangle(-3.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
                 \draw (-0.3,0.3) rectangle(+0.3,-0.3);
 
@@ -12739,9 +12773,10 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$3$X}
         \end{center}
     \end{figure}\\
-    在$4$个约束元素中，保留$1$个在排斥位上，共有$\mathrm{C}_4^1$种组合，即$\mathrm{C}_x^{x-3}$。\\[3mm]
-    在$4$个约束元素中，移出$3$个至普通位上，共有$\mathrm{P}_5^3\,$种排列，即$\mathrm{P}_n^{3}$。\\[3mm]
-    对于$5$个普通元素，剩余$5$个空位，共有$\mathrm{P}_5^5$种排列，即$\mathrm{P}_n^n$。\\[10mm]
+    在$4$个约束元素中，保留$1$个在排斥位上，共有$\Co_4^1$种组合，即$\Co_x^{x-3}$。\\[3mm]
+    在$4$个约束元素中，移出$3$个至普通位上，共有$\Pe_5^3\,$种排列，即$\Pe_n^{3}$。\\[3mm]
+    对于$5$个普通元素，剩余$5$个空位，共有$\Pe_5^5$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-3}\cdot\Pe_n^3\cdot\Pe_n^n=\Co_x^3\cdot\Pe_n^3\cdot\Pe_n^n$。\\[10mm]
     由于没有更多的约束元素可以移出，使循环无法继续，故循环终止。\\[3mm]
     因此当$x-1<n$时，主要矛盾是约束元素，显然这种情况下累加会终止于$i=x-1$。
 
@@ -12752,13 +12787,13 @@
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
-                \draw[fill=gray] (-0.3,0.3) rectangle(+0.3,-0.3);
+                \draw[fill=LightGray] (-0.3,0.3) rectangle(+0.3,-0.3);
 
-                \draw[fill=gray] (+1.3,0.3) rectangle(+0.7,-0.3);
+                \draw[fill=LightGray] (+1.3,0.3) rectangle(+0.7,-0.3);
                 \draw (+2.3,0.3) rectangle(+1.7,-0.3);
                 \draw (+3.3,0.3) rectangle(+2.7,-0.3);
                 \draw (+4.3,0.3) rectangle(+3.7,-0.3);
@@ -12790,20 +12825,21 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$0$N}
         \end{center}
     \end{figure}\\
-    在$5$个约束元素中，保留$5$个在排斥位上，共有$\mathrm{C}_5^5$种组合，即$\mathrm{C}_x^{x-0}$。\\[3mm]
-    在$5$个约束元素中，移出$0$个至普通位上，共有$\mathrm{P}_3^0\,$种排列，即$\mathrm{P}_n^{0}$。\\[3mm]
-    对于$3$个普通元素，剩余$3$个空位，共有$\mathrm{P}_3^3$种排列，即$\mathrm{P}_n^n$。\\[10mm]
+    在$5$个约束元素中，保留$5$个在排斥位上，共有$\Co_5^5$种组合，即$\Co_x^{x-0}$。\\[3mm]
+    在$5$个约束元素中，移出$0$个至普通位上，共有$\Pe_3^0\,$种排列，即$\Pe_n^{0}$。\\[3mm]
+    对于$3$个普通元素，剩余$3$个空位，共有$\Pe_3^3$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-0}\cdot\Pe_n^0\cdot\Pe_n^n=\Co_x^0\cdot\Pe_n^0\cdot\Pe_n^n$。\\[10mm]
     当循环变量$i=1$时：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
-                \draw[fill=gray] (-0.3,0.3) rectangle(+0.3,-0.3);
+                \draw[fill=LightGray] (-0.3,0.3) rectangle(+0.3,-0.3);
 
-                \draw[fill=gray] (+1.3,0.3) rectangle(+0.7,-0.3);
+                \draw[fill=LightGray] (+1.3,0.3) rectangle(+0.7,-0.3);
                 \draw (+2.3,0.3) rectangle(+1.7,-0.3);
                 \draw (+3.3,0.3) rectangle(+2.7,-0.3);
                 \draw (+4.3,0.3) rectangle(+3.7,-0.3);
@@ -12835,23 +12871,27 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$1$N}
         \end{center}
     \end{figure}\\
-    在$5$个约束元素中，保留$4$个在排斥位上，共有$\mathrm{C}_5^4$种组合，即$\mathrm{C}_x^{x-1}$。\\[3mm]
-    在$5$个约束元素中，移出$1$个至普通位上，共有$\mathrm{P}_3^1\,$种排列，即$\mathrm{P}_n^{1}$。\\[3mm]
-    对于$3$个普通元素，剩余$3$个空位，共有$\mathrm{P}_3^3$种排列，即$\mathrm{P}_n^n$。\\[8mm]
+    在$5$个约束元素中，保留$4$个在排斥位上，共有$\Co_5^4$种组合，即$\Co_x^{x-1}$。\\[3mm]
+    在$5$个约束元素中，移出$1$个至普通位上，共有$\Pe_3^1\,$种排列，即$\Pe_n^{1}$。\\[3mm]
+    对于$3$个普通元素，剩余$3$个空位，共有$\Pe_3^3$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-1}\cdot\Pe_n^1\cdot\Pe_n^n=\Co_x^1\cdot\Pe_n^1\cdot\Pe_n^n$。\\[10mm]
+    以上示意图中，灰色的方块代表排斥位，即约束元素不能放置的位置。\\[3mm]
+    以上示意图中，白色的方块代表普通位，即所有元素均可放置的位置。\\[3mm]
 
 \newpage
 
+    \textbf{2.其次考虑$n<x-1$的情况：}\\[5mm]
     当循环变量$i=2$时：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
-                \draw[fill=gray] (-0.3,0.3) rectangle(+0.3,-0.3);
+                \draw[fill=LightGray] (-0.3,0.3) rectangle(+0.3,-0.3);
 
-                \draw[fill=gray] (+1.3,0.3) rectangle(+0.7,-0.3);
+                \draw[fill=LightGray] (+1.3,0.3) rectangle(+0.7,-0.3);
                 \draw (+2.3,0.3) rectangle(+1.7,-0.3);
                 \draw (+3.3,0.3) rectangle(+2.7,-0.3);
                 \draw (+4.3,0.3) rectangle(+3.7,-0.3);
@@ -12883,20 +12923,21 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$2$N}
         \end{center}
     \end{figure}\\
-    在$5$个约束元素中，保留$3$个在排斥位上，共有$\mathrm{C}_5^3$种组合，即$\mathrm{C}_x^{x-2}$。\\[3mm]
-    在$5$个约束元素中，移出$2$个至普通位上，共有$\mathrm{P}_2^3\,$种排列，即$\mathrm{P}_n^{2}$。\\[3mm]
-    对于$3$个普通元素，剩余$3$个空位，共有$\mathrm{P}_3^3$种排列，即$\mathrm{P}_n^n$。\\[10mm]
+    在$5$个约束元素中，保留$3$个在排斥位上，共有$\Co_5^3$种组合，即$\Co_x^{x-2}$。\\[3mm]
+    在$5$个约束元素中，移出$2$个至普通位上，共有$\Pe_2^3\,$种排列，即$\Pe_n^{2}$。\\[3mm]
+    对于$3$个普通元素，剩余$3$个空位，共有$\Pe_3^3$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-2}\cdot\Pe_n^2\cdot\Pe_n^n=\Co_x^2\cdot\Pe_n^2\cdot\Pe_n^n$。\\[10mm]
     当循环变量$i=3$时：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw[fill=gray] (-3.3,0.3) rectangle(-2.7,-0.3);
-                \draw[fill=gray] (-2.3,0.3) rectangle(-1.7,-0.3);
-                \draw[fill=gray] (-1.3,0.3) rectangle(-0.7,-0.3);
+                \draw[fill=LightGray] (-3.3,0.3) rectangle(-2.7,-0.3);
+                \draw[fill=LightGray] (-2.3,0.3) rectangle(-1.7,-0.3);
+                \draw[fill=LightGray] (-1.3,0.3) rectangle(-0.7,-0.3);
 
-                \draw[fill=gray] (-0.3,0.3) rectangle(+0.3,-0.3);
+                \draw[fill=LightGray] (-0.3,0.3) rectangle(+0.3,-0.3);
 
-                \draw[fill=gray] (+1.3,0.3) rectangle(+0.7,-0.3);
+                \draw[fill=LightGray] (+1.3,0.3) rectangle(+0.7,-0.3);
                 \draw (+2.3,0.3) rectangle(+1.7,-0.3);
                 \draw (+3.3,0.3) rectangle(+2.7,-0.3);
                 \draw (+4.3,0.3) rectangle(+3.7,-0.3);
@@ -12928,54 +12969,108 @@
             \caption{排列组合问题\rnum{1}-$01$的示意图~-~$3$N}
         \end{center}
     \end{figure}\\
-    在$5$个约束元素中，保留$2$个在排斥位上，共有$\mathrm{C}_5^2$种组合，即$\mathrm{C}_x^{x-3}$。\\[3mm]
-    在$5$个约束元素中，移出$3$个至普通位上，共有$\mathrm{P}_3^3\,$种排列，即$\mathrm{P}_n^{3}$。\\[3mm]
-    对于$3$个普通元素，剩余$3$个空位，共有$\mathrm{P}_3^3$种排列，即$\mathrm{P}_n^n$。\\[10mm]
+    在$5$个约束元素中，保留$2$个在排斥位上，共有$\Co_5^2$种组合，即$\Co_x^{x-3}$。\\[3mm]
+    在$5$个约束元素中，移出$3$个至普通位上，共有$\Pe_3^3\,$种排列，即$\Pe_n^{3}$。\\[3mm]
+    对于$3$个普通元素，剩余$3$个空位，共有$\Pe_3^3$种排列，即$\Pe_n^n$。\\[3mm]
+    由乘法定理可得此时需减去的情况数为$\Co_x^{x-3}\cdot\Pe_n^3\cdot\Pe_n^n=\Co_x^3\cdot\Pe_n^3\cdot\Pe_n^n$。\\[10mm]
     由于没有更多的普通位置可供移出，使循环无法继续，故循环终止。\\[3mm]
     因此当$n<x-1$时，主要矛盾是普通位置，显然这种情况下累加会终止于$i=n$。
 
 \newpage
 
 \subsubsection{排列组合问题\rnum{1}-$02$}
-    排列组合问题\rnum{1}-$02$背景：存在$1$个约束集合$X$，其中的元素必须相邻。\\[3mm]
+    排列组合问题\rnum{1}-$02$背景：存在$1$个约束集合$X$，其中的元素必须保持相对顺序固定。\\[3mm]
     排列组合问题\rnum{1}-$02$公式：
     \begin{large}
         \begin{equation*}
-           P=\mathrm{P}_{n+1}^{n+1}\cdot\mathrm{P}_x^x
+            P=\frac{\Pe_p^p}{\Pe_x^x}
         \end{equation*}
     \end{large}\\
-    将约束集合$X$中的元素视为组块：
+    排列组合问题\rnum{1}-$02$示意图：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.0]
-                \node at(-3,0) {$x_1$};
-                \node at(-2,0) {$x_2$};
-                \node at(-1,0) {$x_3$};
-                \node at(+0,0) {$n_1$};
-                \node at(+1,0) {$n_2$};
-                \node at(+2,0) {$n_3$};
-                \node at(+3,0) {$n_4$};
-                \draw (-3.3,0.3) rectangle(-0.7,-0.3);
+            \begin{tikzpicture}[scale=1.2]
+                \tkzDefPoint(0,7){X}
+                \foreach \x/\n in{-1.5/1,0/2,+1.5/3}
+                {
+                    \tkzDefShiftPoint[X](\x,0){x\n}
+                    \node at (x\n) {$x_\n$};
+                }
+                \tkzDefShiftPoint[X](-2.4,-0.4){XA}
+                \tkzDefShiftPoint[X](+2.4,+0.4){XB}
+                \draw[dashed] (XA) rectangle (XB);
+
+                \tkzDefPoint(0,0){N}
+                \foreach \x/\n in{-3.0/1,-1.5/2,+1.5/3}
+                {
+                    \tkzDefShiftPoint[N](\x,0){xb\n}
+                    \tkzDefShiftPoint[xb\n](-0.3,-0.3){xbA\n}
+                    \tkzDefShiftPoint[xb\n](+0.3,+0.3){xbB\n}
+                    \draw (xbA\n) rectangle (xbB\n);
+                }
+                \foreach \x/\n in{-4.5/1,0/2,3.0/3,4.5/4}
+                {
+                    \tkzDefShiftPoint[N](\x,0){n\n}
+                    \node at (n\n) {$n_\n$};
+                }
+                \foreach \n in{1,2,3}
+                {
+                    \tkzDrawSegment[->,add=-0.1 and -0.1](x\n,xb\n)
+                }
+
+                \tkzLabelSegment[right=3pt](x3,xb3){\small 只有一种合法排列}
             \end{tikzpicture}
             \caption{排列组合问题\rnum{1}-$02$的示意图}
         \end{center}
     \end{figure}\\
-    整体上考虑，共有$n+1$个元素或组块进行全排列，其排列数为$\mathrm{P}_{n+1}^{n+1}$。\\[3mm]
-    约束集合中共有$x$个元素，其在组块内共有$x$个位置，其排列数为$\mathrm{P}_{x}^{x}$。\\
+    该类情况下，约束元素只能置于位置固定的方框中，普通元素位置固定。\\[3mm]
+    该类情况下，约束元素共有$\Pe_x^x$种排列，但是根据约束条件只有$1$种是合法的。\\[3mm]
+    由此可见对于每一类情况的$\Pe_x^x$排列均中只有$1$种是合法的。\\[3mm]
+    因此总数上除以$\Pe_x^x$即可得到公式$P=\dfrac{\Pe_p^p}{\Pe_x^x}$。\\[6mm]
+    对于$\lambda$个约束集合$X_1\sim X_\lambda$要求相对顺序固定，可以用类似思路推广求解。
+
+\newpage
 
 \subsubsection{排列组合问题\rnum{1}-$03$}
-    排列组合问题\rnum{1}-$03$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须相邻。\\[3mm]
+    排列组合问题\rnum{1}-$03$背景：存在$1$个约束集合$X$，其中的元素必须相邻。\\[3mm]
     排列组合问题\rnum{1}-$03$公式：
     \begin{large}
         \begin{equation*}
-            P=\mathrm{P}_{n+\lambda}^{n+\lambda}\cdot\prod_{i=1}^\lambda\mathrm{P}_{x_i}^{x_i}
+            P=\Pe_{n+1}^{n+1}\cdot\Pe_x^x
         \end{equation*}
     \end{large}\\
-    首先将$\lambda$个约束集合视作$\lambda$个组块。\\[3mm]
-    考虑整体，共有$n+\lambda$个元素或组块进行全排列，其排列数为$\mathrm{P}_{n+\lambda}^{n+\lambda}$。\\[3mm]
-    考虑约束集合$X_1$，其所构成的组块中共有$x_1$个元素，其排列数为$\mathrm{P}_{x_1}^{x_1}$。\\[3mm]
-    考虑约束集合$X_2$，其所构成的组块中共有$x_2$个元素，其排列数为$\mathrm{P}_{x_2}^{x_2}$。\\[3mm]
-    考虑约束集合$X_\lambda$，其所构成的组块中共有$x_\lambda$个元素，其排列数为$\mathrm{P}_{x_\lambda}^{x_\lambda}$。\vspace{8pt}
+    排列组合问题\rnum{1}-$03$示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.2]
+                \tkzDefPoint(0,7){X}
+                \foreach \x/\n in{-1.5/1,0/2,+1.5/3}
+                {
+                    \tkzDefShiftPoint[X](\x,0){x\n}
+                    \node at (x\n) {$x_\n$};
+                }
+                \tkzDefShiftPoint[X](-2.4,-0.4){XA}
+                \tkzDefShiftPoint[X](+2.4,+0.4){XB}
+                \draw[thick] (XA) rectangle (XB);
+
+                \tkzDefPoint(0,0){N}
+                \foreach \x/\n in{-3/1,-1/2,+1/3,+3/4}
+                {
+                    \tkzDefShiftPoint[N](\x,0){n\n}
+                    \node at (n\n) {$n_\n$};
+                }
+
+                \tkzDrawSegment[->,add=-0.1 and -0.1](x2,N)
+                \tkzLabelSegment[right=3pt](x2,N){\small 视为组块}
+            \end{tikzpicture}
+            \caption{排列组合问题\rnum{1}-$03$的示意图}
+        \end{center}
+    \end{figure}\\
+    该问题解决的核心思路是将约束集合的元素视为组块。\\[3mm]
+    在整体上考虑，整体上共有$n+1$个元素或组块进行全排列，其排列数为$\Pe_{n+1}^{n+1}$。\\[3mm]
+    在组块内考虑，约束集合中共有$x$个元素，组块内共有$x$个位置，其排列数为$\Pe_{x}^{x}$。\\[3mm]
+    根据乘法定理可得总情况数为$P=\Pe_{n+1}^{n+1}\cdot\Pe_x^x$。\\[6mm]
+    对于$\lambda$个约束集合$X_1\sim X_\lambda$要求必须相邻，可以用类似思路推广求解。
 
 \newpage
 
@@ -12984,85 +13079,48 @@
     排列组合问题\rnum{1}-$04$公式：
     \begin{large}
         \begin{equation*}
-           P=\mathrm{P}_{n+1}^{x}\cdot\mathrm{P}_n^n
+            P=\Pe_{n+1}^{n+1}\cdot\Pe_x^x
         \end{equation*}
-    \end{large}\\ 
-    将约束集合$X$中的元素进行插空：
+    \end{large}\\
+    排列组合问题\rnum{1}-$04$示意图：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw (-3.3,0.3) rectangle(-2.7,-0.3);
-                \node at(-2,0) {$n_1$};
-                \draw (-1.3,0.3) rectangle(-0.7,-0.3);
-                \node at(+0,0) {$n_2$};
-                \draw (+0.7,0.3) rectangle(+1.3,-0.3);
-                \node at(+2,0) {$n_3$};
-                \draw (+2.7,0.3) rectangle(+3.3,-0.3);                
+            \begin{tikzpicture}[scale=1.2]
+                \tkzDefPoint(0,7){X}
+                \foreach \x/\n in{-1.5/1,0/2,+1.5/3}
+                {
+                    \tkzDefShiftPoint[X](\x,0){x\n}
+                    \node at (x\n) {$x_\n$};
+                }
+                \tkzDefShiftPoint[X](-2.4,-0.4){XA}
+                \tkzDefShiftPoint[X](+2.4,+0.4){XB}
+                \draw[thick] (XA) rectangle (XB);
+
+                \tkzDefPoint(0,0){N}
+                \foreach \x/\n in{-3/1,-1/2,+1/3,+3/4}
+                {
+                    \tkzDefShiftPoint[N](\x,0){n\n}
+                    \node at (n\n) {$n_\n$};
+                }
+                \foreach \x/\n in{-4/1,-2/2,0/3,+2/4,+4/5}
+                {
+                    \tkzDefShiftPoint[N](\x,0){xb\n}
+                    \tkzDefShiftPoint[xb\n](-0.3,-0.3){xbA\n}
+                    \tkzDefShiftPoint[xb\n](+0.3,+0.3){xbB\n}
+                    \draw (xbA\n) rectangle (xbB\n);
+                    \tkzDrawSegment[->,add=-0.1 and -0.1](X,xb\n)
+                }
+
+                \tkzLabelSegment[right=3pt](x2,xb5){\small 进行插空}
             \end{tikzpicture}
             \caption{排列组合问题\rnum{1}-$04$的示意图}
         \end{center}
     \end{figure}\\
-    整体上考虑，共有$n$个普通元素进行全排列，其排列数为$\mathrm{P}_n^n$。\\[3mm]
-    约束集合中共有$x$个元素，其在插空时共有$n+1$个位置，其排列数为$\mathrm{P}_{n+1}^{x}$。\\
-
-\subsubsection{排列组合问题\rnum{1}-$05$}
-    排列组合问题\rnum{1}-$05$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须隔开。\\[3mm]
-    排列组合问题\rnum{1}-$05$公式：
-    \begin{large}
-        \begin{equation*}
-            P=\mathrm{P}_{n}^{n}\cdot\prod_{i=1}^\lambda\mathrm{P}_{n+1+\sum_{j=1}^{i-1}x_j}^{x_i}
-        \end{equation*}
-    \end{large}\\
-    首先将$\lambda$个约束集合按元素数量从小到大排列并重新编号。\\[3mm]
-    考虑普通集合$N$，共有$n$个元素进行全排列，其排列数为$\mathrm{P}_{n}^{n}$。\\[3mm]
-    考虑约束集合$X_1$，共有$x_1$个元素，可用空位为$n+1$，其排列数为$\mathrm{P}_{n+1}^{x_1}$。\\[3mm]
-    考虑约束集合$X_2$，共有$x_2$个元素，可用空位为$n+x_1+1$，其排列数为$\mathrm{P}_{n+x_1+1}^{x_2}$。\\[3mm]
-    考虑约束集合$X_3$，共有$x_3$个元素，可用空位为$n+x_1+x_2+1$，其排列数为$\mathrm{P}_{n+x_1+x_2+1}^{x_3}$。\\[3mm]
-    依次类推即可，若任意一步出现空位不足，则说明该组数据无解。\vspace{8pt}
-
-\newpage
-
-\subsubsection{排列组合问题\rnum{1}-$06$}
-    排列组合问题\rnum{1}-$06$背景：存在$1$个约束集合$X$，其中的元素必须保持相对顺序固定。\\[3mm]
-    排列组合问题\rnum{1}-$06$公式：
-    \begin{large}
-        \begin{equation*}
-            P=\frac{\mathrm{P}_p^p}{\mathrm{P}_x^x}
-        \end{equation*}
-    \end{large}\\
-    考虑约束集合$X$中按照下图所示排列：\vspace{5pt}
-    \begin{figure}[h]
-        \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw (-3.3,0.3) rectangle(-2.7,-0.3);
-                \node at(-3,0) {$x$};
-                \draw (-2.3,0.3) rectangle(-1.7,-0.3);
-                \node at(-2,0) {$x$};
-                \draw (-1.3,0.3) rectangle(-0.7,-0.3);
-                \node at(-1,0) {$x$};
-                \node at(+0,0) {$n_1$};
-                \node at(+1,0) {$n_2$};
-                \node at(+2,0) {$n_3$};
-                \node at(+3,0) {$n_4$};
-            \end{tikzpicture}
-            \caption{排列组合问题\rnum{1}-$06$的示意图}
-        \end{center}
-    \end{figure}\\
-    如图所示，约束集合$X$中的元素只能放置于方框中，普通集合$N$中的元素位置顺序固定。\\[3mm]
-    显然该背景下约束元素有$\mathrm{P}_x^x$种排列，但是依照约束条件只有$1$种是合法的，故总数上除以$\mathrm{P}_x^x$。\\
-
-\subsubsection{排列组合问题\rnum{1}-$07$}
-    排列组合问题\rnum{1}-$07$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须保持相对顺序固定。\\[3mm]
-    排列组合问题\rnum{1}-$07$公式：
-    \begin{large}
-        \begin{equation*}
-            P=\frac{\mathrm{P}_p^p}{\prod_{i=1}^{\lambda}\mathrm{P}_{x_i}^{x_i}}
-        \end{equation*}
-    \end{large}\\
-    考虑约束集合$X_1$，在$\mathrm{P}_{x_1}^{x_1}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_1}^{x_1}$。\\[3mm]
-    考虑约束集合$X_2$，在$\mathrm{P}_{x_2}^{x_2}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_2}^{x_2}$。\\[3mm]
-    考虑约束集合$X_3$，在$\mathrm{P}_{x_2}^{x_2}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_3}^{x_3}$。\\[3mm]
-    考虑约束集合$X_\lambda$，在$\mathrm{P}_{x_\lambda}^{x_\lambda}$种排列中只有$1$种是合法的，故总数上除以$\mathrm{P}_{x_\lambda}^{x_\lambda}$。
+    该问题解决的核心思路是将约束集合的元素进行插空。\\[3mm]
+    考虑普通元素，普通集合中共有$n$个元素进行全排列，其排列数为$\Pe_{n+1}^{n+1}$。\\[3mm]
+    考虑约束元素，约束集合中共有$x$个元素，插空时共有$n+1$个位置，其排列数为$\Pe_{x}^{x}$。\\[3mm]
+    根据乘法定理可得总情况数为$P=\Pe_{n+1}^{x}\cdot\Pe_n^n$。\\[6mm]
+    对于$\lambda$个约束集合$X_1\sim X_\lambda$要求必须隔开，不能用类似思路推广求解。
 
 \newpage
 
@@ -13082,74 +13140,219 @@
             X=\left\{x_1,x_2,\cdots,x_x\right\}
         \end{equation*}
     \end{large}\\
+    显然元素数$p$与$n$和$x$存在以下关系：
+    \begin{large}
+        \begin{equation*}
+            p=n+x
+        \end{equation*}
+    \end{large}\\
     如果存在多个约束集合 ，则可以视情况分别使用符号$X_1~X_2~X_3$等表示。\\[3mm]
     我们认为，普通集合中的元素在排列时无要求，约束集合中的元素在排列时存在约束条件。\\[3mm]
     我们现在研究，在不同的约束条件下，总组合数$C$的值和约束条件的关系。
 
 \subsubsection{排列组合问题\rnum{2}-$01$}
-    排列组合问题\rnum{2}-$01$背景：存在$1$个约束集合$X$，其中的元素必须选取$m_1\sim m_2$个。\\[3mm]
+    排列组合问题\rnum{2}-$01$背景：存在$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须选取$m_i$个。\\[3mm]
     排列组合问题\rnum{2}-$01$公式：
     \begin{large}
         \begin{equation*}
-            C=\sum_{i=m_1}^{m_2}\mathrm{C}_{x}^{\,i}\cdot\mathrm{C}_{n}^{q-i}
+            C=\Co_n^{q-\sum mi}\cdot\prod_{i=1}^{\lambda}\Co_{x_i}^{m_i}
         \end{equation*}
     \end{large}\\
-    请注意该公式的累加符号内部，同时包含了其后的两项。\\[3mm]
-    按照如下方式依次考虑：\\[3mm]
-    1.从约束集合$X$中选取$m_1+0$个元素，从普通集合$N$中选取剩余$q-(m_1+0)$个元素。\\[3mm]
-    2.从约束集合$X$中选取$m_1+1$个元素，从普通集合$N$中选取剩余$q-(m_1+1)$个元素。\\[3mm]
-    3.从约束集合$X$中选取$m_1+2$个元素，从普通集合$N$中选取剩余$q-(m_1+2)$个元素。\\[3mm]
-    直至从约束集合中选取的元素数达到上限$m_2$时终止，按照加法原理将这些情况相加。\\[5mm]
-    实际上该模型也可以适用于至多至少的情况：\\[3mm]
-    约束集合中的元素至少选取$m$个，则可以在该模型下，令下限$m_1=m$，令上限$m_2=q$。\\[3mm]
-    约束集合中的元素至多选取$m$个，则可以在该模型下，令上限$m_2=m$，令下限$m_1=0$。
+    由于约束集合$X_1$要求必须从$x_1$个元素中选取$m_1$个元素，故有组合数$\Co_{x_1}^{m_1}$。\\[3mm]
+    由于约束集合$X_2$要求必须从$x_2$个元素中选取$m_2$个元素，故有组合数$\Co_{x_2}^{m_2}$。\\[3mm]
+    由于约束集合$X_\lambda$要求必须从$x_\lambda$个元素中选取$m_\lambda$个元素，故有组合数$\Co_{x_\lambda}^{m_\lambda}$。\\[3mm]
+    最后普通集合$N$需要在其$n$个元素中选取剩余的$q-\sum m_i$个元素，故有组合数$\Co_{n}^{q-\sum m_i}$。\\[3mm]
+    根据乘法原理可得总情况数为$C=\Co_n^{q-\sum mi}\cdot\prod_{i=1}^{\lambda}\Co_{x_i}^{m_i}$。
 
 \newpage
 
 \subsubsection{排列组合问题\rnum{2}-$02$}
-    排列组合问题\rnum{2}-$02$背景：仅有$2$个约束集合$X_1\sim X_2$，其中的元素必须选取$m_i$个。\\[3mm]
+    排列组合问题\rnum{2}-$02$背景：存在$1$个约束集合$X$，其中的元素至少选取$m$个。\\[3mm]
     排列组合问题\rnum{2}-$02$公式：
     \begin{large}
         \begin{equation*}
-            C=\mathrm{C}_{x_1}^{m_1}\cdot\mathrm{C}_{x_2}^{m_2}
+            C=\sum_{i=m}^{q}\Co_{x}^{\,i}\cdot\Co_{n}^{q-i}
         \end{equation*}
     \end{large}\\
-    1.由于约束集合$X_1$中要求必须选取$m_1$个元素，故有组合数$\mathrm{C}_{x_1}^{m_1}$。\\[3mm]
-    2.由于约束集合$X_2$中要求必须选取$m_2$个元素，故有组合数$\mathrm{C}_{x_2}^{m_2}$。\\[3mm]
-    根据乘法原理将两项相乘即可。\\
+    排列组合问题\rnum{2}-$02$的示意图：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.2]
+                \draw (-5,+1) rectangle (-3,-1);
+                \draw (+5,+1) rectangle (+3,-1);
 
+                \draw (-3,-5.0) rectangle (+3,-6.0);
 
-\subsubsection{排列组合问题\rnum{2}-$03$}
-    排列组合问题\rnum{2}-$03$背景：仅有$\lambda$个约束集合$X_1\sim X_\lambda$，其中的元素必须选取$m_i$个。\\[3mm]
-    排列组合问题\rnum{2}-$03$公式：
-    \begin{large}
-        \begin{equation*}
-            C=\prod_{i=1}^{\lambda}\mathrm{C}_{x_i}^{m_i}
-        \end{equation*}
-    \end{large}\\
-    按照如下方式依次考虑：\\[3mm]
-    1.由于约束集合$X_1$中要求必须选取$m_1$个元素，故有组合数$\mathrm{C}_{x_1}^{m_1}$。\\[3mm]
-    2.由于约束集合$X_2$中要求必须选取$m_2$个元素，故有组合数$\mathrm{C}_{x_2}^{m_2}$。\\[3mm]
-    3.由于约束集合$X_3$中要求必须选取$m_3$个元素，故有组合数$\mathrm{C}_{x_3}^{m_3}$。\\[3mm]
-    4.由于约束集合$X_\lambda$中要求必须选取$m_\lambda$个元素，故有组合数$\mathrm{C}_{x_\lambda}^{m_\lambda}$。\\[3mm]
-    根据乘法原理将各项相乘即可。
+                \tkzDefPoint(-3,0){X}
+                \tkzDefPoint(-0.5,0){P1}
+                \tkzDefPoint(+0.5,0){P2}
+                \tkzDefPoint(+3,0){N}
+
+                \tkzDefPoint(-0.5,-5.0){P1+}
+                \tkzDefPoint(+0.5,-5.0){P2+}
+
+                \tkzDrawSegment(X,P1)
+                \tkzDrawSegment(N,P2)
+
+                \tkzDrawSegment[->](P1,P1+)
+                \tkzDrawSegment[->](P2,P2+)
+
+                \tkzLabelSegment[above](X,P1){\small 至少选取$m$个}
+                \tkzLabelSegment[above](N,P2){\small 无要求}
+
+                \node at(-4,+0.4){约束集合$X$};
+                \node at(+4,+0.4){普通集合$N$};
+
+                \node at(-4,-0.4){（共$x$个）};
+                \node at(+4,-0.4){（共$n$个）};
+
+                \node at(0,-5.5){选取$p$个元素进行组合};
+            \end{tikzpicture}
+            \caption{排列组合问题\rnum{2}-$02$的示意图}
+        \end{center}
+    \end{figure}\\
+    显然符合约束条件的情况可以列举如下：\\[3mm]
+    从$X$中选取$m+0$个元素，从$N$中选取剩余$q-(m+0)$个元素，情况数为$\Co_{x}^{m+0}\cdot\Co_{n}^{q-(m+0)}$。\\[3mm]
+    从$X$中选取$m+1$个元素，从$N$中选取剩余$q-(m+1)$个元素，情况数为$\Co_{x}^{m+1}\cdot\Co_{n}^{q-(m+1)}$。\\[3mm]
+    从$X$中选取$m+2$个元素，从$N$中选取剩余$q-(m+2)$个元素，情况数为$\Co_{x}^{m+2}\cdot\Co_{n}^{q-(m+2)}$。\\[3mm]
+    直至从$X$中选取的元素数达到上限$p$时终止，即范围为$m\sim q$。\\[3mm]
+    根据加法原理可得总情况数为$C=\sum_{i=m}^{q}\Co_{x}^{\,i}\cdot\Co_{n}^{q-i}$。
 
 \newpage
 
-\subsection{排列组合问题\rnum{3}}
-    我们首先约定符号和背景，以便后续讨论。\\[3mm]
-    这一类排列组合问题实际上可以概括为球盒问题，球对应小球，盒对应盒子，为了叙述的便利和规避集合不能存在相同元素的问题，
-    这里使用了小球盒子而非元素集合这样更为抽象的表述。\\[3mm]
-    球盒问题：现有$n$个（相同/不同）的小球，放入$m$个（相同/不同）的盒子，求总方案数$P$。\\[3mm]
-    球盒问题通常还带有附加条件，最常见的为盒子中至少需要放入一个小球。\\[3mm]
-    球盒问题中认为盒子内部的小球是无所谓顺序的，即不考虑盒子内部的小球排列。
+\subsubsection{排列组合问题\rnum{2}-$03$}
+    排列组合问题\rnum{2}-$03$背景：存在$1$个约束集合$X$，其中的元素至多选取$m$个。\\[3mm]
+    排列组合问题\rnum{2}-$03$公式：
+    \begin{large}
+        \begin{equation*}
+            C=\sum_{i=0}^{m}\Co_{x}^{\,i}\cdot\Co_{n}^{q-i}
+        \end{equation*}
+    \end{large}\\
+    排列组合问题\rnum{2}-$03$的示意图：\vspace{5pt}
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=1.2]
+                \draw (-5,+1) rectangle (-3,-1);
+                \draw (+5,+1) rectangle (+3,-1);
+
+                \draw (-3,-5.0) rectangle (+3,-6.0);
+
+                \tkzDefPoint(-3,0){X}
+                \tkzDefPoint(-0.5,0){P1}
+                \tkzDefPoint(+0.5,0){P2}
+                \tkzDefPoint(+3,0){N}
+
+                \tkzDefPoint(-0.5,-5.0){P1+}
+                \tkzDefPoint(+0.5,-5.0){P2+}
+
+                \tkzDrawSegment(X,P1)
+                \tkzDrawSegment(N,P2)
+
+                \tkzDrawSegment[->](P1,P1+)
+                \tkzDrawSegment[->](P2,P2+)
+
+                \tkzLabelSegment[above](X,P1){\small 至多选取$m$个}
+                \tkzLabelSegment[above](N,P2){\small 无要求}
+
+                \node at(-4,+0.4){约束集合$X$};
+                \node at(+4,+0.4){普通集合$N$};
+
+                \node at(-4,-0.4){（共$x$个）};
+                \node at(+4,-0.4){（共$n$个）};
+
+                \node at(0,-5.5){选取$p$个元素进行组合};
+            \end{tikzpicture}
+            \caption{排列组合问题\rnum{2}-$03$的示意图}
+        \end{center}
+    \end{figure}\\
+    显然符合约束条件的情况可以列举如下：\\[3mm]
+    从$X$中选取$m-0$个元素，从$N$中选取剩余$q-(m-0)$个元素，情况数为$\Co_{x}^{m-0}\cdot\Co_{n}^{q-(m-0)}$。\\[3mm]
+    从$X$中选取$m-1$个元素，从$N$中选取剩余$q-(m-1)$个元素，情况数为$\Co_{x}^{m-1}\cdot\Co_{n}^{q-(m-1)}$。\\[3mm]
+    从$X$中选取$m-2$个元素，从$N$中选取剩余$q-(m-2)$个元素，情况数为$\Co_{x}^{m-2}\cdot\Co_{n}^{q-(m-2)}$。\\[3mm]
+    直至从$X$中选取的元素数达到下限$0$时终止，即范围为$0\sim m$。\\[3mm]
+    根据加法原理可得总情况数为$C=\sum_{i=0}^{m}\Co_{x}^{\,i}\cdot\Co_{n}^{q-i}$。
+
+
+\newpage
+
+\subsection{球盒问题}
+    球盒问题：现有$n$个（相同/不同）的小球，放入$m$个（相同/不同）的盒子，求总方案数$B$。\\[3mm]
+    球盒问题通常还带有附加条件，最常见的为盒子中至少需要放入一个小球。
+
+\subsubsection{球盒问题$01$}
+    \setcounter{equation}{0}
+    球盒问题$01$背景：将$n$个\textbf{相同的}球放入$m$个\textbf{不同的}盒中，保证盒$m_i$个中至少$x_i$个。\\[3mm]
+    球盒问题$01$公式：
+    \begin{large}
+        \begin{equation*}
+            B=\Co_{n+m-1-\sum x_i}^{m-1}
+        \end{equation*}
+    \end{large}\\
+    球盒问题$01$示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzDefPoint(-4,0){LC}
+                \tkzDefPoint(+4,0){RC}
+
+                \tkzDefPoint(-2,0){LB}
+                \tkzDefPoint(+2,0){RB}
+
+                \tkzDrawSegment[->](LB,RB)
+
+                \foreach \x/\y in{-1/1,+1/1,0/+1,0/-1}
+                {
+                    \tkzDefShiftPoint[LC](\x,\y){B}
+                    \tkzDefShiftPoint[B](0.3,0){BR}
+                    \tkzDrawCircle(B,BR)
+                    \node at(B) {$n_0$};
+                }
+
+                \node at(LC) {$\cdots$};
+                \tkzLabelPoint[below=45pt](LC){\small 共$n$个相同的小球}
+
+                \foreach \x/\y/\n in{-1/1/1,+1/1/2,0/-1/n}
+                {
+                    \tkzDefShiftPoint[RC](\x,\y){C}
+                    \tkzDefShiftPoint[C](-0.7,0){CL}
+                    \tkzDefShiftPoint[C](+0.7,0){CR}
+
+                    \tkzDefShiftPoint[CL](0,0.3){CLU}
+                    \tkzDefShiftPoint[CR](0,0.3){CRU}
+
+                    \tkzDrawSegments(CLU,CL CRU,CR CL,CR)
+
+                    \tkzLabelPoint[above](C){\footnotesize 至少$x_\n$个}
+                    \tkzLabelPoint[below=2pt](C){$m_\n$}
+                }
+
+                \node at(RC) {$\cdots$};
+                \tkzLabelPoint[below=45pt](RC){\small 共$m$个不同的盒子}
+            \end{tikzpicture}
+            \caption{球盒问题$01$的示意图}
+        \end{center}
+    \end{figure}\\
+    对于第$i$个盒子，其至少放入$x_i$个球，我们首先先放入$x_i-1$个球。\\[3mm]
+    此时剩余球的数量$b$可以表达为：
+    \begin{align}
+        &b=n-\sum_{i=1}^{m}x_i-1\\[3mm]
+        &b=n+m-\sum_{i=1}^{m}x_i
+    \end{align}\\
+    随后在$b$个球间的$b-1$个缝隙中，插入$m-1$块板，将球分为$m$组，依次放入对应的盒子。\\[3mm]
+    在插板时，规定两块板不能置于同一缝隙，规定两侧不能插板，因此分出的每组球至少有一个，
+    然而先前的操作使得每个盒子只需一个即可满足要求，因此任意一种插板方式均能满足要求。\\[3mm]
+    因而所求的总方案数就等同于该背景下插板的方案数。\\[3mm]
+    因此代入相关数据可求得$B=\Co_{n+m-1-\sum x_i}^{m-1}$。
+
+\newpage
 
 \subsubsection{斯特林数}
-    第二类斯特林数即$\mathrm{S}_n^m$，表示将$n$个不同元素分入$m$个相同集合的方案数，集合要求非空。\\[3mm]
+    \setcounter{equation}{0}
+    第二类斯特林数即$\St_n^m$，表示将$n$个不同元素分入$m$个相同集合的方案数，集合要求非空。\\[3mm]
     第二类斯特林数的计算公式：
     \begin{large}
         \begin{equation*}
-            \mathrm{S}_n^m=\frac{1}{\mathrm{P}_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n
+            \St_n^m=\frac{1}{\Pe_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n
         \end{equation*}
     \end{large}\\
     接下来我们将证明第二类斯特林数的计算公式。\\[3mm]
@@ -13158,169 +13361,219 @@
     例如$T(0)$代表空集数为$0$时的方案数。\\[3mm]
     例如$T(5)$代表空集数为$5$时的方案数。\\[3mm]
     显然第二类斯特林数可以表示为：
-    \setcounter{equation}{0}
     \begin{align}
-        T(0)=\mathrm{P}_m^m\cdot\mathrm{S}_n^m
+        T(0)=\Pe_m^m\cdot\St_n^m
     \end{align}\\
+    这是因为斯特拉数$\St_n^m$恰好代表空集为$0$时的分配方案数，此处的$\Pe_m^m$是由于集合的编号造成的。\\[9mm]
     考虑空集数$>=1$的情况：
     \begin{align}
-        \mathrm{C}_m^1\cdot(m-1)^n=\mathrm{C}_1^1\cdot T(1)+\mathrm{C}_2^1\cdot T(2)+\mathrm{C}_3^1\cdot T(3)+\cdots+\mathrm{C}_m^1\cdot T(m)=\sum_{h=1}^m\mathrm{C}_h^1\cdot T(h)
+        \Co_m^1\cdot(m-1)^n=\Co_1^1\cdot T(1)+\Co_2^1\cdot T(2)+\Co_3^1\cdot T(3)+\cdots+\Co_m^1\cdot T(m)=\sum_{h=1}^m\Co_h^1\cdot T(h)
     \end{align}\\
-    考虑空集数$>=2$的情况：
-    \begin{align}
-        \mathrm{C}_m^2\cdot(m-2)^n=\mathrm{C}_2^2\cdot T(2)+\mathrm{C}_3^2\cdot T(3)+\mathrm{C}_4^2\cdot T(4)+\cdots+\mathrm{C}_m^2\cdot T(m)=\sum_{h=2}^m\mathrm{C}_h^2\cdot T(h)
-    \end{align}\\
-    之所以在等式右侧有$\mathrm{C}_n^1$或$\mathrm{C}_n^2$等，是因为左侧的计数实际上存在重复。
+    左侧的思路是先从$m$个集合中选出一个作为空集，然后使$n$个元素自由分配至$m-1$个集合。\\[3mm]
+    右侧的思路是依次考虑空集数为$1,2,3,\cdots,m$时的方案数$T(1),T(2),T(3),\cdots,T(m)$并累加。\\[3mm]
+    然而左侧的计数方法实际上是有重复的：\\[3mm]
+    1.当$\Co_m^1$选定$A$作为空集，后续自由分配使得$B,C$\hspace{4.0pt}成为空集。\\[3mm]
+    2.当$\Co_m^1$选定$B$\hspace{4.0pt}作为空集，后续自由分配使得$C,A$成为空集。\\[3mm]
+    3.当$\Co_m^1$选定$C$\hspace{3.5pt}作为空集，后续自由分配使得$A,B$\hspace{3.0pt}成为空集。\\[3mm]
+    因而在空集数为$3$时发生了$3$倍的重复计数，故右侧$T(3)$前要乘倍数$3$即$\Co_3^1$以抵消重复。\\[3mm]
+    因此进一步推广可知，右侧在空集数为$h$时，左侧总是重复计数$\Co_h^1$倍。
 
 \newpage
 
-    对于空集数$\geq 1$的情况，左侧的思路为先选出$1$个作为空集，剩余的自由分配。\\[3mm]
-    对于空集数$\geq 1$的情况，我们不妨以$T(3)$一项为例考虑：\\[3mm]
-    1.当$\mathrm{C}_m^1$选定$A$作为空集，后续分配使得$B,C$成为空集。\\[3mm]
-    2.当$\mathrm{C}_m^1$选定$B$作为空集，后续分配使得$C,A$成为空集。\\[3mm]
-    3.当$\mathrm{C}_m^1$选定$C$作为空集，后续分配使得$A,B$成为空集。\\[3mm]
-    但实际上这三种情况本质上为同一种情况，在左侧被重复记录了$\mathrm{C}_3^1$次，故右侧需乘上$\mathrm{C}_3^1$。\\[6mm]
-    对于空盒数$\geq 2$的情况，左侧的思路为先选出$2$个作为空盒，剩余的自由分配。\\[3mm]
-    对于空集数$\geq 2$的情况，我们不妨以$T(3)$一项为例考虑：\\[3mm]
-    1.当$\mathrm{C}_m^2$选定$A,B$作为空集，后续分配使得$C$成为空集。\\[3mm]
-    2.当$\mathrm{C}_m^2$选定$B,C$作为空集，后续分配使得$A$成为空集。\\[3mm]
-    3.当$\mathrm{C}_m^2$选定$C,A$作为空集，后续分配使得$B$成为空集。\\[4mm]
-    但实际上这三种情况本质上为同一种情况，在左侧被重复记录了$\mathrm{C}_3^2$次，故右侧需乘上$\mathrm{C}_3^2$。\\[6mm]
-    较为普适的，我们可以得出空集数$\geq k$的情况：
+    推广可得空集数$\geq k$时的情况：
     \begin{align}
-        \mathrm{C}_m^k\cdot(m-k)^n=\sum_{h=k}^mC_h^k\cdot T(h)
+        \Co_m^k\cdot(m-k)^n=\sum_{h=k}^mC_h^k\cdot T(h)
     \end{align}\\
-    根据上方得出的结论，我们可以构建一个等式：
+    由此可以构造得到一个恒等式：
     \begin{align}
-        \sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=\sum_{k=0}^m(-1)^k\cdot\sum_{h=k}^m\mathrm{C}_n^k\cdot T(h)
+        \sum_{k=0}^m(-1)^k\cdot\Co_m^k\cdot(m-k)^n=\sum_{k=0}^m(-1)^k\cdot\sum_{h=k}^m\Co_n^k\cdot T(h)
     \end{align}\\
-    接下来将对等式右侧进行累加关系的变换。
-
-\newpage
-
     右侧很显然等于：
     \begin{align}
-        &(-1)^0\cdot\Big[\overbrace{\mathrm{C}_0^0\cdot T(0)+\mathrm{C}_1^0\cdot T(1)+\mathrm{C}_2^0\cdot T(2)+\cdots+\mathrm{C}_m^0\cdot T(m)}^{\text{共}m-0\text{项}}\Big]+\\[3mm]
-        &(-1)^1\cdot\Big[\overbrace{\mathrm{C}_1^1\cdot T(1)+\mathrm{C}_2^1\cdot T(2)+\mathrm{C}_3^1\cdot T(3)+\cdots+\mathrm{C}_m^1\cdot T(m)}^{\text{共}m-1\text{项}}\Big]+\\[3mm]
-        &(-1)^2\cdot\Big[\overbrace{\mathrm{C}_2^2\cdot T(2)+\mathrm{C}_3^2\cdot T(3)+\mathrm{C}_4^2\cdot T(4)+\cdots+\mathrm{C}_m^2\cdot T(m)}^{\text{共}m-2\text{项}}\Big]+\\[3mm]
-        &(-1)^3\cdot\Big[\overbrace{\mathrm{C}_3^3\cdot T(3)+\mathrm{C}_4^3\cdot T(4)+\mathrm{C}_5^3\cdot T(5)+\cdots+\mathrm{C}_m^3\cdot T(m)}^{\text{共}m-3\text{项}}\Big]+\\[3mm]
-        &\vdots\\[3mm]
-        &(-1)^m\cdot\Big[\mathrm{C}_m^m\cdot T(m)\Big]
+        &(-1)^0\cdot\Big[\overbrace{\Co_0^0\cdot T(0)+\Co_1^0\cdot T(1)+\Co_2^0\cdot T(2)+\cdots+\Co_m^0\cdot T(m)}^{\text{共}m-0\text{项}}\Big]+\\[2mm]
+        &(-1)^1\cdot\Big[\overbrace{\Co_1^1\cdot T(1)+\Co_2^1\cdot T(2)+\Co_3^1\cdot T(3)+\cdots+\Co_m^1\cdot T(m)}^{\text{共}m-1\text{项}}\Big]+\\[2mm]
+        &(-1)^2\cdot\Big[\overbrace{\Co_2^2\cdot T(2)+\Co_3^2\cdot T(3)+\Co_4^2\cdot T(4)+\cdots+\Co_m^2\cdot T(m)}^{\text{共}m-2\text{项}}\Big]+\\[2mm]
+        &(-1)^3\cdot\Big[\overbrace{\Co_3^3\cdot T(3)+\Co_4^3\cdot T(4)+\Co_5^3\cdot T(5)+\cdots+\Co_m^3\cdot T(m)}^{\text{共}m-3\text{项}}\Big]+\\[1mm]
+        &\vdots\\[1mm]
+        &(-1)^m\cdot\Big[\Co_m^m\cdot T(m)\Big]
     \end{align}\\
     右侧可以变形为：
     \begin{align}
-        &T(0)\cdot\Big[(-1)^0\cdot \mathrm{C}_0^0\Big]+\\[3mm]
-        &T(1)\cdot\Big[(-1)^0\cdot \mathrm{C}_1^0+(-1)^1\cdot \mathrm{C}_1^1\Big]+\\[3mm]
-        &T(2)\cdot\Big[(-1)^0\cdot \mathrm{C}_2^0+(-1)^1\cdot \mathrm{C}_2^1+(-1)^2\cdot \mathrm{C}_2^2\Big]+\\[3mm]
-        &T(2)\cdot\Big[(-1)^0\cdot \mathrm{C}_3^0+(-1)^1\cdot \mathrm{C}_3^1+(-1)^2\cdot \mathrm{C}_3^2+(-1)^3\cdot \mathrm{C}_3^3\Big]+\\[3mm]
-        &\vdots\\[3mm]
-         &T(m)\cdot\Big[(-1)^0\cdot \mathrm{C}_m^0+(-1)^1\cdot \mathrm{C}_m^1+(-1)^2\cdot \mathrm{C}_m^2+\cdots+(-1)^m\cdot \mathrm{C}_m^m\Big]
+        &T(0)\cdot\Big[(-1)^0\cdot \Co_0^0\Big]+\\[2mm]
+        &T(1)\cdot\Big[(-1)^0\cdot \Co_1^0+(-1)^1\cdot \Co_1^1\Big]+\\[2mm]
+        &T(2)\cdot\Big[(-1)^0\cdot \Co_2^0+(-1)^1\cdot \Co_2^1+(-1)^2\cdot \Co_2^2\Big]+\\[2mm]
+        &T(2)\cdot\Big[(-1)^0\cdot \Co_3^0+(-1)^1\cdot \Co_3^1+(-1)^2\cdot \Co_3^2+(-1)^3\cdot \Co_3^3\Big]+\\[1mm]
+        &\vdots\\[1mm]
+        &T(m)\cdot\Big[(-1)^0\cdot \Co_m^0+(-1)^1\cdot \Co_m^1+(-1)^2\cdot \Co_m^2+\cdots+(-1)^m\cdot \Co_m^m\Big]
     \end{align}\\
     接下来将用累加符号表示变形后的右侧式子。
 
 \newpage
 
-    根据上述变换的结论，我们可以得到变形后的等式：
+    包含$T(h)$的行后的括号可以写为：
     \begin{align}
-        \sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=\sum_{h=0}^mT(h)\cdot\sum_{k=0}^h(-1)^k\cdot\mathrm{C}_h^k
+        \sum_{k=0}^{h}(-1)^k\cdot\Co_h^k
     \end{align}\\
-    然而根据二项式定理的结论：
+    同时$T(h)$中$h$的取值在$0\sim m$间：
     \begin{align}
-        \sum_{k=0}^h(-1)^k\cdot\mathrm{C}_h^k=0~~~~~~~~(h\geq 1)
+        \sum_{h=0}^mT(h)\cdot\sum_{k=0}^h(-1)^k\cdot\Co_h^k
     \end{align}\\
-    所以等式可以进一步变形为：
+    因此原恒等式可以变形为：
     \begin{align}
-        &\sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=T(0)\\[3mm]
-        &\sum_{k=0}^m(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n=\mathrm{P}_m^m\cdot\mathrm{S}_n^m
+        &\sum_{k=0}^m(-1)^k\cdot\Co_m^k\cdot(m-k)^n=\sum_{k=0}^m(-1)^k\cdot\sum_{h=k}^m\Co_n^k\cdot T(h)\\[8mm]
+        &\sum_{k=0}^m(-1)^k\cdot\Co_m^k\cdot(m-k)^n=\sum_{h=0}^mT(h)\cdot\sum_{k=0}^h(-1)^k\cdot\Co_h^k
+    \end{align}\\[2mm]
+    然而由二项式定理的结论：
+    \begin{align}
+        &~~~~\sum_{k=0}^h(-1)^k\cdot\Co_h^k=0~~~~~~~~(h\geq 1)\\[8mm]
+        &~~~~\sum_{k=0}^m(-1)^k\cdot\Co_m^k\cdot(m-k)^n=T(0)\cdot(-1)^0\cdot\Co_0^0\\[8mm]
+        &~~~~\sum_{k=0}^m(-1)^k\cdot\Co_m^k\cdot(m-k)^n=T(0)\\[8mm]
+        &~~~~\sum_{k=0}^m(-1)^k\cdot\Co_m^k\cdot(m-k)^n=\Pe_m^m\cdot\St_n^m
+    \end{align}\\[2mm]
+    变形可得斯特林数公式：
+    \begin{align}
+        \St_n^m=\frac{1}{\Pe_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n
     \end{align}\\
-    移项整理，即可得到第二类斯特林数的计算公式。\\
-
-\subsubsection{排列组合问题\rnum{3}-$01$}
-    排列组合问题\rnum{3}-$01$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{相同的}盒中，保证至少$1$个。\\[3mm]
-    排列组合问题\rnum{3}-$01$公式：
-    \begin{large}
-        \begin{equation*}
-            P=\frac{1}{\mathrm{P}_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n
-        \end{equation*}
-    \end{large}\\
-    这一点可以直接由第二类斯特林数的计算公式得到。\\
-
-\subsubsection{排列组合问题\rnum{3}-$02$}
-    排列组合问题\rnum{3}-$02$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{不同的}盒中，保证至少$1$个。\\[3mm]
-    排列组合问题\rnum{3}-$02$公式：
-    \begin{large}
-        \begin{equation*}
-            P=\sum_{k=0}^{m}(-1)^k\cdot\mathrm{C}_m^k\cdot(m-k)^n    
-        \end{equation*}
-    \end{large}\\
-    这一点可以直接由第二类斯特林数的计算公式得到。
+    由此证明了第二类斯特林数的计算公式。
 
 \newpage
 
-\subsubsection{排列组合问题\rnum{3}-$03$}
-    排列组合问题\rnum{3}-$03$背景：将$n$个\textbf{相同的}球放入$m$个\textbf{不同的}盒中，保证盒$m_i$个中至少$x_i$个。\\[3mm]
-    排列组合问题\rnum{3}-$03$背景：
+\subsubsection{球盒问题$02$}
+    \setcounter{equation}{0}
+    球盒问题$02$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{相同的}盒中，保证至少$1$个。\\[3mm]
+    球盒问题$02$公式：
     \begin{large}
         \begin{equation*}
-            P=\mathrm{C}_{n-\sum_{i=1}^m[x_i-1]-1}^{m-1}
+            B=\frac{1}{\Pe_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n
         \end{equation*}
     \end{large}\\
-    可以以插板的思路解决该问题：\vspace{3pt}
+    球盒问题$02$示意图：
     \begin{figure}[h]
         \begin{center}
-            \begin{tikzpicture}[>=stealth,scale=1.0]
-                \draw (-3,0) circle(0.2);
-                \draw (-2,0) circle(0.2);
-                \draw (-1,0) circle(0.2);
-                \draw (0,0) circle(0.2);
-                \draw (+1,0) circle(0.2);
-                \draw (+2,0) circle(0.2);
-                \draw (+3,0) circle(0.2);
+            \begin{tikzpicture}
+                \tkzDefPoint(-4,0){LC}
+                \tkzDefPoint(+4,0){RC}
 
-                \draw[ultra thick] (-3.5,+0.4)--(-3.5,-0.4);
-                \draw[ultra thick] (-1.5,+0.4)--(-1.5,-0.4);
-                \draw[ultra thick] (+2.5,+0.4)--(+2.5,-0.4);
-                \draw[ultra thick] (+3.5,+0.4)--(+3.5,-0.4);
+                \tkzDefPoint(-2,0){LB}
+                \tkzDefPoint(+2,0){RB}
 
-                \node at(-2.5,-0.6){$m_1$};
-                \node at(+0.5,-0.6){$m_2$};
-                \node at(+3.0,-0.6){$m_3$};
+                \tkzDrawSegment[->](LB,RB)
 
-                \draw[very thick] (4.3,-0.3)--(5.7,-0.3);
-                \draw[very thick] (6.3,-0.3)--(7.7,-0.3);
-                \draw[very thick] (8.3,-0.3)--(9.7,-0.3);
+                \foreach \x/\y/\n in{-1/1/1,+1/1/3,0/+1/2,0/-1/n}
+                {
+                    \tkzDefShiftPoint[LC](\x,\y){B}
+                    \tkzDefShiftPoint[B](0.3,0){BR}
+                    \tkzDrawCircle(B,BR)
+                    \node at(B) {$n_\n$};
+                }
 
-                \draw[very thick] (4.3,-0.3)--(4.3,+0.2);
-                \draw[very thick] (5.7,-0.3)--(5.7,+0.2);
-                \draw[very thick] (6.3,-0.3)--(6.3,+0.2);
-                \draw[very thick] (7.7,-0.3)--(7.7,+0.2);
-                \draw[very thick] (8.3,-0.3)--(8.3,+0.2);
-                \draw[very thick] (9.7,-0.3)--(9.7,+0.2);
+                \node at(LC) {$\cdots$};
+                \tkzLabelPoint[below=45pt](LC){\small 共$n$个不同的小球}
 
-                \draw (5.3,0) circle(0.2);
-                \draw (7.3,0) circle(0.2);
-                \draw (9.3,0) circle(0.2);
+                \foreach \x/\y in{-1/1,+1/1,0/-1}
+                {
+                    \tkzDefShiftPoint[RC](\x,\y){C}
+                    \tkzDefShiftPoint[C](-0.7,0){CL}
+                    \tkzDefShiftPoint[C](+0.7,0){CR}
 
-                \node at(4.8,0){$1\times$};
-                \node at(6.8,0){$2\times$};
-                \node at(8.8,0){$3\times$};
+                    \tkzDefShiftPoint[CL](0,0.3){CLU}
+                    \tkzDefShiftPoint[CR](0,0.3){CRU}
 
-                \node at(5,-0.6){$x_1=2$};
-                \node at(7,-0.6){$x_2=3$};
-                \node at(9,-0.6){$x_3=4$};
+                    \tkzDrawSegments(CLU,CL CRU,CR CL,CR)
+
+                    \tkzLabelPoint[above](C){\footnotesize 至少$1$个}
+                    \tkzLabelPoint[below=2pt](C){$m_0$}
+                }
+
+                \node at(RC) {$\cdots$};
+                \tkzLabelPoint[below=45pt](RC){\small 共$m$个相同的盒子}
             \end{tikzpicture}
-            \caption{排列组合问题\rnum{3}-$03$的示意图}
+            \caption{球盒问题$02$的示意图}
         \end{center}
     \end{figure}\\
-    首先对于盒$m_i$放入$x_i-1$个球：\\[3mm]
-    第$1$个盒子要求至少$2$个，则放入$1$个小球。\\[3mm]
-    第$2$个盒子要求至少$3$个，则放入$2$个小球。\\[3mm]
-    第$3$个盒子要求至少$4$个，则放入$3$个小球。\\[5mm]
-    然后在剩余小球除去两侧的共$n-\sum_{i=1}^{m}[x_i-1]-1$个缝隙中任意插入$m-1$块板。\\[3mm]
-    在这个例子中共插入$2$块板，图中两侧绘制的表示边缘，并不是插入的板。\\[3mm]
-    在这个例子中共形成了三个空，其中的球依次归属盒子$m_1,m_2,m_3$。\\[3mm]
-    由于每个盒子中通过预处理只差一个，而板不能置于两侧，且两块板不能放在一个缝隙。\\[3mm]
-    因此每个空中至少能有一个球，分入对应的盒子中则一定可以使其满足预定要求。
+    这一点可以直接由第二类斯特林数的计算公式得到：\\[3mm]
+    1.将斯特林数中的元素解读为小球。\\[3mm]
+    2.将斯特林数中的集合解读为盒子。\\[3mm]
+    3.由于该问题下盒子是相同的，因此对应的集合也是相同的。\\[8mm]
+    根据第二类斯特林数公式：
+    \begin{align}
+        \St_n^m=\frac{1}{\Pe_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n
+    \end{align}\\
+    由于此时集合应是相同的：
+    \begin{align}
+        &B=\St_n^m\\[3mm]
+        &B=\frac{1}{\Pe_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n~~
+    \end{align}\\
+    由此证明了该球盒问题的计算公式。
+
+\newpage
+
+\subsubsection{球盒问题$03$}
+    球盒问题$03$背景：将$n$个\textbf{不同的}球放入$m$个\textbf{不同的}盒中，保证至少$1$个。\\[3mm]
+    球盒问题$03$公式：
+    \begin{large}
+        \begin{equation*}
+            B=\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n
+        \end{equation*}
+    \end{large}\\
+    球盒问题$03$示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}
+                \tkzDefPoint(-4,0){LC}
+                \tkzDefPoint(+4,0){RC}
+
+                \tkzDefPoint(-2,0){LB}
+                \tkzDefPoint(+2,0){RB}
+
+                \tkzDrawSegment[->](LB,RB)
+
+                \foreach \x/\y/\n in{-1/1/1,+1/1/3,0/+1/2,0/-1/n}
+                {
+                    \tkzDefShiftPoint[LC](\x,\y){B}
+                    \tkzDefShiftPoint[B](0.3,0){BR}
+                    \tkzDrawCircle(B,BR)
+                    \node at(B) {$n_\n$};
+                }
+
+                \node at(LC) {$\cdots$};
+                \tkzLabelPoint[below=45pt](LC){\small 共$n$个不同的小球}
+
+                \foreach \x/\y/\n in{-1/1/1,+1/1/2,0/-1/n}
+                {
+                    \tkzDefShiftPoint[RC](\x,\y){C}
+                    \tkzDefShiftPoint[C](-0.7,0){CL}
+                    \tkzDefShiftPoint[C](+0.7,0){CR}
+
+                    \tkzDefShiftPoint[CL](0,0.3){CLU}
+                    \tkzDefShiftPoint[CR](0,0.3){CRU}
+
+                    \tkzDrawSegments(CLU,CL CRU,CR CL,CR)
+
+                    \tkzLabelPoint[above](C){\footnotesize 至少$1$个}
+                    \tkzLabelPoint[below=2pt](C){$m_\n$}
+                }
+
+                \node at(RC) {$\cdots$};
+                \tkzLabelPoint[below=45pt](RC){\small 共$m$个不同的盒子}
+            \end{tikzpicture}
+            \caption{球盒问题$03$的示意图}
+        \end{center}
+    \end{figure}\\
+    这一点可以直接由第二类斯特林数的计算公式得到：\\[3mm]
+    1.将斯特林数中的元素解读为小球。\\[3mm]
+    2.将斯特林数中的集合解读为盒子。\\[3mm]
+    3.由于该问题下盒子是不同的，因此对应的集合也是不同的。\\[8mm]
+    根据第二类斯特林数公式：
+    \begin{align}
+        \St_n^m=\frac{1}{\Pe_m^m}\cdot\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n
+    \end{align}\\
+    由于此时集合应是不同的：
+    \begin{align}
+        &B=\Pe_m^m\cdots\St_n^m\\[3mm]
+        &B=\sum_{k=0}^{m}(-1)^k\cdot\Co_m^k\cdot(m-k)^n~~\hphantom{\frac{1}{\Pe_n^m}\cdot}
+    \end{align}\\
+    由此证明了该球盒问题的计算公式。
 
 \newpage
 
