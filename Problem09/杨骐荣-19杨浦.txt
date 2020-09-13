@@ -1,0 +1,67 @@
+\begin{array}{c}
+\\ 已知P是y轴左侧（不含y轴）一点，抛物线C：y^2=4x 上存在不同的两点A、B，满足PA、PB的中点均在抛物线上
+\\ (1) 设AB中点为M，且P（x_P,y_P）,M(x_M,y_M), 证明： y_P=y_M
+\\ (2) 若P为曲线x^2+\frac{y^2}{4}=1 (x<0)上的动点，求\Delta P A B的最小值
+\\ 法一：(1) 设PA，PB中点为C，D 设A（x_1, y_1）, B（x_2, y_2）l_AB: x=ty+m,
+\\ t不存在时，舍
+\\ t存在
+\\\left\{\begin{matrix} 
+  x=ty+m \\  
+  y^2=4x
+\end{matrix}\right. \Longrightarrow \ y^2-4ty-4m=0\\\Longrightarrow
+
+  \left\{\begin{matrix} 
+  \Delta =16t^2+16m>0 \\
+  y_1+y_2=4t\\  
+  y_1y_2=-4m
+\end{matrix}\right.    
+\\\Longrightarrow
+M(2t^2+m,2t)
+\\\because C(\frac{x_1+x_p}{2} ,\frac{y_1+y_p}{2} ), D(\frac{x_2+x_p}{2} ,\frac{y_2+y_p}{2} )
+\\\therefore   \left\{\begin{matrix} 
+(\frac{y_1+y_p}{2})^2=4\frac{x_1+x_p}{2} ①
+\\(\frac{y_2+y_p}{2})^2=4\frac{x_2+x_p}{2} ②
+\end{matrix}\right. 
+\\①-② 化简得（y_1-y_2)(y_1+y_2+2y_P)=8t(y_1-y_2)
+\\\because y_1 \ne y_2
+\\\therefore y_1+y_2+2y_P=8t
+\\ y_p=2t
+\\\therefore y_p=2t
+\\
+\\(2)将y_p=2t 代入椭圆方程，得x_p=-\sqrt[]{1-t^2} t\in [-1,1]
+\\由（1）中 ①+②化简得x_p=\frac{t^2-m}{2} 
+\\m=2\sqrt[]{ 1-t^2} +t
+\\S_\triangle P A B=\frac{1}{2} |PM||y_A-y_B|\\=\frac{1}{2} (\sqrt[]{1-t^2}+2t^2+m)\sqrt[]{16t^2+16m} 
+\\=6\sqrt[]{2} (\sqrt[]{ 1-t^2} +t^2)\sqrt[]{\sqrt[]{ 1-t^2} +t^2} 
+\\n=\sqrt[]{ 1-t^2} +t^2 p=\sqrt[]{ 1-t^2}, p\in [0,1]
+\\n=-p^2+p+1 \in [1,\frac{5}{4} ]
+\\\therefore S=6\sqrt[]{2} \sqrt[]{n^3} \in [6\sqrt[]{2},\frac{15}{4} \sqrt[]{10} 
+\\ \therefore \triangle P A B  面积的最小值为  6 \sqrt{2}
+\\
+\\法二（1）P\left(x_{P}, y_{P}\right), \quad  设  A\left(\frac{y_{1}^{2}}{4}, y_{1}\right), \quad B\left(\frac{y_{2}^{2}}{4}, y_{2}\right) 
+\\AB中点为M的坐标为  M\left(x_{M}, y_{M}\right),  则  M\left(\frac{y_{1}^{2}+y_{2}^{2}}{8}, \frac{y_{1}+y_{2}}{2}\right) 
+\\抛物线C:  \quad y^{2}=4 x  上存在不同的两点A，B满足 PA, PB的中点均在C上，
+\\可得  \left(\frac{y_{P}+y_{1}}{2}\right)^{2}=4 \cdot \frac{x_{P}+\frac{y_{1}^{2}}{4}}{2} 
+ \\\left(\frac{y_{P}+y_{2}}{2}\right)^{2}=4 \cdot \frac{x_{P}+\frac{y_{2}^{2}}{4}}{2} 
+\\化简可得  y_{1}, \quad y_{2}  为关于y的方程  y^{2}-2 y_{P} y+8 x_{P}-y_{P}^{2}=0  的两根
+\\可得  y_{1}+y_{2}=2 y_{P}, \quad y_{1} y_{2}=8 x_{P}-y_{P}^{2} 
+\\可得  y_{P}=\frac{y_{1}+y_{2}}{2}=y_{M} 
+\\
+\\(2)若P是曲线  x^{2}+\frac{y^{2}}{4}=1 \quad(x<0) \quad  上的动点
+\\可得  x_{P}^{2}+\frac{y_{P}^{2}}{4}=1, \quad-1 \leq x_{P}<0, \quad-2<y_{P}<2 
+\\由上一问可得  y_{1}+y_{2}=2 y_{P}, \quad y_{1} y_{2}=8 x_{P}-y_{P}^{2} 
+\\由PM垂直于y轴，可得  \triangle P A B  面积为
+\\ S=\frac{1}{2}|P M| \cdot\left|y_{1}-y_{2}\right| 
+ \\=\frac{1}{2}\left(\frac{y_{1}^{2}+y_{2}^{2}}{8}-x_{P}\right) \cdot \sqrt{\left(y_{1}+y_{2}\right)^{2}-4 y_{1} y_{2}} 
+\\ =\left[\frac{1}{16} \cdot\left(4 y_{P}^{2}-16 x_{P}+2 y_{P}^{2}\right)-\frac{1}{2} x_{P}\right] \cdot \sqrt{4 y_{P}^{2}-32 x_{P}+4 y_{P}^{2}} 
+ \\=\frac{3 \sqrt{2}}{4}\left(y_{P}^{2}-4 x_{P}\right) \sqrt{y_{P}^{2}-4 x_{P}} 
+\\令  t=\sqrt{y_{P}^{2}-4 x_{P}}=\sqrt{4-4 x_{P}^{2}-4 x_{P}}=\sqrt{-4\left(x_{P}+\frac{1}{2}\right)^{2}+5} 
+\\得  x_{P}=-\frac{1}{2}  时  , \quad  t取得最大值  \sqrt{5} 
+
+\\ x_{P}=-1  时  , \quad  t取得最小值2
+\\所以  2 \leq t \leq \sqrt{5} 
+\\ 因为S=\frac{3 \sqrt{2} t^{3}}{4}  在  2 \leq t \leq \sqrt{5 }上单调递增, 
+ \\可得  S \in\left[6 \sqrt{2}, \frac{15 \sqrt{10}}{4}\right] 
+ \therefore \triangle P A B  面积的最小值为  6 \sqrt{2}
+
+\end{array}

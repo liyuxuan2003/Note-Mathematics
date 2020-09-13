@@ -1,0 +1,60 @@
+% !TEX program = xelatex
+\documentclass[UTF8]{ctexart}
+
+\RequirePackage{inputenc}
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+\setmainfont{Times New Roman}
+
+\setCJKmainfont{等线}
+\setCJKsansfont{等线}
+\setCJKmonofont{等线}
+
+\let\nvec\vec
+\def\vec#1{\nvec{\vphantom b\smash{#1}}}
+
+\RequirePackage{geometry}
+\geometry
+{
+    left=1.25in,
+    right=1.25in,
+    top=1in,
+    bottom=1in
+}
+\usepackage{amssymb}
+\usepackage{cases}
+\begin{document}
+    充分性：\\[3mm]
+    $\because x = 2\\[3mm]
+    \therefore PQ = 4 MP = NQ = 2\\[3mm]
+    \therefore |MP| = |QN| = \dfrac{1}{2}|PQ|\\[3mm]
+    $
+    必要性：\\[3mm]
+    $
+    \because |MP| = |QN| = \dfrac{1}{2}|PQ|\\[3mm]
+    \therefore |MN| = 2|PQ| ,
+    $
+    P、Q中点即M、N中点\\[3mm]
+    令直线x = ty + m\\[3mm]
+    \begin{numcases}
+        l & $x = ty + m $\\
+        & $x^2 + y^2 -4x =0$
+        
+    \end{numcases}
+    $
+    y_1 + y_2 = 8t\\[3mm]
+    y_{mid} = 4t\\[3mm]
+    1^\circ t = 0 \rightarrow x=2 \\[3mm]
+    2^\circ t \ne , 2-m = 4t^2 + 4 \\[3mm]
+    |MN| = \sqrt{1+t^2} \cdot \dfrac{\sqrt{\Delta}}{|A|} = \sqrt{1+t^2}\cdot \sqrt{32\left(2t^2+m\right)}\\[3mm]
+    |PQ| = 2\sqrt{4-\dfrac{\left(2-m\right)^2}{t^2}+1} < 0 , 
+    $
+    舍\\[3mm]
+    $\therefore$不存在\\[3mm]
+    $\therefore$得证
+
+\end{document}
