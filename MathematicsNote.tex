@@ -3752,7 +3752,7 @@
         \begin{center}
             \subfigure[偶函数]
             {
-                \begin{tikzpicture}[scale=0.8]
+                \begin{tikzpicture}[scale=0.75]
                     \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
                     \tkzClip
     
@@ -3788,7 +3788,7 @@
             }\qquad
             \subfigure[奇函数]
             {
-                \begin{tikzpicture}[scale=0.8]
+                \begin{tikzpicture}[scale=0.75]
                     \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
                     \tkzClip
     
@@ -3825,234 +3825,11 @@
             \caption{偶函数和奇函数}
         \end{center}
     \end{figure}\\
+    证明函数的奇偶性前，需要首先保证定义域$D$关于$0$对称。\\[3mm]
     由于$+f(-x)$代表$f(x)$关于$y$轴的对称函数，而偶函数中两者相等，故偶函数关于$y$轴对称。\\[3mm]
     由于$-f(-x)$代表$f(x)$关于原点的对称函数，而奇函数中两者相等，故奇函数关于原点对称。\\[3mm]
-    证明函数的奇偶性前，需要首先保证定义域$D$关于$0$对称。\\[3mm]
-    这样才能确保奇函数和偶函数的定义中，任取$x\in D$时总有$-x\in D$成立。
-
-\newpage
-
     若一个函数既不满足偶函数的定义又不满足奇函数的定义，则称该函数的奇偶性为非奇非偶。\\[3mm]
-    若一个函数既能满足偶函数的定义又能满足奇函数的定义，则称该函数的奇偶性为既奇又偶。\\[3mm]    
-    函数$f(x)$不是偶函数的充要条件：
-    \begin{large}
-        \begin{align*}
-            &\exists~x\in D~~~~f(x)-f(-x)\neq 0\\[3mm]
-            &\exists~x\in D~~~~f(x)\neq+f(-x)
-        \end{align*}
-    \end{large}\\
-    函数$f(x)$不是奇函数的充要条件：
-    \begin{large}
-        \begin{align*}
-            &\exists~x\in D~~~~f(x)+f(-x)\neq 0\\[3mm]
-            &\exists~x\in D~~~~f(x)\neq-f(-x)
-        \end{align*}
-    \end{large}\\
-    可以证明，既奇又偶的函数的函数解析式只能是$f(x)=0$。\vspace{5pt}
-
-\subsubsection{奇函数经过原点的情况}
-    考虑以下示意图：
-    \begin{figure}[h]
-        \begin{center}
-            \subfigure[奇函数经过原点的情况]
-            {
-                \begin{tikzpicture}[scale=0.65]
-                    \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
-                    \tkzClip
-    
-                    \tkzDefPoint(0,0){O}
-    
-                    \tkzDefShiftPoint[O](-4,0){X1}
-                    \tkzDefShiftPoint[O](+4,0){X2}
-    
-                    \tkzDefShiftPoint[O](0,-4){Y1}
-                    \tkzDefShiftPoint[O](0,+4){Y2}
-    
-                    \tkzDrawSegment[->](X1,X2)
-                    \tkzDrawSegment[->](Y1,Y2)
-    
-                    \tkzLabelPoint[above](X2){$x$}
-                    \tkzLabelPoint[right](Y2){$y$}
-    
-                    \draw[smooth,thick,samples=100,domain=-3.5:3.5] plot(\x,{\x^0.333});
-
-                    \tkzDrawPoints[fill=white](O)
-                \end{tikzpicture}
-            }\qquad\quad
-            \subfigure[奇函数不过原点的情况]
-            {
-                \begin{tikzpicture}[scale=0.65]
-                    \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
-                    \tkzClip
-    
-                    \tkzDefPoint(0,0){O}
-    
-                    \tkzDefShiftPoint[O](-4,0){X1}
-                    \tkzDefShiftPoint[O](+4,0){X2}
-    
-                    \tkzDefShiftPoint[O](0,-4){Y1}
-                    \tkzDefShiftPoint[O](0,+4){Y2}
-    
-                    \tkzDrawSegment[->](X1,X2)
-                    \tkzDrawSegment[->](Y1,Y2)
-    
-                    \tkzLabelPoint[above](X2){$x$}
-                    \tkzLabelPoint[right](Y2){$y$}
-    
-                    \draw[smooth,thick,samples=100,domain=-3.5:-0.286] plot(\x,{1/\x});
-                    \draw[smooth,thick,samples=100,domain=+0.286:+3.5] plot(\x,{1/\x});
-    
-                    \tkzDrawPoints[fill=white](O)
-                \end{tikzpicture}
-            }
-            \caption{奇函数过原点的情况}
-        \end{center}
-    \end{figure}\\
-    若奇函数在$x=0$处有定义：
-    \begin{align}
-        f(0)=-f(0)~~~~\Longrightarrow~~~~f(0)=0
-    \end{align}\\
-    故奇函数若在$x=0$处有定义，则奇函数在$x=0$处函数值为零，即奇函数一定过原点。
-
-\newpage
-
-\subsubsection{函数的轴对称定理}
-    \setcounter{equation}{0}
-    函数的轴对称定理：
-    \begin{large}
-        \begin{equation*}
-            f(a+x)-f(b-x)=0
-        \end{equation*}
-    \end{large}\\
-    函数满足上述定理的表述时，其关于直线$x=\dfrac{a+b}{2}$对称。\\[3mm]
-    函数的轴对称定理可以证明如下：
-    \begin{align}
-        &f(a+x)-f(b-x)=0\\[2mm]
-        &f(x)-f(b-x+a)=0\\[2mm]
-        &f(x)-f(b+a-x)=0\\[2mm]
-        &f(x)=f(b+a-x)
-    \end{align}\\
-    根据函数变换的理论可知，函数$f(b+a-x)$与函数$f(x)$关于直线$x=\dfrac{a+b}{2}$对称。
-
-\subsubsection{函数的轴对称推论}
-    \setcounter{equation}{0}
-    函数的轴对称推论$1$：
-    \begin{large}
-        \begin{equation*}
-            f(a+x)-f(a-x)=0
-        \end{equation*}
-    \end{large}\\
-    函数的轴对称推论$2$：
-    \begin{large}
-        \begin{equation*}
-            f(x)-f(2a-x)=0
-        \end{equation*}
-    \end{large}\\
-    函数满足上述推论$1$的表述时，其关于直线$x=a$对称。\\[3mm]
-    函数满足上述推论$2$的表述时，其关于直线$x=a$对称。\\[3mm]
-    函数的轴对称推论$1$可以视为函数的轴对称定理在$b=a$时的特殊情况，此时直线$x=a$。\\[3mm]
-    函数的轴对称推论$2$实际与$1$完全等价：\vspace{1pt}
-    \begin{align}
-        &f(a+x)-f(a-x)=0~~~~~~\big[\text{令}~x=x-a\big]\\[2mm]
-        &f(a+(x-a))-f(a-(x-a))=0\\[2mm]
-        &f(a+x-a)-f(a-x+a)=0\\[2mm]
-        &f(x)-f(2a-x)=0
-    \end{align}\\
-    由于已经证明函数的轴对称推论$1$成立，因此函数的轴对称推论$2$也成立。
-
-\newpage
-
-\subsubsection{函数的点对称定理}
-    \setcounter{equation}{0}
-    函数的点对称定理：
-    \begin{large}
-        \begin{equation*}
-            f(a+x)+f(b-x)=0
-        \end{equation*}
-    \end{large}\\
-    函数满足上述定理的表述时，其关于点$\left(\dfrac{a+b}{2}~,~0\right)$对称。\\[3mm]
-    函数的轴对称定理可以证明如下：
-    \begin{align}
-        &f(a+x)+f(b-x)=0\\[2mm]
-        &f(x)+f(b-x+a)=0\\[2mm]
-        &f(x)+f(b+a-x)=0\\[2mm]
-        &f(x)=-f(b+a-x)
-    \end{align}\\
-    根据函数变换的理论可知，函数$-f(b+a-x)$与函数$f(x)$关于点$\left(\dfrac{a+b}{2}~,~0\right)$对称。
-
-\subsubsection{函数的点对称推论}
-    \setcounter{equation}{0}
-    函数的点对称推论$1$：
-    \begin{large}
-        \begin{equation*}
-            f(a+x)+f(a-x)=0
-        \end{equation*}
-    \end{large}\\
-    函数的点对称推论$2$：
-    \begin{large}
-        \begin{equation*}
-            f(x)+f(2a-x)=0
-        \end{equation*}
-    \end{large}\\
-    函数满足上述推论$1$的表述时，其关于点$(a,0)$对称。\\[3mm]
-    函数满足上述推论$2$的表述时，其关于点$(a,0)$对称。\\[3mm]
-    函数的点对称推论$1$可以视为函数的轴对称定理在$b=a$时的特殊情况，此时直线$(a,0)$。\\[3mm]
-    函数的点对称推论$2$实际与$1$完全等价：\vspace{1pt}
-    \begin{align}
-        &f(a+x)+f(a-x)=0~~~~~~\big[\text{令}~x=x-a\big]\\[2mm]
-        &f(a+(x-a))+f(a-(x-a))=0\\[2mm]
-        &f(a+x-a)+f(a-x+a)=0\\[2mm]
-        &f(x)+f(2a-x)=0
-    \end{align}\\
-    由于已经证明函数的点对称推论$1$成立，因此函数的点对称推论$2$也成立。
-
-\newpage
-
-\subsubsection{函数的点对称的一般形式}
-    \setcounter{equation}{0}
-    函数的点对称的一般形式：
-    \begin{large}
-        \begin{equation*}
-            f(a+x)+f(b-x)=2c
-        \end{equation*}
-    \end{large}\\
-    函数满足上述一般形式的表述时，其关于点$\left(\dfrac{a+b}{2}~,~c\right)$点对称。\\[3mm]
-    函数的点对称的一般形式可以证明如下：
-    \begin{align}
-        &f(a+x)+f(b-x)=2c\\[2mm]
-        &f(x)+f(b-x+a)=2c\\[2mm]
-        &f(x)+f(b+a-x)=2c\\[2mm]
-        &f(x)=2c-f(b+a-x)
-    \end{align}\\
-    根据函数变换的理论可知，函数$2c-f(b+a-x)$与函数$f(x)$关于点$\left(\dfrac{a+b}{2}~,~c\right)$对称。\vspace{5pt}
-
-\subsubsection{偶函数的构造}
-    \setcounter{equation}{0}
-    偶函数的构造函数：
-    \begin{large}
-        \begin{equation*}
-            E(x)=\frac{f(x)+f(-x)}{2}
-        \end{equation*}
-    \end{large}\\
-    偶函数的构造证明：
-    \begin{align}
-        &E(x)-E(-x)=\frac{f(x)+f(-x)}{2}-\frac{f(-x)+f(x)}{2}=0
-    \end{align}\\
-    由此证明了可以通过任意定义域关于$0$对称的函数$f(x)$构造偶函数$O(x)$。
-
-\subsubsection{奇函数的构造}
-    \setcounter{equation}{0}
-    奇函数的构造函数：
-    \begin{large}
-        \begin{equation*}
-            O(x)=\frac{f(x)-f(-x)}{2}
-        \end{equation*}
-    \end{large}\\
-    奇函数的构造证明：
-    \begin{align}
-        &O(x)+O(-x)=\frac{f(x)-f(-x)}{2}+\frac{f(-x)-f(x)}{2}=0
-    \end{align}\\
-    由此证明了可以通过任意定义域关于$0$对称的函数$f(x)$构造奇函数$E(x)$。
+    若一个函数既能满足偶函数的定义又能满足奇函数的定义，则称该函数的奇偶性为既奇又偶。
 
 \newpage
 
@@ -4098,34 +3875,38 @@
     \begin{align}
         2\cdot O(x)=f(x)-f(-x)~~~~~~\Longrightarrow~~~~~~O(x)=\frac{f(x)-f(-x)}{2}
     \end{align}\\
-    根据前两节导出的结论可知，所得的$E(x)$与$O(x)$确实分别为偶函数和奇函数，故假设成立。\\[3mm]
+    根据后两节导出的结论可知，所得的$E(x)$与$O(x)$确实分别为偶函数和奇函数，故假设成立。\\[3mm]
     同时函数$f(x)$只有在定义域关于$0$对称时，在上述推导中任取$x\in D$才必有$-x\in D$成立。
 
 \newpage
 
-\subsection{组合函数与复合函数的奇偶性}
-    以下将具体研究偶函数和奇函数的组合函数与复合函数的奇偶性。\\[3mm]
-    以下列出了八类组合函数或复合函数的奇偶性：\vspace{3pt}
-    \begin{table}[h]
-        \begin{center}
-            \begin{tabular}{p{160pt}|p{60pt}|p{120pt}}
-                \hline
-                组合函数或复合函数&奇偶性&表达式\\ \hline
-                偶函数和奇函数的积&奇函数&偶$\times$奇$=$奇\\ \hline
-                偶函数和偶函数的和&偶函数&偶$+$偶$=$偶\\ \hline
-                偶函数和偶函数的积&偶函数&偶$\times$偶$=$偶\\ \hline
-                奇函数和奇函数的和&奇函数&奇$+$奇$=$奇\\ \hline
-                奇函数和奇函数的积&偶函数&奇$\times$奇$=$偶\\ \hline
-                奇函数和奇函数的复合函数&奇函数&奇$\hspace{1.5pt}\circ\hspace{1.5pt}$奇$=$奇\\ \hline
-                偶函数和奇函数的复合函数&偶函数&偶$\hspace{1.5pt}\circ\hspace{1.5pt}$奇$=$偶\\ \hline
-                一般函数和偶函数的复合函数&偶函数&函$\hspace{1.5pt}\circ\hspace{1.5pt}$偶$=$偶\\ \hline
-            \end{tabular}
-            \caption{组合函数和复合函数的奇偶性}
-        \end{center}
-    \end{table}\\
-    一般来说，偶函数和奇函数的和为非奇非偶，因此我们不予讨论。\\[3mm]
-    以下的证明中将使用符号$E(x)\hspace{1.5pt}$表示一个偶函数，其中$E\hspace{1.5pt}$代表偶数的英文even number。\\[3mm]
-    以下的证明中将使用符号$O(x)$表示一个偶函数，其中$O$代表奇数的英文odd number。\vspace{2pt}
+\subsubsection{偶函数的构造}
+    \setcounter{equation}{0}
+    偶函数可以使用任意定义域关于$0$对称的函数$f(x)$构造。\\[3mm]
+    偶函数的构造函数：
+    \begin{large}
+        \begin{equation*}
+            E(x)=\frac{f(x)+f(-x)}{2}
+        \end{equation*}
+    \end{large}\\
+    偶函数的构造证明：
+    \begin{align}
+        &E(x)-E(-x)=\frac{f(x)+f(-x)}{2}-\frac{f(-x)+f(x)}{2}=0
+    \end{align}\vspace{-15pt}
+
+\subsubsection{奇函数的构造}
+    \setcounter{equation}{0}
+    奇函数可以使用任意定义域关于$0$对称的函数$f(x)$构造。\\[3mm]
+    奇函数的构造函数：
+    \begin{large}
+        \begin{equation*}
+            O(x)=\frac{f(x)-f(-x)}{2}
+        \end{equation*}
+    \end{large}\\
+    奇函数的构造证明：
+    \begin{align}
+        &O(x)+O(-x)=\frac{f(x)-f(-x)}{2}+\frac{f(-x)-f(x)}{2}=0
+    \end{align}\vspace{-5pt}
 
 \subsubsection{偶函数与奇函数的积}
     \setcounter{equation}{0}
@@ -4250,10 +4031,11 @@
 
 \subsubsection{奇函数和奇函数的复合函数}
     \setcounter{equation}{0}
-    奇函数和奇函数的复合函数为偶函数
+    奇函数和奇函数的复合函数为偶函数：
     \begin{large}
         \begin{align*}
-            &O_1\big[O_2(x)\big]=O(x)~~~~~~O_1\circ O_2(x)=O(x)
+            &O_1\big[O_2(x)\big]=O(x)\\[3mm]
+            &O_1\circ O_2(x)=O(x)
         \end{align*}
     \end{large}\\
     由于$O_1(x)$为偶函数且$O_2(x)$为奇函数：
@@ -4262,26 +4044,35 @@
             ~O_1(x)=+O_1(-x)~~~~~~~~x\in D_1\\[1mm]
             ~O_2(x)=-O_2(-x)~~~~~~~~x\in D_2
         \end{cases}
-    \end{align}\\
+    \end{align}\\[3mm]
     故$O_1(x)$与$O_2(x)$的复合函数可以写作：
     \begin{align}
-        &O_1\big[O_2(x)\big]=O_1\big[-O_2(-x)\big]\\[3mm]
+        &O_1\big[O_2(x)\big]=O_1\big[-O_2(-x)\big]\\[5mm]
         &O_1\big[O_2(x)\big]=-O_1\big[O_2(-x)\big]
     \end{align}\\
-    复合函数的定义域为$D=D_2\cap\big\{x~|~E_2(x)\in D_1\big\}$，显然奇函数$O_2$的定义域$D_2$关于$0$对称。\\[3mm]
-    复合函数的定义域中的$\big\{x~|~E_2(x)\in D_1\big\}$（$D_1$对称）：\vspace{5pt}
+    由于函数$O_1(x)$为奇函数，故其定义域$D_1$关于$0$对称。\\[3mm]
+    由于函数$O_2(x)$为奇函数，故其定义域$D_2$关于$0$对称。\\[3mm]
+    由于$D_1$关于$0$对称：
     \begin{align}
-        &O_2(x)=-O_2(-x)\\[3mm]
-        &O_2(x)\in D_1~~~~\Longrightarrow~~~~-O_2(-x)\in D_1
+        a\in D_1~~~~\Longrightarrow~~~~-a\in D_1
     \end{align}\\
-    因此$x$与$-x$总是成对的出现在集合中，故该集合对称，故复合函数的定义域也关于$0$对称。\\[3mm]
-    由于定义域对称故上述推导成立，由此证明了偶函数和奇函数的复合函数为偶函数。\vspace{8pt}
+    由于$O_2(x)$为奇函数：
+    \begin{align}
+        &O_2(x)=-O_2(-x)\\[5mm]
+        &O_2(x)\in D_1~~~~\Longrightarrow~~~~O_2(-x)\in D_1
+    \end{align}\\
+    由此可以得到：
+    \begin{align}
+        &x\in\big\{x~|~O_2(x)\in D_1\big\}~~~~\Longrightarrow~~-x\in\big\{x~|~O_2(x)\in D_1\big\}
+    \end{align}\\
+    即若有$x\in\big\{x~|~O_2(x)\in D_1\big\}$，则必有$-x\in\big\{x~|~O_2(x)\in D_1\big\}$，故该集合关于$0$对称。\\[3mm]
+    而定义域$D=D_2\cap\big\{x~|~O_2(x)\in D_1\big\}$为两个关于$0$对称的集合的交集，故定义域关于$0$对称。
 
 \newpage
 
 \subsubsection{偶函数和奇函数的复合函数}
     \setcounter{equation}{0}
-    偶函数和奇函数的复合函数为偶函数
+    偶函数和奇函数的复合函数为偶函数：
     \begin{large}
         \begin{align*}
             &E_1\big[O_2(x)\big]=E(x)\\[3mm]
@@ -4294,20 +4085,29 @@
             ~E_1(x)\hspace{1.5pt}=+E_1(-x)\hspace{1.5pt}~~~~~~~~x\in D_1\\[1mm]
             ~O_2(x)=-O_2(-x)~~~~~~~~x\in D_2
         \end{cases}
-    \end{align}\\
+    \end{align}\\[3mm]
     故$E_1(x)$与$O_2(x)$的复合函数可以写作：
     \begin{align}
-        &E_1\big[O_2(x)\big]=E_1\big[-O_2(-x)\big]\\[3mm]
+        &E_1\big[O_2(x)\big]=E_1\big[-O_2(-x)\big]\\[5mm]
         &E_1\big[O_2(x)\big]=E_1\big[O_2(-x)\big]
     \end{align}\\
-    复合函数的定义域为$D=D_2\cap\big\{x~|~E_2(x)\in D_1\big\}$，显然奇函数$O_2$的定义域$D_2$关于$0$对称。\\[3mm]
-    复合函数的定义域中的$\big\{x~|~E_2(x)\in D_1\big\}$（$D_1$对称）：\vspace{5pt}
+    由于函数$E_1(x)\hspace{1.5pt}$为偶函数，故其定义域$D_1$关于$0$对称。\\[3mm]
+    由于函数$O_2(x)$为奇函数，故其定义域$D_2$关于$0$对称。\\[3mm]
+    由于$D_1$关于$0$对称：
     \begin{align}
-        &O_2(x)=-O_2(-x)\\[3mm]
-        &O_2(x)\in D_1~~~~\Longrightarrow~~~~-O_2(-x)\in D_1
+        a\in D_1~~~~\Longrightarrow~~~~-a\in D_1
     \end{align}\\
-    因此$x$与$-x$总是成对的出现在集合中，故该集合对称，故复合函数的定义域也关于$0$对称。\\[3mm]
-    由于定义域对称故上述推导成立，由此证明了偶函数和奇函数的复合函数为偶函数。\vspace{8pt}
+    由于$O_2(x)$为奇函数：
+    \begin{align}
+        &O_2(x)=-O_2(-x)\\[5mm]
+        &O_2(x)\in D_1~~~~\Longrightarrow~~~~O_2(-x)\in D_1
+    \end{align}\\
+    由此可以得到：
+    \begin{align}
+        &x\in\big\{x~|~O_2(x)\in D_1\big\}~~~~\Longrightarrow~~-x\in\big\{x~|~O_2(x)\in D_1\big\}
+    \end{align}\\
+    即若有$x\in\big\{x~|~O_2(x)\in D_1\big\}$，则必有$-x\in\big\{x~|~O_2(x)\in D_1\big\}$，故该集合关于$0$对称。\\[3mm]
+    而定义域$D=D_2\cap\big\{x~|~O_2(x)\in D_1\big\}$为两个关于$0$对称的集合的交集，故定义域关于$0$对称。
 
 \newpage
 
@@ -4320,25 +4120,42 @@
             &F_1\circ E_2(x)=E(x)
         \end{align*}
     \end{large}\\
-    由于$F_1(x)$为一般函数且$E_2(x)$为偶函数：
+    由于$F_1(x)$为一般函数且$E_2(x)$为偶函数：\vspace{3pt}
     \begin{align}
         ~~\begin{cases}
             ~F_1(x)\hphantom{=+F_1(-x)}~~~~~~~~~~\hspace{0.5pt}x\in D_1\\[1mm]
             ~E_2(x)=+E_2(-x)~~~~~~~~x\in D_2
         \end{cases}
-    \end{align}\\
+    \end{align}\\[3mm]
     因此$F_1(x)$与$E_2(x)$的复合函数可以写作：
     \begin{align}
         F_1\big[E_2(x)\big]=F_1\big[E_2(-x)\big]
     \end{align}\\
-    复合函数的定义域为$D=D_2\cap\big\{x~|~E_2(x)\in D_1\big\}$，显然偶函数$E_2$的定义域$D_2$关于$0$对称。\\[3mm]
-    复合函数的定义域中的$\big\{x~|~E_2(x)\in D_1\big\}$：\vspace{5pt}
+    由于函数$E_2(x)$为偶函数，故其定义域$D_2$关于$0$对称。\\[3mm]
+    由于$D_2$关于$0$对称：
     \begin{align}
-        &E_2(x)=E_2(-x)\\[3mm]
+        &E_2(x)=E_2(-x)\\[5mm]
         &E_2(x)\in D_1~~~~\Longrightarrow~~~~E_2(-x)\in D_1
     \end{align}\\
-    因此$x$与$-x$总是成对的出现在集合中，故该集合对称，故复合函数的定义域也关于$0$对称。\\[3mm]
-    由于定义域对称故上述推导成立，由此证明了一般函数和偶函数的复合函数为偶函数。\vspace{8pt}
+    由此可以得到：
+    \begin{align}
+        &x\in\big\{x~|~E_2(x)\in D_1\big\}~~~~\Longrightarrow~~-x\in\big\{x~|~E_2(x)\in D_1\big\}
+    \end{align}\\
+    即若有$x\in\big\{x~|~E_2(x)\in D_1\big\}$，则必有$-x\in\big\{x~|~E_2(x)\in D_1\big\}$，故该集合关于$0$对称。\\[3mm]
+    而定义域$D=D_2\cap\big\{x~|~E_2(x)\in D_1\big\}$为两个关于$0$对称的集合的交集，故定义域关于$0$对称。\\[6mm]
+    特别的，奇函数和偶函数的复合函数为偶函数：
+    \begin{large}
+        \begin{equation*}
+            O_1\big[E_2(x)\big]=E(x)
+        \end{equation*}
+    \end{large}\\
+    特别的，偶函数和偶函数的复合函数为偶函数：
+    \begin{large}
+        \begin{equation*}
+            E_1\hspace{1.5pt}\big[E_2(x)\big]=E(x)
+        \end{equation*}
+    \end{large}\\
+    这两种情况均可以视为一般函数和偶函数的复合函数的特殊情况。
 
 \newpage
 
@@ -4347,15 +4164,15 @@
     函数$f(x)$在区间$I$上为增函数的充要条件：\vspace{3pt}
     \begin{large}
         \begin{align*}
-            &\forall x_1,x_2\in I~~~~~~x_1<x_2~~~~\Longrightarrow~~~~f(x_1)<f(x_2)\\[4mm]
-            &\forall x_1,x_2\in I~~~~~~\frac{f(x_1)-f(x_2)}{x_1-x_2}>0~~~~(x_1\neq x_2)
+            &\forall x_1,x_2\in I~~~~~~x_2>x_1~~~~\Longrightarrow~~~~f(x_1)>f(x_2)\\[6mm]
+            &\forall x_1,x_2\in I~~~~~~\frac{f(x_2)-f(x_1)}{x_2-x_1}>0~~~~(x_1\neq x_2)
         \end{align*}
     \end{large}\\
     函数$f(x)$在区间$I$上为减函数的充要条件：\vspace{3pt}
     \begin{large}
         \begin{align*}
-            &\forall x_1,x_2\in I~~~~~~x_1>x_2~~~~\Longrightarrow~~~~f(x_1)>f(x_2)\\[4mm]
-            &\forall x_1,x_2\in I~~~~~~\frac{f(x_1)-f(x_2)}{x_1-x_2}<0~~~~(x_1\neq x_2)
+            &\forall x_1,x_2\in I~~~~~~x_2>x_1~~~~\Longrightarrow~~~~f(x_1)<f(x_2)\\[6mm]
+            &\forall x_1,x_2\in I~~~~~~\frac{f(x_2)-f(x_1)}{x_2-x_1}<0~~~~(x_1\neq x_2)
         \end{align*}
     \end{large}\\
     以下列出了一个增函数和减函数的例子：
@@ -4363,7 +4180,7 @@
         \begin{center}
             \subfigure[增函数]
             {
-                \begin{tikzpicture}[scale=0.8]
+                \begin{tikzpicture}[scale=0.75]
                     \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
                     \tkzClip
     
@@ -4398,7 +4215,7 @@
             }\qquad
             \subfigure[减函数]
             {
-                \begin{tikzpicture}[scale=0.8]
+                \begin{tikzpicture}[scale=0.75]
                     \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
                     \tkzClip
     
@@ -4436,118 +4253,220 @@
     \end{figure}\\
     若一个函数$f(x)$在区间$I$上为增函数，则称函数$f(x)$在单调增区间$I$上为单调递增函数。\\[3mm]
     若一个函数$f(x)$在区间$I$上为减函数，则称函数$f(x)$在单调减区间$I$上为单调递减函数。\\[3mm]
-    若一个函数的单调增区间可以取到$I=D$，则称函数在定义域上为单调递增函数。\\[3mm]
-    若一个函数的单调减区间可以取到$I=D$，则称函数在定义域上为单调递减函数。
-
-\newpage
-
     若一个函数在某一区间同时不满足增函数和减函数的定义，则称该函数在该区间为非单调函数。\\[3mm]
-    函数$f(x)$在区间$I$上不是增函数的充要条件：\vspace{3pt}
-    \begin{large}
-        \begin{align*}
-            &\exists~x_1,x_2\in I~~~~~~x_1<x_2~~~~\Longrightarrow~~~~f(x_1)\geq f(x_2)\\[4mm]
-            &\exists~x_1,x_2\in I~~~~~~\frac{f(x_1)-f(x_2)}{x_1-x_2}\leq 0~~~~(x_1\neq x_2)
-        \end{align*}
-    \end{large}\\
-    函数$f(x)$在区间$I$上不是减函数的充要条件：\vspace{3pt}
-    \begin{large}
-        \begin{align*}
-            &\exists~x_1,x_2\in I~~~~~~x_1>x_2~~~~\Longrightarrow~~~~f(x_1)\leq f(x_2)\\[4mm]
-            &\exists~x_1,x_2\in I~~~~~~\frac{f(x_1)-f(x_2)}{x_1-x_2}\geq 0~~~~(x_1\neq x_2)
-        \end{align*}
-    \end{large}\\
-    应当指出，若一个函数在某一区间为常值函数，则该函数在该区间为非单调函数。
-
-\subsubsection{存在间断点时的单调性}
-    考虑以下示意图：
-    \begin{figure}[h]
-        \begin{center}
-            \subfigure[定义域上为单调增函数的情况]
-            {
-                \begin{tikzpicture}[scale=0.65]
-                    \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
-                    \tkzClip
-    
-                    \tkzDefPoint(0,0){O}
-    
-                    \tkzDefShiftPoint[O](-4,0){X1}
-                    \tkzDefShiftPoint[O](+4,0){X2}
-    
-                    \tkzDefShiftPoint[O](0,-4){Y1}
-                    \tkzDefShiftPoint[O](0,+4){Y2}
-    
-                    \tkzDrawSegment[->](X1,X2)
-                    \tkzDrawSegment[->](Y1,Y2)
-    
-                    \tkzLabelPoint[above](X2){$x$}
-                    \tkzLabelPoint[right](Y2){$y$}
-    
-                    \tkzDefPoint(-3,-2){A1}
-                    \tkzDefPoint(0,-1){A2}
-
-                    \tkzDefPoint(+3,+2){B1}
-                    \tkzDefPoint(0,+1){B2}
-
-                    \tkzDrawSegments[thick](A1,A2 B1,B2)
-                    \tkzDrawPoints[fill=white](A2,B2)
-                \end{tikzpicture}
-            }\qquad\quad
-            \subfigure[定义域上为非单调函数的情况]
-            {
-                \begin{tikzpicture}[scale=0.65]
-                    \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
-                    \tkzClip
-    
-                    \tkzDefPoint(0,0){O}
-    
-                    \tkzDefShiftPoint[O](-4,0){X1}
-                    \tkzDefShiftPoint[O](+4,0){X2}
-    
-                    \tkzDefShiftPoint[O](0,-4){Y1}
-                    \tkzDefShiftPoint[O](0,+4){Y2}
-    
-                    \tkzDrawSegment[->](X1,X2)
-                    \tkzDrawSegment[->](Y1,Y2)
-    
-                    \tkzLabelPoint[above](X2){$x$}
-                    \tkzLabelPoint[right](Y2){$y$}
-    
-                    \tkzDefPoint(-3,-2.0){A1}
-                    \tkzDefPoint(0,+1){A2}
-
-                    \tkzDefPoint(+3,+2.0){B1}
-                    \tkzDefPoint(0,-1){B2}
-
-                    \tkzDrawSegments[thick](A1,A2 B1,B2)
-                    \tkzDrawPoints[fill=white](A2,B2)
-                \end{tikzpicture}
-            }
-            \caption{存在间断点时的单调性}
-        \end{center}
-    \end{figure}\\
-    对于第一张函数图，根据单调性的定义可知，其在定义域$(-\infty,0)\cup(0,+\infty)$上为单调增函数。\\[3mm]
-    对于第二张函数图，根据单调性的定义可知，其在定义域$(-\infty,0)\cup(0,+\infty)$上为非单调函数。\\[3mm]
-    因此对于存在间断点的函数，不仅需要考虑间断点两侧的单调性，还需要考虑间断点的位置。
+    可以证明，偶函数在原点左右的区间中单调性相反，奇函数在原点左右的区间中单调性相同。
 
 \newpage
 
-\subsubsection{偶函数的单调性情况}
+\subsubsection{增函数与增函数的和}
     \setcounter{equation}{0}
-    偶函数$E(x)$在左右两个对称的区间上单调性相反。\\[3mm]
-    偶函数的单调性情况的示意图：
+    增函数与增函数的和为增函数：
+    \begin{large}
+        \begin{align*}
+            &In_1(x)+In_2(x)=In(x)\\[3mm]
+            &In_1+In_2(x)=In(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        In_1(x_2)>In_1(x_1)
+    \end{align}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        In_2(x_2)>In_2(x_1)
+    \end{align}\\
+    根据不等式的叠加性：
+    \begin{align}
+        In_1(x_1)+In_2(x_2)>In_1(x_1)+In_2(x_1)
+    \end{align}\\
+    由此证明了增函数与增函数的和为增函数。\vspace{6pt}
+
+\subsubsection{增函数与减函数的差}
+    \setcounter{equation}{0}
+    增函数与减函数的差为增函数：
+    \begin{large}
+        \begin{align*}
+            &In_1(x)-De_2(x)=In(x)\\[3mm]
+            &In_1-De_2(x)=In(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        In_1(x_2)>In_1(x_1)
+    \end{align}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：\vspace{5pt}
+    \begin{align}
+        De_2(x_2)<De_2(x_1)~~~~\Longrightarrow~~~~-De_2(x_2)>-De_2(x_1)
+    \end{align}\\
+    根据不等式的叠加性：
+    \begin{align}
+        In_1(x_1)-De_2(x_2)>In_1(x_1)-De_2(x_1)
+    \end{align}\\
+    由此证明了增函数与减函数的差为增函数。\vspace{5pt}
+
+\newpage
+
+\subsubsection{减函数与减函数的和}
+    \setcounter{equation}{0}
+    减函数与减函数的和为减函数：
+    \begin{large}
+        \begin{align*}
+            &De_1(x)+De_2(x)=De(x)\\[3mm]
+            &De_1+De_2(x)=De(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        De_1(x_2)<De_1(x_1)
+    \end{align}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        De_2(x_2)<De_2(x_1)
+    \end{align}\\
+    根据不等式的叠加性：
+    \begin{align}
+        De_1(x_1)+De_2(x_2)<De_1(x_1)+De_2(x_1)
+    \end{align}\\
+    由此证明了减函数与减函数的和为减函数。\vspace{6pt}
+
+\subsubsection{减函数与增函数的差}
+    \setcounter{equation}{0}
+    减函数与减函数的差为减函数：
+    \begin{large}
+        \begin{align*}
+            &De_1(x)-In_2(x)=De(x)\\[3mm]
+            &De_1-In_2(x)=De(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        De_1(x_2)<De_1(x_1)
+    \end{align}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：\vspace{5pt}
+    \begin{align}
+        In_2(x_2)>In_2(x_1)~~~~\Longrightarrow~~~~-In_2(x_2)<-In_2(x_1)
+    \end{align}\\
+    根据不等式的叠加性：
+    \begin{align}
+        De_1(x_1)-In_2(x_2)<De_1(x_1)-In_2(x_1)
+    \end{align}\\
+    由此证明了减函数与增函数的差为减函数。\vspace{5pt}
+
+\newpage
+
+\subsubsection{增函数与增函数的复合函数}
+    \setcounter{equation}{0}
+    增函数与增函数的复合函数为增函数：
+    \begin{large}
+        \begin{align*}
+            &In_1\big[In_2(x)\big]=In(x)\\[3mm]
+            &In_1\circ In_2(x)=In(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        In_2(x_2)>In_2(x_1)
+    \end{align}\\
+    对于$\forall a_1,a_2\in I$且满足$a_2>a_1$：
+    \begin{align}
+        &In_1(a_2)>In_1(a_1)\\[3mm]
+        &In_1\big[In_2(x_2)\big]>In_1\big[In_2(x_1)\big]
+    \end{align}\\
+    由此证明了增函数与增函数的复合函数为增函数。\vspace{8pt}
+
+\subsubsection{增函数与减函数的复合函数}
+    \setcounter{equation}{0}
+    增函数与减函数的复合函数为减函数：
+    \begin{large}
+        \begin{align*}
+            &In_1\big[De_2(x)\big]=De(x)\\[3mm]
+            &In_1\circ De_2(x)=De(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        De_2(x_2)>De_2(x_1)
+    \end{align}\\
+    对于$\forall a_1,a_2\in I$且满足$a_2>a_1$：
+    \begin{align}
+        &In_1(a_2)>In_1(a_1)\\[3mm]
+        &In_1\big[De_2(x_1)\big]>In_1\big[De_2(x_2)\big]\\[3mm]
+        &In_1\big[De_2(x_2)\big]<In_1\big[De_2(x_1)\big]
+    \end{align}\\
+    由此证明了增函数与减函数的复合函数为减函数。
+
+\newpage
+
+\subsubsection{减函数与增函数的复合函数}
+    \setcounter{equation}{0}
+    减函数与增函数的复合函数为减函数：
+    \begin{large}
+        \begin{align*}
+            &De_1\big[In_2(x)\big]=De(x)\\[3mm]
+            &De_1\circ In_2(x)=De(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        In_2(x_2)>In_2(x_1)
+    \end{align}\\
+    对于$\forall a_1,a_2\in I$且满足$a_2>a_1$：
+    \begin{align}
+        &De_1(a_2)<De_1(a_1)\\[3mm]
+        &De_1\big[In_2(x_2)\big]<De_1\big[In_2(x_1)\big]
+    \end{align}\\
+    由此证明了减函数与增函数的复合函数为减函数。\vspace{8pt}
+
+\subsubsection{减函数与减函数的复合函数}
+    \setcounter{equation}{0}
+    减函数与减函数的复合函数为增函数：
+    \begin{large}
+        \begin{align*}
+            &De_1\big[De_2(x)\big]=In(x)\\[3mm]
+            &De_1\circ De_2(x)=In(x)
+        \end{align*}
+    \end{large}\\
+    对于$\forall x_1,x_2\in I$且满足$x_2>x_1$：
+    \begin{align}
+        De_2(x_2)<De_2(x_1)
+    \end{align}\\
+    对于$\forall a_1,a_2\in I$且满足$a_2>a_1$：
+    \begin{align}
+        &De_1(a_2)<De_1(a_1)\\[3mm]
+        &De_1\big[De_2(x_1)\big]<De_1\big[De_2(x_2)\big]\\[3mm]
+        &De_1\big[De_2(x_2)\big]>De_1\big[De_2(x_1)\big]
+    \end{align}\\
+    由此证明了减函数与减函数的复合函数为增函数。
+
+\newpage
+
+\subsection{函数的对称性}
+    函数的对称性是函数整体上表现出的性质，函数的对称性具体分为轴对称和点对称两类。\\[3mm]
+    函数$f(x)$在$a$处轴对称的充要条件：
+    \begin{large}
+        \begin{align*}
+            &\forall x\in D~~~~~~f(x)=+f(2a-x)\\[3mm]
+            &\forall x\in D~~~~~~f(x)-f(2a-x)=0
+        \end{align*}
+    \end{large}\\
+    函数$f(x)$在$a$处点对称的充要条件：
+    \begin{large}
+        \begin{align*}
+            &\forall x\in D~~~~~~f(x)=-f(2a-x)\\[3mm]
+            &\forall x\in D~~~~~~f(x)+f(2a-x)=0
+        \end{align*}
+    \end{large}\\
+    函数的对称性的示意图：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[scale=0.85]
-                \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
-                \tkzClip
-
                 \tkzDefPoint(0,0){O}
 
-                \tkzDefShiftPoint[O](-4.1,0){X1}
-                \tkzDefShiftPoint[O](+4.1,0){X2}
+                \tkzDefShiftPoint[O](-7.1,0){X1}
+                \tkzDefShiftPoint[O](+7.1,0){X2}
 
-                \tkzDefShiftPoint[O](0,-4.1){Y1}
-                \tkzDefShiftPoint[O](0,+4.1){Y2}
+                \tkzDefShiftPoint[O](0,-5.1){Y1}
+                \tkzDefShiftPoint[O](0,+5.1){Y2}
 
                 \tkzDrawSegment[->](X1,X2)
                 \tkzDrawSegment[->](Y1,Y2)
@@ -4555,69 +4474,183 @@
                 \tkzLabelPoint[above](X2){$x$}
                 \tkzLabelPoint[right](Y2){$y$}
 
-                \draw[smooth,thick,samples=100,domain=-1.9:0] plot(\x,{\x*\x});
-                \draw[smooth,thick,samples=100,domain=0:+1.9] plot(\x,{\x*\x});
+                \draw[color=LiBlue1,smooth,thick,samples=100,domain=-2.0*pi:2.0*pi] plot(\x,{sin(2*\x r)});
 
-                \tkzDefPoint(-1.80,0){xa2}
-                \tkzDefPoint(-0.80,0){xa1}
-                \tkzDefPoint(+0.80,0){xb1}
-                \tkzDefPoint(+1.80,0){xb2}
+                \foreach \x in{-6.28,-4.71,...,6.28}
+                {
+                    \tkzDefPoint(\x,0){P}
+                    \tkzDrawPoint[fill=white](P)
+                }
 
-                \tkzDefPoint(-1.80,3.24){Xa2}
-                \tkzDefPoint(-0.80,0.64){Xa1}
-                \tkzDefPoint(+0.80,0.64){Xb1}
-                \tkzDefPoint(+1.80,3.24){Xb2}
-
-                \tkzDrawSegments[dashed](Xa1,xa1 Xa2,xa2 Xb1,xb1 Xb2,xb2)
-                \tkzDrawPoints[fill=white](xa1,xa2,xb1,xb2,Xa1,Xa2,Xb1,Xb2)
-
-                \tkzLabelPoint[below](xa1){$-x_1$}
-                \tkzLabelPoint[below](xa2){$-x_2~$}
-                \tkzLabelPoint[below](xb1){$x_1$}
-                \tkzLabelPoint[below](xb2){$x_2$}
+                \foreach \x in{-5.495,-3.925,...,5.495}
+                {
+                    \tkzDefPoint(\x,0){P}
+                    \tkzDefShiftPoint[P](0,+3){P1}
+                    \tkzDefShiftPoint[P](0,-3){P2}
+                    \tkzDrawSegment[dashed](P1,P2)
+                }
             \end{tikzpicture}
-            \caption{偶函数的单调性}
+            \caption{函数的对称性}
         \end{center}
     \end{figure}\\
-    假设偶函数$E(x)$在右区间上单调递增：
-    \begin{align}
-        \forall x_1,x_2\in (0,+\infty)~~~~~~x_1<x_2~~~~~~\Longrightarrow~~~~~~~E(x_1)<E(x_2)
-    \end{align}\\
-    根据偶函数性质可以推得：
-    \begin{align}
-        -x_2<-x_1~~~~~~\Longrightarrow~~~~~~~E(-x_2)>E(-x_1)
-    \end{align}\\
-    假设偶函数$E(x)$在右区间上单调递减：
-    \begin{align}
-        \forall x_1,x_2\in (0,+\infty)~~~~~~x_1<x_2~~~~~~\Longrightarrow~~~~~~~E(x_1)>E(x_2)
-    \end{align}\\
-    根据偶函数性质可以推得：
-    \begin{align}
-        -x_2<-x_1~~~~~~\Longrightarrow~~~~~~~E(-x_2)<E(-x_1)
-    \end{align}\\
-    由此证明了当偶函数在右区间上单调递增时，其在左区间为单调递减。\\[3mm]
-    由此证明了当偶函数在右区间上单调递减时，其在左区间为单调递增。\\[3mm]
-    因此证明了偶函数左右两个对称区间上的单调性相反。
+    图中所示的函数，在所有标出的直线处轴对称，在所有标出的点处点对称。\\[3mm]
+    函数在$a$处轴对称指的是其函数图像关于$\hspace{1.5pt}x=a\hspace{1.5pt}$对称，函数的轴对称可以视作偶函数的推广。\\[3mm]
+    函数在$a$处点对称指的是其函数图像关于$(a~,~0)$对称，函数的点对称可以视作奇函数的推广。
 
 \newpage
 
-\subsubsection{奇函数的单调性情况}
+\subsubsection{轴对称性的定理$1$}
     \setcounter{equation}{0}
-    奇函数$O(x)$在左右两个对称的区间上单调性相同。\\[3mm]
-    奇函数的单调性情况的示意图：
+    轴对称的定理$1$指出，若括号内和为定值，其函数间的关系为差为零，则在和的一半处轴对称。\\[3mm]
+    轴对称的定理$1$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~f(a+x)-f(b-x)=0~~~~~~\Longleftrightarrow~~~~~~\text{在~}\frac{1}{2}\cdot(a+b)\text{~处轴对称}
+        \end{equation*}
+    \end{large}\\
+    轴对称的推论$1$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(a+x)-f(a-x)=0~~~~~~\Longleftrightarrow~~~~~~\text{在~}a\text{~处轴对称}\hspace{30pt}
+        \end{equation*}
+    \end{large}\\
+    轴对称的定理$1$的证明过程（令$x=x-a$）：
+    \begin{align}
+        &f(a+x)-f(b-x)=0\\[5mm]
+        &f(x)-f(b-x+a)=0\\[5mm]
+        &f(x)-f(b+a-x)=0\\[5mm]
+        &f(x)=+f(b+a-x)
+    \end{align}\\
+    根据轴对称的原始定义可知函数$f(x)$在$\dfrac{1}{2}\cdot(a+b)$处轴对称，由此证明了轴对称性的定理$1$。\\[3mm]
+    通过轴对称的定理$1$可以说明这样一个规律，对称性的特征是和为定值。\vspace{5pt}
+
+\subsubsection{轴对称性的定理$2$}
+    \setcounter{equation}{0}
+    轴对称性的定理$2$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            ~~f(a+x)\text{~为偶函数}~~~~~~\Longleftrightarrow~~~~~~\text{在~}a\text{~处轴对称}
+        \end{equation*}
+    \end{large}\\
+    轴对称性的定理$2$可以由平移变换证明，函数$f(x)$为函数$f(x+a)$向右平移$a$个单位的结果，
+    同时函数$f(x)$为偶函数，即函数$f(x)$在$0$处轴对称，故函数$f(x+a)$在$a$处轴对称。\\[3mm]
+    轴对称性的定理$2$可以由偶函数的定义证明：\vspace{5pt}
+    \begin{align}
+        &f(a+x)=f(a-x)\\[5mm]
+        &f(a+x)-f(a-x)=0
+    \end{align}\\
+    根据轴对称性的推论$1$可知函数$f(x)$在$a$处轴对称，由此证明了轴对称性的定理$2$。
+
+\newpage
+
+\subsubsection{点对称性的定理$1$}
+    \setcounter{equation}{0}
+    点对称的定理$1$指出，若括号内和为定值，其函数间的关系为和为零，则在和的一半处点对称。\\[3mm]
+    点对称的定理$1$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~f(a+x)+f(b-x)=0~~~~~~\Longleftrightarrow~~~~~~\text{在~}\frac{1}{2}\cdot(a+b)\text{~处点对称}
+        \end{equation*}
+    \end{large}\\
+    点对称的推论$1$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(a+x)+f(a-x)=0~~~~~~\Longleftrightarrow~~~~~~\text{在~}a\text{~处点对称}\hspace{30pt}
+        \end{equation*}
+    \end{large}\\
+    点对称的定理$1$的证明过程（令$x=x-a$）：
+    \begin{align}
+        &f(a+x)+f(b-x)=0\\[5mm]
+        &f(x)+f(b-x+a)=0\\[5mm]
+        &f(x)+f(b+a-x)=0\\[5mm]
+        &f(x)=-f(b+a-x)
+    \end{align}\\
+    根据点对称的原始定义可知函数$f(x)$在$\dfrac{1}{2}\cdot(a+b)$处点对称，由此证明了点对称性的定理$1$。\\[3mm]
+    通过点对称的定理$1$可以说明这样一个规律，对称性的特征是和为定值。\vspace{5pt}
+
+\subsubsection{点对称性的定理$2$}
+    \setcounter{equation}{0}
+    点对称性的定理$2$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            ~~f(a+x)\text{~为奇函数}~~~~~~\Longleftrightarrow~~~~~~\text{在~}a\text{~处点对称}
+        \end{equation*}
+    \end{large}\\
+    点对称性的定理$2$可以由平移变换证明，函数$f(x)$为函数$f(x+a)$向右平移$a$个单位的结果，
+    同时函数$f(x)$为奇函数，即函数$f(x)$在$0$处点对称，故函数$f(x+a)$在$a$处点对称。\\[3mm]
+    点对称性的定理$2$可以由奇函数的定义证明：\vspace{5pt}
+    \begin{align}
+        &f(a+x)=-f(a-x)\\[5mm]
+        &f(a+x)+f(a-x)=0
+    \end{align}\\
+    根据点对称性的推论$1$可知函数$f(x)$在$a$处点对称，由此证明了点对称性的定理$2$。
+
+\newpage
+
+\subsubsection{满足两个轴对称性的情况}
+    \setcounter{equation}{0}
+    若一个函数在$a$和$b$处均有轴对称性，则该函数的周期为$T=2a-2b$。\\[3mm]
+    根据该函数的性质列出方程组：
+    \begin{align}
+        &\begin{cases}
+            ~f(x)-f(2a-x)=0\\[1mm]
+            ~f(x)-f(2b-x)=0\\[1mm]
+        \end{cases}\\[3mm]     
+        &~~f(2a-x)-f(2b-x)=0
+    \end{align}\\
+    通过周期性的定理$3$可知函数$f(x)$的周期为$T=2a-2b$，即同性对称为两倍差。\\[3mm]
+    因此具有两个轴对称性的函数，可以推导出该函数具有周期性。\vspace{5pt}
+
+\subsubsection{满足两个点对称性的情况}
+    \setcounter{equation}{0}
+    若一个函数在$a$和$b$处均有点对称性，则该函数的周期为$T=2a-2b$。\\[3mm]
+    根据该函数的性质列出方程组：
+    \begin{align}
+        &\begin{cases}
+            ~f(x)+f(2a-x)=0\\[1mm]
+            ~f(x)+f(2b-x)=0\\[1mm]
+        \end{cases}\\[3mm]     
+        &~~f(2a-x)-f(2b-x)=0
+    \end{align}\\
+    通过周期性的定理$3$可知函数$f(x)$的周期为$T=2a-2b$，即同性对称为两倍差。\\[3mm]
+    因此具有两个点对称性的函数，可以推导出该函数具有周期性。\vspace{5pt}
+
+\subsubsection{满足轴对称性和点对称性的情况}
+    \setcounter{equation}{0}
+    若函数在$a$处有轴对称性，且函数在$b$处有点对称性，则该函数的周期为$T=4a-4b$。\\[3mm]
+    根据该函数的性质列出方程组：
+    \begin{align}
+        &\begin{cases}
+            ~f(x)-f(2a-x)=0\\[1mm]
+            ~f(x)+f(2b-x)=0\\[1mm]
+        \end{cases}\\[3mm]     
+        &~~f(2a-x)+f(2b-x)=0
+    \end{align}\\
+    通过周期性的定理$4$可知函数$f(x)$的周期为$T=4a-4b$，即异性对称为四倍差。\\[3mm]
+    因此具有轴对称性和点对称性的函数，可以推导出函数具有周期性。
+
+\newpage
+
+\subsection{函数的周期性}
+    函数的周期性是函数整体上表现出的性质，函数的周期性表现为输出的数值循环重复。\\[3mm]
+    函数$f(x)$具有周期为$T$的周期性的充要条件：
+    \begin{large}
+        \begin{align*}
+            &\forall x\in D~~~~~~f(x)=f(x+T)\\[3mm]
+            &\forall x\in D~~~~~~f(x)-f(x+T)=0
+        \end{align*}
+    \end{large}\\
+    函数的周期性的示意图：
     \begin{figure}[h]
         \begin{center}
             \begin{tikzpicture}[scale=0.85]
-                \tkzInit[xmin=-4.3,xmax=+4.3,ymin=-4.3,ymax=+4.3]
-                \tkzClip
-
                 \tkzDefPoint(0,0){O}
 
-                \tkzDefShiftPoint[O](-4.1,0){X1}
-                \tkzDefShiftPoint[O](+4.1,0){X2}
+                \tkzDefShiftPoint[O](-7.1,0){X1}
+                \tkzDefShiftPoint[O](+7.1,0){X2}
 
-                \tkzDefShiftPoint[O](0,-4.1){Y1}
-                \tkzDefShiftPoint[O](0,+4.1){Y2}
+                \tkzDefShiftPoint[O](0,-5.1){Y1}
+                \tkzDefShiftPoint[O](0,+5.1){Y2}
 
                 \tkzDrawSegment[->](X1,X2)
                 \tkzDrawSegment[->](Y1,Y2)
@@ -4625,239 +4658,1475 @@
                 \tkzLabelPoint[above](X2){$x$}
                 \tkzLabelPoint[right](Y2){$y$}
 
-                \draw[smooth,thick,samples=100,domain=-2.0:0] plot(\x,{0.5*\x*\x*\x});
-                \draw[smooth,thick,samples=100,domain=0:+2.0] plot(\x,{0.5*\x*\x*\x});
+                \draw[color=LiBlue1,smooth,thick,samples=100,domain=-2.0*pi:2.0*pi] plot(\x,{cos(2*\x r)});
 
-                \tkzDefPoint(-1.90,0){xa2}
-                \tkzDefPoint(-1.00,0){xa1}
-                \tkzDefPoint(+1.00,0){xb1}
-                \tkzDefPoint(+1.90,0){xb2}
+                \foreach \x/\i in{-4.71/1,-1.57/2,+1.57/3,4.71/4}
+                {
+                    \tkzDefPoint(\x,0){P\i}
+                    \tkzDefShiftPoint[P\i](0,+3.5){P\i1}
+                    \tkzDefShiftPoint[P\i](0,-3.5){P\i2}
+                    \tkzDefShiftPoint[P\i](0,-1){P\i3}
+                    \tkzDrawSegment[dashed](P\i1,P\i2)
+                    \tkzDrawPoint[fill=white](P\i3)
+                }
 
-                \tkzDefPoint(-1.90,-3.430){Xa2}
-                \tkzDefPoint(-1.00,-0.5){Xa1}
-                \tkzDefPoint(+1.00,+0.5){Xb1}
-                \tkzDefPoint(+1.90,+3.430){Xb2}
+                \tkzDrawSegments[<->](P13,P23 P33,P43)
+                \tkzLabelSegment[below](P13,P23){$T$}
+                \tkzLabelSegment[below](P33,P43){$T$}
 
-                \tkzDrawSegments[dashed](Xa1,xa1 Xa2,xa2 Xb1,xb1 Xb2,xb2)
-                \tkzDrawPoints[fill=white](xa1,xa2,xb1,xb2,Xa1,Xa2,Xb1,Xb2)
-
-                \tkzLabelPoint[above](xa1){$-x_1$}
-                \tkzLabelPoint[above](xa2){$-x_2~$}
-                \tkzLabelPoint[below](xb1){$x_1$}
-                \tkzLabelPoint[below](xb2){$x_2$}
+                \tkzDrawPoints[fill=white](P13,P23,P33,P43)
             \end{tikzpicture}
-            \caption{奇函数的单调性}
+            \caption{函数的周期性}
         \end{center}
     \end{figure}\\
-    假设奇函数$O(x)$在右区间上单调递增：
+    周期函数$f(x)$可以具有很多周期$T$，正周期中最小的称为周期函数$f(x)$的最小正周期$T^{*}$。\\[3mm]
+    周期函数一定具有周期，但不一定存在最小正周期。\\[6mm]
+    若$T$为函数$f(x)$的周期，则$n\cdot T~~(n\in \mathbb{Z})$也为函数$f(x)$的周期。\\[3mm]
+    若$T_1$和$T_2$为函数$f(x)$的周期，则$T_1+T_2$也为函数$f(x)$的周期。\\[3mm]
+    若$T_1$和$T_2$为函数$f(x)$的周期，则$T_1-T_2$也为函数$f(x)$的周期。\\[3mm]
+    周期函数$f(x)$若存在最小正周期$T^*$，则周期函数$f(x)$所有的周期均为最小正周期的整数倍。\\[3mm]
+    周期函数$f(x)$的定义域$D$必定是无界的集合，即周期函数的定义域可以向正负无穷无限延伸。
+
+\newpage
+
+\subsubsection{周期性的定理$1$}
+    \setcounter{equation}{0}
+    周期性的定理$1$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x)-f(x+a)=0~~~~~~\Longleftrightarrow~~~~~~\text{周期~}T=\hphantom{2}a
+        \end{equation*}
+    \end{large}\\
+    周期性的定理$1$的证明过程：
     \begin{align}
-        \forall x_1,x_2\in (0,+\infty)~~~~~~x_1<x_2~~~~~~\Longrightarrow~~~~~~~O(x_1)<O(x_2)
+        &f(x)-f(x+a)=0\\[3mm]
+        &f(x)=f(x+a)
     \end{align}\\
-    根据奇函数性质可以推得：
+    根据周期性的原始定义可知函数$f(x)$的周期为$a$，由此证明了周期性的定理$1$。\vspace{5pt}
+
+\subsubsection{周期性的定理$2$}
+    \setcounter{equation}{0}
+    周期性的定理$2$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x)+f(x+a)=0~~~~~~\Longrightarrow~~~~~~\text{周期~}T=2a
+        \end{equation*}
+    \end{large}\\
+    周期性的定理$2$的证明过程（令$x=x-a$）：
     \begin{align}
-        -x_2<-x_1~~~~~~\Longrightarrow~~~~~~~O(-x_2)<O(-x_1)
+        &~~f(x)+f(x+a)=0~~\\[3mm]
+        &\begin{cases}
+            ~f(x)+f(x+a)=0\\[1mm]
+            ~f(x-a)+f(x)=0\\[1mm]
+        \end{cases}\\[3mm]
+        &~~f(x+a)-f(x-a)=0~~
     \end{align}\\
-    假设奇函数$O(x)$在右区间上单调递减：
+    周期性的定理$2$的证明过程（令$x=x+a$）：
     \begin{align}
-        \forall x_1,x_2\in (0,+\infty)~~~~~~x_1<x_2~~~~~~\Longrightarrow~~~~~~~O(x_1)>O(x_2)
+        &f(x+a)-f(x-a)=0\\[3mm]
+        &f(x+2a)-f(x)=0\\[3mm]
+        &f(x+2a)=f(x)\\[3mm]
+        &f(x)=f(x+2a)
     \end{align}\\
-    根据奇函数性质可以推得：
+    根据周期性的原始定义可知函数$f(x)$的周期为$2a$，由此证明了周期性的定理$2$。\vspace{5pt}
+
+\newpage
+
+\subsubsection{周期性的定理$3$}
+    \setcounter{equation}{0}
+    周期性的定理$3$指出，若括号内差为定值，其函数间关系为减为零，则周期是差的一倍。\\[3mm]
+    周期性的定理$3$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x+a)-f(x+b)=0~~~~~~\Longleftrightarrow~~~~~~\text{周期~}T=a-b\vspace{-3pt}
+        \end{equation*}
+    \end{large}\\
+    周期性的推论$3$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x+a)-f(x-a)=0~~~~~~\Longleftrightarrow~~~~~~\text{周期~}T=2a\hspace{15pt}\vspace{-3pt}
+        \end{equation*}
+    \end{large}\\
+    周期性的定理$3$的证明过程（令$x=x-a$）：
     \begin{align}
-        -x_2<-x_1~~~~~~\Longrightarrow~~~~~~~O(-x_2)>O(-x_1)
+        &f(x+a)-f(x+b)=0\\[3mm]
+        &f(x)-f(x+b-a)=0
     \end{align}\\
-    由此证明了当奇函数在右区间上单调递增时，其在左区间为单调递增。\\[3mm]
-    由此证明了当奇函数在右区间上单调递减时，其在左区间为单调递减。\\[3mm]
-    因此证明了奇函数左右两个对称区间上的单调性相同。
+    通过周期性的定理$1$可知函数$f(x)$的周期为$b-a$即$a-b$，由此证明了周期性的定理$3$。\\[3mm]
+    通过周期性的定理$3$可以说明这样一个规律，周期性的特征是差为定值。\vspace{9pt}
+
+\subsubsection{周期性的定理$4$}
+    \setcounter{equation}{0}
+    周期性的定理$4$指出，若括号内差为定值，其函数间关系为和为零，则周期是差的两倍。\\[3mm]
+    周期性的定理$4$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            ~~f(x+a)+f(x+b)=0~~~~~~\Longrightarrow~~~~~~\text{周期~}T=2a-2b\vspace{-3pt}
+        \end{equation*}
+    \end{large}\\
+    周期性的推论$4$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            ~~f(x+a)+f(x-a)=0~~~~~~\Longrightarrow~~~~~~\text{周期~}T=4a\hspace{28pt}\vspace{-3pt}
+        \end{equation*}
+    \end{large}\\
+    周期性的定理$4$的证明过程（令$x=x-a$）：
+    \begin{align}
+        &f(x+a)+f(x+b)=0\\[3mm]
+        &f(x)+f(x+b-a)=0
+    \end{align}\\
+    通过周期性的定理$2$可知函数$f(x)$的周期为$2b-2a$即$2a-2b$，由此证明了周期性的定理$4$。\\[3mm]
+    通过周期性的定理$4$可以说明这样一个规律，周期性的特征是差为定值。\\[3mm]
+    
+\newpage
+
+\subsubsection{周期性的定理$5$}
+    \setcounter{equation}{0}
+    周期性的定理$5$指出，若括号内的差为定值，其函数间关系为积为定值，则周期是差的一倍。\\[3mm]
+    周期性的定理$5$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x+a)\cdot f(x+b)=c~~(c\neq 0)~~~~~~\Longrightarrow~~~~~~\text{周期~}T=a-b
+        \end{equation*}
+    \end{large}\\
+    周期性的推论$5$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x+a)\cdot f(x-a)=c~~(c\neq 0)~~~~~~\Longrightarrow~~~~~~\text{周期~}T=2a\hspace{15pt}
+        \end{equation*}
+    \end{large}\\
+    周期性的定理$5$的证明过程：
+    \begin{align}
+        &~~f(x+a)\cdot f(x+b)=c\\[3.5mm]
+        &\begin{cases}
+            ~f(x)\cdot f(x+b-a)=c~~~~~~\text{（令~}x=x-a\text{）}\\[1mm]
+            ~f(x-b+a)\cdot f(x)=c~~~~~~\text{（令~}x=x-b\text{）}\\[1mm]
+        \end{cases}\\[3.5mm]
+        &~~\frac{f(x+b-a)}{f(x-b+a)}=1\\[3.5mm]
+        &~~f(x+b-a)=f(x-b+a)\\[3.5mm]
+        &~~f(x+b-a)-f(x-b+a)=0
+    \end{align}\\
+    通过周期性的推论$3$可知函数$f(x)$的周期为$b-a$即$a-b$，由此证明了周期的定理$5$。\\[3mm]
+    对比周期性的三个重要结论：\vspace{5pt}
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~f(x)\hspace{3.2pt}\cdot\hspace{3.2pt}f(x+a)=c~~~~\hspace{0.5pt}\Longrightarrow~~~~T=2a\\[2mm]
+                ~f(x)+f(x+a)=0~~~~\Longrightarrow~~~~T=2a\\[2mm]
+                ~f(x)-f(x+a)=0~~~\hspace{0.3pt}\Longleftrightarrow~~~~T=a\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    对于函数$f(x)$以及函数$f(x+a)$，若两者差为零，则函数的周期为$a$的一倍。\\[3mm]
+    对于函数$f(x)$以及函数$f(x+a)$，若两者和为零，则函数的周期为$a$的两倍。\\[3mm]
+    对于函数$f(x)$以及函数$f(x+a)$，若两者积为定值，则函数的周期为$a$的两倍。
+
+\newpage
+
+\subsubsection{周期性的定理$6$}
+    \setcounter{equation}{0}
+    周期性的定理$6$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x+a)=\frac{1-f(x)}{1+f(x)}~~~~~~\Longleftrightarrow~~~~~~\text{周期~}T=2a~~~\text{且}~~~f(x)\neq -1
+        \end{equation*}
+    \end{large}\\
+    周期性的定理$6$的推导过程：
+    \begin{align}
+        &f(x+2a)=\frac{1-f(x+a)}{1+f(x+a)}\\[3mm]
+        &f(x+2a)=\frac{1-\frac{1-f(x)}{1+f(x)}}{1+\frac{1-f(x)}{1+f(x)}}\\[3mm]
+        &f(x+2a)=\frac{\frac{1+f(x)-1+f(x)}{1+f(x)}}{\frac{1+f(x)+1-f(x)}{1+f(x)}}\\[3mm]
+        &f(x+2a)=f(x)
+    \end{align}\\
+    通过周期性的原始定义可知函数$f(x)$的周期为$2a$，由此证明了周期性的定理$6$。\vspace{5pt}
+
+\subsubsection{周期性的定理$7$}
+    \setcounter{equation}{0}
+    周期性的定理$7$的数学表达：
+    \begin{large}
+        \begin{equation*}
+            f(x+a)=\frac{1+f(x)}{1-f(x)}~~~~~~\hspace{0.5pt}\Longrightarrow~~~~~~\text{周期~}T=4a~~~\text{且}~~~f(x)\neq -1
+        \end{equation*}
+    \end{large}\\
+    周期性的定理$7$的推导过程：
+    \begin{align}
+        &f(x+2a)=\frac{1+f(x+a)}{1-f(x+a)}\\[3mm]
+        &f(x+2a)=\frac{1+\frac{1+f(x)}{1-f(x)}}{1-\frac{1+f(x)}{1-f(x)}}\\[3mm]
+        &f(x+2a)=\frac{\frac{1-f(x)+1+f(x)}{1-f(x)}}{\frac{1-f(x)-1-f(x)}{1-f(x)}}\\[3mm]
+        &f(x+2a)=-\frac{1}{f(x)}
+    \end{align}\\
+    通过周期性的定理$5$可知函数$f(x)$的周期为$4a$，由此证明了周期性的定理$7$。\vspace{5pt}
+    
+\newpage
+
+\subsubsection{同时满足周期性和轴对称性的情况}
+    \setcounter{equation}{0}
+    若一个函数的周期为$T$，且函数在$a$处轴对称，则函数也在$a+\dfrac{kT}{2}~~(k\in\mathbb{Z})$处轴对称。\\[3mm]
+    由于周期的整数倍仍为函数的周期：
+    \begin{align}
+        ~~f(x)-f(x+k\cdot T)=0~~~~~~~~(k\in \mathbb{Z})
+    \end{align}\\
+    根据该函数的性质可以列出方程组：
+    \begin{align}
+        &\begin{cases}
+            ~f(x)-f(2a-x)=0\\[1mm]
+            ~f(x)-f(x+k\cdot T)=0\\[1mm]
+        \end{cases}\\[3mm]
+        &~~f(x+k\cdot T)-f(2a-x)=0\\[3mm]
+        &~~f(k\cdot T+x)-f(2a-x)=0
+    \end{align}\\
+    通过轴对称性的定理$1$可知函数$f(x)$在$a+\dfrac{kT}{2}$处轴对称，由此证明了该结论。\\[3mm]
+    故具有轴对称性的函数在同时具有周期性时，可以推导出函数在无穷多处也都具有轴对称性。\vspace{8pt}
+
+\subsubsection{同时满足周期性和点对称性的情况}
+    \setcounter{equation}{0}
+    若一个函数的周期为$T$，且函数在$a$处点对称，则函数也在$a+\dfrac{kT}{2}~~(k\in\mathbb{Z})$处点对称。\\[3mm]
+    由于周期的整数倍仍为函数的周期：
+    \begin{align}
+        ~~f(x)-f(x+k\cdot T)=0~~~~~~~~(k\in \mathbb{Z})
+    \end{align}\\
+    根据该函数的性质列出方程组：
+    \begin{align}
+        &\begin{cases}
+            ~f(x)+f(2a-x)=0\\[1mm]
+            ~f(x)-f(x+k\cdot T)=0\\[1mm]
+        \end{cases}\\[3mm]
+        &~~f(x+k\cdot T)+f(2a-x)=0\\[3mm]
+        &~~f(k\cdot T+x)+f(2a-x)=0
+    \end{align}\\
+    通过点对称性的定理$1$可知函数$f(x)$在$a+\dfrac{kT}{2}$处点对称，由此证明了该结论。\\[3mm]
+    故具有点对称性的函数在同时具有周期性时，可以推导出函数在无穷多处也具有点对称性。
+
+\newpage
+
+\subsection{函数的零点}
+    函数的零点指的是函数曲线和横轴交点的横坐标。\\[3mm]
+    函数$f(x)$的零点可以用集合表示为：
+    \begin{large}
+        \begin{equation*}
+            \big\{x~|~f(x)=0\big\}
+        \end{equation*}
+    \end{large}\\
+    函数的零点的示意图
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.85]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefShiftPoint[O](-7.1,0){X1}
+                \tkzDefShiftPoint[O](+7.1,0){X2}
+
+                \tkzDefShiftPoint[O](0,-6.4){Y1}
+                \tkzDefShiftPoint[O](0,+6.4){Y2}
+
+                \tkzDrawSegment[->](X1,X2)
+                \tkzDrawSegment[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2){$x$}
+                \tkzLabelPoint[right](Y2){$y$}
+
+                \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4.15:4.15] plot(\x,{0.03*(\x-4)*(\x-2)*(\x)*(\x+2)*(\x+4)});
+
+                \foreach \x/\i in{-4/1,-2/2,0/3,+2/4,+4/5}
+                {
+                    \tkzDefPoint(\x,0){P}
+                    \tkzDrawPoint[fill=white](P)
+                    \tkzLabelPoint[below right](P){$x_\i$}
+                }
+            \end{tikzpicture}
+            \caption{函数的零点}
+        \end{center}
+    \end{figure}\\
+    函数的零点也可以称为函数的根，上方的函数共有五个零点或五个根。\\[3mm]
+    函数的零点不是一个坐标点，如果和横轴的一个交点为$(x,0)$，则该处的零点为$x$。\\[6mm]
+    零点存在性定理：若一个函数$f(x)$在闭区间$[a,b]$上连续，同时可以满足条件$f(a)\cdot f(b)<0$，
+    那么必然存在$\xi\in[a,b]$使得$f(\xi)=0$，即函数$f(x)$在闭区间$[a,b]$上至少有一个零点$\xi$。\\[3mm]
+    零点存在性定理指出，如果函数在一个闭区间上连续，且函数在两个区间端点上的函数值异号，
+    则函数在该区间中至少有一个零点，因此该定理也称为勘根定理，即用于勘察根的定理。
 
 \newpage
 
 \subsection{函数的最值}
-    若函数$f(x)$在$x_0$的取值满足以下条件，我们将$f(x_0)$称为其最大值：
-    \begin{large}
-        \begin{equation*}
-            \forall x\in D~~~~f(x)\geq f(x_0)
-        \end{equation*}
-    \end{large}\\
-    若函数$f(x)$在$x_0$的取值满足以下条件，我们将$f(x_0)$称为其最小值：
+    函数的最值指的是函数值可以取到的最大值和最小值。\\[3mm]
+    函数$f(x)$在$x_0$处取到最大值$f(x_0)$的充要条件：
     \begin{large}
         \begin{equation*}
             \forall x\in D~~~~f(x)\leq f(x_0)
         \end{equation*}
     \end{large}\\
-    函数的最大值和最小值统称为函数的最值。\\[6mm]
-    形如$ax^2+bx+c$的函数，我们可以运用二次函数的性质求解其最值。\\[3mm]
-    形如$ax^2+bx+c$的函数的图像：
-    \begin{figure}[h!]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.4\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
-                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan,smooth,thick,samples=100,domain=-3.1:3.1] 
-                            plot(\x,{\x*\x-5}) node at (4,-6){$y=x^2-5$};
-                    \end{tikzpicture}
-                    \caption{函数$y=x^2-5$的图像}
-                \end{minipage}
-            }\qquad\qquad\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.4\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
-                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan,smooth,thick,samples=100,domain=-3.1:3.1] 
-                            plot(\x,{-\x*\x+5}) node at (4,-6){$y=-x^2+5$};
-                    \end{tikzpicture}
-                    \caption{函数$y=-x^2+5$的图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}\\
-    形如$ax^2+bx+c$的函数的顶点：
+    函数$f(x)$在$x_0$处取到最小值$f(x_0)$的充要条件：
     \begin{large}
         \begin{equation*}
-                P\left(-\frac{b}{2a}~~,~\frac{4ac-b^2}{4a}\right)    
+            \forall x\in D~~~~f(x)\geq f(x_0)
         \end{equation*}
     \end{large}\\
-    当$a>0$时，函数在顶点处取最小值。\\[3mm]
-    当$a<0$时，函数在顶点处取最大值。\\[3mm]
+    函数的最值的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.85]
+                \tkzDefPoint(0,0){O}
+
+                \tkzDefShiftPoint[O](-7.1,0){X1}
+                \tkzDefShiftPoint[O](+7.1,0){X2}
+
+                \tkzDefShiftPoint[O](0,-6.1){Y1}
+                \tkzDefShiftPoint[O](0,+6.1){Y2}
+
+                \tkzDrawSegment[->](X1,X2)
+                \tkzDrawSegment[->](Y1,Y2)
+
+                \tkzLabelPoint[above](X2){$x$}
+                \tkzLabelPoint[right](Y2){$y$}
+
+                \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4.15:4.15] plot(\x,{0.03*(\x-4)*(\x-2)*(\x)*(\x+2)*(\x+4)});
+
+                \foreach \x/\y in{-1.088/-1.362,+1.088/+1.362}
+                {
+                    \tkzDefPoint(\x,\y){P}
+                    \tkzDefShiftPoint[P](-1.088,0){PL}
+                    \tkzDefShiftPoint[P](+1.088,0){PR}
+
+                    \tkzDrawSegment[dashed,color=MediumGray](PL,PR)
+                    \tkzDrawPoint[fill=white](P)   
+                }
+
+                \foreach \x/\y/\i in{-3.289/+3.486/1,+3.289/-3.486/2}
+                {
+                    \tkzDefPoint(\x,\y){P\i}
+                    \tkzDefShiftPoint[P\i](-1.088,0){PL}
+                    \tkzDefShiftPoint[P\i](+1.088,0){PR}
+
+                    \tkzDrawSegment[dashed](PL,PR)
+                    \tkzDrawPoint[fill=white](P\i)   
+                }
+
+                \tkzLabelPoint[above](P1){$x_{max}$}
+                \tkzLabelPoint[below](P2){$x_{min}$}
+            \end{tikzpicture}
+            \caption{函数的最值}
+        \end{center}
+    \end{figure}\\
+    图中使用黑色虚线并标注有$x_{min}$的点为函数的最小值。\\[3mm]
+    图中使用黑色虚线并标注有$x_{max}$的点为函数的最大值。\\[3mm]
+    如果函数$f(x)$的最值分别在$x_{min}$和$x_{max}$处取到，则函数的值域$A=\big[f(x_{min}),f(x_{max})\big]$。\\[3mm]
+    使用灰色虚线标注的点，在局部上是最大或最小的，在全局上则不是，因此只能称之为拐点。
+    
 
 \newpage
 
-    形如$ax+\dfrac{b}{x}$的函数，我们可以运用基本不等式的性质求解其最值。\\[4mm]
-    形如$ax+\dfrac{b}{x}$的函数的图像：
-    \begin{figure}[h!]
-        \begin{center}
-            \subfigure
-            {
-                \begin{minipage}[t]{0.4\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
-                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan,smooth,thick,samples=100,domain=-6.7:-0.15] 
-                            plot(\x,{\x+1/\x}) node at (4,-6){$y=x+\dfrac{1}{x}$};
-                        \draw[cyan,smooth,thick,samples=100,domain=0.15:6.7] 
-                            plot(\x,{\x+1/\x});
-                    \end{tikzpicture}
-                    \caption{函数$y=x+\dfrac{1}{x}$的图像}
-                \end{minipage}
-            }\qquad\qquad\qquad
-            \subfigure
-            {
-                \begin{minipage}[t]{0.4\linewidth}
-                    \begin{tikzpicture}[>=stealth,scale=0.4]
-                        \draw[->] (-8,0) -- (8,0) node[above] {$x$};
-                        \draw[->] (0,-8) -- (0,8) node[right] {$y$};
-                        \draw[shift={(0,0)}] (0,0.1) -- (0,-0.1);
-                        \draw[shift={(0,0)}] (0.1,0) -- (-0.1,0);
-                        \draw[cyan,smooth,thick,samples=100,domain=-6.7:-0.15] 
-                            plot(\x,{-\x-1/\x}) node at (-4,-6){$y=-x-\dfrac{1}{x}$};
-                        \draw[cyan,smooth,thick,samples=100,domain=0.15:6.7] 
-                            plot(\x,{-\x-1/\x});
-                    \end{tikzpicture}
-                    \caption{函数$y=-x-\dfrac{1}{x}$的图像}
-                \end{minipage}
-            }
-        \end{center}
-    \end{figure}\\
-    形如$ax+\dfrac{b}{x}$的函数的顶点（$a>0~~b>0$）：
-    \begin{large}
-        \begin{equation*}
-                P_A\left(+\sqrt{\frac{b}{a}}~~,~~+2\sqrt{ab}\right)~~~~~~~~P_B\left(-\sqrt{\frac{b}{a}}~~,~~-2\sqrt{ab}\right)
-        \end{equation*}
-    \end{large}\\
-    形如$ax+\dfrac{b}{x}$的函数的顶点（$a<0~~b<0$）：
-    \begin{large}
-        \begin{equation*}
-                P_A\left(-\sqrt{\frac{b}{a}}~~,~~+2\sqrt{ab}\right)~~~~~~~~P_B\left(+\sqrt{\frac{b}{a}}~~,~~-2\sqrt{ab}\right)
-        \end{equation*}
-    \end{large}\\
-    当$x>0$时，函数在上顶点$P_A$处取最小值。\\[3mm]
-    当$x<0$时，函数在下顶点$P_B$处取最大值。·
-
-\newpage
-
-\subsubsection{求解函数$f(x)=\dfrac{a_1x^2+b_1x+c_1}{b_2x+c_2}$的最值}
-    对于符合以下形式的函数：
+\subsubsection{利用判别式求解一类函数的值域}
     \setcounter{equation}{0}
+    对于形如以下形式的函数：
+    \begin{large}
+        \begin{equation*}
+            f(x)=\frac{a_1x^2+b_1x+c_1}{a_2x^2+b_2x+c_2}~~~~~~~~x\in\mathbb{R}
+        \end{equation*}
+    \end{large}\\
+    构造出以$x$为主元的一元二次方程：\vspace{3pt}
     \begin{align}
-        f(x)=\frac{a_1x^2+b_1x+c_1}{b_2x+c_2}
+        &y=\frac{a_1x^2+b_1x+c_1}{a_2x^2+b_2x+c_2}\\[6mm]
+        &a_2yx^2+b_2yx+c_2y=a_1x^2+b_1x+c_1\\[6mm]
+        &a_2yx^2-a_1x^2+b_2yx-b_1x+c_2y-c_1=0\\[6mm]
+        &(a_2y-a_1)\cdot x^2+(b_2y-b_1)\cdot x+(c_2y-c_1)=0~~~~~~
     \end{align}\\
-    通过多项式的除法可以得到以下结论：\vspace{3pt}
+    此时$x$若无解代表不存在$(x,y)$使得$y=f(x)$成立，即对应的$y$在函数的值域外。\\[3mm]
+    此时$x$若有解则代表存在$(x,y)$使得$y=f(x)$成立，即对应的$y$在函数的值域中。\\[3mm]
+    因此该一元二次方程的根的判别式$\Delta$需满足的条件为$\Delta\geq 0$。\\[8mm]
+    转化为$y$为主元的一元二次不等式：
     \begin{align}
-        a_1x^2+b_1x+c_1
-        &=\left(b_2x+c_2\right)\cdot\left(\frac{a_1}{b_2}\cdot x+\frac{b_1b_2-a_1c_2}{b_2\,^2}\right)+\left(c_1-c_2\cdot\frac{b_1b_2-a_1c_2}{b_2\,^2}\right)\\[4mm]
-        &=\left(b_2x+c_2\right)\cdot\left(\frac{a_1}{b_2}\cdot x+k\right)+\left(c_1-c_2\cdot k\right)
+        &~~(b_2y-b_1)^2-4\cdot(c_2y-c_1)\cdot(a_2y-a_1)\geq 0\\[6mm]
+        &~~(b_2^2y^2-2b_1b_2y+b_1^2)-4\cdot(a_2c_2y^2-a_1c_2y-a_2c_1y+a_1c_1)\geq 0\\[6mm]
+        &~~b_2^2y^2-2b_1b_2y+b_1^2-4a_2c_2y^2+4a_1c_2y+4a_2c_2y+4a_2c_1y-4a_1c_1\geq 0\\[6mm]
+        &~~(b_2^2-4a_2c_2)\cdot y^2+(4a_1c_2-2b_1b_2+4a_2c_1)y+(b_1^2-4a_1c_1)\geq 0
     \end{align}\\
-    其中多项式的除法结果中的代换变量$k$等于：
-    \begin{equation}
-        k=\frac{b_1b_2-a_1c_2}{b_2\,^2}
-    \end{equation}\\
-    将结论代入函数可以得到：
-    \begin{align}
-        f(x)
-        &=\frac{a_1x^2+b_1x+c_1}{b_2x+c_2}\\[4mm]
-        &=\frac{\left(b_2x+c_2\right)\cdot\left(\dfrac{a_1}{b_2}\cdot x+k\right)+\left(c_1-c_2k\right)}{b_2x+c_2}\\[4mm]
-        &=\frac{\left(b_2x+c_2\right)\cdot\left(\dfrac{a_1}{b_2}\cdot x+k\right)}{b_2x+c_2}+\frac{c_1-c_2k}{b_2x+c_2}
-    \end{align}\\
-    上下同除分子上的多项式可以得到：
-    \begin{align}
-        f(x)&=\frac{a_1}{b_2}\cdot x+k+\frac{c_1-c_2k}{b_2x+c_2}
-    \end{align}\\
-    在函数左侧构建多项式：
-    \begin{align}
-        f(x)
-        &=\frac{a_1}{b_2}\cdot x+k+\frac{c_1-c_2k}{b_2x+c_2}\\[5mm]
-        &=\frac{a_1}{b_2\,^2}\cdot(b_2x+c_2)+\frac{c_1-c_2k}{b_2x+c_2}+k-\frac{a_1c_2}{b_2\,^2}\\[5mm]
-        &=\left[\frac{a_1}{b_2\,^2}\right]\cdot(b_2x+c_2)+\big[c_1-c_2\cdot k\big]\cdot\frac{1}{(b_2x+c_2)}+k-\frac{a_1c_2}{b_2\,^2}
-    \end{align}
+    由此得到关于$y$的一元二次不等式：\vspace{3pt}
+    \begin{large}
+        \begin{equation*}
+            (b_2^2-4c_2a_2)\cdot y^2+(4a_1c_2-2b_1b_2+4a_2c_1)y+(b_1^2-4a_1c_1)\geq 0    
+        \end{equation*}
+    \end{large}\\
+    该一元二次不等式的解集即为原函数的值域。\\[3mm]
+    该方法简洁但仍然有一定局限性，即函数的定义域必须为$\mathbb{R}$。
 
 \newpage
 
-    显然两个参数需要同号时，原式才可以求极值：
+\subsubsection{利用基本不等式求解一类函数的最值$1$}
+    \setcounter{equation}{0}
+    对于形如以下形式的函数：
     \begin{large}
         \begin{equation*}
-            \frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)>0
+            f(x)=\frac{a_1x^2+b_1x+c_1}{b_2x+c}~~~~~~~~x\in D
         \end{equation*}
     \end{large}\\
-    以下结论中的代换变量$k$等于：
+    定义代换变量，令$t=b_2x+c_2$，则$x=\dfrac{1}{b_2}\cdot(t-c_2)=g(t)$，此处需求出$t$的范围。\\[3mm]
+    代入代换变量可以得到：
+    \begin{align}
+        &f(x)=\frac{a_1x^2+b_1x+c_1}{b_2x+c}\\[6mm]
+        &f(t)=\frac{a_1\cdot g(t)^2+b_1\cdot g(t)+c_1}{t}\\[6mm]
+        &f(t)=\frac{1}{t}\cdot\left[a_1\cdot g(t)^2+b_1\cdot g(t)+c_1\right]\\[6mm]
+        &f(t)=\frac{1}{t}\cdot\left[\frac{a_1}{b_2^2}\cdot(t^2-2c_2t+c_2^2)+\frac{b_1}{b_2}\cdot(t-c_2)+c_1\right]\\[6mm]
+        &f(t)=\frac{1}{t}\cdot\left[\frac{a_1}{b_2^2}\cdot t^2-\frac{2a_1c_2}{b_2^2}\cdot t+\frac{a_1c_2^2}{b_2^2}+\frac{b_1}{b_2}\cdot t-\frac{b_1c_2}{b_2}+c_1\right]\\[6mm]
+        &f(t)=\frac{1}{t}\cdot\left[\frac{a_1}{b_2^2}\cdot t^2+\left(\frac{b_1}{b_2}-\frac{2a_1c_2}{b_2^2}\right)\cdot t+\left(\frac{a_1c_2^2}{b_2^2}-\frac{b_1c_2}{b_2}+c_1\right)\right]
+    \end{align}\\
+    使用大写字母代换常量：
+    \begin{align}
+        &f(t)=\frac{1}{t}\cdot\left[\frac{a_1}{b_2^2}\cdot t^2+\left(\frac{b_1}{b_2}-\frac{2a_1c_2}{b_2^2}\right)\cdot t+\left(\frac{a_1c_2^2}{b_2^2}-\frac{b_1c_2}{b_2}+c_1\right)\right]\\[6mm]
+        &f(t)=\frac{1}{t}\cdot\left[At^2+Bt+C\right]\\[6mm]
+        &f(t)=At+\frac{C}{t}+B
+    \end{align}\\
+    由此代换出现了基本不等式$2$的结构：
     \begin{large}
         \begin{equation*}
-            k=\frac{b_1\cdot b_2-a_1\cdot c_2}{b_2\,^2}
+            f(t)=\underbrace{\left(A\cdot t+C\cdot\frac{1}{t}\right)}_{\text{基本不等式2}}+B
         \end{equation*}
     \end{large}\\
-    当$a_1>0$，且$b_2\cdot x+c_2>0$，原式有最小值：\vspace{3pt}
+    应用基本不等式$2$即可由上式求出函数的最值，使用时应当注意结合$t$的取值范围。
+
+\newpage
+
+\subsubsection{利用基本不等式求解一类函数的最值$2$}
+    \setcounter{equation}{0}
+    对于形如以下形式的函数：
     \begin{large}
         \begin{equation*}
-            f(x)\ge k-\frac{a_1\cdot c_2}{b_2\,^2}+2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=+\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+            f(x)=\frac{a_1}{b_1x+c_1}+\frac{a_2}{b_2x+c_2}~~~~~~~~x\in D
         \end{equation*}
-    \end{large}\\ \vspace{5pt}
-    当$a_1<0$，且$b_2\cdot x+c_2<0$，原式有最小值：\vspace{3pt}
+    \end{large}\\
+    构造一个值为一的分式：\vspace{3pt}
+    \begin{align}
+        &f(x)=\frac{a_1}{b_1x+c_1}+\frac{a_2}{b_2x+c_2}\\[5mm]
+        &f(x)=\frac{b_2c_1-b_1c_2}{b_2c_1-b_1c_2}\cdot\left[\frac{a_1}{b_1x+c_1}+\frac{a_2}{b_2x+c_2}\right]\\[5mm]
+        &f(x)=\frac{b_1b_2x+b_2c_1-b_1b_2x-b_1c_2}{b_2c_1-b_1c_2}\cdot\left[\frac{a_1}{b_1x+c_1}+\frac{a_2}{b_2x+c_2}\right]\\[5mm]
+        &f(x)=\frac{b_2\cdot(b_1x+c_1)-b_1\cdot(b_2x+c_2)}{b_2c_1-b_1c_2}\cdot\left[\frac{a_1}{b_1x+c_1}+\frac{a_2}{b_2x+c_2}\right]\\[5mm]
+        &f(x)=\frac{1}{bx_1-bx_2}\cdot\left[a_1b_2-a_1b_1\cdot\frac{b_2x+c_2}{b_1x+c_1}+a_2b_2\cdot\frac{b_1x+c_1}{b_2x+c_2}-a_2b_1\right]\\[5mm]
+        &f(x)=\frac{1}{bx_1-bx_2}\cdot\left[a_1b_2-a_2b_1-a_1b_1\cdot\frac{b_2x+c_2}{b_1x+c_1}+a_2b_2\cdot\frac{b_1x+c_1}{b_2x+c_2}\right]\\[5mm]
+        &f(x)=\frac{1}{bx_1-bx_2}\cdot\left[(a_1b_2-a_2b_1)-a_1b_1\cdot\frac{b_2x+c_2}{b_1x+c_1}+a_2b_2\cdot\frac{b_1x+c_1}{b_2x+c_2}\right]
+    \end{align}\\[2mm]
+    使用大写字母代换常量：\vspace{3pt}
+    \begin{align}
+        &f(x)=\frac{1}{bx_1-bx_2}\cdot\left[(a_1b_2-a_2b_1)-a_1b_1\cdot\frac{b_2x+c_2}{b_1x+c_1}+a_2b_2\cdot\frac{b_1x+c_1}{b_2x+c_2}\right]\\[5mm]
+        &f(x)=A\cdot\left[B+C\cdot\frac{b_1x+c_1}{b_2x+c_2}-D\cdot\frac{b_2x+c_2}{b_1x+c_1}\right]
+    \end{align}\\
+    由此代换出现了基本不等式$2$的结构：\vspace{3pt}
     \begin{large}
         \begin{equation*}
-            f(x)\ge k-\frac{a_1\cdot c_2}{b_2\,^2}+2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=-\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+            f(x)=A\cdot\left[B+\underbrace{\left(C\cdot\frac{b_1x+c_1}{b_2x+c_2}-D\cdot\frac{b_2x+c_2}{b_1x+c_1}\right)}_{\text{基本不等式2}}\right]
         \end{equation*}
-    \end{large}\\ \vspace{5pt}
-    当$a_1>0$，且$b_2\cdot x+c_2<0$，原式有最大值：\vspace{3pt}
+    \end{large}\\
+    应用基本不等式$2$即可由上式求出函数的最值，使用时应当注意结合$x$的取值范围。
+    
+\newpage
+
+\subsection{根的分布}
+    根的分布研究二次函数$ax^2+bx+c$在给定某些关于根的条件时，函数的参数应当满足的条件。\\[3mm]
+    根的分布通常利用以下性质：两根之和$x_1+x_2$，两根之积$x_1\cdot x_2$，对称轴$x_m$，判别式$\Delta$。
+
+\subsubsection{根的分布的基本情况$1$}
+    根的分布$1$的条件：存在两个根$x_1,x_2$，满足两根分布于定值$k$的两侧，即$x_1<k$且$x_2>k$。\\[3mm]
+    根的分布$1$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[当$k\neq 0$的一般情况]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzInit[xmin=-4.8,xmax=+4.8,ymin=-6.1,ymax=6.1]
+                    \tkzClip
+
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-4.5,0){X1}
+                    \tkzDefPoint(+4.5,0){X2}
+
+                    \tkzDefPoint(0,-5.8){M1}
+                    \tkzDefPoint(0,+5.8){M2}
+
+                    \tkzDefPoint(1,-5.8){L1}
+                    \tkzDefPoint(1,+5.8){L2}
+
+                    \tkzDefPoint(1,-0.75){L0}
+
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[dashed](L1,L2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4:+4] plot(\x,{0.25*\x*\x-1});
+
+                    \tkzLabelPoint[right](L1){$x=k$}
+
+                    \tkzDrawPoints[fill=white](R1,R2,L0)
+                    \tkzLabelPoint[below left](R1){$x_1$}
+                    \tkzLabelPoint[below right](R2){$x_2$}
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[当$k=0$的特殊情况]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzInit[xmin=-4.8,xmax=+4.8,ymin=-6.1,ymax=6.1]
+                    \tkzClip
+
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-4.5,0){X1}
+                    \tkzDefPoint(+4.5,0){X2}
+
+                    \tkzDefPoint(0,-5.8){Y1}
+                    \tkzDefPoint(0,+5.8){Y2}
+
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[->](Y1,Y2)
+
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4:+4] plot(\x,{0.25*\x*\x-1});
+
+                    \tkzDrawPoints[fill=white](R1,R2)
+                    \tkzLabelPoint[below left](R1){$x_1$}
+                    \tkzLabelPoint[below right](R2){$x_2$}
+                \end{tikzpicture}
+            }
+        \caption{根的分布的基本情况$1$}
+        \end{center}
+    \end{figure}\\
+    根的分布$1$的条件中若有$k=0$，则该条件相当于满足两根一正一负。\\[3mm]
+    根的分布$1$的参数条件（$k\neq 0$）：
     \begin{large}
         \begin{equation*}
-            f(x)\le k-\frac{a_1\cdot c_2}{b_2\,^2}-2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=+\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+            a\cdot f(k)<0
         \end{equation*}
-    \end{large}\\ \vspace{5pt}
-    当$a_1<0$，且$b_2\cdot x+c_2>0$，原式有最大值：\vspace{3pt}
+    \end{large}\\
+    根的分布$1$的参数条件（$k=0$）：
     \begin{large}
         \begin{equation*}
-            f(x)\le k-\frac{a_1\cdot c_2}{b_2\,^2}-2\cdot\sqrt{\frac{a_1}{~b_2\,^2}\cdot(c_1-c_2\cdot k)}~~~~~~~~iff~~x=-\sqrt{\frac{~b_2\,^2}{a_1}\cdot(c_1-c_2\cdot k)}
+            \begin{cases}
+                ~\Delta>0\\[1mm]
+                ~x_1\cdot x_2>0\\[1mm]
+            \end{cases}
         \end{equation*}
-    \end{large}
+    \end{large}\\
+    如果条件中的不等号可以取等，那么应有$a\cdot f(k)<0~~\longrightarrow~~a\cdot f(k)\leq 0$。
+
+\newpage
+
+\subsubsection{根的分布的基本情况$2$}
+    根的分布$2$的条件：存在两个根$x_1,x_2$，满足两根均小于定值$k$，即$x_1<k$且$x_2<k$。\\[3mm]
+    根的分布$2$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[当$k\neq 0$的一般情况]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzInit[xmin=-4.8,xmax=+4.8,ymin=-6.3,ymax=6.3]
+                    \tkzClip
+
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-4.5,0){X1}
+                    \tkzDefPoint(+4.5,0){X2}
+
+                    \tkzDefPoint(0,-6.0){M1}
+                    \tkzDefPoint(0,+6.0){M2}
+
+                    \tkzDefPoint(3,-6.0){L1}
+                    \tkzDefPoint(3,+6.0){L2}
+
+                    \tkzDefPoint(3,1.25){L0}
+
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[dashed](L1,L2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4:+4] plot(\x,{0.25*\x*\x-1});
+
+                    \tkzLabelPoint[right](L1){$x=k$}
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+
+                    \tkzDrawPoints[fill=white](R1,R2,L0)
+                    \tkzLabelPoint[below left](R1){$x_1$}
+                    \tkzLabelPoint[below right](R2){$x_2$}
+
+                    \tkzLabelPoint[left](L0){$f(k)$}
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[当$k=0$的特殊情况]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzInit[xmin=-4.8,xmax=+4.8,ymin=-6.3,ymax=6.3]
+                    \tkzClip
+
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-4.5,0){X1}
+                    \tkzDefPoint(+4.5,0){X2}
+
+                    \tkzDefPoint(0,-6.0){M1}
+                    \tkzDefPoint(0,+6.0){M2}
+
+                    \tkzDefPoint(3,-6.0){Y1}
+                    \tkzDefPoint(3,+6.0){Y2}
+
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[->](Y1,Y2)
+
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4:+4] plot(\x,{0.25*\x*\x-1});
+
+                    \tkzDrawPoints[fill=white](R1,R2)
+                    \tkzLabelPoint[below left](R1){$x_1$}
+                    \tkzLabelPoint[below right](R2){$x_2$}
+                \end{tikzpicture}
+            }
+        \caption{根的分布的基本情况$2$}
+        \end{center}
+    \end{figure}\\
+    根的分布$2$的条件中若有$k=0$，则该条件相当于满足两根均为负根。\\[3mm]
+    根的分布$2$的参数条件（$k\neq 0$）：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~\Delta>0\\[1mm]
+                ~x_m<k\\[1mm]
+                ~a\cdot f(k)>0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    根的分布$2$的参数条件（$k=0$）：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~\Delta>0\\[1mm]
+                ~x_1+x_2<0\\[1mm]
+                ~x_1\hspace{3.0pt}\cdot\hspace{3.0pt}x_2>0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    如果条件中的小于变为小于等于，那么应有$a\cdot f(k)<0~~\longrightarrow~~a\cdot f(k)\leq 0$。
+
+\newpage
+
+\subsubsection{根的分布的基本情况$3$}
+    根的分布$3$的条件：存在两个根$x_1,x_2$，满足两根均大于定值$k$，即$x_1>k$且$x_2>k$。\\[3mm]
+    根的分布$3$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[当$k\neq 0$的一般情况]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzInit[xmin=-4.8,xmax=+4.8,ymin=-6.3,ymax=6.3]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-4.5,0){X1}
+                    \tkzDefPoint(+4.5,0){X2}
+
+                    \tkzDefPoint(0,-6.0){M1}
+                    \tkzDefPoint(0,+6.0){M2}
+
+                    \tkzDefPoint(-3,-6.0){L1}
+                    \tkzDefPoint(-3,+6.0){L2}
+
+                    \tkzDefPoint(-3,1.25){L0}
+
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[dashed](L1,L2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4:+4] plot(\x,{0.25*\x*\x-1});
+
+                    \tkzLabelPoint[right](L1){$x=k$}
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+
+                    \tkzDrawPoints[fill=white](R1,R2,L0)
+                    \tkzLabelPoint[below left](R1){$x_1$}
+                    \tkzLabelPoint[below right](R2){$x_2$}
+
+                    \tkzLabelPoint[right=1pt](L0){$f(k)$}
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[当$k=0$的特殊情况]
+            {
+                \begin{tikzpicture}[scale=0.7]
+                    \tkzInit[xmin=-4.8,xmax=+4.8,ymin=-6.3,ymax=6.3]
+                    \tkzClip
+
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-4.5,0){X1}
+                    \tkzDefPoint(+4.5,0){X2}
+
+                    \tkzDefPoint(0,-6.0){M1}
+                    \tkzDefPoint(0,+6.0){M2}
+
+                    \tkzDefPoint(-3,-6.0){Y1}
+                    \tkzDefPoint(-3,+6.0){Y2}
+
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[->](Y1,Y2)
+
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4:+4] plot(\x,{0.25*\x*\x-1});
+
+                    \tkzDrawPoints[fill=white](R1,R2)
+                    \tkzLabelPoint[below left](R1){$x_1$}
+                    \tkzLabelPoint[below right](R2){$x_2$}
+                \end{tikzpicture}
+            }
+        \caption{根的分布的基本情况$3$}
+        \end{center}
+    \end{figure}\\
+    根的分布$3$的条件中若有$k=0$，则该条件相当于满足两根均为正根。\\[3mm]
+    根的分布$3$的参数条件（$k\neq 0$）：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~\Delta>0\\[1mm]
+                ~x_m>k\\[1mm]
+                ~a\cdot f(k)>0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    根的分布$3$的参数条件（$k=0$）：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~\Delta>0\\[1mm]
+                ~x_1+x_2>0\\[1mm]
+                ~x_1\hspace{3.0pt}\cdot\hspace{3.0pt}x_2>0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    如果条件中的大于变为大于等于，那么应有$a\cdot f(k)>0~~\longrightarrow~~a\cdot f(k)\leq 0$。
+
+\newpage
+
+\subsubsection{根的分布的基本情况$4$}
+    根的分布$4$的条件：存在两个根$x_1,x_2$在同一区间内，即$x_1\in(A,B)$，且$x_2\in(A,B)$。\\[3mm]
+    根的分布$4$的条件中的区间参数应当满足$A<B$。\\[3mm]
+    根的分布$4$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \tkzInit[xmin=-7.8,xmax=+7.8,ymin=-6.8,ymax=6.8]
+                \tkzClip
+                
+                \tkzDefPoint(-2.0,0){R1}
+                \tkzDefPoint(+2.0,0){R2}                    
+
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(-7.5,0){X1}
+                \tkzDefPoint(+7.5,0){X2}
+
+                \tkzDefPoint(0,-6.5){M1}
+                \tkzDefPoint(0,+6.5){M2}
+
+                \tkzDefPoint(-4,3){A}
+                \tkzDefPoint(+4,3){B}
+
+                \tkzDefPoint(-4,0){A0}
+                \tkzDefPoint(+4,0){B0}
+
+                \tkzDrawSegment[->](X1,X2)
+                \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+
+                \tkzDrawSegments[dashed](A,A0 B,B0)
+
+                \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-1});
+
+                \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                \tkzLabelPoint[right](M1'){$x=x_m$}
+
+                \tkzDrawPoints[fill=white](R1,R2,A,A0,B,B0)
+                \tkzLabelPoint[below left](R1){$x_1$}
+                \tkzLabelPoint[below right](R2){$x_2$}
+                \tkzLabelPoint[below](A0){$A$}
+                \tkzLabelPoint[below](B0){$B$}
+                \tkzLabelPoint[left](A){$f(A)$}
+                \tkzLabelPoint[right](B){$f(B)$}
+            \end{tikzpicture}
+        \caption{根的分布的基本情况$4$}
+        \end{center}
+    \end{figure}\\
+    根的分布$4$的参数条件：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~\Delta>0\\[1mm]
+                ~a\cdot f(A)>0\\[1mm]
+                ~a\cdot f(B)>0\\[1mm]
+                ~x_m>A\\[1mm]
+                ~x_m<B\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    若参数$A=-\infty$，则$a\cdot f(A)>0$和$x_m>A$的条件作废，此时退化至根的分布$2$。\\[3mm]
+    若参数$B\hspace{1.5pt}=+\infty$，则$a\cdot f(\hspace{1.0pt}B\hspace{1.0pt})>0$和$x_m<B\hspace{1.5pt}$的条件作废，此时退化至根的分布$3$。\\[3mm]
+    若区间中的字母$X=\{A,B\}$一侧的区间改为闭，则$a\cdot f(X)>0$改为$a\cdot f(X)\geq 0$。
+
+\newpage
+
+\subsubsection{根的分布的基本情况$5$}
+    根的分布$5$的条件：存在两个根$x_1,x_2$在不同区间内，即$x_1\in(A,B)$，且$x_2\in(C,D)$。\\[3mm]
+    根的分布$5$的条件中的区间参数应当满足$A<B\leq C<D$。\\[3mm]
+    根的分布$5$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.7]
+                \tkzInit[xmin=-7.8,xmax=+7.8,ymin=-6.8,ymax=6.8]
+                \tkzClip
+                
+                \tkzDefPoint(-2.0,0){R1}
+                \tkzDefPoint(+2.0,0){R2}                    
+
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(-7.5,0){X1}
+                \tkzDefPoint(+7.5,0){X2}
+
+                \tkzDefPoint(0,-6.5){M1}
+                \tkzDefPoint(0,+6.5){M2}
+
+                \tkzDefPoint(-4,3){A}
+                \tkzDefPoint(+4,3){D}
+
+                \tkzDefPoint(-4,0){A0}
+                \tkzDefPoint(+4,0){D0}
+
+                \tkzDefPoint(-1,-0.75){B}
+                \tkzDefPoint(+1,-0.75){C}
+
+                \tkzDefPoint(-1,0){B0}
+                \tkzDefPoint(+1,0){C0}
+
+                \tkzDrawSegment[->](X1,X2)
+                \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+
+                \tkzDrawSegments[dashed](A,A0 B,B0 C,C0 D,D0)
+
+                \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-1});
+
+                \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                \tkzLabelPoint[right](M1'){$x=x_m$}
+
+                \tkzDrawPoints[fill=white](R1,R2,A,A0,B,B0,C,C0,D,D0)
+                \tkzLabelPoint[below left](R1){$x_1$}
+                \tkzLabelPoint[below right](R2){$x_2$}
+                \tkzLabelPoint[below](A0){$A$}
+                \tkzLabelPoint[below](D0){$D$}
+                \tkzLabelPoint[above](B0){$B$}
+                \tkzLabelPoint[above](C0){$C$}
+                \tkzLabelPoint[left](A){$f(A)$}
+                \tkzLabelPoint[right](D){$f(D)$}
+                \tkzLabelPoint[below=2pt](B){$f(B)$}
+                \tkzLabelPoint[below=2pt](C){$f(C)$}
+            \end{tikzpicture}
+        \caption{根的分布的基本情况$5$}
+        \end{center}
+    \end{figure}\\
+    根的分布$5$的参数条件：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~a\cdot f(A)>0\\[1mm]
+                ~a\cdot f(B)<0\\[1mm]
+                ~a\cdot f(C)<0\\[1mm]
+                ~a\cdot f(D)>0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    若参数$A=-\infty$，则$a\cdot f(A)>0$的条件作废。\\[3mm]
+    若参数$D=+\infty$，则$a\cdot f(D)>0$的条件作废。\\[3mm]
+    若区间中的字母$X=\{A,D\}$一侧的区间改为闭，则$a\cdot f(X)>0$改为$a\cdot f(X)\geq 0$。\\[3mm]
+    若区间中的字母$X=\{\hspace{1.0pt}B\hspace{1.0pt},C\}$一侧的区间改为闭，则$a\cdot f(X)<0$改为$a\cdot f(X)\leq 0$。
+
+\newpage
+
+\subsubsection{根的分布的基本情况$6$}
+    根的分布$6$的条件：仅存在一个根$x_0$在某一区间$(A,B)$中。\\[3mm]
+    根的分布$6$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[两根的情况]
+            {
+                \begin{tikzpicture}[scale=0.5]
+
+                    \tkzInit[xmin=-6.8,xmax=+6.8,ymin=-2.8,ymax=2.8]
+                    \tkzClip
+                    
+                    \tkzDefPoint(+0.3284,0){R}                 
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6.5,0){X1}
+                    \tkzDefPoint(+6.5,0){X2}
+    
+                    \tkzDefPoint(-1.5,-1.75){A}
+                    \tkzDefPoint(+1.5,+2.00){B}
+    
+                    \tkzDefPoint(-1.5,0){A0}
+                    \tkzDefPoint(+1.5,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[very thick](A0,B0)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4.3:+4.3] plot(\x-2.5,{0.25*\x*\x-2});
+    
+                    \tkzDrawPoints[fill=white](R,A,A0,B,B0)
+                    \tkzLabelPoint[above left](R){$x_0$}
+                    \tkzLabelPoint[above](A0){$A$}
+                    \tkzLabelPoint[above right](B0){$B$}
+                    \tkzLabelPoint[below](A){$f(A)$}
+                    \tkzLabelPoint[right](B){$f(B)$}
+                \end{tikzpicture}
+            }\quad
+            \subfigure[两根的情况]
+            {
+                \begin{tikzpicture}[scale=0.5]
+
+                    \tkzInit[xmin=-6.8,xmax=+6.8,ymin=-2.8,ymax=2.8]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-0.3284,0){R}                 
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6.5,0){X1}
+                    \tkzDefPoint(+6.5,0){X2}
+    
+                    \tkzDefPoint(-1.5,+2.00){A}
+                    \tkzDefPoint(+1.5,-1.75){B}
+    
+                    \tkzDefPoint(-1.5,0){A0}
+                    \tkzDefPoint(+1.5,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[very thick](A0,B0)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4.3:+4.3] plot(\x+2.5,{0.25*\x*\x-2});
+    
+                    \tkzDrawPoints[fill=white](R,A,A0,B,B0)
+                    \tkzLabelPoint[above right](R){$x_0$}
+                    \tkzLabelPoint[above left](A0){$A$}
+                    \tkzLabelPoint[above](B0){$B$}
+                    \tkzLabelPoint[left](A){$f(A)$}
+                    \tkzLabelPoint[below](B){$f(B)$}
+                \end{tikzpicture}
+            }\\
+            \subfigure[一根的情况]
+            {
+                \begin{tikzpicture}[scale=0.5]
+
+                    \tkzInit[xmin=-8.8,xmax=+8.8,ymin=-2.8,ymax=5.3]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-0.3284,0){R}                 
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-8.5,0){X1}
+                    \tkzDefPoint(+8.5,0){X2}
+    
+                    \tkzDefPoint(-1.5,0.5625){A}
+                    \tkzDefPoint(+1.5,0.5625){B}
+    
+                    \tkzDefPoint(-1.5,0){A0}
+                    \tkzDefPoint(+1.5,0){B0}
+
+                    \tkzDefPoint(0,-2.5){M1}
+                    \tkzDefPoint(0,+5.0){M2}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+                    \tkzDrawSegments[dotted](A,A0 B,B0)
+                    \tkzDrawSegment[very thick](A0,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-4.0:+4.0] plot(\x,{0.25*\x*\x});
+
+                    \tkzDrawPoints[fill=white](O,A,B,A0,B0)
+    
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+
+                    \tkzLabelPoint[below right](R){$x_0$}
+                    \tkzLabelPoint[below](A0){$A$}
+                    \tkzLabelPoint[below](B0){$B$}
+                \end{tikzpicture}
+            }
+        \caption{根的分布的基本情况$6$}
+        \end{center}
+    \end{figure}\\
+    根的分布$6$的参数条件（两根的情况）：
+    \begin{large}
+        \begin{equation*}
+            f(A)\cdot f(B) <0
+        \end{equation*}
+    \end{large}\\
+    根的分布$6$的参数条件（一根的情况）：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~\Delta=0\\[1mm]
+                ~x_m>A\\[1mm]
+                ~x_m<B\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    两种情况分别运算求解后取并集，两种情况间的关系为或。\\[3mm]
+    若$A$一侧区间为闭，则$x_m>A$改为$x_m\geq A$，且$f(A)\cdot f(B)\leq 0~~~($满足$f(\hspace{1.0pt}B\hspace{1.0pt})\neq 0~)$。\\[3mm]
+    若$B\hspace{1.5pt}$一侧区间为闭，则$x_m>B\hspace{1.5pt}$改为$x_m\geq B\hspace{1.5pt}$，且$f(A)\cdot f(B)\leq 0~~~($满足$f(A)\neq 0~)$。\\[3mm]
+    若两侧同时为闭，那么$f(A)\cdot f(B)\leq 0$后的条件应当改为$f(A),f(B)$不能同时为零。
+
+\newpage
+
+\subsubsection{根的分布的基本情况$7$}
+    根的分布$7$的条件：对于$\forall x\in (A,B)$，满足$ax^2+bx+c>0$成立。\\[3mm]
+    根的分布$7$的反面：对于$\exists x\in (A,B)$，满足$ax^2+bx+c\leq 0$成立。\\[3mm]
+    根的分布$7$中仅讨论$a>0$的情况，当$a<0$时可以两侧同乘$-1$化归至根的分布$8$。\\[3mm]
+    根的分布$7$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[对称轴在区间左侧的情况]
+            {
+                \begin{tikzpicture}[scale=0.40]
+                    \tkzInit[xmin=-6.8,xmax=+6.8,ymin=-3.2,ymax=5.8]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6.5,0){X1}
+                    \tkzDefPoint(+6.5,0){X2}
+    
+                    \tkzDefPoint(0,-2.8){M1}
+                    \tkzDefPoint(0,+5.5){M2}
+    
+                    \tkzDefPoint(3,1.25){A}
+                    \tkzDefPoint(4,3.00){B}
+    
+                    \tkzDefPoint(3,0){A0}
+                    \tkzDefPoint(4,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-1.00});
+                    \draw[color=LiBlue1,dashed,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-2.25});
+    
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+    
+                    \tkzDrawPoints[fill=white](A,A0,B,B0)
+                    \tkzLabelPoint[below](A0){$A$}
+                    \tkzLabelPoint[below](B0){$B$}
+                    \tkzLabelPoint[left](A){$f(A)$}
+                    \tkzLabelPoint[left](B){$f(B)$}
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[对称轴在区间右侧的情况]
+            {
+                \begin{tikzpicture}[scale=0.40]
+                    \tkzInit[xmin=-6.8,xmax=+6.8,ymin=-3.2,ymax=5.8]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6.5,0){X1}
+                    \tkzDefPoint(+6.5,0){X2}
+    
+                    \tkzDefPoint(0,-2.8){M1}
+                    \tkzDefPoint(0,+5.5){M2}
+    
+                    \tkzDefPoint(-3,1.25){A}
+                    \tkzDefPoint(-4,3.00){B}
+    
+                    \tkzDefPoint(-3,0){A0}
+                    \tkzDefPoint(-4,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-1.00});
+                    \draw[color=LiBlue1,dashed,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-2.25});
+    
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+    
+                    \tkzDrawPoints[fill=white](A,A0,B,B0)
+                    \tkzLabelPoint[below](A0){$B$}
+                    \tkzLabelPoint[below](B0){$A$}
+                    \tkzLabelPoint[right](A){$f(B)$}
+                    \tkzLabelPoint[right](B){$f(A)$}
+                \end{tikzpicture}
+            }\\
+            \subfigure[对称轴在区间内的情况]
+            {
+                \begin{tikzpicture}[scale=0.40]
+                    \tkzInit[xmin=-9.8,xmax=+9.8,ymin=-3.2,ymax=6.3]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-9.5,0){X1}
+                    \tkzDefPoint(+9.5,0){X2}
+    
+                    \tkzDefPoint(0,-2.8){M1}
+                    \tkzDefPoint(0,+6.0){M2}
+    
+                    \tkzDefPoint(-3,1.25){A}
+                    \tkzDefPoint(+3,1.25){B}
+    
+                    \tkzDefPoint(-3,0){A0}
+                    \tkzDefPoint(+3,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-1.00});
+                    \draw[color=LiBlue1,dashed,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-2.25});
+    
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+    
+                    \tkzDrawPoints[fill=white](A,A0,B,B0)
+                    \tkzLabelPoint[below](A0){$A$}
+                    \tkzLabelPoint[below](B0){$B$}
+                    \tkzLabelPoint[right](A){$f(A)$}
+                    \tkzLabelPoint[left](B){$f(B)$}
+                \end{tikzpicture}
+            }
+        \caption{根的分布的基本情况$7$}
+        \end{center}
+    \end{figure}\\
+    根的分布的基本情况$7$的参数条件：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~x_m\leq A\\[1mm]
+                ~f(A)\geq 0\\[1mm]
+            \end{cases}~~\text{或}~~~~~~
+            \begin{cases}
+                ~x_m\geq B\\[1mm]
+                ~f(B)\geq 0\\[1mm]
+            \end{cases}~~\text{或}~~~~~~
+            \begin{cases}
+                ~A<x<B\\[1mm]
+                ~\Delta <0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    条件中的$x\in (A,B)$的开闭关系与第三组条件的$A<x<B$相锁定，其余两组条件自动补齐。\\[3mm]
+    在$ax^2+bx+c>0$时应当有$\Delta<0$，在$ax^2+bx+c\geq 0$时应当有$\Delta \leq 0$。\\[3mm]
+    在$ax^2+bx+c>0$时，若$A$侧区间为开则$f(A)\geq 0$，若$A$侧区间为闭合则$f(A)>$0。\\[3mm]
+    在$ax^2+bx+c>0$时，若$B\hspace{1.5pt}$侧区间为开则$f(\hspace{1.0pt}B\hspace{1.0pt})\geq 0$，若$B\hspace{1.5pt}$侧区间为闭合则$f(\hspace{1.0pt}B\hspace{1.0pt})>$0。\\[3mm]
+    在$ax^2+bx+c\geq 0$时，始终有$f(A)\geq 0$和$f(B)\geq 0$。
+    
+\newpage
+
+\subsubsection{根的分布的基本情况$8$}
+    根的分布$8$的条件：对于$\forall x\in (A,B)$，满足$ax^2+bx+c<0$成立。\\[3mm]
+    根的分布$8$的反面：对于$\exists x\in (A,B)$，满足$ax^2+bx+c\geq 0$成立。\\[3mm]
+    根的分布$8$中仅讨论$a>0$的情况，当$a<0$时可以两侧同乘$-1$化归至根的分布$7$。\\[3mm]
+    根的分布$8$的示意图：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[对称轴在区间左侧的情况]
+            {
+                \begin{tikzpicture}[scale=0.40]
+                    \tkzInit[xmin=-6.8,xmax=+6.8,ymin=-6.7,ymax=5.8]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6.5,0){X1}
+                    \tkzDefPoint(+6.5,0){X2}
+    
+                    \tkzDefPoint(0,-6.4){M1}
+                    \tkzDefPoint(0,+5.5){M2}
+    
+                    \tkzDefPoint(1,-3.75){A}
+                    \tkzDefPoint(3.52,-0.9){B}
+    
+                    \tkzDefPoint(1,0){A0}
+                    \tkzDefPoint(3.52,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-4.00});
+                    \draw[color=LiBlue1,dashed,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-3.10});
+    
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+    
+                    \tkzDrawPoints[fill=white](A,A0,B,B0)
+                    \tkzLabelPoint[above](A0){$A$}
+                    \tkzLabelPoint[above](B0){$B$}
+                    \tkzLabelPoint[right](A){$f(A)$}
+                    \tkzLabelPoint[right](B){$f(B)$}
+                \end{tikzpicture}
+            }\qquad
+            \subfigure[对称轴在区间右侧的情况]
+            {
+                \begin{tikzpicture}[scale=0.40]
+                    \tkzInit[xmin=-6.8,xmax=+6.8,ymin=-6.0,ymax=5.8]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6.5,0){X1}
+                    \tkzDefPoint(+6.5,0){X2}
+    
+                    \tkzDefPoint(0,-5.5){M1}
+                    \tkzDefPoint(0,+5.5){M2}
+    
+                    \tkzDefPoint(-1,-3.75){A}
+                    \tkzDefPoint(-3.52,-0.9){B}
+    
+                    \tkzDefPoint(-1,0){A0}
+                    \tkzDefPoint(-3.52,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-4.00});
+                    \draw[color=LiBlue1,dashed,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-3.10});
+    
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+    
+                    \tkzDrawPoints[fill=white](A,A0,B,B0)
+                    \tkzLabelPoint[above](A0){$B$}
+                    \tkzLabelPoint[above](B0){$A$}
+                    \tkzLabelPoint[left](A){$f(B)$}
+                    \tkzLabelPoint[left](B){$f(A)$}
+                \end{tikzpicture}
+            }\\
+            \subfigure[对称轴在区间内的情况]
+            {
+                \begin{tikzpicture}[scale=0.40]
+                    \tkzInit[xmin=-9.8,xmax=+9.8,ymin=-6.0,ymax=5.8]
+                    \tkzClip
+                    
+                    \tkzDefPoint(-2.0,0){R1}
+                    \tkzDefPoint(+2.0,0){R2}                    
+    
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-9.5,0){X1}
+                    \tkzDefPoint(+9.5,0){X2}
+    
+                    \tkzDefPoint(0,-5.5){M1}
+                    \tkzDefPoint(0,+5.5){M2}
+    
+                    \tkzDefPoint(-3.52,-0.9){A}
+                    \tkzDefPoint(+3.52,-0.9){B}
+    
+                    \tkzDefPoint(-3.52,0){A0}
+                    \tkzDefPoint(+3.52,0){B0}
+    
+                    \tkzDrawSegment[->](X1,X2)
+                    \tkzDrawSegment[color=MediumGray,dashed](M1,M2)
+    
+                    \tkzDrawSegments[dashed](A,A0 B,B0)
+    
+                    \draw[color=LiBlue1,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-4.00});
+                    \draw[color=LiBlue1,dashed,smooth,thick,samples=100,domain=-5:+5] plot(\x,{0.25*\x*\x-3.10});
+    
+                    \tkzDefShiftPoint[M1](0,-0.1){M1'}
+                    \tkzLabelPoint[right](M1'){$x=x_m$}
+    
+                    \tkzDrawPoints[fill=white](A,A0,B,B0)
+                    \tkzLabelPoint[above](A0){$A$}
+                    \tkzLabelPoint[above](B0){$B$}
+                    \tkzLabelPoint[left](A){$f(A)$}
+                    \tkzLabelPoint[right](B){$f(B)$}
+                \end{tikzpicture}
+            }
+        \caption{根的分布的基本情况$8$}
+        \end{center}
+    \end{figure}\\
+    根的分布的基本情况$8$的参数条件：
+    \begin{large}
+        \begin{equation*}
+            \begin{cases}
+                ~f(A)\leq 0\\[1mm]
+                ~f(B)\leq 0\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    在$ax^2+bx+c>0$时，若$A$侧取开区间则$f(A)\leq 0$，若$A$侧取闭区间则$f(A)< 0$。\\[3mm]
+    在$ax^2+bx+c>0$时，若$B\hspace{1.5pt}$侧取开区间则$f(\hspace{1.0pt}B\hspace{1.0pt})\leq 0$，若$B\hspace{1.5pt}$侧取闭区间则$f(\hspace{1.0pt}B\hspace{1.0pt})< 0$。\\[3mm]
+    在$ax^2+bx+c\geq 0$时，始终有$f(A)\leq 0$和$f(B)\leq 0$。
+
+\newpage
+
+\subsection{反函数}
+    函数的定义域和值域的关系可以分为两种：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[多对一的情况]
+            {
+                \begin{tikzpicture}[scale=0.9]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-2,0){E1}
+                    \tkzDefPoint(+2,0){E2}
+
+                    \draw (E1) ellipse (1 and 2);
+                    \draw (E2) ellipse (1 and 2);
+                    \node at(E1) {$D$};
+                    \node at(E2) {$A$};
+
+                    \node at(O){$y=x^2$};
+
+                    \tkzDefShiftPoint[E1](0,-1.50){D1}
+                    \tkzDefShiftPoint[E1](0,-0.75){D2}
+                    \tkzDefShiftPoint[E1](0,+0.75){D3}
+                    \tkzDefShiftPoint[E1](0,+1.50){D4}
+
+                    \tkzDefShiftPoint[E2](0,-1.125){A1}
+                    \tkzDefShiftPoint[E2](0,+1.125){A4}
+
+                    \foreach \n/\i in {-1/1,+1/2,-2/3,+2/4}
+                    {
+                        \node at(D\i) {$\n$};
+                    }
+
+                    \foreach \n/\i in {+1/1,+4/4}
+                    {
+                        \node at(A\i) {$\n$};
+                    }
+
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D1,A1)
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D2,A1)
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D3,A4)
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D4,A4)
+                \end{tikzpicture}
+            }\qquad\qquad
+            \subfigure[一对一的情况]
+            {
+                \begin{tikzpicture}[scale=0.9]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-2,0){E1}
+                    \tkzDefPoint(+2,0){E2}
+
+                    \draw (E1) ellipse (1 and 2);
+                    \draw (E2) ellipse (1 and 2);
+                    \node at(E1) {$D$};
+                    \node at(E2) {$A$};
+
+                    \node at(O){$y=x^3$};
+
+                    \tkzDefShiftPoint[E1](0,-1.50){D1}
+                    \tkzDefShiftPoint[E1](0,-0.75){D2}
+                    \tkzDefShiftPoint[E1](0,+0.75){D3}
+                    \tkzDefShiftPoint[E1](0,+1.50){D4}
+
+                    \tkzDefShiftPoint[E2](0,-1.50){A1}
+                    \tkzDefShiftPoint[E2](0,-0.75){A2}
+                    \tkzDefShiftPoint[E2](0,+0.75){A3}
+                    \tkzDefShiftPoint[E2](0,+1.50){A4}
+
+                    \foreach \n/\i in {-1/1,+1/2,-2/3,+2/4}
+                    {
+                        \node at(D\i) {$\n$};
+                    }
+
+                    \foreach \n/\i in {-1/1,+1/2,-8/3,+8/4}
+                    {
+                        \node at(A\i) {$\n$};
+                    }
+
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D1,A1)
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D2,A2)
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D3,A3)
+                    \tkzDrawSegment[->,add=-0.10 and -0.15](D4,A4)
+                \end{tikzpicture}
+            }
+            \caption{函数关系的分类}
+        \end{center}
+    \end{figure}\\
+    在函数$y=x^2$中，定义域中的多个元素对应值域中的一个元素（多对一）。\\[3mm]
+    在函数$y=x^3$中，定义域中的一个元素对应值域中的一个元素（一对一）。\\[3mm]
+    反函数的定义：对于函数$f(x)$，设其定义域为$D$，设其值域为$A$，若依照一个对应关系$f^{-1}(y)$，
+    使$A$中任意一个$y$在$B$中都有唯一确定的$x$与之对应，则称$y=f(x)$的反函数为$x=f^{-1}(y)$。\\[3mm]
+    反函数只有当函数$f(x)$的定义域$D$中的元素和值域$A$中的元素一一对应时才存在。\\[3mm]
+    反函数和函数的关系可以通过下图呈现：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.8]
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(-4,0){E1}
+                \tkzDefPoint(+4,0){E2}
+
+                \draw (E1) ellipse (1 and 1.8);
+                \draw (E2) ellipse (1 and 1.8);
+
+                \tkzDefShiftPoint[E1](0,-0.75){D1}
+                \tkzDefShiftPoint[E1](0,+0.75){D2}
+
+                \tkzDefShiftPoint[E2](0,-0.75){A1}
+                \tkzDefShiftPoint[E2](0,+0.75){A2}
+
+                \tkzDrawSegment[->,add=-0.17 and -0.17](A1,D1)
+                \tkzDrawSegment[->,add=-0.17 and -0.17](D2,A2)
+
+                \node at(D2){$D$};
+                \node at(A2){$A$};
+
+                \node at(D1){$x\in D$};
+                \node at(A1){$y\in A$};
+
+                \tkzLabelSegment[above](D2,A2){$y=f(x)$}
+                \tkzLabelSegment[above](D1,A1){$x=f^{-1}(y)$}
+            \end{tikzpicture}
+            \caption{反函数和原函数的关系}
+        \end{center}
+    \end{figure}\\
+    反函数$x=f^{-1}(y)$为适应函数表达的习惯，常改写为$y=f^{-1}(x)$。\\[3mm]
+    反函数和函数的关系可以通过下表展现：
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{p{120pt}|p{80pt}|p{80pt}}
+                \hline
+                ~&定义域&值域\\ \hline
+                原函数$y=f(x)$&$x\in D$&$y\in A$\\ \hline
+                反函数$y=f^{-1}(x)$&$x\in A$&$y\in D$\\ \hline
+            \end{tabular}
+            \caption{反函数和原函数的关系}
+        \end{center}
+    \end{table}\\
+    反函数的求解分为以下三步：求解原函数的值域，将$x$用$y$反表示，交换$x$和$y$的位置。
 
 \newpage
 
@@ -6453,220 +7722,1272 @@
 \newpage
 
 \section{数列}
-    递推公式形容了数列中任意一项与其前一项之间的关系。\\[3mm]
-    通项公式形容了数列中任意一项与其序数的关系。
+
+\subsection{数列的定义}
+    数列指的是按照一定顺序排列起来的一列数。\\[3mm]
+    数列中的每一个数称为这个数列的项，数列中的项的数量称为项数。\\[3mm]
+    数列可以记作：
+    \begin{large}
+        \begin{equation*}
+            ~~\{a_n\}=a_1,a_2,a_3,\cdots,a_n,\cdots
+        \end{equation*}
+    \end{large}\\
+    其中$a_n$代表数列$\{a_n\}$的第$n$项，同时$a_n$中的$n$称为项的序号。\\[6mm]
+    数列中的项的序号$n$可以唯一确定项$a_n$，因此两者可以用函数关系表达。\\[3mm]
+    数列$\{a_n\}$可以视作函数$a=f(n),n\in\mathbb{N^*}$的$n$从小到大依次取值时$f(n)$所对应的一列数。\\[3mm]
+    数列中的项$a_n$和项的序数$n$间的函数关系称为通项公式：
+    \begin{large}
+        \begin{equation*}
+            a_n=f(n)~~~~~~n\in\mathbb{N^*}
+        \end{equation*}
+    \end{large}\\
+    数列在坐标系中的图像为一系列离散的点：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure[通项公式$a_n=\dfrac{n^2}{4}$的情况]
+            {
+                \begin{tikzpicture}[scale=0.45]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6,0){X1}
+                    \tkzDefPoint(+6,0){X2}
+                    \tkzDefPoint(0,-8.2){Y1}
+                    \tkzDefPoint(0,+8.2){Y2}
+
+                    \tkzDrawSegments[->](X1,X2 Y1,Y2)
+
+                    \tkzLabelPoint[above](X2){$n$}
+                    \tkzLabelPoint[right](Y2){$a_n$}
+    
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-5.2:+5.2] plot(\x,{0.25*\x*\x});
+
+                    \foreach \x/\y in{1/0.25,2/1,3/2.25,4/4,5/6.25}
+                    {
+                        \tkzDefPoint(\x,\y){A}
+                        \tkzDefPoint(\x,0){B}
+
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+
+                        \tkzLabelPoint[below](B){$\x$}
+                    }
+                \end{tikzpicture}
+            }\qquad\qquad
+            \subfigure[通项公式$a_n=\dfrac{3}{n}$的情况]
+            {
+                \begin{tikzpicture}[scale=0.45]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6,0){X1}
+                    \tkzDefPoint(+6,0){X2}
+                    \tkzDefPoint(0,-8.2){Y1}
+                    \tkzDefPoint(0,+8.2){Y2}
+
+                    \tkzDrawSegments[->](X1,X2 Y1,Y2)
+
+                    \tkzLabelPoint[above](X2){$n$}
+                    \tkzLabelPoint[right](Y2){$a_n$}
+    
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=+0.45:+5.2] plot(\x,{3/\x});
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-5.2:-0.45] plot(\x,{3/\x});
+
+                    \foreach \x/\y in{1/3,2/1.5,3/1,4/0.75,5/0.600}
+                    {
+                        \tkzDefPoint(\x,\y){A}
+                        \tkzDefPoint(\x,0){B}
+
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+
+                        \tkzLabelPoint[below](B){$\x$}
+                    }
+                \end{tikzpicture}
+            }
+            \caption{数列的图像表示}
+        \end{center}
+    \end{figure}\\
+    数列的图像中，横坐标对应项的序数$n$，纵坐标对应项$a_n$，图像上的坐标点为$(n,a_n)$。
+
+\newpage
+
+\subsection{数列的概念}
+    有穷数列指的是项数有限的数列，无穷数列指的是项数有限的数列。\\[3mm]
+    递增数列需要满足后一项总大于前一项，用数学语言可以表达为$\forall n\in\mathbb{N^*}~~a_{n+1}>a_{n}$。\\[3mm]
+    递减数列需要满足后一项总小于前一项，用数学语言可以表达为$\forall n\in\mathbb{N^*}~~a_{n+1}<a_{n}$。\\[3mm]
+    常数列需要满足每一项都相等），用数学语言可以表达为$\forall n,m\in\mathbb{N^*}~~a_n=a_m$。\\[3mm]
+    满足以下形式的数列：
+    \begin{large}
+        \begin{equation*}
+            \forall n\in\mathbb{N^*}~~~~~~|a_m|\leq M~~~~(M\in\mathbb{R^+})
+        \end{equation*}
+    \end{large}\\
+    即若存在正常数$M$使每一项的绝对值$|a_n|$均小于等于$M$，则称有界数列，否则称无界数列。\vspace{5pt}
+
+\subsubsection{数列的递推公式}
+    数列的通项公式描述了数列中任意一项与其序号的关系。\\[3mm]
+    数列的通项公式描述了数列中任意一项与其序号和前若干项的关系。\\[3mm]
+    数列的递推公式可以一般的表达为：
+    \begin{large}
+        \begin{equation*}
+            F(n,a_n,a_{n-1},a_{n-2},\cdots)=0
+        \end{equation*}
+    \end{large}\\
+    数列的递推公式中最为常见的形式是$a_n=f(n,a_{n-1})$，即递推关系只关于前一项。\vspace{3pt}
+
+\subsubsection{数列的求和公式}
+    数列的求和公式描述了数列中前若干项的和。\\[3mm]
+    数列的求和公式可以一般的表达为：
+    \begin{large}
+        \begin{equation*}
+            S_n=\sum_{i=1}^{n}a_i=a_1+a_2+\cdots+a_n
+        \end{equation*}
+    \end{large}\\
+    数列的求和可以逆向求出通项公式：
+    \begin{large}
+        \begin{equation*}
+            a_n=
+            \begin{cases}
+                S_1\hspace{30pt}~~~~(n=1)\\[1mm]
+                S_n-S_{n-1}~~~~(n\geq 2)\\[1mm]
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    其中$S_n$称为数列$\{a_n\}$的前$n$项和，数列$\{a_n\},\{b_n\}$的前$n$项和可以分别记作$A_n,B_n$。
+
+\newpage
 
 \subsection{等差数列}
-    等差数列中，相邻项之间的差等于一个常数，
-    这个常数称为公差，通常用$d$表述。
-
-\subsubsection{等差数列的递推公式}
-    根据等差数列的定义，我们可以得到等差数列的递推公式：
+    等差数列又称为算数数列（arithmetic progression），故可以简记为A.P.。\\[3mm]
+    等差数列定义为任意两项差相等的数列，该差值称为公差，记作$d$。\\[3mm]
+    等差数列用递推公式定义为：
     \begin{large}
-    \begin{equation*}
-        a_n=a_{n-1}+d
-    \end{equation*}    
-    \end{large}
+        \begin{equation*}
+            a_{n+1}=a_n+d~~~~~~n\in\mathbb{N^*}
+        \end{equation*}
+    \end{large}\\
+    即两项间的差恒为定值的数列称为等差数列。
 
 \subsubsection{等差数列的通项公式}
-    通过递推公式，我们可以得到等差数列的通项公式：
+    \setcounter{equation}{0}
+    等差数列的通项公式：
     \begin{large}
-    \begin{equation*}
-        a_n=a_1+(n-1)\cdot d
-    \end{equation*}
-    \end{large}
+        \begin{equation*}
+            a_n=a_1+d\cdot(n-1)
+        \end{equation*}
+    \end{large}\\
+    等差数列的基本性质：
+    \begin{large}
+        \begin{equation*}
+            a_1=a_x+d\cdot(n-x)
+        \end{equation*}
+    \end{large}\\
+    根据等差数列的定义：
+    \begin{align}
+        \begin{cases}
+            ~a_{n}=a_{n-1}+d\\[3mm]
+            ~a_{n-1}=a_{n-2}+d\\[3mm]
+            ~a_{n-2}=a_{n-3}+d\\[3mm]
+            ~\vdots~~~\text{（共$n-x$项）}\\[3mm]
+            ~a_{x+1}=a_{x}+d\\[1mm]
+        \end{cases}~\Longrightarrow~~~~~~
+        \begin{cases}
+            ~a_{n}-a_{n-1}=d\\[3mm]
+            ~a_{n-1}-a_{n-2}=d\\[3mm]
+            ~a_{n-2}-a_{n-3}=d\\[3mm]
+            ~\vdots~~~\text{（共$n-x$项）}\\[3mm]
+            ~a_{x+1}-a_{x}=d\\[1mm]
+        \end{cases}
+    \end{align}\\
+    将上述式子叠加可以得到：
+    \begin{align}
+        &a_n-a_x=d\cdot(n-x)\\[3mm]
+        &a_n=a_x+d\cdot(n-x)
+    \end{align}\\
+    如果令$x=1$则可以得到：
+    \begin{align}
+        &a_n=a_1+d\cdot(n-1)
+    \end{align}\\
+    由此证明了等差数列的基本性质和通项公式。
+
+\newpage
 
 \subsubsection{等差数列的求和公式}
-    等差数列的求和公式通常可以表述为以下三种形式：\\[4mm]
-    关于首项和末项：
+    \setcounter{equation}{0}
+    等差数列的求和公式$1$：
     \begin{large}
-    \begin{equation*}
-        S_n=\frac{(a_1+a_n)\cdot n}{2}
-    \end{equation*}
+        \begin{equation*}
+            S_n=\frac{1}{2}\cdot n\cdot(a_1+a_n)
+        \end{equation*}
     \end{large}\\
-    关于首项和公差：
+    等差数列的求和公式$2$：
     \begin{large}
-    \begin{equation*}
-        S_n=n\cdot a_1+\frac{(n^2-n)}{2}\cdot d
-    \end{equation*}
+        \begin{equation*}
+            S_n=\frac{d}{2}\cdot n^2+\left(a_1-\frac{d}{2}\right)\cdot n
+        \end{equation*}
     \end{large}\\
-    关于序数：
-    \begin{large}
-    \begin{equation*}
-        S_n=\frac{d}{2}\cdot n^2+(a_1-\frac{d}{2})\cdot n
-    \end{equation*}
-    \end{large}
+    等差数列的前$n$项和既可以表达为：
+    \begin{align}
+        S_n=\overbrace{a_1+a_2+a_3+\cdots+a_n}^{\text{共}n\text{项}}
+    \end{align}\\
+    等差数列的前$n$项和也可以表达为：
+    \begin{align}
+        S_n=\overbrace{a_n+a_{n-1}+a_{n-2}+\cdots+a_1}^{\text{共}n\text{项}}
+    \end{align}\\
+    两者相加可以得到：
+    \begin{align}
+        &~~2S_n=\overbrace{(a_1+a_n)+(a_2+a_{n-1})+(a_3+a_{n-2})+\cdots+(a_n+a_2)}^{\text{共}n\text{项}}\\[3mm]
+        &\begin{cases}
+            ~a_1+a_{n-0}=[a_1+0\cdot d]+[a_1+(n-1)\cdot d]=2a_1+(n-1)\cdot d=a_1+a_n\\[1mm]
+            ~a_2+a_{n-1}=[a_1+1\cdot d]+[a_1+(n-2)\cdot d]=2a_1+(n-1)\cdot d=a_1+a_n\\[1mm]
+            ~a_3+a_{n-2}=[a_1+2\cdot d]+[a_1+(n-3)\cdot d]=2a_1+(n-1)\cdot d=a_1+a_n\\[1mm]
+            ~\vdots~~\text{（共}~n~\text{项）}\\[1mm]
+            ~a_n+a_{1}=[a_1+(n-1)\cdot d]+[a_1+0\cdot d]=2a_1+(n-1)\cdot d=a_1+a_n\\[1mm]
+        \end{cases}\\[3mm]
+        &~~2S_n=n\cdot (a_1+a_n)\\[3mm]
+        &~~S_n=\frac{1}{2}\cdot n\cdot (a_1+a_n)\\[3mm]
+        &~~S_n=\frac{1}{2}\cdot [d\cdot n^2+(2a_1-d)\cdot n]\\[3mm]
+        &~~S_n=\frac{d}{2}\cdot n^2+\left(a_1-\frac{d}{2}\right)\cdot n
+    \end{align}\\
+    由此运用倒序相加法证明了等差数列的求和公式。
 
 \newpage
 
-\subsection{等比数列}
-    等比数列中，相邻项之间的比等于一个常数，
-    这个常数称为公比，通常用$q$来表达。
-
-\subsubsection{等比数列的递推公式}
-    根据等比数列的定义，我们可以得到等比数列的递推公式：
+\subsubsection{等差中项的概念}
+    \setcounter{equation}{0}
+    等差数列$a,A,b$中的常数$A$称为常数$a,b$的等差中项。\\[3mm]
+    等差中项满足条件：
     \begin{large}
-    \begin{equation*}
-        a_n=a_{n-1}\cdot q
-    \end{equation*}    
+        \begin{equation*}
+            a+b=2A
+        \end{equation*}
+    \end{large}\\
+    等差中项的条件可以证明如下：
+    \begin{align}
+        &a+b=a+(a+2d)\\[3mm]
+        &a+b=2\cdot(a+d)\\[3mm]
+        &a+b=2\cdot A
+    \end{align}\\
+    等差中项可以等价定义等差数列：
+    \begin{large}
+        \begin{equation*}
+            \forall n\in\mathbb{N^*},n\geq 2~~~~~~~~a_{n-1}+a_{n+1}=2a_n~~\Longleftrightarrow~~\{a_n\}=\text{A.P.}
+        \end{equation*}
     \end{large}
+
+\subsubsection{等差数列的下标和性质}
+    \setcounter{equation}{0}
+    等差数列的下标和性质：等差数列$\{a_n\}$中，若有两组项的下标和相等，则这两组项的和相等。\\[3mm]
+    等差数列的下标和性质的数学表达：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=1}^n p_i=\sum_{i=1}^n q_i~~~~\Longleftrightarrow~~~~\sum_{i=1}^n a_{p_i}=\sum_{i=1}^n a_{q_i}
+        \end{equation*}
+    \end{large}\\
+    由等式左侧出发可以得到：
+    \begin{align}
+        &\sum_{i=1}^n a_{p_i}=n\cdot a_1+\left[\sum_{i=1}^n p_i-1\right]\cdot d\\[3mm]
+        &\sum_{i=1}^n a_{p_i}=n\cdot a_1+\left[\left(\sum_{i=1}^n p_i\right)-n\right]\cdot d
+    \end{align}\\
+    由等式右侧出发可以得到：
+    \begin{align}
+        &\sum_{i=1}^n a_{q_i}=n\cdot a_1+\left[\sum_{i=1}^n q_i-1\right]\cdot d\\[3mm]
+        &\sum_{i=1}^n a_{q_i}=n\cdot a_1+\left[\left(\sum_{i=1}^n q_i\right)-n\right]\cdot d
+    \end{align}\\
+    根据下标和性质的条件可以证明两者相等。
+
+\newpage
+
+\subsubsection{等差数列的通项公式的一般形式}
+    \setcounter{equation}{0}
+    等差数列的通项公式的一般形式：
+    \begin{large}
+        \begin{equation*}
+            a_n\triangleq A\cdot n+B
+        \end{equation*}
+    \end{large}\\
+    等差数列的通项公式的参数关系：
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~
+            \begin{cases}
+                ~A=d\\[3mm]
+                ~B=a_1-d
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~d=A\\[3mm]
+                ~a_1=A+B
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    等差数列的通项公式是一次函数：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.55]
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(-6,0){X1}
+                \tkzDefPoint(+6,0){X2}
+                \tkzDefPoint(0,-8.2){Y1}
+                \tkzDefPoint(0,+8.2){Y2}
+
+                \tkzDrawSegments[->](X1,X2 Y1,Y2)
+
+                \tkzLabelPoint[above](X2){$n$}
+                \tkzLabelPoint[right](Y2){$a_n$}
+
+                \draw[smooth,thick,color=MediumGray,samples=100,domain=-1.5:+5.3] plot(\x,{2.0*\x-3});
+
+                \foreach \x/\y in{1/-1}
+                {
+                    \tkzDefPoint(\x,\y){A}
+                    \tkzDefPoint(\x,0){B}
+
+                    \tkzDrawSegment[dashed,color=MediumGray](A,B)
+
+                    \tkzDrawPoint[fill=black](A)
+                    \tkzDrawPoint[fill=white](B)
+
+                    \tkzLabelPoint[above](B){$\x$}
+                }
+
+                \foreach \x/\y in{2/1,3/3,4/5,5/7}
+                {
+                    \tkzDefPoint(\x,\y){A}
+                    \tkzDefPoint(\x,0){B}
+
+                    \tkzDrawSegment[dashed,color=MediumGray](A,B)
+
+                    \tkzDrawPoint[fill=black](A)
+                    \tkzDrawPoint[fill=white](B)
+
+                    \tkzLabelPoint[below](B){$\x$}
+                }
+            \end{tikzpicture}
+            \caption{等差数列的通项公式的图像}
+        \end{center}
+    \end{figure}\\
+    这一点可以由通项公式的简单变形证明：
+    \begin{align}
+        &a_n=a_1+(n-1)\cdot d\\[3mm]
+        &a_n=d\cdot n+(a_1-d)\\[3mm]
+        &a_n=A\cdot n+B
+    \end{align}\\
+    由此证明了等差数列的通项公式的一般形式成立。
+
+\newpage
+
+\subsubsection{等差数列的求和公式的一般形式}
+    \setcounter{equation}{0}
+    等差数列的求和公式的一般形式：
+    \begin{large}
+        \begin{equation*}
+            S_n\triangleq A\cdot n^2+B\cdot n
+        \end{equation*}
+    \end{large}\\
+    等差数列的求和公式的参数关系：
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~
+            \begin{cases}
+                ~A=\dfrac{d}{2}\\[4mm]
+                ~B=a_1-\dfrac{d}{2}
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~d=2A\vphantom{\dfrac{1}{1}}\\[4mm]
+                ~a_1=A+B\vphantom{\dfrac{1}{1}}
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    等差数列的求和公式是没有常数项的二次函数：
+    \begin{figure}[h]
+        \begin{center}
+            \begin{tikzpicture}[scale=0.55]
+                \tkzDefPoint(0,0){O}
+                \tkzDefPoint(-6,0){X1}
+                \tkzDefPoint(+6,0){X2}
+                \tkzDefPoint(0,-8.2){Y1}
+                \tkzDefPoint(0,+8.2){Y2}
+
+                \tkzDrawSegments[->](X1,X2 Y1,Y2)
+
+                \tkzLabelPoint[above](X2){$n$}
+                \tkzLabelPoint[right](Y2){$a_n$}
+
+                \draw[smooth,thick,color=MediumGray,samples=100,domain=-3.0:+5.5] plot(\x,{0.4*\x*\x-\x});
+
+                \tkzDefPoint(1.25,-7.5){L1}
+                \tkzDefPoint(1.25,+7.5){L2}
+
+                \tkzDrawSegment[dashed,color=MediumGray](L1,L2)
+
+                \foreach \x/\y in{1/-0.6,2/-0.4}
+                {
+                    \tkzDefPoint(\x,\y){A}
+                    \tkzDefPoint(\x,0){B}
+
+                    \tkzDrawSegment[dashed,color=MediumGray](A,B)
+
+                    \tkzDrawPoint[fill=black](A)
+                    \tkzDrawPoint[fill=white](B)
+
+                    \tkzLabelPoint[above](B){$\x$}
+                }
+
+                \foreach \x/\y in{3/0.6,4/2.4,5/5}
+                {
+                    \tkzDefPoint(\x,\y){A}
+                    \tkzDefPoint(\x,0){B}
+
+                    \tkzDrawSegment[dashed,color=MediumGray](A,B)
+
+                    \tkzDrawPoint[fill=black](A)
+                    \tkzDrawPoint[fill=white](B)
+
+                    \tkzLabelPoint[below](B){$\x$}
+                }
+            \end{tikzpicture}
+            \caption{等差数列的求和公式的图像}
+        \end{center}
+    \end{figure}\\
+    这一点可以由求和公式的简单变形证明：
+    \begin{align}
+        &S_n=\frac{d}{2}\cdot n^2+(a_1-\frac{d}{2})\cdot n\\[3mm]
+        &S_n=A\cdot n^2+B\cdot n
+    \end{align}\\
+    由此证明了等差数列的求和公式的一般形式成立。
+
+\newpage
+    
+\subsection{等比数列}
+    等比数列又称为几何数列（geometric progression），故可以简记为G.P.。\\[3mm]
+    等比数列定义为任意两项比相等的数列，该差值称为公比，记作$q$。\\[3mm]
+    等比数列用递推公式定义为：
+    \begin{large}
+        \begin{equation*}
+            a_{n+1}=a_n\cdot q~~~~~~n\in\mathbb{N^*}
+        \end{equation*}
+    \end{large}\\
+    即两项间的比恒为定值的数列称为等比数列，其中应满足$a_1\neq 0$且$q\neq 0$。
 
 \subsubsection{等比数列的通项公式}
-    通过递推公式，我们可以得到等比数列的通项公式：
+    \setcounter{equation}{0}
+    等比数列的通项公式：
     \begin{large}
-    \begin{equation*}
-        a_n=a_1\cdot q^{n-1}
-    \end{equation*}
-    \end{large}
+        \begin{equation*}
+            a_n=a_1\cdot q^{n-1}
+        \end{equation*}
+    \end{large}\\
+    等比数列的基本性质：
+    \begin{large}
+        \begin{equation*}
+            a_1=a_x\cdot q^{n-x}
+        \end{equation*}
+    \end{large}\\
+    根据等比数列的定义：
+    \begin{align}
+        \begin{cases}
+            ~a_{n}=a_{n-1}\cdot q\\[3mm]
+            ~a_{n-1}=a_{n-2}\cdot q\\[3mm]
+            ~a_{n-2}=a_{n-3}\cdot q\\[3mm]
+            ~\vdots~~~\text{（共$n-x$项）}\\[3mm]
+            ~a_{x+1}=a_{x}\cdot q\\[1mm]
+        \end{cases}~\Longrightarrow~~~~~~
+        \begin{cases}
+            ~\frac{a_{n}}{a_{n-1}}=q\\[3mm]
+            ~\frac{a_{n-1}}{a_{n-2}}=q\\[3mm]
+            ~\frac{a_{n-2}}{a_{n-3}}=q\\[3mm]
+            ~\vdots~~~\text{（共$n-x$项）}\\[3mm]
+            ~\frac{a_{x+1}}{a_{x}}=q\\[1mm]
+        \end{cases}
+    \end{align}\\
+    将上述式子叠乘可以得到：
+    \begin{align}
+        &\frac{a_n}{a_x}=q^{n-x}\\[3mm]
+        &a_n=a_x\cdot q^{n-x}
+    \end{align}\\
+    如果令$x=1$则可以得到：
+    \begin{align}
+        &a_n=a_1\cdot q^{n-1}
+    \end{align}\\
+    由此证明了等比数列的基本性质和通项公式。
+
+\newpage
 
 \subsubsection{等比数列的求和公式}
-    当$q\neq1$时：
+    \setcounter{equation}{0}
+    等比数列的求和公式$1$（$q\neq 1$）：
     \begin{large}
-    \begin{equation*}
-        S_n=\frac{a_1\cdot(1-q^n)}{1-q}=\frac{a_1-a_n\cdot q}{1-q}
-    \end{equation*}
+        \begin{equation*}
+            S_n=\frac{a_1-a_n\cdot q}{1-q}~~~~~~(q\neq 1)
+        \end{equation*}
     \end{large}\\
-    当$q=1$时：
+    等比数列的求和公式$2$（$q\neq 1$）：
     \begin{large}
-    \begin{equation*}
-        S_n=n\cdot a_1
-    \end{equation*}
+        \begin{equation*}
+            S_n=\frac{a_1\cdot(1-q^n)}{1-q}~~~~~~(q\neq 1)
+        \end{equation*}
     \end{large}\\
-
-\subsection{通过递推公式推导通项公式}
-
-\subsubsection{形如{\large$a_{n+1}=a_n+f(n)$}}
-    通过递推公式，
-    我们可以得到相邻两项的差关于$n$的表达式，
-    所以可以运用累加法：
+    等比数列的求和公式（$q=1$）：
     \begin{large}
-    \begin{equation*}
-        a_n=a_1+\sum_{x=1}^{n-1}f(x)
-    \end{equation*}
-    \end{large}
-
-\subsubsection{形如{\large$a_{n+1}=a_n\times f(n)$}}
-    通过递推公式，
-    我们可以得到相邻两项的比关于$n$的表达式，
-    所以可以运用累乘法：
-    \begin{large}
-    \begin{equation*}
-        a_n=a_1\times\prod_{x=1}^{n-1}f(x)
-    \end{equation*}
-    \end{large}
+        \begin{equation*}
+            S_n=q\cdot a_1~~~~~~(q=1)
+        \end{equation*}
+    \end{large}\\
+    等比数列的前$n$项和既可以表达为：
+    \begin{align}
+        S_n=\overbrace{a_1\cdot q^0+a_1\cdot q^1+a_1\cdot q^2+\cdots+a_1\cdot q^{n-1}}^{\text{共}n\text{项}}
+    \end{align}\\
+    等比数列的前$n$项和也可以表达为：
+    \begin{align}
+        S_n\cdot q=\overbrace{a_1\cdot q^1+a_1\cdot q^2+a_1\cdot q^3+\cdots+a_1\cdot q^{n}}^{\text{共}n\text{项}}
+    \end{align}\\
+    两式相减可以得到：
+    \begin{align}
+        &S_n-S_n\cdot q=a_1\cdot q^0-a_1\cdot q^n\\[2.5mm]
+        &S_n\cdot(1-q)=a_1\cdot q^0-a_1\cdot q^n\\[2.5mm]
+        &S_n\cdot(1-q)=a_1-a_1\cdot q^n\\[2.5mm]
+        &S_n=\frac{a_1-a_1\cdot q^n}{1-q}~~~~(q\neq 1)\\[2.5mm]
+        &S_n=\frac{a_1\cdot(1-q^n)}{1-q}~~~~(q\neq 1)\\[2.5mm]
+        &S_n=\frac{a_1-a_n\cdot q}{1-q}~~~~(q\neq 1)
+    \end{align}\\
+    此外当$q=1$时显然有：
+    \begin{align}
+        S_n=n\cdot q~~~~(q=1)
+    \end{align}\\
+    由此运用错位相减法证明了等比数列的求和公式。
 
 \newpage
 
-\subsubsection{形如{\large$a_{n+1}=q\cdot a_{n}+c$}}
-    运用待定系数法，我们可以进行如下推导：
+\subsubsection{等比中项的概念}
     \setcounter{equation}{0}
-    \begin{align}
-        &a_{n+1}=q\cdot a_n+c\\[2mm]
-        &a_{n+1}+x=q\cdot(a_n+x)\\[2mm]
-        &a_{n+1}+x=q\cdot a_n+q\cdot x\\[2mm]
-        &a_{n+1}=q\cdot a_n+(q-1)\cdot x
-    \end{align}\\
-    与原式对照可以得到：
-    \begin{align}
-        &(q-1)\cdot x=c\\[3mm]
-        &x=\frac{c}{q-1}
-    \end{align}\\
-    代入可得：
-    \begin{align}
-        &a_{n+1}+\frac{c}{q-1}=\left(a_n+\frac{c}{q-1}\right)\cdot q\\[3mm]
-        &a_{n+1}+\frac{c}{q-1}=\left(a_1+\frac{c}{q-1}\right)\cdot q^n\\[3mm]
-        &a_{n+1}+\frac{c}{q-1}=a_1\cdot q^n+\frac{c}{q-1}\cdot q^n\\[3mm]
-        &a_{n+1}=a_1\cdot q^n+\frac{c}{q-1}\cdot (q^n-1)
-    \end{align}\\
-    用$n$替代$n+1$后，我们就可以得到通项公式：
+    等比数列$a,G,b$中的常数$G$称为常数$a,b$的等比中项。\\[3mm]
+    等比中项满足条件：
     \begin{large}
-    \begin{equation*}
-        a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-1}\cdot (q^{n-1}-1)
-    \end{equation*}
+        \begin{equation*}
+            a\cdot b=G^2
+        \end{equation*}
+    \end{large}\\
+    等比中项的条件可以证明如下：
+    \begin{align}
+        &a\cdot b=a\cdot (a\cdot q^2)\\[3mm]
+        &a\cdot b=(a\cdot q)^2\\[3mm]
+        &a\cdot b=G^2
+    \end{align}\\
+    等比中项可以等价定义等差数列：
+    \begin{large}
+        \begin{equation*}
+            \forall n\in\mathbb{N^*},n\geq 2~~~~~~~~a_{n-1}+a_{n+1}=a_n^2~~\Longleftrightarrow~~\{a_n\}=\text{G.P.}
+        \end{equation*}
     \end{large}
+
+\subsubsection{等比数列的下标和性质}
+    \setcounter{equation}{0}
+    等比数列的下标和性质：等比数列$\{a_n\}$中，若有两组项的下标和相等，则这两组项的积相等。\\[3mm]
+    等比数列的下标和性质的数学表达：
+    \begin{large}
+        \begin{equation*}
+            \sum_{i=1}^n p_i=\sum_{i=1}^n q_i~~~~\Longleftrightarrow~~~~\prod_{i=1}^n a_{p_i}=\prod_{i=1}^n a_{q_i}
+        \end{equation*}
+    \end{large}\\
+    由等式左侧出发可以得到：
+    \begin{align}
+        &\prod_{i=1}^n a_{p_i}=a_1^n\cdot q^{\sum_{i=1}^n p_i-1}\\[3mm]
+        &\prod_{i=1}^n a_{p_i}=a_1^n\cdot q^{\left(\sum_{i=1}^n p_i\right)-n}
+    \end{align}\\
+    由等式右侧出发可以得到：
+    \begin{align}
+        &\prod_{i=1}^n a_{q_i}=a_1^n\cdot q^{\sum_{i=1}^n q_i-1}\\[3mm]
+        &\prod_{i=1}^n a_{q_i}=a_1^n\cdot q^{\left(\sum_{i=1}^n q_i\right)-n}
+    \end{align}\\
+    根据下标和性质的条件可以证明两者相等。
 
 \newpage
 
-\subsubsection{形如{\large$a_{n+1}=q\cdot a_n+c^n$}}
-    首先两边同除$c^{n+1}$：
+\subsubsection{等比数列的通项公式的一般形式}
     \setcounter{equation}{0}
-    \begin{align}
-        &a_{n+1}=q\cdot a_n+c^n\\[3mm]
-        &\frac{a_{n+1}}{c^{n+1}}=\frac{q\cdot a_n}{c^{n+1}}+\frac{1}{c}\\[3mm]
-        &\frac{a_{n+1}}{c^{n+1}}=\frac{q}{c}\cdot \frac{a_n}{c^n}+\frac{1}{c}
-    \end{align}\\
-    令$b_n=\dfrac{a_n}{c^n}$，使用待定系数法的公式：
-    \begin{align}
-        &b_{n+1}=\frac{q}{c}\cdot b_n+\frac{1}{c}\\[3mm]
-        &b_{n+1}=b_1\cdot\left(\frac{q}{c}\right)^n+\left(\frac{\dfrac{1}{c}}{\dfrac{q}{c}-1}\right)\cdot\left[\left(\frac{q}{c}\right)^n-1\right]\\[3mm]
-        &b_{n+1}=b_1\cdot\left(\frac{q}{c}\right)^n+\left(\frac{\dfrac{1}{c}}{\dfrac{q-c}{c}}\right)\cdot\left[\left(\frac{q}{c}\right)^n-1\right]\\[3mm]
-        &b_{n+1}=b_1\cdot\left(\frac{q}{c}\right)^n+\left(\frac{1}{c}\cdot\frac{c}{q-c}\right)\cdot\left[\left(\frac{q}{c}\right)^n-1\right]\\[3mm]
-        &b_{n+1}=b_1\cdot\left(\frac{q}{c}\right)^n+\frac{1}{q-c}\cdot\left[\left(\frac{q}{c}\right)^n-1\right]\\[3mm]
-        &\frac{a_{n+1}}{c^{n+1}}=\frac{a_1}{c}\cdot\frac{q^n}{c^n}+\frac{1}{q-c}\cdot\left(\frac{q^n}{c^n}-1\right)\\[3mm]
-        &\frac{a_{n+1}}{c^{n+1}}=\frac{a_1\cdot q^n}{c^{n+1}}+\frac{1}{q-c}\cdot\left(\frac{q^n}{c^n}-1\right)\\[3mm]
-        &a_{n+1}=a_1\cdot q^n+\frac{1}{q-c}\cdot\left(\frac{q^n}{c^n}-1\right)\cdot c^{n+1}\\[3mm]
-        &a_{n+1}=a_1\cdot q^n+\frac{1}{q-c}\cdot\left(q^n\cdot c-c^{n+1}\right)\\[3mm]
-        &a_{n+1}=a_1\cdot q^n+\frac{c}{q-c}\cdot\left(q^n-c^{n}\right)
-    \end{align}\\
-    用$n$替代$n+1$后，我们就可以得到通项公式：
+    等比数列的通项公式的一般形式：
     \begin{large}
-    \begin{equation*}
-        a_{n}=q^{n-1}\cdot a_1+\frac{c}{q-c}\cdot\left(q^{n-1}-c^{n-1}\right)
-    \end{equation*}
-    \end{large}
+        \begin{equation*}
+            a_n\triangleq A\cdot B^n
+        \end{equation*}
+    \end{large}\\
+    等比数列的通项公式的参数关系：
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~
+            \begin{cases}
+                ~A=\dfrac{a_1}{q}\\[3mm]
+                ~B=q
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~q=B\\[3mm]
+                ~a_1=A\cdot B
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    等比数列的通项公式的是类指数函数，有伸缩且没有平移，公比$q$为负时会上下交错。\\[3mm]
+    等比数列的通项公式的函数图像：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure
+            {
+                \begin{tikzpicture}[scale=0.50]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6,0){X1}
+                    \tkzDefPoint(+6,0){X2}
+                    \tkzDefPoint(0,-8.2){Y1}
+                    \tkzDefPoint(0,+8.2){Y2}
+    
+                    \tkzDrawSegments[->](X1,X2 Y1,Y2)
+    
+                    \tkzLabelPoint[above](X2){$n$}
+                    \tkzLabelPoint[right](Y2){$a_n$}
+    
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-0.3:+5.3] plot(\x,{6.0*0.5^\x});
+    
+                    \foreach \x/\y in{1/3,2/1.5,3/0.75,4/0.375,5/0.1875}
+                    {
+                        \tkzDefPoint(\x,\y){A}
+                        \tkzDefPoint(\x,0){B}
+    
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+    
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+    
+                        \tkzLabelPoint[below](B){$\x$}
+                    }
+    
+                    \tkzLabelPoint[above right](X1){$q\in\mathbb{R^+}$}
+                \end{tikzpicture}
+            }\qquad
+            \subfigure
+            {
+                \begin{tikzpicture}[scale=0.50]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6,0){X1}
+                    \tkzDefPoint(+6,0){X2}
+                    \tkzDefPoint(0,-8.2){Y1}
+                    \tkzDefPoint(0,+8.2){Y2}
+    
+                    \tkzDrawSegments[->](X1,X2 Y1,Y2)
+    
+                    \tkzLabelPoint[above](X2){$n$}
+                    \tkzLabelPoint[right](Y2){$a_n$}
+    
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-0.3:+5.3] plot(\x,{+6.0*0.5^\x});
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-0.3:+5.3] plot(\x,{-6.0*0.5^\x});
+    
+                    \foreach \x/\y in{2/1.5,4/0.375}
+                    {
+                        \tkzDefPoint(\x,\y){A}
+                        \tkzDefPoint(\x,0){B}
+    
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+    
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+    
+                        \tkzLabelPoint[below](B){$\x$}
+                    }
+
+                    \foreach \x/\y in{1/3,3/0.75,5/0.1875}
+                    {
+                        \tkzDefPoint(\x,-\y){A}
+                        \tkzDefPoint(\x,0){B}
+    
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+    
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+    
+                        \tkzLabelPoint[above](B){$\x$}
+                    }
+    
+                    \tkzLabelPoint[above right](X1){$q\in\mathbb{R^-}$}
+                \end{tikzpicture}
+            }
+            \caption{等比数列的通项公式的图像}
+        \end{center}
+    \end{figure}\\
+    这一点可以由通项公式的简单变形证明：
+    \begin{align}
+        &a_n=a_1\cdot q^{n-1}\\[3mm]
+        &a_n=\frac{a_1}{q}\cdot q^n\\[3mm]
+        &a_n=A\cdot B^n
+    \end{align}\\
+    由此证明了等比数列的通项公式的一般形式成立。
 
 \newpage
 
-\subsubsection{形如{\large$a_{n+1}=q\cdot a_n^{~c}$}}
-    等式两边取对数：
+\subsubsection{等比数列的求和公式的一般形式}
     \setcounter{equation}{0}
-    \begin{align}
-        &a_{n+1}=q\cdot a_n^c\\[3mm]
-        &\lg{a_{n+1}}=c\cdot \lg{q}+\lg{a_n}\\[3mm]
-        &\lg{a_{n+1}}=c\cdot \lg{a_n}+\lg{q}
-    \end{align}\\
-    令$b_n=\lg{a_n}$，使用待定系数法的公式：
-    \begin{align}
-        &b_{n+1}=c\cdot b_n+\lg{q}\\[3mm]
-        &b_{n+1}=c^n\cdot b_1+\frac{\lg{q}}{c-1}\cdot\left(c^n-1\right)\\[3mm]
-        &\lg{a_{n+1}}=c^n\cdot \lg{a_1}+\frac{\lg{q}}{c-1}\cdot\left(c^n-1\right)\\[3mm]
-        &\lg{a_{n+1}}=\lg{a_1^{~c^{n}}}+lg{q^{\frac{c^n-1}{c-1}}}\\[3mm]
-        &\lg{a_{n+1}}=\lg{a_1^{~c^{n}}\cdot q^{\frac{c^n-1}{c-1}}}\\[3mm]
-        &a_{n+1}=a_1^{~c^{n}}\cdot q^{\frac{c^n-1}{c-1}}
-    \end{align}\\
-    用$n$替代$n+1$后，我们就可以得到通项公式：
+    等比数列的求和公式的一般形式：
     \begin{large}
-    \begin{equation*}
-        a_{n}=a_1^{~c^{n-1}}\cdot q^{\frac{c^{n-1}-1}{c-1}}
-    \end{equation*}
-    \end{large}
+        \begin{equation*}
+            S_n\triangleq A-A\cdot B\cdot n^2
+        \end{equation*}
+    \end{large}\\
+    等比数列的求和公式的参数关系：
+    \begin{large}
+        \begin{equation*}
+            ~~~~~~
+            \begin{cases}
+                ~A=\dfrac{a_1}{1-q}\\[2mm]
+                ~B=q
+            \end{cases}~~~~~~
+            \begin{cases}
+                ~q=B\vphantom{\dfrac{1}{1}}\\[2mm]
+                ~a_1=A-AB
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    等比数列的求和公式的是类指数函数，有伸缩且必过原点，公比$q$为负时会上下交错。\\[3mm]
+    等比数列的求和公式的函数图像：
+    \begin{figure}[h]
+        \begin{center}
+            \subfigure
+            {
+                \begin{tikzpicture}[scale=0.50]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6,0){X1}
+                    \tkzDefPoint(+6,0){X2}
+                    \tkzDefPoint(0,-7.9){Y1}
+                    \tkzDefPoint(0,+7.9){Y2}
+    
+                    \tkzDrawSegments[->](X1,X2 Y1,Y2)
+    
+                    \tkzLabelPoint[above](X2){$n$}
+                    \tkzLabelPoint[right](Y2){$a_n$}
+    
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-0.8:+5.3] plot(\x,{6-6*0.5^\x});
+    
+                    \foreach \x/\y in{1/3,2/4.5,3/5.25,4/5.625,5/5.8125}
+                    {
+                        \tkzDefPoint(\x,\y){A}
+                        \tkzDefPoint(\x,0){B}
+    
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+    
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+    
+                        \tkzLabelPoint[below](B){$\x$}
+                    }
+    
+                    \tkzLabelPoint[above right](X1){$q\in\mathbb{R^+}$}
+                \end{tikzpicture}
+            }\qquad
+            \subfigure
+            {
+                \begin{tikzpicture}[scale=0.50]
+                    \tkzDefPoint(0,0){O}
+                    \tkzDefPoint(-6,0){X1}
+                    \tkzDefPoint(+6,0){X2}
+                    \tkzDefPoint(0,-7.9){Y1}
+                    \tkzDefPoint(0,+7.9){Y2}
+    
+                    \tkzDrawSegments[->](X1,X2 Y1,Y2)
+    
+                    \tkzLabelPoint[above](X2){$n$}
+                    \tkzLabelPoint[right](Y2){$a_n$}
+    
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-0.8:+5.3] plot(\x,{+6-6*0.5^\x});
+                    \draw[smooth,thick,color=MediumGray,samples=100,domain=-0.8:+5.3] plot(\x,{-6+6*0.5^\x});
+    
+                    \foreach \x/\y in{2/4.5,4/5.625}
+                    {
+                        \tkzDefPoint(\x,\y){A}
+                        \tkzDefPoint(\x,0){B}
+    
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+    
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+    
+                        \tkzLabelPoint[below](B){$\x$}
+                    }
+    
+                    \foreach \x/\y in{1/3,3/5.25,5/5.8125}
+                    {
+                        \tkzDefPoint(\x,-\y){A}
+                        \tkzDefPoint(\x,0){B}
+    
+                        \tkzDrawSegment[dashed,color=MediumGray](A,B)
+    
+                        \tkzDrawPoint[fill=black](A)
+                        \tkzDrawPoint[fill=white](B)
+    
+                        \tkzLabelPoint[above](B){$\x$}
+                    }
+
+                    \tkzLabelPoint[above right](X1){$q\in\mathbb{R^-}$}
+                \end{tikzpicture}
+            }
+            \caption{等比数列的求和公式的图像}
+        \end{center}
+    \end{figure}\\
+    这一点可以由求和公式的简单变形证明：
+    \begin{align}
+        &S_n=\frac{a_1\cdot (1-q^n)}{1-q}\\[2mm]
+        &S_n=\frac{a_1}{1-q}-\frac{a_1}{1-q}\cdot q^n\\[2mm]
+        &S_n=A-A\cdot B^n
+    \end{align}\\
+    由此证明了等比数列的求和公式的一般形式成立。
 
 \newpage
 
-\subsubsection[形如{\large $a_{n+1}=(p\cdot a_n)/(q\cdot a_n+c)$}]{形如{\large$a_{n+1}=\dfrac{p\cdot a_n}{q\cdot a_n+c}$}}
-    等式两边取倒数：
+\subsection{由递推公式求解通项公式}
+    本章将研究如何通过数列的递推公式求解出通项公式。
+
+\subsubsection{递推公式$1$}
     \setcounter{equation}{0}
-    \begin{align}
-        &a_{n+1}=\frac{p\cdot a_n}{q\cdot a_n+c}\\[3mm]
-        &\frac{1}{a_{n+1}}=\frac{q\cdot a_n+c}{p\cdot a_n}\\[3mm]
-        &\frac{1}{a_{n+1}}=\frac{q}{p}+\frac{c}{p\cdot an}\\[3mm]
-        &\frac{1}{a_{n+1}}=\frac{c}{p}\cdot\frac{1}{a_{n}}+\frac{q}{p}\\[3mm]
-    \end{align}\\
-    令$b_n=\dfrac{1}{a_n}$，使用待定系数法的公式：
-    \begin{align}
-        &b_{n+1}=\frac{c}{p}\cdot b_{n+1}+\frac{q}{p}\\[3mm]
-        &b_{n+1}=\left(\frac{c}{p}\right)^n\cdot b_1+\frac{\dfrac{q}{p}}{\dfrac{c}{p}-1}\cdot\left[\left(\frac{c}{p}\right)^n-1\right]\\[3mm]
-        &b_{n+1}=\frac{c^n}{p^n}\cdot b_1+\frac{\dfrac{q}{p}}{\dfrac{c-p}{p}}\cdot\left(\frac{c^n}{p^n}-1\right)\\[3mm]
-        &b_{n+1}=\frac{c^n}{p^n}\cdot b_1+\frac{q}{c-p}\cdot\left(\frac{c^n}{p^n}-1\right)\\[3mm]
-        &\frac{1}{a_{n+1}}=\frac{c^n}{p^n}\cdot\frac{1}{a_1}+\frac{q}{c-p}\cdot\left(\frac{c^n}{p^n}-1\right)\\[3mm]
-        &a_{n+1}=\frac{1}{\dfrac{c^n}{p^n}\cdot\dfrac{1}{a_1}+\dfrac{q}{c-p}\cdot\left(\dfrac{c^n}{p^n}-1\right)}
-    \end{align}\\
-    用$n$替代$n+1$后，我们就可以得到通项公式：\\
+    递推公式$1$研究形如下式的问题：
     \begin{large}
-    \begin{equation*}
-        a_{n}=\frac{1}{\dfrac{c^{n-1}}{p^{n-1}}\cdot\dfrac{1}{a_1}+\dfrac{q}{c-p}\cdot\left(\dfrac{c^{n-1}}{p^{n-1}}-1\right)}
-    \end{equation*}
-    \end{large}
+        \begin{equation*}
+            a_{n+1}=a_n+f(n)~~~~~~\Longrightarrow~~~~~~a_{n}=a_1+\sum_{i=1}^{n-1} f(i)~~(n\geq 2)
+        \end{equation*}
+    \end{large}\\
+    依次列出递推关系并进行累加：
+    \begin{align}
+        &\begin{cases}
+            ~a_{n-0}=a_{n-1}+f(n-1)\\
+            ~a_{n-1}=a_{n-2}+f(n-2)\\
+            ~a_{n-2}=a_{n-3}+f(n-3)\\
+            ~\vdots~~~\text{\small（共$n-1$项）}\\
+            ~a_{2}=a_{1}+f(1)\\[1mm]
+        \end{cases}~~~~~~~
+        \begin{cases}
+            ~a_{n-0}-a_{n-1}=f(n-1)\\
+            ~a_{n-1}-a_{n-2}=f(n-2)\\
+            ~a_{n-2}-a_{n-3}=f(n-3)\\
+            ~\vdots~~~\text{\small（共$n-1$项）}\\
+            ~a_{2}-a_{1}=f(1)\\[1mm]
+        \end{cases}\\[3mm]
+        &~~a_n-a_1=\sum_{i=1}^{n-1}f(i)~~~~\longrightarrow~~~~a_n=a_1+\sum_{i=1}^{n-1}f(i)
+    \end{align}\\
+    递推公式$1$在求解通项的过程中使用的方法称为累加法，在满足$f(n)=d$时退化为等差数列。
+
+\subsubsection{递推公式$2$}
+    \setcounter{equation}{0}
+    递推公式$2$研究形如下式的问题：
+    \begin{large}
+        \begin{equation*}
+            a_{n+1}=a_n\times f(n)~~~~~~\Longrightarrow~~~~~~a_{n}=a_1\times\prod_{i=1}^{n-1} f(i)~~(n\geq 2)
+        \end{equation*}
+    \end{large}\\
+    依次列出递推关系并进行累乘：
+    \begin{align}
+        &\begin{cases}
+            ~a_{n-0}=a_{n-1}\times f(n-1)\\
+            ~a_{n-1}=a_{n-2}\times f(n-2)\\
+            ~a_{n-2}=a_{n-3}\times f(n-3)\\
+            ~\vdots~~~\text{\small（共$n-1$项）}\\
+            ~a_{2}=a_{1}\times f(1)\\[1mm]
+        \end{cases}~~~~~~~
+        \begin{cases}
+            ~a_{n-0}~/~a_{n-1}=f(n-1)\\
+            ~a_{n-1}~/~a_{n-2}=f(n-2)\\
+            ~a_{n-2}~/~a_{n-3}=f(n-3)\\
+            ~\vdots~~~\text{\small（共$n-1$项）}\\
+            ~a_{2}~/~a_{1}=f(1)\\[1mm]
+        \end{cases}\\[3mm]
+        &~~\frac{a_n}{a_1}=\prod_{i=1}^{n-1}f(i)~~~~\longrightarrow~~~~a_n=a_1\times\prod_{i=1}^{n-1}f(i)
+    \end{align}\\
+    递推公式$2$在求解通项的过程中使用的方法称为累乘法，在满足$f(n)=q$时退化为等比数列。
+
+\newpage
+
+\subsubsection{递推公式$3$}
+    \setcounter{equation}{0}
+    递推公式$3$研究形如下式的问题：
+    \begin{large}
+        \begin{equation*}
+            a_{n+1}=A\cdot a_n+B
+        \end{equation*}
+    \end{large}\\
+    我们期望可以将递推公式转化为$a_{n+1}+\lambda=A\cdot(a_n+\lambda)$，其中$\lambda$称为待定系数。\\[3mm]
+    将其展开可以得到：
+    \begin{align}
+        &a_{n+1}+\lambda=A\cdot(a_n+\lambda)\\[3mm]
+        &a_{n+1}=A\cdot a_n+(A\cdot \lambda-\lambda)
+    \end{align}\\
+    对比原式可以得到：
+    \begin{align}
+        &\begin{cases}
+            ~a_{n+1}=A\cdot a_n+(A\lambda-\lambda)\\[1mm]
+            ~a_{n+1}=A\cdot a_n+B
+        \end{cases}\\[3mm]
+        &~~B=A\cdot\lambda-\lambda\\[3mm]
+        &~~B=\lambda\cdot(A-1)\\[3mm]
+        &~~\lambda=\frac{B}{A-1}
+    \end{align}\\
+    由此证明了所期望的形式与原形式等价，且得出了待定系数$\lambda$的表达式。\\[3mm]
+    令$b_n=a_n+\lambda$换元并运用等比数列的公式：
+    \begin{align}
+        &a_{n+1}+\lambda=A\cdot(a_n+\lambda)\\[3mm]
+        &b_{n+1}=A\cdot b_n\\[3mm]
+        &b_{n}=A^{n-1}\cdot b_1\\[3mm]
+        &a_{n}+\lambda=A^{n-1}\cdot(a_1+\lambda)\\[3mm]
+        &a_{n}=a_1\cdot A^{n-1}+\lambda\cdot(A^{n-1}-1)
+    \end{align}\\
+    递推公式$3$对应的通项公式：
+    \begin{large}
+        \begin{equation*}
+            a_n=a_1\cdot A^{n-1}+\lambda\cdot (A^{n-1}-1)~~~~~~~~\left(\lambda=\frac{B}{A-1}\right)    
+        \end{equation*}
+    \end{large}\\
+    递推公式$3$在求解通项过程中使用的方法称为待定系数法。
+
+\newpage
+
+\subsubsection{递推公式$4$}
+    \setcounter{equation}{0}
+    递推公式$4$研究形如下式的问题：
+    \begin{large}
+        \begin{equation*}
+            a_{n+1}+A\cdot a_n+B\cdot C^n
+        \end{equation*}
+    \end{large}\\
+    我们期望可以将递推公式转化为形如待定系数法可以解决的形式。\\[3mm]
+    将两侧同除$C^{n+1}$可得：
+    \begin{align}
+        &\frac{1}{C^{n+1}}\cdot a_{n+1}=\frac{A}{C^{n+1}}\cdot a_n+\frac{B}{C}\\[3mm]
+        &\frac{1}{C^{n+1}}\cdot a_{n+1}=\frac{A}{C}\cdot\frac{1}{C^n}\cdot a_n+\frac{B}{C}\\[3mm]
+        &\frac{a_{n+1}}{C^{n+1}}=\frac{A}{C}\cdot\frac{a_n}{C^n}+\frac{B}{C}
+    \end{align}\\
+    通过令$b_n=\dfrac{a_n}{C^n}$以运用待定系数法：
+    \begin{align}
+        &b_{n+1}=\frac{A}{C}\cdot b_n+\frac{B}{C}\\[3mm]
+        &b_n=b_1\cdot\left(\frac{A}{C}\right)^{n-1}+\lambda\cdot\left[\left(\frac{A}{C}\right)^{n-1}-1\right]~\\[3mm]
+        &\lambda=\frac{\frac{B}{C}}{1-\frac{A}{C}}=\frac{\frac{B}{C}}{\frac{C-A}{C}}=\frac{B}{C-A}
+    \end{align}\\
+    通过将$b_n=\dfrac{a_n}{C^n}$代入变形可以得到：
+    \begin{align}
+        &~~\frac{a_n}{C^{n}}=\frac{a_1}{C^{1}}\cdot\left(\frac{A}{C}\right)^{n-1}+\lambda\cdot\left[\left(\frac{A}{C}\right)^{n-1}-1\right]\\[3mm]
+        &~~a_n=a_1\cdot A^{n-1}+\lambda\cdot\left[A^{n-1}\cdot C-C^n\right]\\[3mm]
+        &~~a_n=a_1\cdot A^{n-1}+\lambda\cdot C\cdot \left[A^{n-1}-C^{n-1}\right]\\[3mm]
+        &~~\delta=\lambda\cdot C=\frac{C\cdot B}{C-A}
+    \end{align}\\
+    递推公式$4$对应的通项公式：
+    \begin{large}
+        \begin{equation*}
+            a_n=a_1\cdot A^{n-1}+\delta\cdot (A^{n-1}-C^{n-1})~~~~~~~~\left(\delta=\frac{C\cdot B}{C-A}\right)
+        \end{equation*}
+    \end{large}\\
+    递推公式$4$在求解通项过程中使用的方法基于待定系数法。
+
+\newpage
+
+\subsubsection{递推公式$5$}
+    \setcounter{equation}{0}
+    递推公式$5$研究如下形式的问题：
+    \begin{large}
+        \begin{equation*}
+            A\cdot a_{n+1}+B\cdot a_n+C\cdot a_{n+1}\cdot a_n=0
+        \end{equation*}
+    \end{large}\\
+    我们期望可以将递推公式转化为形如待定系数法可以解决的形式。\\[3mm]
+    将两侧同除$a_{n+1}\cdot a_n$构成倒数：
+    \begin{align}
+        &\frac{A}{a_n}+\frac{B}{a_{n+1}}+C=0\\[3mm]
+        &\frac{B}{a_{n+1}}=-\frac{A}{a_n}-C\\[3mm]
+        &\frac{1}{a_{n+1}}=-\frac{A}{B}\cdot\frac{1}{a_n}-C
+    \end{align}\\
+    通过令$b_n=\dfrac{1}{a_n}$以运用待定系数法：
+    \begin{align}
+        &b_{n+1}=-\frac{A}{B}\cdot b_n-C\\[3mm]
+        &b_{n}=b_1\cdot\left(-\frac{A}{B}\right)^{n-1}+\lambda\cdot\left[\left(-\frac{A}{B}\right)^{n-1}-1\right]\\[3mm]
+        &\lambda=\frac{-C}{-\frac{A}{B}-1}=\frac{C}{\frac{A}{B}-1}=\frac{C}{\frac{A-B}{B}}=\frac{C\cdot B}{A-B}
+    \end{align}\\
+    通过将$b_n=\dfrac{1}{a_n}$代入变形可以得到：
+    \begin{align}
+        &\frac{1}{a_n}=\frac{1}{a_1}\cdot\left(-\frac{A}{B}\right)^{n-1}+\lambda\cdot\left[\left(-\frac{A}{B}\right)^{n-1}-1\right]\\[3mm]
+        &\frac{1}{a_n}=\left(\lambda+\dfrac{1}{a_1}\right)\cdot\left(-\dfrac{A}{B}\right)^{n-1}-\lambda\\[3mm]
+        &a_n=\left[\left(\lambda+\dfrac{1}{a_1}\right)\cdot\left(-\dfrac{A}{B}\right)^{n-1}-\lambda\right]^{-1}
+    \end{align}\\
+    递推公式$5$对应的通项公式：
+    \begin{large}
+        \begin{equation*}
+            a_n=\left[\left(\lambda+\dfrac{1}{a_1}\right)\cdot\left(-\dfrac{A}{B}\right)^{n-1}-\lambda\right]^{-1}~~~~~~~~\left(\lambda=\frac{C\cdot B}{A-B}\right)
+        \end{equation*}
+    \end{large}\\
+    递推公式$5$在求解通项过程中使用的方法基于待定系数法，称为倒数法。
+
+\newpage
+
+\subsubsection{递推公式$6$}
+    \setcounter{equation}{0}
+    递推公式$6$研究如下形式的问题：
+    \begin{large}
+        \begin{equation*}
+            a_{n+1}=A\cdot a_n^B
+        \end{equation*}
+    \end{large}\\
+    我们期望可以将递推公式转化为形如待定系数法可以解决的形式。\\[3mm]
+    将两侧取以$A$为底的对数：
+    \begin{align}
+        &\log_{A}a_{n+1}=\log_{A}a_n^B\\[4mm]
+        &\log_{A}a_{n+1}=\log_{A}A+\log_{A}a_n^B\\[4mm]
+        &\log_{A}a_{n+1}=1+\log_{A}a_n^B\\[4mm]
+        &\log_{A}a_{n+1}=1+B\cdot\log_{A}a_n\\[4mm]
+        &\log_{A}a_{n+1}=B\cdot\log_{A}a_n+1
+    \end{align}\\
+    通过令$b_n=\log_{A}a_n$以运用待定系数法：
+    \begin{align}
+        &b_{n+1}=B\cdot b_n+1\\[3mm]
+        &b_n=b_1\cdot B^{n-1}+\lambda\cdot\left[B^{n-1}-1\right]\\[4mm]
+        &\lambda=\frac{1}{B-1}
+    \end{align}\\
+    通过将$b_n=\log_{A}a_n$代入变形可以得到：
+    \begin{align}
+        &\log_{A}a_n=B^{n-1}\cdot\log_{A}a_1+\lambda\cdot\left[B^{n-1}-1\right]\\[3mm]
+        &\log_{A}a_n=\log_{A}a_1^{B^{n-1}}+\lambda\cdot\left[B^{n-1}-1\right]\\[3mm]
+        &a_n=a_1^{B^{n-1}}\cdot A^{\lambda\cdot[B^{n-1}-1]}
+    \end{align}\\
+    递推公式$6$对应的通项公式：
+    \begin{large}
+        \begin{equation*}
+            a_n=a_1^{B^{n-1}}\cdot A^{\lambda\cdot[B^{n-1}-1]}~~~~~~~~\left(\lambda=\frac{1}{B-1}\right)
+        \end{equation*}
+    \end{large}\\
+    递推公式$6$在求解通项过程中使用的方法基于待定系数法，称为对数法。
+
+\newpage
+
+\subsubsection{待定系数法的一般形式}
+    \setcounter{equation}{0}
+    待定系数法的一般形式可以解决如下问题：
+    \begin{large}
+        \begin{equation*}
+            a_{n+1}=A\cdot a_n+\sum_{k=0}^xP_i\cdot n^k
+        \end{equation*}
+    \end{large}\\
+    根据待定系数法的思想，我们需要获得：
+    \begin{align}
+        &a_{n+1}+\sum_{k=0}^x\lambda_i\cdot(n+1)^k=A\cdot\left(a_n+\sum_{k=0}^x\lambda_i\cdot n^k\right)\\[3mm]
+        &a_{n+1}+\sum_{k=0}^x\lambda_i\cdot(n+1)^k=a_n+\sum_{k=0}^xA\cdot\lambda_i\cdot n^k\\[3mm]
+        &a_{n+1}=A\cdot a_n+\sum_{k=0}^x\Big[A\cdot\lambda_i\cdot n^k-\lambda_i\cdot(n+1)^k\Big]\\[3mm]
+        &a_{n+1}=A\cdot a_n+\sum_{k=0}^x\Big[A\cdot\lambda_i\cdot n^k-\lambda_i\cdot\sum_{h=0}^{k}\Co_k^h\cdot n^h\Big]
+    \end{align}\\
+    该过程中形如$\lambda_k$的变量均为未知的待定系数，最后一步运用了二项式定理。\\[3mm]
+    由于$A\cdot a_n$右侧的累加可以展开为：
+    \begin{align}
+        =\,&A\cdot\lambda_0\cdot n^0-\lambda_0\cdot\Co_0^0\cdot n^0\\[2mm]
+        +\,&A\cdot\lambda_1\cdot n^1-\lambda_1\cdot\Co_1^0\cdot n^0-\lambda_1\cdot\Co_1^1\cdot n^1\\[2mm]
+        +\,&A\cdot\lambda_2\cdot n^2-\lambda_2\cdot\Co_2^0\cdot n^0-\lambda_2\cdot\Co_2^1\cdot n^1-\lambda_2\cdot\Co_2^2\cdot n^2\\[2mm]
+        &~\vdots~~~~\text{\small（共有$x+1$项）}\\[2mm]
+        +\,&A\cdot\lambda_x\cdot n^x-\lambda_x\cdot\Co_x^0\cdot n^0-\lambda_x\cdot\Co_x^1\cdot n^1-\lambda_x\cdot\Co_x^2\cdot n^2-\cdots-\lambda_x\cdot\Co_x^x\cdot n^x
+    \end{align}\\
+    所以$A\cdot a_n$右侧的累加可以变换为：
+    \begin{align}
+        =\,&n^0\cdot\left(A\cdot\lambda_0-\Co_0^0\cdot\lambda_0-\Co_1^0\cdot\lambda_1-\Co_2^0\cdot\lambda_2-\cdots-\Co_x^0\cdot\lambda_x\right)~~~~~~~~~~~~~~~~~~~~~~~\\[2mm]
+        +\,&n^1\cdot\left(A\cdot\lambda_1-\Co_1^1\cdot\lambda_1-\Co_2^1\cdot\lambda_2-\cdots-\Co_x^1\cdot\lambda_x\right)\\[2mm]
+        +\,&n^2\cdot\left(A\cdot\lambda_2-\Co_2^2\cdot\lambda_2-\cdots-\Co_x^2\cdot\lambda_x\right)\\[2mm]
+        &~\vdots~~~~\text{\small（共有$x+1$项）}\\[2mm]
+        +\,&n^x\cdot(A\cdot\lambda_x-\Co_x^x\cdot\lambda_x)
+    \end{align}\\
+    由此我们实现了对累加关系的变换。
+
+\newpage
+
+    因此以下两个累加是相等的：
+    \begin{align}
+        \sum_{k=0}^x\left[A\cdot\lambda_i\cdot n^k-\lambda_i\cdot\sum_{h=0}^{k}\Co_k^h\cdot n^h\right]
+        =
+        \sum_{k=0}^x\left[n^k\cdot\left(A\cdot\lambda_k-\sum_{h=k}^x\Co_h^k\cdot\lambda_h\right)\right]
+    \end{align}\\
+    将其代入可以得到：
+    \begin{align}
+        &a_{n+1}=A\cdot a_n+\sum_{k=0}^x\left[A\cdot\lambda_i\cdot n^k-\lambda_i\cdot\sum_{h=0}^{k}\Co_k^h\cdot n^h\right]\\[3mm]
+        &a_{n+1}=A\cdot a_n+\sum_{k=0}^x\left[n^k\cdot\left(A\cdot\lambda_k-\sum_{h=k}^x\Co_h^k\cdot\lambda_h\right)\right]
+    \end{align}\\
+    与原式相对比可知：
+    \begin{align}
+        a_{n+1}=A\cdot a_n+\sum_{k=0}^xn^k\cdot P_i
+    \end{align}\\
+    当$k=0$时可以解得$\lambda_0$：
+    \begin{align}
+        &n^0\cdot P_0=n^0\cdot[A\lambda_0-\Co_0^0\cdot\lambda_0]\\[3mm]
+        &n^0\cdot P_0=n^0\cdot[\lambda_0\cdot(A-\Co_0^0)]\\[3mm]
+        &\lambda_0=\frac{P_0}{A-\Co_0^0}=\frac{P_0}{A-1}
+    \end{align}\\
+    当$k=1$时可以解得$\lambda_1$：
+    \begin{align}
+        &n^1\cdot P_1=n^1\cdot[A\lambda_1-\Co_1^0\cdot\lambda_0-\Co_1^1\cdot\lambda_1]\\[3mm]
+        &n^1\cdot P_1=n^1\cdot[\lambda_1\cdot(A-\Co_1^1)-\lambda_0\cdot\Co_1^0]\\[3mm]
+        &\lambda_1=\frac{P_1+\lambda_0\cdot\Co_1^0}{A-\Co_1^1}=\frac{P_1+\lambda_0\cdot\Co_1^0}{A-1}
+    \end{align}\\
+    当$k=2$时可以解得$\lambda_2$：
+    \begin{align}
+        &n^2\cdot P_2=n^2\cdot[A\lambda_2-\Co_2^0\cdot\lambda_0-\Co_2^1\cdot\lambda_1-\Co_2^2\cdot\lambda_2]\\[3mm]
+        &n^2\cdot P_2=n^2\cdot[\lambda_2\cdot(A-\Co_2^2)-\lambda_0\cdot\Co_2^0-\lambda_1\cdot\Co_2^1]\\[3mm]
+        &\lambda_2=\frac{P_2+\lambda_0\cdot\Co_2^0+\lambda_1\cdot\Co_2^1}{A-\Co_2^2}=\frac{P_2+\lambda_0\cdot\Co_2^0+\lambda_1\cdot\Co_2^1}{A-1}
+    \end{align}\\
+    因此待定系数$\lambda_k$可以通过$\lambda_0\sim\lambda_{k-1}$表达。
+
+\newpage
+
+    因此$\lambda_k$可以表达为：
+    \begin{align}
+        \lambda_k=\frac{1}{A-1}\cdot\left[P_x+\sum_{i=0}^{k-1}\Co_k^i\cdot\lambda_i\right]
+    \end{align}\\
+    由此得到了所构造的形式中的待定系数的表达式，接下来将对其换元。\\[3mm]
+    我们令$b_n=a——n+\sum\limits_{k=0}^x\lambda_i\cdot n^k$代入：
+    \begin{align}
+        &a_{n+1}+\sum_{k=0}^x\lambda_i\cdot(n+1)^k=A\cdot\left(a_n+\sum_{k=0}^x\lambda_i\cdot n^k\right)\\[3mm]
+        &b_{n+1}=A\cdot b_{n}\\[6mm]
+        &b_n=A^{n-1}\cdot b_1\\[3mm]
+        &a_n+\sum_{k=0}^x\lambda_i\cdot n^k=A^{n-1}\cdot\left[a_1+\sum_{k=0}^x\lambda_i\right]\\[3mm]
+        &a_n=a_1\cdot A^{n-1}+\sum_{k=0}^x\lambda_i\cdot A^{n-1}-\lambda_i\cdot n^k\\[3mm]
+        &a_n=a_1\cdot A^{n-1}+\sum_{k=0}^x\lambda_i\cdot\left(A^{n-1}-n^k\right)
+    \end{align}\\
+    待定系数法的一般形式对应的通项公式：
+    \begin{large}
+        \begin{align*}
+            &a_n=a_1\cdot A^{n-1}+\sum_{k=0}^x\lambda_i\cdot\left(A^{n-1}-n^k\right)~~~~~~\left(\lambda_k=\frac{1}{A-1}\cdot\left[P_x+\sum_{i=0}^{k-1}\Co_k^i\cdot\lambda_i\right]\right)
+        \end{align*}
+    \end{large}\\
+    当$x=1$时可以退化为：
+    \begin{large}
+        \begin{align*}
+            &a_n=a_1\cdot A^{n-1}+\lambda_0\cdot\left(A^{n-1}-1\right)+\lambda_1\cdot\left(A^{n-1}-n\right)
+        \end{align*}
+    \end{large}\\
+    当$x=2$时可以退化为：
+    \begin{large}
+        \begin{align*}
+            &~~~~~~a_n=a_1\cdot A^{n-1}+\lambda_0\cdot\left(A^{n-1}-1\right)+\lambda_1\cdot\left(A^{n-1}-n\right)+\lambda_2\cdot\left(A^{n-1}-n^2\right)
+        \end{align*}
+    \end{large}\\
+    其中待定系数可以表达为：
+    \begin{large}
+        \begin{equation*}
+            \lambda_0=\frac{P_0}{A-1}~~~~~~\lambda_1=\frac{P_1+\lambda_0}{A-1}~~~~~~\lambda_2=\frac{P_1+\lambda_0+\lambda_1\cdot 2}{A-1}
+        \end{equation*}
+    \end{large}\\
+    由此证明了待定系数法的一般形式也可以求得对应的通项公式。
+
+\newpage
+
+\subsection{由通项公式求解求和公式}
+    本章将研究如何通过数列的通项公式求解出求和公式。
+
+\subsubsection{求和公式$1$}
+    \setcounter{equation}{0}
+    求和公式$1$研究如下式的问题：
+    \begin{large}
+        \begin{equation*}
+            a_n=
+            \begin{cases}
+                ~O(n)~~~~n\text{为奇数}\\[1mm]
+                ~E\hspace{1.5pt}(n)~~~~n\text{为偶数}
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    当$n$为奇数时可以推导如下：
+    \begin{align}
+        &S_n=\underbrace{a_1+a_2}+\underbrace{a_3+a_4}+\cdots+\underbrace{a_{n-2}+a_{n-1}}+a_n\\[2.5mm]
+        &S_n=\underbrace{O(1)+E(2)}+\underbrace{O(3)+E(4)}+\cdots+\underbrace{O(n-2)+E(n-1)}+O(n)\\[2.5mm]
+        &S_n=\underbrace{\Big[O(1)+O(3)+\cdots+O(n-1)\Big]}_{\text{共计~{\large $\frac{n+1}{2}$}项}}+\underbrace{\Big[E(2)+E(4)+\cdots+E(n-1)\Big]}_{\text{共计~{\large $\frac{n-1}{2}$}项}}\\[1mm]
+        &S_n=\sum_{k=1}^{\frac{n+1}{2}}O(2k-1)+\sum_{k=1}^{\frac{n-1}{2}}E(2k)
+    \end{align}\\
+    当$n$为偶数时可以推导如下：
+    \begin{align}
+        &S_n=\underbrace{a_1+a_2}+\underbrace{a_3+a_4}+\cdots+\underbrace{a_{n-1}+a_n}\\[2.5mm]
+        &S_n=\underbrace{O(1)+E(2)}+\underbrace{O(3)+E(4)}+\cdots+\underbrace{O(n-1)+E(n)}\\[2.5mm]
+        &S_n=\underbrace{\Big[O(1)+O(3)+\cdots+O(n-1)\Big]}_{\text{共计~{\large $\frac{n}{2}$}项}}+\underbrace{\Big[E(2)+E{6}+\cdots+E(n)\Big]}_{\text{共计~{\large $\frac{n}{2}$}项}}~~~~~~~~~\\[1mm]
+        &S_n=\sum_{k=1}^{\frac{n}{2}}O(2k-1)+\sum_{k=1}^{\frac{n}{2}}E(2k)
+    \end{align}\\
+    求和公式$1$的结论可以表达为：
+    \begin{large}
+        \begin{equation*}
+            S_n=
+            \begin{cases}
+                ~\sum\limits_{k=1}^{\frac{n+1}{2}}O(2k-1)+\sum\limits_{k=1}^{\frac{n-1}{2}}E(2k)~~~~n\text{为奇数}\\[4mm]
+                ~\sum\limits_{k=1}^{\frac{n}{2}}O(2k-1)+\sum\limits_{k=1}^{\frac{n}{2}}E(2k)~~~~n\text{为偶数}
+            \end{cases}
+        \end{equation*}
+    \end{large}\\
+    求和公式$1$的推导过程中使用的方法称为按奇偶分类。
+
+\newpage
+
+\subsubsection{求和公式$2$}
+    \setcounter{equation}{0}
+    求和公式$2$研究如下形式的问题：
+    \begin{large}
+        \begin{equation*}
+            a_x+a_{n-x+1}=f(n)
+        \end{equation*}
+    \end{large}\\
+    由于$S_n$既可以表达为：
+    \begin{align}
+        &S_n=a_1+a_2+a_3+\cdots+a_{n-2}+a_{n-1}+a_{n-0}\\[3mm]
+        &S_n=\sum_{i=1}^na_i
+    \end{align}\\
+    同时$S_n$也可以表达为：
+    \begin{align}
+        &S_n=a_{n-0}+a_{n-1}+a_{n-2}+\cdots+a_{3}+a_{2}+a_{1}\\[3mm]
+        &S_n=\sum_{i=1}^na_{n-i+1}
+    \end{align}\\
+    将两者相加可以得到：
+    \begin{align}
+        &S_n+S_n=\sum_{i=1}^na_i+\sum_{i=1}^na_{n-i+1}\\[5mm]
+        &2S_n=\sum_{i=1}^na_i+\sum_{i=1}^na_{n-i+1}\\[5mm]
+        &2S_n=\sum_{i=1}^na_i+a_{n-i+1}\\[5mm]
+        &2S_n=\sum_{i=1}^n f(n)\\[5mm]
+        &2S_n=n\cdot f(n)\\[5mm]
+        &S_n=\frac{n}{2}\cdot f(n)
+    \end{align}\\
+    求和公式$2$的结论可以表达为：
+    \begin{large}
+        \begin{equation*}
+            S_n=\frac{n}{2}\cdot f(n)
+        \end{equation*}
+    \end{large}\\
+    求和公式$2$的推导过程中使用的方法称为倒序相加法。\\[3mm]
+    求和公式$2$在满足$f(n)=a_1+a_n$时既为求解等差数列前$n$项和的过程。
+
+\newpage
+
+\subsubsection{求和公式$3$}
+    \setcounter{equation}{0}
+    求和公式$3$研究如下形式的问题：
+    \begin{large}
+        \begin{equation*}
+            a_{x+1}-\lambda\cdot a_x=C
+        \end{equation*}
+    \end{large}\\
+    由于$S_n$既可以表达为：
+    \begin{align}
+        &S_n=a_1+a_2+a_3+\cdots+a_{n-2}+a_{n-1}+a_{n-0}\\[3mm]
+        &S_n=\sum_{i=1}^{n}a_{i}
+    \end{align}\\
+    同时$S_n$也可以表达为：
+    \begin{align}
+        &S_n\cdot\lambda=\lambda a_1+\lambda a_2+\lambda a_3+\cdots+\lambda a_{n-2}+\lambda a_{n-1}+\lambda a_{n-0}\\[3mm]
+        &S_n\cdot\lambda=\sum_{i=1}^n\lambda\cdot a_{i}
+    \end{align}\\
+    将两者相减可以得到：
+    \begin{align}
+        &S_n-S_n\cdot\lambda=\sum_{i=1}^na_i-\sum_{i=1}^n\lambda\cdot a_i\\[3mm]
+        &S_n-S_n\cdot\lambda=a_1-\lambda\cdot a_n+\sum_{i=2}^{n}a_i-\sum_{i=1}^{n-1}\lambda\cdot a_i\\[3mm]
+        &S_n-S_n\cdot\lambda=a_1-\lambda\cdot a_n+\sum_{i=1}^{n-1}a_i-\sum_{i=1}^{n-1}\lambda\cdot a_i\\[3mm]
+        &S_n-S_n\cdot\lambda=a_1-\lambda\cdot a_n+\sum_{i=1}^{n-1}a_i-\lambda\cdot a_i\\[3mm]
+        &S_n-S_n\cdot\lambda=a_1-\lambda\cdot a_n+\sum_{i=1}^{n-1}C\\[3mm]
+        &S_n-S_n\cdot\lambda=a_1-\lambda\cdot a_n+(n-1)\cdot C
+    \end{align}\\
+    求和公式$3$的结论可以表达为：
+    \begin{large}
+        \begin{equation*}
+            S_n=\frac{1}{1-\lambda}\cdot\big[a_1+\lambda\cdot a_n+(n-1)\cdot C\big]
+        \end{equation*}
+    \end{large}\\
+    求和公式$3$的推导过程中使用的方法称为错位相减法。\\[3mm]
+    求和公式$3$在满足$C=0$时既为求解等比数列前$n$项和的过程。
+
 \newpage
 
 \subsubsection{形如{\large$a_{n+1}+a_{n}=f(n)$}}
@@ -8976,7 +11297,7 @@
 
 \newpage
 
-\subsubsection{余子式和代数余子式}
+\subsubsection{代数余子式的定义}
     三阶行列式中，元素$x$的余子式为将其所在行列划去后，剩余元素组成的二阶行列式。\\[3mm]
     三阶行列式中，元素$x$的代数余子式指的是在其余子式前乘以$(-1)^{i+j}$所得的式子，记作$X$。\\[3mm]
     对于三阶行列式$D$：
@@ -9061,14 +11382,16 @@
             \end{vmatrix}
         \end{equation*}
     \end{large}\\
-    代数余子式具有两组重要性质：\\[3mm]
-    1.三阶行列式的任意一行，其上的元素与另一行对应元素的代数余子式的乘积的和，等于$0$。\\[3mm]
-    1.三阶行列式的任意一列，其上的元素与另一列对应元素的代数余子式的乘积的和，等于$0$。\\[3mm]
-    2.三阶行列式的任意一行，其上的元素与该元素自身对应的代数余子式的乘积的和，等于$D$。\\[3mm]
-    2.三阶行列式的任意一列，其上的元素与该元素自身对应的代数余子式的乘积的和，等于$D$。\\[3mm]
+    代数余子式的第一组性质：\\[3mm]
+    三阶行列式的任意一行，其上的元素与另一行对应元素的代数余子式的乘积的和，等于$0$。\\[3mm]
+    三阶行列式的任意一列，其上的元素与另一列对应元素的代数余子式的乘积的和，等于$0$。\\[5mm]
+    代数余子式的第二组性质：\\[3mm]
+    三阶行列式的任意一行，其上的元素与该元素自身对应的代数余子式的乘积的和，等于$D$。\\[3mm]
+    三阶行列式的任意一列，其上的元素与该元素自身对应的代数余子式的乘积的和，等于$D$。
 
 \newpage
 
+\subsubsection{代数余子式的性质}
     第一组性质可以表达为：
     \begin{large}
         \begin{equation*}
@@ -9098,19 +11421,19 @@
     第一组性质可以证明如下（选取其他行或列也可以用类似的方法证明）：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
-        &a_2A_1+b_2B_1+c_2C_1=a_2\cdot\begin{vmatrix}b_2&c_2\\b_3&c_3\\\end{vmatrix}-b_2\cdot\begin{vmatrix}a_2&c_2\\a_3&c_3\end{vmatrix}+c_2\cdot\begin{vmatrix}a_2&b_2\\a_3&b_3\\\end{vmatrix}\\[3mm]
-        &a_2A_1+b_2B_1+c_2C_1=a_2\cdot(b_2c_3-b_3c_2)-b_2\cdot(c_2c_3-a_3c_2)+c_2\cdot(a_2b_3-a_3b_2)\\[3mm]
-        &a_2A_1+b_2B_1+c_2C_1=a_2b_3c_3-a_2b_3c_2-a_2b_2c_3+a_3b_2c_2+a_2b_3c_2-a_3b_2c_2\\[3mm]
-        &a_2A_1+b_2B_1+c_2C_1=(a_2b_2c_3-a_2b_2c_3)+(a_2b_3c_2-a_2b_3c_2)+(a_3b_2c_2-a_3b_2c_2)\\[3mm]
+        &a_2A_1+b_2B_1+c_2C_1=a_2\cdot\begin{vmatrix}b_2&c_2\\b_3&c_3\\\end{vmatrix}-b_2\cdot\begin{vmatrix}a_2&c_2\\a_3&c_3\end{vmatrix}+c_2\cdot\begin{vmatrix}a_2&b_2\\a_3&b_3\\\end{vmatrix}\\[2mm]
+        &a_2A_1+b_2B_1+c_2C_1=a_2\cdot(b_2c_3-b_3c_2)-b_2\cdot(c_2c_3-a_3c_2)+c_2\cdot(a_2b_3-a_3b_2)\\[2mm]
+        &a_2A_1+b_2B_1+c_2C_1=a_2b_3c_3-a_2b_3c_2-a_2b_2c_3+a_3b_2c_2+a_2b_3c_2-a_3b_2c_2\\[2mm]
+        &a_2A_1+b_2B_1+c_2C_1=(a_2b_2c_3-a_2b_2c_3)+(a_2b_3c_2-a_2b_3c_2)+(a_3b_2c_2-a_3b_2c_2)\\[2mm]
         &a_2A_1+b_2B_1+c_2C_1=0
     \end{align}\\
     第二组性质可以证明如下（选取其他行或列也可以用类似的方法证明）：\vspace{5pt}
     \setcounter{equation}{0}
     \begin{align}
-        &a_1A_1+b_1B_1+c_1C_1=a_1\cdot\begin{vmatrix}b_2&c_2\\b_3&c_3\\\end{vmatrix}-b_1\cdot\begin{vmatrix}a_2&c_2\\a_3&c_1\end{vmatrix}+c_2\cdot\begin{vmatrix}a_2&b_2\\a_3&b_3\\\end{vmatrix}\\[3mm]
-        &a_1A_1+b_1B_1+c_1C_1=a_1\cdot(b_2c_3-b_3c_2)-b_1\cdot(c_2c_3-a_3c_2)+c_1\cdot(a_2b_3-a_3b_2)~~\\[3mm]
-        &a_1A_1+b_1B_1+c_1C_1=a_1b_3c_3-a_1b_3c_2-a_2b_1c_3+a_3b_1c_2+a_2b_3c_1-a_3b_2c_1\\[3mm]
-        &a_1A_1+b_1B_1+c_1C_1=a_1b_2c_3+a_2b_3c_1+a_3b_1c_2-a_3b_2c_1-a_2b_1c_3-a_1b_3c_2\\[3mm]
+        &a_1A_1+b_1B_1+c_1C_1=a_1\cdot\begin{vmatrix}b_2&c_2\\b_3&c_3\\\end{vmatrix}-b_1\cdot\begin{vmatrix}a_2&c_2\\a_3&c_1\end{vmatrix}+c_2\cdot\begin{vmatrix}a_2&b_2\\a_3&b_3\\\end{vmatrix}\\[2mm]
+        &a_1A_1+b_1B_1+c_1C_1=a_1\cdot(b_2c_3-b_3c_2)-b_1\cdot(c_2c_3-a_3c_2)+c_1\cdot(a_2b_3-a_3b_2)~~\\[2mm]
+        &a_1A_1+b_1B_1+c_1C_1=a_1b_3c_3-a_1b_3c_2-a_2b_1c_3+a_3b_1c_2+a_2b_3c_1-a_3b_2c_1\\[2mm]
+        &a_1A_1+b_1B_1+c_1C_1=a_1b_2c_3+a_2b_3c_1+a_3b_1c_2-a_3b_2c_1-a_2b_1c_3-a_1b_3c_2\\[2mm]
         &a_1A_1+b_1B_1+c_1C_1=D
     \end{align}\\
     第二组性质可以用于计算行列式，该方法称为按行或列展开，前文的方法称为按对角线展开。\\[3mm]
